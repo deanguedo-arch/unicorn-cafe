@@ -1,0 +1,35 @@
+SNEAKY UNICORN: RAINBOW KITCHEN — v1.0.0
+
+PLAY ON A COMPUTER
+Download Sneaky-Unicorn-Rainbow-Kitchen-v1.0.0.html and open the downloaded file
+in a normal web browser. Press the big play button. Match the customer's food
+picture, then tap or drag on the food — the large tool button also works.
+Finish the steps and tap Serve. All seven dishes are available immediately.
+
+PLAY AS AN IPHONE WEB APP
+Unzip Sneaky-Unicorn-Rainbow-Kitchen-iPhone-v1.0.0.zip. Its full contents need
+a static HTTPS host; nothing has been published for you. Open that game
+address in Safari and use Share > Add to Home Screen. Open once online and
+wait for "Saved here · offline ready" in the small kitchen footer before
+trying an offline relaunch. The iPhone Files preview is not the intended
+way to run the standalone HTML.
+
+TOY-KITCHEN CONTROLS
+Tap, broadly drag, stir or scoop. Every action has a large tap alternative.
+The menu book changes recipes; the circular arrow starts a fresh tray.
+The home button keeps your place. The speaker button controls sound.
+Wrong dishes become baby snacks; the pictured retry makes the requested meal.
+Recipe stickers and progress stay on that browser/device. Clearing site data
+can remove them. No accounts or child personal data are used.
+
+EDIT / REBUILD
+The editable-source ZIP contains source code, separate optimized assets,
+original art, generation prompts, provenance, build script and test scripts.
+Read its README.txt for rebuilding and local development instructions.
+
+TESTING LIMIT
+Gameplay was exercised in local DOM simulation and the actual Canvas renderer
+was tested with native Canvas. Live browser, audible audio, real iPhone Safari,
+responsive browser layout and real offline installation remain unverified:
+the environment lacked a local browser, and automatic approval review rejected
+the cloud-browser preview. See the full test report for exact coverage.

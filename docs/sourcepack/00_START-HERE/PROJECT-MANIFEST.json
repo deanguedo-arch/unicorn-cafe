@@ -1,0 +1,67 @@
+{
+  "project": "Sneaky Unicorn",
+  "source_library_version": "1.0",
+  "canonical_game_version": "v14",
+  "audience": "young children, roughly ages 5-9",
+  "current_controls": {
+    "movement": "drag anywhere in playfield to steer",
+    "action": "one large Rainbow Blast button"
+  },
+  "current_normal_level_rules": {
+    "objective": "collect all treasure and bring it home",
+    "opponents_per_map": 2,
+    "opponent_behavior": "patrol patterns with variable speed; no vision cones",
+    "blast_effect": "temporary jail, then return to patrol",
+    "contact_effect": "sparkly send-back; progress retained",
+    "secret_doors_per_map": 2,
+    "babies_per_map": 2,
+    "baby_follow": "duckling-style non-blocking follower line"
+  },
+  "police_mode": {
+    "theme": "whimsical Halloween festival / Spooky Squish Park",
+    "regular_enemies": [
+      "Pumpkin Dumpling",
+      "Eyeball Dumpling",
+      "Ghost Dumpling",
+      "Candy Corn Dumpling",
+      "Purple Monster Dumpling"
+    ],
+    "regular_hits_to_jail": 3,
+    "boss": "King Dumpling / Halloween Boss Dumpling",
+    "boss_hits_to_jail": 5,
+    "jail_persistence": "permanent for police level"
+  },
+  "canonical_docs": [
+    "01_CANONICAL/ART-DIRECTION.md",
+    "01_CANONICAL/DEPRECATED-RULES.md",
+    "01_CANONICAL/GAMEPLAY-v14.md",
+    "01_CANONICAL/IP-REFERENCE-GUIDE.md",
+    "01_CANONICAL/TECHNICAL-CONSTRAINTS.md",
+    "01_CANONICAL/UNIVERSE-BIBLE.md"
+  ],
+  "latest_build": {
+    "source_html": "02_LATEST-v14/source/index.html",
+    "standalone_html": "02_LATEST-v14/Sneaky-Unicorn-Midnight-Mischief-v14.html",
+    "iphone_package": "02_LATEST-v14/Sneaky-Unicorn-iPhone-Web-App-v14.zip"
+  },
+  "production_assets": [
+    "03_ASSETS/v14-generated/kawaii_halloween_dumpling_sprite_sheet.png",
+    "03_ASSETS/v14-generated/pastel_baby_unicorn_sprite_sheet.png",
+    "03_ASSETS/v14-generated/enchanted_fantasy_door_animation_spritesheet.png",
+    "03_ASSETS/v14-generated/magical_portal_effects_sprite_sheet.png",
+    "03_ASSETS/v14-generated/cozy_halloween_festival_town_square.png",
+    "03_ASSETS/v14-generated/enchanted_halloween_treasure_room.png"
+  ],
+  "deprecated_rules": [
+    "JUMP permanent action",
+    "SNEAK permanent action",
+    "vision cones",
+    "noise-ring stealth as core loop",
+    "3 giggles/lives",
+    "collect any 3",
+    "side-scrolling as current main format",
+    "one secret door / one baby per map",
+    "human bandits in Police Unicorn"
+  ],
+  "history_note": "Historical files are reference/provenance. Canonical docs win on conflicts."
+}

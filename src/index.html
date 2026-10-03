@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#7755b5">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Rainbow Kitchen">
+  <meta name="description" content="A gentle, picture-led Sneaky Unicorn toy kitchen. Make seven dishes, serve happy friends and collect recipe stickers. Everything stays on this device.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: blob:; img-src 'self' data: blob:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self'; font-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Sneaky Unicorn · Rainbow Kitchen</title>
+  <link rel="icon" type="image/png" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app" id="app">
+    <div class="loading" id="loading" role="status">
+      <div class="loading-rainbow" aria-hidden="true"></div>
+      <h1>Opening the kitchen…</h1>
+      <p id="load-note">Setting out the spoons and sprinkles</p>
+      <button id="load-retry" class="pill" hidden>Try again</button>
+    </div>
+
+    <section class="home-screen" id="home-screen" hidden aria-label="Rainbow Kitchen home">
+      <div class="home-room" aria-hidden="true"></div>
+      <div class="home-dots" aria-hidden="true"></div>
+      <div class="home-copy">
+        <div class="eyebrow"><span class="tiny-star"></span> SNEAKY UNICORN <span class="tiny-star"></span></div>
+        <h1>Rainbow<br><span>Kitchen</span><i class="title-spark" aria-hidden="true"></i></h1>
+        <p class="home-tag">A little kitchen. A whole lot of magic.</p>
+        <button class="start-button" id="start-button"><span class="play-triangle" aria-hidden="true"></span><span id="start-label">Let’s cook!</span></button>
+        <div class="home-sticker-line" id="home-sticker-line">Seven yummy things to make</div>
+      </div>
+      <div class="home-stage" aria-hidden="true">
+        <div class="hero-halo"></div>
+        <img class="home-hero" data-art="chefHero" alt="">
+        <div class="home-chef-hat"></div>
+        <div class="floating-dish dish-one"><img data-art="pizza" alt=""></div>
+        <div class="floating-dish dish-two"><img data-art="cupcakes" alt=""></div>
+        <div class="floating-dish dish-three"><img data-art="icecream" alt=""></div>
+        <img class="home-baby" data-art="babyPinkHappy" alt="">
+      </div>
+      <div class="home-bottom">
+        <button class="quiet-button" id="home-book"><span data-icon="book"></span> Recipe stickers</button>
+        <span class="version-label">v1.0.0 · made for little hands</span>
+        <button class="icon-button home-mute" id="home-mute" aria-label="Mute sound" title="Sound"><span data-icon="sound"></span></button>
+      </div>
+    </section>
+
+    <section class="play-screen" id="play-screen" hidden aria-label="Toy kitchen">
+      <header class="topbar">
+        <button id="home-button" class="icon-button" aria-label="Kitchen home" title="Home"><span data-icon="home"></span></button>
+        <div class="brand"><span class="tiny-star"></span><span>Rainbow Kitchen</span></div>
+        <button id="sticker-button" class="sticker-counter" aria-label="Open recipe stickers"><span data-icon="star"></span><span id="sticker-count">0 / 7</span></button>
+        <button id="mute-button" class="icon-button" aria-label="Mute sound" title="Sound"><span data-icon="sound"></span></button>
+      </header>
+
+      <div class="kitchen-layout">
+        <aside class="customer-card" id="customer-card" aria-label="Customer and picture order">
+          <div class="customer-room" aria-hidden="true"></div>
+          <div class="customer-caption"><span class="tiny-star"></span> YOUR LITTLE CAFÉ</div>
+          <div class="customer-portrait-wrap">
+            <div class="customer-seat" aria-hidden="true"></div>
+            <img id="customer-image" class="customer-image" alt="A happy customer waiting patiently">
+            <div class="customer-hearts" id="customer-hearts" aria-hidden="true"></div>
+          </div>
+          <div class="order-bubble" id="order-bubble">
+            <span class="order-word" id="order-word">Yes, please!</span>
+            <img id="order-image" alt="">
+            <span class="order-name" id="order-name"></span>
+          </div>
+          <div class="customer-name" id="customer-name">Pip</div>
+          <div class="patient-note">There’s always time to play.</div>
+        </aside>
+
+        <section class="workspace" id="workspace" aria-label="Cooking worktop">
+          <div class="workspace-bar">
+            <div class="recipe-heading"><span id="recipe-kicker">TODAY’S LITTLE CREATION</span><h2 id="recipe-name">Pick something yummy</h2></div>
+            <button class="recipe-book-button" id="menu-button" aria-label="Choose a recipe"><span data-icon="book"></span><span>Menu</span></button>
+          </div>
+          <div class="scene-wrap" id="scene-wrap">
+            <canvas id="kitchen-canvas" tabindex="0" role="button" aria-label="Cooking worktop. Tap, drag or press Space to cook."></canvas>
+            <div class="step-toast" id="step-toast" aria-live="polite"></div>
+            <div class="gesture-guide" id="gesture-guide" aria-hidden="true"><span data-icon="hand"></span><i></i></div>
+            <div class="chef-badge" aria-hidden="true"><img id="chef-image" data-art="chefIdle" alt=""></div>
+            <div class="scene-status" id="scene-status" aria-hidden="true"></div>
+          </div>
+          <div class="step-track" id="step-track" aria-label="Recipe steps"></div>
+          <div class="action-dock" id="action-dock">
+            <button class="restart-button" id="restart-button" aria-label="Start this recipe again" title="Start this recipe again"><span data-icon="retry"></span></button>
+            <button class="cook-button" id="cook-button"><span class="tool-image-wrap"><img id="tool-image" alt=""></span><span class="cook-copy"><strong id="action-label">Let’s cook</strong><span id="action-hint">Tap or move your finger</span></span><span class="action-arrow" data-icon="hand"></span></button>
+          </div>
+        </section>
+      </div>
+      <footer class="play-footer"><span id="footer-message">A sprinkle of this. A little bit of magic.</span><span id="save-note">Saved on this device</span></footer>
+    </section>
+
+    <div class="modal-backdrop" id="menu-modal" hidden>
+      <section class="menu-panel" role="dialog" aria-modal="true" aria-labelledby="menu-title">
+        <button class="modal-close icon-button" id="menu-close" aria-label="Close menu"><span data-icon="close"></span></button>
+        <div class="eyebrow">THE RAINBOW MENU</div>
+        <h2 id="menu-title">What shall we make?</h2>
+        <div class="menu-order-hint" id="menu-order-hint"><img id="menu-customer" alt=""><span data-icon="heart"></span><img id="menu-request" alt=""></div>
+        <div class="recipe-grid" id="recipe-grid"></div>
+        <p class="menu-footnote" id="menu-footnote">Every recipe is ready to play.</p>
+      </section>
+    </div>
+
+    <div class="modal-backdrop" id="result-modal" hidden>
+      <section class="result-panel" role="dialog" aria-modal="true" aria-labelledby="result-title">
+        <div class="confetti-field" id="confetti-field" aria-hidden="true"></div>
+        <div class="eyebrow" id="result-kicker">MADE WITH A LITTLE MAGIC</div>
+        <h2 id="result-title">Yummy!</h2>
+        <div class="result-art"><img id="result-customer" alt="Happy customer"><div class="result-food-wrap"><img id="result-food" alt=""></div><span class="result-heart" data-icon="heart"></span></div>
+        <p id="result-message">You made someone happy.</p>
+        <div id="result-stickers" class="result-stickers"></div>
+        <button class="start-button next-button" id="next-button"><span id="next-icon" data-icon="arrow"></span><span id="next-label">Another little order</span></button>
+      </section>
+    </div>
+
+    <div class="modal-backdrop" id="book-modal" hidden>
+      <section class="book-panel" role="dialog" aria-modal="true" aria-labelledby="book-title">
+        <button class="modal-close icon-button" id="book-close" aria-label="Close recipe stickers"><span data-icon="close"></span></button>
+        <div class="eyebrow">YOUR RECIPE STICKERS</div>
+        <h2 id="book-title">Made with love</h2>
+        <div class="sticker-grid" id="sticker-grid"></div>
+        <p id="book-message">Make a dish for a friend to collect its sticker.</p>
+        <button class="pill" id="book-done">Back to the kitchen</button>
+      </section>
+    </div>
+    <div class="sr-only" id="announcer" aria-live="polite" aria-atomic="true"></div>
+  </div>
+  <noscript><p>This little kitchen needs JavaScript. Open this file in a web browser with JavaScript enabled.</p></noscript>
+  <script src="assets.js"></script>
+  <script src="recipes.js"></script>
+  <script src="kitchen.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

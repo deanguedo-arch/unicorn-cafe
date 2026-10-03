@@ -1,0 +1,153 @@
+SNEAKY UNICORN: RAINBOW KITCHEN — v1.0.0
+ACTUAL VALIDATION REPORT — 2026-10-03
+
+STATUS
+The complete seven-dish game passes the local controller, actual-renderer
+integration, native Canvas, asset and package checks described below.
+Live browser and physical-device validation remain unverified. These local
+checks are not represented as a Safari or iPhone certification.
+
+1. CONTROLLER / DOM SIMULATION — 16 OF 16 PASSED
+Runner: Node + jsdom, actual index.html/assets.js/recipes.js/app.js.
+Inputs: DOM click, keyboard and synthetic pointer events. No private controller
+functions were invoked to skip gameplay. Observations used its read-only
+snapshot. Rendering/audio were doubles in this suite; the next suite uses
+the actual renderer. Timers and pointer geometry were deterministic.
+
+Passed:
+- All seven recipes, every preparation step, correct serve, seven stickers,
+  the full-menu celebration and another order cycle.
+- A deliberately wrong recipe, friendly wrong-order result, correct pictured
+  retry and eventual correct serve. No wrong sticker or order advancement.
+- 100 rapid cooking clicks cannot consume multiple recipe steps. Queued serve
+  and next-order events cannot duplicate awards.
+- Partial-recipe pagehide/reload, reload during a completed-step animation,
+  home/continue during that animation, and restarting a fresh tray.
+- Earned stickers survive recipe restarts and home/resume.
+- Correct-result reload preserves one reward and the next order.
+- Wrong-result reload preserves the requested dish and retry path.
+- Pointer cancel, ignored second touch, broad drag progress, a single-drag
+  step boundary, fresh-touch recovery and blur releasing an active pointer.
+- Repeated keyboard events do not add unintended taps.
+- Malformed JSON, prototype names, non-string recipe IDs and invalid nested
+  order bags recover safely. Valid earned stickers survive normalization.
+- Storage read/write permission failures and quota failures allow cooking
+  to continue with explicit no-save feedback.
+- Mute persistence and gesture-gated simulated audio initialization.
+- Recipe/sticker dialog controls and Escape handling.
+- Deliberate artwork load failure exposes Retry and recovers when the original
+  asset becomes available. No placeholder/replacement art is used.
+
+All 54 mapped production image files were decoded from their real bytes.
+No unexpected DOM runtime or captured console errors occurred in these cases.
+Evidence: tests/controller-tests.cjs and tests/test-results.json.
+
+2. ACTUAL CONTROLLER + ACTUAL CANVAS INTEGRATION — 8 OF 8 PASSED
+Runner: actual app.js plus actual kitchen.js/recipes.js/assets.js in jsdom,
+with native @napi-rs/canvas Image objects and a real 2D drawing context.
+DOM canvas dimensions were synchronized with the native canvas. No renderer
+double was used in this suite. It is still a non-browser DOM simulation.
+
+- All seven complete recipes through actual DOM preparation/serve controls.
+- Every ready frame drew that recipe's actual finalArt asset and produced
+  nonblank pixel/PNG output.
+- Resize, home and resume with the same renderer instance.
+- 54 decoded images, 1,570 rendered frames, 11,239 native bitmap draw calls.
+- Integration canvas dimensions: 640x360, 320x220 and 800x270.
+- No drawing or controller runtime exceptions in the tested flows.
+
+Evidence: tests/integration-tests.cjs and tests/integration-results.json.
+
+3. NATIVE CANVAS STATE/SIZE SWEEP — 320 CASES PASSED
+Runner: actual kitchen.js and recipes.js with @napi-rs/canvas.
+
+34 cooking steps x progress 0, 0.5 and 1 x three canvas sizes = 306 cases.
+Sizes: 320x220, 560x320 and 800x460.
+Ready and celebration states for each of seven recipes = 14 further cases.
+All 42 food sprites decoded and every referenced recipe/tool asset resolved.
+
+Additional lifecycle assertions passed: device-pixel-ratio cap of 2, correct
+backing-buffer resizing, immutable recipe/input data, same-step animation
+continuity, clamped interaction coordinates, no extra animation loops on
+updates, and destruction cancelling/preventing further frame scheduling.
+
+Native render contact sheets were visually inspected. Reviewed examples cover
+all seven finished dishes and mixing, filling, layering, brewing and roasting.
+This is visual inspection of actual Canvas output, not a browser screenshot.
+
+Evidence: tests/canvas-tests.cjs and tests/canvas-results.json.
+
+4. PACKAGE / SERVICE-WORKER CHECKS — 15 GROUPS PASSED
+Runner: Node built-ins; actual generated sw.js executed in a VM with mocked
+CacheStorage, fetch and service-worker events. This does not test browser
+service-worker registration or installation.
+
+- 65 runtime-manifest file hashes and byte counts verified.
+- 65 unique local resource references resolve.
+- 65 precache entries exist and are inserted with byte-identical contents.
+- 54 standalone embedded assets match their source bytes exactly.
+- Four standalone inline scripts compile; no remote or external script,
+  stylesheet or image resource references remain in standalone HTML.
+- Icon PNG headers match 192x192, 512x512 and Apple 180x180 dimensions.
+- Cached asset and index navigation avoid network calls in the mocked worker.
+- Query strings, offline navigation fallback, online cache misses and offline
+  missing-resource rejection behave as intended.
+- Ten non-GET/foreign-origin/outside-scope request cases are ignored.
+- Activation removes only old Rainbow Kitchen caches and preserves unrelated
+  adventure/app caches and the current cache.
+- An incomplete precache causes installation rejection.
+- ZIP members decompress with valid byte counts and CRC32; expected runtime
+  and editable-source files are present. Runtime files match the manifest.
+- Native attachment byte counts and SHA256 match the release manifest, and
+  each attachment is below 20,000,000 bytes.
+- The original uploaded 82,841,080-byte source archive remains unchanged:
+  dc7d9ffec60d21081c0534c61aff8bb7aa99bb582cdaa3f50cd0f9922ae33034
+
+Evidence: tests/package-tests.cjs. The source ZIP includes the initial package
+test snapshot; the final downloadable attachment hashes are in the separate
+release manifest. Final packaging is checked after ZIP creation to avoid a
+self-referential archive checksum. Rerun with --require-packages for ZIP checks.
+
+5. REPAIRS MADE DURING VALIDATION
+- Rejected corrupt save IDs safely instead of allowing prototype/object keys
+  to cause startup exceptions.
+- Enabled vertical scrolling in result panels on short screens, so an
+  overflowing next/retry control remains reachable.
+- Removed baby sprite text-label fragments and preserved the full horn in
+  the corrected celebration crop.
+- Corrected preparation-art mismatches: sliced tomato/cheese in hamburgers,
+  a plain spoon for coffee/soup, berry sauce for ice cream, consistent third
+  scoop, raw-to-roasted chicken and sweet-potato wedges.
+- Corrected bowl/liner layering and premade vegetables showing too early.
+- Made the retry button show the requested dish picture.
+
+6. RESPONSIVE / DEVICE / BROWSER LIMITATIONS
+The source contains separate portrait and short-landscape layouts, safe-area
+padding, dynamic viewport-height fallback, large tool buttons, minimum 44px
+small interactive controls, scrollable dialogs, keyboard access and reduced
+motion handling. These were structurally reviewed, not measured by a browser
+layout engine. Canvas tests at small dimensions do not prove full-page layout.
+
+NOT RUN:
+- Live Chromium/Firefox/WebKit/Safari rendering or browser-console inspection.
+- Physical iPhone/iPad testing or real touchscreen pointer delivery.
+- Visual safe-area/notch/browser-toolbar behaviour on a real device.
+- Audible sound, hardware vibration or iOS audio interruption/recovery checks.
+- Real service-worker installation, Home Screen launch, cache quota/eviction,
+  or an actual browser offline relaunch.
+
+Concrete environment constraints: no browser executable was installed, and
+the standard Playwright browser download did not produce a valid archive.
+Automatic approval review rejected opening the local game preview in the
+cloud browser. That browser action was not retried through another route.
+Only the safer local tests above were used after the rejection.
+
+REMAINING REAL-DEVICE ACCEPTANCE CHECK
+On the intended iPhone: open the HTTPS-hosted package, finish one dish in each
+orientation, try one wrong order and retry, toggle sound, close/reopen mid-dish,
+then verify an offline relaunch after the footer reports offline readiness.
+An actual child playtest is still needed to assess whether she understands
+the picture cues and enjoys repeating the cooking steps.
+
+No game was published, no existing adventure build/settings were changed,
+and no child personal information was collected or transmitted.

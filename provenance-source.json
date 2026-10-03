@@ -1,0 +1,612 @@
+{
+  "version": "1.0.0",
+  "purpose": "Exact sourcepack art extraction and non-destructive production optimization for Sneaky Unicorn restaurant spinoff",
+  "sourcepack": "Sneaky-Unicorn-AI-Source-Pack-v1.zip",
+  "sourcepack_sha256": "dc7d9ffec60d21081c0534c61aff8bb7aa99bb582cdaa3f50cd0f9922ae33034",
+  "identity_notes": [
+    "No mainunicornsprites file or DATA key exists in the supplied ZIP; the live v14 equivalents DATA.u_idle0 and DATA.u_happy0 are used for the chef.",
+    "Baby label regions were excluded by manual crop bounds and crops visually reviewed on a light background.",
+    "No content repainting, background removal, or replacement of source identity was performed.",
+    "Standard runtime character sprites are at most 320px per side; title chef-hero uses a larger crop at max600px to retain source resolution. The room backdrop is 1280x782. No image was upscaled.",
+    "Embedded original image bytes are retained. Full source PNGs are retained for artwork used to create the hero, restaurant, baby customer assets and large title chef portrait."
+  ],
+  "assets": [
+    {
+      "output": "art-originals/embedded-source/burger.webp",
+      "source_path": "02_LATEST-v14/source/index.html",
+      "source_sha256": "c2d1808b46bf7416c00a2f90575b5a10328ef368a39cde2c69365c2207bd96e2",
+      "embedded_key": "DATA.burger",
+      "transform": "Base64 decoded byte-for-byte; no image modification",
+      "dimensions": [
+        199,
+        206
+      ],
+      "sha256": "4a45c2230e579d61e41bbb7bdc7e7abadf57748ca2a5093fe764475083469b3a"
+    },
+    {
+      "output": "art-originals/embedded-source/cake.webp",
+      "source_path": "02_LATEST-v14/source/index.html",
+      "source_sha256": "c2d1808b46bf7416c00a2f90575b5a10328ef368a39cde2c69365c2207bd96e2",
+      "embedded_key": "DATA.cake",
+      "transform": "Base64 decoded byte-for-byte; no image modification",
+      "dimensions": [
+        206,
+        183
+      ],
+      "sha256": "15b05e16153188a005c0e0efddbaa9a152679f9f65e9b09f29010931aec84960"
+    },
+    {
+      "output": "art-originals/embedded-source/carrots.webp",
+      "source_path": "02_LATEST-v14/source/index.html",
+      "source_sha256": "c2d1808b46bf7416c00a2f90575b5a10328ef368a39cde2c69365c2207bd96e2",
+      "embedded_key": "DATA.carrots",
+      "transform": "Base64 decoded byte-for-byte; no image modification",
+      "dimensions": [
+        180,
+        206
+      ],
+      "sha256": "bb8981f6026632f44cc613075d8ba23e6cd0ff6165790862aa910892c336584a"
+    },
+    {
+      "output": "art-originals/embedded-source/cheese.webp",
+      "source_path": "02_LATEST-v14/source/index.html",
+      "source_sha256": "c2d1808b46bf7416c00a2f90575b5a10328ef368a39cde2c69365c2207bd96e2",
+      "embedded_key": "DATA.cheese",
+      "transform": "Base64 decoded byte-for-byte; no image modification",
+      "dimensions": [
+        201,
+        163
+      ],
+      "sha256": "5f7d4669bbd11122ffc651215f84f48f28783f95df2ca8e79efa5897cc8eb69b"
+    },
+    {
+      "output": "art-originals/embedded-source/cherries.webp",
+      "source_path": "02_LATEST-v14/source/index.html",
+      "source_sha256": "c2d1808b46bf7416c00a2f90575b5a10328ef368a39cde2c69365c2207bd96e2",
+      "embedded_key": "DATA.cherries",
+      "transform": "Base64 decoded byte-for-byte; no image modification",
+      "dimensions": [
+        192,
+        180
+      ],
+      "sha256": "7c6f1df489ce50b07eacaedac578e4ed1b1e941e47ef2906fec0f943d5e45649"
+    },
+    {
+      "output": "art-originals/embedded-source/cupcake.webp",
+      "source_path": "02_LATEST-v14/source/index.html",
+      "source_sha256": "c2d1808b46bf7416c00a2f90575b5a10328ef368a39cde2c69365c2207bd96e2",
+      "embedded_key": "DATA.cupcake",
+      "transform": "Base64 decoded byte-for-byte; no image modification",
+      "dimensions": [
+        195,
+        206
+      ],
+      "sha256": "9b250155761a34cd86d8ec2e6ed79388819e0a3c7311fc277361d7bee759471e"
+    },
+    {
+      "output": "art-originals/embedded-source/h_happy.webp",
+      "source_path": "02_LATEST-v14/source/index.html",
+      "source_sha256": "c2d1808b46bf7416c00a2f90575b5a10328ef368a39cde2c69365c2207bd96e2",
+      "embedded_key": "DATA.h_happy",
+      "transform": "Base64 decoded byte-for-byte; no image modification",
+      "dimensions": [
+        192,
+        192
+      ],
+      "sha256": "d232adbfb06f95fdf350ff5b09e3b0d9387fedff1cc280ad0ffc6f2152eedf4d"
+    },
+    {
+      "output": "art-originals/embedded-source/icecream.webp",
+      "source_path": "02_LATEST-v14/source/index.html",
+      "source_sha256": "c2d1808b46bf7416c00a2f90575b5a10328ef368a39cde2c69365c2207bd96e2",
+      "embedded_key": "DATA.icecream",
+      "transform": "Base64 decoded byte-for-byte; no image modification",
+      "dimensions": [
+        136,
+        206
+      ],
+      "sha256": "e966468cf30d509f7fa6a9118e1bda2c1ed34163b73a0b9a111b5a7e87a703b5"
+    },
+    {
+      "output": "art-originals/embedded-source/milk.webp",
+      "source_path": "02_LATEST-v14/source/index.html",
+      "source_sha256": "c2d1808b46bf7416c00a2f90575b5a10328ef368a39cde2c69365c2207bd96e2",
+      "embedded_key": "DATA.milk",
+      "transform": "Base64 decoded byte-for-byte; no image modification",
+      "dimensions": [
+        142,
+        206
+      ],
+      "sha256": "7d4bda2bfe53a5e8787d08b0a1a1c69b84f0b8e623f0a562998827d8bfb7e651"
+    },
+    {
+      "output": "art-originals/embedded-source/pizza.webp",
+      "source_path": "02_LATEST-v14/source/index.html",
+      "source_sha256": "c2d1808b46bf7416c00a2f90575b5a10328ef368a39cde2c69365c2207bd96e2",
+      "embedded_key": "DATA.pizza",
+      "transform": "Base64 decoded byte-for-byte; no image modification",
+      "dimensions": [
+        179,
+        206
+      ],
+      "sha256": "b5f5119fa5781fba121df56b984821e8859f1f8fa3a9310b57fbbb00f6a67d48"
+    },
+    {
+      "output": "art-originals/embedded-source/strawberry.webp",
+      "source_path": "02_LATEST-v14/source/index.html",
+      "source_sha256": "c2d1808b46bf7416c00a2f90575b5a10328ef368a39cde2c69365c2207bd96e2",
+      "embedded_key": "DATA.strawberry",
+      "transform": "Base64 decoded byte-for-byte; no image modification",
+      "dimensions": [
+        178,
+        190
+      ],
+      "sha256": "1cee29a7392674d479aad3640998ccabf73ac5924c012f06c2e7a9bd3ec95c5d"
+    },
+    {
+      "output": "art-originals/embedded-source/teapot.webp",
+      "source_path": "02_LATEST-v14/source/index.html",
+      "source_sha256": "c2d1808b46bf7416c00a2f90575b5a10328ef368a39cde2c69365c2207bd96e2",
+      "embedded_key": "DATA.teapot",
+      "transform": "Base64 decoded byte-for-byte; no image modification",
+      "dimensions": [
+        206,
+        171
+      ],
+      "sha256": "f2e745d4b376946461066763491c4224ff53b6c605281e7481d8fa69fc02e367"
+    },
+    {
+      "output": "art-originals/embedded-source/u_happy0.webp",
+      "source_path": "02_LATEST-v14/source/index.html",
+      "source_sha256": "c2d1808b46bf7416c00a2f90575b5a10328ef368a39cde2c69365c2207bd96e2",
+      "embedded_key": "DATA.u_happy0",
+      "transform": "Base64 decoded byte-for-byte; no image modification",
+      "dimensions": [
+        192,
+        192
+      ],
+      "sha256": "e4f06f5c52a3ebbdb7547e9d57232ba8e00c27357164968000a6aa0332251072"
+    },
+    {
+      "output": "art-originals/embedded-source/u_idle0.webp",
+      "source_path": "02_LATEST-v14/source/index.html",
+      "source_sha256": "c2d1808b46bf7416c00a2f90575b5a10328ef368a39cde2c69365c2207bd96e2",
+      "embedded_key": "DATA.u_idle0",
+      "transform": "Base64 decoded byte-for-byte; no image modification",
+      "dimensions": [
+        192,
+        192
+      ],
+      "sha256": "79401a3b26dd6ab87e987888720c0e1c9135ec3bb0366f2256cd612bc42732ba"
+    },
+    {
+      "output": "art-originals/source/unicorn-hero.png",
+      "source_path": "03_ASSETS/core-original/unicorn-hero.png",
+      "source_sha256": "d90a02cfb69575e88e993057ff9bd63669ba9082eec36c818c019c4fdc8835fb",
+      "transform": "Copied byte-for-byte original PNG",
+      "dimensions": [
+        1600,
+        1600
+      ],
+      "sha256": "d90a02cfb69575e88e993057ff9bd63669ba9082eec36c818c019c4fdc8835fb"
+    },
+    {
+      "output": "art-originals/source/pastel_baby_unicorn_sprite_sheet.png",
+      "source_path": "03_ASSETS/v14-generated/pastel_baby_unicorn_sprite_sheet.png",
+      "source_sha256": "6ed43a9bd81b9f5f1153133fdb3084ac469014ae00c4851a6a39c93bf8436f4d",
+      "transform": "Copied byte-for-byte original PNG",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "6ed43a9bd81b9f5f1153133fdb3084ac469014ae00c4851a6a39c93bf8436f4d"
+    },
+    {
+      "output": "art-originals/source/easy_restaurant.png",
+      "source_path": "03_ASSETS/topdown-maps/easy_restaurant.png",
+      "source_sha256": "f066ad40b1a58d8c1f0a066e53e8b5af42e90fbd7bb66f3652e44c9dff495e35",
+      "transform": "Copied byte-for-byte original PNG",
+      "dimensions": [
+        1800,
+        1100
+      ],
+      "sha256": "f066ad40b1a58d8c1f0a066e53e8b5af42e90fbd7bb66f3652e44c9dff495e35"
+    },
+    {
+      "output": "assets/source-chef-idle.webp",
+      "source_path": "art-originals/embedded-source/u_idle0.webp",
+      "source_sha256": "79401a3b26dd6ab87e987888720c0e1c9135ec3bb0366f2256cd612bc42732ba",
+      "embedded_key": "DATA.u_idle0",
+      "source_dimensions": [
+        192,
+        192
+      ],
+      "crop_xyxy": null,
+      "alpha_trim_bbox_within_crop": [
+        33,
+        44,
+        159,
+        185
+      ],
+      "transparent_padding": 8,
+      "resize_from": [
+        142,
+        157
+      ],
+      "dimensions": [
+        142,
+        157
+      ],
+      "resampling": "Lanczos only if downscaled",
+      "encoding": "lossless WebP",
+      "sha256": "2b0362e612b81e78bc638520ae879e07969207654a1873bfe2ca9de49349f8bb"
+    },
+    {
+      "output": "assets/source-chef-happy.webp",
+      "source_path": "art-originals/embedded-source/u_happy0.webp",
+      "source_sha256": "e4f06f5c52a3ebbdb7547e9d57232ba8e00c27357164968000a6aa0332251072",
+      "embedded_key": "DATA.u_happy0",
+      "source_dimensions": [
+        192,
+        192
+      ],
+      "crop_xyxy": null,
+      "alpha_trim_bbox_within_crop": [
+        31,
+        41,
+        160,
+        185
+      ],
+      "transparent_padding": 8,
+      "resize_from": [
+        145,
+        160
+      ],
+      "dimensions": [
+        145,
+        160
+      ],
+      "resampling": "Lanczos only if downscaled",
+      "encoding": "lossless WebP",
+      "sha256": "60e5246ad5b5567b68954034dd667db01ce86495f43563f8da64312685eed3d8"
+    },
+    {
+      "output": "assets/source-customer-happy.webp",
+      "source_path": "art-originals/embedded-source/h_happy.webp",
+      "source_sha256": "d232adbfb06f95fdf350ff5b09e3b0d9387fedff1cc280ad0ffc6f2152eedf4d",
+      "embedded_key": "DATA.h_happy",
+      "source_dimensions": [
+        192,
+        192
+      ],
+      "crop_xyxy": null,
+      "alpha_trim_bbox_within_crop": [
+        45,
+        38,
+        145,
+        188
+      ],
+      "transparent_padding": 8,
+      "resize_from": [
+        116,
+        166
+      ],
+      "dimensions": [
+        116,
+        166
+      ],
+      "resampling": "Lanczos only if downscaled",
+      "encoding": "lossless WebP",
+      "sha256": "7d3dd2cf55d93523c251fae089c47835b17706a2aacc9e080ce703fd14445d02"
+    },
+    {
+      "output": "assets/source-baby-pink.webp",
+      "source_path": "art-originals/source/pastel_baby_unicorn_sprite_sheet.png",
+      "source_sha256": "6ed43a9bd81b9f5f1153133fdb3084ac469014ae00c4851a6a39c93bf8436f4d",
+      "embedded_key": null,
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "crop_xyxy": [
+        0,
+        12,
+        313,
+        273
+      ],
+      "alpha_trim_bbox_within_crop": [
+        27,
+        7,
+        275,
+        261
+      ],
+      "transparent_padding": 6,
+      "resize_from": [
+        260,
+        266
+      ],
+      "dimensions": [
+        260,
+        266
+      ],
+      "resampling": "Lanczos only if downscaled",
+      "encoding": "lossless WebP",
+      "sha256": "4e149a131f240a7619fe4d0f50d12ef5adfa3f8586c5fc4639ea49e48df80440"
+    },
+    {
+      "output": "assets/source-baby-pink-happy.webp",
+      "source_path": "art-originals/source/pastel_baby_unicorn_sprite_sheet.png",
+      "source_sha256": "6ed43a9bd81b9f5f1153133fdb3084ac469014ae00c4851a6a39c93bf8436f4d",
+      "embedded_key": null,
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "crop_xyxy": [
+        0,
+        324,
+        313,
+        578
+      ],
+      "alpha_trim_bbox_within_crop": [
+        0,
+        11,
+        296,
+        254
+      ],
+      "transparent_padding": 6,
+      "resize_from": [
+        308,
+        255
+      ],
+      "dimensions": [
+        308,
+        255
+      ],
+      "resampling": "Lanczos only if downscaled",
+      "encoding": "lossless WebP",
+      "sha256": "73429315d6ea89bb1873304b00573e18d573418bf66377aa754c4dbdf4b74433"
+    },
+    {
+      "output": "assets/source-baby-pink-celebrate.webp",
+      "source_path": "art-originals/source/pastel_baby_unicorn_sprite_sheet.png",
+      "source_sha256": "6ed43a9bd81b9f5f1153133fdb3084ac469014ae00c4851a6a39c93bf8436f4d",
+      "embedded_key": null,
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "crop_xyxy": [
+        626,
+        320,
+        940,
+        577
+      ],
+      "alpha_trim_bbox_within_crop": [
+        14,
+        0,
+        314,
+        257
+      ],
+      "transparent_padding": 6,
+      "resize_from": [
+        312,
+        269
+      ],
+      "dimensions": [
+        312,
+        269
+      ],
+      "resampling": "Lanczos only if downscaled",
+      "encoding": "lossless WebP",
+      "sha256": "e956931581a9c55f185ffedcc4f321f55b7f7df8f2c09ae84124bd9804bfd21f"
+    },
+    {
+      "output": "assets/source-baby-blue.webp",
+      "source_path": "art-originals/source/pastel_baby_unicorn_sprite_sheet.png",
+      "source_sha256": "6ed43a9bd81b9f5f1153133fdb3084ac469014ae00c4851a6a39c93bf8436f4d",
+      "embedded_key": null,
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "crop_xyxy": [
+        0,
+        636,
+        313,
+        887
+      ],
+      "alpha_trim_bbox_within_crop": [
+        21,
+        6,
+        293,
+        251
+      ],
+      "transparent_padding": 6,
+      "resize_from": [
+        284,
+        257
+      ],
+      "dimensions": [
+        284,
+        257
+      ],
+      "resampling": "Lanczos only if downscaled",
+      "encoding": "lossless WebP",
+      "sha256": "b9d326c5237ba3458368e71c27ed36d0375970d1904a9b77418eaf754e7b4cdf"
+    },
+    {
+      "output": "assets/source-baby-blue-happy.webp",
+      "source_path": "art-originals/source/pastel_baby_unicorn_sprite_sheet.png",
+      "source_sha256": "6ed43a9bd81b9f5f1153133fdb3084ac469014ae00c4851a6a39c93bf8436f4d",
+      "embedded_key": null,
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "crop_xyxy": [
+        0,
+        934,
+        313,
+        1186
+      ],
+      "alpha_trim_bbox_within_crop": [
+        0,
+        0,
+        304,
+        252
+      ],
+      "transparent_padding": 6,
+      "resize_from": [
+        316,
+        264
+      ],
+      "dimensions": [
+        316,
+        264
+      ],
+      "resampling": "Lanczos only if downscaled",
+      "encoding": "lossless WebP",
+      "sha256": "27cff98e3b4d137e8d1eeb9830f0d4a3d903fd57e1284bb4c59d3c783abc309a"
+    },
+    {
+      "output": "assets/source-baby-blue-celebrate.webp",
+      "source_path": "art-originals/source/pastel_baby_unicorn_sprite_sheet.png",
+      "source_sha256": "6ed43a9bd81b9f5f1153133fdb3084ac469014ae00c4851a6a39c93bf8436f4d",
+      "embedded_key": null,
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "crop_xyxy": [
+        626,
+        928,
+        940,
+        1186
+      ],
+      "alpha_trim_bbox_within_crop": [
+        2,
+        0,
+        278,
+        258
+      ],
+      "transparent_padding": 6,
+      "resize_from": [
+        288,
+        270
+      ],
+      "dimensions": [
+        288,
+        270
+      ],
+      "resampling": "Lanczos only if downscaled",
+      "encoding": "lossless WebP",
+      "sha256": "60ae0c0d3d7fcce6d414935ea3f5f29cc768d890ef9448eab32cb2396f53308d"
+    },
+    {
+      "output": "assets/source-hero.webp",
+      "source_path": "art-originals/source/unicorn-hero.png",
+      "source_sha256": "d90a02cfb69575e88e993057ff9bd63669ba9082eec36c818c019c4fdc8835fb",
+      "embedded_key": null,
+      "source_dimensions": [
+        1600,
+        1600
+      ],
+      "crop_xyxy": null,
+      "alpha_trim_bbox_within_crop": null,
+      "transparent_padding": 0,
+      "resize_from": [
+        1600,
+        1600
+      ],
+      "dimensions": [
+        320,
+        320
+      ],
+      "resampling": "Lanczos only if downscaled",
+      "encoding": "lossless WebP",
+      "sha256": "2a52da893f438153e7ad5a3bd332ad9245529713e29fe514d1e6195f2ff6e7ac"
+    },
+    {
+      "output": "assets/source-restaurant.webp",
+      "source_path": "art-originals/source/easy_restaurant.png",
+      "source_sha256": "f066ad40b1a58d8c1f0a066e53e8b5af42e90fbd7bb66f3652e44c9dff495e35",
+      "embedded_key": null,
+      "source_dimensions": [
+        1800,
+        1100
+      ],
+      "crop_xyxy": null,
+      "alpha_trim_bbox_within_crop": null,
+      "transparent_padding": 0,
+      "resize_from": [
+        1800,
+        1100
+      ],
+      "dimensions": [
+        1280,
+        782
+      ],
+      "resampling": "Lanczos only if downscaled",
+      "encoding": "lossless WebP",
+      "sha256": "cde9d69fcaa9280491204a241f63ae1ef36b0998dca50729812aa0035ab41f6b"
+    },
+    {
+      "output": "art-originals/source/unicorn-sprites-cutout.png",
+      "source_path": "03_ASSETS/core-original/unicorn-sprites-cutout.png",
+      "source_sha256": "2112e422ae3fe2bfda43d177183de363c89072acc25cf5531157e375d3574e66",
+      "transform": "Copied byte-for-byte original PNG",
+      "dimensions": [
+        2048,
+        819
+      ],
+      "sha256": "2112e422ae3fe2bfda43d177183de363c89072acc25cf5531157e375d3574e66"
+    },
+    {
+      "output": "assets/source-chef-hero.webp",
+      "source_path": "art-originals/source/unicorn-sprites-cutout.png",
+      "source_sha256": "2112e422ae3fe2bfda43d177183de363c89072acc25cf5531157e375d3574e66",
+      "source_dimensions": [
+        2048,
+        819
+      ],
+      "crop_xyxy": [
+        386,
+        188,
+        847,
+        714
+      ],
+      "alpha_trim_bbox_within_crop": [
+        13,
+        29,
+        440,
+        509
+      ],
+      "transparent_padding": 10,
+      "resize_from": [
+        447,
+        500
+      ],
+      "dimensions": [
+        447,
+        500
+      ],
+      "resampling": "Lanczos only if downscaled; no upscaling",
+      "encoding": "lossless WebP",
+      "purpose": "Large title-screen chef portrait from actual source second happy/walking pose",
+      "sha256": "cbf84b37f11ff64383958e5b217b9c25000d27b77253b9850862e472e6ecd31c",
+      "frame_isolation": [
+        {
+          "component_bbox_in_source": [
+            386,
+            285,
+            417,
+            455
+          ],
+          "pixels": 2932,
+          "reason": "Disconnected partial previous pose touching left crop boundary"
+        }
+      ]
+    }
+  ]
+}

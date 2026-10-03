@@ -1,0 +1,1250 @@
+{
+  "schemaVersion": 1,
+  "method": "Threshold-24 alpha components isolate each original object; nearest component assignment preserves original alpha pixels within 7px of the component, removing isolated background specks. Each exact alpha-bound crop receives 8px transparent padding and is downscaled only when necessary to maximum 320px. Lossless WebP export. No redraw, colour change, or object replacement.",
+  "sources": {
+    "food-atlas.png": {
+      "sha256": "497412c961d9d441247e27c0efaf665c213dd7e499c2074bd813de67707632b6",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "relativePath": "art-originals/food-atlas.png"
+    },
+    "ingredients-atlas.png": {
+      "sha256": "c1901f61051c89b2dccc232b1b2be85ecf01a04d721f784952e9d216149d440f",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "relativePath": "art-originals/ingredients-atlas.png"
+    },
+    "prep-extras-atlas.png": {
+      "sha256": "60d0a877eb96afec631a06d258fabc4ad4483258fa6928e1f795cd9c8c86acfb",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "relativePath": "art-originals/prep-extras-atlas.png",
+      "promptPath": "art-originals/PREP-EXTRAS-PROMPT.md"
+    },
+    "prep-corrections-atlas.png": {
+      "sha256": "45f4fed82af9b9476b569f08f82ebc5ae48a874e712de7a397b3e2f37f88eec1",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "relativePath": "art-originals/prep-corrections-atlas.png",
+      "promptPath": "art-originals/PREP-CORRECTIONS-PROMPT.md"
+    }
+  },
+  "assets": {
+    "icecream": {
+      "path": "assets/food-icecream.webp",
+      "source": "food-atlas.png",
+      "componentBounds": [
+        993,
+        33,
+        1207,
+        344
+      ],
+      "cropBounds": [
+        989,
+        31,
+        1209,
+        348
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        236,
+        333
+      ],
+      "dimensions": [
+        227,
+        320
+      ],
+      "sha256": "74149352e777aebbd24b87ed776148c5523d22fbc64d43f521720bf170861514",
+      "bytes": 67438,
+      "format": "lossless WebP RGBA"
+    },
+    "cupcakes": {
+      "path": "assets/food-cupcakes.webp",
+      "source": "food-atlas.png",
+      "componentBounds": [
+        692,
+        75,
+        898,
+        318
+      ],
+      "cropBounds": [
+        689,
+        72,
+        901,
+        322
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        228,
+        266
+      ],
+      "dimensions": [
+        228,
+        266
+      ],
+      "sha256": "127e36918f8ae160630732b4b4e980fa4c04818504f505870cc7c13de0130392",
+      "bytes": 63074,
+      "format": "lossless WebP RGBA"
+    },
+    "coffee": {
+      "path": "assets/food-coffee.webp",
+      "source": "food-atlas.png",
+      "componentBounds": [
+        349,
+        76,
+        636,
+        318
+      ],
+      "cropBounds": [
+        343,
+        70,
+        642,
+        324
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        315,
+        270
+      ],
+      "dimensions": [
+        315,
+        270
+      ],
+      "sha256": "0fa554a216e00fbf44a5a3bd20f43fe7804a6097dcc705141c2d52e18662bb7b",
+      "bytes": 90456,
+      "format": "lossless WebP RGBA"
+    },
+    "pizza": {
+      "path": "assets/food-pizza.webp",
+      "source": "food-atlas.png",
+      "componentBounds": [
+        15,
+        81,
+        327,
+        311
+      ],
+      "cropBounds": [
+        8,
+        78,
+        334,
+        318
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        342,
+        256
+      ],
+      "dimensions": [
+        320,
+        240
+      ],
+      "sha256": "ad027628b6f301b07ae44f4e9257705f7ebca04045602d9cd3e73b792fc1bab5",
+      "bytes": 100320,
+      "format": "lossless WebP RGBA"
+    },
+    "hamburger": {
+      "path": "assets/food-hamburger.webp",
+      "source": "food-atlas.png",
+      "componentBounds": [
+        17,
+        358,
+        311,
+        627
+      ],
+      "cropBounds": [
+        14,
+        351,
+        318,
+        629
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        320,
+        294
+      ],
+      "dimensions": [
+        320,
+        294
+      ],
+      "sha256": "9c756c9db35a1c168f60e73d646edea170332214ad2f2253ec71bb6c5c5cf20f",
+      "bytes": 113714,
+      "format": "lossless WebP RGBA"
+    },
+    "chicken": {
+      "path": "assets/food-chicken.webp",
+      "source": "food-atlas.png",
+      "componentBounds": [
+        641,
+        379,
+        948,
+        612
+      ],
+      "cropBounds": [
+        634,
+        372,
+        953,
+        617
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        335,
+        261
+      ],
+      "dimensions": [
+        320,
+        249
+      ],
+      "sha256": "d8d62f6a9c66c62293bad5533437d12d757893df0acbb557b03caff4d043870d",
+      "bytes": 95648,
+      "format": "lossless WebP RGBA"
+    },
+    "soup": {
+      "path": "assets/food-soup.webp",
+      "source": "food-atlas.png",
+      "componentBounds": [
+        329,
+        382,
+        633,
+        618
+      ],
+      "cropBounds": [
+        322,
+        376,
+        640,
+        625
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        334,
+        265
+      ],
+      "dimensions": [
+        320,
+        254
+      ],
+      "sha256": "4ac001e1b717d2f6aeed9a2f5e19730f1b914b0401492cb0c0907e30161d5857",
+      "bytes": 86082,
+      "format": "lossless WebP RGBA"
+    },
+    "plate": {
+      "path": "assets/food-plate.webp",
+      "source": "food-atlas.png",
+      "componentBounds": [
+        957,
+        405,
+        1243,
+        605
+      ],
+      "cropBounds": [
+        953,
+        401,
+        1250,
+        611
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        313,
+        226
+      ],
+      "dimensions": [
+        313,
+        226
+      ],
+      "sha256": "8bbd4463749d75be0c5f971fa1421ce19037310a59a24eba16e7b75f5a8cf28c",
+      "bytes": 52536,
+      "format": "lossless WebP RGBA"
+    },
+    "saucedDough": {
+      "path": "assets/food-saucedDough.webp",
+      "source": "food-atlas.png",
+      "componentBounds": [
+        322,
+        679,
+        631,
+        906
+      ],
+      "cropBounds": [
+        320,
+        673,
+        633,
+        913
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        329,
+        256
+      ],
+      "dimensions": [
+        320,
+        249
+      ],
+      "sha256": "2483dfcddb79e752e533220b9a877e653f0ac9c60d20da21603810a1f97318f4",
+      "bytes": 93504,
+      "format": "lossless WebP RGBA"
+    },
+    "rawPizza": {
+      "path": "assets/food-rawPizza.webp",
+      "source": "food-atlas.png",
+      "componentBounds": [
+        634,
+        679,
+        948,
+        907
+      ],
+      "cropBounds": [
+        633,
+        674,
+        951,
+        914
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        334,
+        256
+      ],
+      "dimensions": [
+        320,
+        245
+      ],
+      "sha256": "1b50474bf6bf3f02cc86a62de245217605822d8371fd34d72120a559f0e3f13f",
+      "bytes": 102758,
+      "format": "lossless WebP RGBA"
+    },
+    "dough": {
+      "path": "assets/food-dough.webp",
+      "source": "food-atlas.png",
+      "componentBounds": [
+        13,
+        681,
+        318,
+        906
+      ],
+      "cropBounds": [
+        6,
+        675,
+        320,
+        913
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        330,
+        254
+      ],
+      "dimensions": [
+        320,
+        246
+      ],
+      "sha256": "b53808491333922fe2b149093b8b7374507956d1573266bf05f9e607e97ad77a",
+      "bytes": 77082,
+      "format": "lossless WebP RGBA"
+    },
+    "emptyMug": {
+      "path": "assets/food-emptyMug.webp",
+      "source": "food-atlas.png",
+      "componentBounds": [
+        987,
+        685,
+        1240,
+        896
+      ],
+      "cropBounds": [
+        980,
+        678,
+        1244,
+        901
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        280,
+        239
+      ],
+      "dimensions": [
+        280,
+        239
+      ],
+      "sha256": "d128582a0e42dfdf787cdbecaf0e8ff7be09ca5ee24aa7ef108ec43da9c1bbad",
+      "bytes": 55546,
+      "format": "lossless WebP RGBA"
+    },
+    "mixingBowl": {
+      "path": "assets/food-mixingBowl.webp",
+      "source": "food-atlas.png",
+      "componentBounds": [
+        12,
+        917,
+        334,
+        1204
+      ],
+      "cropBounds": [
+        5,
+        914,
+        338,
+        1207
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        349,
+        309
+      ],
+      "dimensions": [
+        320,
+        283
+      ],
+      "sha256": "a9095e6e15eda91c3d5e321ef5f36d2882011e2f472b265165507a79baad56c7",
+      "bytes": 91014,
+      "format": "lossless WebP RGBA"
+    },
+    "cone": {
+      "path": "assets/food-cone.webp",
+      "source": "food-atlas.png",
+      "componentBounds": [
+        709,
+        928,
+        885,
+        1200
+      ],
+      "cropBounds": [
+        705,
+        925,
+        889,
+        1204
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        200,
+        295
+      ],
+      "dimensions": [
+        200,
+        295
+      ],
+      "sha256": "d9b57390853ab2d04bb13af14ed991b027bf9f81f7346e04a43d9432c85bede3",
+      "bytes": 54776,
+      "format": "lossless WebP RGBA"
+    },
+    "vegetablePot": {
+      "path": "assets/food-vegetablePot.webp",
+      "source": "food-atlas.png",
+      "componentBounds": [
+        921,
+        949,
+        1250,
+        1200
+      ],
+      "cropBounds": [
+        916,
+        947,
+        1254,
+        1205
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        354,
+        274
+      ],
+      "dimensions": [
+        320,
+        248
+      ],
+      "sha256": "625b3df5e9a16b48ddbaf833d20074089da5f5a625ba1058b7a7ed7e509deb13",
+      "bytes": 84838,
+      "format": "lossless WebP RGBA"
+    },
+    "plainCupcake": {
+      "path": "assets/food-plainCupcake.webp",
+      "source": "food-atlas.png",
+      "componentBounds": [
+        376,
+        974,
+        616,
+        1192
+      ],
+      "cropBounds": [
+        371,
+        968,
+        623,
+        1194
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        268,
+        242
+      ],
+      "dimensions": [
+        268,
+        242
+      ],
+      "sha256": "e80f4a203d9b2c292e4b00de866efb2e319db6aa1a92d81b50fb8dad187f7b96",
+      "bytes": 66402,
+      "format": "lossless WebP RGBA"
+    },
+    "lettuce": {
+      "path": "assets/food-lettuce.webp",
+      "source": "ingredients-atlas.png",
+      "componentBounds": [
+        652,
+        75,
+        899,
+        299
+      ],
+      "cropBounds": [
+        645,
+        71,
+        902,
+        305
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        273,
+        250
+      ],
+      "dimensions": [
+        273,
+        250
+      ],
+      "sha256": "5f5aef57ebcdf50efdd12c4b0ea93ebc2a0fe96cccfa599c3a7e01fea7f7f53a",
+      "bytes": 73818,
+      "format": "lossless WebP RGBA"
+    },
+    "tomato": {
+      "path": "assets/food-tomato.webp",
+      "source": "ingredients-atlas.png",
+      "componentBounds": [
+        63,
+        82,
+        298,
+        300
+      ],
+      "cropBounds": [
+        59,
+        77,
+        304,
+        306
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        261,
+        245
+      ],
+      "dimensions": [
+        261,
+        245
+      ],
+      "sha256": "7de55bf66b97ebf926e02cce4b7cdee86685ea8f5e3274af6046831f75762096",
+      "bytes": 57220,
+      "format": "lossless WebP RGBA"
+    },
+    "cheese": {
+      "path": "assets/food-cheese.webp",
+      "source": "ingredients-atlas.png",
+      "componentBounds": [
+        367,
+        90,
+        596,
+        298
+      ],
+      "cropBounds": [
+        364,
+        86,
+        601,
+        305
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        253,
+        235
+      ],
+      "dimensions": [
+        253,
+        235
+      ],
+      "sha256": "eeafadf13c802d732e6f4e0e7f4bec50389d82e0f949f5136fd4b015e78a7ce5",
+      "bytes": 44188,
+      "format": "lossless WebP RGBA"
+    },
+    "bun": {
+      "path": "assets/food-bun.webp",
+      "source": "ingredients-atlas.png",
+      "componentBounds": [
+        953,
+        111,
+        1213,
+        290
+      ],
+      "cropBounds": [
+        949,
+        105,
+        1220,
+        293
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        287,
+        204
+      ],
+      "dimensions": [
+        287,
+        204
+      ],
+      "sha256": "ba013fc060f5d37670953528d60e953f8052db3c61dcfa270904b613bdb1f210",
+      "bytes": 66526,
+      "format": "lossless WebP RGBA"
+    },
+    "drumstick": {
+      "path": "assets/food-drumstick.webp",
+      "source": "ingredients-atlas.png",
+      "componentBounds": [
+        359,
+        369,
+        612,
+        589
+      ],
+      "cropBounds": [
+        355,
+        366,
+        615,
+        595
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        276,
+        245
+      ],
+      "dimensions": [
+        276,
+        245
+      ],
+      "sha256": "f5fb120e1e378cec051ba6a072392425ec03e4f05b338352c0530aef1d293b6f",
+      "bytes": 64296,
+      "format": "lossless WebP RGBA"
+    },
+    "vegetables": {
+      "path": "assets/food-vegetables.webp",
+      "source": "ingredients-atlas.png",
+      "componentBounds": [
+        958,
+        384,
+        1213,
+        577
+      ],
+      "cropBounds": [
+        955,
+        382,
+        1218,
+        581
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        279,
+        215
+      ],
+      "dimensions": [
+        279,
+        215
+      ],
+      "sha256": "6ee95f9fdd53c93046b004d4cb7df999c17903f5ae6d8ed26bd558f5f9c0337a",
+      "bytes": 61186,
+      "format": "lossless WebP RGBA"
+    },
+    "patty": {
+      "path": "assets/food-patty.webp",
+      "source": "ingredients-atlas.png",
+      "componentBounds": [
+        47,
+        385,
+        305,
+        582
+      ],
+      "cropBounds": [
+        41,
+        383,
+        307,
+        587
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        282,
+        220
+      ],
+      "dimensions": [
+        282,
+        220
+      ],
+      "sha256": "c567fff449e1fd61490b12f55621d19617d8b48061a40f2c7a2948f9a9a6ece6",
+      "bytes": 84816,
+      "format": "lossless WebP RGBA"
+    },
+    "sweetPotato": {
+      "path": "assets/food-sweetPotato.webp",
+      "source": "ingredients-atlas.png",
+      "componentBounds": [
+        658,
+        391,
+        905,
+        574
+      ],
+      "cropBounds": [
+        654,
+        385,
+        910,
+        579
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        272,
+        210
+      ],
+      "dimensions": [
+        272,
+        210
+      ],
+      "sha256": "51388945c2b323a3c2f2a1aebc2182d3780eee85cc4c56af384a4cc023a07cbf",
+      "bytes": 61714,
+      "format": "lossless WebP RGBA"
+    },
+    "coffeePot": {
+      "path": "assets/food-coffeePot.webp",
+      "source": "ingredients-atlas.png",
+      "componentBounds": [
+        368,
+        641,
+        607,
+        892
+      ],
+      "cropBounds": [
+        365,
+        639,
+        611,
+        899
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        262,
+        276
+      ],
+      "dimensions": [
+        262,
+        276
+      ],
+      "sha256": "58028eca58ada16db32b2416e7fdd52cfb931f4624b9f51611f4e0d36b58b317",
+      "bytes": 61030,
+      "format": "lossless WebP RGBA"
+    },
+    "vanillaScoop": {
+      "path": "assets/food-vanillaScoop.webp",
+      "source": "ingredients-atlas.png",
+      "componentBounds": [
+        984,
+        671,
+        1201,
+        882
+      ],
+      "cropBounds": [
+        980,
+        665,
+        1208,
+        886
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        244,
+        237
+      ],
+      "dimensions": [
+        244,
+        237
+      ],
+      "sha256": "2e97ef307fc0813e9778ae9bceac8cf662d5d2d4bcac652e9a4aea0847710fe6",
+      "bytes": 58952,
+      "format": "lossless WebP RGBA"
+    },
+    "milk": {
+      "path": "assets/food-milk.webp",
+      "source": "ingredients-atlas.png",
+      "componentBounds": [
+        66,
+        672,
+        302,
+        885
+      ],
+      "cropBounds": [
+        64,
+        667,
+        306,
+        888
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        258,
+        237
+      ],
+      "dimensions": [
+        258,
+        237
+      ],
+      "sha256": "6b684387e012970e4e5ebbeacc45772ad625054655ff785e88503be7dcf917f7",
+      "bytes": 51478,
+      "format": "lossless WebP RGBA"
+    },
+    "pinkScoop": {
+      "path": "assets/food-pinkScoop.webp",
+      "source": "ingredients-atlas.png",
+      "componentBounds": [
+        670,
+        673,
+        898,
+        881
+      ],
+      "cropBounds": [
+        666,
+        670,
+        901,
+        885
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        251,
+        231
+      ],
+      "dimensions": [
+        251,
+        231
+      ],
+      "sha256": "2f924471a93f63e51adb25a4fb83403ea33a00dbd000ebdaf2a1df442763eb2d",
+      "bytes": 65690,
+      "format": "lossless WebP RGBA"
+    },
+    "pipingBag": {
+      "path": "assets/food-pipingBag.webp",
+      "source": "ingredients-atlas.png",
+      "componentBounds": [
+        662,
+        923,
+        924,
+        1183
+      ],
+      "cropBounds": [
+        658,
+        917,
+        930,
+        1188
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        288,
+        287
+      ],
+      "dimensions": [
+        288,
+        287
+      ],
+      "sha256": "f3126204bb493463a432f1596bbaeeee2349b2372af0dca37716f228c2d5bbc6",
+      "bytes": 47770,
+      "format": "lossless WebP RGBA"
+    },
+    "sprinkles": {
+      "path": "assets/food-sprinkles.webp",
+      "source": "ingredients-atlas.png",
+      "componentBounds": [
+        1013,
+        947,
+        1156,
+        1182
+      ],
+      "cropBounds": [
+        1011,
+        945,
+        1159,
+        1189
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        164,
+        260
+      ],
+      "dimensions": [
+        164,
+        260
+      ],
+      "sha256": "3af063d4210d280184cb29aaecb8f52fd01402654cfc1f0d0721373e23c90786",
+      "bytes": 60578,
+      "format": "lossless WebP RGBA"
+    },
+    "sauceSpoon": {
+      "path": "assets/food-sauceSpoon.webp",
+      "source": "ingredients-atlas.png",
+      "componentBounds": [
+        362,
+        952,
+        603,
+        1174
+      ],
+      "cropBounds": [
+        355,
+        949,
+        610,
+        1177
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        271,
+        244
+      ],
+      "dimensions": [
+        271,
+        244
+      ],
+      "sha256": "dfe3a448102da9983f357aae5a853e5c1e138e275405dfe15d59ae8b71622253",
+      "bytes": 34798,
+      "format": "lossless WebP RGBA"
+    },
+    "rollingPin": {
+      "path": "assets/food-rollingPin.webp",
+      "source": "ingredients-atlas.png",
+      "componentBounds": [
+        41,
+        960,
+        319,
+        1172
+      ],
+      "cropBounds": [
+        34,
+        956,
+        324,
+        1176
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        306,
+        236
+      ],
+      "dimensions": [
+        306,
+        236
+      ],
+      "sha256": "5445d9053f95a19ee8717071287075590117e39e75c6c4fbfd3c04ffb40ce427",
+      "bytes": 41596,
+      "format": "lossless WebP RGBA"
+    },
+    "lavenderScoop": {
+      "path": "assets/food-lavenderScoop.webp",
+      "source": "prep-extras-atlas.png",
+      "componentBounds": [
+        [
+          97,
+          124,
+          562,
+          564
+        ]
+      ],
+      "cropBounds": [
+        94,
+        120,
+        564,
+        567
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        486,
+        463
+      ],
+      "dimensions": [
+        320,
+        305
+      ],
+      "sha256": "34765c98df4dc65f357420fa868cddf4d83b8a36d891644098da058d03407fab",
+      "bytes": 105820,
+      "format": "lossless WebP RGBA"
+    },
+    "rawDrumstick": {
+      "path": "assets/food-rawDrumstick.webp",
+      "source": "prep-extras-atlas.png",
+      "componentBounds": [
+        [
+          727,
+          143,
+          1193,
+          561
+        ]
+      ],
+      "cropBounds": [
+        721,
+        140,
+        1196,
+        564
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        491,
+        440
+      ],
+      "dimensions": [
+        320,
+        287
+      ],
+      "sha256": "3a2a6c7fbd018152c59c1624d689f868526c071a9ca7432d11ec073697549834",
+      "bytes": 62918,
+      "format": "lossless WebP RGBA"
+    },
+    "cupcakeLiners": {
+      "path": "assets/food-cupcakeLiners.webp",
+      "source": "prep-extras-atlas.png",
+      "componentBounds": [
+        [
+          54,
+          723,
+          320,
+          948
+        ],
+        [
+          334,
+          723,
+          598,
+          948
+        ],
+        [
+          177,
+          923,
+          455,
+          1153
+        ]
+      ],
+      "cropBounds": [
+        49,
+        720,
+        603,
+        1158
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        570,
+        454
+      ],
+      "dimensions": [
+        320,
+        255
+      ],
+      "sha256": "601ee8ad801718c466c6c1b5fd8a367434c750968d043cb0e3309de0d55739d4",
+      "bytes": 75966,
+      "format": "lossless WebP RGBA"
+    },
+    "coffeeBeans": {
+      "path": "assets/food-coffeeBeans.webp",
+      "source": "prep-extras-atlas.png",
+      "componentBounds": [
+        [
+          697,
+          757,
+          1185,
+          1120
+        ]
+      ],
+      "cropBounds": [
+        694,
+        754,
+        1188,
+        1124
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        510,
+        386
+      ],
+      "dimensions": [
+        320,
+        242
+      ],
+      "sha256": "088c34695b28945d0e467c600b5eeb38ca70a1328f55e8c6d20438160cca5ea0",
+      "bytes": 85332,
+      "format": "lossless WebP RGBA"
+    },
+    "tomatoSlice": {
+      "path": "assets/food-tomatoSlice.webp",
+      "source": "prep-corrections-atlas.png",
+      "componentBounds": [
+        [
+          67,
+          70,
+          457,
+          442
+        ]
+      ],
+      "cropBounds": [
+        65,
+        66,
+        462,
+        446
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        413,
+        396
+      ],
+      "dimensions": [
+        320,
+        307
+      ],
+      "sha256": "6a860d0843e9826c90492d72576b17454df6edcc55af79c1694256bb547926e5",
+      "bytes": 120554,
+      "format": "lossless WebP RGBA"
+    },
+    "cheeseSlice": {
+      "path": "assets/food-cheeseSlice.webp",
+      "source": "prep-corrections-atlas.png",
+      "componentBounds": [
+        [
+          544,
+          69,
+          991,
+          454
+        ]
+      ],
+      "cropBounds": [
+        542,
+        64,
+        994,
+        459
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        468,
+        411
+      ],
+      "dimensions": [
+        320,
+        281
+      ],
+      "sha256": "f0c2f5487ed0941d3d593314920aba6c8f7de5d3383827b0341954546ef5b213",
+      "bytes": 57980,
+      "format": "lossless WebP RGBA"
+    },
+    "plainSpoon": {
+      "path": "assets/food-plainSpoon.webp",
+      "source": "prep-corrections-atlas.png",
+      "componentBounds": [
+        [
+          1065,
+          56,
+          1491,
+          459
+        ]
+      ],
+      "cropBounds": [
+        1059,
+        54,
+        1493,
+        464
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        450,
+        426
+      ],
+      "dimensions": [
+        320,
+        303
+      ],
+      "sha256": "a01cf1f44746484ddf792cc8bb0578ac5b67352e0aeb050edc3984c6c3eea234",
+      "bytes": 39110,
+      "format": "lossless WebP RGBA"
+    },
+    "berrySauce": {
+      "path": "assets/food-berrySauce.webp",
+      "source": "prep-corrections-atlas.png",
+      "componentBounds": [
+        [
+          148,
+          521,
+          369,
+          954
+        ]
+      ],
+      "cropBounds": [
+        143,
+        516,
+        372,
+        960
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        245,
+        460
+      ],
+      "dimensions": [
+        170,
+        320
+      ],
+      "sha256": "90e2d28f8c3b0fc77c3ef44d3adf85d1e7e1337deeb70eb4c862b93b818d2fda",
+      "bytes": 53748,
+      "format": "lossless WebP RGBA"
+    },
+    "sweetPotatoWedges": {
+      "path": "assets/food-sweetPotatoWedges.webp",
+      "source": "prep-corrections-atlas.png",
+      "componentBounds": [
+        [
+          547,
+          565,
+          985,
+          935
+        ]
+      ],
+      "cropBounds": [
+        542,
+        559,
+        990,
+        941
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        464,
+        398
+      ],
+      "dimensions": [
+        320,
+        274
+      ],
+      "sha256": "b668d6c7ad25d8617f40a373f655af59b0cc5d3397d7d4ccfd797be9c45d1eb7",
+      "bytes": 92896,
+      "format": "lossless WebP RGBA"
+    },
+    "emptyMixingBowl": {
+      "path": "assets/food-emptyMixingBowl.webp",
+      "source": "prep-corrections-atlas.png",
+      "componentBounds": [
+        [
+          1058,
+          614,
+          1498,
+          934
+        ]
+      ],
+      "cropBounds": [
+        1055,
+        609,
+        1504,
+        941
+      ],
+      "paddingPx": 8,
+      "paddedNativeDimensions": [
+        465,
+        348
+      ],
+      "dimensions": [
+        320,
+        239
+      ],
+      "sha256": "2f1607b8fc48b285dcada83ebc23440cd56e26ebe38aa952a6f57fec90f6ed98",
+      "bytes": 60844,
+      "format": "lossless WebP RGBA"
+    }
+  }
+}

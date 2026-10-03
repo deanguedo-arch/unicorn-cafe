@@ -1,0 +1,186 @@
+{
+  "status": "PASS",
+  "executedAtUtc": "2026-10-03T19:18:38.495Z",
+  "version": "1.0.0",
+  "environment": {
+    "kind": "Native Canvas; not a browser",
+    "nodeVersion": "v24.19.0",
+    "platform": "linux",
+    "architecture": "x64",
+    "canvasPackage": "@napi-rs/canvas"
+  },
+  "sourceSha256": {
+    "src/recipes.js": "8397814ae9c1296267b96f2bb69784befd7a78189726fe35714ae7b41621348f",
+    "src/kitchen.js": "4325a5cca5dfa2c6cd1a9dc29e67aee2a17289655ee30ac671bc221ed65fe660"
+  },
+  "tests": [
+    {
+      "name": "source-syntax-and-public-api",
+      "status": "PASS",
+      "files": [
+        "src/recipes.js",
+        "src/kitchen.js"
+      ]
+    },
+    {
+      "name": "food-image-decoding",
+      "status": "PASS",
+      "loadedImages": 42,
+      "files": [
+        "food-berrySauce.webp",
+        "food-bun.webp",
+        "food-cheese.webp",
+        "food-cheeseSlice.webp",
+        "food-chicken.webp",
+        "food-coffee.webp",
+        "food-coffeeBeans.webp",
+        "food-coffeePot.webp",
+        "food-cone.webp",
+        "food-cupcakeLiners.webp",
+        "food-cupcakes.webp",
+        "food-dough.webp",
+        "food-drumstick.webp",
+        "food-emptyMixingBowl.webp",
+        "food-emptyMug.webp",
+        "food-hamburger.webp",
+        "food-icecream.webp",
+        "food-lavenderScoop.webp",
+        "food-lettuce.webp",
+        "food-milk.webp",
+        "food-mixingBowl.webp",
+        "food-patty.webp",
+        "food-pinkScoop.webp",
+        "food-pipingBag.webp",
+        "food-pizza.webp",
+        "food-plainCupcake.webp",
+        "food-plainSpoon.webp",
+        "food-plate.webp",
+        "food-rawDrumstick.webp",
+        "food-rawPizza.webp",
+        "food-rollingPin.webp",
+        "food-sauceSpoon.webp",
+        "food-saucedDough.webp",
+        "food-soup.webp",
+        "food-sprinkles.webp",
+        "food-sweetPotato.webp",
+        "food-sweetPotatoWedges.webp",
+        "food-tomato.webp",
+        "food-tomatoSlice.webp",
+        "food-vanillaScoop.webp",
+        "food-vegetablePot.webp",
+        "food-vegetables.webp"
+      ]
+    },
+    {
+      "name": "recipe-and-art-contract",
+      "status": "PASS",
+      "recipes": [
+        "pizza",
+        "coffee",
+        "cupcakes",
+        "icecream",
+        "hamburger",
+        "soup",
+        "chicken"
+      ],
+      "literalRendererBitmapKeysChecked": 27
+    },
+    {
+      "name": "renderer-lifecycle-and-state-ownership",
+      "status": "PASS",
+      "checks": [
+        "DPR capped at 2",
+        "640×440 backing buffer for 320×220 display at DPR 3",
+        "immutable input state and recipe definitions",
+        "same-step animation retained",
+        "normalized and clamped interaction coordinates",
+        "interaction does not advance gameplay",
+        "setState and interact do not create extra animation loops",
+        "destroy cancels the active frame",
+        "destroy prevents rescheduling"
+      ]
+    },
+    {
+      "name": "native-canvas-state-and-size-sweep",
+      "status": "PASS",
+      "cookingProgressValues": [
+        0,
+        0.5,
+        1
+      ],
+      "cookingCanvasDimensions": [
+        {
+          "width": 320,
+          "height": 220
+        },
+        {
+          "width": 560,
+          "height": 320
+        },
+        {
+          "width": 800,
+          "height": 460
+        }
+      ],
+      "readyAndCelebrateCanvasDimensions": {
+        "width": 320,
+        "height": 220
+      },
+      "cookingCases": 306,
+      "readyAndCelebrateCases": 14,
+      "totalCases": 320,
+      "perRecipe": [
+        {
+          "id": "pizza",
+          "steps": 5,
+          "cookingCases": 45,
+          "readyAndCelebrateCases": 2
+        },
+        {
+          "id": "coffee",
+          "steps": 4,
+          "cookingCases": 36,
+          "readyAndCelebrateCases": 2
+        },
+        {
+          "id": "cupcakes",
+          "steps": 5,
+          "cookingCases": 45,
+          "readyAndCelebrateCases": 2
+        },
+        {
+          "id": "icecream",
+          "steps": 5,
+          "cookingCases": 45,
+          "readyAndCelebrateCases": 2
+        },
+        {
+          "id": "hamburger",
+          "steps": 5,
+          "cookingCases": 45,
+          "readyAndCelebrateCases": 2
+        },
+        {
+          "id": "soup",
+          "steps": 5,
+          "cookingCases": 45,
+          "readyAndCelebrateCases": 2
+        },
+        {
+          "id": "chicken",
+          "steps": 5,
+          "cookingCases": 45,
+          "readyAndCelebrateCases": 2
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "No browser was launched, and browser JavaScript/DOM compatibility was not verified by this harness.",
+    "Canvas dimensions are native rendering sizes; they do not constitute responsive browser-layout tests.",
+    "This harness does not test real pointer-event delivery, audio playback, localStorage, service workers, offline installation, or full gameplay flows.",
+    "No physical iPhone or Safari device testing was performed by this harness.",
+    "Successful rendering is an exception and asset-integrity check, not an automated judgment of visual quality."
+  ],
+  "durationMs": 476
+}

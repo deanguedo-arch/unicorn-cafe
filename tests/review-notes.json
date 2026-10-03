@@ -1,0 +1,116 @@
+{
+  "review_scope": [
+    "src/app.js",
+    "src/index.html",
+    "src/style.css",
+    "src/recipes.js"
+  ],
+  "review_kind": "Independent source review and Node VM execution of actual save reader; no browser or device test by this reviewer.",
+  "files_sha256": {
+    "src/app.js": "6f83812700da2968756d28ef6c36bc03866233bfda1245ed3b4238f39824a30a",
+    "src/index.html": "b0de74b713c04a59d19b3e07b2a9c18b2bb7588c92e80d212b553768a05489ca",
+    "src/style.css": "1d3b2e8876d23535e0fbac2b1bdd8bc873ac31d6ae21bf8385f3038496ca0433",
+    "src/recipes.js": "8397814ae9c1296267b96f2bb69784befd7a78189726fe35714ae7b41621348f"
+  },
+  "findings": [
+    {
+      "id": "SAVE-ID-VALIDATION",
+      "severity": "P1 robustness",
+      "status": "FIXED by root; verified through actual controller DOM simulation",
+      "path": "src/app.js readSave recipe guards",
+      "problem": "Truthy property lookups accept inherited or coercible values instead of an exact recipe identifier. Valid-JSON corrupt state can abort startup or prevent a seven-dish order bag.",
+      "verified_inputs": [
+        {
+          "active": {
+            "recipeId": "constructor",
+            "stepIndex": 0,
+            "taps": 0
+          },
+          "result": "TypeError reading undefined length"
+        },
+        {
+          "active": {
+            "recipeId": {
+              "toString": "pizza"
+            },
+            "stepIndex": 0,
+            "taps": 0
+          },
+          "result": "TypeError converting object to primitive"
+        },
+        {
+          "bag": [
+            [
+              "pizza"
+            ],
+            [
+              "pizza"
+            ],
+            [
+              "pizza"
+            ],
+            [
+              "pizza"
+            ],
+            [
+              "pizza"
+            ],
+            [
+              "pizza"
+            ],
+            [
+              "pizza"
+            ]
+          ],
+          "result": "Incorrectly accepted as valid permutation"
+        }
+      ],
+      "fix": "Define isRecipeId = id => typeof id === string && ids.includes(id); use for bag, active, pending and recipe entry guards.",
+      "resolution": "Null-prototype recipe map plus exact string isRecipeId checks reject inherited identifiers, coercible objects and nested-array bags. Five malformed/corrupt save cases passed."
+    },
+    {
+      "id": "SHORT-RESULT-OVERFLOW",
+      "severity": "P1 if reproduced",
+      "status": "FIXED by root in source; no browser layout verification available",
+      "path": "src/style.css .result-panel overflow:hidden and max-height:100%",
+      "problem": "Result panel contents may exceed a 320px-high landscape viewport, while the only continuation action is inside an overflow-hidden panel.",
+      "fix": "Allow result-panel overflow-y:auto; verify right/wrong result Next at 568x320 and safe-area heights. Root notified to check in browser.",
+      "resolution": "Result panel permits vertical scrolling. Physical viewport fit and iPhone Safari behavior remain untested."
+    }
+  ],
+  "passed_node_checks": [
+    "Fresh save yields all seven unique string dish ids in order.",
+    "Saved pizza step 0 with 3 taps normalizes to step 1 with zero taps.",
+    "Saved pizza at final step normalizes to ready and zero taps."
+  ],
+  "source_review_observations": [
+    "Normal correct serving increments rewards exactly once before opening the result and clears active, with pending guards against repeated serving.",
+    "Home during step animation cancels timer and normalizes completed step before saving.",
+    "Wrong serving preserves active/order/rewards; nextOrder starts the wanted dish.",
+    "Pointer cancellation, release, lost capture, window blur and resize release captured pointer; a completed step releases pointer to prevent one drag advancing multiple recipe steps.",
+    "Storage get/set/JSON errors are caught; save availability feedback is maintained.",
+    "All seven recipes are present, available in the picture menu, and each has four or five preparation steps."
+  ],
+  "not_claimed": [
+    "Browser rendering",
+    "Touch emulation",
+    "Audio playback",
+    "Service worker behavior",
+    "Real iPhone Safari"
+  ],
+  "controller_suite": {
+    "path": "tests/controller-tests.cjs",
+    "results": "tests/test-results.json",
+    "summary": {
+      "total": 16,
+      "passed": 16,
+      "failed": 0,
+      "decodedImageFiles": 54
+    },
+    "label": "DOM simulation with actual game scripts and DOM controls; no browser/layout/device claim"
+  },
+  "post_fix_sha256": {
+    "src/app.js": "d47664ebcf6db110cc7cc06187099a28b882cf1ca319cadf91bba90837670e78",
+    "src/style.css": "675b51e0e669f4907629b6b352e00a8ecdb91c6fc5465ab207e5569e04ac872d"
+  }
+}
