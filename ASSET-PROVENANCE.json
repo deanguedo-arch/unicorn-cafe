@@ -1,0 +1,519 @@
+{
+  "sourcePack": "Sneaky-Unicorn-AI-Source-Pack-v1.zip",
+  "assets": [
+    {
+      "asset": "assets/u_idle0.webp",
+      "source": "02_LATEST-v14/source/index.html embedded atlas: u_idle0",
+      "pixels": [
+        126,
+        141
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/u_idle1.webp",
+      "source": "02_LATEST-v14/source/index.html embedded atlas: u_idle1",
+      "pixels": [
+        112,
+        142
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/u_run0.webp",
+      "source": "02_LATEST-v14/source/index.html embedded atlas: u_run0",
+      "pixels": [
+        131,
+        131
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/u_run1.webp",
+      "source": "02_LATEST-v14/source/index.html embedded atlas: u_run1",
+      "pixels": [
+        139,
+        136
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/u_run2.webp",
+      "source": "02_LATEST-v14/source/index.html embedded atlas: u_run2",
+      "pixels": [
+        148,
+        132
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/u_run3.webp",
+      "source": "02_LATEST-v14/source/index.html embedded atlas: u_run3",
+      "pixels": [
+        152,
+        130
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/u_run4.webp",
+      "source": "02_LATEST-v14/source/index.html embedded atlas: u_run4",
+      "pixels": [
+        142,
+        134
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/u_run5.webp",
+      "source": "02_LATEST-v14/source/index.html embedded atlas: u_run5",
+      "pixels": [
+        154,
+        133
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/u_happy0.webp",
+      "source": "02_LATEST-v14/source/index.html embedded atlas: u_happy0",
+      "pixels": [
+        129,
+        144
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/u_happy1.webp",
+      "source": "02_LATEST-v14/source/index.html embedded atlas: u_happy1",
+      "pixels": [
+        118,
+        153
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/u_happy2.webp",
+      "source": "02_LATEST-v14/source/index.html embedded atlas: u_happy2",
+      "pixels": [
+        123,
+        140
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/h_idle0.webp",
+      "source": "02_LATEST-v14/source/index.html embedded atlas: h_idle0",
+      "pixels": [
+        94,
+        159
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/h_idle1.webp",
+      "source": "02_LATEST-v14/source/index.html embedded atlas: h_idle1",
+      "pixels": [
+        94,
+        167
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/h_run0.webp",
+      "source": "02_LATEST-v14/source/index.html embedded atlas: h_run0",
+      "pixels": [
+        113,
+        162
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/h_run1.webp",
+      "source": "02_LATEST-v14/source/index.html embedded atlas: h_run1",
+      "pixels": [
+        112,
+        162
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/h_run2.webp",
+      "source": "02_LATEST-v14/source/index.html embedded atlas: h_run2",
+      "pixels": [
+        120,
+        161
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/h_run3.webp",
+      "source": "02_LATEST-v14/source/index.html embedded atlas: h_run3",
+      "pixels": [
+        120,
+        162
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/h_happy.webp",
+      "source": "02_LATEST-v14/source/index.html embedded atlas: h_happy",
+      "pixels": [
+        100,
+        150
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/w_0_0.webp",
+      "source": "02_LATEST-v14/source/index.html embedded atlas: w_0_0",
+      "pixels": [
+        125,
+        141
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/w_0_1.webp",
+      "source": "02_LATEST-v14/source/index.html embedded atlas: w_0_1",
+      "pixels": [
+        122,
+        137
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/w_0_2.webp",
+      "source": "02_LATEST-v14/source/index.html embedded atlas: w_0_2",
+      "pixels": [
+        130,
+        139
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/w_5_3.webp",
+      "source": "02_LATEST-v14/source/index.html embedded atlas: w_5_3",
+      "pixels": [
+        141,
+        136
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/m_0_0.webp",
+      "source": "02_LATEST-v14/source/index.html embedded atlas: m_0_0",
+      "pixels": [
+        98,
+        148
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/m_0_1.webp",
+      "source": "02_LATEST-v14/source/index.html embedded atlas: m_0_1",
+      "pixels": [
+        98,
+        150
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/m_0_2.webp",
+      "source": "02_LATEST-v14/source/index.html embedded atlas: m_0_2",
+      "pixels": [
+        99,
+        148
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/m_4_5.webp",
+      "source": "02_LATEST-v14/source/index.html embedded atlas: m_4_5",
+      "pixels": [
+        100,
+        159
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/pizza.webp",
+      "source": "02_LATEST-v14/source/index.html embedded DATA.pizza",
+      "pixels": [
+        163,
+        190
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/burger.webp",
+      "source": "02_LATEST-v14/source/index.html embedded DATA.burger",
+      "pixels": [
+        183,
+        190
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/cupcake.webp",
+      "source": "02_LATEST-v14/source/index.html embedded DATA.cupcake",
+      "pixels": [
+        179,
+        190
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/icecream.webp",
+      "source": "02_LATEST-v14/source/index.html embedded DATA.icecream",
+      "pixels": [
+        120,
+        190
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/milk.webp",
+      "source": "02_LATEST-v14/source/index.html embedded DATA.milk",
+      "pixels": [
+        126,
+        190
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/cheese.webp",
+      "source": "02_LATEST-v14/source/index.html embedded DATA.cheese",
+      "pixels": [
+        185,
+        147
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/carrots.webp",
+      "source": "02_LATEST-v14/source/index.html embedded DATA.carrots",
+      "pixels": [
+        164,
+        190
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/strawberry.webp",
+      "source": "02_LATEST-v14/source/index.html embedded DATA.strawberry",
+      "pixels": [
+        162,
+        174
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/bread.webp",
+      "source": "02_LATEST-v14/source/index.html embedded DATA.bread",
+      "pixels": [
+        190,
+        145
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/teapot.webp",
+      "source": "02_LATEST-v14/source/index.html embedded DATA.teapot",
+      "pixels": [
+        190,
+        155
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/dog_idle.webp",
+      "source": "02_LATEST-v14/source/index.html embedded DATA.dog_idle",
+      "pixels": [
+        179,
+        188
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/dog_happy.webp",
+      "source": "02_LATEST-v14/source/index.html embedded DATA.dog_happy",
+      "pixels": [
+        187,
+        162
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/star.webp",
+      "source": "02_LATEST-v14/source/index.html embedded DATA.star",
+      "pixels": [
+        84,
+        84
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/cookie.webp",
+      "source": "02_LATEST-v14/source/index.html embedded DATA.cookie",
+      "pixels": [
+        183,
+        177
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/flowers.webp",
+      "source": "02_LATEST-v14/source/index.html embedded DATA.flowers",
+      "pixels": [
+        166,
+        190
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/cherries.webp",
+      "source": "02_LATEST-v14/source/index.html embedded DATA.cherries",
+      "pixels": [
+        176,
+        164
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/donut.webp",
+      "source": "02_LATEST-v14/source/index.html embedded DATA.donut",
+      "pixels": [
+        190,
+        170
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/baby_pink_0.webp",
+      "source": "03_ASSETS/v14-generated/pastel_baby_unicorn_sprite_sheet.png (25, 28, 272, 273)",
+      "pixels": [
+        230,
+        225
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/baby_pink_1.webp",
+      "source": "03_ASSETS/v14-generated/pastel_baby_unicorn_sprite_sheet.png (321, 28, 569, 273)",
+      "pixels": [
+        230,
+        224
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/baby_pink_2.webp",
+      "source": "03_ASSETS/v14-generated/pastel_baby_unicorn_sprite_sheet.png (605, 42, 880, 273)",
+      "pixels": [
+        230,
+        191
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/baby_pink_3.webp",
+      "source": "03_ASSETS/v14-generated/pastel_baby_unicorn_sprite_sheet.png (915, 65, 1222, 273)",
+      "pixels": [
+        230,
+        157
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/baby_pink_4.webp",
+      "source": "03_ASSETS/v14-generated/pastel_baby_unicorn_sprite_sheet.png (20, 334, 291, 571)",
+      "pixels": [
+        230,
+        209
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/baby_pink_5.webp",
+      "source": "03_ASSETS/v14-generated/pastel_baby_unicorn_sprite_sheet.png (627, 320, 912, 573)",
+      "pixels": [
+        230,
+        214
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/baby_blue_0.webp",
+      "source": "03_ASSETS/v14-generated/pastel_baby_unicorn_sprite_sheet.png (27, 640, 272, 880)",
+      "pixels": [
+        230,
+        227
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/baby_blue_1.webp",
+      "source": "03_ASSETS/v14-generated/pastel_baby_unicorn_sprite_sheet.png (321, 636, 569, 880)",
+      "pixels": [
+        230,
+        224
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/baby_blue_2.webp",
+      "source": "03_ASSETS/v14-generated/pastel_baby_unicorn_sprite_sheet.png (603, 637, 882, 882)",
+      "pixels": [
+        230,
+        209
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/baby_blue_3.webp",
+      "source": "03_ASSETS/v14-generated/pastel_baby_unicorn_sprite_sheet.png (922, 662, 1224, 881)",
+      "pixels": [
+        230,
+        163
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/baby_blue_4.webp",
+      "source": "03_ASSETS/v14-generated/pastel_baby_unicorn_sprite_sheet.png (17, 947, 292, 1174)",
+      "pixels": [
+        230,
+        201
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/baby_blue_5.webp",
+      "source": "03_ASSETS/v14-generated/pastel_baby_unicorn_sprite_sheet.png (625, 938, 910, 1174)",
+      "pixels": [
+        230,
+        197
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/restaurant.webp",
+      "source": "03_ASSETS/topdown-maps/easy_restaurant.png",
+      "pixels": [
+        1800,
+        1100
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP lossless"
+    },
+    {
+      "asset": "assets/hero.webp",
+      "source": "03_ASSETS/core-original/unicorn-hero.png",
+      "pixels": [
+        680,
+        680
+      ],
+      "processing": "cropped/resized only; alpha preserved; WebP quality 93"
+    }
+  ],
+  "newArt": "Food preparation states and UI pictograms are original, editable Canvas/SVG code in src/art.js, not emoji or third-party images."
+}

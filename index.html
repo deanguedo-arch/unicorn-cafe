@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#715792">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Rainbow Restaurant">
+<meta name="description" content="A gentle, local-only Sneaky Unicorn restaurant: welcome guests, cook their picture orders, and serve their tables.">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./icons/icon-192.png">
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+<link rel="stylesheet" href="./styles.css">
+<title>Sneaky Unicorn · Rainbow Restaurant</title>
+</head>
+<body>
+<div id="app" class="app">
+ <header id="topbar" class="topbar">
+  <div class="brand"><div class="brand-picture" id="brand-picture"></div><div><span class="eyebrow">SNEAKY UNICORN</span><strong>Rainbow Restaurant</strong></div></div>
+  <div id="day-progress" class="day-progress" aria-label="Meals served"></div>
+  <div class="header-actions"><button id="mute" class="icon-button" aria-label="Mute sound" title="Sound"></button><button id="menu" class="icon-button" aria-label="Open menu" title="Menu"></button></div>
+ </header>
+ <main id="stage" class="stage">
+  <canvas id="world" aria-label="Top-down restaurant. Drag anywhere to move. Tap a customer or the kitchen to walk there." tabindex="0"></canvas>
+  <div id="world-ui" class="world-ui" hidden>
+   <button id="kitchen-nav" class="kitchen-nav" aria-label="Walk to the kitchen"></button>
+   <div id="goal-hint" class="goal-hint"></div>
+   <div id="movement-hint" class="movement-hint"></div>
+  </div>
+  <section id="title" class="title-screen"></section>
+  <section id="kitchen-screen" class="kitchen-screen" hidden></section>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="modal-root"></div>
+ </main>
+ <footer id="dock" class="dock" hidden><div id="tables" class="tables"></div><button id="primary" class="primary-action"></button></footer>
+ <div id="announcer" class="sr-only" role="status" aria-live="polite"></div>
+</div>
+<noscript>This game needs JavaScript turned on. There are no accounts, ads, or purchases.</noscript>
+<script src="./src/assets.js"></script>
+<script src="./src/engine.js"></script>
+<script src="./src/art.js"></script>
+<script src="./src/game.js"></script>
+</body>
+</html>

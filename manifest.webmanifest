@@ -1,0 +1,16 @@
+{
+  "id": "./",
+  "name": "Sneaky Unicorn: Rainbow Restaurant",
+  "short_name": "Rainbow Restaurant",
+  "description": "Welcome guests, make their custom picture orders, and carry meals to their tables.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fff9ec",
+  "theme_color": "#715792",
+  "lang": "en",
+  "icons": [
+    {"src":"./icons/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
+    {"src":"./icons/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"}
+  ]
+}
