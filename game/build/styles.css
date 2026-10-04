@@ -71,3 +71,25 @@ button{transition:transform .11s ease,filter .11s ease,box-shadow .11s ease}butt
 @media(orientation:landscape) and (max-height:540px){.designer-tabs{grid-column:1;grid-row:2/4;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(3,minmax(0,1fr))}.designer-tab{flex-direction:column;font-size:8px;min-height:44px;gap:0}.designer-tab img{width:30px;height:26px}.designer-picker .custom-options{gap:3px}}
 .cook-layout .recipe-banner{grid-column:1/-1;max-width:calc(100% - 118px);overflow:hidden;text-overflow:ellipsis}
 .cook-layout .cook-tools{flex-direction:row}.cook-layout .cook-tools .picture-tool{flex-shrink:0}
+
+/* Annotation fixes: contained toolbar and square picture menu. */
+.topbar{height:80px;min-height:80px;padding:8px 12px;grid-template-columns:minmax(0,1fr) auto 56px;gap:12px}
+.brand{align-self:center;height:60px;padding:3px 12px 3px 6px}
+.brand-picture{flex-shrink:0}
+.topbar>.small-round{width:54px;height:54px;justify-self:end}
+.day-progress{min-width:0;flex-shrink:0;padding:8px 10px}
+.menu-grid{flex:1;grid-template-columns:repeat(3,minmax(0,240px));justify-content:center;align-content:start;gap:18px;padding:24px; background:#8d709e}
+.dish-card{aspect-ratio:1;min-height:0;width:100%;padding:14px;border-radius:18px}
+.dish-card img{width:100%;height:100%;max-width:190px;max-height:190px;object-fit:contain}
+@media(max-width:680px){
+ .topbar{height:72px;min-height:72px;padding:6px 8px;gap:7px;grid-template-columns:minmax(0,1fr) auto 46px}
+ .brand{height:54px;padding-right:7px}.brand-copy strong{font-size:13px}.brand-copy span{font-size:7px;letter-spacing:1px}
+ .topbar>.small-round{width:44px;height:44px}.day-progress{padding:6px;gap:3px}.shift-pips{gap:2px}.day-progress .meal-pip{width:8px;height:10px}.phase-icon,.phase-icon img{width:20px;height:20px}
+ .menu-grid{gap:10px;padding:14px;grid-template-columns:repeat(3,minmax(0,180px))}.dish-card{padding:8px;border-radius:12px}.dish-card img{width:100%;height:100%}
+ .request-star{width:24px;height:24px;right:3px;top:3px}
+}
+@media(max-width:480px){.brand-copy{display:none}.brand{padding:3px 5px}.topbar{grid-template-columns:minmax(54px,1fr) auto 46px}}
+@media(orientation:landscape) and (max-height:540px){
+ .topbar{height:60px;min-height:60px;padding:4px 10px}.brand{height:48px}.topbar>.small-round{width:44px;height:44px}
+ .menu-grid{grid-template-columns:repeat(5,minmax(0,150px));gap:10px;padding:12px}.dish-card{min-height:0;padding:6px}.dish-card img{width:100%;height:100%}
+}

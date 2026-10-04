@@ -83,6 +83,28 @@ button{transition:transform .11s ease,filter .11s ease,box-shadow .11s ease}butt
 .cook-layout .recipe-banner{grid-column:1/-1;max-width:calc(100% - 118px);overflow:hidden;text-overflow:ellipsis}
 .cook-layout .cook-tools{flex-direction:row}.cook-layout .cook-tools .picture-tool{flex-shrink:0}
 
+/* Annotation fixes: contained toolbar and square picture menu. */
+.topbar{height:80px;min-height:80px;padding:8px 12px;grid-template-columns:minmax(0,1fr) auto 56px;gap:12px}
+.brand{align-self:center;height:60px;padding:3px 12px 3px 6px}
+.brand-picture{flex-shrink:0}
+.topbar>.small-round{width:54px;height:54px;justify-self:end}
+.day-progress{min-width:0;flex-shrink:0;padding:8px 10px}
+.menu-grid{flex:1;grid-template-columns:repeat(3,minmax(0,240px));justify-content:center;align-content:start;gap:18px;padding:24px; background:#8d709e}
+.dish-card{aspect-ratio:1;min-height:0;width:100%;padding:14px;border-radius:18px}
+.dish-card img{width:100%;height:100%;max-width:190px;max-height:190px;object-fit:contain}
+@media(max-width:680px){
+ .topbar{height:72px;min-height:72px;padding:6px 8px;gap:7px;grid-template-columns:minmax(0,1fr) auto 46px}
+ .brand{height:54px;padding-right:7px}.brand-copy strong{font-size:13px}.brand-copy span{font-size:7px;letter-spacing:1px}
+ .topbar>.small-round{width:44px;height:44px}.day-progress{padding:6px;gap:3px}.shift-pips{gap:2px}.day-progress .meal-pip{width:8px;height:10px}.phase-icon,.phase-icon img{width:20px;height:20px}
+ .menu-grid{gap:10px;padding:14px;grid-template-columns:repeat(3,minmax(0,180px))}.dish-card{padding:8px;border-radius:12px}.dish-card img{width:100%;height:100%}
+ .request-star{width:24px;height:24px;right:3px;top:3px}
+}
+@media(max-width:480px){.brand-copy{display:none}.brand{padding:3px 5px}.topbar{grid-template-columns:minmax(54px,1fr) auto 46px}}
+@media(orientation:landscape) and (max-height:540px){
+ .topbar{height:60px;min-height:60px;padding:4px 10px}.brand{height:48px}.topbar>.small-round{width:44px;height:44px}
+ .menu-grid{grid-template-columns:repeat(5,minmax(0,150px));gap:10px;padding:12px}.dish-card{min-height:0;padding:6px}.dish-card img{width:100%;height:100%}
+}
+
 </style>
 <title>Sneaky Unicorn · Rainbow Restaurant</title>
 </head>
@@ -650,7 +672,7 @@ function drawRoomShell(c,d){
   rect(z,1762,20,26,1060,10,grad(z,20,1078,'#9375a9','#554068'),'#413052',4);
   rect(z,25,1063,1749,23,9,grad(z,1063,1086,'#bda2c4','#614969'),'#4b365b',4);
   sprite(z,'room_window',227,229,252,206);sprite(z,'room_window',1527,241,266,219);
-  for(const x of [394,1380]){z.save();z.shadowColor='#ffd99099';z.shadowBlur=28;sprite(z,'room_lamp',x,319,76,181);z.restore();}
+  for(const x of [394,1380]){z.save();z.shadowColor='#ffd99099';z.shadowBlur=28;ellipse(z,x,359,34,7,'#47325235');sprite(z,'room_lamp',x,365,76,181);z.restore();}
   // The customer entrance is architecture, not a foreground mask.
   sprite(z,'room_door',236,1045,162,166);
   shellCache[key]=layer;
@@ -662,10 +684,10 @@ function drawStationLayer(c,t=0){
  // Hard room clip prevents any station shadow/alpha fringe from ever exposing
  // pixels outside the playable room shell on narrow camera crops.
  c.beginPath();c.rect(35,20,1730,1043);c.clip();
- c.save();c.shadowColor='#3d254144';c.shadowBlur=17;c.shadowOffsetY=9;sprite(c,'painted_kitchen',895,319,909,298);c.restore();
+ c.save();c.shadowColor='#3d254144';c.shadowBlur=17;c.shadowOffsetY=9;sprite(c,'painted_kitchen',895,365,909,298);c.restore();
  sprite(c,'room_sofa',209,517,269,180);
  sprite(c,'room_plant',1661,645,102,122);sprite(c,'room_plant',1105,997,96,112);
- sprite(c,'painted_sink',1450,345,234,216);
+ ellipse(c,1450,359,105,10,'#47325235');sprite(c,'painted_sink',1450,365,234,216);
  for(let i=0;i<3;i++){const a=.45+.18*Math.sin(t*2+i);c.globalAlpha=a;star(c,1395+i*28,238+(i%2)*19,5+i,'#fff1ad',t*.1);}
  c.restore();
 }
@@ -696,7 +718,7 @@ function drawTableFurniture(c,x,y,d,symbol,col,t=0,marker=true){
 }
 function drawSinkWorld(c,t=0){
  // Backward-compatible sink-only helper. New world rendering uses drawStationLayer.
- c.save();sprite(c,'painted_sink',1450,345,234,216);
+ c.save();ellipse(c,1450,359,105,10,'#47325235');sprite(c,'painted_sink',1450,365,234,216);
  for(let i=0;i<3;i++){const a=.45+.18*Math.sin(t*2+i);c.globalAlpha=a;star(c,1395+i*28,238+(i%2)*19,5+i,'#fff1ad',t*.1);}
  c.restore();
 }
