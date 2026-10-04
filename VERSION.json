@@ -1,32 +1,24 @@
 {
   "game": "Sneaky Unicorn: Rainbow Restaurant",
-  "version": "1.2.1",
+  "version": "1.4.0",
+  "releaseType": "Final day-cycle release",
   "buildDate": "2026-10-03",
-  "releaseType": "furniture layering and illustrated interior repair with real tablecloth selector",
-  "baseline": "v1.2.0",
-  "entryPoint": "index.html",
-  "sourcePack": {
-    "filename": "Sneaky-Unicorn-AI-Source-Pack-v1.zip",
-    "sha256": "dc7d9ffec60d21081c0534c61aff8bb7aa99bb582cdaa3f50cd0f9922ae33034"
-  },
-  "saveSchema": 2,
-  "saveKey": "sneaky-unicorn-restaurant-v1-2",
-  "legacySaveKey": "sneaky-unicorn-restaurant-v1",
-  "cacheVersion": "1.2.1",
+  "baseline": "v1.3.0-p4",
+  "baselineArchiveSHA256": "2fd4ec82b7d8618e9a777fcb2f84b6008989fdc9800b94b908a143bc06df8d80",
+  "sourcePackSHA256": "dc7d9ffec60d21081c0534c61aff8bb7aa99bb582cdaa3f50cd0f9922ae33034",
+  "saveSchema": 3,
+  "saveKey": "sneaky-unicorn-restaurant-v1-4",
+  "cacheVersion": "1.4.0",
   "menuItems": 9,
   "recipeVariations": 18,
   "tables": 5,
+  "guestsPerDay": 10,
+  "lunchAfterGuests": 5,
   "customizationStages": 6,
+  "customizationChoices": 33,
+  "combinations": 27000,
+  "cleaningTasks": 15,
+  "assetCount": 113,
   "runtimeDependencies": [],
-  "deployed": false,
-  "sha256Manifest": "SHA256SUMS.txt",
-  "notes": [
-    "Built from the delivered v1.2.0 editable source; all prior release archives and HTML remain unchanged.",
-    "No baked restaurant furniture under selections. Sourcepack hero/customers/food sprites retained byte-for-byte; painted interior assets derived from image generation and canonical sourcepack props.",
-    "The same v1.2 save key/schema is retained. Legacy decor.tabletop maps to decor.tablecloth.",
-    "Chromium direct local/http navigation is blocked by existing administrator policy. Production-code UI rendering is tested through set_content and routed local assets; no physical iPhone/Safari/PWA claim."
-  ],
-  "tableclothChoices": 4,
-  "tableShapeClothFrames": 12,
-  "assetCount": 85
+  "deployed": false
 }

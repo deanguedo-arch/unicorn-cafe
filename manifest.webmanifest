@@ -2,7 +2,7 @@
   "id": "./",
   "name": "Sneaky Unicorn: Rainbow Restaurant",
   "short_name": "Rainbow Restaurant",
-  "description": "Welcome guests, read picture orders, make custom meals, serve the right table, clear dishes and wash them sparkling clean.",
+  "description": "Picture orders, nine recipes, your own restaurant, a halfway lunch break, and a sparkling clean finish.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",

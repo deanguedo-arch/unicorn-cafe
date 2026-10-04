@@ -1,23 +1,41 @@
-# Sneaky Unicorn: Rainbow Restaurant v1.2.0 — launch / preview
+# Rainbow Restaurant v1.4.0 — Launch and update
 
-## Fast preview
+## GitHub Pages
 
-- **Standalone:** open `Sneaky-Unicorn-Restaurant-v1.2.0.html` directly in a modern browser. It contains the game code and its 57 production WebP images in one file. Service-worker/PWA installation is intentionally disabled in this one-file edition.
-- **GitHub Pages:** extract `Sneaky-Unicorn-Restaurant-v1.2.0-GitHub-Pages.zip` and upload the **contents** to a repository so `index.html` is at the repository/root publishing folder beside `assets/`, `src/`, `icons/`, `manifest.webmanifest` and `sw.js`. Enable GitHub Pages from that branch/root. No build command is needed.
-- **Local hosted preview:** from the extracted Pages folder run `python -m http.server 8000` and open `http://localhost:8000/`.
+1. Download and extract `Sneaky-Unicorn-Restaurant-v1.4.0-GitHub-Pages.zip`.
+2. In the restaurant repository, use **Add file → Upload files**. Upload the extracted contents, not the ZIP or an extra enclosing folder. Commit the update to the publishing branch.
+3. Keep `index.html`, `manifest.webmanifest`, `sw.js`, and the `icons/` folder together at the publishing root. This version embeds the game artwork/code/style in `index.html`; it does not need the old `assets/`, `src/`, or `styles.css` files.
+4. In **Settings → Pages**, choose **Deploy from a branch**, select **main** (or your actual publishing branch), select **/(root)**, and save. No package installation or build command is needed.
+5. Open the site address GitHub displays after deployment. The parent/settings menu should say **v1.4.0**.
 
-## iPhone web app
+The ZIP uses a small file count so it can be uploaded in one normal browser batch. `.nojekyll` is intentionally included; some desktop file browsers hide dotfiles.
 
-After the Pages site is served over HTTPS, open it in Safari and use the browser's Add to Home Screen flow. The package includes a manifest, Apple touch icon, safe-area CSS and a versioned service worker. The release was not physically verified on an iPhone; see `QA-REPORT.md` for the exact test boundary.
+## Updating an older restaurant installation
 
-## Play
+Replace the restaurant's `index.html`, `sw.js`, manifest and icons together. Old asset/source files are not read by the embedded build. Do not replace other games or course files.
 
-The child-facing flow is pictorial: choose six restaurant looks, open the doors, approach a customer, take the picture order, enter the kitchen, make the meal, carry it to the matching table marker, let the guest eat, clear the empty dish, and wash it at the sink. One large changing picture action handles order/kitchen/carry/serve/clear. A small parent menu contains mute/motion/customize/collection/reset options.
+An already-open Home Screen app can still be running the previous version until it is closed and reopened. After the update, close/reopen or reload the restaurant and check the version in settings. Do **not** clear website data to update: that deletes local saves. Nothing has been deployed automatically.
 
-## Save behavior
+The final game uses a new local save key, `sneaky-unicorn-restaurant-v1-4`. On its first load, it looks for valid previous restaurant data in the v1.3, v1.2 and v1 keys on the **same website origin**. The prior save keys are not overwritten or removed. A finished earlier day stays finished. An older unfinished save past five meals gets a safe catch-up lunch after its already seated guests and dishes are finished; fresh days divide exactly five/five. Moving to a different domain/browser/device does not transfer local storage.
 
-Progress is local to the browser/device. v1.2.0 can migrate supported v1.1.0 saves automatically. Clearing browser/site data clears the save. If storage is blocked or corrupt, the restaurant remains playable without saving.
+## Standalone desktop preview
 
-## Privacy / network
+Open `Sneaky-Unicorn-Restaurant-v1.4.0.html` in a browser. Artwork/code/styles are embedded. Local-save support for raw files varies by browser; unavailable saving does not stop play. For phone use, prefer the hosted HTTPS web app rather than opening an HTML file from the Files app.
 
-The runtime has no ads, accounts, analytics, payments, child-data fields, or external runtime dependencies. After first successful hosted cache installation, the service worker is designed to serve the packaged runtime offline. True installed-PWA offline relaunch was not available to test in this environment.
+## Controls and daily flow
+
+Drag anywhere to steer; tap a destination to walk there. Arrow keys/WASD also move. Briefly stop near a relevant object to interact. The big picture button provides a route to the next job. Cooking and cleaning have large tap alternatives to rubbing/holding. Space/E can activate the current action; normal focused buttons work with keyboard activation.
+
+Five guests → wash returned dishes → choose/eat/drink lunch → reopen → five more guests → return all dishes → wipe tables/stations/windows → mop all floor areas → celebration/replay.
+
+Lunch waits for the child, not a timer. Settings pause activity. Closing the app preserves supported progress; restaurant activity does not run while the page is hidden.
+
+## Offline and device qualification
+
+The hosted package includes a directory-scoped versioned service worker, manifest and app icons. Its first successful online load is needed to fill the offline cache. Standalone HTML contains the game assets already and does not register a worker.
+
+Physical iPhone/Safari, Home Screen installation and a genuine installed-PWA offline relaunch were not available to test. Treat them as a device acceptance check, not a claimed pass. The full QA report distinguishes actual Chromium execution from storage/service-worker simulations.
+
+## Launch checklist on your phone
+
+Confirm v1.4.0 in settings. Try portrait and landscape. Make one meal and deliver it. Complete the fifth guest and dishes, finish lunch, and reopen. Close/reopen during one cleaning task and confirm progress. After a successful online launch, test your installed app without a network connection. No child name or other personal information is requested.
