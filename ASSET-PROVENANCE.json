@@ -515,5 +515,7 @@
       "processing": "cropped/resized only; alpha preserved; WebP quality 93"
     }
   ],
-  "newArt": "Food preparation states and UI pictograms are original, editable Canvas/SVG code in src/art.js, not emoji or third-party images."
+  "newArt": "Food preparation states, all pancakes/smoothies artwork, soup/pizza/ice-cream intermediate states, furniture/customization previews, table-marker badges, sink/washing states and UI pictograms are original editable Canvas/SVG code in src/art.js. No emoji or third-party runtime artwork was introduced.",
+  "releaseVersion": "1.2.0",
+  "baseline": "Sneaky Unicorn: Rainbow Restaurant v1.1.0"
 }

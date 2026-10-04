@@ -1,38 +1,91 @@
-# Verification record — Rainbow Restaurant v1.1.0
-Date: 2026-10-03
+# Sneaky Unicorn: Rainbow Restaurant v1.2.0 — QA report
 
-## What was actually exercised
+Build date: 2026-10-03  
+Baseline: v1.1.0  
+Status: release candidate passed the automated checks described below. Nothing was deployed.
 
-**62 / 62 pure-rule and navigation tests passed.** Node v22.16.0 ran the production `src/engine.js`, not a separate reimplementation. Coverage included seven recipes, all fourteen custom variants, every preparation step, per-step serialization/restoration, tray packing, successful serving, all seven wrong-variation/remake paths, wrong dish, wrong table, duplicate reward prevention, customer capacity, seven-meal completion/replay, invalid save data, and all ordered pairs of routes among the entrance, kitchen and three tables.
+## What was actually tested
 
-**15 / 15 main browser scenario groups passed.** Chromium 144.0.7559.96, Playwright 1.57.0. The complete embedded release was loaded with `page.set_content`; actual browser rendering and touch/mouse/keyboard input were used. One complete first day was played through without fixture shortcuts: customers entered, orders were accepted, all seven dishes were prepared, the avatar physically delivered each meal, the day completed and replay advanced to day two. The suite separately cooked and served all fourteen dish/variation combinations using controlled starting orders. Wrong table, wrong dish, wrong ingredient, remake, keep-carrying, restart, leave/resume, partial-save continuation, carried-meal continuation, gesture/hold input, drag/release/cancel, mute, AudioContext gesture unlock, menu/reduced motion, reset confirmation and unavailable-storage fallback were exercised.
+### Deterministic production rules — PASS 13/13 groups
 
-The main suite checked **21 layouts**: restaurant, recipe picker and cooking at each of 320×568, 390×844, 430×932, 568×320, 844×390, 1024×768 and 1440×900 CSS pixels. Visible buttons met at least 44×44 CSS pixels, with larger main action and cooking buttons. Scrollable recipe lists were allowed to extend within their scrolling container. Document width overflow was checked. All 57 production assets loaded; visible DOM images decoded. No uncaught JavaScript exceptions or unexpected console errors were recorded in this final main run.
+Executed with Node v22.16.0 against the shipped `src/engine.js`.
 
-**9 / 9 supplemental browser groups passed.** These verified the final-tap/carry-button regression, actual touch swiping to the last recipe on a small phone viewport, six CSS-simulated notch/home-indicator layouts, direct order-bubble tapping with physical walking, all four camera/movement extremes, a deliberately broken artwork URI with named error and working retry, keyboard activation/modal focus, absence of HTTP(S) requests from normal standalone play, and absence of uncaught exceptions. The intentional corrupt-image test is an expected asset failure, not a normal-load success claim.
+Coverage includes:
+- exactly nine menu items and two order-relevant variants per item (18 combinations total);
+- all 18 combinations through serve → eat → dirty table → guest leaves → dirty-dish pickup → wash → table released;
+- all three cupcake sprinkle decorations remain free decoration and do not affect correctness;
+- wrong ingredient variant, wrong dish and wrong table retain the meal without a penalty;
+- dirty tables cannot be reused until the dish is returned and washed;
+- nine-meal day completion and new-day preservation;
+- v1.1 pending-order/cooking migration and completed-seven-meal migration into the two new dishes;
+- corrupt/unavailable-shaped saves safely rejected;
+- pathfinding to kitchen, sink and all five service points without entering collision obstacles;
+- snapshot isolation.
 
-**9 / 9 offline/package logic checks passed.** Node executed the production service worker in a simulated Cache API environment with a project-subdirectory scope. Tests checked its precache file list, cache/version/scope isolation, offline cached entry and all 57 assets, query-string navigation, fallback behavior, relative manifest URLs, and non-interception of other origins/scopes or non-GET requests. These are service-worker logic tests, NOT an actual browser installation test.
+Machine-readable record: `tests/engine-results.json` in the editable-source package.
 
-**HTTP delivery/byte identity was checked independently.** A Python local HTTP server served the deployment folder under a subdirectory. Python clients fetched the shipped files and compared their bytes with the files on disk. Image decode and packaging/checksum checks are recorded with the included source test results. This is not evidence that a browser could navigate to that server in this environment.
+### Chromium production UI — PASS 14/14 groups
 
-## Repairs made before the final passing runs
+Executed with Chromium 144.0.7559.96 through Playwright. The exact shipped HTML/CSS/JS was run with `page.set_content` because direct local/HTTP browser navigation is blocked by administrator policy in this environment. Requests for the package's image files were fulfilled from the actual build directory. No browser security permissions or policy were changed.
 
-A pointer release could click the newly drawn carry/choice control after a preparation tap. The stable kitchen panel now consumes only the click belonging to that same preparation gesture; a new deliberate tap works normally. The completed food remains visible until the child presses Carry.
+Verified in that browser harness:
+- six picture-only customization stages, immediate live preview and picture open action;
+- a natural first guest lifecycle through arrival, order, cooking, carrying and correct table delivery;
+- no accidental meal carry caused by the final cooking tap;
+- all nine dishes cooked/served through actual picture buttons (one order variation per dish in browser coverage), including pancakes and smoothie;
+- all three free cupcake sprinkle choices;
+- visible pizza topping placement, soup vegetable fill/stir swirls and ice-cream scoop stacking;
+- wrong ingredient and wrong-dish side-by-side visual compare plus remake/keep recovery;
+- clear dish → carry to sink → rub/tap wash → sparkle → table release;
+- mouse drag, keyboard movement and touch-pointer cancellation paths;
+- partial persistence, v1.1 migration and corrupt-save fallback using an explicitly labelled Storage-compatible in-memory persistence shim across document recreation;
+- a genuine unavailable-storage condition (`about:blank` localStorage denial) stays playable;
+- protected parent reset requires two explicit actions;
+- currently visible DOM images decode to real pixels;
+- no uncaught page exceptions or console errors in successful runs.
 
-Returning to a partially prepared meal now resumes the existing preparation rather than resetting it. Order/meal state is preserved when visiting the restaurant. Save validation repairs inconsistent issue counts. Customer seating/order-card offsets, toast clearance, keyboard button activation and full-app safe-area padding were also checked and adjusted. Adventure code and project settings were not edited.
+Responsive production scenes: **24/24** across 320×568, 390×844, 430×932, 568×320, 844×390 and 1024×768, each in customize/world/cook/wash states. Visible controls remained at least 44 CSS px and within the viewport in this coverage.
 
-## Important limits — not verified here
+A separate safe-area browser check explicitly injected iPhone-like CSS insets (390×844 with 47 px top/34 px bottom; 844×390 with 47 px left/right and 21 px bottom) and passed **8/8** customize/world/cook/wash scenes with all visible buttons inside the simulated safe rectangle and at least 44 px. This is CSS-inset simulation, not physical notch/Dynamic Island hardware verification.
 
-**No actual iPhone or iPad, Safari/WebKit execution, Home Screen installation, or real device offline relaunch was available.** There was no physical child playtest, device haptic assessment, audible speaker/volume assessment, or physical-notch measurement. Layout/device emulation is not equivalent to those tests.
+Important precision: wrong-table handling is covered by the deterministic production-engine test, while the browser run verifies correct table delivery/markers and wrong ingredient/dish visual comparison. A synthetic wrong-table canvas hit test was not counted as a browser pass because it was unreliable under the `set_content` harness.
 
-Browser URL navigation in this environment failed with `net::ERR_BLOCKED_BY_ADMINISTRATOR` for local HTTP and file URLs. The browser tests therefore used the exact self-contained release via `page.set_content` rather than claiming a successful hosted navigation. Attempts to obtain WebKit also failed because the browser-download hosts could not be resolved. No browser policy was bypassed.
+Machine-readable record and screenshots: `tests/browser-results.json` and `tests/*.png` in the editable-source package.
 
-Persistence restoration used an explicitly injected synchronous, in-memory Storage-compatible shim across **fresh pages**. It verifies save serialization and game restoration, not native-origin localStorage persistence. A separate fresh about:blank page without the shim exercised the real inaccessible-localStorage fallback. Native storage across a real navigation, browser shutdown and iPhone Home Screen context still needs a device check.
+### Static runtime/assets — PASS 5/5 groups
 
-Actual service-worker registration, installation, cache activation, offline relaunch and GitHub Pages deployment were not run in a browser. The package contains the implementation; the simulation tests do not remove that integration limitation. Nothing has been deployed.
+Exact production file inspection verified all index-relative references, Pillow decoding of all 57 WebP/PNG production images, v1.2 semantic markers, relative PWA manifest behavior, and no external runtime URL/tracker endpoints (the W3C SVG namespace string is markup metadata, not a network endpoint). Machine-readable record: `tests/static-results.json`.
 
-## Reproduction and evidence
+### Local HTTP byte integrity — PASS 74/74 files
 
-The editable source archive includes `tests/engine.test.js`, `tests/offline.test.js`, `tests/browser_suite.py`, `tests/browser_extra.py`, environment information, final JSON results/logs, selected screenshots, and packaging checks. `CHROMIUM` can point the browser scripts to a local Chromium executable. The browser scripts expose QA fixtures only through their own injected QA flag. The normal shipped page does not enable QA mode.
+A local Python HTTP server returned every current production-build file byte-for-byte identically to disk; image responses were decoded during this check where applicable. This is an HTTP transfer/package integrity check, **not** browser navigation. Machine-readable record: `tests/http-results.json`.
 
-Run a final smoke check on the intended iPhone after hosting: open online, start, accept an order, cook with both a tap and a hold/drag, carry/serve, rotate, close/reopen with partial progress, install to Home Screen, and then relaunch offline after the menu confirms caching. Keep this report's unverified items distinct from the tests above.
+### Offline/package logic — PASS 9/9 groups
+
+Executed with a Node service-worker/Cache API harness against the shipped `sw.js` and manifest. It verifies the 68-item nested-path-safe precache, scoped old-cache cleanup, cached/offline navigation behavior, all 57 artwork assets, external/out-of-scope request non-interception, local icons/manifest, and the standalone embed/suppression behavior.
+
+This is **not** a real browser service-worker installation or true device offline-relaunch test. Machine-readable record: `tests/offline-results.json`.
+
+## Production defects repaired during this pass
+
+- Added a global `[hidden]{display:none!important}` rule after a CSS regression let flex/grid declarations override the HTML `hidden` attribute and cover the restaurant/customization screen.
+- Raised small phone/landscape controls to at least 44 px in tested layouts.
+- Constrained cooking/washing grid tracks so the sink wash action remains visible at 1024×768 and smaller viewports.
+
+## Not verified / limitations
+
+The following were **not** physically or natively verified and are not claimed as tested:
+- physical iPhone/iPad hardware;
+- Safari/WebKit rendering or touch/audio/haptic behavior on an actual iPhone;
+- Add to Home Screen installation;
+- native-origin browser localStorage persistence across a real hosted reload (browser persistence logic was tested with the labelled shim described above);
+- real service-worker installation/update lifecycle in a navigated browser page;
+- true installed web-app offline relaunch;
+- notch/Dynamic Island combinations beyond CSS safe-area declarations and viewport simulation;
+- speaker/audio quality or hardware vibration.
+
+Direct browser navigation to local/HTTP URLs was blocked by environment policy (`ERR_BLOCKED_BY_ADMINISTRATOR`), so no claim is made that the browser was navigated to a hosted copy. The production files themselves were executed in Chromium as described above.
+
+## Privacy/security boundary
+
+Runtime inspection found no external runtime dependency, analytics, advertising, payments, account system, child name field or intentional external data collection. The service worker handles only same-origin requests within its own project scope.

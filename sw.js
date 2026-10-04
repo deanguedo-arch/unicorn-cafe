@@ -1,6 +1,6 @@
-/* Versioned, same-origin, project-subdirectory-safe offline cache. */
+/* Rainbow Restaurant v1.2.0 — versioned, same-origin, project-subdirectory-safe offline cache. */
 const PREFIX='sneaky-restaurant:'+new URL(self.registration.scope).pathname+':';
-const CACHE=PREFIX+'1.1.0';
+const CACHE=PREFIX+'1.2.0';
 const FILES=[
   "./",
   "./index.html",

@@ -1,21 +1,28 @@
 {
   "game": "Sneaky Unicorn: Rainbow Restaurant",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "buildDate": "2026-10-03",
-  "releaseType": "complete top-down restaurant and cooking spin-off",
+  "releaseType": "complete top-down restaurant + hands-on cooking revision",
+  "baseline": "v1.1.0",
   "entryPoint": "index.html",
   "sourcePack": {
     "filename": "Sneaky-Unicorn-AI-Source-Pack-v1.zip",
     "sha256": "dc7d9ffec60d21081c0534c61aff8bb7aa99bb582cdaa3f50cd0f9922ae33034"
   },
-  "saveKey": "sneaky-unicorn-restaurant-v1",
-  "cacheVersion": "1.1.0",
+  "saveSchema": 2,
+  "saveKey": "sneaky-unicorn-restaurant-v1-2",
+  "legacySaveKey": "sneaky-unicorn-restaurant-v1",
+  "cacheVersion": "1.2.0",
+  "menuItems": 9,
+  "recipeVariations": 18,
+  "tables": 5,
+  "customizationStages": 6,
   "runtimeDependencies": [],
   "deployed": false,
   "sha256Manifest": "SHA256SUMS.txt",
   "notes": [
-    "New separate game; no adventure files or project settings changed.",
-    "Canvas/SVG food-state artwork is original code, not image generation.",
-    "Browser URL navigation is blocked in the test environment; see QA-REPORT.md for precise test limits."
+    "Resumed and completed the stopped v1.2.0 workspace; v1.1.0 artifacts were not modified.",
+    "Sourcepack characters and restaurant remain the visual identity; new food/furniture/preparation states are editable original Canvas/SVG code.",
+    "Browser URL navigation is blocked in the test environment; exact production HTML/CSS/JS was executed via Playwright set_content. See QA-REPORT.md for precise limits."
   ]
 }

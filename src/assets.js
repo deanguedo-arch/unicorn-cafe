@@ -1,4 +1,4 @@
-/* Optimized, sourcepack-derived production artwork. */
+/* Optimized sourcepack-derived production artwork for Rainbow Restaurant v1.2.0. */
 window.RR_ASSETS = {
   "u_idle0": "assets/u_idle0.webp",
   "u_idle1": "assets/u_idle1.webp",
