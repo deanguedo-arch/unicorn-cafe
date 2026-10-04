@@ -1,7 +1,7 @@
 {
   "kind": "production-engine deterministic tests, not physical-device or UI testing",
-  "passed": 24,
-  "total": 24,
+  "passed": 25,
+  "total": 25,
   "results": [
     {
       "name": "All 18 recipe/variation combinations through dish return/wash",
@@ -127,6 +127,10 @@
     },
     {
       "name": "Existing lunch saves keep bites and skip the new packing step",
+      "pass": true
+    },
+    {
+      "name": "Mopping requires collecting the mop, proximity and explicit strokes",
       "pass": true
     }
   ]

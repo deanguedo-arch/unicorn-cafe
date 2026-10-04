@@ -58,9 +58,9 @@ const CLEAN_TASKS=[
  {id:'sink',kind:'sink',x:1450,y:385,artX:1450,artY:260,need:3},
  {id:'window-left',kind:'window',x:223,y:355,artX:223,artY:145,need:3},
  {id:'window-right',kind:'window',x:1400,y:343,artX:1527,artY:147,need:3},
- ...[[470,615],[979,625],[1497,566],[485,938],[980,999],[1640,1000]].map(([x,y],i)=>({id:'floor-'+i,kind:'floor',x,y,artX:x,artY:y,need:4}))
+ ...[[470,615],[979,625],[1497,566],[485,938],[980,999],[1530,980]].map(([x,y],i)=>({id:'floor-'+i,kind:'floor',x,y,artX:x,artY:y,need:4}))
 ];
-function freshDayState(){return {phase:'morning',lunch:{done:false,meal:null,packed:0,bites:0,sips:0},cleaning:CLEAN_TASKS.map(t=>({id:t.id,p:0})),pace:{elapsed:0,next:8,mood:'cozy',remaining:24,burst:0,seed:73129}};}
+function freshDayState(){return {phase:'morning',lunch:{done:false,meal:null,packed:0,bites:0,sips:0},mopEquipped:false,cleaning:CLEAN_TASKS.map(t=>({id:t.id,p:0})),pace:{elapsed:0,next:8,mood:'cozy',remaining:24,burst:0,seed:73129}};}
 function clampInt(v,max=1000000){return Number.isFinite(v)?clamp(Math.floor(v),0,max):0;}
 function safePoint(pt){
  if(walkable(pt.x,pt.y))return {x:pt.x,y:pt.y};
@@ -177,6 +177,7 @@ function cleanSave(raw){
  if(!s.lunch.meal){s.lunch.bites=0;s.lunch.sips=0;}if(s.lunch.bites<3)s.lunch.sips=0;
  if(s.lunch.bites||s.lunch.sips)s.lunch.packed=3;
  if(s.lunch.done){s.lunch.meal=s.lunch.meal||'pizza';s.lunch.packed=3;s.lunch.bites=3;s.lunch.sips=2;}
+ s.mopEquipped=raw.mopEquipped===true;
  s.cleaning=CLEAN_TASKS.map(t=>({id:t.id,p:old?0:clampInt(Array.isArray(raw.cleaning)?raw.cleaning.find(q=>q?.id===t.id)?.p:0,t.need)}));
  if(s.served<DAY_TARGET)s.cleaning=CLEAN_TASKS.map(t=>({id:t.id,p:0}));
  const q=raw.pace&&typeof raw.pace==='object'?raw.pace:{};
@@ -232,7 +233,8 @@ class Engine{
  lunchAct(){const s=this.s,l=s.lunch;if(s.phase!=='lunch'||!l.meal||l.packed<3)return false;if(l.bites<3)l.bites++;else if(l.sips<2)l.sips++;else return false;return true;}
  endLunch(){const s=this.s,l=s.lunch;if(s.phase!=='lunch'||!l.meal||l.bites<3||l.sips<2)return false;l.done=true;s.phase='afternoon';s.pace.next=3;s.pace.mood='normal';s.pace.remaining=20;this.updateDay();return true;}
  cleanTargets(){const s=this.s;if(s.phase!=='cleaning')return [];const floors=surfacesClean(s);return CLEAN_TASKS.filter(t=>(t.kind==='floor')===floors&&s.cleaning.find(q=>q.id===t.id).p<t.need);}
- cleanAct(id){const s=this.s,t=this.cleanTargets().find(t=>t.id===id);if(!t)return {ok:false};const q=s.cleaning.find(q=>q.id===id);q.p=clamp(q.p+1,0,t.need);this.updateDay();return {ok:true,done:q.p>=t.need,complete:s.completed};}
+ pickupMop(){if(this.s.phase!=='cleaning'||!surfacesClean(this.s)||this.s.mopEquipped||Math.hypot(this.s.player.x-SINK.x,this.s.player.y-SINK.y)>112)return false;this.s.mopEquipped=true;return true;}
+ cleanAct(id){const s=this.s,t=this.cleanTargets().find(t=>t.id===id);if(!t||t.kind==='floor'&&(!s.mopEquipped||Math.hypot(s.player.x-t.x,s.player.y-t.y)>112))return {ok:false};const q=s.cleaning.find(q=>q.id===id);q.p=clamp(q.p+1,0,t.need);this.updateDay();return {ok:true,done:q.p>=t.need,complete:s.completed};}
  paceRandom(){const p=this.s.pace;p.seed=(Math.imul(p.seed,1664525)+1013904223)>>>0;return p.seed/4294967296;}
  paceTick(dt){const s=this.s,p=s.pace;if(!Number.isFinite(dt)||dt<=0||!['morning','afternoon'].includes(s.phase))return null;dt=Math.min(dt,.25);p.elapsed+=dt;p.next-=dt;p.remaining-=dt;
   if(p.remaining<=0){if(p.mood==='cozy'){p.mood='normal';p.remaining=18+this.paceRandom()*9;}else if(p.mood==='normal'){p.mood='busy';p.burst=3;p.remaining=18;}else{p.mood='cozy';p.remaining=22+this.paceRandom()*12;}}

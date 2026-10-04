@@ -1,0 +1,7 @@
+{
+  "method": "Actual Chromium UI clicks and path movement at 844x390; explicit pickup, no automatic cleaning, all six patches, save/reload and completion. No physical-device certification.",
+  "patches": 6,
+  "strokes": 24,
+  "passed": true,
+  "errors": []
+}

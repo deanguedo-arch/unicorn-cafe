@@ -28,7 +28,7 @@
       20
     ]
   ],
-  "states": 558,
+  "states": 576,
   "failed": 0,
   "errors": [],
   "results": [
@@ -173,6 +173,24 @@
     {
       "width": 568,
       "height": 320,
+      "screen": "mop-pickup-far",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "mop-held-far",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "mop-held-near",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
       "screen": "cook-pizza-0-rub",
       "issues": []
     },
@@ -731,6 +749,24 @@
     {
       "width": 667,
       "height": 375,
+      "screen": "mop-pickup-far",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "mop-held-far",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "mop-held-near",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
       "screen": "cook-pizza-0-rub",
       "issues": []
     },
@@ -1289,6 +1325,24 @@
     {
       "width": 740,
       "height": 300,
+      "screen": "mop-pickup-far",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "mop-held-far",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "mop-held-near",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
       "screen": "cook-pizza-0-rub",
       "issues": []
     },
@@ -1847,6 +1901,24 @@
     {
       "width": 844,
       "height": 390,
+      "screen": "mop-pickup-far",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "mop-held-far",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "mop-held-near",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
       "screen": "cook-pizza-0-rub",
       "issues": []
     },
@@ -2405,6 +2477,24 @@
     {
       "width": 932,
       "height": 430,
+      "screen": "mop-pickup-far",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "mop-held-far",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "mop-held-near",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
       "screen": "cook-pizza-0-rub",
       "issues": []
     },
@@ -2958,6 +3048,24 @@
       "width": 740,
       "height": 300,
       "screen": "clean-floor-0",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "mop-pickup-far",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "mop-held-far",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "mop-held-near",
       "issues": []
     },
     {
