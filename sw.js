@@ -1,6 +1,6 @@
-/* Rainbow Restaurant v1.6.0. Same-origin, directory-scoped offline cache. */
+/* Rainbow Restaurant v2.0.0. Same-origin, directory-scoped offline cache. */
 const PREFIX='sneaky-restaurant:'+new URL(self.registration.scope).pathname+':';
-const CACHE=PREFIX+'1.6.0';
+const CACHE=PREFIX+'2.0.0';
 const FILES=[
   "./index.html",
   "./manifest.webmanifest",

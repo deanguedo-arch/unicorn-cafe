@@ -1,0 +1,50 @@
+{
+  "batch": "day",
+  "testMethod": "Actual Chromium / actual standalone loaded from disk; real isolated browser localStorage; no physical iPhone",
+  "passed": 7,
+  "total": 7,
+  "results": [
+    {
+      "name": "Lunch bites/sips through real controls, save/load and reopen",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "All five tables, two stations, two windows require cleaning",
+      "pass": true,
+      "detail": {
+        "surfaces": 9
+      }
+    },
+    {
+      "name": "All six floor zones, final celebration only when spotless",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Replay resets day/lunch/cleaning while preserving decoration",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Partial cleaning survives browser document reload (real browser storage)",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Rubbing clears surface, final release cannot click through",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "No JavaScript page errors",
+      "pass": true,
+      "detail": {
+        "errors": 0,
+        "consoleErrors": 0
+      }
+    }
+  ],
+  "pageErrors": [],
+  "consoleErrors": []
+}

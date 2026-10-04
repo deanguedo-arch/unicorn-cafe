@@ -1,0 +1,36 @@
+{
+  "version": "2.0.0",
+  "archives": [
+    {
+      "name": "Sneaky-Unicorn-Restaurant-v2.0.0-GitHub-Pages.zip",
+      "crcValid": true,
+      "members": 11
+    },
+    {
+      "name": "Sneaky-Unicorn-Restaurant-v2.0.0-Editable-Source.zip",
+      "crcValid": true,
+      "members": 251
+    }
+  ],
+  "browser": [
+    {
+      "artifact": "Sneaky-Unicorn-Restaurant-v2.0.0.html",
+      "startup": true,
+      "sixCategories": true,
+      "tablecloth": true,
+      "playable": true,
+      "decodedSprites": 161
+    },
+    {
+      "artifact": "verified-pages/index.html",
+      "startup": true,
+      "sixCategories": true,
+      "tablecloth": true,
+      "playable": true,
+      "decodedSprites": 161
+    }
+  ],
+  "rebuildByteIdentical": true,
+  "pageErrors": [],
+  "method": "Actual files extracted from final ZIPs and final standalone, isolated real Chromium. Source rebuilds compared byte-for-byte with shipped HTML/Pages."
+}

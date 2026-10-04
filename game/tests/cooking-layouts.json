@@ -1,0 +1,512 @@
+{
+  "passed": 72,
+  "total": 72,
+  "method": "Actual standalone Chromium, interactive button bounds44px and DOM hit-tests, four phone dimensions nine recipes choice and ready states",
+  "results": [
+    {
+      "width": 320,
+      "height": 568,
+      "recipe": "pizza",
+      "stage": "choice",
+      "pass": true
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "recipe": "pizza",
+      "stage": "done",
+      "pass": true
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "recipe": "coffee",
+      "stage": "choice",
+      "pass": true
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "recipe": "coffee",
+      "stage": "done",
+      "pass": true
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "recipe": "cupcake",
+      "stage": "choice",
+      "pass": true
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "recipe": "cupcake",
+      "stage": "done",
+      "pass": true
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "recipe": "icecream",
+      "stage": "choice",
+      "pass": true
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "recipe": "icecream",
+      "stage": "done",
+      "pass": true
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "recipe": "burger",
+      "stage": "choice",
+      "pass": true
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "recipe": "burger",
+      "stage": "done",
+      "pass": true
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "recipe": "soup",
+      "stage": "choice",
+      "pass": true
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "recipe": "soup",
+      "stage": "done",
+      "pass": true
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "recipe": "chicken",
+      "stage": "choice",
+      "pass": true
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "recipe": "chicken",
+      "stage": "done",
+      "pass": true
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "recipe": "pancakes",
+      "stage": "choice",
+      "pass": true
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "recipe": "pancakes",
+      "stage": "done",
+      "pass": true
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "recipe": "smoothie",
+      "stage": "choice",
+      "pass": true
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "recipe": "smoothie",
+      "stage": "done",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "recipe": "pizza",
+      "stage": "choice",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "recipe": "pizza",
+      "stage": "done",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "recipe": "coffee",
+      "stage": "choice",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "recipe": "coffee",
+      "stage": "done",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "recipe": "cupcake",
+      "stage": "choice",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "recipe": "cupcake",
+      "stage": "done",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "recipe": "icecream",
+      "stage": "choice",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "recipe": "icecream",
+      "stage": "done",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "recipe": "burger",
+      "stage": "choice",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "recipe": "burger",
+      "stage": "done",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "recipe": "soup",
+      "stage": "choice",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "recipe": "soup",
+      "stage": "done",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "recipe": "chicken",
+      "stage": "choice",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "recipe": "chicken",
+      "stage": "done",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "recipe": "pancakes",
+      "stage": "choice",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "recipe": "pancakes",
+      "stage": "done",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "recipe": "smoothie",
+      "stage": "choice",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "recipe": "smoothie",
+      "stage": "done",
+      "pass": true
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "recipe": "pizza",
+      "stage": "choice",
+      "pass": true
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "recipe": "pizza",
+      "stage": "done",
+      "pass": true
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "recipe": "coffee",
+      "stage": "choice",
+      "pass": true
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "recipe": "coffee",
+      "stage": "done",
+      "pass": true
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "recipe": "cupcake",
+      "stage": "choice",
+      "pass": true
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "recipe": "cupcake",
+      "stage": "done",
+      "pass": true
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "recipe": "icecream",
+      "stage": "choice",
+      "pass": true
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "recipe": "icecream",
+      "stage": "done",
+      "pass": true
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "recipe": "burger",
+      "stage": "choice",
+      "pass": true
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "recipe": "burger",
+      "stage": "done",
+      "pass": true
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "recipe": "soup",
+      "stage": "choice",
+      "pass": true
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "recipe": "soup",
+      "stage": "done",
+      "pass": true
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "recipe": "chicken",
+      "stage": "choice",
+      "pass": true
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "recipe": "chicken",
+      "stage": "done",
+      "pass": true
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "recipe": "pancakes",
+      "stage": "choice",
+      "pass": true
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "recipe": "pancakes",
+      "stage": "done",
+      "pass": true
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "recipe": "smoothie",
+      "stage": "choice",
+      "pass": true
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "recipe": "smoothie",
+      "stage": "done",
+      "pass": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "recipe": "pizza",
+      "stage": "choice",
+      "pass": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "recipe": "pizza",
+      "stage": "done",
+      "pass": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "recipe": "coffee",
+      "stage": "choice",
+      "pass": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "recipe": "coffee",
+      "stage": "done",
+      "pass": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "recipe": "cupcake",
+      "stage": "choice",
+      "pass": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "recipe": "cupcake",
+      "stage": "done",
+      "pass": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "recipe": "icecream",
+      "stage": "choice",
+      "pass": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "recipe": "icecream",
+      "stage": "done",
+      "pass": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "recipe": "burger",
+      "stage": "choice",
+      "pass": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "recipe": "burger",
+      "stage": "done",
+      "pass": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "recipe": "soup",
+      "stage": "choice",
+      "pass": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "recipe": "soup",
+      "stage": "done",
+      "pass": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "recipe": "chicken",
+      "stage": "choice",
+      "pass": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "recipe": "chicken",
+      "stage": "done",
+      "pass": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "recipe": "pancakes",
+      "stage": "choice",
+      "pass": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "recipe": "pancakes",
+      "stage": "done",
+      "pass": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "recipe": "smoothie",
+      "stage": "choice",
+      "pass": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "recipe": "smoothie",
+      "stage": "done",
+      "pass": true
+    }
+  ],
+  "errors": []
+}

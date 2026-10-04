@@ -1,0 +1,1041 @@
+{
+  "version": "1.4.0",
+  "inheritedFrom": "v1.3.0-p4",
+  "inherited": {
+    "sourcePack": "Sneaky-Unicorn-AI-Source-Pack-v1.zip",
+    "assets": [
+      {
+        "asset": "assets/u_idle0.webp",
+        "source": "02_LATEST-v14/source/index.html embedded atlas: u_idle0",
+        "pixels": [
+          126,
+          141
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/u_idle1.webp",
+        "source": "02_LATEST-v14/source/index.html embedded atlas: u_idle1",
+        "pixels": [
+          112,
+          142
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/u_run0.webp",
+        "source": "02_LATEST-v14/source/index.html embedded atlas: u_run0",
+        "pixels": [
+          131,
+          131
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/u_run1.webp",
+        "source": "02_LATEST-v14/source/index.html embedded atlas: u_run1",
+        "pixels": [
+          139,
+          136
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/u_run2.webp",
+        "source": "02_LATEST-v14/source/index.html embedded atlas: u_run2",
+        "pixels": [
+          148,
+          132
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/u_run3.webp",
+        "source": "02_LATEST-v14/source/index.html embedded atlas: u_run3",
+        "pixels": [
+          152,
+          130
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/u_run4.webp",
+        "source": "02_LATEST-v14/source/index.html embedded atlas: u_run4",
+        "pixels": [
+          142,
+          134
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/u_run5.webp",
+        "source": "02_LATEST-v14/source/index.html embedded atlas: u_run5",
+        "pixels": [
+          154,
+          133
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/u_happy0.webp",
+        "source": "02_LATEST-v14/source/index.html embedded atlas: u_happy0",
+        "pixels": [
+          129,
+          144
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/u_happy1.webp",
+        "source": "02_LATEST-v14/source/index.html embedded atlas: u_happy1",
+        "pixels": [
+          118,
+          153
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/u_happy2.webp",
+        "source": "02_LATEST-v14/source/index.html embedded atlas: u_happy2",
+        "pixels": [
+          123,
+          140
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/h_idle0.webp",
+        "source": "02_LATEST-v14/source/index.html embedded atlas: h_idle0",
+        "pixels": [
+          94,
+          159
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/h_idle1.webp",
+        "source": "02_LATEST-v14/source/index.html embedded atlas: h_idle1",
+        "pixels": [
+          94,
+          167
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/h_run0.webp",
+        "source": "02_LATEST-v14/source/index.html embedded atlas: h_run0",
+        "pixels": [
+          113,
+          162
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/h_run1.webp",
+        "source": "02_LATEST-v14/source/index.html embedded atlas: h_run1",
+        "pixels": [
+          112,
+          162
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/h_run2.webp",
+        "source": "02_LATEST-v14/source/index.html embedded atlas: h_run2",
+        "pixels": [
+          120,
+          161
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/h_run3.webp",
+        "source": "02_LATEST-v14/source/index.html embedded atlas: h_run3",
+        "pixels": [
+          120,
+          162
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/h_happy.webp",
+        "source": "02_LATEST-v14/source/index.html embedded atlas: h_happy",
+        "pixels": [
+          100,
+          150
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/w_0_0.webp",
+        "source": "02_LATEST-v14/source/index.html embedded atlas: w_0_0",
+        "pixels": [
+          125,
+          141
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/w_0_1.webp",
+        "source": "02_LATEST-v14/source/index.html embedded atlas: w_0_1",
+        "pixels": [
+          122,
+          137
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/w_0_2.webp",
+        "source": "02_LATEST-v14/source/index.html embedded atlas: w_0_2",
+        "pixels": [
+          130,
+          139
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/w_5_3.webp",
+        "source": "02_LATEST-v14/source/index.html embedded atlas: w_5_3",
+        "pixels": [
+          141,
+          136
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/m_0_0.webp",
+        "source": "02_LATEST-v14/source/index.html embedded atlas: m_0_0",
+        "pixels": [
+          98,
+          148
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/m_0_1.webp",
+        "source": "02_LATEST-v14/source/index.html embedded atlas: m_0_1",
+        "pixels": [
+          98,
+          150
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/m_0_2.webp",
+        "source": "02_LATEST-v14/source/index.html embedded atlas: m_0_2",
+        "pixels": [
+          99,
+          148
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/m_4_5.webp",
+        "source": "02_LATEST-v14/source/index.html embedded atlas: m_4_5",
+        "pixels": [
+          100,
+          159
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/pizza.webp",
+        "source": "02_LATEST-v14/source/index.html embedded DATA.pizza",
+        "pixels": [
+          163,
+          190
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/burger.webp",
+        "source": "02_LATEST-v14/source/index.html embedded DATA.burger",
+        "pixels": [
+          183,
+          190
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/cupcake.webp",
+        "source": "02_LATEST-v14/source/index.html embedded DATA.cupcake",
+        "pixels": [
+          179,
+          190
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/icecream.webp",
+        "source": "02_LATEST-v14/source/index.html embedded DATA.icecream",
+        "pixels": [
+          120,
+          190
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/milk.webp",
+        "source": "02_LATEST-v14/source/index.html embedded DATA.milk",
+        "pixels": [
+          126,
+          190
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/cheese.webp",
+        "source": "02_LATEST-v14/source/index.html embedded DATA.cheese",
+        "pixels": [
+          185,
+          147
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/carrots.webp",
+        "source": "02_LATEST-v14/source/index.html embedded DATA.carrots",
+        "pixels": [
+          164,
+          190
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/strawberry.webp",
+        "source": "02_LATEST-v14/source/index.html embedded DATA.strawberry",
+        "pixels": [
+          162,
+          174
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/bread.webp",
+        "source": "02_LATEST-v14/source/index.html embedded DATA.bread",
+        "pixels": [
+          190,
+          145
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/teapot.webp",
+        "source": "02_LATEST-v14/source/index.html embedded DATA.teapot",
+        "pixels": [
+          190,
+          155
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/dog_idle.webp",
+        "source": "02_LATEST-v14/source/index.html embedded DATA.dog_idle",
+        "pixels": [
+          179,
+          188
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/dog_happy.webp",
+        "source": "02_LATEST-v14/source/index.html embedded DATA.dog_happy",
+        "pixels": [
+          187,
+          162
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/star.webp",
+        "source": "02_LATEST-v14/source/index.html embedded DATA.star",
+        "pixels": [
+          84,
+          84
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/cookie.webp",
+        "source": "02_LATEST-v14/source/index.html embedded DATA.cookie",
+        "pixels": [
+          183,
+          177
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/flowers.webp",
+        "source": "02_LATEST-v14/source/index.html embedded DATA.flowers",
+        "pixels": [
+          166,
+          190
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/cherries.webp",
+        "source": "02_LATEST-v14/source/index.html embedded DATA.cherries",
+        "pixels": [
+          176,
+          164
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/donut.webp",
+        "source": "02_LATEST-v14/source/index.html embedded DATA.donut",
+        "pixels": [
+          190,
+          170
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/baby_pink_0.webp",
+        "source": "03_ASSETS/v14-generated/pastel_baby_unicorn_sprite_sheet.png (25, 28, 272, 273)",
+        "pixels": [
+          230,
+          225
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/baby_pink_1.webp",
+        "source": "03_ASSETS/v14-generated/pastel_baby_unicorn_sprite_sheet.png (321, 28, 569, 273)",
+        "pixels": [
+          230,
+          224
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/baby_pink_2.webp",
+        "source": "03_ASSETS/v14-generated/pastel_baby_unicorn_sprite_sheet.png (605, 42, 880, 273)",
+        "pixels": [
+          230,
+          191
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/baby_pink_3.webp",
+        "source": "03_ASSETS/v14-generated/pastel_baby_unicorn_sprite_sheet.png (915, 65, 1222, 273)",
+        "pixels": [
+          230,
+          157
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/baby_pink_4.webp",
+        "source": "03_ASSETS/v14-generated/pastel_baby_unicorn_sprite_sheet.png (20, 334, 291, 571)",
+        "pixels": [
+          230,
+          209
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/baby_pink_5.webp",
+        "source": "03_ASSETS/v14-generated/pastel_baby_unicorn_sprite_sheet.png (627, 320, 912, 573)",
+        "pixels": [
+          230,
+          214
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/baby_blue_0.webp",
+        "source": "03_ASSETS/v14-generated/pastel_baby_unicorn_sprite_sheet.png (27, 640, 272, 880)",
+        "pixels": [
+          230,
+          227
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/baby_blue_1.webp",
+        "source": "03_ASSETS/v14-generated/pastel_baby_unicorn_sprite_sheet.png (321, 636, 569, 880)",
+        "pixels": [
+          230,
+          224
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/baby_blue_2.webp",
+        "source": "03_ASSETS/v14-generated/pastel_baby_unicorn_sprite_sheet.png (603, 637, 882, 882)",
+        "pixels": [
+          230,
+          209
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/baby_blue_3.webp",
+        "source": "03_ASSETS/v14-generated/pastel_baby_unicorn_sprite_sheet.png (922, 662, 1224, 881)",
+        "pixels": [
+          230,
+          163
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/baby_blue_4.webp",
+        "source": "03_ASSETS/v14-generated/pastel_baby_unicorn_sprite_sheet.png (17, 947, 292, 1174)",
+        "pixels": [
+          230,
+          201
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/baby_blue_5.webp",
+        "source": "03_ASSETS/v14-generated/pastel_baby_unicorn_sprite_sheet.png (625, 938, 910, 1174)",
+        "pixels": [
+          230,
+          197
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP lossless"
+      },
+      {
+        "asset": "assets/hero.webp",
+        "source": "03_ASSETS/core-original/unicorn-hero.png",
+        "pixels": [
+          680,
+          680
+        ],
+        "processing": "cropped/resized only; alpha preserved; WebP quality 93"
+      }
+    ],
+    "newArt": "Part 1 preserves v1.2.1 art identity while removing station/window source-scene contamination and separating shell/station/table render layers.",
+    "releaseVersion": "1.2.0",
+    "baseline": "Sneaky Unicorn: Rainbow Restaurant v1.1.0",
+    "version": "1.3.0-p4",
+    "interior": {
+      "version": "1.3.0-p1",
+      "master": {
+        "file": "restaurant-painted-master.png",
+        "sha256": "5c7bd2b0d59803c54c3e727996358cb79bc4fbd3ab1fd2ec53cdd01d4312022c",
+        "origin": "Image generation in this conversation, generated reference concept #1. Only segmented furniture is used; generated characters/UI are NOT used."
+      },
+      "reference": {
+        "file": "cozy-pastel-house-reference.png",
+        "sha256": "5d0a5f3ba1d16e8784d5652143ae89d8f5455169adb04e41274fd5fbc58fc74e",
+        "sourcePackPath": "03_ASSETS/topdown-maps/cozy_pastel_house_game_map.png"
+      },
+      "records": [
+        {
+          "asset": "assets/table_round_berry.webp",
+          "source": [
+            "restaurant-painted-master.png",
+            "original-table.png (canonical embedded atlas table legs)"
+          ],
+          "processing": "Image-generated cloth silhouette segmented by connected-colour mask and solid tabletop alpha; fixed vase/candle cleaned from cloth; sourcepack wooden legs composited underneath; bounded shape remap and painted palette. Each frame is a complete independent sprite, not a runtime pile of shapes.",
+          "pixels": [
+            210,
+            202
+          ],
+          "sha256": "370569c24c82b14b315c9e6014bbdbf3020f4cd3d2702457f76ee8000f1def06"
+        },
+        {
+          "asset": "assets/table_oval_berry.webp",
+          "source": [
+            "restaurant-painted-master.png",
+            "original-table.png (canonical embedded atlas table legs)"
+          ],
+          "processing": "Image-generated cloth silhouette segmented by connected-colour mask and solid tabletop alpha; fixed vase/candle cleaned from cloth; sourcepack wooden legs composited underneath; bounded shape remap and painted palette. Each frame is a complete independent sprite, not a runtime pile of shapes.",
+          "pixels": [
+            242,
+            202
+          ],
+          "sha256": "c20bbe4bbc41c262213c215ddfc091b0cccd2abcfc075a3e003d749683403ae5"
+        },
+        {
+          "asset": "assets/table_clover_berry.webp",
+          "source": [
+            "restaurant-painted-master.png",
+            "original-table.png (canonical embedded atlas table legs)"
+          ],
+          "processing": "Image-generated cloth silhouette segmented by connected-colour mask and solid tabletop alpha; fixed vase/candle cleaned from cloth; sourcepack wooden legs composited underneath; bounded shape remap and painted palette. Each frame is a complete independent sprite, not a runtime pile of shapes.",
+          "pixels": [
+            210,
+            202
+          ],
+          "sha256": "989e2c96918352c796ce73e3189ec3d712d3d7a205a194239077ee6ab02b021a"
+        },
+        {
+          "asset": "assets/table_round_honey.webp",
+          "source": [
+            "restaurant-painted-master.png",
+            "original-table.png (canonical embedded atlas table legs)"
+          ],
+          "processing": "Image-generated cloth silhouette segmented by connected-colour mask and solid tabletop alpha; fixed vase/candle cleaned from cloth; sourcepack wooden legs composited underneath; bounded shape remap and painted palette. Each frame is a complete independent sprite, not a runtime pile of shapes.",
+          "pixels": [
+            210,
+            202
+          ],
+          "sha256": "1a8f4a7087e89698a80475e7726eb4ab76b20cd67d457a8da675bea193badd84"
+        },
+        {
+          "asset": "assets/table_oval_honey.webp",
+          "source": [
+            "restaurant-painted-master.png",
+            "original-table.png (canonical embedded atlas table legs)"
+          ],
+          "processing": "Image-generated cloth silhouette segmented by connected-colour mask and solid tabletop alpha; fixed vase/candle cleaned from cloth; sourcepack wooden legs composited underneath; bounded shape remap and painted palette. Each frame is a complete independent sprite, not a runtime pile of shapes.",
+          "pixels": [
+            242,
+            202
+          ],
+          "sha256": "ed335ca023d08dcb34e2de0403bef69a4a078352c3b39689c847efd98f115444"
+        },
+        {
+          "asset": "assets/table_clover_honey.webp",
+          "source": [
+            "restaurant-painted-master.png",
+            "original-table.png (canonical embedded atlas table legs)"
+          ],
+          "processing": "Image-generated cloth silhouette segmented by connected-colour mask and solid tabletop alpha; fixed vase/candle cleaned from cloth; sourcepack wooden legs composited underneath; bounded shape remap and painted palette. Each frame is a complete independent sprite, not a runtime pile of shapes.",
+          "pixels": [
+            210,
+            202
+          ],
+          "sha256": "8bd1bb4c4d529849f8ef33d30502f61bb1066534e6be09f09edbb58fe4d4ce1c"
+        },
+        {
+          "asset": "assets/table_round_cream.webp",
+          "source": [
+            "restaurant-painted-master.png",
+            "original-table.png (canonical embedded atlas table legs)"
+          ],
+          "processing": "Image-generated cloth silhouette segmented by connected-colour mask and solid tabletop alpha; fixed vase/candle cleaned from cloth; sourcepack wooden legs composited underneath; bounded shape remap and painted palette. Each frame is a complete independent sprite, not a runtime pile of shapes.",
+          "pixels": [
+            210,
+            202
+          ],
+          "sha256": "25c72a579f5579c136217ec63399d81348dc69dc866e24754f90255ded79ca21"
+        },
+        {
+          "asset": "assets/table_oval_cream.webp",
+          "source": [
+            "restaurant-painted-master.png",
+            "original-table.png (canonical embedded atlas table legs)"
+          ],
+          "processing": "Image-generated cloth silhouette segmented by connected-colour mask and solid tabletop alpha; fixed vase/candle cleaned from cloth; sourcepack wooden legs composited underneath; bounded shape remap and painted palette. Each frame is a complete independent sprite, not a runtime pile of shapes.",
+          "pixels": [
+            242,
+            202
+          ],
+          "sha256": "c9570701114b080c0ea1fef0b7e4510f66134d974a4b511a5a4f387bf1bfe154"
+        },
+        {
+          "asset": "assets/table_clover_cream.webp",
+          "source": [
+            "restaurant-painted-master.png",
+            "original-table.png (canonical embedded atlas table legs)"
+          ],
+          "processing": "Image-generated cloth silhouette segmented by connected-colour mask and solid tabletop alpha; fixed vase/candle cleaned from cloth; sourcepack wooden legs composited underneath; bounded shape remap and painted palette. Each frame is a complete independent sprite, not a runtime pile of shapes.",
+          "pixels": [
+            210,
+            202
+          ],
+          "sha256": "e57af312e537b14278df841344f4390f44456118b58d54b7e806bf64e5bd971d"
+        },
+        {
+          "asset": "assets/table_round_sky.webp",
+          "source": [
+            "restaurant-painted-master.png",
+            "original-table.png (canonical embedded atlas table legs)"
+          ],
+          "processing": "Image-generated cloth silhouette segmented by connected-colour mask and solid tabletop alpha; fixed vase/candle cleaned from cloth; sourcepack wooden legs composited underneath; bounded shape remap and painted palette. Each frame is a complete independent sprite, not a runtime pile of shapes.",
+          "pixels": [
+            210,
+            202
+          ],
+          "sha256": "78f9b2c3de217981283759b250fbf2157719d1f80ae0fee5042bad62d07d45fe"
+        },
+        {
+          "asset": "assets/table_oval_sky.webp",
+          "source": [
+            "restaurant-painted-master.png",
+            "original-table.png (canonical embedded atlas table legs)"
+          ],
+          "processing": "Image-generated cloth silhouette segmented by connected-colour mask and solid tabletop alpha; fixed vase/candle cleaned from cloth; sourcepack wooden legs composited underneath; bounded shape remap and painted palette. Each frame is a complete independent sprite, not a runtime pile of shapes.",
+          "pixels": [
+            242,
+            202
+          ],
+          "sha256": "763e198b1529b8dc0982cb3c024e281324bf99885ea11638c427cbe3c71335aa"
+        },
+        {
+          "asset": "assets/table_clover_sky.webp",
+          "source": [
+            "restaurant-painted-master.png",
+            "original-table.png (canonical embedded atlas table legs)"
+          ],
+          "processing": "Image-generated cloth silhouette segmented by connected-colour mask and solid tabletop alpha; fixed vase/candle cleaned from cloth; sourcepack wooden legs composited underneath; bounded shape remap and painted palette. Each frame is a complete independent sprite, not a runtime pile of shapes.",
+          "pixels": [
+            210,
+            202
+          ],
+          "sha256": "6d016531789603f29648656fb8406b6241c40d27e55a7e0ece1ae2750fa4d225"
+        },
+        {
+          "asset": "assets/chair_plum.webp",
+          "source": "Canonical sourcepack embedded atlas: chair; retained as art-source/original-chair.png",
+          "processing": "Original transparent character-world chair pixels; curated upholstery palette finish; complete silhouette preserved.",
+          "pixels": [
+            199,
+            193
+          ],
+          "sha256": "3f13c609026fa0758f6b62a06312f6a80719c1dd2d6a96fe2e91f257a1d98d87"
+        },
+        {
+          "asset": "assets/chair_mint.webp",
+          "source": "Canonical sourcepack embedded atlas: chair; retained as art-source/original-chair.png",
+          "processing": "Original transparent character-world chair pixels; curated upholstery palette finish; complete silhouette preserved.",
+          "pixels": [
+            199,
+            193
+          ],
+          "sha256": "66761152448c983715bf39c1c46f6b49ec056cd9fbcb2386f7342ace3893f863"
+        },
+        {
+          "asset": "assets/chair_rainbow.webp",
+          "source": "Canonical sourcepack embedded atlas: chair; retained as art-source/original-chair.png",
+          "processing": "Original transparent character-world chair pixels; curated upholstery palette finish; complete silhouette preserved.",
+          "pixels": [
+            199,
+            193
+          ],
+          "sha256": "a38d1b5588bb13eb7fd085059106133a40c7ac5c28cdb4b8d2c8a77824e1ab68"
+        },
+        {
+          "asset": "assets/painted_kitchen.webp",
+          "source": "restaurant-painted-master.png",
+          "processing": "Generated painted kitchen master retained; scene foliage/top-backdrop contamination removed with bounded appliance silhouette. Kitchen station now has transparent surroundings and can sit on every wallpaper/floor independently.",
+          "pixels": [
+            783,
+            256
+          ],
+          "sha256": "d32ca997711c9a5e8aebe355ea453a55f946f00a58c9d26e16a0b8523ddd7614"
+        },
+        {
+          "asset": "assets/painted_sink.webp",
+          "source": "restaurant-painted-master.png",
+          "processing": "Generated painted sink master retained; brown source-room rectangle under towel removed with bounded sink/towel alpha. Sink/dish station now has transparent surroundings; towel remains part of the station sprite.",
+          "pixels": [
+            224,
+            216
+          ],
+          "sha256": "391c767f42540de8b9164ebfe5f496c5302958be3e81fc216d8d1d1d861410f2"
+        },
+        {
+          "asset": "assets/painted_board.webp",
+          "source": "restaurant-painted-master.png",
+          "processing": "Generated countertop/cutting board crop; fixed tomato removed to keep actual recipe visible.",
+          "pixels": [
+            81,
+            64
+          ],
+          "sha256": "1336677ad8fb927b4906b4607166feeba174885f98741cf1872297bc9ddc7d8e"
+        },
+        {
+          "asset": "assets/room_window.webp",
+          "source": "cozy_pastel_house_game_map.png",
+          "processing": "Canonical sourcepack window crop retained; foreign toy/plant corner pixels removed by bounded colour cleanup. Architectural window alpha now contains only frame/curtains/night view.",
+          "pixels": [
+            201,
+            153
+          ],
+          "sha256": "3530bf49cd411c1d1e28f7ef9bd0f19826ecaa8784cb16e38dc35a92e0a73482"
+        },
+        {
+          "asset": "assets/room_lamp.webp",
+          "source": "Canonical sourcepack embedded atlas: lamp",
+          "processing": "Original sourcepack transparent prop, no retouch; extracted original PNG retained in art-source.",
+          "pixels": [
+            102,
+            203
+          ],
+          "sha256": "9c7da689b263a68402b4d7eca6db29f6d8ee9c83789bed85d35a669dcd9a954f"
+        },
+        {
+          "asset": "assets/room_plant.webp",
+          "source": "Canonical sourcepack embedded atlas: plant",
+          "processing": "Original sourcepack transparent prop, no retouch; extracted original PNG retained in art-source.",
+          "pixels": [
+            164,
+            196
+          ],
+          "sha256": "5f53652e7d8caf4977d653b0d5c62e43325934e5a03d1478b61add797ca2f14d"
+        },
+        {
+          "asset": "assets/room_sofa.webp",
+          "source": "Canonical sourcepack embedded atlas: sofa",
+          "processing": "Original sourcepack transparent prop, no retouch; extracted original PNG retained in art-source.",
+          "pixels": [
+            266,
+            174
+          ],
+          "sha256": "d44c13528331d3e2e82f2f3a552eb7b6ecb92dff6aa8890219e512bd77b95049"
+        },
+        {
+          "asset": "assets/room_door.webp",
+          "source": "Canonical sourcepack embedded atlas: door",
+          "processing": "Original sourcepack transparent prop, no retouch; extracted original PNG retained in art-source.",
+          "pixels": [
+            210,
+            220
+          ],
+          "sha256": "82bacadd0a53c1cd7517dfc43cfb92f06d7f74f8125f49d76d35d8d535939452"
+        },
+        {
+          "asset": "assets/room_floor_lavender.webp",
+          "source": "cozy_pastel_house_game_map.png",
+          "processing": "Sourcepack empty wood-floor crop; mirrored seam-safe tiling; curated material tint; no furniture.",
+          "pixels": [
+            1800,
+            1100
+          ],
+          "sha256": "7d0427774edcc46b5c6c62fa18284bc564ef4cef29416a25c0477b96b16ea64f"
+        },
+        {
+          "asset": "assets/room_floor_mint.webp",
+          "source": "cozy_pastel_house_game_map.png",
+          "processing": "Sourcepack empty wood-floor crop; mirrored seam-safe tiling; curated material tint; no furniture.",
+          "pixels": [
+            1800,
+            1100
+          ],
+          "sha256": "475149f4948258cf42a2626446d38c7113fce7e68a4dc16fc7e863dde5348e64"
+        },
+        {
+          "asset": "assets/room_floor_peach.webp",
+          "source": "cozy_pastel_house_game_map.png",
+          "processing": "Sourcepack empty wood-floor crop; mirrored seam-safe tiling; curated material tint; no furniture.",
+          "pixels": [
+            1800,
+            1100
+          ],
+          "sha256": "4e17b596f26063d7ad67458fb04ece20ee0f7232f8dd223e25a1203fa430dcb7"
+        },
+        {
+          "asset": "assets/room_wall_twilight.webp",
+          "source": "cozy_pastel_house_game_map.png",
+          "processing": "Original coordinating material backplate; sourcepack windows and lamps rendered separately. No fixed furniture.",
+          "pixels": [
+            1800,
+            320
+          ],
+          "sha256": "e56cf454c40e1ada0e4f3e8481bafb7bf9c67c475555a3100fd82cadd454caad"
+        },
+        {
+          "asset": "assets/room_wall_rainbow.webp",
+          "source": "cozy_pastel_house_game_map.png",
+          "processing": "Original coordinating material backplate; sourcepack windows and lamps rendered separately. No fixed furniture.",
+          "pixels": [
+            1800,
+            320
+          ],
+          "sha256": "082f30d5fdfeb9171a467569c1451234358b30c50c5e686e5678925c21118b4f"
+        },
+        {
+          "asset": "assets/room_wall_garden.webp",
+          "source": "cozy_pastel_house_game_map.png",
+          "processing": "Original coordinating material backplate; sourcepack windows and lamps rendered separately. No fixed furniture.",
+          "pixels": [
+            1800,
+            320
+          ],
+          "sha256": "808e1eb9db65eb829ddc72e7e8cdc109f361dbe236170c3fbc040ceeaa15e0cc"
+        }
+      ],
+      "pipeline": [
+        "prepare_assets.py",
+        "prepare_visual_assets.py",
+        "refine_visual_assets.py",
+        "foundation_cleanup.py"
+      ],
+      "foundationPass": "Clean station/window alpha; rendering layers separated in art.js. No character/recipe redraw in Part 1."
+    },
+    "uiSystem": {
+      "runtime": "modular HTML/CSS/canvas only",
+      "reference": "art-source/ui-concept-v130-p2.jpg",
+      "referenceUse": "art-direction only; not shipped as a scene or background"
+    }
+  },
+  "additional": [
+    {
+      "key": "table_heart_honey",
+      "source": "make_assets.py:table_body",
+      "process": "Authored heart cloth silhouette, shaded folds and wooden legs; honey finish",
+      "sha256": "6d3c981304dcea75c5e0bc8150724831a9e101c5858167e1cdebe1c091c13061"
+    },
+    {
+      "key": "table_heart_cream",
+      "source": "make_assets.py:table_body",
+      "process": "Authored heart cloth silhouette, shaded folds and wooden legs; cream finish",
+      "sha256": "3bd030b8d9b95b1547d550aa49ba7326e9e9c02e44eabbb1a911317ffadbeccd"
+    },
+    {
+      "key": "table_heart_berry",
+      "source": "make_assets.py:table_body",
+      "process": "Authored heart cloth silhouette, shaded folds and wooden legs; berry finish",
+      "sha256": "d2806a882083e5713bdc121a70fc8debc07ca04102ef63473d76a46eb4a72f04"
+    },
+    {
+      "key": "table_heart_sky",
+      "source": "make_assets.py:table_body",
+      "process": "Authored heart cloth silhouette, shaded folds and wooden legs; sky finish",
+      "sha256": "ac5d73c7a029280274a6b8db07fd5663b284d44a6ea6409816efa60f096b5ed8"
+    },
+    {
+      "key": "table_heart_gingham",
+      "source": "make_assets.py:table_body",
+      "process": "Authored heart cloth silhouette, shaded folds and wooden legs; gingham finish",
+      "sha256": "e7bf6a82df05dce46f971051c56efbaae2767d5eb90acfebf5a83b5ce7037f69"
+    },
+    {
+      "key": "table_heart_rainbow",
+      "source": "make_assets.py:table_body",
+      "process": "Authored heart cloth silhouette, shaded folds and wooden legs; rainbow finish",
+      "sha256": "95c49faea070c1a9636c464ef092e53eb240c1ff52784fb5d7fd37aab7bbf7ec"
+    },
+    {
+      "key": "table_cloud_honey",
+      "source": "make_assets.py:table_body",
+      "process": "Authored cloud cloth silhouette, shaded folds and wooden legs; honey finish",
+      "sha256": "d2cdc4aabd9a89f7302be94fcc5473b1c00cb930afe424cffa40dca29301852c"
+    },
+    {
+      "key": "table_cloud_cream",
+      "source": "make_assets.py:table_body",
+      "process": "Authored cloud cloth silhouette, shaded folds and wooden legs; cream finish",
+      "sha256": "b6cd6b80c4e0cdc43a5a6c47154424f5a80099f3acba7e01cc7252ff14eb0432"
+    },
+    {
+      "key": "table_cloud_berry",
+      "source": "make_assets.py:table_body",
+      "process": "Authored cloud cloth silhouette, shaded folds and wooden legs; berry finish",
+      "sha256": "711a1af450804b6fa373f4396fdead3a685c43bf991f0f6b534ba916f1cc0bc8"
+    },
+    {
+      "key": "table_cloud_sky",
+      "source": "make_assets.py:table_body",
+      "process": "Authored cloud cloth silhouette, shaded folds and wooden legs; sky finish",
+      "sha256": "4ec5aa692504928d2f50c278e12868dbf92e6d041a09419d03791366cce24159"
+    },
+    {
+      "key": "table_cloud_gingham",
+      "source": "make_assets.py:table_body",
+      "process": "Authored cloud cloth silhouette, shaded folds and wooden legs; gingham finish",
+      "sha256": "b1944905aa9ddd180c572f6cca134405e37b7f3234c7cd79c52ce1c476252bf8"
+    },
+    {
+      "key": "table_cloud_rainbow",
+      "source": "make_assets.py:table_body",
+      "process": "Authored cloud cloth silhouette, shaded folds and wooden legs; rainbow finish",
+      "sha256": "36f09af7424757595fced20accdeaf8e68f883249b714a41525496d962e23d29"
+    },
+    {
+      "key": "table_round_gingham",
+      "source": "table_round_cream.webp",
+      "process": "Cloth-only finish; source alpha and legs retained",
+      "sha256": "1994dfe5f138eeed2b9ff278d7e150cb4207ee34461fac1f06467b79bf5c55c6"
+    },
+    {
+      "key": "table_round_rainbow",
+      "source": "table_round_cream.webp",
+      "process": "Cloth-only finish; source alpha and legs retained",
+      "sha256": "708645e3bc1eeb0dcb63e435c61f50d65171084f0aa4da9c289a86eb50da7eee"
+    },
+    {
+      "key": "table_clover_gingham",
+      "source": "table_clover_cream.webp",
+      "process": "Cloth-only finish; source alpha and legs retained",
+      "sha256": "f15ba14d1a9a66dacd1587726c34ccf23dd8e4b2a28f515f4513fb0cce7fce92"
+    },
+    {
+      "key": "table_clover_rainbow",
+      "source": "table_clover_cream.webp",
+      "process": "Cloth-only finish; source alpha and legs retained",
+      "sha256": "a7ede1f751ef8c2c4aec28923a535ce4d85af87be7810c567982aa51b557d4c2"
+    },
+    {
+      "key": "table_oval_gingham",
+      "source": "table_oval_cream.webp",
+      "process": "Cloth-only finish; source alpha and legs retained",
+      "sha256": "ceec140bbba93c44dcdfcf456a0cb02b3a7037ffd8203bee9fb14a6cba301d4b"
+    },
+    {
+      "key": "table_oval_rainbow",
+      "source": "table_oval_cream.webp",
+      "process": "Cloth-only finish; source alpha and legs retained",
+      "sha256": "1ab3adc9fae08956c03b6df3b8e1439c2cc02afed93212b2c9d3da21fe18ebbf"
+    },
+    {
+      "key": "chair_rose",
+      "source": "chair_plum.webp",
+      "process": "Upholstery recolour only; plum contour/wood and source alpha preserved",
+      "sha256": "47a70b5d6ab8acda8866671c1429a691374856c82e6cecb1824ee904fbd005c9"
+    },
+    {
+      "key": "chair_gold",
+      "source": "chair_plum.webp",
+      "process": "Upholstery recolour only; plum contour/wood and source alpha preserved",
+      "sha256": "695e09f9896c6e37a9d81aae6ee3554b5f68b7fca133e96e2702486343b061d2"
+    },
+    {
+      "key": "chair_sky",
+      "source": "chair_plum.webp",
+      "process": "Upholstery recolour only; plum contour/wood and source alpha preserved",
+      "sha256": "837c276b4dbbd31a8c14c1b8b97149c24d3573c515ff7ad36e79e5095c0d6a93"
+    },
+    {
+      "key": "room_floor_moonstone",
+      "source": "make_assets.py",
+      "process": "Authored continuous toy-cafe architectural floor texture",
+      "sha256": "1d99245cfbd7af858840b3fe6ac85537947eab2dc009b25724d447aeb29d7c5f"
+    },
+    {
+      "key": "room_floor_confetti",
+      "source": "make_assets.py",
+      "process": "Authored continuous toy-cafe architectural floor texture",
+      "sha256": "3e12988768d312b5e3493ef596d79397aa2a0d52131f4a82d5f426850b48a3a2"
+    },
+    {
+      "key": "room_wall_sunrise",
+      "source": "make_assets.py",
+      "process": "Authored continuous paneled wall; contains no baked furniture",
+      "sha256": "eed052e7336ef1096e75a50178babbed4c01d72e0cb517939acfb872fddb2817"
+    },
+    {
+      "key": "room_wall_starlight",
+      "source": "make_assets.py",
+      "process": "Authored continuous paneled wall; contains no baked furniture",
+      "sha256": "72bbabcf5fcc6d53b47631ed5e7c0eab9b3cf57a37e73330ffdfba46652a0e77"
+    },
+    {
+      "key": "mop",
+      "source": "provenance/mop.svg",
+      "process": "Original shaded toy-style SVG rasterized to transparent WebP",
+      "sha256": "3812f11d3600006b5f72fce95ee8edc7eecd62bb09ca05cf3487b8d457d72bd4"
+    },
+    {
+      "key": "sponge",
+      "source": "provenance/sponge.svg",
+      "process": "Original shaded toy-style SVG rasterized to transparent WebP",
+      "sha256": "cde4d9c2245bec61ba68bf0c109632f098cf09a2d324ba82c241d5c29831eb68"
+    },
+    {
+      "key": "lunch",
+      "source": "provenance/lunch.svg",
+      "process": "Original shaded toy-style SVG rasterized to transparent WebP",
+      "sha256": "73c0031eebb8a3bed9581f0f9a7e64b7ae6f3fce0e72aab79803558995e09382"
+    }
+  ],
+  "imageGenerationNote": "The generated full-room update illustration was concept-only and is not an in-game asset or production screenshot. Additional runtime art is source-derived material processing and original shaded vector/texture work, as itemized."
+}

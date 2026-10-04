@@ -1,0 +1,99 @@
+{
+  "batch": "recipes1",
+  "testMethod": "Actual Chromium / actual standalone loaded from disk; real isolated browser localStorage; no physical iPhone",
+  "passed": 10,
+  "total": 10,
+  "results": [
+    {
+      "name": "Cook/carry/serve pizza tomato",
+      "pass": true,
+      "detail": {
+        "recipe": "pizza",
+        "variant": "tomato",
+        "actualButtonActions": 16
+      }
+    },
+    {
+      "name": "Cook/carry/serve pizza mushroom",
+      "pass": true,
+      "detail": {
+        "recipe": "pizza",
+        "variant": "mushroom",
+        "actualButtonActions": 16
+      }
+    },
+    {
+      "name": "Cook/carry/serve coffee milk",
+      "pass": true,
+      "detail": {
+        "recipe": "coffee",
+        "variant": "milk",
+        "actualButtonActions": 11
+      }
+    },
+    {
+      "name": "Cook/carry/serve coffee cocoa",
+      "pass": true,
+      "detail": {
+        "recipe": "coffee",
+        "variant": "cocoa",
+        "actualButtonActions": 11
+      }
+    },
+    {
+      "name": "Cook/carry/serve cupcake strawberry",
+      "pass": true,
+      "detail": {
+        "recipe": "cupcake",
+        "variant": "strawberry",
+        "actualButtonActions": 13
+      }
+    },
+    {
+      "name": "Cook/carry/serve cupcake cocoa",
+      "pass": true,
+      "detail": {
+        "recipe": "cupcake",
+        "variant": "cocoa",
+        "actualButtonActions": 13
+      }
+    },
+    {
+      "name": "Cook/carry/serve icecream strawberry",
+      "pass": true,
+      "detail": {
+        "recipe": "icecream",
+        "variant": "strawberry",
+        "actualButtonActions": 8
+      }
+    },
+    {
+      "name": "Cook/carry/serve icecream vanilla",
+      "pass": true,
+      "detail": {
+        "recipe": "icecream",
+        "variant": "vanilla",
+        "actualButtonActions": 8
+      }
+    },
+    {
+      "name": "Cook/carry/serve burger cheese",
+      "pass": true,
+      "detail": {
+        "recipe": "burger",
+        "variant": "cheese",
+        "actualButtonActions": 8
+      }
+    },
+    {
+      "name": "No JavaScript page errors",
+      "pass": true,
+      "detail": {
+        "errors": 0,
+        "consoleErrors": 0
+      }
+    }
+  ],
+  "pageErrors": [],
+  "consoleErrors": []
+}

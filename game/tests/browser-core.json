@@ -1,0 +1,63 @@
+{
+  "batch": "core",
+  "testMethod": "Actual Chromium / actual standalone loaded from disk; real isolated browser localStorage; no physical iPhone",
+  "passed": 9,
+  "total": 9,
+  "results": [
+    {
+      "name": "Six visible setup categories, all33 choices, live preview",
+      "pass": true,
+      "detail": {
+        "choices": 33,
+        "stages": 6
+      }
+    },
+    {
+      "name": "Keyboard movement triggers real stopped-nearby order",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Wrong table ignored; correct physical approach serves",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Walk-up dirty dish and sink, actual wash buttons",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Wrong-dish picture comparison and gentle remake",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Gesture audio unlock, mute and reduced motion",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Parent reset has two distinct actions and cancel is safe",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "All production artwork decoded",
+      "pass": true,
+      "detail": {
+        "decoded": 113
+      }
+    },
+    {
+      "name": "No JavaScript page errors",
+      "pass": true,
+      "detail": {
+        "errors": 0,
+        "consoleErrors": 0
+      }
+    }
+  ],
+  "pageErrors": [],
+  "consoleErrors": []
+}

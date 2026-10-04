@@ -1,0 +1,1966 @@
+{
+  "characterPolicy": "Canonical original pixels retained. Tool-A candidates not shipped.",
+  "productionChat": "https://chatgpt.com/c/6ac268d3-2ab8-83e8-95ba-79c3f3972af1",
+  "assets": [
+    {
+      "key": "baby_blue_0",
+      "file": "build/assets/baby_blue_0.webp",
+      "sha256": "853c70458875a585e60827d45cdd123ced52b3d6b1cef5767477dfc16a3c182c",
+      "bytes": 68588,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "baby_blue_1",
+      "file": "build/assets/baby_blue_1.webp",
+      "sha256": "d5fe0a1ec7c2d449d4408fff670ff36e59b9702d29642fd36a5dfdfb7ef73e79",
+      "bytes": 67986,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "baby_blue_2",
+      "file": "build/assets/baby_blue_2.webp",
+      "sha256": "59730e91e6def4bff19d2cce34099af9f155dc788197de83b34f256ed0d6e00a",
+      "bytes": 60368,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "baby_blue_3",
+      "file": "build/assets/baby_blue_3.webp",
+      "sha256": "d22be7c3f399eb5dc26e314d81458bb51dfcc158fa934174b3d00061d0092713",
+      "bytes": 50950,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "baby_blue_4",
+      "file": "build/assets/baby_blue_4.webp",
+      "sha256": "941822bcdc1049c5579871b5be46ff5b085040b64265e16b0b44e874f85e1a01",
+      "bytes": 67414,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "baby_blue_5",
+      "file": "build/assets/baby_blue_5.webp",
+      "sha256": "18719a31306de8cfe7f656a92afd2a357903a98075ed673eb2bb6d9213a9f0ca",
+      "bytes": 61490,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "baby_pink_0",
+      "file": "build/assets/baby_pink_0.webp",
+      "sha256": "158f8d47227ce3b99f46a428f31d4150244536bc12cb326f5cc2d0ddc81404c1",
+      "bytes": 65222,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "baby_pink_1",
+      "file": "build/assets/baby_pink_1.webp",
+      "sha256": "20c453b5e31d52b5317e2d3ec80901f11d5a1b185b55afc804f8ca2bc5772c72",
+      "bytes": 63204,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "baby_pink_2",
+      "file": "build/assets/baby_pink_2.webp",
+      "sha256": "fee94071a7bb02a38c8484000437489d27b18fd899c6839f81a5a2d99d7e1e4f",
+      "bytes": 54696,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "baby_pink_3",
+      "file": "build/assets/baby_pink_3.webp",
+      "sha256": "e0e927e790df850a5ad79a3ef312247fde64fd13300e6cc454626de1190ae4b4",
+      "bytes": 49324,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "baby_pink_4",
+      "file": "build/assets/baby_pink_4.webp",
+      "sha256": "963b7676f170e3d01e9ff9e583709783f1154aa2a7b85d6fd3288513b6a16e3f",
+      "bytes": 62752,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "baby_pink_5",
+      "file": "build/assets/baby_pink_5.webp",
+      "sha256": "338accc18c2c4dbd9db1fca8956568cc831db9d23d4b273d36a2aaedb534d0ad",
+      "bytes": 62396,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "bread",
+      "file": "build/assets/bread.webp",
+      "sha256": "17883325316122a91cf9c239491600249082207a21733e21dfcead8c754752ba",
+      "bytes": 33580,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "burger",
+      "file": "build/assets/burger.webp",
+      "sha256": "89b2e5d0a7de61c49d3c4d1e783e84bfb6d4dcd15391be4199e8a85b7d8b2189",
+      "bytes": 20830,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "burger_bottom",
+      "file": "build/assets/burger_bottom.webp",
+      "sha256": "76a0e0e90769b19eb833574ae47e55e13f5ebe5d4158e7962db5643b7fbcd9f1",
+      "bytes": 54262,
+      "origin": {
+        "source": "ChatGPT-B-Coffee-Cupcake-Burger-Soup.png",
+        "crop": [
+          10,
+          619,
+          285,
+          823
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "burger_cheese",
+      "file": "build/assets/burger_cheese.webp",
+      "sha256": "79d6d8dad5c8c731bbd648f80f2e046bc0add1932543d423799ae5773ada92b0",
+      "bytes": 35992,
+      "origin": {
+        "source": "ChatGPT-B-Coffee-Cupcake-Burger-Soup.png",
+        "crop": [
+          563,
+          619,
+          842,
+          823
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "burger_lettuce",
+      "file": "build/assets/burger_lettuce.webp",
+      "sha256": "59b28fee72c589e5770d0be20f84b2d011b3c2065ed75e5ef7ea7549e7ca006c",
+      "bytes": 60496,
+      "origin": {
+        "source": "ChatGPT-B-Coffee-Cupcake-Burger-Soup.png",
+        "crop": [
+          847,
+          619,
+          1125,
+          823
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "burger_patty",
+      "file": "build/assets/burger_patty.webp",
+      "sha256": "d3732b22aab84057e244c700470f0c3147045531d37334871e2311d3e2ebfd1c",
+      "bytes": 61706,
+      "origin": {
+        "source": "ChatGPT-B-Coffee-Cupcake-Burger-Soup.png",
+        "crop": [
+          295,
+          619,
+          557,
+          823
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "burger_top",
+      "file": "build/assets/burger_top.webp",
+      "sha256": "1ce14776c3f47309896be5a9aaf3ae35fb99aa340e5b6a00507889390681dca1",
+      "bytes": 57502,
+      "origin": {
+        "source": "ChatGPT-B-Coffee-Cupcake-Burger-Soup.png",
+        "crop": [
+          1128,
+          619,
+          1395,
+          823
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "carrots",
+      "file": "build/assets/carrots.webp",
+      "sha256": "39329e0bc3c73182fbeef8f265d3a09863efce334555699cd632a6cd76625d42",
+      "bytes": 46696,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "chair_gold",
+      "file": "build/assets/chair_gold.webp",
+      "sha256": "695e09f9896c6e37a9d81aae6ee3554b5f68b7fca133e96e2702486343b061d2",
+      "bytes": 28386,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "chair_mint",
+      "file": "build/assets/chair_mint.webp",
+      "sha256": "66761152448c983715bf39c1c46f6b49ec056cd9fbcb2386f7342ace3893f863",
+      "bytes": 40550,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "chair_plum",
+      "file": "build/assets/chair_plum.webp",
+      "sha256": "3f13c609026fa0758f6b62a06312f6a80719c1dd2d6a96fe2e91f257a1d98d87",
+      "bytes": 39420,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "chair_rainbow",
+      "file": "build/assets/chair_rainbow.webp",
+      "sha256": "a38d1b5588bb13eb7fd085059106133a40c7ac5c28cdb4b8d2c8a77824e1ab68",
+      "bytes": 42478,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "chair_rose",
+      "file": "build/assets/chair_rose.webp",
+      "sha256": "47a70b5d6ab8acda8866671c1429a691374856c82e6cecb1824ee904fbd005c9",
+      "bytes": 27740,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "chair_sky",
+      "file": "build/assets/chair_sky.webp",
+      "sha256": "837c276b4dbbd31a8c14c1b8b97149c24d3573c515ff7ad36e79e5095c0d6a93",
+      "bytes": 27872,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "cheese",
+      "file": "build/assets/cheese.webp",
+      "sha256": "a304aaa15fda5748580e11c18cfe43015935bd66bfbf3cc74961068479a33efa",
+      "bytes": 30862,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "cherries",
+      "file": "build/assets/cherries.webp",
+      "sha256": "165c3f2d5d3af879848f8b72ba0656e73ad7bf7579d3f09d10247a8f08d143a3",
+      "bytes": 32442,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "chicken_glaze",
+      "file": "build/assets/chicken_glaze.webp",
+      "sha256": "0cfabbb74c8add0b9ab28afe18560f062307d26beecca0665f059f4d3287bdb4",
+      "bytes": 54318,
+      "origin": {
+        "source": "ChatGPT-B-Chicken-Pancakes-Smoothie.png",
+        "crop": [
+          482,
+          85,
+          729,
+          362
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "chicken_raw",
+      "file": "build/assets/chicken_raw.webp",
+      "sha256": "3f104321224ae313204c5950944d04bf5de7e5eae3cbbfb32949e4a697b0448d",
+      "bytes": 49582,
+      "origin": {
+        "source": "ChatGPT-B-Chicken-Pancakes-Smoothie.png",
+        "crop": [
+          15,
+          85,
+          266,
+          362
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "chicken_roast",
+      "file": "build/assets/chicken_roast.webp",
+      "sha256": "2afe3045fc20e5e5f97caa68ff5a73e058713d082a73b2da9104a9e133d90200",
+      "bytes": 58406,
+      "origin": {
+        "source": "ChatGPT-B-Chicken-Pancakes-Smoothie.png",
+        "crop": [
+          734,
+          85,
+          988,
+          362
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "chicken_wedge",
+      "file": "build/assets/chicken_wedge.webp",
+      "sha256": "715fdf2164a8247f3061084d64a3bfda8bcf32a8fac062362d41b901ebe521c1",
+      "bytes": 43478,
+      "origin": {
+        "source": "ChatGPT-B-Chicken-Pancakes-Smoothie.png",
+        "crop": [
+          270,
+          85,
+          472,
+          362
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "coffee_beans",
+      "file": "build/assets/coffee_beans.webp",
+      "sha256": "5ce02136c58f6065eb49fd682febd1d6241c50a4f7249f8d071354148991792f",
+      "bytes": 64592,
+      "origin": {
+        "source": "ChatGPT-B-Coffee-Cupcake-Burger-Soup.png",
+        "crop": [
+          12,
+          48,
+          293,
+          338
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "coffee_black",
+      "file": "build/assets/coffee_black.webp",
+      "sha256": "53de8b3d2805348928ea0eed951e0aea40e16ebb0f9e2661c6bbcd002dba3468",
+      "bytes": 70818,
+      "origin": {
+        "source": "ChatGPT-B-Coffee-Cupcake-Burger-Soup.png",
+        "crop": [
+          585,
+          48,
+          845,
+          338
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "coffee_cocoa",
+      "file": "build/assets/coffee_cocoa.webp",
+      "sha256": "1fb86c487bfe1909f62a2a0ee661b2a15ca3af82bedb3c6c0485dfb4fe472449",
+      "bytes": 74150,
+      "origin": {
+        "source": "ChatGPT-B-Coffee-Cupcake-Burger-Soup.png",
+        "crop": [
+          1129,
+          48,
+          1415,
+          338
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "coffee_empty",
+      "file": "build/assets/coffee_empty.webp",
+      "sha256": "8675fbb4033fbb76bdf3c6b788e5c9408ad88206709b5814134f8d4466bba229",
+      "bytes": 63638,
+      "origin": {
+        "source": "ChatGPT-B-Coffee-Cupcake-Burger-Soup.png",
+        "crop": [
+          300,
+          48,
+          580,
+          338
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "coffee_milk",
+      "file": "build/assets/coffee_milk.webp",
+      "sha256": "eb35ad69e2cb4d5f3f8d4b915df082eff70a8578db66aea0e69255b6b318d1a4",
+      "bytes": 69068,
+      "origin": {
+        "source": "ChatGPT-B-Coffee-Cupcake-Burger-Soup.png",
+        "crop": [
+          845,
+          48,
+          1128,
+          338
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "cookie",
+      "file": "build/assets/cookie.webp",
+      "sha256": "e863850a310090752d05c50a2c043420f770c4975d2296137cb8bceb0b998843",
+      "bytes": 42542,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "cupcake",
+      "file": "build/assets/cupcake.webp",
+      "sha256": "b7f2cad10146849c29cf877f7515415506f725c7d36d9783526fcfa8e8dae0cd",
+      "bytes": 45538,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "cupcake_batter",
+      "file": "build/assets/cupcake_batter.webp",
+      "sha256": "f498b3de19c08b434cee14116b041e59956582cc14be8135bb987c5760278380",
+      "bytes": 72096,
+      "origin": {
+        "source": "ChatGPT-B-Coffee-Cupcake-Burger-Soup.png",
+        "crop": [
+          300,
+          335,
+          580,
+          591
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "cupcake_cocoa",
+      "file": "build/assets/cupcake_cocoa.webp",
+      "sha256": "2ca3956223f6d774910866a7f924eb5e79ad77d816ffbb79d9a7aa447c48efc1",
+      "bytes": 65052,
+      "origin": {
+        "source": "ChatGPT-B-Coffee-Cupcake-Burger-Soup.png",
+        "crop": [
+          1129,
+          335,
+          1415,
+          591
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "cupcake_flour",
+      "file": "build/assets/cupcake_flour.webp",
+      "sha256": "e7893eaedd6e03a40cc61fb5f4f2b187a0c03da1302fc61cc49fb5ba9de91c6e",
+      "bytes": 73984,
+      "origin": {
+        "source": "ChatGPT-B-Coffee-Cupcake-Burger-Soup.png",
+        "crop": [
+          12,
+          335,
+          293,
+          591
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "cupcake_plain",
+      "file": "build/assets/cupcake_plain.webp",
+      "sha256": "f13b8b4be7312dba0bb44a5f1fdeb6da386cd5cf22dfb8ea617db014b8609dc4",
+      "bytes": 55424,
+      "origin": {
+        "source": "ChatGPT-B-Coffee-Cupcake-Burger-Soup.png",
+        "crop": [
+          585,
+          335,
+          845,
+          591
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "cupcake_strawberry",
+      "file": "build/assets/cupcake_strawberry.webp",
+      "sha256": "6302a01bf6ffb5041d4fbb1c6d04f399db3904cf953343bcdb2c8e7ead75f5ff",
+      "bytes": 68418,
+      "origin": {
+        "source": "ChatGPT-B-Coffee-Cupcake-Burger-Soup.png",
+        "crop": [
+          845,
+          335,
+          1128,
+          591
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "dog_happy",
+      "file": "build/assets/dog_happy.webp",
+      "sha256": "f8e687e69cf31b32c390d5ab5c2cf663f311c2c9c20614cd8f8d914f1ba8e11b",
+      "bytes": 38108,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "dog_idle",
+      "file": "build/assets/dog_idle.webp",
+      "sha256": "c84c5a09d460503802453e2802f7d42f96badc69499fbb36c327b1f2fb665107",
+      "bytes": 40124,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "donut",
+      "file": "build/assets/donut.webp",
+      "sha256": "1c3158af38fabd76582b55e7ebc8cdcd2522ad92f3ef0f3e6abcf6ff57865760",
+      "bytes": 47614,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "flowers",
+      "file": "build/assets/flowers.webp",
+      "sha256": "5f1a8a83c494c86eb8cffc497bc09b5666be8904af71e2ee0ec5271f90413d33",
+      "bytes": 21238,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "fruit_banana",
+      "file": "build/assets/fruit_banana.webp",
+      "sha256": "0a6f80dffff80aa766da7aff88f3a68ddf9b6967feb60304e0ebcd0e4b66efd3",
+      "bytes": 31266,
+      "origin": {
+        "source": "ChatGPT-B-Chicken-Pancakes-Smoothie.png",
+        "crop": [
+          1050,
+          449,
+          1225,
+          634
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "fruit_berries",
+      "file": "build/assets/fruit_berries.webp",
+      "sha256": "5f6b7b15f83725c47cf52212c00cacd64ad826e2d437b48cef90b907b1f7ea8f",
+      "bytes": 45760,
+      "origin": {
+        "source": "ChatGPT-B-Chicken-Pancakes-Smoothie.png",
+        "crop": [
+          826,
+          425,
+          1042,
+          637
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "fruit_mango",
+      "file": "build/assets/fruit_mango.webp",
+      "sha256": "76252b642d702f2fa8b3cd54a804f4acee87fe5fa62d5c118d2d7b620416c0b1",
+      "bytes": 28718,
+      "origin": {
+        "source": "ChatGPT-B-Chicken-Pancakes-Smoothie.png",
+        "crop": [
+          532,
+          788,
+          715,
+          994
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "fruit_strawberry",
+      "file": "build/assets/fruit_strawberry.webp",
+      "sha256": "ad921b108d1cd0508084bd75cffc197232fa44ea2e27603ac832159e481a1d47",
+      "bytes": 35190,
+      "origin": {
+        "source": "ChatGPT-B-Chicken-Pancakes-Smoothie.png",
+        "crop": [
+          327,
+          788,
+          511,
+          994
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "h_happy",
+      "file": "build/assets/h_happy.webp",
+      "sha256": "2b0256b895e6578cfc365c5978310ab25b765895de5ff9a7f9e3d75e5c63178f",
+      "bytes": 23936,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "h_idle0",
+      "file": "build/assets/h_idle0.webp",
+      "sha256": "d91a34cb76a91a63ab419e331ee88db804d513d34e4fbef3704bee1f1786a1f5",
+      "bytes": 24182,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "h_idle1",
+      "file": "build/assets/h_idle1.webp",
+      "sha256": "262826828e9180352c3c8cb7b9be92d159c1de65e25b836055cf277cf4d6a8f2",
+      "bytes": 24546,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "h_run0",
+      "file": "build/assets/h_run0.webp",
+      "sha256": "9d3da54294bab1bcd79cbda93b862a4298a35b025e050d7b6683f402161345e2",
+      "bytes": 27812,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "h_run1",
+      "file": "build/assets/h_run1.webp",
+      "sha256": "65ab87a9fbb403e990088e7cde5eaa8f957bcbc365c730f192484455a98eae08",
+      "bytes": 27716,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "h_run2",
+      "file": "build/assets/h_run2.webp",
+      "sha256": "51c69d617f31cb26e364f8ee50d1c427554c095815ffde059808b97ec201f791",
+      "bytes": 27836,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "h_run3",
+      "file": "build/assets/h_run3.webp",
+      "sha256": "606088a31ef88981840efe59c5bf10befad5e214683b6d485ceba051bed17d96",
+      "bytes": 28330,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "hero",
+      "file": "build/assets/hero.webp",
+      "sha256": "e29437cd6f25fe4de3c95fd236ed892ef4969cb14ebe42ca6023ec7b1410c13b",
+      "bytes": 34068,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "ice_cone",
+      "file": "build/assets/ice_cone.webp",
+      "sha256": "7c366d7f3c8dab41a131764eb5098e08dfc282be2a91bad2a706a64ef7f5dcfa",
+      "bytes": 53098,
+      "origin": {
+        "source": "ChatGPT-B-Kitchen-Pizza-Icecream.png",
+        "crop": [
+          231,
+          746,
+          443,
+          1049
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "ice_sprinkles",
+      "file": "build/assets/ice_sprinkles.webp",
+      "sha256": "1c4d0b85acf3de8c98f140a9e9e8979ab2f370b33acda9d7398e3eafcae6268e",
+      "bytes": 36164,
+      "origin": {
+        "source": "ChatGPT-B-Kitchen-Pizza-Icecream.png",
+        "crop": [
+          1025,
+          820,
+          1253,
+          1008
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "ice_strawberry",
+      "file": "build/assets/ice_strawberry.webp",
+      "sha256": "b799cb4d9fac24cfe2156cb1929977aeac0cbb0df15ce9e0e724c5636db64eb3",
+      "bytes": 48158,
+      "origin": {
+        "source": "ChatGPT-B-Kitchen-Pizza-Icecream.png",
+        "crop": [
+          484,
+          790,
+          720,
+          1020
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "ice_vanilla",
+      "file": "build/assets/ice_vanilla.webp",
+      "sha256": "2caf5b72765b4cc2cb82ff68225cf3e16a802e7a28178dbda1f73bb471701913",
+      "bytes": 48218,
+      "origin": {
+        "source": "ChatGPT-B-Kitchen-Pizza-Icecream.png",
+        "crop": [
+          754,
+          790,
+          989,
+          1020
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "icecream",
+      "file": "build/assets/icecream.webp",
+      "sha256": "8fc4592ae489459f5574fdf7ef2318ee970c6c51b46433c70115aa432253404d",
+      "bytes": 29842,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "lunch",
+      "file": "build/assets/lunch.webp",
+      "sha256": "73c0031eebb8a3bed9581f0f9a7e64b7ae6f3fce0e72aab79803558995e09382",
+      "bytes": 4820,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "m_0_0",
+      "file": "build/assets/m_0_0.webp",
+      "sha256": "705c62fe7b8b4d59aea8bceb7b98ab3615fe94e91a10172b206bf6d6f01930c7",
+      "bytes": 23188,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "m_0_1",
+      "file": "build/assets/m_0_1.webp",
+      "sha256": "ff67600867ef914aeae70cc1578161789c379664ca867e1f048b1365199aa573",
+      "bytes": 23252,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "m_0_2",
+      "file": "build/assets/m_0_2.webp",
+      "sha256": "be099e20de31d980e782d0bf58c41ea1c2404eb616de633f0cccd220721ebfdd",
+      "bytes": 23242,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "m_4_5",
+      "file": "build/assets/m_4_5.webp",
+      "sha256": "b693d30e27fafa7a812485744ef25d8102798033538c66e1a8707347c8eeac27",
+      "bytes": 24962,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "milk",
+      "file": "build/assets/milk.webp",
+      "sha256": "087adc652deeb3f71b9002b18ba593deed49662e588448d8d235bee475031b0a",
+      "bytes": 31026,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "mop",
+      "file": "build/assets/mop.webp",
+      "sha256": "3812f11d3600006b5f72fce95ee8edc7eecd62bb09ca05cf3487b8d457d72bd4",
+      "bytes": 10032,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "painted_board",
+      "file": "build/assets/painted_board.webp",
+      "sha256": "1336677ad8fb927b4906b4607166feeba174885f98741cf1872297bc9ddc7d8e",
+      "bytes": 2256,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "painted_kitchen",
+      "file": "build/assets/painted_kitchen.webp",
+      "sha256": "926b01a14f2a63e781e8c2573ec27d8f0188aa4f46beed4c078e6a18f3fd231e",
+      "bytes": 430606,
+      "origin": {
+        "source": "ChatGPT-B-Kitchen-Pizza-Icecream.png",
+        "crop": [
+          80,
+          55,
+          1375,
+          409
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": false
+    },
+    {
+      "key": "painted_sink",
+      "file": "build/assets/painted_sink.webp",
+      "sha256": "3b866ff26a1c669bae67f3591521f02f77864a0ed4059ef12cb64d58b9176025",
+      "bytes": 897738,
+      "origin": {
+        "source": "Sink-Regular-ChatGPT.png",
+        "crop": [
+          74,
+          114,
+          1180,
+          1152
+        ],
+        "route": "regular ChatGPT B selected by Dean"
+      },
+      "baselineByteIdentical": false
+    },
+    {
+      "key": "pancake_batter",
+      "file": "build/assets/pancake_batter.webp",
+      "sha256": "ff59ab9e89ee251defe83fa6877eeff52693526a1843eead55e222340065af25",
+      "bytes": 70164,
+      "origin": {
+        "source": "ChatGPT-B-Chicken-Pancakes-Smoothie.png",
+        "crop": [
+          12,
+          398,
+          298,
+          641
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "pancake_brown",
+      "file": "build/assets/pancake_brown.webp",
+      "sha256": "71c478e8b876c2b47e7c23831db57ec9cfb1d48669c6e01a761b628ef2776356",
+      "bytes": 64276,
+      "origin": {
+        "source": "ChatGPT-B-Chicken-Pancakes-Smoothie.png",
+        "crop": [
+          560,
+          418,
+          824,
+          634
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "pancake_raw",
+      "file": "build/assets/pancake_raw.webp",
+      "sha256": "4791862654d1bab478dee19b2d9af9fcfd202418eec3ad915b2ac9964bf09b88",
+      "bytes": 47684,
+      "origin": {
+        "source": "ChatGPT-B-Chicken-Pancakes-Smoothie.png",
+        "crop": [
+          301,
+          418,
+          558,
+          634
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "pancake_syrup",
+      "file": "build/assets/pancake_syrup.webp",
+      "sha256": "17fa0e5b96ba1fc369c5d4bc5ea96571fe8c299166317a14f1dbfe9387654f38",
+      "bytes": 30896,
+      "origin": {
+        "source": "ChatGPT-B-Chicken-Pancakes-Smoothie.png",
+        "crop": [
+          1230,
+          460,
+          1437,
+          637
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "pizza",
+      "file": "build/assets/pizza.webp",
+      "sha256": "77fbb243165f88c49e5f0db75587bf6e9b7598159debae5eca3c0b665f2c6983",
+      "bytes": 19988,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "pizza_cheese",
+      "file": "build/assets/pizza_cheese.webp",
+      "sha256": "6d5f851c4dd99c7c9a4d127154db62b63307d399fcc45c4f8def82db643b8142",
+      "bytes": 66750,
+      "origin": {
+        "source": "ChatGPT-B-Kitchen-Pizza-Icecream.png",
+        "crop": [
+          539,
+          480,
+          793,
+          709
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "pizza_dough",
+      "file": "build/assets/pizza_dough.webp",
+      "sha256": "eb01086d4ff938c830a8f71912097f1bec0e133565a1aeeb376874f6dfb48e32",
+      "bytes": 53816,
+      "origin": {
+        "source": "ChatGPT-B-Kitchen-Pizza-Icecream.png",
+        "crop": [
+          18,
+          480,
+          285,
+          709
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "pizza_mushroom",
+      "file": "build/assets/pizza_mushroom.webp",
+      "sha256": "f2e684fca953de7fef5c01c07c9dc35db73dde770315df5e26de033d52be50d4",
+      "bytes": 24088,
+      "origin": {
+        "source": "ChatGPT-B-Kitchen-Pizza-Icecream.png",
+        "crop": [
+          961,
+          530,
+          1129,
+          695
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "pizza_sauce",
+      "file": "build/assets/pizza_sauce.webp",
+      "sha256": "1f9d32f1d7de5e410db9e2999a9acdd8bdfe00b3fde82d66ec7fd1b43912aef5",
+      "bytes": 62958,
+      "origin": {
+        "source": "ChatGPT-B-Kitchen-Pizza-Icecream.png",
+        "crop": [
+          280,
+          480,
+          536,
+          709
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "pizza_tomato",
+      "file": "build/assets/pizza_tomato.webp",
+      "sha256": "81502ecdcf7cb55c528f0bfcc0812e0a1f6acfbfd1e5d86d700c3a48880ca9ae",
+      "bytes": 29272,
+      "origin": {
+        "source": "ChatGPT-B-Kitchen-Pizza-Icecream.png",
+        "crop": [
+          792,
+          530,
+          960,
+          697
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "prep_board",
+      "file": "build/assets/prep_board.webp",
+      "sha256": "d1dd9f4baa1bbb5879d3b43dcba3a98402d335dd0e7c8b193e0f58f3de255072",
+      "bytes": 56116,
+      "origin": {
+        "source": "ChatGPT-B-Kitchen-Pizza-Icecream.png",
+        "crop": [
+          1135,
+          480,
+          1438,
+          710
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "room_door",
+      "file": "build/assets/room_door.webp",
+      "sha256": "82bacadd0a53c1cd7517dfc43cfb92f06d7f74f8125f49d76d35d8d535939452",
+      "bytes": 65544,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "room_floor_confetti",
+      "file": "build/assets/room_floor_confetti.webp",
+      "sha256": "3e12988768d312b5e3493ef596d79397aa2a0d52131f4a82d5f426850b48a3a2",
+      "bytes": 2318,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "room_floor_lavender",
+      "file": "build/assets/room_floor_lavender.webp",
+      "sha256": "7d0427774edcc46b5c6c62fa18284bc564ef4cef29416a25c0477b96b16ea64f",
+      "bytes": 43528,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "room_floor_mint",
+      "file": "build/assets/room_floor_mint.webp",
+      "sha256": "475149f4948258cf42a2626446d38c7113fce7e68a4dc16fc7e863dde5348e64",
+      "bytes": 42934,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "room_floor_moonstone",
+      "file": "build/assets/room_floor_moonstone.webp",
+      "sha256": "1d99245cfbd7af858840b3fe6ac85537947eab2dc009b25724d447aeb29d7c5f",
+      "bytes": 1048,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "room_floor_peach",
+      "file": "build/assets/room_floor_peach.webp",
+      "sha256": "4e17b596f26063d7ad67458fb04ece20ee0f7232f8dd223e25a1203fa430dcb7",
+      "bytes": 61120,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "room_lamp",
+      "file": "build/assets/room_lamp.webp",
+      "sha256": "9c7da689b263a68402b4d7eca6db29f6d8ee9c83789bed85d35a669dcd9a954f",
+      "bytes": 23230,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "room_plant",
+      "file": "build/assets/room_plant.webp",
+      "sha256": "5f53652e7d8caf4977d653b0d5c62e43325934e5a03d1478b61add797ca2f14d",
+      "bytes": 43232,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "room_sofa",
+      "file": "build/assets/room_sofa.webp",
+      "sha256": "d44c13528331d3e2e82f2f3a552eb7b6ecb92dff6aa8890219e512bd77b95049",
+      "bytes": 49354,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "room_wall_garden",
+      "file": "build/assets/room_wall_garden.webp",
+      "sha256": "808e1eb9db65eb829ddc72e7e8cdc109f361dbe236170c3fbc040ceeaa15e0cc",
+      "bytes": 15312,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "room_wall_rainbow",
+      "file": "build/assets/room_wall_rainbow.webp",
+      "sha256": "082f30d5fdfeb9171a467569c1451234358b30c50c5e686e5678925c21118b4f",
+      "bytes": 10904,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "room_wall_starlight",
+      "file": "build/assets/room_wall_starlight.webp",
+      "sha256": "72bbabcf5fcc6d53b47631ed5e7c0eab9b3cf57a37e73330ffdfba46652a0e77",
+      "bytes": 832,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "room_wall_sunrise",
+      "file": "build/assets/room_wall_sunrise.webp",
+      "sha256": "eed052e7336ef1096e75a50178babbed4c01d72e0cb517939acfb872fddb2817",
+      "bytes": 842,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "room_wall_twilight",
+      "file": "build/assets/room_wall_twilight.webp",
+      "sha256": "e56cf454c40e1ada0e4f3e8481bafb7bf9c67c475555a3100fd82cadd454caad",
+      "bytes": 9814,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "room_window",
+      "file": "build/assets/room_window.webp",
+      "sha256": "3530bf49cd411c1d1e28f7ef9bd0f19826ecaa8784cb16e38dc35a92e0a73482",
+      "bytes": 32926,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "smoothie_blender",
+      "file": "build/assets/smoothie_blender.webp",
+      "sha256": "ea445ab794f5e675af657d9413bc1f3fc6e8c70b89f68dbe246f7812fd07bcf0",
+      "bytes": 118812,
+      "origin": {
+        "source": "ChatGPT-B-Chicken-Pancakes-Smoothie.png",
+        "crop": [
+          22,
+          648,
+          323,
+          1042
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "smoothie_mango",
+      "file": "build/assets/smoothie_mango.webp",
+      "sha256": "79da221ef7a7998b871c13696ad37ed773049fa0bddf015d43ba01d72849f3a7",
+      "bytes": 71668,
+      "origin": {
+        "source": "ChatGPT-B-Chicken-Pancakes-Smoothie.png",
+        "crop": [
+          966,
+          717,
+          1199,
+          1042
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "smoothie_milk",
+      "file": "build/assets/smoothie_milk.webp",
+      "sha256": "173c94f2bb962f6792e234eda6ff5e7f72d5fca199dfbe6f94dc3d10e3624bee",
+      "bytes": 64918,
+      "origin": {
+        "source": "ChatGPT-B-Chicken-Pancakes-Smoothie.png",
+        "crop": [
+          1205,
+          717,
+          1442,
+          1042
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "smoothie_strawberry",
+      "file": "build/assets/smoothie_strawberry.webp",
+      "sha256": "9ceda68029da36a618784082916fcde4845f165582525712d69f3e32d66c5efa",
+      "bytes": 70266,
+      "origin": {
+        "source": "ChatGPT-B-Chicken-Pancakes-Smoothie.png",
+        "crop": [
+          725,
+          717,
+          952,
+          1042
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "soup_broth",
+      "file": "build/assets/soup_broth.webp",
+      "sha256": "3a5ea2f2a8daa86f5bc779a65cbc5ab99d9bef9029363be2d106d3eedea144d8",
+      "bytes": 67008,
+      "origin": {
+        "source": "ChatGPT-B-Coffee-Cupcake-Burger-Soup.png",
+        "crop": [
+          290,
+          845,
+          570,
+          1080
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "soup_carrot",
+      "file": "build/assets/soup_carrot.webp",
+      "sha256": "09e2e76b3e0316d527e812f9aad6ad3d61db20f7d157cbe02e12f0ef09061314",
+      "bytes": 69284,
+      "origin": {
+        "source": "ChatGPT-B-Coffee-Cupcake-Burger-Soup.png",
+        "crop": [
+          570,
+          845,
+          850,
+          1080
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "soup_chunk",
+      "file": "build/assets/soup_chunk.webp",
+      "sha256": "927e9846934b3a01cc783df73493f27f5c482b71c05f4b062c1d8399e0e239dc",
+      "bytes": 29618,
+      "origin": {
+        "source": "ChatGPT-B-Coffee-Cupcake-Burger-Soup.png",
+        "crop": [
+          1145,
+          845,
+          1390,
+          1080
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "soup_empty",
+      "file": "build/assets/soup_empty.webp",
+      "sha256": "a90c74d7b3fe4fc7b6c98a6e1c25ae2f943994275003abe0986833a7e19865d1",
+      "bytes": 64530,
+      "origin": {
+        "source": "ChatGPT-B-Coffee-Cupcake-Burger-Soup.png",
+        "crop": [
+          12,
+          845,
+          290,
+          1080
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "soup_peas",
+      "file": "build/assets/soup_peas.webp",
+      "sha256": "27d8b5597d92aabe5b5f4bbed4ea0e7761f47e7e2729e4d0c3b16a01fc7f2b6f",
+      "bytes": 69760,
+      "origin": {
+        "source": "ChatGPT-B-Coffee-Cupcake-Burger-Soup.png",
+        "crop": [
+          850,
+          845,
+          1130,
+          1080
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "sponge",
+      "file": "build/assets/sponge.webp",
+      "sha256": "cde4d9c2245bec61ba68bf0c109632f098cf09a2d324ba82c241d5c29831eb68",
+      "bytes": 6904,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "star",
+      "file": "build/assets/star.webp",
+      "sha256": "a3e9a4bf846f4876f2a506555edacd7eed585d23b260f2649da74f2eba85a044",
+      "bytes": 10636,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "strawberry",
+      "file": "build/assets/strawberry.webp",
+      "sha256": "877956bc5fe54a14fdbced6b796fff3ca00acd92a746787eb1487be5da159ac9",
+      "bytes": 33936,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "table_cloud_berry",
+      "file": "build/assets/table_cloud_berry.webp",
+      "sha256": "711a1af450804b6fa373f4396fdead3a685c43bf991f0f6b534ba916f1cc0bc8",
+      "bytes": 21944,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "table_cloud_cream",
+      "file": "build/assets/table_cloud_cream.webp",
+      "sha256": "b6cd6b80c4e0cdc43a5a6c47154424f5a80099f3acba7e01cc7252ff14eb0432",
+      "bytes": 22876,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "table_cloud_gingham",
+      "file": "build/assets/table_cloud_gingham.webp",
+      "sha256": "b1944905aa9ddd180c572f6cca134405e37b7f3234c7cd79c52ce1c476252bf8",
+      "bytes": 23092,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "table_cloud_honey",
+      "file": "build/assets/table_cloud_honey.webp",
+      "sha256": "d2cdc4aabd9a89f7302be94fcc5473b1c00cb930afe424cffa40dca29301852c",
+      "bytes": 22458,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "table_cloud_rainbow",
+      "file": "build/assets/table_cloud_rainbow.webp",
+      "sha256": "36f09af7424757595fced20accdeaf8e68f883249b714a41525496d962e23d29",
+      "bytes": 26550,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "table_cloud_sky",
+      "file": "build/assets/table_cloud_sky.webp",
+      "sha256": "4ec5aa692504928d2f50c278e12868dbf92e6d041a09419d03791366cce24159",
+      "bytes": 22460,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "table_clover_berry",
+      "file": "build/assets/table_clover_berry.webp",
+      "sha256": "989e2c96918352c796ce73e3189ec3d712d3d7a205a194239077ee6ab02b021a",
+      "bytes": 34246,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "table_clover_cream",
+      "file": "build/assets/table_clover_cream.webp",
+      "sha256": "e57af312e537b14278df841344f4390f44456118b58d54b7e806bf64e5bd971d",
+      "bytes": 18462,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "table_clover_gingham",
+      "file": "build/assets/table_clover_gingham.webp",
+      "sha256": "f15ba14d1a9a66dacd1587726c34ccf23dd8e4b2a28f515f4513fb0cce7fce92",
+      "bytes": 16438,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "table_clover_honey",
+      "file": "build/assets/table_clover_honey.webp",
+      "sha256": "8bd1bb4c4d529849f8ef33d30502f61bb1066534e6be09f09edbb58fe4d4ce1c",
+      "bytes": 26230,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "table_clover_rainbow",
+      "file": "build/assets/table_clover_rainbow.webp",
+      "sha256": "a7ede1f751ef8c2c4aec28923a535ce4d85af87be7810c567982aa51b557d4c2",
+      "bytes": 17834,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "table_clover_sky",
+      "file": "build/assets/table_clover_sky.webp",
+      "sha256": "6d016531789603f29648656fb8406b6241c40d27e55a7e0ece1ae2750fa4d225",
+      "bytes": 27358,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "table_heart_berry",
+      "file": "build/assets/table_heart_berry.webp",
+      "sha256": "d2806a882083e5713bdc121a70fc8debc07ca04102ef63473d76a46eb4a72f04",
+      "bytes": 21092,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "table_heart_cream",
+      "file": "build/assets/table_heart_cream.webp",
+      "sha256": "3bd030b8d9b95b1547d550aa49ba7326e9e9c02e44eabbb1a911317ffadbeccd",
+      "bytes": 21640,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "table_heart_gingham",
+      "file": "build/assets/table_heart_gingham.webp",
+      "sha256": "e7bf6a82df05dce46f971051c56efbaae2767d5eb90acfebf5a83b5ce7037f69",
+      "bytes": 22026,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "table_heart_honey",
+      "file": "build/assets/table_heart_honey.webp",
+      "sha256": "6d3c981304dcea75c5e0bc8150724831a9e101c5858167e1cdebe1c091c13061",
+      "bytes": 21396,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "table_heart_rainbow",
+      "file": "build/assets/table_heart_rainbow.webp",
+      "sha256": "95c49faea070c1a9636c464ef092e53eb240c1ff52784fb5d7fd37aab7bbf7ec",
+      "bytes": 24558,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "table_heart_sky",
+      "file": "build/assets/table_heart_sky.webp",
+      "sha256": "ac5d73c7a029280274a6b8db07fd5663b284d44a6ea6409816efa60f096b5ed8",
+      "bytes": 21510,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "table_oval_berry",
+      "file": "build/assets/table_oval_berry.webp",
+      "sha256": "c20bbe4bbc41c262213c215ddfc091b0cccd2abcfc075a3e003d749683403ae5",
+      "bytes": 38974,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "table_oval_cream",
+      "file": "build/assets/table_oval_cream.webp",
+      "sha256": "c9570701114b080c0ea1fef0b7e4510f66134d974a4b511a5a4f387bf1bfe154",
+      "bytes": 20512,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "table_oval_gingham",
+      "file": "build/assets/table_oval_gingham.webp",
+      "sha256": "ceec140bbba93c44dcdfcf456a0cb02b3a7037ffd8203bee9fb14a6cba301d4b",
+      "bytes": 18340,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "table_oval_honey",
+      "file": "build/assets/table_oval_honey.webp",
+      "sha256": "ed335ca023d08dcb34e2de0403bef69a4a078352c3b39689c847efd98f115444",
+      "bytes": 28846,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "table_oval_rainbow",
+      "file": "build/assets/table_oval_rainbow.webp",
+      "sha256": "1ab3adc9fae08956c03b6df3b8e1439c2cc02afed93212b2c9d3da21fe18ebbf",
+      "bytes": 20008,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "table_oval_sky",
+      "file": "build/assets/table_oval_sky.webp",
+      "sha256": "763e198b1529b8dc0982cb3c024e281324bf99885ea11638c427cbe3c71335aa",
+      "bytes": 30318,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "table_round_berry",
+      "file": "build/assets/table_round_berry.webp",
+      "sha256": "370569c24c82b14b315c9e6014bbdbf3020f4cd3d2702457f76ee8000f1def06",
+      "bytes": 34202,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "table_round_cream",
+      "file": "build/assets/table_round_cream.webp",
+      "sha256": "25c72a579f5579c136217ec63399d81348dc69dc866e24754f90255ded79ca21",
+      "bytes": 15534,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "table_round_gingham",
+      "file": "build/assets/table_round_gingham.webp",
+      "sha256": "1994dfe5f138eeed2b9ff278d7e150cb4207ee34461fac1f06467b79bf5c55c6",
+      "bytes": 14186,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "table_round_honey",
+      "file": "build/assets/table_round_honey.webp",
+      "sha256": "1a8f4a7087e89698a80475e7726eb4ab76b20cd67d457a8da675bea193badd84",
+      "bytes": 22730,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "table_round_rainbow",
+      "file": "build/assets/table_round_rainbow.webp",
+      "sha256": "708645e3bc1eeb0dcb63e435c61f50d65171084f0aa4da9c289a86eb50da7eee",
+      "bytes": 15484,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "table_round_sky",
+      "file": "build/assets/table_round_sky.webp",
+      "sha256": "78f9b2c3de217981283759b250fbf2157719d1f80ae0fee5042bad62d07d45fe",
+      "bytes": 24538,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "teapot",
+      "file": "build/assets/teapot.webp",
+      "sha256": "f8e1f83cda2ad5df65fe163bb0d2410904867179596c4e17642db97b48f670a3",
+      "bytes": 18250,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "u_happy0",
+      "file": "build/assets/u_happy0.webp",
+      "sha256": "89060fc576fa58c53ce5caaabc0bc24437959734163468b909c25dcd79b028fe",
+      "bytes": 24710,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "u_happy1",
+      "file": "build/assets/u_happy1.webp",
+      "sha256": "22411f7b9e7326cffaae1a8677d2f309ae7acc513a230608abfdefd5afe5fd56",
+      "bytes": 23806,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "u_happy2",
+      "file": "build/assets/u_happy2.webp",
+      "sha256": "dc01aa7f25aedb6538beb165534dc5a8a7aa5e9f05dc925cb905be4e0c90a2ab",
+      "bytes": 23712,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "u_idle0",
+      "file": "build/assets/u_idle0.webp",
+      "sha256": "dc75e909c6f7661102fc00b8c9603f645d940a75629a31c3c78096b841f43ccf",
+      "bytes": 24824,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "u_idle1",
+      "file": "build/assets/u_idle1.webp",
+      "sha256": "0930b914bbb0cabeee1a7e2148a199f29945f6462615f69a3ca4822c680f3e9b",
+      "bytes": 22556,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "u_run0",
+      "file": "build/assets/u_run0.webp",
+      "sha256": "08ece334a927e16a775273f1c617df1004ab790b9d96bd9656737171c0f13892",
+      "bytes": 23808,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "u_run1",
+      "file": "build/assets/u_run1.webp",
+      "sha256": "79466fc46d05660380fb97d0f86d31774c5c334c7f81a83917dadee6005c6cd9",
+      "bytes": 25132,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "u_run2",
+      "file": "build/assets/u_run2.webp",
+      "sha256": "012da330a8d322bdbc1d04d4b7ec3fa7114a282ea4817c90d3ac5e822e375b59",
+      "bytes": 25578,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "u_run3",
+      "file": "build/assets/u_run3.webp",
+      "sha256": "5a13321a2cf2c2cc5de128d0bf58a02fbc27f310c3773bfc71b5da8ac7441ba4",
+      "bytes": 26094,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "u_run4",
+      "file": "build/assets/u_run4.webp",
+      "sha256": "7a2f55f51f8ccbfc4c6aaaf1ef9777ef88e32e7710414895ecdb130c8b0f5370",
+      "bytes": 24920,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "u_run5",
+      "file": "build/assets/u_run5.webp",
+      "sha256": "7ec3493b8565541244f9315504983accf82cd995cecc3244bb73763adb67e36c",
+      "bytes": 26966,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "veg_corn",
+      "file": "build/assets/veg_corn.webp",
+      "sha256": "72ca09664167d0c32eef5da8bce3853f926cff974e9f2b98734f11aca4f08ea3",
+      "bytes": 43302,
+      "origin": {
+        "source": "ChatGPT-B-Chicken-Pancakes-Smoothie.png",
+        "crop": [
+          1225,
+          135,
+          1435,
+          354
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "veg_peas",
+      "file": "build/assets/veg_peas.webp",
+      "sha256": "e37523a6cc63f4f3bc200f37369023dcffd1a38571f5c3b715581830d279c4d7",
+      "bytes": 38482,
+      "origin": {
+        "source": "ChatGPT-B-Chicken-Pancakes-Smoothie.png",
+        "crop": [
+          1005,
+          135,
+          1209,
+          354
+        ],
+        "route": "regular ChatGPT B"
+      },
+      "baselineByteIdentical": null
+    },
+    {
+      "key": "w_0_0",
+      "file": "build/assets/w_0_0.webp",
+      "sha256": "dec7f9c0fbe2a4f26ce988e455236327229cb84fd9dae09b5ea05f92424d3df4",
+      "bytes": 24740,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "w_0_1",
+      "file": "build/assets/w_0_1.webp",
+      "sha256": "3e534165ee24484a91046e1e74169ee4b083943337680f74ac06c22ff93cb918",
+      "bytes": 24172,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "w_0_2",
+      "file": "build/assets/w_0_2.webp",
+      "sha256": "99106f9f303ebd83c8ee2cfd012199241864803caf45dea6de0d577e606323c1",
+      "bytes": 24650,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    },
+    {
+      "key": "w_5_3",
+      "file": "build/assets/w_5_3.webp",
+      "sha256": "acb1fdd9eb81a57e51c972f21b45446a9effcbd23eacef446ba22941e154490d",
+      "bytes": 24570,
+      "origin": {
+        "source": "v1.4.0 authoritative handoff"
+      },
+      "baselineByteIdentical": true
+    }
+  ]
+}

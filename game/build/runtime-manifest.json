@@ -1,0 +1,418 @@
+{
+  "game": "Sneaky Unicorn: Rainbow Restaurant",
+  "version": "1.3.0-p4",
+  "files": {
+    ".nojekyll": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ASSET-PROVENANCE.json": {
+      "bytes": 31084,
+      "sha256": "1040966675454747eb588ef93ad10d103fbc8898fbfb25bd83eb4beb5636e279"
+    },
+    "LAUNCH-INSTRUCTIONS.md": {
+      "bytes": 674,
+      "sha256": "e94c24c1bbb8150f5561cc91a8f86cb663436b55ae341aa1139e485db3ed8844"
+    },
+    "LAUNCH.md": {
+      "bytes": 674,
+      "sha256": "e94c24c1bbb8150f5561cc91a8f86cb663436b55ae341aa1139e485db3ed8844"
+    },
+    "QA-REPORT.md": {
+      "bytes": 3825,
+      "sha256": "f4eabf9cc2f3c2300020b38b8fd0af40c9974a8be62c58ce9691614678ae946e"
+    },
+    "README.md": {
+      "bytes": 638,
+      "sha256": "95f0a319435f8902fdd3873fd3723d9d32c51a2267460d798ae82f2e19fcae66"
+    },
+    "VERSION.json": {
+      "bytes": 1184,
+      "sha256": "0ac4c2c050c857c06e3c8ff323baa1a1e8a8261e03a9e80d8ca33e33f62c6c83"
+    },
+    "assets/baby_blue_0.webp": {
+      "bytes": 68588,
+      "sha256": "853c70458875a585e60827d45cdd123ced52b3d6b1cef5767477dfc16a3c182c"
+    },
+    "assets/baby_blue_1.webp": {
+      "bytes": 67986,
+      "sha256": "d5fe0a1ec7c2d449d4408fff670ff36e59b9702d29642fd36a5dfdfb7ef73e79"
+    },
+    "assets/baby_blue_2.webp": {
+      "bytes": 60368,
+      "sha256": "59730e91e6def4bff19d2cce34099af9f155dc788197de83b34f256ed0d6e00a"
+    },
+    "assets/baby_blue_3.webp": {
+      "bytes": 50950,
+      "sha256": "d22be7c3f399eb5dc26e314d81458bb51dfcc158fa934174b3d00061d0092713"
+    },
+    "assets/baby_blue_4.webp": {
+      "bytes": 67414,
+      "sha256": "941822bcdc1049c5579871b5be46ff5b085040b64265e16b0b44e874f85e1a01"
+    },
+    "assets/baby_blue_5.webp": {
+      "bytes": 61490,
+      "sha256": "18719a31306de8cfe7f656a92afd2a357903a98075ed673eb2bb6d9213a9f0ca"
+    },
+    "assets/baby_pink_0.webp": {
+      "bytes": 65222,
+      "sha256": "158f8d47227ce3b99f46a428f31d4150244536bc12cb326f5cc2d0ddc81404c1"
+    },
+    "assets/baby_pink_1.webp": {
+      "bytes": 63204,
+      "sha256": "20c453b5e31d52b5317e2d3ec80901f11d5a1b185b55afc804f8ca2bc5772c72"
+    },
+    "assets/baby_pink_2.webp": {
+      "bytes": 54696,
+      "sha256": "fee94071a7bb02a38c8484000437489d27b18fd899c6839f81a5a2d99d7e1e4f"
+    },
+    "assets/baby_pink_3.webp": {
+      "bytes": 49324,
+      "sha256": "e0e927e790df850a5ad79a3ef312247fde64fd13300e6cc454626de1190ae4b4"
+    },
+    "assets/baby_pink_4.webp": {
+      "bytes": 62752,
+      "sha256": "963b7676f170e3d01e9ff9e583709783f1154aa2a7b85d6fd3288513b6a16e3f"
+    },
+    "assets/baby_pink_5.webp": {
+      "bytes": 62396,
+      "sha256": "338accc18c2c4dbd9db1fca8956568cc831db9d23d4b273d36a2aaedb534d0ad"
+    },
+    "assets/bread.webp": {
+      "bytes": 33580,
+      "sha256": "17883325316122a91cf9c239491600249082207a21733e21dfcead8c754752ba"
+    },
+    "assets/burger.webp": {
+      "bytes": 20830,
+      "sha256": "89b2e5d0a7de61c49d3c4d1e783e84bfb6d4dcd15391be4199e8a85b7d8b2189"
+    },
+    "assets/carrots.webp": {
+      "bytes": 46696,
+      "sha256": "39329e0bc3c73182fbeef8f265d3a09863efce334555699cd632a6cd76625d42"
+    },
+    "assets/chair_mint.webp": {
+      "bytes": 40550,
+      "sha256": "66761152448c983715bf39c1c46f6b49ec056cd9fbcb2386f7342ace3893f863"
+    },
+    "assets/chair_plum.webp": {
+      "bytes": 39420,
+      "sha256": "3f13c609026fa0758f6b62a06312f6a80719c1dd2d6a96fe2e91f257a1d98d87"
+    },
+    "assets/chair_rainbow.webp": {
+      "bytes": 42478,
+      "sha256": "a38d1b5588bb13eb7fd085059106133a40c7ac5c28cdb4b8d2c8a77824e1ab68"
+    },
+    "assets/cheese.webp": {
+      "bytes": 30862,
+      "sha256": "a304aaa15fda5748580e11c18cfe43015935bd66bfbf3cc74961068479a33efa"
+    },
+    "assets/cherries.webp": {
+      "bytes": 32442,
+      "sha256": "165c3f2d5d3af879848f8b72ba0656e73ad7bf7579d3f09d10247a8f08d143a3"
+    },
+    "assets/cookie.webp": {
+      "bytes": 42542,
+      "sha256": "e863850a310090752d05c50a2c043420f770c4975d2296137cb8bceb0b998843"
+    },
+    "assets/cupcake.webp": {
+      "bytes": 45538,
+      "sha256": "b7f2cad10146849c29cf877f7515415506f725c7d36d9783526fcfa8e8dae0cd"
+    },
+    "assets/dog_happy.webp": {
+      "bytes": 38108,
+      "sha256": "f8e687e69cf31b32c390d5ab5c2cf663f311c2c9c20614cd8f8d914f1ba8e11b"
+    },
+    "assets/dog_idle.webp": {
+      "bytes": 40124,
+      "sha256": "c84c5a09d460503802453e2802f7d42f96badc69499fbb36c327b1f2fb665107"
+    },
+    "assets/donut.webp": {
+      "bytes": 47614,
+      "sha256": "1c3158af38fabd76582b55e7ebc8cdcd2522ad92f3ef0f3e6abcf6ff57865760"
+    },
+    "assets/flowers.webp": {
+      "bytes": 21238,
+      "sha256": "5f1a8a83c494c86eb8cffc497bc09b5666be8904af71e2ee0ec5271f90413d33"
+    },
+    "assets/h_happy.webp": {
+      "bytes": 23936,
+      "sha256": "2b0256b895e6578cfc365c5978310ab25b765895de5ff9a7f9e3d75e5c63178f"
+    },
+    "assets/h_idle0.webp": {
+      "bytes": 24182,
+      "sha256": "d91a34cb76a91a63ab419e331ee88db804d513d34e4fbef3704bee1f1786a1f5"
+    },
+    "assets/h_idle1.webp": {
+      "bytes": 24546,
+      "sha256": "262826828e9180352c3c8cb7b9be92d159c1de65e25b836055cf277cf4d6a8f2"
+    },
+    "assets/h_run0.webp": {
+      "bytes": 27812,
+      "sha256": "9d3da54294bab1bcd79cbda93b862a4298a35b025e050d7b6683f402161345e2"
+    },
+    "assets/h_run1.webp": {
+      "bytes": 27716,
+      "sha256": "65ab87a9fbb403e990088e7cde5eaa8f957bcbc365c730f192484455a98eae08"
+    },
+    "assets/h_run2.webp": {
+      "bytes": 27836,
+      "sha256": "51c69d617f31cb26e364f8ee50d1c427554c095815ffde059808b97ec201f791"
+    },
+    "assets/h_run3.webp": {
+      "bytes": 28330,
+      "sha256": "606088a31ef88981840efe59c5bf10befad5e214683b6d485ceba051bed17d96"
+    },
+    "assets/hero.webp": {
+      "bytes": 34068,
+      "sha256": "e29437cd6f25fe4de3c95fd236ed892ef4969cb14ebe42ca6023ec7b1410c13b"
+    },
+    "assets/icecream.webp": {
+      "bytes": 29842,
+      "sha256": "8fc4592ae489459f5574fdf7ef2318ee970c6c51b46433c70115aa432253404d"
+    },
+    "assets/m_0_0.webp": {
+      "bytes": 23188,
+      "sha256": "705c62fe7b8b4d59aea8bceb7b98ab3615fe94e91a10172b206bf6d6f01930c7"
+    },
+    "assets/m_0_1.webp": {
+      "bytes": 23252,
+      "sha256": "ff67600867ef914aeae70cc1578161789c379664ca867e1f048b1365199aa573"
+    },
+    "assets/m_0_2.webp": {
+      "bytes": 23242,
+      "sha256": "be099e20de31d980e782d0bf58c41ea1c2404eb616de633f0cccd220721ebfdd"
+    },
+    "assets/m_4_5.webp": {
+      "bytes": 24962,
+      "sha256": "b693d30e27fafa7a812485744ef25d8102798033538c66e1a8707347c8eeac27"
+    },
+    "assets/milk.webp": {
+      "bytes": 31026,
+      "sha256": "087adc652deeb3f71b9002b18ba593deed49662e588448d8d235bee475031b0a"
+    },
+    "assets/painted_board.webp": {
+      "bytes": 2256,
+      "sha256": "1336677ad8fb927b4906b4607166feeba174885f98741cf1872297bc9ddc7d8e"
+    },
+    "assets/painted_kitchen.webp": {
+      "bytes": 142200,
+      "sha256": "d32ca997711c9a5e8aebe355ea453a55f946f00a58c9d26e16a0b8523ddd7614"
+    },
+    "assets/painted_sink.webp": {
+      "bytes": 44360,
+      "sha256": "391c767f42540de8b9164ebfe5f496c5302958be3e81fc216d8d1d1d861410f2"
+    },
+    "assets/pizza.webp": {
+      "bytes": 19988,
+      "sha256": "77fbb243165f88c49e5f0db75587bf6e9b7598159debae5eca3c0b665f2c6983"
+    },
+    "assets/room_door.webp": {
+      "bytes": 65544,
+      "sha256": "82bacadd0a53c1cd7517dfc43cfb92f06d7f74f8125f49d76d35d8d535939452"
+    },
+    "assets/room_floor_lavender.webp": {
+      "bytes": 43528,
+      "sha256": "7d0427774edcc46b5c6c62fa18284bc564ef4cef29416a25c0477b96b16ea64f"
+    },
+    "assets/room_floor_mint.webp": {
+      "bytes": 42934,
+      "sha256": "475149f4948258cf42a2626446d38c7113fce7e68a4dc16fc7e863dde5348e64"
+    },
+    "assets/room_floor_peach.webp": {
+      "bytes": 61120,
+      "sha256": "4e17b596f26063d7ad67458fb04ece20ee0f7232f8dd223e25a1203fa430dcb7"
+    },
+    "assets/room_lamp.webp": {
+      "bytes": 23230,
+      "sha256": "9c7da689b263a68402b4d7eca6db29f6d8ee9c83789bed85d35a669dcd9a954f"
+    },
+    "assets/room_plant.webp": {
+      "bytes": 43232,
+      "sha256": "5f53652e7d8caf4977d653b0d5c62e43325934e5a03d1478b61add797ca2f14d"
+    },
+    "assets/room_sofa.webp": {
+      "bytes": 49354,
+      "sha256": "d44c13528331d3e2e82f2f3a552eb7b6ecb92dff6aa8890219e512bd77b95049"
+    },
+    "assets/room_wall_garden.webp": {
+      "bytes": 15312,
+      "sha256": "808e1eb9db65eb829ddc72e7e8cdc109f361dbe236170c3fbc040ceeaa15e0cc"
+    },
+    "assets/room_wall_rainbow.webp": {
+      "bytes": 10904,
+      "sha256": "082f30d5fdfeb9171a467569c1451234358b30c50c5e686e5678925c21118b4f"
+    },
+    "assets/room_wall_twilight.webp": {
+      "bytes": 9814,
+      "sha256": "e56cf454c40e1ada0e4f3e8481bafb7bf9c67c475555a3100fd82cadd454caad"
+    },
+    "assets/room_window.webp": {
+      "bytes": 32926,
+      "sha256": "3530bf49cd411c1d1e28f7ef9bd0f19826ecaa8784cb16e38dc35a92e0a73482"
+    },
+    "assets/star.webp": {
+      "bytes": 10636,
+      "sha256": "a3e9a4bf846f4876f2a506555edacd7eed585d23b260f2649da74f2eba85a044"
+    },
+    "assets/strawberry.webp": {
+      "bytes": 33936,
+      "sha256": "877956bc5fe54a14fdbced6b796fff3ca00acd92a746787eb1487be5da159ac9"
+    },
+    "assets/table_clover_berry.webp": {
+      "bytes": 34246,
+      "sha256": "989e2c96918352c796ce73e3189ec3d712d3d7a205a194239077ee6ab02b021a"
+    },
+    "assets/table_clover_cream.webp": {
+      "bytes": 18462,
+      "sha256": "e57af312e537b14278df841344f4390f44456118b58d54b7e806bf64e5bd971d"
+    },
+    "assets/table_clover_honey.webp": {
+      "bytes": 26230,
+      "sha256": "8bd1bb4c4d529849f8ef33d30502f61bb1066534e6be09f09edbb58fe4d4ce1c"
+    },
+    "assets/table_clover_sky.webp": {
+      "bytes": 27358,
+      "sha256": "6d016531789603f29648656fb8406b6241c40d27e55a7e0ece1ae2750fa4d225"
+    },
+    "assets/table_oval_berry.webp": {
+      "bytes": 38974,
+      "sha256": "c20bbe4bbc41c262213c215ddfc091b0cccd2abcfc075a3e003d749683403ae5"
+    },
+    "assets/table_oval_cream.webp": {
+      "bytes": 20512,
+      "sha256": "c9570701114b080c0ea1fef0b7e4510f66134d974a4b511a5a4f387bf1bfe154"
+    },
+    "assets/table_oval_honey.webp": {
+      "bytes": 28846,
+      "sha256": "ed335ca023d08dcb34e2de0403bef69a4a078352c3b39689c847efd98f115444"
+    },
+    "assets/table_oval_sky.webp": {
+      "bytes": 30318,
+      "sha256": "763e198b1529b8dc0982cb3c024e281324bf99885ea11638c427cbe3c71335aa"
+    },
+    "assets/table_round_berry.webp": {
+      "bytes": 34202,
+      "sha256": "370569c24c82b14b315c9e6014bbdbf3020f4cd3d2702457f76ee8000f1def06"
+    },
+    "assets/table_round_cream.webp": {
+      "bytes": 15534,
+      "sha256": "25c72a579f5579c136217ec63399d81348dc69dc866e24754f90255ded79ca21"
+    },
+    "assets/table_round_honey.webp": {
+      "bytes": 22730,
+      "sha256": "1a8f4a7087e89698a80475e7726eb4ab76b20cd67d457a8da675bea193badd84"
+    },
+    "assets/table_round_sky.webp": {
+      "bytes": 24538,
+      "sha256": "78f9b2c3de217981283759b250fbf2157719d1f80ae0fee5042bad62d07d45fe"
+    },
+    "assets/teapot.webp": {
+      "bytes": 18250,
+      "sha256": "f8e1f83cda2ad5df65fe163bb0d2410904867179596c4e17642db97b48f670a3"
+    },
+    "assets/u_happy0.webp": {
+      "bytes": 24710,
+      "sha256": "89060fc576fa58c53ce5caaabc0bc24437959734163468b909c25dcd79b028fe"
+    },
+    "assets/u_happy1.webp": {
+      "bytes": 23806,
+      "sha256": "22411f7b9e7326cffaae1a8677d2f309ae7acc513a230608abfdefd5afe5fd56"
+    },
+    "assets/u_happy2.webp": {
+      "bytes": 23712,
+      "sha256": "dc01aa7f25aedb6538beb165534dc5a8a7aa5e9f05dc925cb905be4e0c90a2ab"
+    },
+    "assets/u_idle0.webp": {
+      "bytes": 24824,
+      "sha256": "dc75e909c6f7661102fc00b8c9603f645d940a75629a31c3c78096b841f43ccf"
+    },
+    "assets/u_idle1.webp": {
+      "bytes": 22556,
+      "sha256": "0930b914bbb0cabeee1a7e2148a199f29945f6462615f69a3ca4822c680f3e9b"
+    },
+    "assets/u_run0.webp": {
+      "bytes": 23808,
+      "sha256": "08ece334a927e16a775273f1c617df1004ab790b9d96bd9656737171c0f13892"
+    },
+    "assets/u_run1.webp": {
+      "bytes": 25132,
+      "sha256": "79466fc46d05660380fb97d0f86d31774c5c334c7f81a83917dadee6005c6cd9"
+    },
+    "assets/u_run2.webp": {
+      "bytes": 25578,
+      "sha256": "012da330a8d322bdbc1d04d4b7ec3fa7114a282ea4817c90d3ac5e822e375b59"
+    },
+    "assets/u_run3.webp": {
+      "bytes": 26094,
+      "sha256": "5a13321a2cf2c2cc5de128d0bf58a02fbc27f310c3773bfc71b5da8ac7441ba4"
+    },
+    "assets/u_run4.webp": {
+      "bytes": 24920,
+      "sha256": "7a2f55f51f8ccbfc4c6aaaf1ef9777ef88e32e7710414895ecdb130c8b0f5370"
+    },
+    "assets/u_run5.webp": {
+      "bytes": 26966,
+      "sha256": "7ec3493b8565541244f9315504983accf82cd995cecc3244bb73763adb67e36c"
+    },
+    "assets/w_0_0.webp": {
+      "bytes": 24740,
+      "sha256": "dec7f9c0fbe2a4f26ce988e455236327229cb84fd9dae09b5ea05f92424d3df4"
+    },
+    "assets/w_0_1.webp": {
+      "bytes": 24172,
+      "sha256": "3e534165ee24484a91046e1e74169ee4b083943337680f74ac06c22ff93cb918"
+    },
+    "assets/w_0_2.webp": {
+      "bytes": 24650,
+      "sha256": "99106f9f303ebd83c8ee2cfd012199241864803caf45dea6de0d577e606323c1"
+    },
+    "assets/w_5_3.webp": {
+      "bytes": 24570,
+      "sha256": "acb1fdd9eb81a57e51c972f21b45446a9effcbd23eacef446ba22941e154490d"
+    },
+    "icons/apple-touch-icon.png": {
+      "bytes": 37535,
+      "sha256": "b305f0e15ac08b1073eb92bbe3c2da933922ac08ba17bc066af23c75640b7be5"
+    },
+    "icons/icon-192.png": {
+      "bytes": 42040,
+      "sha256": "87a68ec6795368a3328089d134fe706f477502b7afedc8e8d0a76a7ebc6e5097"
+    },
+    "icons/icon-512.png": {
+      "bytes": 206397,
+      "sha256": "ca7bb1e42ac1111bb6af551a090664a5eb6ab7e17ddbc3d8dfd86bb84d15a661"
+    },
+    "index.html": {
+      "bytes": 2358,
+      "sha256": "ffda1c95ea62078c3ee220c522100aa60167a6dfb8b4d2f0b97200aa140cd4de"
+    },
+    "manifest.webmanifest": {
+      "bytes": 667,
+      "sha256": "debe350003c35e18e58d22c1a7d43d6d8e550a26fb6dc05d70752e301a8b1a6f"
+    },
+    "src/art.js": {
+      "bytes": 31027,
+      "sha256": "5757e9c40f2f59870d538d3ed54f3912efb5ecd93f7f1a26ca0bcf6ae209381d"
+    },
+    "src/assets.js": {
+      "bytes": 3646,
+      "sha256": "11013b4a8a20bb17355c32c7cd0684b49857d074377f4464362a9d751d6ce006"
+    },
+    "src/engine.js": {
+      "bytes": 20404,
+      "sha256": "20f0725f8e760f2de0365d9a360abdeec36d49cc720c3deb9d145c1c3466afb9"
+    },
+    "src/game.js": {
+      "bytes": 55791,
+      "sha256": "0f826ac0429f7acb46b3679ed248d1f8bd41b5a5e5d244bf9053644a3f79f546"
+    },
+    "styles.css": {
+      "bytes": 31079,
+      "sha256": "0bdbc6ff00008fa958887989fddcc07c63941ea817e386131fc2d75954dd0b4e"
+    },
+    "sw.js": {
+      "bytes": 3921,
+      "sha256": "4ae163e514f2738d0c8e96210996408aadfa3ce98f9230313394bd3d7590644e"
+    }
+  }
+}

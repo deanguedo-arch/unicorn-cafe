@@ -1,0 +1,56 @@
+{
+  "method": "Actual Chromium + emulated touch and DOM pointer-event tests. Actual isolated browser localStorage; legacy bytes verified. Pointer-ID case uses synthetic DOM events. Safe-area insets simulated with CSS.",
+  "passed": 8,
+  "total": 8,
+  "results": [
+    {
+      "name": "Invalid current slot falls back to older partial save; legacy bytes untouched",
+      "pass": true,
+      "detail": {
+        "oldKeyUnmodified": true,
+        "newKeySchema": 3
+      }
+    },
+    {
+      "name": "Corrupted storage still starts a playable restaurant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Emulated touch: choose lunch, all bites and sips",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Emulated touch swipe mops a floor without accidental screen transition",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Pointer-ID regression: another finger cannot stop movement; cancellation can",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Eight CSS safe-area scenes retain accessible action placement",
+      "pass": true,
+      "detail": {
+        "simulatedSafeAreaScenes": 8,
+        "notchDeviceVerification": false
+      }
+    },
+    {
+      "name": "End-of-day play button directly starts next day, no completion loop",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "No page errors",
+      "pass": true,
+      "detail": {
+        "errors": 0
+      }
+    }
+  ],
+  "errors": []
+}

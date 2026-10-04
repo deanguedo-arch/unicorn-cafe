@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "method": "Actual standalone browser; all10 guests through actual recipe, carry, wash, lunch and cleanup buttons. Deterministic QA spawn and timer acceleration; player positions set to station for dwell. Not unassisted child-play or physical-device testing.",
+  "dishes": [
+    "pizza",
+    "icecream",
+    "burger",
+    "cupcake",
+    "soup",
+    "coffee",
+    "chicken",
+    "pancakes",
+    "smoothie",
+    "pizza"
+  ],
+  "surfaces": 9,
+  "floorZones": 6,
+  "pageErrors": []
+}

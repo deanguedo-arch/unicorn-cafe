@@ -1,0 +1,125 @@
+{
+  "source": "ChatGPT-B-Coffee-Cupcake-Burger-Soup.png",
+  "boxes": {
+    "coffee_beans": [
+      12,
+      48,
+      293,
+      338
+    ],
+    "coffee_empty": [
+      300,
+      48,
+      580,
+      338
+    ],
+    "coffee_black": [
+      585,
+      48,
+      845,
+      338
+    ],
+    "coffee_milk": [
+      845,
+      48,
+      1128,
+      338
+    ],
+    "coffee_cocoa": [
+      1129,
+      48,
+      1415,
+      338
+    ],
+    "cupcake_flour": [
+      12,
+      335,
+      293,
+      591
+    ],
+    "cupcake_batter": [
+      300,
+      335,
+      580,
+      591
+    ],
+    "cupcake_plain": [
+      585,
+      335,
+      845,
+      591
+    ],
+    "cupcake_strawberry": [
+      845,
+      335,
+      1128,
+      591
+    ],
+    "cupcake_cocoa": [
+      1129,
+      335,
+      1415,
+      591
+    ],
+    "burger_bottom": [
+      10,
+      619,
+      285,
+      823
+    ],
+    "burger_patty": [
+      295,
+      619,
+      557,
+      823
+    ],
+    "burger_cheese": [
+      563,
+      619,
+      842,
+      823
+    ],
+    "burger_lettuce": [
+      847,
+      619,
+      1125,
+      823
+    ],
+    "burger_top": [
+      1128,
+      619,
+      1395,
+      823
+    ],
+    "soup_empty": [
+      12,
+      845,
+      290,
+      1080
+    ],
+    "soup_broth": [
+      290,
+      845,
+      570,
+      1080
+    ],
+    "soup_carrot": [
+      570,
+      845,
+      850,
+      1080
+    ],
+    "soup_peas": [
+      850,
+      845,
+      1130,
+      1080
+    ],
+    "soup_chunk": [
+      1145,
+      845,
+      1390,
+      1080
+    ]
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "kind": "static, image and HTTP byte checks, not physical-device testing",
+  "passed": 7,
+  "total": 7,
+  "results": [
+    {
+      "name": "JavaScript syntax",
+      "pass": true,
+      "detail": {
+        "scripts": 6
+      }
+    },
+    {
+      "name": "Root-entry embedded Pages/PWA layout and app icon dimensions",
+      "pass": true,
+      "detail": {
+        "files": 11,
+        "runtimeAssetsEmbedded": true
+      }
+    },
+    {
+      "name": "Standalone and hosted game differ only by PWA switch/head links",
+      "pass": true,
+      "detail": {
+        "gameplayCodeIdentical": true
+      }
+    },
+    {
+      "name": "All production art valid; all30 table/cloth frames have real alpha",
+      "pass": true,
+      "detail": {
+        "tableClothFrames": 30,
+        "decodedImageFiles": 161
+      }
+    },
+    {
+      "name": "Inherited production assets and character pixels unchanged",
+      "pass": true,
+      "detail": {
+        "inheritedAssetsByteIdentical": 83,
+        "characterFilesByteIdentical": 40
+      }
+    },
+    {
+      "name": "No external runtime requests or data-collection APIs",
+      "pass": true,
+      "detail": {
+        "remoteRuntimeLinks": 0,
+        "remoteDataAPIs": 0
+      }
+    },
+    {
+      "name": "HTTP bytes match for every hosted file in a subdirectory",
+      "pass": true,
+      "detail": {
+        "PythonHTTPByteChecks": 11,
+        "browserNavigation": false,
+        "testedSubdirectory": "/pages/"
+      }
+    }
+  ]
+}
