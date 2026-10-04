@@ -27,3 +27,11 @@ Final archive checks and extracted production-file smoke evidence are recorded i
 ## Limits
 
 No physical iPhone, Safari Home Screen installation, or five-year-old usability session was performed. Phone checks use desktop Chromium viewports/emulated touch; safe-area values are simulated. Browser fixtures are stated above. No push, deployment or public publishing occurred. Saves remain local to the same browser/site origin; opening a new file or different hosted origin does not transfer them.
+
+## 2026-10-04 landscape phone visual correction
+
+Inspected the built game across 568x320, 667x375, 740x300, 844x390 and 932x430 viewports, plus 740x300 with 44-pixel side insets and a 20-pixel bottom inset. The regression audit passed 540 screen states with zero clipping, small/covered controls, image-containment failures, or browser errors. Every cooking step, alternate flavour and cupcake decoration was included. Screenshots were visually reviewed for the designer, world HUD, recipe menu, food preparation, washing, lunch, cleaning, comparison dialogs, settings, collection and completion.
+
+Fixed offscreen cupcake decoration choices, food/control overlap, oversized sprinkle indicators and wash-ticket symbols, clipped order tickets, recipe tiles exceeding short viewport height, and hidden completion/collection actions. Cooking controls now have a dedicated row, and food tiles scale against both available width and dynamic viewport height. Completion artwork and recipe pictures share a compact row.
+
+A separate actual UI playthrough cooked and carried all 18 recipe/variant combinations at 568x320 (214 preparation clicks), including all three cupcake decoration choices. Engine and offline package checks passed. Evidence is in `tests/mobile-visual/`; reproducible checks are `tests/mobile_visual_check.cjs` and `tests/mobile_recipe_play.cjs`. This is Chromium viewport simulation, not physical iPhone/Safari certification.

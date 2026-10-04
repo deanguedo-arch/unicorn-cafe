@@ -1,0 +1,3286 @@
+{
+  "method": "Isolated Chromium, actual built standalone; fixtures for every cooking step and other screens, five landscape sizes; DOM bounds, image containment and control hit-tests. No physical-device certification.",
+  "configurations": [
+    [
+      568,
+      320
+    ],
+    [
+      667,
+      375
+    ],
+    [
+      740,
+      300
+    ],
+    [
+      844,
+      390
+    ],
+    [
+      932,
+      430
+    ],
+    [
+      740,
+      300,
+      44,
+      20
+    ]
+  ],
+  "states": 540,
+  "failed": 0,
+  "errors": [],
+  "results": [
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "designer-0",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "designer-1",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "designer-2",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "designer-3",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "designer-4",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "designer-5",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "world",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "menu",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "wash",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "mismatch",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "complete",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "lunch-choose-0-0",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "lunch-pizza-0-0",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "lunch-pizza-3-0",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "lunch-pizza-3-2",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "clean-table-0",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "clean-kitchen",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "clean-sink",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "clean-window-left",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "clean-floor-0",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-pizza-0-rub",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-pizza-1-rub",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-pizza-2-tap",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-pizza-3-choice",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-pizza-4-place",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-pizza-5-hold",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-pizza-6-ready",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-pizza-ready-mushroom",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-coffee-0-rub",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-coffee-1-hold",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-coffee-2-choice",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-coffee-3-stir",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-coffee-4-ready",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-coffee-ready-cocoa",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-cupcake-0-tap",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-cupcake-1-tap",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-cupcake-2-stir",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-cupcake-3-hold",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-cupcake-4-choice",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-cupcake-5-decorate",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-cupcake-6-ready",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-cupcake-ready-cocoa",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-cupcake-ready-stars",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-cupcake-ready-hearts",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-icecream-0-tap",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-icecream-1-choice",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-icecream-2-rub",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-icecream-3-tap",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-icecream-4-ready",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-icecream-ready-vanilla",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-burger-0-tap",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-burger-1-hold",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-burger-2-choice",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-burger-3-tap",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-burger-4-tap",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-burger-5-ready",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-burger-ready-tomato",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-soup-0-hold",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-soup-1-choice",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-soup-2-tap",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-soup-3-stir",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-soup-4-hold",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-soup-5-ready",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-soup-ready-peas",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-chicken-0-tap",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-chicken-1-tap",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-chicken-2-rub",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-chicken-3-choice",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-chicken-4-hold",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-chicken-5-ready",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-chicken-ready-corn",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-pancakes-0-stir",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-pancakes-1-tap",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-pancakes-2-tap",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-pancakes-3-choice",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-pancakes-4-tap",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-pancakes-5-ready",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-pancakes-ready-banana",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-smoothie-0-choice",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-smoothie-1-tap",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-smoothie-2-hold",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-smoothie-3-hold",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-smoothie-4-hold",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-smoothie-5-ready",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "cook-smoothie-ready-mango",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "settings",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "collection",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "reset-confirmation",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "restart-confirmation",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "pause-cooking",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "designer-0",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "designer-1",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "designer-2",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "designer-3",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "designer-4",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "designer-5",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "world",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "menu",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "wash",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "mismatch",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "complete",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "lunch-choose-0-0",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "lunch-pizza-0-0",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "lunch-pizza-3-0",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "lunch-pizza-3-2",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "clean-table-0",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "clean-kitchen",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "clean-sink",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "clean-window-left",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "clean-floor-0",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-pizza-0-rub",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-pizza-1-rub",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-pizza-2-tap",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-pizza-3-choice",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-pizza-4-place",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-pizza-5-hold",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-pizza-6-ready",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-pizza-ready-mushroom",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-coffee-0-rub",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-coffee-1-hold",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-coffee-2-choice",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-coffee-3-stir",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-coffee-4-ready",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-coffee-ready-cocoa",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-cupcake-0-tap",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-cupcake-1-tap",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-cupcake-2-stir",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-cupcake-3-hold",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-cupcake-4-choice",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-cupcake-5-decorate",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-cupcake-6-ready",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-cupcake-ready-cocoa",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-cupcake-ready-stars",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-cupcake-ready-hearts",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-icecream-0-tap",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-icecream-1-choice",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-icecream-2-rub",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-icecream-3-tap",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-icecream-4-ready",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-icecream-ready-vanilla",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-burger-0-tap",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-burger-1-hold",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-burger-2-choice",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-burger-3-tap",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-burger-4-tap",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-burger-5-ready",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-burger-ready-tomato",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-soup-0-hold",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-soup-1-choice",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-soup-2-tap",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-soup-3-stir",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-soup-4-hold",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-soup-5-ready",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-soup-ready-peas",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-chicken-0-tap",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-chicken-1-tap",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-chicken-2-rub",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-chicken-3-choice",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-chicken-4-hold",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-chicken-5-ready",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-chicken-ready-corn",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-pancakes-0-stir",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-pancakes-1-tap",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-pancakes-2-tap",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-pancakes-3-choice",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-pancakes-4-tap",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-pancakes-5-ready",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-pancakes-ready-banana",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-smoothie-0-choice",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-smoothie-1-tap",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-smoothie-2-hold",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-smoothie-3-hold",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-smoothie-4-hold",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-smoothie-5-ready",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "cook-smoothie-ready-mango",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "settings",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "collection",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "reset-confirmation",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "restart-confirmation",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "pause-cooking",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "designer-0",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "designer-1",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "designer-2",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "designer-3",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "designer-4",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "designer-5",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "world",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "menu",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "wash",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "mismatch",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "complete",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "lunch-choose-0-0",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "lunch-pizza-0-0",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "lunch-pizza-3-0",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "lunch-pizza-3-2",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "clean-table-0",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "clean-kitchen",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "clean-sink",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "clean-window-left",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "clean-floor-0",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-pizza-0-rub",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-pizza-1-rub",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-pizza-2-tap",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-pizza-3-choice",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-pizza-4-place",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-pizza-5-hold",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-pizza-6-ready",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-pizza-ready-mushroom",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-coffee-0-rub",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-coffee-1-hold",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-coffee-2-choice",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-coffee-3-stir",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-coffee-4-ready",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-coffee-ready-cocoa",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-cupcake-0-tap",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-cupcake-1-tap",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-cupcake-2-stir",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-cupcake-3-hold",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-cupcake-4-choice",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-cupcake-5-decorate",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-cupcake-6-ready",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-cupcake-ready-cocoa",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-cupcake-ready-stars",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-cupcake-ready-hearts",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-icecream-0-tap",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-icecream-1-choice",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-icecream-2-rub",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-icecream-3-tap",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-icecream-4-ready",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-icecream-ready-vanilla",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-burger-0-tap",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-burger-1-hold",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-burger-2-choice",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-burger-3-tap",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-burger-4-tap",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-burger-5-ready",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-burger-ready-tomato",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-soup-0-hold",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-soup-1-choice",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-soup-2-tap",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-soup-3-stir",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-soup-4-hold",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-soup-5-ready",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-soup-ready-peas",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-chicken-0-tap",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-chicken-1-tap",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-chicken-2-rub",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-chicken-3-choice",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-chicken-4-hold",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-chicken-5-ready",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-chicken-ready-corn",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-pancakes-0-stir",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-pancakes-1-tap",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-pancakes-2-tap",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-pancakes-3-choice",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-pancakes-4-tap",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-pancakes-5-ready",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-pancakes-ready-banana",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-smoothie-0-choice",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-smoothie-1-tap",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-smoothie-2-hold",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-smoothie-3-hold",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-smoothie-4-hold",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-smoothie-5-ready",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-smoothie-ready-mango",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "settings",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "collection",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "reset-confirmation",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "restart-confirmation",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "pause-cooking",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "designer-0",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "designer-1",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "designer-2",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "designer-3",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "designer-4",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "designer-5",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "world",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "menu",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "wash",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "mismatch",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "complete",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "lunch-choose-0-0",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "lunch-pizza-0-0",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "lunch-pizza-3-0",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "lunch-pizza-3-2",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "clean-table-0",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "clean-kitchen",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "clean-sink",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "clean-window-left",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "clean-floor-0",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-pizza-0-rub",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-pizza-1-rub",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-pizza-2-tap",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-pizza-3-choice",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-pizza-4-place",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-pizza-5-hold",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-pizza-6-ready",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-pizza-ready-mushroom",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-coffee-0-rub",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-coffee-1-hold",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-coffee-2-choice",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-coffee-3-stir",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-coffee-4-ready",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-coffee-ready-cocoa",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-cupcake-0-tap",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-cupcake-1-tap",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-cupcake-2-stir",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-cupcake-3-hold",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-cupcake-4-choice",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-cupcake-5-decorate",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-cupcake-6-ready",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-cupcake-ready-cocoa",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-cupcake-ready-stars",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-cupcake-ready-hearts",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-icecream-0-tap",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-icecream-1-choice",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-icecream-2-rub",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-icecream-3-tap",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-icecream-4-ready",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-icecream-ready-vanilla",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-burger-0-tap",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-burger-1-hold",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-burger-2-choice",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-burger-3-tap",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-burger-4-tap",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-burger-5-ready",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-burger-ready-tomato",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-soup-0-hold",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-soup-1-choice",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-soup-2-tap",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-soup-3-stir",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-soup-4-hold",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-soup-5-ready",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-soup-ready-peas",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-chicken-0-tap",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-chicken-1-tap",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-chicken-2-rub",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-chicken-3-choice",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-chicken-4-hold",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-chicken-5-ready",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-chicken-ready-corn",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-pancakes-0-stir",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-pancakes-1-tap",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-pancakes-2-tap",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-pancakes-3-choice",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-pancakes-4-tap",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-pancakes-5-ready",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-pancakes-ready-banana",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-smoothie-0-choice",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-smoothie-1-tap",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-smoothie-2-hold",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-smoothie-3-hold",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-smoothie-4-hold",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-smoothie-5-ready",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "cook-smoothie-ready-mango",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "settings",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "collection",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "reset-confirmation",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "restart-confirmation",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "pause-cooking",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "designer-0",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "designer-1",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "designer-2",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "designer-3",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "designer-4",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "designer-5",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "world",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "menu",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "wash",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "mismatch",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "complete",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "lunch-choose-0-0",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "lunch-pizza-0-0",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "lunch-pizza-3-0",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "lunch-pizza-3-2",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "clean-table-0",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "clean-kitchen",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "clean-sink",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "clean-window-left",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "clean-floor-0",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-pizza-0-rub",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-pizza-1-rub",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-pizza-2-tap",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-pizza-3-choice",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-pizza-4-place",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-pizza-5-hold",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-pizza-6-ready",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-pizza-ready-mushroom",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-coffee-0-rub",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-coffee-1-hold",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-coffee-2-choice",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-coffee-3-stir",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-coffee-4-ready",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-coffee-ready-cocoa",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-cupcake-0-tap",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-cupcake-1-tap",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-cupcake-2-stir",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-cupcake-3-hold",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-cupcake-4-choice",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-cupcake-5-decorate",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-cupcake-6-ready",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-cupcake-ready-cocoa",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-cupcake-ready-stars",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-cupcake-ready-hearts",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-icecream-0-tap",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-icecream-1-choice",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-icecream-2-rub",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-icecream-3-tap",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-icecream-4-ready",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-icecream-ready-vanilla",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-burger-0-tap",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-burger-1-hold",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-burger-2-choice",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-burger-3-tap",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-burger-4-tap",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-burger-5-ready",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-burger-ready-tomato",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-soup-0-hold",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-soup-1-choice",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-soup-2-tap",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-soup-3-stir",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-soup-4-hold",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-soup-5-ready",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-soup-ready-peas",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-chicken-0-tap",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-chicken-1-tap",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-chicken-2-rub",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-chicken-3-choice",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-chicken-4-hold",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-chicken-5-ready",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-chicken-ready-corn",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-pancakes-0-stir",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-pancakes-1-tap",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-pancakes-2-tap",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-pancakes-3-choice",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-pancakes-4-tap",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-pancakes-5-ready",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-pancakes-ready-banana",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-smoothie-0-choice",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-smoothie-1-tap",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-smoothie-2-hold",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-smoothie-3-hold",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-smoothie-4-hold",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-smoothie-5-ready",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "cook-smoothie-ready-mango",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "settings",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "collection",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "reset-confirmation",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "restart-confirmation",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "pause-cooking",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "designer-0",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "designer-1",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "designer-2",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "designer-3",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "designer-4",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "designer-5",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "world",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "menu",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "wash",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "mismatch",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "complete",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "lunch-choose-0-0",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "lunch-pizza-0-0",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "lunch-pizza-3-0",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "lunch-pizza-3-2",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "clean-table-0",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "clean-kitchen",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "clean-sink",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "clean-window-left",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "clean-floor-0",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-pizza-0-rub",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-pizza-1-rub",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-pizza-2-tap",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-pizza-3-choice",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-pizza-4-place",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-pizza-5-hold",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-pizza-6-ready",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-pizza-ready-mushroom",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-coffee-0-rub",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-coffee-1-hold",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-coffee-2-choice",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-coffee-3-stir",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-coffee-4-ready",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-coffee-ready-cocoa",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-cupcake-0-tap",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-cupcake-1-tap",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-cupcake-2-stir",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-cupcake-3-hold",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-cupcake-4-choice",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-cupcake-5-decorate",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-cupcake-6-ready",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-cupcake-ready-cocoa",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-cupcake-ready-stars",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-cupcake-ready-hearts",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-icecream-0-tap",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-icecream-1-choice",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-icecream-2-rub",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-icecream-3-tap",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-icecream-4-ready",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-icecream-ready-vanilla",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-burger-0-tap",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-burger-1-hold",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-burger-2-choice",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-burger-3-tap",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-burger-4-tap",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-burger-5-ready",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-burger-ready-tomato",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-soup-0-hold",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-soup-1-choice",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-soup-2-tap",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-soup-3-stir",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-soup-4-hold",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-soup-5-ready",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-soup-ready-peas",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-chicken-0-tap",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-chicken-1-tap",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-chicken-2-rub",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-chicken-3-choice",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-chicken-4-hold",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-chicken-5-ready",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-chicken-ready-corn",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-pancakes-0-stir",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-pancakes-1-tap",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-pancakes-2-tap",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-pancakes-3-choice",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-pancakes-4-tap",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-pancakes-5-ready",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-pancakes-ready-banana",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-smoothie-0-choice",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-smoothie-1-tap",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-smoothie-2-hold",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-smoothie-3-hold",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-smoothie-4-hold",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-smoothie-5-ready",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "cook-smoothie-ready-mango",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "settings",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "collection",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "reset-confirmation",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "restart-confirmation",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "pause-cooking",
+      "issues": []
+    }
+  ],
+  "uiPlaythrough": {
+    "viewport": [
+      568,
+      320
+    ],
+    "recipesAndVariants": 18,
+    "preparationClicks": 214,
+    "cupcakeDecorationChoices": 3,
+    "result": "passed"
+  }
+}
