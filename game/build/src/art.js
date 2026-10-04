@@ -343,18 +343,19 @@ function drawTableFurniture(c,x,y,d,symbol,col,t=0,marker=true,seatGuest=null){
  c.save();ellipse(c,x,y+106,116,24,'#47325225');
  // Complete sourcepack chairs are behind one complete table sprite, not over a
  // background table, and their transforms do not depend on cloth selection.
- sprite(c,'chair_'+d.chairs,x-117,y+58,92,96,false);
- sprite(c,'chair_'+d.chairs,x+117,y+58,92,96,true);
- if(seatGuest)seatGuest();
+ sprite(c,'chair_'+d.chairs,x-105,y+105,124,128,false);
+ sprite(c,'chair_'+d.chairs,x+105,y+105,124,128,true);
  const im=tableImage(d);
- if(im){const w=d.tableType==='oval'?213:194,h=172;c.drawImage(im,x-w/2,y-62,w,h);}
+ if(im){const w=d.tableType==='oval'?170:156,h=132;c.drawImage(im,x-w/2,y-55,w,h);}
  // The chosen prop is independent; generated fixed props were removed offline.
- if(d.decoration==='flowers')sprite(c,'flowers',x,y+12,54,55);
- else if(d.decoration==='teapot')sprite(c,'teapot',x,y+8,52,49);
- else if(d.decoration==='plant')sprite(c,'room_plant',x,y+8,48,59);
- else if(d.decoration==='cupcake')sprite(c,'cupcake',x,y+8,51,53);
- else if(d.decoration==='cookies'){sprite(c,'cookie',x-12,y+10,36,28);sprite(c,'cookie',x+13,y+6,35,29);}
- else{sprite(c,'star',x,y+4,46,44);}
+ if(d.decoration==='flowers')sprite(c,'flowers',x,y-1,40,42);
+ else if(d.decoration==='teapot')sprite(c,'teapot',x,y-2,40,38);
+ else if(d.decoration==='plant')sprite(c,'room_plant',x,y-2,36,45);
+ else if(d.decoration==='cupcake')sprite(c,'cupcake',x,y-2,39,41);
+ else if(d.decoration==='cookies'){sprite(c,'cookie',x-10,y,28,22);sprite(c,'cookie',x+10,y-3,28,23);}
+ else{sprite(c,'star',x,y-3,35,34);}
+ // Foreground seats keep the face, lap and bent legs clear of the table.
+ if(seatGuest)seatGuest();
  // The permanent white ring and dark stroke preserve shape/colour contrast on
  // every cloth. The marker covers the master art's decorative heart motif.
  if(marker)badge(c,symbol,x,y+77,27,col);

@@ -293,10 +293,10 @@ function burst(x,y,n=16,colour='#e4a8d1'){if(engine.s.settings.reduced)n=Math.mi
 function drawMeal(c,dish,variant,x,y,w,h,prep=null,deco=null){if(dish==='cupcake'&&deco&&!prep)prep={step:R.RECIPES.cupcake.steps.length,p:0,done:true,deco};c.save();c.translate(x-w/2,y-h);c.scale(w/320,h/280);A.drawFood(c,dish,variant,prep,clock);c.restore();}
 function drawMop(c,x,y,facing=1,swing=0){c.save();c.translate(x,y);c.scale(facing,1);c.rotate(swing);A.line(c,[[0,-113],[8,-18]],'#62456c',9);A.line(c,[[0,-113],[8,-18]],'#e9c282',5);A.ellipse(c,9,-7,24,10,'#cce8e1','#62456c',3);for(let i=0;i<6;i++)A.line(c,[[-10+i*7,-13],[-15+i*9,2]],i%2?'#f4fff7':'#a4d8d1',4);A.ellipse(c,8,-16,12,5,'#a68fc3','#62456c',2);c.restore();}
 function drawActor(key,x,y,h,flip=false,bounce=0,tilt=0){const im=A.images[key];if(!im)return;A.ellipse(ctx,x,y,Math.min(38,h*.29),h*.092,'#62496b24');ctx.save();ctx.translate(x,y-bounce);ctx.rotate(tilt);A.sprite(ctx,key,0,0,h*1.35,h,flip);ctx.restore();}
-function drawSeatedGuest(c){const t=R.TABLES[c.table],baby=c.type==='pink'||c.type==='blue',h=baby?126:137;
+function drawSeatedGuest(c){const t=R.TABLES[c.table],baby=c.type==='pink'||c.type==='blue',h=baby?155:168;
  const happy=c.phase==='eating'||c.phase==='finished',breathe=engine.s.settings.reduced?0:Math.sin(clock*2+c.id)*1.1;
- A.sprite(ctx,'guest_seated_'+c.type,t.seat.x,t.seat.y-breathe,h*1.2,h,true);
- if(happy&&!engine.s.settings.reduced){const handX=t.seat.x-28,handY=t.seat.y-57;A.ellipse(ctx,handX,handY+Math.sin(clock*4+c.id)*2,4,3,baby?'#fff5ef':'#f8d3b6','#765079',1);}
+ A.sprite(ctx,'guest_seated_'+c.type,t.seat.x,t.seat.y-(baby?23:0)-breathe,h*1.2,h,true);
+ if(happy&&!engine.s.settings.reduced){const handX=t.seat.x-28,handY=t.seat.y-78;A.ellipse(ctx,handX,handY+Math.sin(clock*4+c.id)*2,4,3,baby?'#fff5ef':'#f8d3b6','#765079',1);}
 }
 function drawWorld(){ctx.setTransform(dpr,0,0,dpr,0,0);ctx.fillStyle='#baaccb';ctx.fillRect(0,0,width,height);const p=engine.s.player;const preview=mode==='customize'||mode==='loading';const sc=Math.max(width/1800,height/1100,width<600?.52:.46);view.scale=sc;const vw=width/sc,vh=height/sc,targetX=R.clamp((preview?712:p.x)-vw*.5,0,Math.max(0,1800-vw)),targetY=R.clamp((preview?600:p.y-65)-vh*.5,0,Math.max(0,1100-vh));view.x=targetX;view.y=targetY;ctx.save();ctx.scale(sc,sc);ctx.translate(-view.x,-view.y);A.drawRoomShell(ctx,engine.s.decor);A.drawStationLayer(ctx,clock);if(preview)for(const t of R.TABLES)A.drawTableFurniture(ctx,t.food.x,t.food.y,engine.s.decor,t.symbol,t.colour,clock);if(!preview){if(R.surfacesClean(engine.s))drawCleanTargets();
   if(path.length){ctx.save();ctx.strokeStyle='#fff6cfb8';ctx.lineWidth=8;ctx.setLineDash([2,24]);ctx.lineCap='round';ctx.beginPath();ctx.moveTo(p.x,p.y);for(const q of path)ctx.lineTo(q.x,q.y);ctx.stroke();ctx.restore();}
@@ -304,7 +304,7 @@ function drawWorld(){ctx.setTransform(dpr,0,0,dpr,0,0);ctx.fillStyle='#baaccb';c
   if(engine.nextOrder()&&!engine.s.tray&&!engine.s.dirtyTray){ctx.save();ctx.globalAlpha=.5+.16*Math.sin(clock*3);ctx.strokeStyle='#fff0b4';ctx.lineWidth=6;ctx.beginPath();ctx.ellipse(R.KITCHEN.x,R.KITCHEN.y,71,29,0,0,Math.PI*2);ctx.stroke();ctx.restore();A.star(ctx,997,315,12,'#fff2bb',clock*.25);}
   if(engine.s.dirtyTray){ctx.save();ctx.globalAlpha=.6+.13*Math.sin(clock*3);ctx.strokeStyle='#d8f4f6';ctx.lineWidth=6;ctx.beginPath();ctx.ellipse(R.SINK.x,R.SINK.y,62,28,0,0,Math.PI*2);ctx.stroke();ctx.restore();}
   drawAutoInteractionHint();
-  // Chair back -> seated guest -> table edge. Walking actors share depth ordering with furniture.
+  // Chair back -> table -> foreground seated guest. Walking actors share depth ordering with furniture.
   const actors=engine.s.customers.filter(c=>['arriving','leaving'].includes(c.phase)).map(c=>({type:'guest',y:c.y,c}));
   actors.push(...R.TABLES.map((t,i)=>({type:'table',y:t.food.y+100,t,i})),{type:'player',y:p.y});
   actors.sort((a,b)=>a.y-b.y);
@@ -312,7 +312,7 @@ function drawWorld(){ctx.setTransform(dpr,0,0,dpr,0,0);ctx.fillStyle='#baaccb';c
     const {t,i}=act,c=engine.atTable(i),seated=c&&['waiting','ordered','eating','finished'].includes(c.phase);
     A.drawTableFurniture(ctx,t.food.x,t.food.y,engine.s.decor,t.symbol,t.colour,clock,!c||!['waiting','ordered'].includes(c.phase),seated?()=>drawSeatedGuest(c):null);
     if(engine.s.tables[i].status==='dirty')A.drawDirtyDish(ctx,t.food.x,t.food.y-15,1);
-    if(c?.phase==='eating'){drawMeal(ctx,c.dish,c.variant,t.food.x-20,t.food.y-10,91*(1-c.eat/18),79*(1-c.eat/18),null,c.deco);A.heart(ctx,c.x+38,c.y-120-(clock%1)*12,10,t.colour);}
+    if(c?.phase==='eating'){drawMeal(ctx,c.dish,c.variant,t.food.x-20,t.food.y-10,76*(1-c.eat/18),66*(1-c.eat/18),null,c.deco);A.heart(ctx,c.x+38,c.y-120-(clock%1)*12,10,t.colour);}
   }else if(act.type==='guest'){const c=act.c,baby=c.type==='pink'||c.type==='blue',bounce=engine.s.settings.reduced?0:Math.abs(Math.sin(clock*9+c.id))*6;drawActor(guestKey(c,true),c.x,c.y,baby?109:130,(npcFacing.get(c.id)||1)<0,bounce);}
    else{const celebrate=clock<joyUntil,key=celebrate?'u_happy'+Math.floor(clock*6)%3:playerMoving?'u_run'+Math.floor(playerAnim)%6:'u_idle'+(Math.floor(clock*.7)%5===0?1:0),bounce=engine.s.settings.reduced?0:playerMoving?Math.abs(Math.sin(playerAnim*Math.PI))*4:Math.sin(clock*2)*1.5;drawActor(key,p.x,p.y,134,p.facing<0,bounce);if(engine.s.phase==='cleaning'&&engine.s.mopEquipped){drawMop(ctx,p.x+p.facing*37,p.y+8,p.facing,!engine.s.settings.reduced&&clock<mopSwingUntil?Math.sin((mopSwingUntil-clock)*16)*.4:.13);}if(engine.s.tray){const t=engine.s.tray,x=p.x+p.facing*47,y=p.y-38-bounce;A.ellipse(ctx,x,y-1,43,10,'#d9c1df','#fff4e5',3);drawMeal(ctx,t.dish,t.variant,x,y,91,77,null,t.deco);}else if(engine.s.dirtyTray){const x=p.x+p.facing*45,y=p.y-31-bounce;A.drawDirtyDish(ctx,x,y,.78);}}
   }
