@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "version": "2.0.0",
+  "method": "Actual Pages index served at localhost /pages/, real service worker installed, network disabled and reloaded, then picture Play clicked",
+  "caches": [
+    "sneaky-restaurant:/pages/:2.0.0"
+  ],
+  "physicalIPhone": false
+}

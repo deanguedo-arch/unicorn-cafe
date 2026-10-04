@@ -1,0 +1,138 @@
+{
+  "batch": "layouts",
+  "testMethod": "Actual Chromium / actual standalone loaded from disk; real isolated browser localStorage; no physical iPhone",
+  "passed": 9,
+  "total": 9,
+  "results": [
+    {
+      "name": "Responsive 320x568",
+      "pass": true,
+      "detail": {
+        "width": 320,
+        "height": 568,
+        "scenes": [
+          "six-choice customization",
+          "lunch choice",
+          "lunch action",
+          "scrub",
+          "cleanup world"
+        ]
+      }
+    },
+    {
+      "name": "Responsive 375x667",
+      "pass": true,
+      "detail": {
+        "width": 375,
+        "height": 667,
+        "scenes": [
+          "six-choice customization",
+          "lunch choice",
+          "lunch action",
+          "scrub",
+          "cleanup world"
+        ]
+      }
+    },
+    {
+      "name": "Responsive 390x844",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "height": 844,
+        "scenes": [
+          "six-choice customization",
+          "lunch choice",
+          "lunch action",
+          "scrub",
+          "cleanup world"
+        ]
+      }
+    },
+    {
+      "name": "Responsive 430x932",
+      "pass": true,
+      "detail": {
+        "width": 430,
+        "height": 932,
+        "scenes": [
+          "six-choice customization",
+          "lunch choice",
+          "lunch action",
+          "scrub",
+          "cleanup world"
+        ]
+      }
+    },
+    {
+      "name": "Responsive 568x320",
+      "pass": true,
+      "detail": {
+        "width": 568,
+        "height": 320,
+        "scenes": [
+          "six-choice customization",
+          "lunch choice",
+          "lunch action",
+          "scrub",
+          "cleanup world"
+        ]
+      }
+    },
+    {
+      "name": "Responsive 667x375",
+      "pass": true,
+      "detail": {
+        "width": 667,
+        "height": 375,
+        "scenes": [
+          "six-choice customization",
+          "lunch choice",
+          "lunch action",
+          "scrub",
+          "cleanup world"
+        ]
+      }
+    },
+    {
+      "name": "Responsive 844x390",
+      "pass": true,
+      "detail": {
+        "width": 844,
+        "height": 390,
+        "scenes": [
+          "six-choice customization",
+          "lunch choice",
+          "lunch action",
+          "scrub",
+          "cleanup world"
+        ]
+      }
+    },
+    {
+      "name": "Responsive 1024x768",
+      "pass": true,
+      "detail": {
+        "width": 1024,
+        "height": 768,
+        "scenes": [
+          "six-choice customization",
+          "lunch choice",
+          "lunch action",
+          "scrub",
+          "cleanup world"
+        ]
+      }
+    },
+    {
+      "name": "No JavaScript page errors",
+      "pass": true,
+      "detail": {
+        "errors": 0,
+        "consoleErrors": 0
+      }
+    }
+  ],
+  "pageErrors": [],
+  "consoleErrors": []
+}

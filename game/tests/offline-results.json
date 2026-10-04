@@ -1,0 +1,46 @@
+{
+  "method": "Node VM with mocked CacheStorage, request/response and network; not browser service-worker registration or offline relaunch",
+  "passed": 9,
+  "total": 9,
+  "results": [
+    {
+      "name": "Install precaches embedded index, manifest and three app icons",
+      "pass": true,
+      "detail": {
+        "cachedFiles": 5
+      }
+    },
+    {
+      "name": "Activation removes only older caches for this restaurant scope",
+      "pass": true
+    },
+    {
+      "name": "Offline root navigation receives cached current game",
+      "pass": true
+    },
+    {
+      "name": "Offline deep/query navigation receives same app entry",
+      "pass": true
+    },
+    {
+      "name": "Offline manifest and all icons have cached bytes",
+      "pass": true
+    },
+    {
+      "name": "Other origins and sibling games are not intercepted",
+      "pass": true
+    },
+    {
+      "name": "Non-GET operations are not intercepted",
+      "pass": true
+    },
+    {
+      "name": "Failed install never activates or skips the old worker",
+      "pass": true
+    },
+    {
+      "name": "Unknown uncached resource propagates network failure honestly",
+      "pass": true
+    }
+  ]
+}

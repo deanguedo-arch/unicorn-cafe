@@ -1,0 +1,4 @@
+{
+  "passed": true,
+  "method": "Actual standalone Chromium, close menu while still in station does not repeat; actual keyboard exit and return triggers once after stopping"
+}

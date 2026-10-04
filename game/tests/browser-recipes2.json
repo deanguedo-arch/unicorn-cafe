@@ -1,0 +1,99 @@
+{
+  "batch": "recipes2",
+  "testMethod": "Actual Chromium / actual standalone loaded from disk; real isolated browser localStorage; no physical iPhone",
+  "passed": 10,
+  "total": 10,
+  "results": [
+    {
+      "name": "Cook/carry/serve burger tomato",
+      "pass": true,
+      "detail": {
+        "recipe": "burger",
+        "variant": "tomato",
+        "actualButtonActions": 8
+      }
+    },
+    {
+      "name": "Cook/carry/serve soup carrot",
+      "pass": true,
+      "detail": {
+        "recipe": "soup",
+        "variant": "carrot",
+        "actualButtonActions": 14
+      }
+    },
+    {
+      "name": "Cook/carry/serve soup peas",
+      "pass": true,
+      "detail": {
+        "recipe": "soup",
+        "variant": "peas",
+        "actualButtonActions": 14
+      }
+    },
+    {
+      "name": "Cook/carry/serve chicken peas",
+      "pass": true,
+      "detail": {
+        "recipe": "chicken",
+        "variant": "peas",
+        "actualButtonActions": 12
+      }
+    },
+    {
+      "name": "Cook/carry/serve chicken corn",
+      "pass": true,
+      "detail": {
+        "recipe": "chicken",
+        "variant": "corn",
+        "actualButtonActions": 12
+      }
+    },
+    {
+      "name": "Cook/carry/serve pancakes berries",
+      "pass": true,
+      "detail": {
+        "recipe": "pancakes",
+        "variant": "berries",
+        "actualButtonActions": 12
+      }
+    },
+    {
+      "name": "Cook/carry/serve pancakes banana",
+      "pass": true,
+      "detail": {
+        "recipe": "pancakes",
+        "variant": "banana",
+        "actualButtonActions": 12
+      }
+    },
+    {
+      "name": "Cook/carry/serve smoothie strawberry",
+      "pass": true,
+      "detail": {
+        "recipe": "smoothie",
+        "variant": "strawberry",
+        "actualButtonActions": 13
+      }
+    },
+    {
+      "name": "Cook/carry/serve smoothie mango",
+      "pass": true,
+      "detail": {
+        "recipe": "smoothie",
+        "variant": "mango",
+        "actualButtonActions": 13
+      }
+    },
+    {
+      "name": "No JavaScript page errors",
+      "pass": true,
+      "detail": {
+        "errors": 0,
+        "consoleErrors": 0
+      }
+    }
+  ],
+  "pageErrors": [],
+  "consoleErrors": []
+}

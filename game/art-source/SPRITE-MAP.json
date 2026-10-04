@@ -1,0 +1,72 @@
+{
+  "source": "ChatGPT-B-Kitchen-Pizza-Icecream.png",
+  "chat": "https://chatgpt.com/c/6ac268d3-2ab8-83e8-95ba-79c3f3972af1",
+  "boxes": {
+    "painted_kitchen": [
+      80,
+      55,
+      1375,
+      409
+    ],
+    "pizza_dough": [
+      18,
+      480,
+      285,
+      709
+    ],
+    "pizza_sauce": [
+      280,
+      480,
+      536,
+      709
+    ],
+    "pizza_cheese": [
+      539,
+      480,
+      793,
+      709
+    ],
+    "pizza_tomato": [
+      792,
+      530,
+      960,
+      697
+    ],
+    "pizza_mushroom": [
+      961,
+      530,
+      1129,
+      695
+    ],
+    "prep_board": [
+      1135,
+      480,
+      1438,
+      710
+    ],
+    "ice_cone": [
+      231,
+      746,
+      443,
+      1049
+    ],
+    "ice_strawberry": [
+      484,
+      790,
+      720,
+      1020
+    ],
+    "ice_vanilla": [
+      754,
+      790,
+      989,
+      1020
+    ],
+    "ice_sprinkles": [
+      1025,
+      820,
+      1253,
+      1008
+    ]
+  }
+}
