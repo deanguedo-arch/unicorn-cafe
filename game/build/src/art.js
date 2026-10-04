@@ -320,14 +320,33 @@ function drawStationLayer(c,t=0){
 function drawRoom(c,d){drawRoomShell(c,d);}
 function drawDecorLayer(c,d,t=0){drawRoomShell(c,d);drawStationLayer(c,t);}
 function clothOf(d){return d.tablecloth||d.tabletop||'honey';}
-function tableSpriteKey(d){return 'table_'+d.tableType+'_'+clothOf(d);}
-function drawTableFurniture(c,x,y,d,symbol,col,t=0,marker=true){
+function tableSpriteKey(d){return 'dining_'+d.tableType;}
+const diningCache={};
+function tableImage(d){
+ const im=images[tableSpriteKey(d)],cloth=clothOf(d),key=d.tableType+':'+cloth;
+ if(!im||cloth==='cream')return im;if(diningCache[key])return diningCache[key];
+ const v=document.createElement('canvas');v.width=im.width;v.height=im.height;const z=v.getContext('2d');z.drawImage(im,0,0);
+ const data=z.getImageData(0,0,v.width,v.height),a=data.data;
+ const colours={honey:[255,230,158],sky:[184,219,241],berry:[238,168,201],gingham:[249,205,221]},rainbow=[[243,183,202],[248,211,154],[235,226,167],[188,220,200],[181,210,235],[212,190,228]];
+ for(let y=0;y<v.height;y++)for(let x=0;x<v.width;x++){
+  const i=(y*v.width+x)*4,r=a[i],g=a[i+1],b=a[i+2];
+  // Only neutral fabric, leaving purple wood, gold edging and transparent pixels intact.
+  if(!a[i+3]||r<150||g<135||b<110||r-g>40||g-b>65||b>g+12)continue;
+  let col=colours[cloth]||rainbow[Math.min(5,Math.floor(x/v.width*6))];
+  if(cloth==='gingham'&&(Math.floor(x/26)+Math.floor(y/19))%2)col=[232,162,192];
+  const shade=(r+g+b)/3/235,mix=cloth==='honey'?.62:.78;
+  for(let k=0;k<3;k++)a[i+k]=clamp(a[i+k]*(1-mix)+col[k]*shade*mix,0,255);
+ }
+ z.putImageData(data,0,0);diningCache[key]=v;return v;
+}
+function drawTableFurniture(c,x,y,d,symbol,col,t=0,marker=true,seatGuest=null){
  c.save();ellipse(c,x,y+106,116,24,'#47325225');
  // Complete sourcepack chairs are behind one complete table sprite, not over a
  // background table, and their transforms do not depend on cloth selection.
- sprite(c,'chair_'+d.chairs,x-91,y+58,92,96,false);
- sprite(c,'chair_'+d.chairs,x+91,y+58,92,96,true);
- const im=images[tableSpriteKey(d)];
+ sprite(c,'chair_'+d.chairs,x-117,y+58,92,96,false);
+ sprite(c,'chair_'+d.chairs,x+117,y+58,92,96,true);
+ if(seatGuest)seatGuest();
+ const im=tableImage(d);
  if(im){const w=d.tableType==='oval'?213:194,h=172;c.drawImage(im,x-w/2,y-62,w,h);}
  // The chosen prop is independent; generated fixed props were removed offline.
  if(d.decoration==='flowers')sprite(c,'flowers',x,y+12,54,55);
@@ -356,7 +375,7 @@ function customData(stage,id,decor){
  else if(stage==='flooring'||stage==='wallpaper'){
   const im=images[(stage==='flooring'?'room_floor_':'room_wall_')+id];c.save();rect(c,12,20,216,148,24,'#fff8ec','#725479',5);c.clip();c.drawImage(im,12,20,216,148);c.restore();
  }else{
-  const im=images[tableSpriteKey(d)];if(im){const w=d.tableType==='oval'?223:198;c.drawImage(im,120-w/2,2,w,184);}
+  const im=tableImage(d);if(im){const w=d.tableType==='oval'?223:198;c.drawImage(im,120-w/2,2,w,184);}
  }
  cache[key]=v.toDataURL('image/png');return cache[key];
 }

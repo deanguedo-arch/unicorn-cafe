@@ -1,0 +1,161 @@
+{
+  "tool": "Built-in image_gen",
+  "date": "2026-10-04",
+  "characterPrompt": "Preserve the existing character's face, colours, outfit and accessories; create one seated dining pose facing three-quarter right, full body on transparent background, no chair/table/food. Match the painted chibi game style.",
+  "tablePrompt": "Redesign each original table silhouette to match the painted plum-and-gold kitchen. Neutral ivory cloth with natural folds and a gold stitched hem, carved purple legs and gold feet, transparent background, no chairs/props/characters.",
+  "exports": [
+    {
+      "id": "pink",
+      "source": "/Users/deanguedo/.codex/generated_images/01a107b9-e885-74c3-a752-b3956c6590b1/exec-f7960b16-4e71-41b8-a42d-3bc3b95d155b.png",
+      "destination": "guest_seated_pink.webp",
+      "exportSize": [
+        489,
+        512
+      ],
+      "alphaBounds": [
+        31,
+        21,
+        1168,
+        1212
+      ]
+    },
+    {
+      "id": "blue",
+      "source": "/Users/deanguedo/.codex/generated_images/01a107b9-e885-74c3-a752-b3956c6590b1/exec-cf48e5e5-8709-4c58-ac58-d903d944814c.png",
+      "destination": "guest_seated_blue.webp",
+      "exportSize": [
+        512,
+        502
+      ],
+      "alphaBounds": [
+        0,
+        30,
+        1248,
+        1254
+      ]
+    },
+    {
+      "id": "human",
+      "source": "/Users/deanguedo/.codex/generated_images/01a107b9-e885-74c3-a752-b3956c6590b1/exec-d263ccdd-30d2-4766-b434-6dfff22bb078.png",
+      "destination": "guest_seated_human.webp",
+      "exportSize": [
+        301,
+        512
+      ],
+      "alphaBounds": [
+        0,
+        5,
+        936,
+        1597
+      ]
+    },
+    {
+      "id": "manager",
+      "source": "/Users/deanguedo/.codex/generated_images/01a107b9-e885-74c3-a752-b3956c6590b1/exec-1abfe134-ea66-4c56-9105-5fcf42cc0d39.png",
+      "destination": "guest_seated_manager.webp",
+      "exportSize": [
+        301,
+        512
+      ],
+      "alphaBounds": [
+        153,
+        69,
+        997,
+        1507
+      ]
+    },
+    {
+      "id": "worker",
+      "source": "/Users/deanguedo/.codex/generated_images/01a107b9-e885-74c3-a752-b3956c6590b1/exec-e7f7845d-8f72-4dbd-874c-6d63f541938e.png",
+      "destination": "guest_seated_worker.webp",
+      "exportSize": [
+        453,
+        512
+      ],
+      "alphaBounds": [
+        0,
+        23,
+        1157,
+        1332
+      ]
+    },
+    {
+      "id": "table",
+      "source": "/Users/deanguedo/.codex/generated_images/01a107b9-e885-74c3-a752-b3956c6590b1/exec-0d798064-ce34-4d5d-8dd2-ebf1c0891cf9.png",
+      "destination": "dining_round.webp",
+      "exportSize": [
+        498,
+        512
+      ],
+      "alphaBounds": [
+        66,
+        49,
+        1214,
+        1230
+      ]
+    },
+    {
+      "id": "table_cloud",
+      "source": "/Users/deanguedo/.codex/generated_images/01a107b9-e885-74c3-a752-b3956c6590b1/exec-a781212f-d1dc-40b6-ad09-c32061726178.png",
+      "destination": "dining_cloud.webp",
+      "exportSize": [
+        512,
+        468
+      ],
+      "alphaBounds": [
+        34,
+        104,
+        1256,
+        1222
+      ]
+    },
+    {
+      "id": "table_oval",
+      "source": "/Users/deanguedo/.codex/generated_images/01a107b9-e885-74c3-a752-b3956c6590b1/exec-774c254a-db12-4fe3-a402-2bfe1e375519.png",
+      "destination": "dining_oval.webp",
+      "exportSize": [
+        512,
+        416
+      ],
+      "alphaBounds": [
+        0,
+        39,
+        1327,
+        1116
+      ]
+    },
+    {
+      "id": "table_clover",
+      "source": "/Users/deanguedo/.codex/generated_images/01a107b9-e885-74c3-a752-b3956c6590b1/exec-8283c341-806a-4d0a-9d2c-b17e0bbcce5d.png",
+      "destination": "dining_clover.webp",
+      "exportSize": [
+        512,
+        451
+      ],
+      "alphaBounds": [
+        0,
+        45,
+        1229,
+        1127
+      ]
+    },
+    {
+      "id": "table_heart",
+      "source": "/Users/deanguedo/.codex/generated_images/01a107b9-e885-74c3-a752-b3956c6590b1/exec-fbb0c3f0-06ac-43ff-ae84-2f6b86a28b81.png",
+      "destination": "dining_heart.webp",
+      "exportSize": [
+        512,
+        498
+      ],
+      "alphaBounds": [
+        63,
+        83,
+        1230,
+        1218
+      ]
+    }
+  ],
+  "exportMethod": "Trim transparent margins and export to WebP at a maximum 512 pixels; original generated PNG files remain unchanged.",
+  "characterPromptTemplate": "Use case: identity-preserve. Edit target: existing {character description} game sprite. ONE seated dining pose of the EXACT SAME character facing three-quarter right. Upright head and torso, bottom resting on invisible seat, legs bent naturally forward; hands/front hooves rest forward at lap/table height. Preserve face, eyes, hair, outfit, accessories and colour markings exactly. Match original painted chibi 2D game style with thick plum outline and soft highlights. Full body isolated centered on genuinely transparent background with margin. No chair, table, food, scene, shadow or words. Character will be composited seated in a restaurant chair. Unmistakable sitting pose. Keep original head proportions.",
+  "tablePromptTemplate": "Use case: stylized-concept. Asset type: ONE restaurant table sprite. First reference defines detailed painted plum-and-gold furniture style. Second reference defines the {shape} table silhouette and front/slightly-above viewpoint. Redesign that table with a warm ivory shape-matching top, short neutral cream draped cloth, subtle gold stitched hem and natural fabric folds, sturdy carved purple legs with gold feet. Keep the distinctive tabletop silhouette unmistakable. Match kitchen painterly chibi 2D game art, bold plum outline, warm highlights and believable fabric. Cloth neutral ivory without pattern for game recolouring. No chairs, props, dishes, food, characters, floor, shadow, lettering or heart motif on front. ONE complete table only, centred isolated on genuinely transparent background with margin. Top upper 55 percent, visible legs bottom 25 percent. Avoid flat vector clipart."
+}

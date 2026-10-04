@@ -29,18 +29,18 @@ const RECIPES={
 const MENU=Object.keys(RECIPES);
 const SEQUENCE=['pizza','icecream','burger','cupcake','soup','coffee','chicken','pancakes','smoothie'];
 const TABLES=[
- {id:'heart',name:'Heart table',symbol:'heart',colour:'#e95d92',seat:{x:720,y:421},meet:{x:862,y:552},food:{x:712,y:500}},
- {id:'star',name:'Star table',symbol:'star',colour:'#4f79e2',seat:{x:1233,y:649},meet:{x:1338,y:792},food:{x:1180,y:743}},
- {id:'flower',name:'Flower table',symbol:'flower',colour:'#269a78',seat:{x:188,y:684},meet:{x:399,y:792},food:{x:247,y:745}},
- {id:'moon',name:'Moon table',symbol:'moon',colour:'#8757cf',seat:{x:733,y:740},meet:{x:888,y:884},food:{x:744,y:830}},
- {id:'diamond',name:'Diamond table',symbol:'diamond',colour:'#cc6a19',seat:{x:1445,y:742},meet:{x:1590,y:888},food:{x:1450,y:830}}
+ {id:'heart',name:'Heart table',symbol:'heart',colour:'#e95d92',seat:{x:832,y:555},meet:{x:892,y:553},food:{x:712,y:500}},
+ {id:'star',name:'Star table',symbol:'star',colour:'#4f79e2',seat:{x:1300,y:798},meet:{x:1360,y:761},food:{x:1180,y:743}},
+ {id:'flower',name:'Flower table',symbol:'flower',colour:'#269a78',seat:{x:367,y:800},meet:{x:427,y:798},food:{x:247,y:745}},
+ {id:'moon',name:'Moon table',symbol:'moon',colour:'#8757cf',seat:{x:864,y:885},meet:{x:924,y:883},food:{x:744,y:830}},
+ {id:'diamond',name:'Diamond table',symbol:'diamond',colour:'#cc6a19',seat:{x:1570,y:885},meet:{x:1630,y:883},food:{x:1450,y:830}}
 ];
 const KITCHEN={x:997,y:380}, SINK={x:1450,y:385}, ENTRY={x:236,y:1000};
 // Visible interior footprints. The unused baked-background obstacles are gone.
 const OBSTACLES=[
  [452,174,880,130],[80,405,259,112],[1490,305,208,173],
  [1610,533,102,112],[1061,905,89,91],
- ...TABLES.map(t=>[t.food.x-120,t.food.y-34,240,130])
+ ...TABLES.map(t=>[t.food.x-156,t.food.y-34,312,130])
 ];
 const BOUNDS={left:66,right:1734,top:325,bottom:1030};
 const CUSTOMIZATION={
@@ -167,6 +167,8 @@ function cleanSave(raw){
  const old=raw.schema!==SCHEMA;
  if(s.tray&&s.dirtyTray)s.dirtyTray=null;
  for(let i=0;i<s.tables.length;i++)if(s.tables[i].status==='carried'&&s.dirtyTray?.table!==i)s.tables[i]={status:'clean',dirty:null};
+ // Stationary guests belong to their chairs even when resuming an older layout.
+ for(const c of s.customers)if(['waiting','ordered','eating','finished'].includes(c.phase))Object.assign(c,TABLES[c.table].seat);
  const live=s.customers.filter(c=>['arriving','waiting','ordered'].includes(c.phase)).length;
  if(s.served+live>DAY_TARGET)return null;
  s.issued=clamp(Math.max(s.served+live,s.issued),0,DAY_TARGET);

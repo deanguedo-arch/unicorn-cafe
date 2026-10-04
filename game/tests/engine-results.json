@@ -1,7 +1,7 @@
 {
   "kind": "production-engine deterministic tests, not physical-device or UI testing",
-  "passed": 25,
-  "total": 25,
+  "passed": 26,
+  "total": 26,
   "results": [
     {
       "name": "All 18 recipe/variation combinations through dish return/wash",
@@ -132,6 +132,13 @@
     {
       "name": "Mopping requires collecting the mop, proximity and explicit strokes",
       "pass": true
+    },
+    {
+      "name": "Seated guests resume at chairs with nearby reachable service points",
+      "pass": true,
+      "detail": {
+        "chairs": 5
+      }
     }
   ]
 }
