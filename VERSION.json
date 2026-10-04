@@ -1,14 +1,14 @@
 {
   "game": "Sneaky Unicorn: Rainbow Restaurant",
-  "version": "1.4.0",
-  "releaseType": "Final day-cycle release",
+  "version": "1.6.0",
+  "releaseType": "Runtime visual integration rebuild",
   "buildDate": "2026-10-03",
   "baseline": "v1.3.0-p4",
   "baselineArchiveSHA256": "2fd4ec82b7d8618e9a777fcb2f84b6008989fdc9800b94b908a143bc06df8d80",
   "sourcePackSHA256": "dc7d9ffec60d21081c0534c61aff8bb7aa99bb582cdaa3f50cd0f9922ae33034",
   "saveSchema": 3,
   "saveKey": "sneaky-unicorn-restaurant-v1-4",
-  "cacheVersion": "1.4.0",
+  "cacheVersion": "1.6.0",
   "menuItems": 9,
   "recipeVariations": 18,
   "tables": 5,
@@ -18,7 +18,10 @@
   "customizationChoices": 33,
   "combinations": 27000,
   "cleaningTasks": 15,
-  "assetCount": 113,
+  "assetCount": 117,
   "runtimeDependencies": [],
-  "deployed": false
+  "deployed": false,
+  "visualRuntimeIntegration": true,
+  "startupDesigner": "always shown, six categories",
+  "conceptRuntimeAssets": 4
 }
