@@ -4,7 +4,7 @@
  */
 (function(root,factory){const api=factory();if(typeof module==='object'&&module.exports)module.exports=api;else root.RR=api;})(typeof window!=='undefined'?window:globalThis,function(){
 'use strict';
-const VERSION='1.2.0';
+const VERSION='1.2.1';
 const SCHEMA=2;
 const SAVE_KEY='sneaky-unicorn-restaurant-v1-2';
 const LEGACY_SAVE_KEY='sneaky-unicorn-restaurant-v1';
@@ -30,23 +30,25 @@ const TABLES=[
  {id:'star',name:'Star table',symbol:'star',colour:'#4f79e2',seat:{x:1233,y:649},meet:{x:1338,y:792},food:{x:1180,y:743}},
  {id:'flower',name:'Flower table',symbol:'flower',colour:'#269a78',seat:{x:188,y:684},meet:{x:399,y:792},food:{x:247,y:745}},
  {id:'moon',name:'Moon table',symbol:'moon',colour:'#8757cf',seat:{x:733,y:740},meet:{x:888,y:884},food:{x:744,y:830}},
- {id:'diamond',name:'Diamond table',symbol:'diamond',colour:'#df842b',seat:{x:1445,y:742},meet:{x:1590,y:888},food:{x:1450,y:830}}
+ {id:'diamond',name:'Diamond table',symbol:'diamond',colour:'#cc6a19',seat:{x:1445,y:742},meet:{x:1590,y:888},food:{x:1450,y:830}}
 ];
 const KITCHEN={x:997,y:380}, SINK={x:1450,y:385}, ENTRY={x:236,y:1000};
+// Visible interior footprints. The unused baked-background obstacles are gone.
 const OBSTACLES=[
- [452,174,880,130],[72,339,269,178],[72,658,269,172],[559,450,244,103],[1041,681,244,119],[1467,305,231,177],[1610,533,102,112],[1061,905,89,91],
- [635,775,220,118],[1345,776,215,118]
+ [452,174,880,130],[80,405,259,112],[1490,305,208,173],
+ [1610,533,102,112],[1061,905,89,91],
+ ...TABLES.map(t=>[t.food.x-120,t.food.y-34,240,130])
 ];
 const BOUNDS={left:66,right:1734,top:325,bottom:1030};
 const CUSTOMIZATION={
  flooring:['lavender','mint','peach'],
  wallpaper:['twilight','rainbow','garden'],
  tableType:['round','clover','oval'],
- tabletop:['honey','cream','berry'],
+ tablecloth:['honey','cream','berry','sky'],
  decoration:['flowers','stars','teapot','cookies'],
  chairs:['plum','mint','rainbow']
 };
-const DEFAULT_DECOR={flooring:'lavender',wallpaper:'twilight',tableType:'round',tabletop:'honey',decoration:'flowers',chairs:'plum'};
+const DEFAULT_DECOR={flooring:'lavender',wallpaper:'twilight',tableType:'round',tablecloth:'honey',decoration:'flowers',chairs:'plum'};
 function walkable(x,y,r=18){if(x<BOUNDS.left||x>BOUNDS.right||y<BOUNDS.top||y>BOUNDS.bottom)return false;return !OBSTACLES.some(o=>x>o[0]-r&&x<o[0]+o[2]+r&&y>o[1]-r&&y<o[1]+o[3]+r);}
 function lineFree(a,b){const n=Math.ceil(Math.hypot(b.x-a.x,b.y-a.y)/10);for(let i=0;i<=n;i++)if(!walkable(a.x+(b.x-a.x)*i/(n||1),a.y+(b.y-a.y)*i/(n||1)))return false;return true;}
 const CELL=28,NX=60,NY=26;
@@ -76,7 +78,7 @@ function blankTables(){return TABLES.map(()=>({status:'clean',dirty:null}));}
 function fresh(settings={},decor={}){return {schema:SCHEMA,version:VERSION,day:1,served:0,total:0,issued:0,nextId:1,customers:[],active:null,tray:null,dirtyTray:null,prep:null,stickers:[],completed:false,player:{x:445,y:911,facing:1},tables:blankTables(),decor:{...DEFAULT_DECOR,...decor},settings:{muted:!!settings.muted,reduced:!!settings.reduced}};}
 function validDish(d){return typeof d==='string'&&MENU.includes(d);}
 function validVariant(d,v){return validDish(d)&&RECIPES[d].variants.some(x=>x.id===v);}
-function validDecor(obj){const out={...DEFAULT_DECOR};for(const k of Object.keys(CUSTOMIZATION))if(obj&&CUSTOMIZATION[k].includes(obj[k]))out[k]=obj[k];return out;}
+function validDecor(obj){obj=obj&&typeof obj==='object'?{...obj}:{};if(!obj.tablecloth&&obj.tabletop)obj.tablecloth=obj.tabletop;const out={...DEFAULT_DECOR};for(const k of Object.keys(CUSTOMIZATION))if(obj&&CUSTOMIZATION[k].includes(obj[k]))out[k]=obj[k];return out;}
 function validDeco(dish,deco){if(dish!=='cupcake')return null;return RECIPES.cupcake.decorations.some(x=>x.id===deco)?deco:null;}
 function cleanPrep(p,customers){
  if(!p||!validDish(p.dish)||!customers.some(c=>c.id===p.orderId&&c.phase==='ordered'))return null;

@@ -1,6 +1,6 @@
-/* Sneaky Unicorn — Rainbow Restaurant v1.2.0
+/* Sneaky Unicorn — Rainbow Restaurant v1.2.1
  * Picture-first restaurant loop: customize, seat, order, cook, deliver, clear and wash.
- * Sourcepack characters/environment remain the visual authority; new food/furniture is code-authored Canvas/SVG.
+ * Sourcepack characters/environment remain the visual authority; furniture now combines image-generated interior assets with original sourcepack sprites.
  */
 (function(){'use strict';
 const R=window.RR,A=window.RRArt,$=id=>document.getElementById(id);
@@ -38,21 +38,13 @@ function toast(text,seconds=2.2){$('toast').textContent=text;$('toast').classLis
 function stopControls(){pointer=null;keys.clear();path=[];goal=null;cookPointer=null;playerMoving=false;}
 function syncPrefs(){dom.app.classList.toggle('reduced',engine.s.settings.reduced);sound.mute();}
 function updateProgress(){const s=engine.s;$('day-progress').innerHTML=`<small>${s.day}</small>`+Array.from({length:R.DAY_TARGET},(_,i)=>`<span class="meal-pip ${i<s.served?'filled':''}"></span>`).join('');$('day-progress').setAttribute('aria-label',`${s.served} of ${R.DAY_TARGET} meals served today`);}
-function decorChoice(stage,id){
- if(stage==='flooring')return `<span class="pattern floor-${id}"></span>`;
- if(stage==='wallpaper')return `<span class="pattern wall-${id}"></span>`;
- if(stage==='tableType')return `<span class="mini-table ${id}"></span>`;
- if(stage==='tabletop')return `<span class="mini-table round top-${id}"></span>`;
- if(stage==='decoration'){if(id==='flowers')return imageHTML('flowers','',id);if(id==='teapot')return imageHTML('teapot','',id);if(id==='cookies')return imageHTML('cookie','',id);return A.icon('star');}
- if(stage==='chairs')return `<span class="${id==='rainbow'?'chair-rainbow':'chair-'+id}">${A.icon('chair')}</span>`;
- return A.icon('star');
-}
-const CUSTOM_STAGES=[['flooring','floor'],['wallpaper','wall'],['tableType','table'],['tabletop','table'],['decoration','flower'],['chairs','chair']];
+function decorChoice(stage,id){return `<img src="${A.customData(stage,id,engine.s.decor)}" alt="" draggable="false">`;}
+const CUSTOM_STAGES=[['flooring','floor'],['wallpaper','wall'],['tableType','table'],['tablecloth','cloth'],['decoration','flower'],['chairs','chair']];
 function showCustomizer(stage=0){stopControls();mode='customize';dom.ui.hidden=true;dom.kitchen.hidden=true;dom.customizer.hidden=false;customStage=R.clamp(stage,0,6);renderCustomizer();resize();}
 function renderCustomizer(){
  if(customStage>=6){dom.customizer.innerHTML=`<div class="custom-final">${imageHTML('hero','','Sneaky Unicorn')}<button class="open-button" data-action="open" aria-label="Open the restaurant">${A.icon('play')}</button><div class="parent-copy">v${R.VERSION} · local-only save</div></div>`;return;}
  const [stage,icon]=CUSTOM_STAGES[customStage],choices=R.CUSTOMIZATION[stage],selected=engine.s.decor[stage];
- dom.customizer.innerHTML=`<div class="custom-card"><button class="custom-nav" data-action="custom-back" aria-label="Previous customization stage" ${customStage===0?'disabled':''}>${A.icon('back')}</button><div class="custom-options">${choices.map(id=>`<button class="custom-choice ${id===selected?'selected':''}" data-custom-stage="${stage}" data-custom-value="${id}" aria-label="Choose ${stage} ${id}">${decorChoice(stage,id)}</button>`).join('')}</div><button class="custom-nav" data-action="custom-next" aria-label="Next customization stage">${A.icon('arrow')}</button><div class="custom-stage-icon" aria-hidden="true">${A.icon(icon)}</div><div class="custom-dots">${CUSTOM_STAGES.map((_,i)=>`<span class="custom-dot ${i===customStage?'on':''}"></span>`).join('')}</div></div>`;
+ dom.customizer.innerHTML=`<div class="custom-card"><button class="custom-nav" data-action="custom-back" aria-label="Previous customization stage" ${customStage===0?'disabled':''}>${A.icon('back')}</button><div class="custom-options" style="--choices:${choices.length}">${choices.map(id=>`<button class="custom-choice ${id===selected?'selected':''}" data-custom-stage="${stage}" data-custom-value="${id}" aria-label="Choose ${stage==='tablecloth'?'tablecloth':stage} ${id}" aria-pressed="${id===selected}">${decorChoice(stage,id)}</button>`).join('')}</div><button class="custom-nav" data-action="custom-next" aria-label="Next customization stage">${A.icon('arrow')}</button><div class="custom-stage-icon" aria-hidden="true">${A.icon(icon)}</div><div class="custom-dots">${CUSTOM_STAGES.map((_,i)=>`<span class="custom-dot ${i===customStage?'on':''}"></span>`).join('')}</div></div>`;
 }
 function openRestaurant(){sound.unlock();feedback('hello');dom.customizer.hidden=true;dom.kitchen.hidden=true;dom.ui.hidden=false;dom.modal.innerHTML='';mode='world';hudSignature='';npcPaths.clear();idle=0;spawnClock=0;
  if(engine.s.completed)engine.newDay();if(!engine.s.customers.length&&engine.s.issued<R.DAY_TARGET)engine.spawn(1);save();updateHUD(true);resize();if(engine.s.prep)openCooking();}
@@ -154,7 +146,7 @@ function updateWorld(dt){const s=engine.s;saveClock+=dt;spawnClock+=dt;idle+=dt;
 function burst(x,y,n=16,colour='#e4a8d1'){if(engine.s.settings.reduced)n=Math.min(7,n);for(let i=0;i<n;i++){const a=i*Math.PI*2/n;particles.push({x,y,vx:Math.cos(a)*(30+Math.random()*100),vy:Math.sin(a)*80-70,life:1.2+Math.random()*.6,size:4+Math.random()*5,colour:i%3===0?'#fff0b4':i%3===1?colour:'#b9daca'});}}
 function drawMeal(c,dish,variant,x,y,w,h,prep=null){c.save();c.translate(x-w/2,y-h);c.scale(w/320,h/280);A.drawFood(c,dish,variant,prep,clock);c.restore();}
 function drawActor(key,x,y,h,flip=false,bounce=0,tilt=0){const im=A.images[key];if(!im)return;A.ellipse(ctx,x,y,Math.min(38,h*.29),h*.092,'#62496b24');ctx.save();ctx.translate(x,y-bounce);ctx.rotate(tilt);A.sprite(ctx,key,0,0,h*1.35,h,flip);ctx.restore();}
-function drawWorld(){ctx.setTransform(dpr,0,0,dpr,0,0);ctx.fillStyle='#baaccb';ctx.fillRect(0,0,width,height);const p=engine.s.player;const preview=mode==='customize'||mode==='loading';const sc=Math.max(width/1800,height/1100,width<600?.52:.46);view.scale=sc;const vw=width/sc,vh=height/sc,targetX=R.clamp((preview?900:p.x)-vw*.5,0,Math.max(0,1800-vw)),targetY=R.clamp((preview?600:p.y-65)-vh*.5,0,Math.max(0,1100-vh));view.x=targetX;view.y=targetY;ctx.save();ctx.scale(sc,sc);ctx.translate(-view.x,-view.y);if(A.images.restaurant)ctx.drawImage(A.images.restaurant,0,0,1800,1100);A.drawDecorLayer(ctx,engine.s.decor);A.drawSinkWorld(ctx,clock);for(let i=0;i<R.TABLES.length;i++){const t=R.TABLES[i];A.drawTableFurniture(ctx,t.food.x,t.food.y,engine.s.decor,t.symbol,t.colour,clock);}if(!preview){
+function drawWorld(){ctx.setTransform(dpr,0,0,dpr,0,0);ctx.fillStyle='#baaccb';ctx.fillRect(0,0,width,height);const p=engine.s.player;const preview=mode==='customize'||mode==='loading';const sc=Math.max(width/1800,height/1100,width<600?.52:.46);view.scale=sc;const vw=width/sc,vh=height/sc,targetX=R.clamp((preview?712:p.x)-vw*.5,0,Math.max(0,1800-vw)),targetY=R.clamp((preview?600:p.y-65)-vh*.5,0,Math.max(0,1100-vh));view.x=targetX;view.y=targetY;ctx.save();ctx.scale(sc,sc);ctx.translate(-view.x,-view.y);A.drawRoom(ctx,engine.s.decor);A.drawSinkWorld(ctx,clock);for(let i=0;i<R.TABLES.length;i++){const t=R.TABLES[i];A.drawTableFurniture(ctx,t.food.x,t.food.y,engine.s.decor,t.symbol,t.colour,clock);}if(!preview){
   if(path.length){ctx.save();ctx.strokeStyle='#fff6cfb8';ctx.lineWidth=8;ctx.setLineDash([2,24]);ctx.lineCap='round';ctx.beginPath();ctx.moveTo(p.x,p.y);for(const q of path)ctx.lineTo(q.x,q.y);ctx.stroke();ctx.restore();}
   for(let i=0;i<R.TABLES.length;i++){const t=R.TABLES[i],state=engine.s.tables[i];if(state.status==='dirty')A.drawDirtyDish(ctx,t.food.x,t.food.y-15,1);if(state.status==='dirty'){ctx.save();ctx.globalAlpha=.65+.15*Math.sin(clock*3);A.ellipse(ctx,t.meet.x,t.meet.y,48,22,'#ffffff12','#d7f4f0',5);ctx.restore();}}
   if(engine.nextOrder()&&!engine.s.tray&&!engine.s.dirtyTray){ctx.save();ctx.globalAlpha=.5+.16*Math.sin(clock*3);ctx.strokeStyle='#fff0b4';ctx.lineWidth=6;ctx.beginPath();ctx.ellipse(R.KITCHEN.x,R.KITCHEN.y,71,29,0,0,Math.PI*2);ctx.stroke();ctx.restore();A.star(ctx,997,315,12,'#fff2bb',clock*.25);}

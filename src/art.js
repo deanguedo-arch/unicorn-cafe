@@ -1,4 +1,4 @@
-/* Rainbow Restaurant v1.2.0 — original editable food/furniture illustrations + sourcepack sprite renderer.
+/* Rainbow Restaurant v1.2.1 — original editable food/furniture illustrations + sourcepack sprite renderer.
  * Production character pixels live in assets/. No emoji or remote fonts.
  */
 (function(){'use strict';
@@ -162,6 +162,7 @@ function iconSVG(name){
  cup:'<path d="M16 11h32l-4 45H20Z" fill="#f8e8f0"/><path d="M21 27h22"/>',
  bubbles:'<circle cx="19" cy="39" r="10" fill="#dff8ff"/><circle cx="36" cy="25" r="13" fill="#f6ecff"/><circle cx="49" cy="44" r="9" fill="#dff8ff"/><circle cx="13" cy="18" r="6" fill="#fff"/>',
  sink:'<path d="M7 20h50v32H7Z" fill="#b9d3d7"/><ellipse cx="32" cy="30" rx="18" ry="10" fill="#7ca8b4"/><path d="M32 20V8h13q8 0 8 8"/>',
+ cloth:'<path d="M6 23q26-23 52 0v25q-8 13-16 4-10 14-21 0-8 9-15-4Z" fill="#ecc5d8"/><path d="M6 24q26 20 52 0M18 33v18m27-18v18" stroke="#b08db9"/><path d="m23 15 7-5 7 6-7 5Z" fill="#fff3c4"/>',
  floor:'<path d="M6 9h52v46H6Z" fill="#e5d7e8"/><path d="M6 25h52M6 41h52M23 9v46M41 9v46"/>',
  wall:'<path d="M7 8h50v49H7Z" fill="#b8a8d0"/><path d="m13 45 10-8 9 6 13-12 12 9"/>',
  chair:'<path d="M16 9h32v29H16Z" fill="#ad8bc3"/><path d="M19 38 14 57m31-19 5 19M12 36h40"/>',
@@ -188,39 +189,79 @@ function badge(c,name,x,y,r,col){
  else{for(let i=0;i<5;i++){const a=i*Math.PI*2/5;ellipse(c,x+Math.cos(a)*r*.32,y+Math.sin(a)*r*.32,r*.28,r*.28,'#fffdf2');}ellipse(c,x,y,r*.19,r*.19,'#efd286');}
  c.restore();
 }
-function drawDecorLayer(c,d){
- c.save();c.beginPath();c.rect(38,325,1723,705);c.clip();
- if(d.flooring==='mint'){c.fillStyle='#bce4d833';c.fillRect(38,325,1723,705);for(let y=350;y<1030;y+=95)for(let x=65;x<1760;x+=95){c.save();c.translate(x+(y%190?47:0),y);c.rotate(Math.PI/4);rect(c,-8,-8,16,16,4,'#79bea833',null);c.restore();}}
- else if(d.flooring==='peach'){c.fillStyle='#f7c7a32b';c.fillRect(38,325,1723,705);for(let y=355;y<1030;y+=86)for(let x=65;x<1760;x+=86)ellipse(c,x+(y%172?43:0),y,19,8,'#efac8b25',null);}
- else{c.fillStyle='#cdb7e22b';c.fillRect(38,325,1723,705);for(let y=340;y<1030;y+=92){c.strokeStyle='#ab8cc722';c.lineWidth=2;c.beginPath();c.moveTo(38,y);c.lineTo(1761,y);c.stroke();}}
- c.restore();
- c.save();c.beginPath();c.rect(38,28,1723,285);c.clip();
- if(d.wallpaper==='rainbow'){const cols=['#f2a8c5','#f4c77b','#a9d9cb','#abcce8','#c7afe3'];for(let i=0;i<10;i++){c.fillStyle=cols[i%cols.length]+'22';c.fillRect(38+i*173,28,175,285);}}
- else if(d.wallpaper==='garden'){c.fillStyle='#9ed1b522';c.fillRect(38,28,1723,285);for(let x=75;x<1750;x+=115){heart(c,x,70+(x%230),8,'#f3b6c755');star(c,x+35,115+(x%170),7,'#ffe2a455');}}
- else{c.fillStyle='#745c9a1f';c.fillRect(38,28,1723,285);for(let x=80;x<1750;x+=120)star(c,x,72+(x%180),5,'#fff3b055');}
+// v1.2.1: complete painted objects; no furniture is baked into the room floor.
+const roomCache={};
+function drawRoom(c,d){
+ const key=d.flooring+':'+d.wallpaper;
+ if(!roomCache[key]){
+  for(const stale of Object.keys(roomCache))delete roomCache[stale];
+  const layer=document.createElement('canvas');layer.width=1800;layer.height=1100;const z=layer.getContext('2d');
+  z.fillStyle='#3d2f58';z.fillRect(0,0,1800,1100);
+  z.drawImage(images['room_floor_'+d.flooring],35,20,1730,1060);
+  z.drawImage(images['room_wall_'+d.wallpaper],35,20,1730,300);
+  // Small warm bevels frame the playable room. All furniture is separate.
+  rect(z,25,12,1750,18,7,grad(z,12,30,'#a99ac1','#56446e'),'#423257',3);
+  rect(z,29,308,1742,23,6,grad(z,308,331,'#bd94ae','#705574'),'#654867',3);
+  rect(z,12,20,27,1060,10,grad(z,20,1078,'#9375a9','#554068'),'#413052',4);
+  rect(z,1762,20,26,1060,10,grad(z,20,1078,'#9375a9','#554068'),'#413052',4);
+  rect(z,25,1063,1749,23,9,grad(z,1063,1086,'#bda2c4','#614969'),'#4b365b',4);
+  sprite(z,'room_window',227,229,252,206);sprite(z,'room_window',1527,241,266,219);
+  for(const x of [394,1380]){z.save();z.shadowColor='#ffd99099';z.shadowBlur=28;sprite(z,'room_lamp',x,319,76,181);z.restore();}
+  // Image-generated counters, oven/stove, refrigerator and prep appliances.
+  z.save();z.shadowColor='#3d254144';z.shadowBlur=17;z.shadowOffsetY=9;sprite(z,'painted_kitchen',895,319,909,298);z.restore();
+  sprite(z,'room_sofa',209,517,269,180);
+  sprite(z,'room_plant',1661,645,102,122);sprite(z,'room_plant',1105,997,96,112);
+  // Reuse the original adventure doorway as the customer entrance, without combat.
+  sprite(z,'room_door',236,1045,162,166);
+  roomCache[key]=layer;
+ }
+ c.drawImage(roomCache[key],0,0);
+}
+function drawDecorLayer(c,d){drawRoom(c,d);}
+function clothOf(d){return d.tablecloth||d.tabletop||'honey';}
+function tableSpriteKey(d){return 'table_'+d.tableType+'_'+clothOf(d);}
+function drawTableFurniture(c,x,y,d,symbol,col,t=0,marker=true){
+ c.save();ellipse(c,x,y+106,116,24,'#47325225');
+ // Complete sourcepack chairs are behind one complete table sprite, not over a
+ // background table, and their transforms do not depend on cloth selection.
+ sprite(c,'chair_'+d.chairs,x-91,y+58,92,96,false);
+ sprite(c,'chair_'+d.chairs,x+91,y+58,92,96,true);
+ const im=images[tableSpriteKey(d)];
+ if(im){const w=d.tableType==='oval'?213:194,h=172;c.drawImage(im,x-w/2,y-62,w,h);}
+ // The chosen prop is independent; generated fixed props were removed offline.
+ if(d.decoration==='flowers')sprite(c,'flowers',x,y+12,54,55);
+ else if(d.decoration==='teapot')sprite(c,'teapot',x,y+8,52,49);
+ else if(d.decoration==='cookies'){sprite(c,'cookie',x-12,y+10,36,28);sprite(c,'cookie',x+13,y+6,35,29);}
+ else{sprite(c,'star',x,y+4,46,44);}
+ // The permanent white ring and dark stroke preserve shape/colour contrast on
+ // every cloth. The marker covers the master art's decorative heart motif.
+ if(marker)badge(c,symbol,x,y+77,27,col);
  c.restore();
 }
-function chairColour(kind,i=0){if(kind==='mint')return ['#9ad6c4','#74bba9'][i%2];if(kind==='rainbow')return ['#ef92b9','#efc66f','#85cfc3','#91bde2','#b598db'][i%5];return ['#ab78ca','#885bad'][i%2];}
-function drawChair(c,x,y,kind,i=0,flip=false){c.save();c.translate(x,y);if(flip)c.scale(-1,1);const col=chairColour(kind,i);rect(c,-39,-31,78,58,18,col,'#5a426d',4);rect(c,-33,14,66,27,14,grad(c,14,41,col,'#7e5d90'),'#5a426d',4);line(c,[[-26,38],[-31,61],[25,38],[31,61]],'#5a426d',7);heart(c,0,-4,12,'#fff1d7');c.restore();}
-function drawTableFurniture(c,x,y,d,symbol,col,t=0){
- drawChair(c,x-86,y+34,d.chairs,0,false);drawChair(c,x+86,y+34,d.chairs,1,true);
- c.save();c.translate(x,y);const top=d.tabletop==='cream'?'#f9e7ca':d.tabletop==='berry'?'#d99bb7':'#d99b62',rim=d.tabletop==='cream'?'#c59a85':d.tabletop==='berry'?'#9c627e':'#945f51';
- if(d.tableType==='oval'){ellipse(c,0,0,110,55,grad(c,-55,55,top,rim),'#594064',5);}
- else if(d.tableType==='clover'){for(const [xx,yy] of [[-47,0],[47,0],[0,-29],[0,29]])ellipse(c,xx,yy,64,46,top,'#594064',4);ellipse(c,0,0,73,48,grad(c,-45,48,top,rim),null);}
- else ellipse(c,0,0,91,60,grad(c,-60,60,top,rim),'#594064',5);
- line(c,[[-38,46],[-48,90],[38,46],[48,90]],'#6d4751',10);
- if(d.decoration==='flowers'){rect(c,-15,-19,30,34,8,'#9f86c4','#594064',3);for(let i=0;i<5;i++){const a=i*Math.PI*2/5;ellipse(c,Math.cos(a)*16,-22+Math.sin(a)*9,9,7,['#fff2b0','#f2a4c2','#fff8e8'][i%3],'#8b688d',2);}}
- else if(d.decoration==='stars'){star(c,0,-14,24,'#ffe18b',t*.2);star(c,-28,-7,9,'#ef9fc0',t*.3);star(c,30,-4,8,'#9fd4d0',t*.4);}
- else if(d.decoration==='teapot'){rect(c,-21,-28,42,33,14,'#b7a4d8','#594064',3);ellipse(c,0,-28,15,7,'#e8daf4','#594064',2);heart(c,0,-11,10,'#fff0b0');line(c,[[20,-18],[36,-11],[22,-3]],'#594064',5);}
- else {ellipse(c,-17,-11,15,11,'#be8057','#6e4e54',2);ellipse(c,16,-7,15,11,'#c98c61','#6e4e54',2);for(const q of [[-21,-13],[-13,-6],[11,-10],[20,-4]])ellipse(c,q[0],q[1],3,3,'#6b514b',null);}
- c.restore();badge(c,symbol,x,y+72,21,col);
+function drawSinkWorld(c,t=0){
+ c.save();sprite(c,'painted_sink',1583,478,234,216);
+ for(let i=0;i<3;i++){const a=.45+.18*Math.sin(t*2+i);c.globalAlpha=a;star(c,1510+i*28,340+(i%2)*19,5+i,'#fff1ad',t*.1);}
+ c.restore();
 }
-function drawSinkWorld(c,t=0){c.save();c.translate(1460,314);rect(c,-86,-27,172,60,18,'#c5d8dc','#604a6d',4);ellipse(c,0,-1,55,21,'#759da7','#ffffffcc',4);line(c,[[0,-22],[0,-57],[35,-57],[35,-38]],'#755b7f',7);ellipse(c,36,-34,5,8,'#a7e4ee',null);for(let i=0;i<3;i++)ellipse(c,-30+i*28,16+Math.sin(t*2+i)*3,8,7,'#ebfbffcc','#a2cfda',2);c.restore();}
-function drawDirtyDish(c,x,y,scale=1){c.save();c.translate(x,y);c.scale(scale,scale);ellipse(c,0,0,56,17,'#ece4ef','#5a426d',4);ellipse(c,0,-4,45,12,'#fff9ef','#cbb9d3',3);for(const q of [[-22,-8],[7,-7],[24,-1],[-5,3]])ellipse(c,q[0],q[1],6,3,'#b98265',null);line(c,[[-25,5],[20,2]],'#bd9aaa',3);c.restore();}
-function drawWash(c,progress,t=0){
- rect(c,38,34,244,208,38,grad(c,34,242,'#d9eef0','#9fc9d1'),'#5c496c',5);ellipse(c,160,143,91,48,'#79aeb8','#e7fbff',5);drawDirtyDish(c,160,142,1.05);const n=progress*5+4;for(let i=0;i<n;i++){const a=i*1.7+t*.4,rr=35+(i%4)*13;ellipse(c,160+Math.cos(a)*rr,135+Math.sin(a)*rr*.55,7+(i%3)*3,7+(i%3)*3,['#e9fbffdd','#f5eaffdd','#fff8dadd'][i%3],'#a7d4dc',2);}if(progress>=1){for(let i=0;i<7;i++)star(c,84+i*25,67+(i%2)*22,7,['#fff0a8','#f6b4d1','#b4e4df'][i%3],t*.4);}
+function customData(stage,id,decor){
+ const d={...decor,[stage]:id};const key='custom:'+stage+':'+id+':'+d.tableType+':'+clothOf(d)+':'+d.decoration+':'+d.chairs;
+ if(cache[key])return cache[key];
+ const v=document.createElement('canvas');v.width=240;v.height=190;const c=v.getContext('2d');
+ if(stage==='chairs'){sprite(c,'chair_'+id,120,182,169,172);}
+ else if(stage==='decoration'){const k=id==='stars'?'star':id==='cookies'?'cookie':id;sprite(c,k,120,168,138,150);}
+ else if(stage==='flooring'||stage==='wallpaper'){
+  const im=images[(stage==='flooring'?'room_floor_':'room_wall_')+id];c.save();rect(c,12,20,216,148,24,'#fff8ec','#725479',5);c.clip();c.drawImage(im,12,20,216,148);c.restore();
+ }else{
+  const im=images[tableSpriteKey(d)];if(im){const w=d.tableType==='oval'?223:198;c.drawImage(im,120-w/2,2,w,184);}
+ }
+ cache[key]=v.toDataURL('image/png');return cache[key];
 }
 
-async function load(){const failures=[];await Promise.all(Object.entries(window.RR_ASSETS).map(([key,url])=>new Promise(resolve=>{const im=new Image();let settled=false;const end=ok=>{if(settled)return;settled=true;clearTimeout(timer);if(ok)images[key]=im;else failures.push(key);resolve();};const timer=setTimeout(()=>end(false),15000);im.onload=()=>end(true);im.onerror=()=>end(false);im.src=url;})));if(failures.length)throw new Error('Could not load: '+failures.join(', '));return images;}
-Object.assign(A,{images,load,sprite,drawFood,foodData,toolData,icon,iconSVG,badge,drawDecorLayer,drawTableFurniture,drawSinkWorld,drawDirtyDish,drawWash,rect,ellipse,poly,line,heart,star,steam,grad,shine,plate});window.RRArt=A;
+function drawDirtyDish(c,x,y,scale=1){c.save();c.translate(x,y);c.scale(scale,scale);ellipse(c,0,0,56,17,'#ece4ef','#5a426d',4);ellipse(c,0,-4,45,12,'#fff9ef','#cbb9d3',3);for(const q of [[-22,-8],[7,-7],[24,-1],[-5,3]])ellipse(c,q[0],q[1],6,3,'#b98265',null);line(c,[[-25,5],[20,2]],'#bd9aaa',3);c.restore();}
+function drawWash(c,progress,t=0){
+ if(images.painted_sink)c.drawImage(images.painted_sink,24,6,272,259);ellipse(c,141,144,83,34,'#79aeb899','#e7fbff',3);drawDirtyDish(c,160,142,1.05);const n=progress*5+4;for(let i=0;i<n;i++){const a=i*1.7+t*.4,rr=35+(i%4)*13;ellipse(c,160+Math.cos(a)*rr,135+Math.sin(a)*rr*.55,7+(i%3)*3,7+(i%3)*3,['#e9fbffdd','#f5eaffdd','#fff8dadd'][i%3],'#a7d4dc',2);}if(progress>=1){for(let i=0;i<7;i++)star(c,84+i*25,67+(i%2)*22,7,['#fff0a8','#f6b4d1','#b4e4df'][i%3],t*.4);}
+}
+
+async function load(){const failures=[];await Promise.all(Object.entries(window.RR_ASSETS).map(([key,url])=>new Promise(resolve=>{const im=new Image();im.crossOrigin='anonymous';let settled=false;const end=ok=>{if(settled)return;settled=true;clearTimeout(timer);if(ok)images[key]=im;else failures.push(key);resolve();};const timer=setTimeout(()=>end(false),15000);im.onload=()=>end(true);im.onerror=()=>end(false);im.src=url;})));if(failures.length)throw new Error('Could not load: '+failures.join(', '));return images;}
+Object.assign(A,{images,load,sprite,drawFood,foodData,toolData,icon,iconSVG,badge,drawRoom,customData,tableSpriteKey,drawDecorLayer,drawTableFurniture,drawSinkWorld,drawDirtyDish,drawWash,rect,ellipse,poly,line,heart,star,steam,grad,shine,plate});window.RRArt=A;
 })();

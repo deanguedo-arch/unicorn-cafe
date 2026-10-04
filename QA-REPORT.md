@@ -1,91 +1,36 @@
-# Sneaky Unicorn: Rainbow Restaurant v1.2.0 — QA report
+# Rainbow Restaurant v1.2.1 — QA report
 
-Build date: 2026-10-03  
-Baseline: v1.1.0  
-Status: release candidate passed the automated checks described below. Nothing was deployed.
+## What this release changes
+This is a repair of the delivered **v1.2.0** restaurant, not a parallel game or a return to the old cooking minigame. The old restaurant image contained fixed furniture. The previous selector painted different tables/chairs over that image, creating the reported overlaps. v1.2.1 no longer loads that background: the room, kitchen/sink, chairs, table and marker are independent render elements.
 
-## What was actually tested
+The patch adds an explicit **tablecloth** stage within the same six-stage setup, with four draped cloth choices and three table shapes (12 complete table/cloth frames). The phone setup camera centres a complete preview table. Original sourcepack chairs, sofa, plants, lamp and doorway are reused; kitchen/stove/sink and cloth material come from image-generated art segmented into reusable assets. New tables are composed offline as single coherent frames, not assembled as overlapping runtime ellipses.
 
-### Deterministic production rules — PASS 13/13 groups
+The nine recipes, 18 dish/variation definitions, engine lifecycle methods, original food preparation renderer and **56 existing character/food artwork files** were compared against v1.2.0 and remain byte-identical. Other code changes are limited to interior rendering, preview/binding, safe decor migration, image CORS handling for canvas thumbnails, visible furniture footprints, the darker orange table marker and version/cache metadata. The original v1.1.0/v1.2.0 downloadable files were hash-checked and not altered.
 
-Executed with Node v22.16.0 against the shipped `src/engine.js`.
+## Executed checks
 
-Coverage includes:
-- exactly nine menu items and two order-relevant variants per item (18 combinations total);
-- all 18 combinations through serve → eat → dirty table → guest leaves → dirty-dish pickup → wash → table released;
-- all three cupcake sprinkle decorations remain free decoration and do not affect correctness;
-- wrong ingredient variant, wrong dish and wrong table retain the meal without a penalty;
-- dirty tables cannot be reused until the dish is returned and washed;
-- nine-meal day completion and new-day preservation;
-- v1.1 pending-order/cooking migration and completed-seven-meal migration into the two new dishes;
-- corrupt/unavailable-shaped saves safely rejected;
-- pathfinding to kitchen, sink and all five service points without entering collision obstacles;
-- snapshot isolation.
+| Check set | Actual coverage/result |
+|---|---|
+| Deterministic production engine | **13/13 passed**. All 18 food/variation combinations; free cupcake sprinkles; right/wrong dish, ingredient and table; remake; eat/clear/dirty-dish return/wash; day completion/replay; v1.1 migration; invalid saves; paths to kitchen, sink and all five table service points. |
+| Chromium production interaction suite | **14/14 groups passed**, no uncaught exceptions or console errors in the successful runs. Includes a natural first customer flow, all nine recipes via real picture buttons, free sprinkles, visible pizza/soup/ice-cream states, wrong-order recovery, carry guard, dish return/washing, mouse/keyboard/touch cancellation, protected reset and storage-shim restoration. |
+| Responsive layout within that suite | **24 scenes** at 320×568, 390×844, 430×932, 568×320, 844×390 and 1024×768, spanning setup/world/cooking/washing. Visible interactive controls checked for minimum 44-pixel dimensions and viewport containment. |
+| Additional art/selector repair checks | **9/9 passed**: original source preservation; clean alpha and solid surfaces in all 12 frames; production draw-count invariant across **1,296 configuration states**; nine distinct floor/wall renderings; all four cloth buttons at three phone/landscape sizes; v1.2.0 decor plus partial-cook/wash migration; marker contrast; embedded standalone boot; browser error collection. |
+| Safe-area simulation | **8/8 scenes passed** using injected CSS safe-area values. This is not a hardware notch test. |
+| Packaged art/static checks | **5/5 groups passed**, including decoding **85/85 WebP assets**, relative entry references, no external runtime URLs/known tracker endpoints, expected semantics and manifest paths. |
+| Offline service-worker harness | **9/9 passed** in Node with mocked Cache API/events and simulated network loss. Correct project-subdirectory URLs, current cache population, isolation from other app caches, query/navigation fallback and standalone SW suppression. |
 
-Machine-readable record: `tests/engine-results.json` in the editable-source package.
+The 1,296 figure is an automated production renderer/configuration check, **not** 1,296 manually played games or individually approved screenshots. The renderer is checked to draw exactly one selected table frame and two chair sprites per table. The 12 table frames and representative actual production screenshots were visually inspected. The five marker fill/white-glyph contrasts are 3.26:1, 4.07:1, 3.51:1, 4.89:1 and 3.72:1; the outer white/dark ring is approximately 10.09:1. Their rings/shapes do not change with furniture selection.
 
-### Chromium production UI — PASS 14/14 groups
+**Final package verification: 104/104 HTTP byte checks and 11/11 ZIP/source-rebuild integrity checks passed.** The standalone HTML rebuilt from the packaged source and regenerated assets byte-for-byte. Detailed results are recorded in `tests/http-results.json` and `tests/package-results.json` in the editable kit. These checks compare extracted/rebuilt bytes, ZIP CRCs, relative paths and SHA256 manifests; they are not device tests.
 
-Executed with Chromium 144.0.7559.96 through Playwright. The exact shipped HTML/CSS/JS was run with `page.set_content` because direct local/HTTP browser navigation is blocked by administrator policy in this environment. Requests for the package's image files were fulfilled from the actual build directory. No browser security permissions or policy were changed.
+## Browser method and limits
+Chromium **144.0.7559.96**, Playwright, Python 3.13.5 and Node 22.16.0 in the execution container. Direct navigation to the local test server was attempted and returned **ERR_BLOCKED_BY_ADMINISTRATOR**. That restriction remained in place.
 
-Verified in that browser harness:
-- six picture-only customization stages, immediate live preview and picture open action;
-- a natural first guest lifecycle through arrival, order, cooking, carrying and correct table delivery;
-- no accidental meal carry caused by the final cooking tap;
-- all nine dishes cooked/served through actual picture buttons (one order variation per dish in browser coverage), including pancakes and smoothie;
-- all three free cupcake sprinkle choices;
-- visible pizza topping placement, soup vegetable fill/stir swirls and ice-cream scoop stacking;
-- wrong ingredient and wrong-dish side-by-side visual compare plus remake/keep recovery;
-- clear dish → carry to sink → rub/tap wash → sparkle → table release;
-- mouse drag, keyboard movement and touch-pointer cancellation paths;
-- partial persistence, v1.1 migration and corrupt-save fallback using an explicitly labelled Storage-compatible in-memory persistence shim across document recreation;
-- a genuine unavailable-storage condition (`about:blank` localStorage denial) stays playable;
-- protected parent reset requires two explicit actions;
-- currently visible DOM images decode to real pixels;
-- no uncaught page exceptions or console errors in successful runs.
+The browser suite runs the exact production HTML/CSS/JavaScript using Playwright `set_content`; local packaged image bytes are fulfilled through a test route. The new standalone file is also booted with its own embedded assets. A QA flag exposes existing production state for fixtures. Some flows begin with controlled fixtures; the initial customer flow is exercised naturally. No game engine or renderer is replaced by a simulation in these Chromium interaction checks.
 
-Responsive production scenes: **24/24** across 320×568, 390×844, 430×932, 568×320, 844×390 and 1024×768, each in customize/world/cook/wash states. Visible controls remained at least 44 CSS px and within the viewport in this coverage.
+Browser persistence checks explicitly use a Storage-compatible in-memory shim across document recreation. Real about:blank storage denial is also exercised. Native-origin storage persistence is not claimed. Offline event/cache tests are separate Node simulations; HTTP byte checks use Python requests, not browser navigation.
 
-A separate safe-area browser check explicitly injected iPhone-like CSS insets (390×844 with 47 px top/34 px bottom; 844×390 with 47 px left/right and 21 px bottom) and passed **8/8** customize/world/cook/wash scenes with all visible buttons inside the simulated safe rectangle and at least 44 px. This is CSS-inset simulation, not physical notch/Dynamic Island hardware verification.
+**Not tested:** physical iPhone/iPad, Safari/WebKit rendering, Home Screen installation, real installed-PWA offline restart/update, hardware safe areas, speaker audibility, haptic sensation or physical multi-touch performance. No claim is made that every device behaves identically or that all future defects are excluded. Browser administration policies and project settings were not changed.
 
-Important precision: wrong-table handling is covered by the deterministic production-engine test, while the browser run verifies correct table delivery/markers and wrong ingredient/dish visual comparison. A synthetic wrong-table canvas hit test was not counted as a browser pass because it was unreliable under the `set_content` harness.
-
-Machine-readable record and screenshots: `tests/browser-results.json` and `tests/*.png` in the editable-source package.
-
-### Static runtime/assets — PASS 5/5 groups
-
-Exact production file inspection verified all index-relative references, Pillow decoding of all 57 WebP/PNG production images, v1.2 semantic markers, relative PWA manifest behavior, and no external runtime URL/tracker endpoints (the W3C SVG namespace string is markup metadata, not a network endpoint). Machine-readable record: `tests/static-results.json`.
-
-### Local HTTP byte integrity — PASS 74/74 files
-
-A local Python HTTP server returned every current production-build file byte-for-byte identically to disk; image responses were decoded during this check where applicable. This is an HTTP transfer/package integrity check, **not** browser navigation. Machine-readable record: `tests/http-results.json`.
-
-### Offline/package logic — PASS 9/9 groups
-
-Executed with a Node service-worker/Cache API harness against the shipped `sw.js` and manifest. It verifies the 68-item nested-path-safe precache, scoped old-cache cleanup, cached/offline navigation behavior, all 57 artwork assets, external/out-of-scope request non-interception, local icons/manifest, and the standalone embed/suppression behavior.
-
-This is **not** a real browser service-worker installation or true device offline-relaunch test. Machine-readable record: `tests/offline-results.json`.
-
-## Production defects repaired during this pass
-
-- Added a global `[hidden]{display:none!important}` rule after a CSS regression let flex/grid declarations override the HTML `hidden` attribute and cover the restaurant/customization screen.
-- Raised small phone/landscape controls to at least 44 px in tested layouts.
-- Constrained cooking/washing grid tracks so the sink wash action remains visible at 1024×768 and smaller viewports.
-
-## Not verified / limitations
-
-The following were **not** physically or natively verified and are not claimed as tested:
-- physical iPhone/iPad hardware;
-- Safari/WebKit rendering or touch/audio/haptic behavior on an actual iPhone;
-- Add to Home Screen installation;
-- native-origin browser localStorage persistence across a real hosted reload (browser persistence logic was tested with the labelled shim described above);
-- real service-worker installation/update lifecycle in a navigated browser page;
-- true installed web-app offline relaunch;
-- notch/Dynamic Island combinations beyond CSS safe-area declarations and viewport simulation;
-- speaker/audio quality or hardware vibration.
-
-Direct browser navigation to local/HTTP URLs was blocked by environment policy (`ERR_BLOCKED_BY_ADMINISTRATOR`), so no claim is made that the browser was navigated to a hosted copy. The production files themselves were executed in Chromium as described above.
-
-## Privacy/security boundary
-
-Runtime inspection found no external runtime dependency, analytics, advertising, payments, account system, child name field or intentional external data collection. The service worker handles only same-origin requests within its own project scope.
+## Reproducibility and provenance
+The source kit includes production code/assets, original generated/sourcepack art references, asset preparation/refinement scripts, test scripts and machine-readable results. All tablecloth/stove/sink visuals in the playable build are real local image assets; image-generation concept scenes are not passed off as screenshots of game execution. No generated customer replacements are used.
