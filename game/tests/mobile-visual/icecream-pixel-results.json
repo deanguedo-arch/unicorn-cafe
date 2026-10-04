@@ -1,0 +1,262 @@
+{
+  "method": "Actual renderer pixels compared with an expanded canvas, both flavours at six preparation states; full card pictures have transparent padding on all four edges.",
+  "passed": 14,
+  "results": [
+    {
+      "variant": "strawberry",
+      "step": 1,
+      "p": 0,
+      "frame": {
+        "left": 111,
+        "top": 125,
+        "right": 208,
+        "bottom": 265,
+        "count": 8462
+      },
+      "expanded": {
+        "left": 151,
+        "top": 185,
+        "right": 248,
+        "bottom": 325,
+        "count": 8462
+      }
+    },
+    {
+      "variant": "strawberry",
+      "step": 2,
+      "p": 0,
+      "frame": {
+        "left": 111,
+        "top": 125,
+        "right": 208,
+        "bottom": 265,
+        "count": 8462
+      },
+      "expanded": {
+        "left": 151,
+        "top": 185,
+        "right": 248,
+        "bottom": 325,
+        "count": 8462
+      }
+    },
+    {
+      "variant": "strawberry",
+      "step": 2,
+      "p": 1,
+      "frame": {
+        "left": 109,
+        "top": 70,
+        "right": 210,
+        "bottom": 265,
+        "count": 13223
+      },
+      "expanded": {
+        "left": 149,
+        "top": 130,
+        "right": 250,
+        "bottom": 325,
+        "count": 13223
+      }
+    },
+    {
+      "variant": "strawberry",
+      "step": 2,
+      "p": 2,
+      "frame": {
+        "left": 109,
+        "top": 41,
+        "right": 210,
+        "bottom": 265,
+        "count": 16155
+      },
+      "expanded": {
+        "left": 149,
+        "top": 101,
+        "right": 250,
+        "bottom": 325,
+        "count": 16155
+      }
+    },
+    {
+      "variant": "strawberry",
+      "step": 3,
+      "p": 0,
+      "frame": {
+        "left": 109,
+        "top": 12,
+        "right": 210,
+        "bottom": 265,
+        "count": 19088
+      },
+      "expanded": {
+        "left": 149,
+        "top": 72,
+        "right": 250,
+        "bottom": 325,
+        "count": 19088
+      }
+    },
+    {
+      "variant": "strawberry",
+      "step": 4,
+      "p": 0,
+      "frame": {
+        "left": 109,
+        "top": 12,
+        "right": 210,
+        "bottom": 265,
+        "count": 19088
+      },
+      "expanded": {
+        "left": 149,
+        "top": 72,
+        "right": 250,
+        "bottom": 325,
+        "count": 19088
+      }
+    },
+    {
+      "variant": "strawberry",
+      "card": {
+        "width": 118,
+        "height": 270,
+        "bounds": {
+          "left": 8,
+          "top": 8,
+          "right": 109,
+          "bottom": 261,
+          "count": 19088
+        }
+      }
+    },
+    {
+      "variant": "vanilla",
+      "step": 1,
+      "p": 0,
+      "frame": {
+        "left": 111,
+        "top": 125,
+        "right": 208,
+        "bottom": 265,
+        "count": 8462
+      },
+      "expanded": {
+        "left": 151,
+        "top": 185,
+        "right": 248,
+        "bottom": 325,
+        "count": 8462
+      }
+    },
+    {
+      "variant": "vanilla",
+      "step": 2,
+      "p": 0,
+      "frame": {
+        "left": 111,
+        "top": 125,
+        "right": 208,
+        "bottom": 265,
+        "count": 8462
+      },
+      "expanded": {
+        "left": 151,
+        "top": 185,
+        "right": 248,
+        "bottom": 325,
+        "count": 8462
+      }
+    },
+    {
+      "variant": "vanilla",
+      "step": 2,
+      "p": 1,
+      "frame": {
+        "left": 109,
+        "top": 69,
+        "right": 210,
+        "bottom": 265,
+        "count": 13204
+      },
+      "expanded": {
+        "left": 149,
+        "top": 129,
+        "right": 250,
+        "bottom": 325,
+        "count": 13204
+      }
+    },
+    {
+      "variant": "vanilla",
+      "step": 2,
+      "p": 2,
+      "frame": {
+        "left": 109,
+        "top": 40,
+        "right": 210,
+        "bottom": 265,
+        "count": 16095
+      },
+      "expanded": {
+        "left": 149,
+        "top": 100,
+        "right": 250,
+        "bottom": 325,
+        "count": 16095
+      }
+    },
+    {
+      "variant": "vanilla",
+      "step": 3,
+      "p": 0,
+      "frame": {
+        "left": 109,
+        "top": 11,
+        "right": 210,
+        "bottom": 265,
+        "count": 18984
+      },
+      "expanded": {
+        "left": 149,
+        "top": 71,
+        "right": 250,
+        "bottom": 325,
+        "count": 18984
+      }
+    },
+    {
+      "variant": "vanilla",
+      "step": 4,
+      "p": 0,
+      "frame": {
+        "left": 109,
+        "top": 11,
+        "right": 210,
+        "bottom": 265,
+        "count": 18984
+      },
+      "expanded": {
+        "left": 149,
+        "top": 71,
+        "right": 250,
+        "bottom": 325,
+        "count": 18984
+      }
+    },
+    {
+      "variant": "vanilla",
+      "card": {
+        "width": 118,
+        "height": 271,
+        "bounds": {
+          "left": 8,
+          "top": 8,
+          "right": 109,
+          "bottom": 262,
+          "count": 18984
+        }
+      }
+    }
+  ]
+}

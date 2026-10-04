@@ -94,6 +94,8 @@ function drawFood(c,dish,variant,prep=null,t=0){
   c.restore();return;
  }
  if(dish==='icecream'&&images.ice_cone){
+  // The three-scoop stack must fit the same 320x280 food frame as every card.
+  c.translate(160,28);c.scale(.88,.88);c.translate(-160,0);
   if(f(0)>0)sprite(c,'ice_cone',160,270,112,163);
   const count=Math.max(0,Math.min(3,s>2?3:s===2?Math.ceil(p):0));
   if(variant)for(let i=0;i<count;i++)sprite(c,variant==='strawberry'?'ice_strawberry':'ice_vanilla',160,154-i*33,115,107);
@@ -251,7 +253,22 @@ function toolData(name){
  if(images[name])return window.RR_ASSETS[name];
  const key='tool:'+name;if(!cache[key])cache[key]='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(iconSVG(name));return cache[key];
 }
-function foodData(dish,variant){const key=dish+':'+variant;if(!cache[key]){const c=document.createElement('canvas');c.width=320;c.height=280;drawFood(c.getContext('2d'),dish,variant);cache[key]=c.toDataURL('image/png');}return cache[key];}
+function foodData(dish,variant){
+ const key=dish+':'+variant;
+ if(!cache[key]){
+  const canvas=document.createElement('canvas');canvas.width=320;canvas.height=280;
+  const context=canvas.getContext('2d');drawFood(context,dish,variant);
+  if(dish==='icecream'){
+   // Tight portrait artwork lets object-fit contain scale the complete cone,
+   // rather than sizing a wide transparent canvas around a narrow drawing.
+   const pixels=context.getImageData(0,0,320,280).data;let left=320,top=280,right=-1,bottom=-1;
+   for(let y=0;y<280;y++)for(let x=0;x<320;x++)if(pixels[(y*320+x)*4+3]){left=Math.min(left,x);top=Math.min(top,y);right=Math.max(right,x);bottom=Math.max(bottom,y);}
+   if(right>=left){const margin=8,crop=document.createElement('canvas');crop.width=right-left+1+margin*2;crop.height=bottom-top+1+margin*2;crop.getContext('2d').drawImage(canvas,left,top,right-left+1,bottom-top+1,margin,margin,right-left+1,bottom-top+1);cache[key]=crop.toDataURL('image/png');}
+  }
+  if(!cache[key])cache[key]=canvas.toDataURL('image/png');
+ }
+ return cache[key];
+}
 function badge(c,name,x,y,r,col){
  c.save();ellipse(c,x,y,r,r,col,'#fffdf2',5);ellipse(c,x,y,r-4,r-4,col,'#4f3864',2);
  if(name==='heart')heart(c,x,y+4,r*.65,'#fffdf2');

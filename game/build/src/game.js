@@ -166,16 +166,49 @@ function ticketHTML(c){if(!c)return '';return `<div class="ticket">${imageHTML(g
 function kitchenHeader(c,retry=false){return `<div class="kitchen-header"><button class="small-round" data-action="leave-kitchen" aria-label="Back to restaurant">${A.icon('back')}</button><div class="kitchen-title-pic">${c?foodHTML(c.dish,c.variant):A.icon('chef')}${A.icon('chef')}</div>${retry?`<button class="small-round" data-action="restart-recipe" aria-label="Restart this recipe">${A.icon('retry')}</button>`:'<span></span>'}</div>`;}
 function openRecipeMenu(){toastUntil=0;$('toast').classList.remove('show');stopControls();mode='recipes';dom.ui.hidden=true;dom.customizer.hidden=true;dom.kitchen.hidden=false;const c=engine.customer(engine.s.active)||engine.nextOrder();if(!c){returnToWorld();return;}engine.selectOrder(c.id);save();dom.kitchen.innerHTML=kitchenHeader(c)+ticketHTML(c)+`<div class="menu-grid">${R.MENU.map(d=>{const r=R.RECIPES[d],v=d===c.dish?c.variant:r.variants[0].id;return `<button data-recipe="${d}" class="dish-card ${d===c.dish?'requested':''}" aria-label="Make ${r.name}${d===c.dish?', matching picture order':''}">${foodHTML(d,v)}${d===c.dish?`<span class="request-star">${A.icon('star')}</span>`:''}</button>`;}).join('')}</div>`;resize();announce(`Picture order is ${R.RECIPES[c.dish].name}, ${variantInfo(c.dish,c.variant).name}.`);}
 function startRecipe(dish){const c=engine.customer(engine.s.active);if(!c||!engine.startRecipe(c.id,dish))return;feedback('tap');save();openCooking();}
-function currentStepTool(p,st){if(st.tool==='topping'&&p.variant)return variantInfo(p.dish,p.variant).icon;if(st.tool==='fruit'&&p.variant)return variantInfo(p.dish,p.variant).icon;return st.tool;}
+function currentStepTool(p,st){
+ if(p.variant&&['topping','fruit'].includes(st.tool))return variantInfo(p.dish,p.variant).icon;
+ if(p.dish==='icecream'&&st.tool==='scoop')return p.variant==='vanilla'?'ice_vanilla':'ice_strawberry';
+ if(p.dish==='soup'&&st.tool==='chopper'&&p.variant)return variantInfo(p.dish,p.variant).icon;
+ if(p.dish==='smoothie'&&st.tool==='cup'&&p.variant)return 'smoothie_'+p.variant;
+ if(p.dish==='cupcake'&&st.tool==='whisk')return 'cupcake_batter';
+ return st.tool;
+}
+function customerOrderHTML(c){
+ if(!c)return '';
+ const flavour=variantInfo(c.dish,c.variant);
+ return `<section class="customer-order" aria-label="Customer order: ${flavour.name} ${R.RECIPES[c.dish].name}, ${R.TABLES[c.table].name}"><div class="order-person">${imageHTML(guestKey(c),'order-portrait')}<strong>Order</strong>${tableMarkHTML(c.table,'order-table')}</div>${foodHTML(c.dish,c.variant,'order-meal')}<strong class="order-dish-name">${R.RECIPES[c.dish].name}</strong><div class="order-flavour">${variantHTML(c.dish,c.variant,'order-ingredient')}<span>${flavour.name}</span></div></section>`;
+}
+function cookingActionHTML(tool,label,hint,action='prep',progress=null){
+ const count=progress&&progress.need>1?`<span class="action-progress" aria-label="${progress.p} of ${progress.need}">${Array.from({length:progress.need},(_,i)=>`<i class="${i<progress.p?'done':''}"></i>`).join('')}</span>`:'';
+ const picture=action==='carry'?A.icon('tray'):`<img src="${A.toolData(tool)}" alt="">`;
+ return `<button ${action==='prep'?'id="prep-action" ':''}class="picture-tool action-control ${action==='carry'?'carry':''}" data-action="${action}" aria-label="${label}. ${hint}"><span class="action-ingredient">${picture}</span><span class="action-copy"><strong>${label}</strong><small>${hint}</small>${count}</span><span class="action-arrow" aria-hidden="true">${A.icon('arrow')}</span></button>`;
+}
 function openCooking(){toastUntil=0;$('toast').classList.remove('show');stopControls();mode='cook';dom.ui.hidden=true;dom.customizer.hidden=true;dom.kitchen.hidden=false;kitchenSignature='';washCanvas=null;const p=engine.s.prep;if(!p){openRecipeMenu();return;}const c=engine.customer(p.orderId);engine.s.active=p.orderId;
- dom.kitchen.innerHTML=`<div class="cook-layout">${kitchenHeader(c,true)}<div class="recipe-banner">Make ${p.dish==='chicken'?'Roast Chicken':R.RECIPES[p.dish].name}!</div><div id="step-dots" class="step-dots"></div><div class="work-area"><canvas id="work-canvas" aria-label="Food preparation area. Tap or drag to prepare." tabindex="0"></canvas><div id="step-picture" class="step-picture"></div><div class="gesture-cue">${A.icon('hand')}</div></div><aside class="cook-order">${ticketHTML(c)}</aside><div id="cook-tools" class="cook-tools"></div></div>`;
+ dom.kitchen.innerHTML=`<div class="cook-layout">${kitchenHeader(c,true)}<div class="recipe-banner">Make ${p.dish==='chicken'?'Roast Chicken':R.RECIPES[p.dish].name}!</div><div id="step-dots" class="step-dots"></div><div class="work-area"><canvas id="work-canvas" aria-label="Food preparation area. Tap or drag to prepare." tabindex="0"></canvas><div id="step-picture" class="step-picture"></div></div><aside class="cook-order">${customerOrderHTML(c)}</aside><div id="cook-tools" class="cook-tools"></div></div>`;
  cookCanvas=$('work-canvas');cookContext=cookCanvas.getContext('2d');bindCookCanvas();updateCookUI(true);resize();save();}
 function updateCookUI(force=false){const p=engine.s.prep;if(!p||mode!=='cook')return;const r=R.RECIPES[p.dish],st=r.steps[p.step],sig=JSON.stringify([p.dish,p.step,p.p,p.variant,p.deco,p.done,p.placements]);if(!force&&sig===kitchenSignature)return;kitchenSignature=sig;
- const stepPic=$('step-picture'),dots=$('step-dots'),tools=$('cook-tools');if(p.done){stepPic.innerHTML=A.icon('check');dots.innerHTML=r.steps.map(()=>`<span class="step-dot finished">${A.icon('check')}</span>`).join('');tools.innerHTML=`${p.dish==='cupcake'?`<div class="free-deco">${r.decorations.map(d=>`<button data-decoration="${d.id}" aria-label="Free ${d.name}">${imageHTML(d.icon)}</button>`).join('')}</div>`:''}<button class="picture-tool carry" data-action="carry" aria-label="Carry meal to the table">${A.icon('tray')}</button>`;return;}
- const tool=currentStepTool(p,st);stepPic.innerHTML=`${st.action==='choice'||st.action==='decorate'?A.icon('star'):`<img src="${A.toolData(tool)}" alt="">`}<span class="sr-only">${st.label}</span>`;dots.innerHTML=r.steps.map((s,i)=>`<span class="step-dot ${i<p.step?'finished':i===p.step?'current':''}">${i<p.step?A.icon('check'):s.action==='choice'||s.action==='decorate'?A.icon('star'):`<img src="${A.toolData(s.tool==='topping'&&p.variant?variantInfo(p.dish,p.variant).icon:s.tool)}" alt="">`}</span>`).join('');
- if(st.action==='choice'){tools.innerHTML=r.variants.map(v=>`<button class="picture-tool choice" data-variant="${v.id}" aria-label="Choose ${v.name}"><img src="${A.toolData(v.icon)}" alt=""></button>`).join('');}
- else if(st.action==='decorate'){tools.innerHTML=r.decorations.map(v=>`<button class="picture-tool choice" data-decoration="${v.id}" aria-label="Choose ${v.name}. Any decoration is correct."><img src="${A.toolData(v.icon)}" alt=""><span class="free-sparkle">${A.icon('star')}</span></button>`).join('');}
- else tools.innerHTML=`<button id="prep-action" class="picture-tool" data-action="prep" aria-label="${st.label}. Tap this large picture or use the food area."><img src="${A.toolData(tool)}" alt=""></button>`;
+ const stepPic=$('step-picture'),dots=$('step-dots'),tools=$('cook-tools');
+ tools.className='cook-tools';
+ if(p.done){
+  tools.classList.add('ready-actions');stepPic.innerHTML=A.icon('check');
+  dots.innerHTML=r.steps.map(()=>`<span class="step-dot finished">${A.icon('check')}</span>`).join('');
+  tools.innerHTML=`${p.dish==='cupcake'?`<div class="free-deco">${r.decorations.map(d=>`<button data-decoration="${d.id}" aria-label="Free ${d.name}">${imageHTML(d.icon)}<span>${d.name.replace(' sprinkles','')}</span></button>`).join('')}</div>`:''}${cookingActionHTML('tray','Take to table','Your food is ready','carry')}`;return;
+ }
+ const tool=currentStepTool(p,st);
+ stepPic.innerHTML=`${st.action==='choice'||st.action==='decorate'?A.icon('star'):`<img src="${A.toolData(tool)}" alt="">`}<span class="sr-only">${st.label}</span>`;
+ dots.innerHTML=r.steps.map((s,i)=>`<span class="step-dot ${i<p.step?'finished':i===p.step?'current':''}">${i<p.step?A.icon('check'):s.action==='choice'||s.action==='decorate'?A.icon('star'):`<img src="${A.toolData(currentStepTool(p,s))}" alt="">`}</span>`).join('');
+ if(st.action==='choice'){
+  tools.classList.add('choice-actions');tools.innerHTML=r.variants.map(v=>`<button class="picture-tool choice" data-variant="${v.id}" aria-label="Choose ${v.name}"><img src="${A.toolData(v.icon)}" alt=""><span>${v.name}</span></button>`).join('');
+ }else if(st.action==='decorate'){
+  tools.classList.add('choice-actions');tools.innerHTML=r.decorations.map(v=>`<button class="picture-tool choice" data-decoration="${v.id}" aria-label="Choose ${v.name}. Any decoration is correct."><img src="${A.toolData(v.icon)}" alt=""><span>${v.name.replace(' sprinkles','')}</span></button>`).join('');
+ }else{
+  tools.classList.add('single-action');
+  const label=p.dish==='icecream'&&st.tool==='scoop'?'Add a scoop':st.label;
+  const hint=p.dish==='icecream'&&st.tool==='scoop'?'Tap here or rub the cone':st.action==='stir'?'Tap here or stir the food':st.action==='rub'?'Tap here or rub the food':st.action==='hold'?'Tap here or hold on the food':st.action==='place'?'Tap here or place on the food':'Tap to add it';
+  tools.innerHTML=cookingActionHTML(tool,label,hint,'prep',{p:p.p,need:st.need});
+ }
+
 }
 function doPrep(value=null,meta=null){if(mode!=='cook')return;const result=engine.act(value,meta);if(!result.ok)return;cookBump=1;feedback(result.done?'ready':'tap');save();if(result.advanced){cookPointer=null;cookStepLock=-1;cookPrev=null;cookMoved=false;}updateCookUI();if(result.done){cleanDoneAt=clock+.38;announce('Meal ready to carry.');}}
 function cookPoint(e){const r=cookCanvas.getBoundingClientRect();return {x:R.clamp((e.clientX-r.left)/r.width,0,1),y:R.clamp((e.clientY-r.top)/r.height,0,1)};}
@@ -274,7 +307,7 @@ function drawCooking(){if(!cookCanvas||!cookContext||mode!=='cook')return;const 
  const scale=Math.min(w/340,h/300),cx=w/2,cy=h/2; c.save();c.translate(cx,cy);c.scale(scale,scale);
  if(A.images.prep_board)A.sprite(c,'prep_board',0,145,335,290);else A.rect(c,-160,-133,320,266,25,'#bc845d','#6b4264',5);
  const bump=engine.s.settings.reduced?1:1+Math.sin(cookBump*Math.PI)*.035;c.save();c.scale(bump,bump);c.translate(-160,-140);A.drawFood(c,p.dish,p.variant,p,clock);c.restore();
- const toolImg=getToolImage(st?currentStepTool(p,st):'chef');if(st&&!p.done&&['stir','rub'].includes(st.action)&&p.p>0){c.save();c.translate(55+Math.cos(clock*3)*15,5);c.rotate(Math.sin(clock*3)*.2);if(toolImg?.complete&&toolImg.naturalWidth)c.drawImage(toolImg,-25,-95,64,94);c.restore();}
+ const toolImg=getToolImage(st?currentStepTool(p,st):'chef');if(st&&!p.done&&['stir','rub'].includes(st.action)&&st.tool!=='scoop'&&p.p>0){c.save();c.translate(55+Math.cos(clock*3)*15,5);c.rotate(Math.sin(clock*3)*.2);if(toolImg?.complete&&toolImg.naturalWidth)c.drawImage(toolImg,-25,-95,64,94);c.restore();}
  if(p.done)for(let i=0;i<7;i++){const a=i*Math.PI*2/7+clock*.25;A.star(c,Math.cos(a)*149,Math.sin(a)*109,8,['#fff0a2','#f6b4d0','#b6e4dd'][i%3],clock*.4);}c.restore();}
 function drawWashing(){if(!washCanvas||!washContext||mode!=='wash')return;const c=washContext,w=washCanvas.width/dpr,h=washCanvas.height/dpr;c.setTransform(dpr,0,0,dpr,0,0);c.clearRect(0,0,w,h);c.save();const scale=Math.min(w/320,h/280,1.6),x=w/2-160*scale,y=h/2-140*scale;c.translate(x,y);c.scale(scale,scale);const progress=washDone?1:(engine.s.dirtyTray?.wash||0)/5;A.drawWash(c,progress,clock);c.restore();}
 function animationFrame(ms){requestAnimationFrame(animationFrame);const dt=lastTime?Math.min(.04,(ms-lastTime)/1000):0;lastTime=ms;if(document.hidden||portraitBlocked)return;clock+=dt;dayPulse=Math.max(0,dayPulse-dt*2);cookBump=Math.max(0,cookBump-dt*2.7);if(mode==='world')updateWorld(dt);else if(['cook','recipes','wash'].includes(mode))tickRestaurant(dt);if(mode==='cook'&&cookPointer!==null){const p=engine.s.prep,st=p&&p.step===cookStepLock?R.RECIPES[p.dish].steps[p.step]:null;if(st?.action==='hold'&&clock-cookLast>.42){cookLast=clock;doPrep();}}

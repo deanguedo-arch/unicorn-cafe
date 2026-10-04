@@ -35,3 +35,17 @@ Inspected the built game across 568x320, 667x375, 740x300, 844x390 and 932x430 v
 Fixed offscreen cupcake decoration choices, food/control overlap, oversized sprinkle indicators and wash-ticket symbols, clipped order tickets, recipe tiles exceeding short viewport height, and hidden completion/collection actions. Cooking controls now have a dedicated row, and food tiles scale against both available width and dynamic viewport height. Completion artwork and recipe pictures share a compact row.
 
 A separate actual UI playthrough cooked and carried all 18 recipe/variant combinations at 568x320 (214 preparation clicks), including all three cupcake decoration choices. Engine and offline package checks passed. Evidence is in `tests/mobile-visual/`; reproducible checks are `tests/mobile_visual_check.cjs` and `tests/mobile_recipe_play.cjs`. This is Chromium viewport simulation, not physical iPhone/Safari certification.
+
+## 2026-10-04 customer order and workbench redesign
+
+Replaced the cooking-screen ticket with a larger persistent order card: customer/table together at the top, a dominant finished-food picture, the dish name, and an explicit flavour picture/label. The requested order stays visible while children select ingredients and prepare their own dish. All flavour and decoration choices now have short visible labels.
+
+The workbench is the main preparation control, with a contextual ingredient/tool, a plain action label, an arrow pointing toward the food, and progress dots. Ready meals have a larger labelled carry action. Vanilla and strawberry scoops use the selected flavour's artwork; soup vegetables and poured smoothies also use the selected ingredient. The existing recipes, actions, saved-state schema and customer requests are preserved.
+
+The updated visual audit passed all 540 simulated landscape states, including image containment for the new order card. All 18 recipe/variant combinations were cooked and carried through actual 568x320 UI clicks, with additional verification that scoop artwork matches the selected flavour. New order/workbench screenshots are in `tests/mobile-visual/`. Physical-device and child-usability review remain separate from these automated checks.
+
+## Ice-cream picture containment fix
+
+The former three-scoop composition reached above the 320x280 food canvas, clipping the top scoop before CSS could fit the picture into a card. Normalized the complete composition into that frame and generated tightly framed portrait ice-cream card images with eight transparent pixels of padding on all four sides. Asset files and recipe/save data are preserved.
+
+`tests/icecream_fit.cjs` passed 14 pixel-level checks: strawberry and vanilla at six preparation states are compared against a larger reference canvas to detect lost pixels; both finished card pictures also have a portrait frame and clear padding on every edge. The full 540-state landscape layout audit and all 18 recipe/variant UI playthroughs passed again after this change. Pixel results and small-phone screenshots are in `tests/mobile-visual/`.

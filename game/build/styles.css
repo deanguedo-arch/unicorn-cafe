@@ -154,3 +154,41 @@ button{transition:transform .11s ease,filter .11s ease,box-shadow .11s ease}butt
 @media(orientation:landscape) and (max-height:540px){
  .kitchen-screen>.ticket>svg{width:36px;height:36px;flex-shrink:0}
 }
+
+/* Customer's request and cooking actions share the illustrated workbench. */
+.cook-layout{grid-template-columns:64px minmax(0,1fr) 180px;grid-template-rows:56px minmax(0,1fr) 102px}
+.cook-layout .work-area{grid-column:2;grid-row:2}.cook-order{grid-column:3;grid-row:2/4;align-self:start;min-width:0;max-height:360px}
+.customer-order{background:#fff8e7;border:3px solid #fff0c2;border-radius:18px;box-shadow:inset 0 0 0 2px #aa7e9d,0 4px 0 #765277;padding:10px;display:flex;flex-direction:column;align-items:center;gap:6px;min-height:0}
+.order-person{display:flex;align-items:center;justify-content:space-between;gap:5px;width:100%;padding-bottom:5px;border-bottom:2px solid #e8c9ae}
+.order-person strong{font-size:15px}.order-person .order-portrait{width:37px;height:40px;object-fit:contain}.order-person .order-table{width:32px;height:32px}.order-person .order-table img{width:100%;height:100%}
+.customer-order .order-meal{width:100%;height:126px;min-height:0;object-fit:contain}.order-dish-name{font-size:14px;line-height:1.2;text-align:center;flex-shrink:0}
+.order-flavour{display:flex;align-items:center;justify-content:center;gap:5px;background:#f4e1cb;border-radius:10px;width:100%;padding:4px;flex-shrink:0;min-height:36px;font-size:13px;font-weight:800;line-height:1.15}.order-flavour .order-ingredient{width:30px;height:30px;object-fit:contain;flex-shrink:0}
+.cook-layout .cook-tools,.cook-layout .cook-tools:has(.free-deco){grid-column:2;grid-row:3;background:#e8c99f;border:3px solid #fff0c2;border-bottom:5px solid #8b605f;border-radius:14px;box-shadow:inset 0 0 0 1px #b18481;gap:10px;padding:6px 10px;flex-wrap:nowrap}
+.cook-layout .picture-tool.action-control{display:flex;align-items:center;justify-content:center;gap:12px;width:min(360px,100%);max-width:100%;height:78px;min-height:64px;min-width:0;flex:0 1 360px;padding:6px 12px;background:#fff9ed;border:2px solid #c598aa;box-shadow:0 3px 0 #b47f8c;border-radius:12px;text-align:left}
+.cook-layout .action-control.carry{background:#c5e4ce}.action-ingredient{width:62px;height:62px;display:grid;place-items:center;flex-shrink:0}.cook-layout .action-ingredient img,.cook-layout .action-ingredient svg{width:58px;height:58px;object-fit:contain}
+.action-copy{display:flex;flex-direction:column;gap:3px;min-width:0}.action-copy strong{font-size:18px;line-height:1.1}.action-copy small{font-size:12px;line-height:1.15}.action-arrow{width:30px;height:30px;flex-shrink:0}.action-arrow svg{width:100%;height:100%}
+.action-progress{display:flex;gap:4px}.action-progress i{width:9px;height:9px;border:1px solid #aa7e9d;background:#eadbe4;border-radius:50%}.action-progress i.done{background:#e2b85d;border-color:#916c4d}
+.cook-layout .picture-tool.choice{width:110px;max-width:140px;min-height:74px;height:80px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;flex:0 1 110px;padding:4px}.cook-layout .picture-tool.choice img{width:48px;height:48px;object-fit:contain}.cook-layout .picture-tool.choice>span{font-size:13px;line-height:1.1}
+.cook-layout .free-deco{gap:5px}.cook-layout .free-deco button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:3px}.cook-layout .free-deco span{font-size:10px;line-height:1.1}
+.cook-layout .ready-actions:has(.free-deco) .action-control{flex:0 1 180px;gap:5px;padding:5px}.cook-layout .ready-actions:has(.free-deco) .action-copy small{display:none}.cook-layout .ready-actions:has(.free-deco) .action-ingredient{width:36px;height:40px}.cook-layout .ready-actions:has(.free-deco) .action-ingredient svg{width:34px;height:34px}.cook-layout .ready-actions:has(.free-deco) .action-arrow{display:none}
+@media(orientation:landscape) and (max-height:540px){
+ .cook-layout{grid-template-columns:44px minmax(0,1fr) 152px;grid-template-rows:44px minmax(0,1fr) 78px;gap:6px;padding:5px}
+ .cook-order{grid-column:3;grid-row:2/4;align-self:stretch;max-height:none;height:100%}.customer-order{height:100%;padding:7px;gap:3px}
+ .order-person{padding-bottom:3px}.order-person strong{font-size:14px}.order-person .order-portrait{width:28px;height:32px}.order-person .order-table{width:28px;height:28px}
+ .customer-order .order-meal{height:auto;max-height:132px;width:100%;flex:1;min-height:0;object-fit:contain}.order-dish-name{font-size:12px}.order-flavour{font-size:12px;min-height:30px;padding:3px}.order-flavour .order-ingredient{width:26px;height:26px}
+ .cook-layout .cook-tools,.cook-layout .cook-tools:has(.free-deco){grid-column:2;grid-row:3;padding:5px 8px;gap:7px}
+ .cook-layout .picture-tool.action-control{height:62px;min-height:54px;flex:0 1 320px;gap:8px;padding:4px 8px}
+ .action-ingredient{width:48px;height:48px}.cook-layout .action-ingredient img,.cook-layout .action-ingredient svg{width:44px;height:44px}.action-copy strong{font-size:15px}.action-copy small{font-size:11px}.action-arrow{width:25px;height:25px}.action-progress i{width:7px;height:7px}
+ .cook-layout .picture-tool.choice{width:94px;min-width:0;max-width:110px;flex:0 1 94px;height:62px;min-height:54px;gap:2px;padding:3px}.cook-layout .picture-tool.choice img{width:38px;height:38px}.cook-layout .picture-tool.choice>span{font-size:11px}
+ .cook-layout .free-deco button{width:44px;min-width:44px;flex:0 0 44px;height:54px;min-height:54px}.cook-layout .free-deco img{width:28px;height:28px}.cook-layout .free-deco span{font-size:9px}
+ .cook-layout .ready-actions:has(.free-deco) .action-control{flex:0 1 145px;min-width:96px;height:54px;min-height:54px}.cook-layout .ready-actions:has(.free-deco) .action-copy strong{font-size:12px}
+}
+@media(orientation:landscape) and (max-height:330px){
+ .cook-layout{grid-template-rows:44px minmax(0,1fr) 74px;grid-template-columns:44px minmax(0,1fr) 140px}
+ .customer-order{padding:5px;gap:2px}.order-person .order-portrait{height:28px}.order-person strong{font-size:12px}.order-dish-name{font-size:11px}.order-flavour{font-size:11px}
+ .cook-layout .picture-tool.action-control{height:58px;min-height:54px}.action-copy small{font-size:10px}
+}
+
+.cook-layout .single-action .action-control{width:100%;flex:1;border:0;border-radius:0;box-shadow:none;background:transparent}
+.cook-layout .single-action .action-arrow{transform:rotate(-90deg)}
+@media(orientation:landscape) and (max-height:540px){.cook-layout .single-action .action-copy strong{font-size:17px}.cook-layout .single-action .action-ingredient img{width:48px;height:48px}}
