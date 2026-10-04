@@ -1,0 +1,61 @@
+{
+  "game": "Sneaky Unicorn: Rainbow Restaurant",
+  "version": "2.0.0",
+  "date": "2026-10-04",
+  "deployed": false,
+  "saveKey": "sneaky-unicorn-restaurant-v1-4",
+  "schema": 3,
+  "runtimeAssetCount": 161,
+  "productionArt": "Regular ChatGPT B; original character pixels retained; no tool-A candidates shipped",
+  "files": [
+    {
+      "name": "Sneaky-Unicorn-Restaurant-v2.0.0.html",
+      "bytes": 9938859,
+      "sha256": "be757aeddd9b59b3c452b41a731a3035e539d9970cd6e05c00aa860ab443be87"
+    },
+    {
+      "name": "Sneaky-Unicorn-Restaurant-v2.0.0-GitHub-Pages.zip",
+      "bytes": 7526531,
+      "sha256": "0d7dabddb299e95cc56c7ea2083d390446e9c9e6f176e75670ab376eb432381a"
+    },
+    {
+      "name": "Sneaky-Unicorn-Restaurant-v2.0.0-Editable-Source.zip",
+      "bytes": 28340701,
+      "sha256": "3c435f7bdce993d75e227cca97ad7b18318d92e3388ba4ee7a278defd98cab34"
+    },
+    {
+      "name": "Sneaky-Unicorn-Restaurant-v2.0.0-Preview.png",
+      "bytes": 1238779,
+      "sha256": "8d67bbc1673756bc9d18913f2e0637c392499840eb36af0f246f016977c11110"
+    },
+    {
+      "name": "QA-REPORT.md",
+      "bytes": 4389,
+      "sha256": "91e7b5a68f025a14f16ed2e587e93dfc9d2823f3df4c9e84dfacad615bd76712"
+    },
+    {
+      "name": "ACCEPTANCE-MAP.md",
+      "bytes": 3312,
+      "sha256": "38200cb22755048e190fa93c5619953b9234b371a9396e7c9a87be656fac2dd0"
+    },
+    {
+      "name": "LAUNCH-INSTRUCTIONS.md",
+      "bytes": 4150,
+      "sha256": "81c49bf6e2fcd73da2df1b7d812293f5dda1aee687cb4e9054e1c150df15c501"
+    },
+    {
+      "name": "package-verification.json",
+      "bytes": 924,
+      "sha256": "f6aed624ab2991b07913e9bfd2418710c362f0715a14d78e5372e1b6a8868de7"
+    },
+    {
+      "name": "Packaged-Game-Smoke.png",
+      "bytes": 298697,
+      "sha256": "ee1df04ef617d32ef2893f7b1a55c9dc2d36c075f91303a7890046f7d9b333b2"
+    }
+  ],
+  "QA": "QA-REPORT.md",
+  "acceptance": "ACCEPTANCE-MAP.md",
+  "packageChecksPassed": true,
+  "physicalIPhoneTested": false
+}
