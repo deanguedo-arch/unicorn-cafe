@@ -497,15 +497,6 @@
       "processing": "cropped/resized only; alpha preserved; WebP lossless"
     },
     {
-      "asset": "assets/restaurant.webp",
-      "source": "03_ASSETS/topdown-maps/easy_restaurant.png",
-      "pixels": [
-        1800,
-        1100
-      ],
-      "processing": "cropped/resized only; alpha preserved; WebP lossless"
-    },
-    {
       "asset": "assets/hero.webp",
       "source": "03_ASSETS/core-original/unicorn-hero.png",
       "pixels": [
@@ -515,7 +506,354 @@
       "processing": "cropped/resized only; alpha preserved; WebP quality 93"
     }
   ],
-  "newArt": "Food preparation states, all pancakes/smoothies artwork, soup/pizza/ice-cream intermediate states, furniture/customization previews, table-marker badges, sink/washing states and UI pictograms are original editable Canvas/SVG code in src/art.js. No emoji or third-party runtime artwork was introduced.",
+  "newArt": "v1.2.1 replaces flat interior/furniture with segmented image-generated furniture and canonical house details. Existing recipe/preparation Canvas illustrations are retained.",
   "releaseVersion": "1.2.0",
-  "baseline": "Sneaky Unicorn: Rainbow Restaurant v1.1.0"
+  "baseline": "Sneaky Unicorn: Rainbow Restaurant v1.1.0",
+  "version": "1.2.1",
+  "interior": {
+    "version": "1.2.1",
+    "master": {
+      "file": "restaurant-painted-master.png",
+      "sha256": "5c7bd2b0d59803c54c3e727996358cb79bc4fbd3ab1fd2ec53cdd01d4312022c",
+      "origin": "Image generation in this conversation, generated reference concept #1. Only segmented furniture is used; generated characters/UI are NOT used."
+    },
+    "reference": {
+      "file": "cozy-pastel-house-reference.png",
+      "sha256": "5d0a5f3ba1d16e8784d5652143ae89d8f5455169adb04e41274fd5fbc58fc74e",
+      "sourcePackPath": "03_ASSETS/topdown-maps/cozy_pastel_house_game_map.png"
+    },
+    "records": [
+      {
+        "asset": "assets/table_round_berry.webp",
+        "source": [
+          "restaurant-painted-master.png",
+          "original-table.png (canonical embedded atlas table legs)"
+        ],
+        "processing": "Image-generated cloth silhouette segmented by connected-colour mask and solid tabletop alpha; fixed vase/candle cleaned from cloth; sourcepack wooden legs composited underneath; bounded shape remap and painted palette. Each frame is a complete independent sprite, not a runtime pile of shapes.",
+        "pixels": [
+          210,
+          202
+        ],
+        "sha256": "370569c24c82b14b315c9e6014bbdbf3020f4cd3d2702457f76ee8000f1def06"
+      },
+      {
+        "asset": "assets/table_oval_berry.webp",
+        "source": [
+          "restaurant-painted-master.png",
+          "original-table.png (canonical embedded atlas table legs)"
+        ],
+        "processing": "Image-generated cloth silhouette segmented by connected-colour mask and solid tabletop alpha; fixed vase/candle cleaned from cloth; sourcepack wooden legs composited underneath; bounded shape remap and painted palette. Each frame is a complete independent sprite, not a runtime pile of shapes.",
+        "pixels": [
+          242,
+          202
+        ],
+        "sha256": "c20bbe4bbc41c262213c215ddfc091b0cccd2abcfc075a3e003d749683403ae5"
+      },
+      {
+        "asset": "assets/table_clover_berry.webp",
+        "source": [
+          "restaurant-painted-master.png",
+          "original-table.png (canonical embedded atlas table legs)"
+        ],
+        "processing": "Image-generated cloth silhouette segmented by connected-colour mask and solid tabletop alpha; fixed vase/candle cleaned from cloth; sourcepack wooden legs composited underneath; bounded shape remap and painted palette. Each frame is a complete independent sprite, not a runtime pile of shapes.",
+        "pixels": [
+          210,
+          202
+        ],
+        "sha256": "989e2c96918352c796ce73e3189ec3d712d3d7a205a194239077ee6ab02b021a"
+      },
+      {
+        "asset": "assets/table_round_honey.webp",
+        "source": [
+          "restaurant-painted-master.png",
+          "original-table.png (canonical embedded atlas table legs)"
+        ],
+        "processing": "Image-generated cloth silhouette segmented by connected-colour mask and solid tabletop alpha; fixed vase/candle cleaned from cloth; sourcepack wooden legs composited underneath; bounded shape remap and painted palette. Each frame is a complete independent sprite, not a runtime pile of shapes.",
+        "pixels": [
+          210,
+          202
+        ],
+        "sha256": "1a8f4a7087e89698a80475e7726eb4ab76b20cd67d457a8da675bea193badd84"
+      },
+      {
+        "asset": "assets/table_oval_honey.webp",
+        "source": [
+          "restaurant-painted-master.png",
+          "original-table.png (canonical embedded atlas table legs)"
+        ],
+        "processing": "Image-generated cloth silhouette segmented by connected-colour mask and solid tabletop alpha; fixed vase/candle cleaned from cloth; sourcepack wooden legs composited underneath; bounded shape remap and painted palette. Each frame is a complete independent sprite, not a runtime pile of shapes.",
+        "pixels": [
+          242,
+          202
+        ],
+        "sha256": "ed335ca023d08dcb34e2de0403bef69a4a078352c3b39689c847efd98f115444"
+      },
+      {
+        "asset": "assets/table_clover_honey.webp",
+        "source": [
+          "restaurant-painted-master.png",
+          "original-table.png (canonical embedded atlas table legs)"
+        ],
+        "processing": "Image-generated cloth silhouette segmented by connected-colour mask and solid tabletop alpha; fixed vase/candle cleaned from cloth; sourcepack wooden legs composited underneath; bounded shape remap and painted palette. Each frame is a complete independent sprite, not a runtime pile of shapes.",
+        "pixels": [
+          210,
+          202
+        ],
+        "sha256": "8bd1bb4c4d529849f8ef33d30502f61bb1066534e6be09f09edbb58fe4d4ce1c"
+      },
+      {
+        "asset": "assets/table_round_cream.webp",
+        "source": [
+          "restaurant-painted-master.png",
+          "original-table.png (canonical embedded atlas table legs)"
+        ],
+        "processing": "Image-generated cloth silhouette segmented by connected-colour mask and solid tabletop alpha; fixed vase/candle cleaned from cloth; sourcepack wooden legs composited underneath; bounded shape remap and painted palette. Each frame is a complete independent sprite, not a runtime pile of shapes.",
+        "pixels": [
+          210,
+          202
+        ],
+        "sha256": "25c72a579f5579c136217ec63399d81348dc69dc866e24754f90255ded79ca21"
+      },
+      {
+        "asset": "assets/table_oval_cream.webp",
+        "source": [
+          "restaurant-painted-master.png",
+          "original-table.png (canonical embedded atlas table legs)"
+        ],
+        "processing": "Image-generated cloth silhouette segmented by connected-colour mask and solid tabletop alpha; fixed vase/candle cleaned from cloth; sourcepack wooden legs composited underneath; bounded shape remap and painted palette. Each frame is a complete independent sprite, not a runtime pile of shapes.",
+        "pixels": [
+          242,
+          202
+        ],
+        "sha256": "c9570701114b080c0ea1fef0b7e4510f66134d974a4b511a5a4f387bf1bfe154"
+      },
+      {
+        "asset": "assets/table_clover_cream.webp",
+        "source": [
+          "restaurant-painted-master.png",
+          "original-table.png (canonical embedded atlas table legs)"
+        ],
+        "processing": "Image-generated cloth silhouette segmented by connected-colour mask and solid tabletop alpha; fixed vase/candle cleaned from cloth; sourcepack wooden legs composited underneath; bounded shape remap and painted palette. Each frame is a complete independent sprite, not a runtime pile of shapes.",
+        "pixels": [
+          210,
+          202
+        ],
+        "sha256": "e57af312e537b14278df841344f4390f44456118b58d54b7e806bf64e5bd971d"
+      },
+      {
+        "asset": "assets/table_round_sky.webp",
+        "source": [
+          "restaurant-painted-master.png",
+          "original-table.png (canonical embedded atlas table legs)"
+        ],
+        "processing": "Image-generated cloth silhouette segmented by connected-colour mask and solid tabletop alpha; fixed vase/candle cleaned from cloth; sourcepack wooden legs composited underneath; bounded shape remap and painted palette. Each frame is a complete independent sprite, not a runtime pile of shapes.",
+        "pixels": [
+          210,
+          202
+        ],
+        "sha256": "78f9b2c3de217981283759b250fbf2157719d1f80ae0fee5042bad62d07d45fe"
+      },
+      {
+        "asset": "assets/table_oval_sky.webp",
+        "source": [
+          "restaurant-painted-master.png",
+          "original-table.png (canonical embedded atlas table legs)"
+        ],
+        "processing": "Image-generated cloth silhouette segmented by connected-colour mask and solid tabletop alpha; fixed vase/candle cleaned from cloth; sourcepack wooden legs composited underneath; bounded shape remap and painted palette. Each frame is a complete independent sprite, not a runtime pile of shapes.",
+        "pixels": [
+          242,
+          202
+        ],
+        "sha256": "763e198b1529b8dc0982cb3c024e281324bf99885ea11638c427cbe3c71335aa"
+      },
+      {
+        "asset": "assets/table_clover_sky.webp",
+        "source": [
+          "restaurant-painted-master.png",
+          "original-table.png (canonical embedded atlas table legs)"
+        ],
+        "processing": "Image-generated cloth silhouette segmented by connected-colour mask and solid tabletop alpha; fixed vase/candle cleaned from cloth; sourcepack wooden legs composited underneath; bounded shape remap and painted palette. Each frame is a complete independent sprite, not a runtime pile of shapes.",
+        "pixels": [
+          210,
+          202
+        ],
+        "sha256": "6d016531789603f29648656fb8406b6241c40d27e55a7e0ece1ae2750fa4d225"
+      },
+      {
+        "asset": "assets/chair_plum.webp",
+        "source": "Canonical sourcepack embedded atlas: chair; retained as art-source/original-chair.png",
+        "processing": "Original transparent character-world chair pixels; curated upholstery palette finish; complete silhouette preserved.",
+        "pixels": [
+          199,
+          193
+        ],
+        "sha256": "3f13c609026fa0758f6b62a06312f6a80719c1dd2d6a96fe2e91f257a1d98d87"
+      },
+      {
+        "asset": "assets/chair_mint.webp",
+        "source": "Canonical sourcepack embedded atlas: chair; retained as art-source/original-chair.png",
+        "processing": "Original transparent character-world chair pixels; curated upholstery palette finish; complete silhouette preserved.",
+        "pixels": [
+          199,
+          193
+        ],
+        "sha256": "66761152448c983715bf39c1c46f6b49ec056cd9fbcb2386f7342ace3893f863"
+      },
+      {
+        "asset": "assets/chair_rainbow.webp",
+        "source": "Canonical sourcepack embedded atlas: chair; retained as art-source/original-chair.png",
+        "processing": "Original transparent character-world chair pixels; curated upholstery palette finish; complete silhouette preserved.",
+        "pixels": [
+          199,
+          193
+        ],
+        "sha256": "a38d1b5588bb13eb7fd085059106133a40c7ac5c28cdb4b8d2c8a77824e1ab68"
+      },
+      {
+        "asset": "assets/painted_kitchen.webp",
+        "source": "restaurant-painted-master.png",
+        "processing": "Alpha-segmented complete generated prep counters, oven/stove, refrigerator and food appliances; no map tables or customers.",
+        "pixels": [
+          783,
+          256
+        ],
+        "sha256": "56d2259509844131be1002da58b10c880eeb56a7ac7e757a20fc0217e3b3ff4c"
+      },
+      {
+        "asset": "assets/painted_sink.webp",
+        "source": "restaurant-painted-master.png",
+        "processing": "Alpha-segmented generated sink/cabinet/faucet. Washing interaction remains independently drawn.",
+        "pixels": [
+          224,
+          216
+        ],
+        "sha256": "6d02104650df650f7468f37654449d480bd75d536d5912c0e1e8ea8a4dab5368"
+      },
+      {
+        "asset": "assets/painted_board.webp",
+        "source": "restaurant-painted-master.png",
+        "processing": "Generated countertop/cutting board crop; fixed tomato removed to keep actual recipe visible.",
+        "pixels": [
+          81,
+          64
+        ],
+        "sha256": "1336677ad8fb927b4906b4607166feeba174885f98741cf1872297bc9ddc7d8e"
+      },
+      {
+        "asset": "assets/room_window.webp",
+        "source": "cozy_pastel_house_game_map.png",
+        "processing": "Sourcepack window/curtain alpha crop; no redraw.",
+        "pixels": [
+          201,
+          153
+        ],
+        "sha256": "35372a8ade43cd207ad5ceb134193fb73293c221ea90f8c4f953dce9c6cb6e5b"
+      },
+      {
+        "asset": "assets/room_lamp.webp",
+        "source": "Canonical sourcepack embedded atlas: lamp",
+        "processing": "Original sourcepack transparent prop, no retouch; extracted original PNG retained in art-source.",
+        "pixels": [
+          102,
+          203
+        ],
+        "sha256": "9c7da689b263a68402b4d7eca6db29f6d8ee9c83789bed85d35a669dcd9a954f"
+      },
+      {
+        "asset": "assets/room_plant.webp",
+        "source": "Canonical sourcepack embedded atlas: plant",
+        "processing": "Original sourcepack transparent prop, no retouch; extracted original PNG retained in art-source.",
+        "pixels": [
+          164,
+          196
+        ],
+        "sha256": "5f53652e7d8caf4977d653b0d5c62e43325934e5a03d1478b61add797ca2f14d"
+      },
+      {
+        "asset": "assets/room_sofa.webp",
+        "source": "Canonical sourcepack embedded atlas: sofa",
+        "processing": "Original sourcepack transparent prop, no retouch; extracted original PNG retained in art-source.",
+        "pixels": [
+          266,
+          174
+        ],
+        "sha256": "d44c13528331d3e2e82f2f3a552eb7b6ecb92dff6aa8890219e512bd77b95049"
+      },
+      {
+        "asset": "assets/room_door.webp",
+        "source": "Canonical sourcepack embedded atlas: door",
+        "processing": "Original sourcepack transparent prop, no retouch; extracted original PNG retained in art-source.",
+        "pixels": [
+          210,
+          220
+        ],
+        "sha256": "82bacadd0a53c1cd7517dfc43cfb92f06d7f74f8125f49d76d35d8d535939452"
+      },
+      {
+        "asset": "assets/room_floor_lavender.webp",
+        "source": "cozy_pastel_house_game_map.png",
+        "processing": "Sourcepack empty wood-floor crop; mirrored seam-safe tiling; curated material tint; no furniture.",
+        "pixels": [
+          1800,
+          1100
+        ],
+        "sha256": "7d0427774edcc46b5c6c62fa18284bc564ef4cef29416a25c0477b96b16ea64f"
+      },
+      {
+        "asset": "assets/room_floor_mint.webp",
+        "source": "cozy_pastel_house_game_map.png",
+        "processing": "Sourcepack empty wood-floor crop; mirrored seam-safe tiling; curated material tint; no furniture.",
+        "pixels": [
+          1800,
+          1100
+        ],
+        "sha256": "475149f4948258cf42a2626446d38c7113fce7e68a4dc16fc7e863dde5348e64"
+      },
+      {
+        "asset": "assets/room_floor_peach.webp",
+        "source": "cozy_pastel_house_game_map.png",
+        "processing": "Sourcepack empty wood-floor crop; mirrored seam-safe tiling; curated material tint; no furniture.",
+        "pixels": [
+          1800,
+          1100
+        ],
+        "sha256": "4e17b596f26063d7ad67458fb04ece20ee0f7232f8dd223e25a1203fa430dcb7"
+      },
+      {
+        "asset": "assets/room_wall_twilight.webp",
+        "source": "cozy_pastel_house_game_map.png",
+        "processing": "Original coordinating material backplate; sourcepack windows and lamps rendered separately. No fixed furniture.",
+        "pixels": [
+          1800,
+          320
+        ],
+        "sha256": "e56cf454c40e1ada0e4f3e8481bafb7bf9c67c475555a3100fd82cadd454caad"
+      },
+      {
+        "asset": "assets/room_wall_rainbow.webp",
+        "source": "cozy_pastel_house_game_map.png",
+        "processing": "Original coordinating material backplate; sourcepack windows and lamps rendered separately. No fixed furniture.",
+        "pixels": [
+          1800,
+          320
+        ],
+        "sha256": "082f30d5fdfeb9171a467569c1451234358b30c50c5e686e5678925c21118b4f"
+      },
+      {
+        "asset": "assets/room_wall_garden.webp",
+        "source": "cozy_pastel_house_game_map.png",
+        "processing": "Original coordinating material backplate; sourcepack windows and lamps rendered separately. No fixed furniture.",
+        "pixels": [
+          1800,
+          320
+        ],
+        "sha256": "808e1eb9db65eb829ddc72e7e8cdc109f361dbe236170c3fbc040ceeaa15e0cc"
+      }
+    ],
+    "pipeline": [
+      "prepare_assets.py",
+      "prepare_visual_assets.py",
+      "refine_visual_assets.py"
+    ]
+  }
 }
