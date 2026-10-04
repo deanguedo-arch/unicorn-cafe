@@ -5,178 +5,403 @@
   "seatedVisibility": [
     {
       "shape": "round",
-      "key": "guest_seated_pink",
-      "visible": 3023,
-      "covered": 3,
-      "fraction": 0.0009923916639100231
-    },
-    {
-      "shape": "round",
-      "key": "guest_seated_human",
-      "visible": 1533,
-      "covered": 1,
-      "fraction": 0.0006523157208088715
-    },
-    {
-      "shape": "round",
-      "key": "guest_seated_blue",
-      "visible": 3024,
+      "key": "empty-chair",
+      "visible": 2544,
       "covered": 0,
       "fraction": 0
     },
     {
       "shape": "round",
+      "key": "guest_seated_pink",
+      "visible": 3029,
+      "covered": 0,
+      "fraction": 0
+    },
+    {
+      "shape": "round",
+      "key": "empty-chair",
+      "visible": 2556,
+      "covered": 0,
+      "fraction": 0
+    },
+    {
+      "shape": "round",
+      "key": "guest_seated_human",
+      "visible": 1537,
+      "covered": 1,
+      "fraction": 0.0006506180871828237
+    },
+    {
+      "shape": "round",
+      "key": "empty-chair",
+      "visible": 2550,
+      "covered": 0,
+      "fraction": 0
+    },
+    {
+      "shape": "round",
+      "key": "guest_seated_blue",
+      "visible": 3019,
+      "covered": 0,
+      "fraction": 0
+    },
+    {
+      "shape": "round",
+      "key": "empty-chair",
+      "visible": 2544,
+      "covered": 0,
+      "fraction": 0
+    },
+    {
+      "shape": "round",
       "key": "guest_seated_worker",
-      "visible": 2231,
+      "visible": 2228,
+      "covered": 0,
+      "fraction": 0
+    },
+    {
+      "shape": "round",
+      "key": "empty-chair",
+      "visible": 2545,
       "covered": 0,
       "fraction": 0
     },
     {
       "shape": "round",
       "key": "guest_seated_manager",
-      "visible": 1837,
+      "visible": 1845,
+      "covered": 0,
+      "fraction": 0
+    },
+    {
+      "shape": "clover",
+      "key": "empty-chair",
+      "visible": 2544,
       "covered": 0,
       "fraction": 0
     },
     {
       "shape": "clover",
       "key": "guest_seated_pink",
-      "visible": 3023,
-      "covered": 3,
-      "fraction": 0.0009923916639100231
+      "visible": 3029,
+      "covered": 0,
+      "fraction": 0
+    },
+    {
+      "shape": "clover",
+      "key": "empty-chair",
+      "visible": 2556,
+      "covered": 0,
+      "fraction": 0
     },
     {
       "shape": "clover",
       "key": "guest_seated_human",
-      "visible": 1533,
+      "visible": 1537,
       "covered": 1,
-      "fraction": 0.0006523157208088715
+      "fraction": 0.0006506180871828237
+    },
+    {
+      "shape": "clover",
+      "key": "empty-chair",
+      "visible": 2550,
+      "covered": 0,
+      "fraction": 0
     },
     {
       "shape": "clover",
       "key": "guest_seated_blue",
-      "visible": 3024,
+      "visible": 3019,
+      "covered": 0,
+      "fraction": 0
+    },
+    {
+      "shape": "clover",
+      "key": "empty-chair",
+      "visible": 2544,
       "covered": 0,
       "fraction": 0
     },
     {
       "shape": "clover",
       "key": "guest_seated_worker",
-      "visible": 2231,
+      "visible": 2228,
+      "covered": 0,
+      "fraction": 0
+    },
+    {
+      "shape": "clover",
+      "key": "empty-chair",
+      "visible": 2545,
       "covered": 0,
       "fraction": 0
     },
     {
       "shape": "clover",
       "key": "guest_seated_manager",
-      "visible": 1837,
+      "visible": 1845,
+      "covered": 0,
+      "fraction": 0
+    },
+    {
+      "shape": "oval",
+      "key": "empty-chair",
+      "visible": 2544,
       "covered": 0,
       "fraction": 0
     },
     {
       "shape": "oval",
       "key": "guest_seated_pink",
-      "visible": 3023,
-      "covered": 3,
-      "fraction": 0.0009923916639100231
+      "visible": 3029,
+      "covered": 0,
+      "fraction": 0
+    },
+    {
+      "shape": "oval",
+      "key": "empty-chair",
+      "visible": 2556,
+      "covered": 0,
+      "fraction": 0
     },
     {
       "shape": "oval",
       "key": "guest_seated_human",
-      "visible": 1533,
+      "visible": 1537,
       "covered": 1,
-      "fraction": 0.0006523157208088715
+      "fraction": 0.0006506180871828237
+    },
+    {
+      "shape": "oval",
+      "key": "empty-chair",
+      "visible": 2550,
+      "covered": 0,
+      "fraction": 0
     },
     {
       "shape": "oval",
       "key": "guest_seated_blue",
-      "visible": 3024,
+      "visible": 3019,
+      "covered": 0,
+      "fraction": 0
+    },
+    {
+      "shape": "oval",
+      "key": "empty-chair",
+      "visible": 2544,
       "covered": 0,
       "fraction": 0
     },
     {
       "shape": "oval",
       "key": "guest_seated_worker",
-      "visible": 2231,
+      "visible": 2228,
+      "covered": 0,
+      "fraction": 0
+    },
+    {
+      "shape": "oval",
+      "key": "empty-chair",
+      "visible": 2545,
       "covered": 0,
       "fraction": 0
     },
     {
       "shape": "oval",
       "key": "guest_seated_manager",
-      "visible": 1837,
+      "visible": 1845,
+      "covered": 0,
+      "fraction": 0
+    },
+    {
+      "shape": "heart",
+      "key": "empty-chair",
+      "visible": 2544,
       "covered": 0,
       "fraction": 0
     },
     {
       "shape": "heart",
       "key": "guest_seated_pink",
-      "visible": 3023,
-      "covered": 3,
-      "fraction": 0.0009923916639100231
+      "visible": 3029,
+      "covered": 0,
+      "fraction": 0
+    },
+    {
+      "shape": "heart",
+      "key": "empty-chair",
+      "visible": 2556,
+      "covered": 0,
+      "fraction": 0
     },
     {
       "shape": "heart",
       "key": "guest_seated_human",
-      "visible": 1533,
+      "visible": 1537,
       "covered": 1,
-      "fraction": 0.0006523157208088715
+      "fraction": 0.0006506180871828237
+    },
+    {
+      "shape": "heart",
+      "key": "empty-chair",
+      "visible": 2550,
+      "covered": 0,
+      "fraction": 0
     },
     {
       "shape": "heart",
       "key": "guest_seated_blue",
-      "visible": 3024,
+      "visible": 3019,
+      "covered": 0,
+      "fraction": 0
+    },
+    {
+      "shape": "heart",
+      "key": "empty-chair",
+      "visible": 2544,
       "covered": 0,
       "fraction": 0
     },
     {
       "shape": "heart",
       "key": "guest_seated_worker",
-      "visible": 2231,
+      "visible": 2228,
+      "covered": 0,
+      "fraction": 0
+    },
+    {
+      "shape": "heart",
+      "key": "empty-chair",
+      "visible": 2545,
       "covered": 0,
       "fraction": 0
     },
     {
       "shape": "heart",
       "key": "guest_seated_manager",
-      "visible": 1837,
+      "visible": 1845,
+      "covered": 0,
+      "fraction": 0
+    },
+    {
+      "shape": "cloud",
+      "key": "empty-chair",
+      "visible": 2544,
       "covered": 0,
       "fraction": 0
     },
     {
       "shape": "cloud",
       "key": "guest_seated_pink",
-      "visible": 3023,
-      "covered": 3,
-      "fraction": 0.0009923916639100231
+      "visible": 3029,
+      "covered": 0,
+      "fraction": 0
+    },
+    {
+      "shape": "cloud",
+      "key": "empty-chair",
+      "visible": 2556,
+      "covered": 0,
+      "fraction": 0
     },
     {
       "shape": "cloud",
       "key": "guest_seated_human",
-      "visible": 1533,
+      "visible": 1537,
       "covered": 1,
-      "fraction": 0.0006523157208088715
+      "fraction": 0.0006506180871828237
+    },
+    {
+      "shape": "cloud",
+      "key": "empty-chair",
+      "visible": 2550,
+      "covered": 0,
+      "fraction": 0
     },
     {
       "shape": "cloud",
       "key": "guest_seated_blue",
-      "visible": 3024,
+      "visible": 3019,
+      "covered": 0,
+      "fraction": 0
+    },
+    {
+      "shape": "cloud",
+      "key": "empty-chair",
+      "visible": 2544,
       "covered": 0,
       "fraction": 0
     },
     {
       "shape": "cloud",
       "key": "guest_seated_worker",
-      "visible": 2231,
+      "visible": 2228,
+      "covered": 0,
+      "fraction": 0
+    },
+    {
+      "shape": "cloud",
+      "key": "empty-chair",
+      "visible": 2545,
       "covered": 0,
       "fraction": 0
     },
     {
       "shape": "cloud",
       "key": "guest_seated_manager",
-      "visible": 1837,
+      "visible": 1845,
       "covered": 0,
       "fraction": 0
+    }
+  ],
+  "phoneClearance": [
+    {
+      "width": 568,
+      "height": 320,
+      "safe": 0,
+      "bottom": 0,
+      "covered": 0,
+      "visibleMarkers": 1
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "safe": 0,
+      "bottom": 0,
+      "covered": 0,
+      "visibleMarkers": 1
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "safe": 0,
+      "bottom": 0,
+      "covered": 0,
+      "visibleMarkers": 1
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "safe": 0,
+      "bottom": 0,
+      "covered": 0,
+      "visibleMarkers": 2
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "safe": 0,
+      "bottom": 0,
+      "covered": 0,
+      "visibleMarkers": 2
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "safe": 44,
+      "bottom": 20,
+      "covered": 0,
+      "visibleMarkers": 1
     }
   ],
   "method": "Actual UI approach and serving at five tables from outside the interaction radius; chair anchoring, exit paths, arrival from the entrance, reload, seated asset drawing and distinct customization previews. Fixtures accelerate customer state; Chromium simulation, not physical iPhone testing.",

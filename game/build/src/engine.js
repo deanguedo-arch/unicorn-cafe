@@ -29,18 +29,18 @@ const RECIPES={
 const MENU=Object.keys(RECIPES);
 const SEQUENCE=['pizza','icecream','burger','cupcake','soup','coffee','chicken','pancakes','smoothie'];
 const TABLES=[
- {id:'heart',name:'Heart table',symbol:'heart',colour:'#e95d92',seat:{x:817,y:598},meet:{x:867,y:634},food:{x:712,y:500}},
- {id:'star',name:'Star table',symbol:'star',colour:'#4f79e2',seat:{x:1285,y:841},meet:{x:1235,y:877},food:{x:1180,y:743}},
- {id:'flower',name:'Flower table',symbol:'flower',colour:'#269a78',seat:{x:352,y:843},meet:{x:402,y:879},food:{x:247,y:745}},
- {id:'moon',name:'Moon table',symbol:'moon',colour:'#8757cf',seat:{x:849,y:928},meet:{x:899,y:964},food:{x:744,y:830}},
- {id:'diamond',name:'Diamond table',symbol:'diamond',colour:'#cc6a19',seat:{x:1555,y:928},meet:{x:1605,y:964},food:{x:1450,y:830}}
+ {id:'heart',name:'Heart table',symbol:'heart',colour:'#e95d92',seat:{x:765,y:598},meet:{x:820,y:634},food:{x:640,y:500}},
+ {id:'star',name:'Star table',symbol:'star',colour:'#4f79e2',seat:{x:1385,y:618},meet:{x:1440,y:654},food:{x:1260,y:520}},
+ {id:'flower',name:'Flower table',symbol:'flower',colour:'#269a78',seat:{x:415,y:843},meet:{x:470,y:879},food:{x:290,y:745}},
+ {id:'moon',name:'Moon table',symbol:'moon',colour:'#8757cf',seat:{x:855,y:923},meet:{x:910,y:959},food:{x:730,y:825}},
+ {id:'diamond',name:'Diamond table',symbol:'diamond',colour:'#cc6a19',seat:{x:1295,y:928},meet:{x:1350,y:964},food:{x:1170,y:830}}
 ];
 const KITCHEN={x:997,y:380}, SINK={x:1450,y:385}, ENTRY={x:236,y:1000};
 // Visible interior footprints. The unused baked-background obstacles are gone.
 const OBSTACLES=[
  [452,174,880,130],[80,405,259,112],[1490,305,208,173],
- [1610,533,102,112],[1061,905,89,91],
- ...TABLES.map(t=>[t.food.x-156,t.food.y-34,312,130])
+ [1610,533,102,112],[59,878,102,122],
+ ...TABLES.map(t=>[t.food.x-187,t.food.y-34,374,139])
 ];
 const BOUNDS={left:66,right:1734,top:325,bottom:1030};
 const CUSTOMIZATION={

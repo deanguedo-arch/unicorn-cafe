@@ -311,7 +311,7 @@ function drawStationLayer(c,t=0){
  c.beginPath();c.rect(35,20,1730,1043);c.clip();
  c.save();c.shadowColor='#3d254144';c.shadowBlur=17;c.shadowOffsetY=9;sprite(c,'painted_kitchen',895,365,909,298);c.restore();
  sprite(c,'room_sofa',209,517,269,180);
- sprite(c,'room_plant',1661,645,102,122);sprite(c,'room_plant',1105,997,96,112);
+ sprite(c,'room_plant',1661,645,102,122);sprite(c,'room_plant',110,1000,102,122);
  ellipse(c,1450,359,105,10,'#47325235');sprite(c,'painted_sink',1450,365,234,216);
  for(let i=0;i<3;i++){const a=.45+.18*Math.sin(t*2+i);c.globalAlpha=a;star(c,1395+i*28,238+(i%2)*19,5+i,'#fff1ad',t*.1);}
  c.restore();
@@ -340,11 +340,10 @@ function tableImage(d){
  z.putImageData(data,0,0);diningCache[key]=v;return v;
 }
 function drawTableFurniture(c,x,y,d,symbol,col,t=0,marker=true,seatGuest=null){
- c.save();ellipse(c,x,y+106,116,24,'#47325225');
- // Complete sourcepack chairs are behind one complete table sprite, not over a
- // background table, and their transforms do not depend on cloth selection.
- sprite(c,'chair_'+d.chairs,x-105,y+105,124,128,false);
- sprite(c,'chair_'+d.chairs,x+105,y+105,124,128,true);
+ c.save();
+ // Independent floor shadows and foreground chairs preserve furniture depth.
+ ellipse(c,x,y+80,80,15,'#47325225');
+ for(const dx of [-125,125])ellipse(c,x+dx,y+105,48,13,'#47325225');
  const im=tableImage(d);
  if(im){const w=d.tableType==='oval'?170:156,h=132;c.drawImage(im,x-w/2,y-55,w,h);}
  // The chosen prop is independent; generated fixed props were removed offline.
@@ -354,11 +353,13 @@ function drawTableFurniture(c,x,y,d,symbol,col,t=0,marker=true,seatGuest=null){
  else if(d.decoration==='cupcake')sprite(c,'cupcake',x,y-2,39,41);
  else if(d.decoration==='cookies'){sprite(c,'cookie',x-10,y,28,22);sprite(c,'cookie',x+10,y-3,28,23);}
  else{sprite(c,'star',x,y-3,35,34);}
+ // Chairs are nearer the viewer than the table; its cloth cannot cut their arms.
+ sprite(c,'chair_'+d.chairs,x-125,y+105,124,128,false);
+ sprite(c,'chair_'+d.chairs,x+125,y+105,124,128,true);
  // Foreground seats keep the face, lap and bent legs clear of the table.
  if(seatGuest)seatGuest();
- // The permanent white ring and dark stroke preserve shape/colour contrast on
- // every cloth. The marker covers the master art's decorative heart motif.
- if(marker)badge(c,symbol,x,y+77,27,col);
+ // Table identities sit on the floor in front of the furniture.
+ if(marker)badge(c,symbol,x,y+135,27,col);
  c.restore();
 }
 function drawSinkWorld(c,t=0){

@@ -25,15 +25,28 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=r
  const visibility=await page.evaluate(()=>{
   const A=RRArt,original=A.sprite,checks=[];let layers=[];
   A.sprite=function(c,key,...args){if(key.startsWith('guest_seated_')){const v=document.createElement('canvas');v.width=c.canvas.width;v.height=c.canvas.height;const z=v.getContext('2d');z.setTransform(c.getTransform());original(z,key,...args);layers.push({key,canvas:v});}return original(c,key,...args)};
+  const draw=CanvasRenderingContext2D.prototype.drawImage;
+  CanvasRenderingContext2D.prototype.drawImage=function(im,...args){if(this.canvas.id==='world'&&im===A.images['chair_'+__RR_TEST__.snapshot().decor.chairs]&&this.getTransform().a>0){const v=document.createElement('canvas');v.width=this.canvas.width;v.height=this.canvas.height;const z=v.getContext('2d');z.setTransform(this.getTransform());draw.call(z,im,...args);layers.push({key:'empty-chair',canvas:v});}return draw.call(this,im,...args)};
   for(const shape of RR.CUSTOMIZATION.tableType){__RR_TEST__.engine.s.decor.tableType=shape;__RR_TEST__.engine.s.settings.reduced=true;layers=[];__RR_TEST__.drawWorld();const world=document.querySelector('#world'),actual=world.getContext('2d').getImageData(0,0,world.width,world.height).data;
    for(const layer of layers){const expected=layer.canvas.getContext('2d').getImageData(0,0,world.width,world.height).data;let visible=0,covered=0;for(let i=0;i<expected.length;i+=4)if(expected[i+3]>250){visible++;if(Math.max(...[0,1,2].map(k=>Math.abs(expected[i+k]-actual[i+k])))>12)covered++;}checks.push({shape,key:layer.key,visible,covered,fraction:covered/visible});}
   }
-  A.sprite=original;__RR_TEST__.engine.s.decor.tableType='heart';__RR_TEST__.drawWorld();return checks;
+  CanvasRenderingContext2D.prototype.drawImage=draw;A.sprite=original;__RR_TEST__.engine.s.decor.tableType='heart';__RR_TEST__.drawWorld();return checks;
  });
- assert.equal(visibility.length,25);for(const q of visibility){assert(q.visible>300,'seated body must remain visible');assert(q.fraction<.02,`${q.shape}/${q.key} has ${q.covered} covered pixels`);}
+ assert.equal(visibility.length,50);for(const q of visibility){assert(q.visible>300,'customer or empty chair must remain visible');assert(q.fraction<.02,`${q.shape}/${q.key} has ${q.covered} covered pixels`);}
  await page.screenshot({path:process.env.DINING_SCREENSHOT||'/tmp/unicorn-seated-dining.png'});
+ const clearance=[];
+ for(const [width,height,safe=0,bottom=0] of [[568,320],[667,375],[740,300],[844,390],[932,430],[740,300,44,20]]){
+  await page.setViewportSize({width,height});const result=await page.evaluate(({safe,bottom})=>{
+   const root=document.documentElement;for(const side of ['left','right'])root.style.setProperty('--safe-'+side,safe+'px');root.style.setProperty('--safe-bottom',bottom+'px');__RR_TEST__.resize();
+   const world=document.querySelector('#world'),A=RRArt,original=A.sprite,layers=[];
+   A.sprite=function(c,key,...args){if(key.startsWith('guest_seated_')){const v=document.createElement('canvas');v.width=c.canvas.width;v.height=c.canvas.height;const z=v.getContext('2d');z.setTransform(c.getTransform());original(z,key,...args);layers.push(v);}return original(c,key,...args)};
+   __RR_TEST__.drawWorld();A.sprite=original;const control=document.querySelector('#primary').getBoundingClientRect(),stage=world.getBoundingClientRect();let covered=0;
+   for(const v of layers){const a=v.getContext('2d').getImageData(0,0,v.width,v.height).data;for(let y=Math.max(0,Math.floor(control.top-stage.top-3));y<Math.min(v.height,control.bottom-stage.top+3);y++)for(let x=Math.max(0,Math.floor(control.left-stage.left-3));x<Math.min(v.width,control.right-stage.left+3);x++)if(a[(y*v.width+x)*4+3]>250)covered++;}
+   return {covered,visibleMarkers:__RR_TEST__.metrics().hitboxes.length};
+  },{safe,bottom});assert.equal(result.covered,0,`action button covers a customer at ${width}x${height}`);clearance.push({width,height,safe,bottom,...result});
+ }
  const choices=await page.evaluate(()=>{const d=__RR_TEST__.snapshot().decor;return RR.CUSTOMIZATION.tableType.flatMap(shape=>RR.CUSTOMIZATION.tablecloth.map(cloth=>RRArt.customData('tableType',shape,{...d,tablecloth:cloth})));});assert.equal(new Set(choices).size,30);
  await page.reload();await page.waitForFunction(()=>window.__RR_TEST__);await page.locator('[data-action=open]').click();assert(await page.evaluate(()=>__RR_TEST__.snapshot().customers.every(c=>['arriving','leaving'].includes(c.phase)||c.x===RR.TABLES[c.table].seat.x&&c.y===RR.TABLES[c.table].seat.y)));
- assert.deepEqual(errors,[]);const report={passed:true,types:5,tableClothCombinations:30,seatedVisibility:visibility,method:'Actual UI approach and serving at five tables from outside the interaction radius; chair anchoring, exit paths, arrival from the entrance, reload, seated asset drawing and distinct customization previews. Fixtures accelerate customer state; Chromium simulation, not physical iPhone testing.',errors};fs.writeFileSync(process.env.DINING_REPORT||'/tmp/unicorn-seated-dining.json',JSON.stringify(report,null,2));console.log(JSON.stringify(report,null,2));
+ assert.deepEqual(errors,[]);const report={passed:true,types:5,tableClothCombinations:30,seatedVisibility:visibility,phoneClearance:clearance,method:'Actual UI approach and serving at five tables from outside the interaction radius; chair anchoring, exit paths, arrival from the entrance, reload, seated asset drawing and distinct customization previews. Fixtures accelerate customer state; Chromium simulation, not physical iPhone testing.',errors};fs.writeFileSync(process.env.DINING_REPORT||'/tmp/unicorn-seated-dining.json',JSON.stringify(report,null,2));console.log(JSON.stringify(report,null,2));
  }finally{await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1});

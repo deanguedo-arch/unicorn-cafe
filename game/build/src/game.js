@@ -304,7 +304,7 @@ function drawWorld(){ctx.setTransform(dpr,0,0,dpr,0,0);ctx.fillStyle='#baaccb';c
   if(engine.nextOrder()&&!engine.s.tray&&!engine.s.dirtyTray){ctx.save();ctx.globalAlpha=.5+.16*Math.sin(clock*3);ctx.strokeStyle='#fff0b4';ctx.lineWidth=6;ctx.beginPath();ctx.ellipse(R.KITCHEN.x,R.KITCHEN.y,71,29,0,0,Math.PI*2);ctx.stroke();ctx.restore();A.star(ctx,997,315,12,'#fff2bb',clock*.25);}
   if(engine.s.dirtyTray){ctx.save();ctx.globalAlpha=.6+.13*Math.sin(clock*3);ctx.strokeStyle='#d8f4f6';ctx.lineWidth=6;ctx.beginPath();ctx.ellipse(R.SINK.x,R.SINK.y,62,28,0,0,Math.PI*2);ctx.stroke();ctx.restore();}
   drawAutoInteractionHint();
-  // Chair back -> table -> foreground seated guest. Walking actors share depth ordering with furniture.
+  // Table -> foreground chairs -> seated guest. Walking actors share depth ordering with furniture.
   const actors=engine.s.customers.filter(c=>['arriving','leaving'].includes(c.phase)).map(c=>({type:'guest',y:c.y,c}));
   actors.push(...R.TABLES.map((t,i)=>({type:'table',y:t.food.y+100,t,i})),{type:'player',y:p.y});
   actors.sort((a,b)=>a.y-b.y);
@@ -323,13 +323,16 @@ function drawWorld(){ctx.setTransform(dpr,0,0,dpr,0,0);ctx.fillStyle='#baaccb';c
 function drawOrderMarkers(){
  const placed=[],active=orderCustomer(),stage=dom.stage.getBoundingClientRect();
  const occupied=[dom.orderPin,document.querySelector('.topbar'),dom.primary].filter(e=>e&&!e.hidden&&e.getClientRects().length).map(e=>{const r=e.getBoundingClientRect();return {x:r.left-stage.left,y:r.top-stage.top,w:r.width,h:r.height};});
+ // A floor marker may move around UI, but never onto a chair or table.
+ for(const t of R.TABLES){for(const [dx,dy,w,h] of [[-85,-55,170,132],[-187,-23,124,128],[63,-23,124,128]]){const q=worldToScreen(t.food.x+dx,t.food.y+dy);occupied.push({x:q.x,y:q.y,w:w*view.scale,h:h*view.scale});}}
  for(const guest of engine.s.customers){
   if(!['waiting','ordered'].includes(guest.phase))continue;
-  const table=R.TABLES[guest.table],pt=worldToScreen(table.food.x,table.food.y+77),r=22;
+  const table=R.TABLES[guest.table],pt=worldToScreen(table.food.x,table.food.y+135),r=22;
   if(pt.x<-40||pt.x>width+40||pt.y<-60||pt.y>height+100)continue;
   const anchor={x:pt.x,y:pt.y};let point=null;
   for(const [dx,dy] of [[0,0],[-54,0],[54,0],[0,54],[-54,54],[54,54],[0,108]]){
-   const q={x:R.clamp(anchor.x+dx,r+6,width-r-6),y:R.clamp(anchor.y+dy,r+6,height-r-6)};
+   const q={x:anchor.x+dx,y:anchor.y+dy};
+   if(q.x<r+6||q.x>width-r-6||q.y<r+6||q.y>height-r-6)continue;
    if(placed.some(p=>Math.hypot(p.x-q.x,p.y-q.y)<52)||occupied.some(p=>q.x+r+4>p.x&&q.x-r-4<p.x+p.w&&q.y+r+4>p.y&&q.y-r-4<p.y+p.h))continue;
    point=q;break;
   }
