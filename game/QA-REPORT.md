@@ -49,3 +49,9 @@ The updated visual audit passed all 540 simulated landscape states, including im
 The former three-scoop composition reached above the 320x280 food canvas, clipping the top scoop before CSS could fit the picture into a card. Normalized the complete composition into that frame and generated tightly framed portrait ice-cream card images with eight transparent pixels of padding on all four sides. Asset files and recipe/save data are preserved.
 
 `tests/icecream_fit.cjs` passed 14 pixel-level checks: strawberry and vanilla at six preparation states are compared against a larger reference canvas to detect lost pixels; both finished card pictures also have a portrait frame and clear padding on every edge. The full 540-state landscape layout audit and all 18 recipe/variant UI playthroughs passed again after this change. Pixel results and small-phone screenshots are in `tests/mobile-visual/`.
+
+## Round action button and portrait recipe tiles
+
+Removed the action button's browser padding and sized its main picture relative to its inner circle. Table medallions now use a single badge instead of nested frames. All 18 carried food variations passed centering, containment, single-badge and screen-bound checks across four viewport sizes plus simulated safe areas (90 states).
+
+The tightly framed ice-cream image exposed a separate recipe-tile layout issue: percentage image heights inside an aspect-ratio grid cell could resolve to the portrait image's natural height. Recipe pictures now occupy an explicit inset frame inside each square button. The mobile visual audit now checks recipe-tile image containment as well; the earlier audit did not include those images. All 540 states passed with the expanded check. Physical iPhone/Safari review remains outside this Chromium simulation.
