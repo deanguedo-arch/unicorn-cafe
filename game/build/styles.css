@@ -206,3 +206,40 @@ button{transition:transform .11s ease,filter .11s ease,box-shadow .11s ease}butt
 /* Portrait food artwork must use the card's frame rather than its natural height. */
 .dish-card{overflow:hidden}
 .dish-card>img{position:absolute;inset:10%;width:80%;height:80%;max-width:none;max-height:none;object-fit:contain}
+
+/* The restaurant fills the screen; only its small picture controls float above it. */
+.topbar{position:absolute;top:calc(var(--safe-top) + 8px);right:calc(var(--safe-right) + 8px);left:auto;width:auto;height:44px;min-height:0;display:flex;padding:0;gap:8px;background:none;border:0;box-shadow:none;z-index:20}
+.topbar:before,.topbar .brand{display:none}
+.topbar>.small-round{width:44px;height:44px;border-radius:50%}
+.topbar .day-progress{height:36px;padding:5px 8px;background:#fff8e7;border:2px solid #e8c99f;border-radius:18px;box-shadow:0 2px 0 #765277}
+.app:has(#world-ui[hidden]) .topbar .day-progress{display:none}
+.app:has(.kitchen-screen:not([hidden])) .topbar,.app:has(.day-screen:not([hidden])) .topbar{display:none}
+.settings-dialog{width:min(460px,100%);background:#fff8e7;border-radius:24px}
+.settings-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:14px 0}
+.settings-grid .dialog-button{min-width:0;min-height:88px;height:auto;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:7px;border-radius:18px;background:#ead7ef;box-shadow:0 3px 0 #765277}
+.settings-grid .dialog-button.good{background:#f4d581}
+.settings-grid .dialog-button.quiet{background:#f4e8db}
+.settings-grid .dialog-button img,.settings-grid .dialog-button svg{width:42px;height:42px;object-fit:contain}
+.settings-grid .dialog-button span{font-size:13px;font-weight:800;line-height:1.15;text-align:center}
+.settings-dialog .parent-copy{font-size:11px;line-height:1.4}
+@media(orientation:landscape) and (max-height:350px){.settings-grid{gap:8px;margin:8px 0}.settings-grid .dialog-button{min-height:66px;padding:4px}.settings-grid .dialog-button img,.settings-grid .dialog-button svg{width:32px;height:32px}.settings-grid .dialog-button span{font-size:11px}}
+
+/* Picnic pictures sit over the room instead of another full-width cream toolbar. */
+.lunch-screen{grid-template-columns:minmax(0,1fr);grid-template-rows:48px minmax(0,1fr) 92px;padding:0}
+.lunch-screen .day-heading{grid-column:1;grid-row:1;background:none;border:0;padding:3px 8px;grid-template-columns:44px 1fr 44px;z-index:2}
+.picnic-heading{background:#f6d7e4;border:3px solid #fff0c2;border-radius:18px;padding:5px 12px;font-size:18px;font-weight:900;text-align:center;line-height:1.1}
+.lunch-screen .day-heading .small-round{width:44px;height:44px}
+.lunch-screen .day-scene{grid-column:1;grid-row:1/4;box-shadow:none}
+.lunch-screen .day-controls{grid-column:1;grid-row:3;min-height:0;flex-direction:row;gap:10px;background:none;border:0;padding:6px 10px 10px;z-index:2}
+.lunch-screen .lunch-choices{max-width:420px;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.lunch-screen .day-choice{height:72px;min-height:64px;min-width:0;padding:4px;flex-direction:column;border-radius:18px}
+.lunch-screen .day-choice img{width:58px;height:48px;max-width:100%;min-height:0;object-fit:contain}
+.lunch-screen .day-choice span{font-size:11px;font-weight:800;line-height:1.1}
+.lunch-screen .day-big{min-width:0;min-height:64px;height:70px;gap:8px;padding:5px 12px;border-radius:18px}
+.lunch-screen .day-big img,.lunch-screen .day-big>svg{width:50px;height:50px;object-fit:contain}
+.lunch-screen .day-big span{font-size:14px;font-weight:900}
+.picnic-target{display:flex;align-items:center;gap:7px;background:#fff8e7;border:3px solid #fff0c2;border-radius:18px;padding:5px 10px;height:70px}
+.picnic-target>img{width:44px;height:50px;object-fit:contain}.picnic-target>svg{width:24px;height:24px}
+.picnic-target .day-dots{gap:3px}.picnic-target .day-dots>span{width:18px;height:18px}.picnic-target .day-dots svg{width:14px;height:14px}
+.picnic-items{display:flex;gap:10px}.picnic-items .day-choice{width:70px}
+@media(orientation:landscape) and (max-height:350px){.lunch-screen{grid-template-rows:44px minmax(0,1fr) 82px}.picnic-heading{font-size:15px}.lunch-screen .day-choice{height:64px}.picnic-target{height:64px;gap:4px;padding:4px 6px}.picnic-items{gap:7px}.picnic-items .day-choice{width:60px}.picnic-target>img{width:36px;height:44px}.lunch-screen .day-big{height:62px;min-height:62px}}

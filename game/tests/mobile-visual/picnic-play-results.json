@@ -1,0 +1,97 @@
+{
+  "method": "Isolated Chromium mobile viewports; actual UI clicks, reload after every picnic step at 568x320, five-customer fixtures. No physical-device certification.",
+  "cases": 15,
+  "errors": [],
+  "results": [
+    {
+      "width": 568,
+      "height": 320,
+      "meal": "pizza",
+      "passed": true
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "meal": "pancakes",
+      "passed": true
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "meal": "soup",
+      "passed": true
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "meal": "smoothie",
+      "passed": true
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "busyRoomMarkers": 3,
+      "passed": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "meal": "pizza",
+      "passed": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "meal": "pancakes",
+      "passed": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "meal": "soup",
+      "passed": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "meal": "smoothie",
+      "passed": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "busyRoomMarkers": 5,
+      "passed": true
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "meal": "pizza",
+      "passed": true
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "meal": "pancakes",
+      "passed": true
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "meal": "soup",
+      "passed": true
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "meal": "smoothie",
+      "passed": true
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "busyRoomMarkers": 5,
+      "passed": true
+    }
+  ]
+}

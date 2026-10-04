@@ -9,7 +9,7 @@ async function fixture(kind,data={}){await page.evaluate(({kind,data})=>{
  s.customers=[{id:1,table:0,dish:d,variant:v,type:'pink',phase:'ordered',x:R.TABLES[0].seat.x,y:R.TABLES[0].seat.y,eat:0}];s.issued=1;s.nextId=2;s.active=1;s.player={...R.KITCHEN,facing:1};
  if(kind==='cook'){const steps=R.RECIPES[d].steps;s.prep={orderId:1,dish:d,step:data.step,p:0,variant:steps[data.step]?.action==='choice'?null:v,deco:data.deco||'rainbow',done:data.step===steps.length,placements:[]};}
  if(kind==='wash'){s.tables[0]={status:'carried',dirty:null};s.dirtyTray={table:0,dish:d,variant:v,orderId:1,wash:0};}
- if(kind==='lunch'){s.customers=[];s.active=null;s.served=5;s.issued=5;s.lunch={done:false,meal:data.meal||null,bites:data.bites||0,sips:data.sips||0};}
+ if(kind==='lunch'){s.customers=[];s.active=null;s.served=5;s.issued=5;s.lunch={done:false,meal:data.meal||null,packed:data.packed??(data.meal?3:0),bites:data.bites||0,sips:data.sips||0};}
  if(kind==='clean'||kind==='complete'){s.customers=[];s.active=null;s.served=10;s.issued=10;s.lunch={done:true,meal:'pizza',bites:3,sips:2};if(data.task?.startsWith('floor')||kind==='complete')s.cleaning=R.CLEAN_TASKS.map(t=>({id:t.id,p:t.kind==='floor'&&kind!=='complete'?0:t.need}));}
  if(kind==='mismatch'){s.tray={orderId:1,dish:'icecream',variant:'strawberry'};s.player={...R.TABLES[0].meet,facing:1};}
  __RR_TEST__.loadFixture(s);
@@ -40,7 +40,7 @@ async function inspect(label,w,h,capture=false){const issues=await page.evaluate
  for(const [w,h,inset=0,bottom=0] of sizes){await page.setViewportSize({width:w,height:h});await page.goto(pathToFileURL(path.join(root,'Sneaky-Unicorn-Restaurant-v2.0.0.html')).href+'?qa=1');await page.waitForFunction(()=>window.__RR_TEST__);if(inset)await page.addStyleTag({content:`:root{--safe-left:${inset}px;--safe-right:${inset}px;--safe-bottom:${bottom}px}`});
  for(let stage=0;stage<6;stage++){await fixture('designer',{stage});await inspect(`designer-${stage}`,w,h,stage===3);}
  for(const kind of ['world','menu','wash','mismatch','complete']){await fixture(kind);await inspect(kind,w,h,true);}
- for(const data of [{},{meal:'pizza'},{meal:'pizza',bites:3},{meal:'pizza',bites:3,sips:2}]){await fixture('lunch',data);await inspect(`lunch-${data.meal||'choose'}-${data.bites||0}-${data.sips||0}`,w,h,true);}
+ for(const data of [{},{meal:'pizza',packed:0},{meal:'pizza',packed:1},{meal:'pizza',packed:2},{meal:'pizza'},{meal:'pizza',bites:3},{meal:'pizza',bites:3,sips:2}]){await fixture('lunch',data);await inspect(`lunch-${data.meal||'choose'}-${data.packed??3}-${data.bites||0}-${data.sips||0}`,w,h,true);}
  for(const task of ['table-0','kitchen','sink','window-left','floor-0']){await fixture('clean',{task});await inspect(`clean-${task}`,w,h,task==='floor-0');}
  const recipes=await page.evaluate(()=>Object.fromEntries(RR.MENU.map(d=>[d,{steps:RR.RECIPES[d].steps.map(s=>s.action),variants:RR.RECIPES[d].variants.map(v=>v.id)}])));
  for(const [dish,{steps,variants}] of Object.entries(recipes)){for(let step=0;step<=steps.length;step++){await fixture('cook',{dish,step});await inspect(`cook-${dish}-${step}-${steps[step]||'ready'}`,w,h,w===568||w===844);}for(const variant of variants.slice(1)){await fixture('cook',{dish,step:steps.length,variant});await inspect(`cook-${dish}-ready-${variant}`,w,h,w===568);}if(dish==='cupcake')for(const deco of ['stars','hearts']){await fixture('cook',{dish,step:steps.length,deco});await inspect(`cook-cupcake-ready-${deco}`,w,h,w===568);}}

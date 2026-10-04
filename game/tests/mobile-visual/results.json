@@ -28,7 +28,7 @@
       20
     ]
   ],
-  "states": 540,
+  "states": 558,
   "failed": 0,
   "errors": [],
   "results": [
@@ -101,25 +101,43 @@
     {
       "width": 568,
       "height": 320,
-      "screen": "lunch-choose-0-0",
+      "screen": "lunch-choose-3-0-0",
       "issues": []
     },
     {
       "width": 568,
       "height": 320,
-      "screen": "lunch-pizza-0-0",
+      "screen": "lunch-pizza-0-0-0",
       "issues": []
     },
     {
       "width": 568,
       "height": 320,
-      "screen": "lunch-pizza-3-0",
+      "screen": "lunch-pizza-1-0-0",
       "issues": []
     },
     {
       "width": 568,
       "height": 320,
-      "screen": "lunch-pizza-3-2",
+      "screen": "lunch-pizza-2-0-0",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "lunch-pizza-3-0-0",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "lunch-pizza-3-3-0",
+      "issues": []
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "screen": "lunch-pizza-3-3-2",
       "issues": []
     },
     {
@@ -641,25 +659,43 @@
     {
       "width": 667,
       "height": 375,
-      "screen": "lunch-choose-0-0",
+      "screen": "lunch-choose-3-0-0",
       "issues": []
     },
     {
       "width": 667,
       "height": 375,
-      "screen": "lunch-pizza-0-0",
+      "screen": "lunch-pizza-0-0-0",
       "issues": []
     },
     {
       "width": 667,
       "height": 375,
-      "screen": "lunch-pizza-3-0",
+      "screen": "lunch-pizza-1-0-0",
       "issues": []
     },
     {
       "width": 667,
       "height": 375,
-      "screen": "lunch-pizza-3-2",
+      "screen": "lunch-pizza-2-0-0",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "lunch-pizza-3-0-0",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "lunch-pizza-3-3-0",
+      "issues": []
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "screen": "lunch-pizza-3-3-2",
       "issues": []
     },
     {
@@ -1181,25 +1217,43 @@
     {
       "width": 740,
       "height": 300,
-      "screen": "lunch-choose-0-0",
+      "screen": "lunch-choose-3-0-0",
       "issues": []
     },
     {
       "width": 740,
       "height": 300,
-      "screen": "lunch-pizza-0-0",
+      "screen": "lunch-pizza-0-0-0",
       "issues": []
     },
     {
       "width": 740,
       "height": 300,
-      "screen": "lunch-pizza-3-0",
+      "screen": "lunch-pizza-1-0-0",
       "issues": []
     },
     {
       "width": 740,
       "height": 300,
-      "screen": "lunch-pizza-3-2",
+      "screen": "lunch-pizza-2-0-0",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "lunch-pizza-3-0-0",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "lunch-pizza-3-3-0",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "lunch-pizza-3-3-2",
       "issues": []
     },
     {
@@ -1721,25 +1775,43 @@
     {
       "width": 844,
       "height": 390,
-      "screen": "lunch-choose-0-0",
+      "screen": "lunch-choose-3-0-0",
       "issues": []
     },
     {
       "width": 844,
       "height": 390,
-      "screen": "lunch-pizza-0-0",
+      "screen": "lunch-pizza-0-0-0",
       "issues": []
     },
     {
       "width": 844,
       "height": 390,
-      "screen": "lunch-pizza-3-0",
+      "screen": "lunch-pizza-1-0-0",
       "issues": []
     },
     {
       "width": 844,
       "height": 390,
-      "screen": "lunch-pizza-3-2",
+      "screen": "lunch-pizza-2-0-0",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "lunch-pizza-3-0-0",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "lunch-pizza-3-3-0",
+      "issues": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "screen": "lunch-pizza-3-3-2",
       "issues": []
     },
     {
@@ -2261,25 +2333,43 @@
     {
       "width": 932,
       "height": 430,
-      "screen": "lunch-choose-0-0",
+      "screen": "lunch-choose-3-0-0",
       "issues": []
     },
     {
       "width": 932,
       "height": 430,
-      "screen": "lunch-pizza-0-0",
+      "screen": "lunch-pizza-0-0-0",
       "issues": []
     },
     {
       "width": 932,
       "height": 430,
-      "screen": "lunch-pizza-3-0",
+      "screen": "lunch-pizza-1-0-0",
       "issues": []
     },
     {
       "width": 932,
       "height": 430,
-      "screen": "lunch-pizza-3-2",
+      "screen": "lunch-pizza-2-0-0",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "lunch-pizza-3-0-0",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "lunch-pizza-3-3-0",
+      "issues": []
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "screen": "lunch-pizza-3-3-2",
       "issues": []
     },
     {
@@ -2801,25 +2891,43 @@
     {
       "width": 740,
       "height": 300,
-      "screen": "lunch-choose-0-0",
+      "screen": "lunch-choose-3-0-0",
       "issues": []
     },
     {
       "width": 740,
       "height": 300,
-      "screen": "lunch-pizza-0-0",
+      "screen": "lunch-pizza-0-0-0",
       "issues": []
     },
     {
       "width": 740,
       "height": 300,
-      "screen": "lunch-pizza-3-0",
+      "screen": "lunch-pizza-1-0-0",
       "issues": []
     },
     {
       "width": 740,
       "height": 300,
-      "screen": "lunch-pizza-3-2",
+      "screen": "lunch-pizza-2-0-0",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "lunch-pizza-3-0-0",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "lunch-pizza-3-3-0",
+      "issues": []
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "screen": "lunch-pizza-3-3-2",
       "issues": []
     },
     {
@@ -3272,16 +3380,5 @@
       "screen": "pause-cooking",
       "issues": []
     }
-  ],
-  "uiPlaythrough": {
-    "viewport": [
-      568,
-      320
-    ],
-    "recipesAndVariants": 18,
-    "preparationClicks": 214,
-    "cupcakeDecorationChoices": 3,
-    "flavourMatchedScoopArtwork": "passed",
-    "result": "passed"
-  }
+  ]
 }

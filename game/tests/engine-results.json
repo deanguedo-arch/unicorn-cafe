@@ -1,7 +1,7 @@
 {
   "kind": "production-engine deterministic tests, not physical-device or UI testing",
-  "passed": 22,
-  "total": 22,
+  "passed": 24,
+  "total": 24,
   "results": [
     {
       "name": "All 18 recipe/variation combinations through dish return/wash",
@@ -119,6 +119,14 @@
     },
     {
       "name": "Partial pizza placements persist and no automatic meal packing",
+      "pass": true
+    },
+    {
+      "name": "Picnic matching persists every item, wrong choices do not consume lunch",
+      "pass": true
+    },
+    {
+      "name": "Existing lunch saves keep bites and skip the new packing step",
       "pass": true
     }
   ]

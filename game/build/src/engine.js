@@ -60,7 +60,7 @@ const CLEAN_TASKS=[
  {id:'window-right',kind:'window',x:1400,y:343,artX:1527,artY:147,need:3},
  ...[[470,615],[979,625],[1497,566],[485,938],[980,999],[1640,1000]].map(([x,y],i)=>({id:'floor-'+i,kind:'floor',x,y,artX:x,artY:y,need:4}))
 ];
-function freshDayState(){return {phase:'morning',lunch:{done:false,meal:null,bites:0,sips:0},cleaning:CLEAN_TASKS.map(t=>({id:t.id,p:0})),pace:{elapsed:0,next:8,mood:'cozy',remaining:24,burst:0,seed:73129}};}
+function freshDayState(){return {phase:'morning',lunch:{done:false,meal:null,packed:0,bites:0,sips:0},cleaning:CLEAN_TASKS.map(t=>({id:t.id,p:0})),pace:{elapsed:0,next:8,mood:'cozy',remaining:24,burst:0,seed:73129}};}
 function clampInt(v,max=1000000){return Number.isFinite(v)?clamp(Math.floor(v),0,max):0;}
 function safePoint(pt){
  if(walkable(pt.x,pt.y))return {x:pt.x,y:pt.y};
@@ -173,9 +173,10 @@ function cleanSave(raw){
  // A partially damaged save must not strand unissued orders forever.
  if(s.issued>s.served+live)s.issued=s.served+live;
  const l=raw.lunch&&typeof raw.lunch==='object'?raw.lunch:{};
- s.lunch={done:!old&&l.done===true,meal:LUNCH_MENU.includes(l.meal)?l.meal:null,bites:clampInt(l.bites,3),sips:clampInt(l.sips,2)};
+ s.lunch={done:!old&&l.done===true,meal:LUNCH_MENU.includes(l.meal)?l.meal:null,packed:LUNCH_MENU.includes(l.meal)?(Number.isFinite(l.packed)?clampInt(l.packed,3):3):0,bites:clampInt(l.bites,3),sips:clampInt(l.sips,2)};
  if(!s.lunch.meal){s.lunch.bites=0;s.lunch.sips=0;}if(s.lunch.bites<3)s.lunch.sips=0;
- if(s.lunch.done){s.lunch.meal=s.lunch.meal||'pizza';s.lunch.bites=3;s.lunch.sips=2;}
+ if(s.lunch.bites||s.lunch.sips)s.lunch.packed=3;
+ if(s.lunch.done){s.lunch.meal=s.lunch.meal||'pizza';s.lunch.packed=3;s.lunch.bites=3;s.lunch.sips=2;}
  s.cleaning=CLEAN_TASKS.map(t=>({id:t.id,p:old?0:clampInt(Array.isArray(raw.cleaning)?raw.cleaning.find(q=>q?.id===t.id)?.p:0,t.need)}));
  if(s.served<DAY_TARGET)s.cleaning=CLEAN_TASKS.map(t=>({id:t.id,p:0}));
  const q=raw.pace&&typeof raw.pace==='object'?raw.pace:{};
@@ -226,8 +227,9 @@ class Engine{
   else if(s.phase!=='lunch')s.phase=s.lunch.done?'afternoon':'morning';
   s.completed=isDayClear(s);if(s.completed)s.phase='complete';return s.phase;
  }
- chooseLunch(meal){if(this.s.phase!=='lunch'||!LUNCH_MENU.includes(meal))return false;this.s.lunch.meal=meal;this.s.lunch.bites=0;this.s.lunch.sips=0;return true;}
- lunchAct(){const s=this.s,l=s.lunch;if(s.phase!=='lunch'||!l.meal)return false;if(l.bites<3)l.bites++;else if(l.sips<2)l.sips++;else return false;return true;}
+ chooseLunch(meal){if(this.s.phase!=='lunch'||!LUNCH_MENU.includes(meal))return false;this.s.lunch.meal=meal;this.s.lunch.packed=0;this.s.lunch.bites=0;this.s.lunch.sips=0;return true;}
+ packLunch(item){const l=this.s.lunch;if(this.s.phase!=='lunch'||!l.meal||l.packed>=3||item!==['meal','fruit','milk'][l.packed])return false;l.packed++;return true;}
+ lunchAct(){const s=this.s,l=s.lunch;if(s.phase!=='lunch'||!l.meal||l.packed<3)return false;if(l.bites<3)l.bites++;else if(l.sips<2)l.sips++;else return false;return true;}
  endLunch(){const s=this.s,l=s.lunch;if(s.phase!=='lunch'||!l.meal||l.bites<3||l.sips<2)return false;l.done=true;s.phase='afternoon';s.pace.next=3;s.pace.mood='normal';s.pace.remaining=20;this.updateDay();return true;}
  cleanTargets(){const s=this.s;if(s.phase!=='cleaning')return [];const floors=surfacesClean(s);return CLEAN_TASKS.filter(t=>(t.kind==='floor')===floors&&s.cleaning.find(q=>q.id===t.id).p<t.need);}
  cleanAct(id){const s=this.s,t=this.cleanTargets().find(t=>t.id===id);if(!t)return {ok:false};const q=s.cleaning.find(q=>q.id===id);q.p=clamp(q.p+1,0,t.need);this.updateDay();return {ok:true,done:q.p>=t.need,complete:s.completed};}

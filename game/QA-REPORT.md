@@ -55,3 +55,13 @@ The former three-scoop composition reached above the 320x280 food canvas, clippi
 Removed the action button's browser padding and sized its main picture relative to its inner circle. Table medallions now use a single badge instead of nested frames. All 18 carried food variations passed centering, containment, single-badge and screen-bound checks across four viewport sizes plus simulated safe areas (90 states).
 
 The tightly framed ice-cream image exposed a separate recipe-tile layout issue: percentage image heights inside an aspect-ratio grid cell could resolve to the portrait image's natural height. Recipe pictures now occupy an explicit inset frame inside each square button. The mobile visual audit now checks recipe-tile image containment as well; the earlier audit did not include those images. All 540 states passed with the expanded check. Physical iPhone/Safari review remains outside this Chromium simulation.
+
+## Picnic, floating controls and compact orders
+
+Removed the full-width brand/header strip from gameplay. The stars and settings button float over the restaurant, giving the stage the full available screen height. Settings uses six labeled picture buttons. The lunch scene uses the restaurant's selected wall, floor and furniture, with smaller characters gathered at its table and no full-width header or side panel.
+
+Lunch now starts with three sequential picture matches: pack the chosen meal, fruit and milk. Wrong selections leave progress intact; there is no timer. Then the existing three bites and two sips complete the break. Packing progress saves after each match. Existing lunch saves without the new `packed` field resume with their previous eating/drinking progress and skip packing; the save key and schema are unchanged.
+
+Large simultaneous order bubbles are replaced by interactive table medallions. One pinned picture card shows the selected order. Tapping another ordered table's medallion selects its card without sending the player walking; the main action still starts cooking or delivery. The selected medallion has a gold ring. Markers have 54-pixel hit regions and avoid the floating controls and one another.
+
+Validation: 24 deterministic engine checks and nine offline-package checks passed. The expanded mobile audit passed all 558 states across five landscape sizes plus simulated safe areas, including every picnic-packing stage. `tests/picnic_play.cjs` passed 15 actual UI cases: all four lunch choices at three phone sizes, reload after every pack/bite/sip at 568x320, settings during lunch, and switching selected orders in five-customer fixtures. Reports and inspected screenshots are in `tests/mobile-visual/`. These checks use Chromium simulation, not a physical iPhone or a child usability session.
