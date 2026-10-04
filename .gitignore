@@ -3,3 +3,6 @@ __pycache__/
 *.pyc
 .venv/
 game/pages/
+game/Sneaky-Unicorn-Restaurant-v2.0.0.html
+game/build/SHA256SUMS.txt
+game/build/sw.js

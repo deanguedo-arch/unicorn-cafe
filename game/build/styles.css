@@ -93,3 +93,21 @@ button{transition:transform .11s ease,filter .11s ease,box-shadow .11s ease}butt
  .topbar{height:60px;min-height:60px;padding:4px 10px}.brand{height:48px}.topbar>.small-round{width:44px;height:44px}
  .menu-grid{grid-template-columns:repeat(5,minmax(0,150px));gap:10px;padding:12px}.dish-card{min-height:0;padding:6px}.dish-card img{width:100%;height:100%}
 }
+
+.rotate-screen{position:fixed;inset:0;z-index:100;background:#fff9ed;color:#543d66;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:32px;gap:12px}
+.rotate-screen svg{width:140px;height:120px}.rotate-screen h1{font-size:26px;margin:0}.rotate-screen p{font-size:18px;margin:0;max-width:300px}.rotate-screen .rotate-help{font-size:14px;line-height:1.5;margin-top:12px}
+
+/* Use the same illustrated table medallions in tickets and comparison cards. */
+.table-badge{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;background:transparent;border:0;border-radius:50%;padding:0}
+.table-badge img,.compare-card .table-badge img{width:100%;height:100%;object-fit:contain}
+.meal-compare{gap:16px;margin:16px 0 20px;align-items:center}
+.compare-card{width:190px;min-height:218px;flex-shrink:0;padding:12px;display:flex;flex-direction:column;align-items:center;gap:8px}
+.compare-card .table-mark{position:static;width:42px;height:42px;align-self:flex-start}
+.compare-card>img:not(.variant){width:142px;height:116px;max-width:100%;object-fit:contain}
+.compare-card .variant{position:static;align-self:flex-end;width:44px;height:44px;border-radius:50%;padding:5px;border:2px solid #e6c275;background:#fff9df;margin-top:0}
+.dialog .parent-copy{line-height:1.5;margin:14px auto 0}
+@media(orientation:landscape) and (max-height:540px){
+ .meal-compare{margin:8px 0 12px;gap:12px}.compare-card{width:174px;min-height:100px;padding:8px;display:grid;grid-template-columns:32px 1fr 34px;gap:5px}
+ .compare-card .table-mark{width:32px;height:32px;align-self:start}.compare-card>img:not(.variant){width:80px;height:82px}.compare-card .variant{width:34px;height:34px;align-self:end;padding:3px}
+ .dialog .parent-copy{margin-top:10px;font-size:11px}.dialog h2{margin-bottom:4px}
+}

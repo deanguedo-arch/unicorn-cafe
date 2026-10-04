@@ -14,7 +14,7 @@ function harness(fail=false){
 }
 (async()=>{
  const h=harness();
- await test('Install precaches embedded index, manifest and three app icons',async()=>{await h.emit('install');assert(h.state.skip);const c=h.db.get('sneaky-restaurant:/restaurant/:2.0.0');assert.equal(c.size,5);return {cachedFiles:5};});
+ await test('Install precaches embedded index, manifest and three app icons',async()=>{await h.emit('install');assert(h.state.skip);const currentKey=[...h.db.keys()].find(k=>/^sneaky-restaurant:\/restaurant\/:2\.0\.0-[a-f0-9]{16}$/.test(k));assert(currentKey,'content-derived cache key');const c=h.db.get(currentKey);assert.equal(c.size,5);return {cachedFiles:5};});
  await test('Activation removes only older caches for this restaurant scope',async()=>{await h.emit('activate');assert(!h.db.has('sneaky-restaurant:/restaurant/:1.3.0-p4'));assert(h.db.has('sneaky-adventure:/restaurant/:9'));assert(h.db.has('sneaky-restaurant:/another-game/:1.2'));assert(h.state.claimed);});
  await test('Offline root navigation receives cached current game',async()=>{const r=await h.get('./');assert(r.body.includes(Buffer.from("const VERSION='2.0.0'")));assert.equal(h.state.network,0);});
  await test('Offline deep/query navigation receives same app entry',async()=>{const r=await h.get('./play/?old=1');assert.equal(r.url,'https://test.invalid/restaurant/index.html');assert.equal(h.state.network,0);});

@@ -11,4 +11,4 @@ art-source/: original selected B images, exact crop maps and extraction scripts.
 tests/: independent engine/browser/real-storage/PWA results and screenshots.
 build_standalone.py, build_pages.py: rebuild embedded playable artifacts with Python standard library.
 
-The four handoff ZIPs and all earlier releases remain preserved outside this separate working copy. No image-tool A candidate is part of this release. No public publishing occurred.
+Older root source and release packages are archived outside the checkout; see the root README. GitHub Actions builds game/pages from build/ on every push to main. Generated outputs are not tracked.

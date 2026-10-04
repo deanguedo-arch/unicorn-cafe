@@ -1,17 +1,23 @@
-# Unicorn Café — local v2.0.0 project
+# Unicorn Café
 
-This is a local branch of https://github.com/deanguedo-arch/unicorn-cafe. The finished v2.0.0 game is installed locally; nothing has been pushed or published.
+The current editable game lives in **game/build/**. There is one active source; GitHub Pages is built from it automatically on every push to **main**.
 
 ## Play and edit
 
-Double-click **Play.command** on this Mac, or run `python3 dev_server.py` in this folder. It opens http://localhost:8787. Keep the Terminal window open; press Control-C to stop. Refresh the browser after edits. This development preview disables offline caching so changes appear immediately.
+Double-click **Play.command**, or run `python3 dev_server.py`, to play at http://localhost:8787. This preview disables offline caching.
 
-Edit **game/build/src/game.js** for controls and activities, **engine.js** for recipes/day logic, **art.js** for drawing, **game/build/styles.css** for layout, and **game/build/assets/** for artwork. Open this folder as a project in Codex or your editor.
+Edit `game/build/src/game.js` for interactions, `engine.js` for recipes and day logic, `art.js` for drawing, `game/build/styles.css` for layout, and `game/build/assets/` for artwork. Portrait phone play is blocked and paused; landscape resumes it.
 
-Double-click **Build.command**, or run `python3 rebuild.py`, to regenerate the standalone HTML and root GitHub Pages build. Python 3 is the only build dependency. The root index.html is the ready-to-publish release; the local preview runs editable modular source.
+## Build and publish
 
-## Git
+Double-click **Build.command**, or run `python3 rebuild.py`. Output goes to `game/pages/` and is ignored by Git. The standalone HTML is generated too; neither generated output needs to be committed.
 
-Work is on branch `codex/local-v2-game`; `origin` is your existing GitHub repository. Previous online code remains in Git history. Older source folders at the repository root are retained for reference; **game/** is the current editable source. Commit changes locally, review them, then push this branch when you want to share it. No online changes have been made by this setup.
+Commit source changes on **main** and push to **origin/main**. The **Build and deploy current game** GitHub Actions workflow builds, checks, and publishes `game/pages/`. A successful deployment is available at https://deanguedo-arch.github.io/unicorn-cafe/. Check the Actions run if the site has not updated. Commits on other branches do not publish the site.
 
-See game/QA-REPORT.md and game/ACCEPTANCE-MAP.md for release evidence.
+Each build gives the offline worker a content-derived cache ID. Connected browsers check for a new worker, save their game, and reload when an update takes control. Offline devices receive updates when they reconnect.
+
+## Project material
+
+`game/art-source/` preserves artwork originals and extraction scripts. `game/ASSET-PROVENANCE.json`, `game/SOURCE-INDEX.md`, and `game/tests/` preserve source provenance and QA evidence. Existing QA reports describe earlier verification; they are not certification of later edits.
+
+Legacy root source, duplicate builds, and release ZIPs were preserved in a verified archive outside this checkout at `/Users/deanguedo/Documents/Codex/archives/unicorn-cafe-2026-10-04/preserved-project-material.zip`. Previous committed releases also remain in Git history.

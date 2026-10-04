@@ -3,10 +3,10 @@ from pathlib import Path
 import json, shutil, hashlib
 from build_standalone import build as build_html
 ROOT=Path(__file__).resolve().parent;BUILD=ROOT/'build';PAGES=ROOT/'pages'
-def worker(files):
+def worker(files, revision):
     return '''/* Rainbow Restaurant v2.0.0. Same-origin, directory-scoped offline cache. */
 const PREFIX='sneaky-restaurant:'+new URL(self.registration.scope).pathname+':';
-const CACHE=PREFIX+'2.0.0';
+const CACHE=PREFIX+'''+json.dumps('2.0.0-'+revision)+''';
 const FILES='''+json.dumps(files,indent=2)+''';
 self.addEventListener('install',event=>event.waitUntil(
  caches.open(CACHE).then(cache=>cache.addAll(FILES)).then(()=>self.skipWaiting())
@@ -39,13 +39,14 @@ def main():
     shutil.copytree(BUILD/'icons',PAGES/'icons',dirs_exist_ok=True)
     shutil.copy2(BUILD/'manifest.webmanifest',PAGES/'manifest.webmanifest')
     for f in ['README.md','VERSION.json','LAUNCH-INSTRUCTIONS.md']:
-        shutil.copy2(BUILD/f,PAGES/f)
+        shutil.copy2((BUILD if f=='VERSION.json' else ROOT)/f,PAGES/f)
     (PAGES/'README.md').write_text('# Rainbow Restaurant v2.0.0 — Ready for GitHub Pages\n\nUpload the contents of this folder to the restaurant repository. index.html embeds all game code, styles and artwork. Keep manifest.webmanifest, sw.js and icons/ beside it. No build command and no external assets/src directory are required.\n\nSee LAUNCH-INSTRUCTIONS.md. The separate Editable-Source ZIP contains the modular code, artwork, tests and rebuild scripts. Nothing has been deployed by generating this package.\n')
     (PAGES/'.nojekyll').write_text('')
     files=['./index.html','./manifest.webmanifest',*['./'+str(p.relative_to(PAGES)) for p in sorted((PAGES/'icons').glob('*.png'))]]
-    (PAGES/'sw.js').write_text(worker(files))
+    revision=hashlib.sha256(b''.join((PAGES/f[2:]).read_bytes() for f in files)).hexdigest()[:16]
+    (PAGES/'sw.js').write_text(worker(files,revision))
     modular=['./index.html','./styles.css','./manifest.webmanifest',*['./'+str(p.relative_to(BUILD)) for folder in ['src','assets','icons'] for p in sorted((BUILD/folder).iterdir()) if p.is_file()]]
-    (BUILD/'sw.js').write_text(worker(modular))
+    (BUILD/'sw.js').write_text(worker(modular,revision))
     hashes(BUILD);hashes(PAGES)
     print('Pages package:',len([p for p in PAGES.rglob('*') if p.is_file()]),'files; embedded game',len(html.encode()),'bytes')
 if __name__=='__main__':main()

@@ -35,7 +35,12 @@ function imageHTML(key,cls='',alt=''){return `<img class="${cls}" src="${window.
 function foodHTML(dish,variant,cls=''){return `<img class="${cls}" src="${A.foodData(dish,variant)}" alt="${R.RECIPES[dish].name}" draggable="false">`;}
 function variantInfo(dish,id){return R.RECIPES[dish].variants.find(x=>x.id===id)||R.RECIPES[dish].variants[0];}
 function variantHTML(dish,id,cls=''){const v=variantInfo(dish,id);return `<img class="${cls}" src="${A.toolData(v.icon)}" alt="${v.name}" draggable="false">`;}
-function tableMarkHTML(i,cls='table-mark'){const t=R.TABLES[i];return `<span class="${cls}" style="background:${t.colour}">${A.icon(t.symbol)}</span>`;}
+const tableBadgePictures=new Map();
+function tableMarkHTML(i,cls='table-mark'){
+ const t=R.TABLES[i];
+ if(!tableBadgePictures.has(i)){const canvas=document.createElement('canvas');canvas.width=96;canvas.height=96;A.badge(canvas.getContext('2d'),t.symbol,48,48,40,t.colour);tableBadgePictures.set(i,canvas.toDataURL());}
+ return `<span class="${cls} table-badge" aria-label="${t.symbol} table"><img src="${tableBadgePictures.get(i)}" alt="" draggable="false"></span>`;
+}
 function guestKey(c,moving=false){const happy=['eating','finished'].includes(c.phase);if(c.type==='pink'||c.type==='blue')return 'baby_'+c.type+'_'+(happy?(Math.floor(clock*4+c.id)%2?4:5):moving?1+Math.floor(clock*6+c.id)%3:0);if(c.type==='human')return happy?'h_happy':moving?'h_run'+Math.floor(clock*6)%4:'h_idle0';if(c.type==='worker')return happy?'w_5_3':'w_0_'+(moving?Math.floor(clock*5)%3:0);return happy?'m_4_5':'m_0_'+(moving?Math.floor(clock*5)%3:0);}
 function save(){try{localStorage.setItem(R.SAVE_KEY,JSON.stringify(engine.snapshot()));storageOK=true;}catch(_){storageOK=false;}}
 function feedback(kind='tap'){sound.play(kind);try{if(navigator.vibrate&&!engine.s.settings.reduced)navigator.vibrate(kind==='serve'?22:kind==='wash'?16:8);}catch(_){} }
@@ -272,9 +277,9 @@ function drawCooking(){if(!cookCanvas||!cookContext||mode!=='cook')return;const 
  const toolImg=getToolImage(st?currentStepTool(p,st):'chef');if(st&&!p.done&&['stir','rub'].includes(st.action)&&p.p>0){c.save();c.translate(55+Math.cos(clock*3)*15,5);c.rotate(Math.sin(clock*3)*.2);if(toolImg?.complete&&toolImg.naturalWidth)c.drawImage(toolImg,-25,-95,64,94);c.restore();}
  if(p.done)for(let i=0;i<7;i++){const a=i*Math.PI*2/7+clock*.25;A.star(c,Math.cos(a)*149,Math.sin(a)*109,8,['#fff0a2','#f6b4d0','#b6e4dd'][i%3],clock*.4);}c.restore();}
 function drawWashing(){if(!washCanvas||!washContext||mode!=='wash')return;const c=washContext,w=washCanvas.width/dpr,h=washCanvas.height/dpr;c.setTransform(dpr,0,0,dpr,0,0);c.clearRect(0,0,w,h);c.save();const scale=Math.min(w/320,h/280,1.6),x=w/2-160*scale,y=h/2-140*scale;c.translate(x,y);c.scale(scale,scale);const progress=washDone?1:(engine.s.dirtyTray?.wash||0)/5;A.drawWash(c,progress,clock);c.restore();}
-function animationFrame(ms){requestAnimationFrame(animationFrame);const dt=lastTime?Math.min(.04,(ms-lastTime)/1000):0;lastTime=ms;if(document.hidden)return;clock+=dt;dayPulse=Math.max(0,dayPulse-dt*2);cookBump=Math.max(0,cookBump-dt*2.7);if(mode==='world')updateWorld(dt);else if(['cook','recipes','wash'].includes(mode))tickRestaurant(dt);if(mode==='cook'&&cookPointer!==null){const p=engine.s.prep,st=p&&p.step===cookStepLock?R.RECIPES[p.dish].steps[p.step]:null;if(st?.action==='hold'&&clock-cookLast>.42){cookLast=clock;doPrep();}}
+function animationFrame(ms){requestAnimationFrame(animationFrame);const dt=lastTime?Math.min(.04,(ms-lastTime)/1000):0;lastTime=ms;if(document.hidden||portraitBlocked)return;clock+=dt;dayPulse=Math.max(0,dayPulse-dt*2);cookBump=Math.max(0,cookBump-dt*2.7);if(mode==='world')updateWorld(dt);else if(['cook','recipes','wash'].includes(mode))tickRestaurant(dt);if(mode==='cook'&&cookPointer!==null){const p=engine.s.prep,st=p&&p.step===cookStepLock?R.RECIPES[p.dish].steps[p.step]:null;if(st?.action==='hold'&&clock-cookLast>.42){cookLast=clock;doPrep();}}
  for(const q of particles){q.x+=q.vx*dt;q.y+=q.vy*dt;q.vy+=55*dt;q.life-=dt;}particles=particles.filter(q=>q.life>0);if(toastUntil&&clock>toastUntil){$('toast').classList.remove('show');toastUntil=0;}if(loaded){if(['world','customize','loading'].includes(mode)||(mode==='dialog'&&modalReturn==='world'))drawWorld();if(mode==='customize')drawDesignerPreview();drawCooking();drawWashing();drawDayScene();}}
-async function offline(){if(window.RR_STANDALONE||!('serviceWorker'in navigator)||!['http:','https:'].includes(location.protocol))return;try{await navigator.serviceWorker.register('./sw.js',{scope:'./'});await navigator.serviceWorker.ready;offlineReady=true;}catch(_){offlineReady=false;}}
+async function offline(){if(window.RR_STANDALONE||!('serviceWorker'in navigator)||!['http:','https:'].includes(location.protocol))return;try{const hadController=!!navigator.serviceWorker.controller;let refreshing=false;navigator.serviceWorker.addEventListener('controllerchange',()=>{if(hadController&&!refreshing){refreshing=true;save();location.reload();}});const registration=await navigator.serviceWorker.register('./sw.js',{scope:'./',updateViaCache:'none'});registration.update().catch(()=>{});await navigator.serviceWorker.ready;offlineReady=true;}catch(_){offlineReady=false;}}
 async function boot(){const current=++bootCount;mode='loading';dom.customizer.hidden=false;dom.customizer.innerHTML='<div class="custom-final"><div class="parent-copy">Setting the tables…</div></div>';$('menu').innerHTML=A.icon('settings');syncPrefs();resize();try{await A.load();if(current!==bootCount)return;loaded=true;$('brand-picture').innerHTML=imageHTML('u_idle0');if(migrated)save();showCustomizer(0);offline();}catch(err){dom.customizer.innerHTML=`<div class="custom-final"><div class="parent-copy">Artwork did not finish loading. Keep the assets folder beside index.html.</div><button class="open-button" data-action="load-retry" aria-label="Retry loading">${A.icon('retry')}</button></div>`;}}
 if(window.RR_QA===true||new URLSearchParams(location.search).get('qa')==='1')window.__RR_TEST__={get engine(){return engine;},get mode(){return mode;},get view(){return {...view};},get storageOK(){return storageOK;},get offlineReady(){return offlineReady;},get migrated(){return migrated;},snapshot:()=>engine.snapshot(),save,resize,worldToScreen,showCustomizer,openRestaurant,route,updateHUD,openRecipeMenu,openCooking,openWash,drawWorld,metrics:()=>({width,height,dpr,mode,hitboxes:hits.map(x=>({...x})),audioUnlocked:sound.unlocked,pathLength:path.length,goal:goal?{...goal}:null,auto:{key:autoZoneKey,inside:autoZoneInside,dwell:autoDwell,last:autoLastTrigger}}),openLunch,openClean,cleanAction,lunchAction,tickRestaurant,returnToWorld,showComplete,autoCandidate:()=>autoCandidate(),updateAuto:(dt=.3,stopped=true)=>updateAutoInteraction(dt,stopped),setPlayer(x,y){engine.s.player.x=x;engine.s.player.y=y;path=[];goal=null;pointer=null;keys.clear();autoZoneKey=null;autoZoneInside=false;autoDwell=0;},loadFixture(raw){dom.modal.innerHTML='';engine=new R.Engine(raw);npcPaths.clear();path=[];goal=null;particles=[];hudSignature='';kitchenSignature='';selectedCleanup=null;autoZoneKey=null;autoZoneInside=false;autoDwell=0;autoLastTrigger='';completeShown=false;dayScreen.hidden=true;save();returnToWorld();}};
 // v1.4: day scenes share the same characters, table art, picture controls and audio.
@@ -355,5 +360,24 @@ function drawDayScene(){if(!dayCanvas||!dayContext||!['lunch','scrub'].includes(
  c.restore();
 }
 
-requestAnimationFrame(animationFrame);boot();
+// Pause play and remove all game controls from focus while a phone is upright.
+const portraitQuery=matchMedia('(orientation: portrait) and (max-width: 900px)');
+let portraitBlocked=portraitQuery.matches;
+function syncOrientation(){
+ portraitBlocked=portraitQuery.matches;
+ $('rotate-screen').hidden=!portraitBlocked;
+ dom.app.hidden=portraitBlocked;
+ dom.app.inert=portraitBlocked;
+ stopControls();cookPointer=null;dayPointer=null;lastTime=0;
+ if(portraitBlocked)save();else resize();
+}
+portraitQuery.addEventListener('change',syncOrientation);
+// Installed browsers may grant the lock; the portrait gate also works when they cannot.
+function requestLandscape(){
+ if(!matchMedia('(pointer: coarse)').matches||!screen.orientation?.lock)return;
+ screen.orientation.lock('landscape').catch(()=>{});
+}
+document.addEventListener('pointerdown',requestLandscape,{passive:true});
+document.addEventListener('fullscreenchange',requestLandscape);
+requestAnimationFrame(animationFrame);boot();syncOrientation();
 })();
