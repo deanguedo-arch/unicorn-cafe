@@ -27,10 +27,36 @@ const AUTO_DWELL=.28,AUTO_EXIT_PAD=34;
 const dayScreen=document.createElement('section');dayScreen.id='day-screen';dayScreen.className='day-screen';dayScreen.hidden=true;dom.stage.insertBefore(dayScreen,dom.modal);
 let dayCanvas=null,dayContext=null,dayPointer=null,dayPoint={x:260,y:230},dayDistance=0,dayLast=0,dayDidAct=false,dayPulse=0,cleanTask=null,cleanDone=false,cleanDoneAt=0,completeShown=false;
 
+// Use the media playback route on iOS: the default ambient route obeys the
+// phone's Ring/Silent switch even when Web Audio reports a running context.
+const SOUND_LEVEL=.28;
 const sound={context:null,master:null,unlocked:false,
- unlock(){if(this.unlocked){if(this.context?.state==='suspended')this.context.resume().catch(()=>{});return;}try{const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;this.context=new AC();this.master=this.context.createGain();this.master.gain.value=engine.s.settings.muted?0:.08;this.master.connect(this.context.destination);this.context.resume().catch(()=>{});this.unlocked=true;}catch(_){}},
- mute(){if(this.master)this.master.gain.setTargetAtTime(engine.s.settings.muted?0:.08,this.context.currentTime,.02);},
- play(kind='tap'){if(!this.unlocked||engine.s.settings.muted)return;try{const ac=this.context,now=ac.currentTime;const notes=kind==='serve'?[523,659,784,1047]:kind==='ready'?[523,698,880]:kind==='wash'?[659,784,988]:kind==='hello'?[587,784]:kind==='oops'?[392,330]:[460+Math.random()*130];notes.forEach((f,i)=>{const o=ac.createOscillator(),g=ac.createGain();o.type='sine';o.frequency.setValueAtTime(f,now+i*.09);o.frequency.exponentialRampToValueAtTime(f*1.06,now+i*.09+.12);g.gain.setValueAtTime(0,now+i*.09);g.gain.linearRampToValueAtTime(.55,now+i*.09+.018);g.gain.exponentialRampToValueAtTime(.001,now+i*.09+.22);o.connect(g);g.connect(this.master);o.start(now+i*.09);o.stop(now+i*.09+.24);});}catch(_){} }
+ session(active){try{if(navigator.audioSession)navigator.audioSession.type=active?'playback':'auto';}catch(_){}},
+ unlock(){
+  if(document.hidden||portraitBlocked||engine.s.settings.muted)return;
+  this.session(true);
+  try{
+   if(!this.context||this.context.state==='closed'){
+    const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;
+    this.context=new AC();this.master=this.context.createGain();
+    this.master.gain.value=SOUND_LEVEL;this.master.connect(this.context.destination);
+    this.context.addEventListener('statechange',()=>{this.unlocked=this.context.state==='running';});
+   }
+   // Touch-end/click are trusted activation events on phones. Retry interrupted
+   // contexts too; switching apps or locking an iPhone can interrupt playback.
+   const ac=this.context;this.unlocked=ac.state==='running';
+   if(!this.unlocked)ac.resume().then(()=>{if(this.context===ac){this.unlocked=ac.state==='running';this.musicNext=0;}}).catch(()=>{});
+  }catch(_){}
+ },
+ pause(){
+  this.musicNext=0;this.session(false);
+  if(this.context?.state==='running')this.context.suspend().catch(()=>{});
+ },
+ mute(){
+  if(this.master)this.master.gain.setTargetAtTime(engine.s.settings.muted?0:SOUND_LEVEL,this.context.currentTime,.02);
+  if(engine.s.settings.muted)this.pause();else if(this.context)this.unlock();
+ },
+ play(kind='tap'){if(!this.unlocked||this.context?.state!=='running'||engine.s.settings.muted)return;try{const ac=this.context,now=ac.currentTime;const notes=kind==='serve'?[523,659,784,1047]:kind==='ready'?[523,698,880]:kind==='wash'?[659,784,988]:kind==='hello'?[587,784]:kind==='oops'?[392,330]:[460+Math.random()*130];notes.forEach((f,i)=>{const o=ac.createOscillator(),g=ac.createGain();o.type='sine';o.frequency.setValueAtTime(f,now+i*.09);o.frequency.exponentialRampToValueAtTime(f*1.06,now+i*.09+.12);g.gain.setValueAtTime(0,now+i*.09);g.gain.linearRampToValueAtTime(.55,now+i*.09+.018);g.gain.exponentialRampToValueAtTime(.001,now+i*.09+.22);o.connect(g);g.connect(this.master);o.start(now+i*.09);o.stop(now+i*.09+.24);});}catch(_){} }
 };
 
 const DJ_TUNES=[{name:'Rainbow waltz',beat:.32,notes:[523,659,784,659,587,698,880,698,659,784,988,784,587,698,784,698]},{name:'Moonlight bounce',beat:.26,notes:[392,494,587,784,587,494,440,523,659,880,659,523,494,587,740,587]},{name:'Cupcake parade',beat:.29,notes:[523,523,784,880,784,659,587,659,698,698,880,988,880,784,659,587]}];
@@ -256,7 +282,7 @@ function handleAction(action,e){sound.unlock();
  case 'leave-kitchen':leaveKitchen();break;case 'restart-recipe':showDialog('Restart this meal?',`<div class="dialog-buttons"><button class="dialog-button good" data-action="resume" aria-label="Return to play">${A.icon('back')}</button><button class="dialog-button" data-action="restart-confirm">${A.icon('retry')}</button></div>`);break;
  case 'restart-confirm':closeDialog();engine.restartPrep();save();openCooking();break;case 'prep':if(mode==='cook'){const p=engine.s.prep,st=p&&R.RECIPES[p.dish].steps[p.step];if(st?.action==='place')doPrep(null,{x:.5+(p.p-1)*.18,y:.48+(p.p%2)*.12});else doPrep();}break;
  case 'carry':carryMeal();break;case 'wash':doWash();break;case 'wash-return':returnToWorld();break;case 'resume':closeDialog();break;case 'pause-cooking':closeDialog();returnToWorld();break;
- case 'fix-meal':closeDialog();engine.remake();save();returnToWorld();route('kitchen',engine.s.active);break;case 'toggle-audio':engine.s.settings.muted=!engine.s.settings.muted;save();syncPrefs();closeDialog();menuDialog();break;case 'toggle-motion':engine.s.settings.reduced=!engine.s.settings.reduced;save();syncPrefs();closeDialog();menuDialog();break;
+ case 'fix-meal':closeDialog();engine.remake();save();returnToWorld();route('kitchen',engine.s.active);break;case 'toggle-audio':engine.s.settings.muted=!engine.s.settings.muted;save();syncPrefs();if(!engine.s.settings.muted){sound.unlock();feedback('hello');}closeDialog();menuDialog();break;case 'toggle-motion':engine.s.settings.reduced=!engine.s.settings.reduced;save();syncPrefs();closeDialog();menuDialog();break;
  case 'customize':if(mode==='dialog')closeDialog();showCustomizer(0);break;case 'collection':showCollection();break;case 'new-day':if(mode==='dialog')dom.modal.innerHTML='';engine.newDay();completeShown=false;dayScreen.hidden=true;npcPaths.clear();particles=[];save();showCustomizer(0);break;case 'reset-question':resetQuestion();break;case 'reset-confirm':engine.reset();completeShown=false;dayScreen.hidden=true;npcPaths.clear();particles=[];selectedCleanup=null;save();syncPrefs();dom.modal.innerHTML='';showCustomizer(0);break;
  }}
 dom.app.addEventListener('click',e=>{const button=e.target.closest('button');if(!button||button.disabled)return;idle=0;if(button.dataset.customJump!==undefined){customStage=Number(button.dataset.customJump);renderCustomizer();}else if(button.dataset.customStage){if(engine.setDecor(button.dataset.customStage,button.dataset.customValue)){feedback('tap');save();renderCustomizer();}}else if(button.dataset.action)handleAction(button.dataset.action,e);else if(button.dataset.recipe&&mode==='recipes')startRecipe(button.dataset.recipe);else if(button.dataset.variant&&mode==='cook')doPrep(button.dataset.variant);else if(button.dataset.decoration&&mode==='cook'){if(engine.redecorate(button.dataset.decoration)){feedback('tap');save();updateCookUI(true);}else doPrep(button.dataset.decoration);}});
@@ -270,7 +296,7 @@ function endPointer(e,cancel=false){if(!pointer||pointer.id!==e.pointerId)return
 dom.world.addEventListener('pointerup',e=>endPointer(e));dom.world.addEventListener('pointercancel',e=>endPointer(e,true));dom.world.addEventListener('lostpointercapture',e=>{if(pointer?.id===e.pointerId)pointer=null;});dom.world.addEventListener('contextmenu',e=>e.preventDefault());
 function worldTap(x,y){const djPoint=screenToWorld(x,y);if(Math.abs(djPoint.x-R.DJ.x)<185&&djPoint.y>235&&djPoint.y<580){changeMusic();return;}if(engine.s.phase==='cleaning'){const pt=screenToWorld(x,y),ts=engine.cleanTargets();let t=ts.find(t=>Math.hypot(t.artX-pt.x,t.artY-pt.y)<140||Math.hypot(t.x-pt.x,t.y-pt.y)<135);if(t){if(t.kind==='floor'){path=R.pathfind(engine.s.player,R.safePoint(t));goal=null;}else route('clean',t.id);return;}if(R.walkable(pt.x,pt.y)){path=R.pathfind(engine.s.player,pt);goal=null;}return;}for(let i=hits.length-1;i>=0;i--){const h=hits[i];if(x>=h.x&&x<=h.x+h.w&&y>=h.y&&y<=h.y+h.h){const guest=engine.atTable(h.table);if(h.orderMarker&&guest?.phase==='ordered'&&!engine.s.tray&&!engine.s.prep&&!engine.s.dirtyTray){engine.selectOrder(guest.id);feedback('tap');save();updateHUD(true);}else onTable(h.table);return;}}const p=screenToWorld(x,y);if(Math.hypot(p.x-R.SINK.x,p.y-R.SINK.y)<120&&engine.s.dirtyTray){route('sink');return;}if(p.x>430&&p.x<1355&&p.y>20&&p.y<350&&!engine.s.dirtyTray){route('kitchen',engine.s.active);return;}for(let i=0;i<R.TABLES.length;i++){const t=R.TABLES[i];if(Math.hypot(p.x-t.food.x,p.y-t.food.y)<155||Math.hypot(p.x-t.seat.x,p.y-t.seat.y)<120||Math.hypot(p.x-t.meet.x,p.y-t.meet.y)<150){onTable(i);return;}}if(R.walkable(p.x,p.y)){path=R.pathfind(engine.s.player,p);goal=null;}}
 window.addEventListener('keydown',e=>{if([' ','Enter'].includes(e.key)&&document.activeElement?.tagName==='BUTTON')return;if(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight',' ','Escape'].includes(e.key))e.preventDefault();if(e.key==='Tab'&&mode==='dialog'){const buttons=[...dom.modal.querySelectorAll('button')];if(buttons.length){const i=buttons.indexOf(document.activeElement),n=e.shiftKey?(i<=0?buttons.length-1:i-1):(i+1)%buttons.length;e.preventDefault();buttons[n].focus();}return;}if(e.key==='Escape'){if(mode==='dialog')closeDialog();else if(mode==='scrub')returnToWorld();else if(mode==='lunch')menuDialog();else if(['cook','recipes','wash'].includes(mode))leaveKitchen();else if(loaded)menuDialog();return;}if(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','w','a','s','d','W','A','S','D'].includes(e.key)&&mode==='world'){keys.add(e.key.toLowerCase());path=[];goal=null;idle=0;}if(!e.repeat&&[' ','e','E'].includes(e.key)){sound.unlock();if(mode==='world')mainAction();else if(mode==='cook'){const p=engine.s.prep;if(p?.done)carryMeal();else{const st=p&&R.RECIPES[p.dish].steps[p.step];if(st&&!['choice','decorate'].includes(st.action))doPrep();}}else if(mode==='wash')doWash();else if(mode==='scrub')cleanAction();else if(mode==='lunch')lunchAction();}});
-window.addEventListener('keyup',e=>keys.delete(e.key.toLowerCase()));window.addEventListener('blur',()=>{pointer=null;keys.clear();cookPointer=null;dayPointer=null;});window.addEventListener('pagehide',save);document.addEventListener('visibilitychange',()=>{save();pointer=null;keys.clear();cookPointer=null;dayPointer=null;lastTime=0;});
+window.addEventListener('keyup',e=>keys.delete(e.key.toLowerCase()));window.addEventListener('blur',()=>{pointer=null;keys.clear();cookPointer=null;dayPointer=null;});window.addEventListener('pagehide',()=>{save();sound.pause();});window.addEventListener('pageshow',()=>{if(sound.context)sound.unlock();});document.addEventListener('visibilitychange',()=>{save();pointer=null;keys.clear();cookPointer=null;dayPointer=null;lastTime=0;if(document.hidden)sound.pause();else if(sound.context)sound.unlock();});
 function moveAlong(object,points,speed,dt){let remaining=speed*dt,moved=false;while(points.length&&remaining>0){const q=points[0],dx=q.x-object.x,dy=q.y-object.y,d=Math.hypot(dx,dy);if(d<1){points.shift();continue;}moved=true;const part=Math.min(d,remaining);object.x+=dx/d*part;object.y+=dy/d*part;if(Math.abs(dx)>1)object.facing=dx<0?-1:1;remaining-=part;if(d<=part+.01)points.shift();}return moved;}
 function movePlayer(dx,dy,dt){const p=engine.s.player,len=Math.hypot(dx,dy);if(len<.08)return false;const strength=Math.min(1,len);dx=dx/len*292*dt*strength;dy=dy/len*292*dt*strength;const before={x:p.x,y:p.y};if(R.walkable(p.x+dx,p.y))p.x+=dx;if(R.walkable(p.x,p.y+dy))p.y+=dy;if(Math.abs(dx)>1)p.facing=dx<0?-1:1;return Math.hypot(p.x-before.x,p.y-before.y)>.1;}
 function tickRestaurant(dt){const s=engine.s;saveClock+=dt;
@@ -452,7 +478,7 @@ function syncOrientation(){
  dom.app.hidden=portraitBlocked;
  dom.app.inert=portraitBlocked;
  stopControls();cookPointer=null;dayPointer=null;lastTime=0;
- if(portraitBlocked)save();else resize();
+ if(portraitBlocked){save();sound.pause();}else{resize();if(sound.context)sound.unlock();}
 }
 portraitQuery.addEventListener('change',syncOrientation);
 // Installed browsers may grant the lock; the portrait gate also works when they cannot.
@@ -461,6 +487,8 @@ function requestLandscape(){
  screen.orientation.lock('landscape').catch(()=>{});
 }
 document.addEventListener('pointerdown',requestLandscape,{passive:true});
+// Cover all controls, including decorating and the DJ, without preventing taps.
+for(const event of ['touchend','click','keydown'])document.addEventListener(event,e=>{if(e.isTrusted)sound.unlock();},{capture:true,passive:true});
 document.addEventListener('fullscreenchange',requestLandscape);
 requestAnimationFrame(animationFrame);boot();syncOrientation();
 })();

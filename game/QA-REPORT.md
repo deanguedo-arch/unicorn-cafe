@@ -122,3 +122,10 @@ Mirrored both station sprites without changing their art or scale. DJ platform m
 Focused checks: 27 engine and 9 offline checks; five guests walk to the new cashier point, pay exactly once across reload, and exit the bottom-right door; actual DJ taps across five phone sizes; seated/chair visibility and six phone action clearances pass. Final wide and 568x320 scenes inspected with five orders. Chromium simulations, not physical-device acceptance.
 
 Final phone layout batch: 576 states, zero failures and zero browser errors.
+
+## Phone audio recovery — October 4, 2026
+
+- Where supported, explicitly selects the AudioSession `playback` route, addressing iOS Safari's ambient-audio Silent Mode behavior ([WebKit issue 237322](https://bugs.webkit.org/show_bug.cgi?id=237322)). Browsers without AudioSession retain standard Web Audio behavior.
+- Trusted touch-end, click and keyboard interaction retry suspended/interrupted audio; unlocked status follows the actual context state. Audio pauses while hidden or portrait-blocked, recovers on return, and preserves saved mute preferences. Master volume increased from 0.08 to 0.28.
+- `phone_audio_play.cjs` samples real audio PCM in Chromium and WebKit at a phone landscape viewport, checks nonzero music without clipping, simulated iOS interruption, foreground recovery, rotation, mute/unmute and persisted mute after reload. AudioSession routing is exercised with a test shim; desktop engines do not prove hardware Silent Mode behavior.
+- Restaurant station checks pass on five phone viewports; engine checks (27) and offline checks (9) pass. Physical iPhone speaker output still needs device confirmation.

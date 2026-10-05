@@ -1,0 +1,45 @@
+{
+  "scope": "Actual PCM sampling in desktop Chromium and WebKit with mobile viewports; physical iPhone speakers and Silent Mode require device confirmation",
+  "results": [
+    {
+      "browser": "chromium",
+      "music": {
+        "rms": 0.01257231388520467,
+        "peak": 0.07804076373577118
+      },
+      "recovered": {
+        "rms": 0.015962375576015073,
+        "peak": 0.08051463216543198
+      },
+      "unmuted": {
+        "rms": 0.011529440068569437,
+        "peak": 0.050452060997486115
+      },
+      "sessionPlayback": true,
+      "foregroundRecovery": true,
+      "mutePersisted": true,
+      "rotationRecovery": true,
+      "errors": []
+    },
+    {
+      "browser": "webkit",
+      "music": {
+        "rms": 0.014588078666268047,
+        "peak": 0.07804075628519058
+      },
+      "recovered": {
+        "rms": 0.01619116993224589,
+        "peak": 0.0802362933754921
+      },
+      "unmuted": {
+        "rms": 0.013624763069647237,
+        "peak": 0.07114731520414352
+      },
+      "sessionPlayback": true,
+      "foregroundRecovery": true,
+      "mutePersisted": true,
+      "rotationRecovery": true,
+      "errors": []
+    }
+  ]
+}
