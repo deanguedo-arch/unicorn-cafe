@@ -20,16 +20,16 @@
     {
       "shape": "round",
       "key": "empty-chair",
-      "visible": 2556,
+      "visible": 2550,
       "covered": 0,
       "fraction": 0
     },
     {
       "shape": "round",
       "key": "guest_seated_human",
-      "visible": 1537,
-      "covered": 3,
-      "fraction": 0.001951854261548471
+      "visible": 1530,
+      "covered": 2,
+      "fraction": 0.00130718954248366
     },
     {
       "shape": "round",
@@ -90,16 +90,16 @@
     {
       "shape": "clover",
       "key": "empty-chair",
-      "visible": 2556,
+      "visible": 2550,
       "covered": 0,
       "fraction": 0
     },
     {
       "shape": "clover",
       "key": "guest_seated_human",
-      "visible": 1537,
-      "covered": 3,
-      "fraction": 0.001951854261548471
+      "visible": 1530,
+      "covered": 2,
+      "fraction": 0.00130718954248366
     },
     {
       "shape": "clover",
@@ -160,16 +160,16 @@
     {
       "shape": "oval",
       "key": "empty-chair",
-      "visible": 2556,
+      "visible": 2550,
       "covered": 0,
       "fraction": 0
     },
     {
       "shape": "oval",
       "key": "guest_seated_human",
-      "visible": 1537,
-      "covered": 3,
-      "fraction": 0.001951854261548471
+      "visible": 1530,
+      "covered": 2,
+      "fraction": 0.00130718954248366
     },
     {
       "shape": "oval",
@@ -230,16 +230,16 @@
     {
       "shape": "heart",
       "key": "empty-chair",
-      "visible": 2556,
+      "visible": 2550,
       "covered": 0,
       "fraction": 0
     },
     {
       "shape": "heart",
       "key": "guest_seated_human",
-      "visible": 1537,
-      "covered": 3,
-      "fraction": 0.001951854261548471
+      "visible": 1530,
+      "covered": 2,
+      "fraction": 0.00130718954248366
     },
     {
       "shape": "heart",
@@ -300,16 +300,16 @@
     {
       "shape": "cloud",
       "key": "empty-chair",
-      "visible": 2556,
+      "visible": 2550,
       "covered": 0,
       "fraction": 0
     },
     {
       "shape": "cloud",
       "key": "guest_seated_human",
-      "visible": 1537,
-      "covered": 3,
-      "fraction": 0.001951854261548471
+      "visible": 1530,
+      "covered": 2,
+      "fraction": 0.00130718954248366
     },
     {
       "shape": "cloud",

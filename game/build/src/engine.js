@@ -30,18 +30,24 @@ const MENU=Object.keys(RECIPES);
 const SEQUENCE=['pizza','icecream','burger','cupcake','soup','coffee','chicken','pancakes','smoothie'];
 const TABLES=[
  {id:'heart',name:'Heart table',symbol:'heart',colour:'#e95d92',seat:{x:765,y:598},meet:{x:820,y:634},food:{x:640,y:500}},
- {id:'star',name:'Star table',symbol:'star',colour:'#4f79e2',seat:{x:1385,y:618},meet:{x:1440,y:654},food:{x:1260,y:520}},
+ {id:'star',name:'Star table',symbol:'star',colour:'#4f79e2',seat:{x:1345,y:618},meet:{x:1400,y:654},food:{x:1220,y:520}},
  {id:'flower',name:'Flower table',symbol:'flower',colour:'#269a78',seat:{x:415,y:843},meet:{x:470,y:879},food:{x:290,y:745}},
  {id:'moon',name:'Moon table',symbol:'moon',colour:'#8757cf',seat:{x:855,y:923},meet:{x:910,y:959},food:{x:730,y:825}},
  {id:'diamond',name:'Diamond table',symbol:'diamond',colour:'#cc6a19',seat:{x:1295,y:928},meet:{x:1350,y:964},food:{x:1170,y:830}}
 ];
 for(const [i,x] of [[2,260],[3,715],[4,1170]]){const t=TABLES[i],dx=x-t.food.x;t.food.x+=dx;t.seat.x+=dx;t.meet.x+=dx;}
-const KITCHEN={x:997,y:380}, SINK={x:1450,y:385}, ENTRY={x:1490,y:1000}, CASHIER={x:1600,y:865}, DJ={x:232,y:440};
+// Artwork bounds and floor contact footprints share one station layout.
+const STATIONS={
+ kitchen:{x:895,y:365,w:640,h:210,foot:[585,320,620,45]},
+ sink:{x:1450,y:365,w:190,h:175,foot:[1370,320,160,45]},
+ cashier:{x:1635,y:850,w:250,h:277,foot:[1510,760,250,90]}
+};
+const KITCHEN={x:997,y:405}, SINK={x:1450,y:405}, ENTRY={x:1490,y:1000}, CASHIER={x:1635,y:900}, DJ={x:232,y:440};
 // Chair feet define the dining footprint; armrests do not block the aisle.
 // Visible interior footprints. The unused baked-background obstacles are gone.
 const OBSTACLES=[
- [452,174,880,130],[50,400,365,175],[1490,305,208,173],
- [1470,660,280,150],
+ STATIONS.kitchen.foot,[50,400,365,175],STATIONS.sink.foot,
+ STATIONS.cashier.foot,
  ...TABLES.map(t=>[t.food.x-175,t.food.y-34,350,139])
 ];
 const BOUNDS={left:66,right:1734,top:325,bottom:1030};
@@ -56,8 +62,8 @@ const CUSTOMIZATION={
 // Whole-room closeout tasks. Progress is separate from regular dirty dishes.
 const CLEAN_TASKS=[
  ...TABLES.map((t,i)=>({id:'table-'+i,kind:'table',x:t.meet.x,y:t.meet.y,artX:t.food.x,artY:t.food.y,need:3,table:i})),
- {id:'kitchen',kind:'counter',x:997,y:380,artX:975,artY:250,need:3},
- {id:'sink',kind:'sink',x:1450,y:385,artX:1450,artY:260,need:3},
+ {id:'kitchen',kind:'counter',...KITCHEN,artX:975,artY:250,need:3},
+ {id:'sink',kind:'sink',...SINK,artX:1450,artY:260,need:3},
  {id:'window-left',kind:'window',x:223,y:355,artX:223,artY:145,need:3},
  {id:'window-right',kind:'window',x:1400,y:343,artX:1527,artY:147,need:3},
  ...[[470,615],[979,625],[1497,566],[485,938],[1020,735],[1110,1000]].map(([x,y],i)=>({id:'floor-'+i,kind:'floor',x,y,artX:x,artY:y,need:4}))
@@ -264,5 +270,5 @@ class Engine{
  reset(){this.s=fresh(this.s.settings);}
  snapshot(){return clone(this.s);}
 }
-return {LUNCH_AT,LUNCH_MENU,CLEAN_TASKS,PREVIOUS_SAVE_KEYS,serviceClear,surfacesClean,safePoint,VERSION,SCHEMA,SAVE_KEY,LEGACY_SAVE_KEY,DAY_TARGET,RECIPES,MENU,SEQUENCE,TABLES,KITCHEN,SINK,ENTRY,CASHIER,DJ,OBSTACLES,BOUNDS,CUSTOMIZATION,DEFAULT_DECOR,Engine,fresh,cleanSave,migrateV1,validVariant,validDish,validDecor,pathfind,walkable,lineFree,clamp,clone,isDayClear};
+return {LUNCH_AT,LUNCH_MENU,CLEAN_TASKS,PREVIOUS_SAVE_KEYS,serviceClear,surfacesClean,safePoint,VERSION,SCHEMA,SAVE_KEY,LEGACY_SAVE_KEY,DAY_TARGET,RECIPES,MENU,SEQUENCE,TABLES,STATIONS,KITCHEN,SINK,ENTRY,CASHIER,DJ,OBSTACLES,BOUNDS,CUSTOMIZATION,DEFAULT_DECOR,Engine,fresh,cleanSave,migrateV1,validVariant,validDish,validDecor,pathfind,walkable,lineFree,clamp,clone,isDayClear};
 });

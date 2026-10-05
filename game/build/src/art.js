@@ -307,7 +307,7 @@ function drawRoomShell(c,d){
   rect(z,1762,20,26,1060,10,grad(z,20,1078,'#9375a9','#554068'),'#413052',4);
   rect(z,25,1063,1749,23,9,grad(z,1063,1086,'#bda2c4','#614969'),'#4b365b',4);
   sprite(z,'room_window',227,229,252,206);sprite(z,'room_window',1527,241,266,219);
-  for(const x of [394,1380]){z.save();z.shadowColor='#ffd99099';z.shadowBlur=28;ellipse(z,x,359,34,7,'#47325235');sprite(z,'room_lamp',x,365,76,181);z.restore();}
+  for(const x of [394,1320]){z.save();z.shadowColor='#ffd99099';z.shadowBlur=14;ellipse(z,x,363,22,4,'#47325235');sprite(z,'room_lamp',x,365,52,124);z.restore();}
   // The customer entrance is architecture, not a foreground mask.
   sprite(z,'room_door',1490,1045,162,166);
   shellCache[key]=layer;
@@ -319,11 +319,13 @@ function drawStationLayer(c,t=0){
  // Hard room clip prevents any station shadow/alpha fringe from ever exposing
  // pixels outside the playable room shell on narrow camera crops.
  c.beginPath();c.rect(35,20,1730,1043);c.clip();
- c.save();c.shadowColor='#3d254144';c.shadowBlur=17;c.shadowOffsetY=9;sprite(c,'painted_kitchen',895,365,909,298);c.restore();
+ const station=window.RR.STATIONS;
+ ellipse(c,station.kitchen.x,363,292,5,'#47325225');
+ sprite(c,'painted_kitchen',station.kitchen.x,station.kitchen.y,station.kitchen.w,station.kitchen.h);
  // Tight contact shadows sit directly against the furniture feet.
  ellipse(c,232,567,110,5,'#47325218');sprite(c,'station_dj',232,575,365,340,true);
- ellipse(c,1610,805,95,4,'#47325218');sprite(c,'station_cashier',1610,810,280,310,true);
- ellipse(c,1450,359,105,10,'#47325235');sprite(c,'painted_sink',1450,365,234,216);
+ ellipse(c,station.cashier.x,station.cashier.y-4,84,4,'#47325218');sprite(c,'station_cashier',station.cashier.x,station.cashier.y,station.cashier.w,station.cashier.h,true);
+ const sink=window.RR.STATIONS.sink;ellipse(c,sink.x,sink.y-3,83,5,'#47325225');sprite(c,'painted_sink',sink.x,sink.y,sink.w,sink.h);
  for(let i=0;i<3;i++){const a=.45+.18*Math.sin(t*2+i);c.globalAlpha=a;star(c,1395+i*28,238+(i%2)*19,5+i,'#fff1ad',t*.1);}
  c.restore();
 }
@@ -375,7 +377,7 @@ function drawTableFurniture(c,x,y,d,symbol,col,t=0,marker=true,seatGuest=null){
 }
 function drawSinkWorld(c,t=0){
  // Backward-compatible sink-only helper. New world rendering uses drawStationLayer.
- c.save();ellipse(c,1450,359,105,10,'#47325235');sprite(c,'painted_sink',1450,365,234,216);
+ c.save();const sink=window.RR.STATIONS.sink;ellipse(c,sink.x,sink.y-3,83,5,'#47325225');sprite(c,'painted_sink',sink.x,sink.y,sink.w,sink.h);
  for(let i=0;i<3;i++){const a=.45+.18*Math.sin(t*2+i);c.globalAlpha=a;star(c,1395+i*28,238+(i%2)*19,5+i,'#fff1ad',t*.1);}
  c.restore();
 }

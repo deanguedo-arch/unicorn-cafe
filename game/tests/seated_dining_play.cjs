@@ -22,15 +22,17 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=r
  assert(await page.evaluate(()=>{const c=__RR_TEST__.snapshot().customers[0];return c.x===RR.TABLES[0].seat.x&&c.y===RR.TABLES[0].seat.y}));
  await page.evaluate(()=>{const s=RR.fresh();s.issued=5;s.nextId=6;s.player={x:997,y:650,facing:1};s.decor.tablecloth='gingham';s.customers=['pink','human','blue','worker','manager'].map((type,i)=>({id:i+1,table:i,dish:RR.MENU[i],variant:RR.RECIPES[RR.MENU[i]].variants[0].id,type,phase:i===1?'eating':'ordered',...RR.TABLES[i].seat,eat:0}));__RR_TEST__.loadFixture(s);window.seatedDraws=[];const original=RRArt.sprite;RRArt.sprite=function(c,key,...args){if(key.startsWith('guest_seated_'))seatedDraws.push(key);return original(c,key,...args)}});
  await page.waitForTimeout(100);const drawn=await page.evaluate(()=>[...new Set(seatedDraws)]);for(const type of types)assert(drawn.includes('guest_seated_'+type));
+ // Keep the player beside the chairs, so this check measures furniture/guest layering.
  const visibility=await page.evaluate(()=>{
   const A=RRArt,original=A.sprite,checks=[];let layers=[];
+  const playerX=__RR_TEST__.engine.s.player.x;__RR_TEST__.engine.s.player.x=970;
   A.sprite=function(c,key,...args){if(key.startsWith('guest_seated_')){const v=document.createElement('canvas');v.width=c.canvas.width;v.height=c.canvas.height;const z=v.getContext('2d');z.setTransform(c.getTransform());original(z,key,...args);layers.push({key,canvas:v});}return original(c,key,...args)};
   const draw=CanvasRenderingContext2D.prototype.drawImage;
   CanvasRenderingContext2D.prototype.drawImage=function(im,...args){if(this.canvas.id==='world'&&im===A.images['chair_'+__RR_TEST__.snapshot().decor.chairs]&&this.getTransform().a>0){const v=document.createElement('canvas');v.width=this.canvas.width;v.height=this.canvas.height;const z=v.getContext('2d');z.setTransform(this.getTransform());draw.call(z,im,...args);layers.push({key:'empty-chair',canvas:v});}return draw.call(this,im,...args)};
   for(const shape of RR.CUSTOMIZATION.tableType){__RR_TEST__.engine.s.decor.tableType=shape;__RR_TEST__.engine.s.settings.reduced=true;layers=[];__RR_TEST__.drawWorld();const world=document.querySelector('#world'),actual=world.getContext('2d').getImageData(0,0,world.width,world.height).data;
    for(const layer of layers){const expected=layer.canvas.getContext('2d').getImageData(0,0,world.width,world.height).data;let visible=0,covered=0;for(let i=0;i<expected.length;i+=4)if(expected[i+3]>250){visible++;if(Math.max(...[0,1,2].map(k=>Math.abs(expected[i+k]-actual[i+k])))>12)covered++;}checks.push({shape,key:layer.key,visible,covered,fraction:covered/visible});}
   }
-  CanvasRenderingContext2D.prototype.drawImage=draw;A.sprite=original;__RR_TEST__.engine.s.decor.tableType='heart';__RR_TEST__.drawWorld();return checks;
+  CanvasRenderingContext2D.prototype.drawImage=draw;A.sprite=original;__RR_TEST__.engine.s.player.x=playerX;__RR_TEST__.engine.s.decor.tableType='heart';__RR_TEST__.drawWorld();return checks;
  });
  assert.equal(visibility.length,50);for(const q of visibility){assert(q.visible>300,'customer or empty chair must remain visible');assert(q.fraction<.02,`${q.shape}/${q.key} has ${q.covered} covered pixels`);}
  await page.screenshot({path:process.env.DINING_SCREENSHOT||'/tmp/unicorn-seated-dining.png'});

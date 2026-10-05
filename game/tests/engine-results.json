@@ -1,7 +1,7 @@
 {
   "kind": "production-engine deterministic tests, not physical-device or UI testing",
-  "passed": 29,
-  "total": 29,
+  "passed": 30,
+  "total": 30,
   "results": [
     {
       "name": "Cashier requires physical arrival, pays once and survives reload",
@@ -85,6 +85,13 @@
       "pass": true,
       "detail": {
         "routes": 576
+      }
+    },
+    {
+      "name": "Cashier aisle stays open at its actual floor coordinates",
+      "pass": true,
+      "detail": {
+        "aisleCentreWidth": 79
       }
     },
     {

@@ -1,0 +1,47 @@
+{
+  "passed": 6,
+  "results": [
+    {
+      "width": 568,
+      "height": 320,
+      "downY": 904.0208000000002,
+      "upY": 548.6567999999992,
+      "manualTraversal": true
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "downY": 900.6043999999999,
+      "upY": 545.3571999999996,
+      "manualTraversal": true
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "downY": 900.3999999999999,
+      "upY": 549.9999999999997,
+      "manualTraversal": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "downY": 900.3708000000001,
+      "upY": 549.9707999999997,
+      "manualTraversal": true
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "downY": 900.3708000000001,
+      "upY": 540.2180000000003,
+      "manualTraversal": true
+    },
+    {
+      "width": 967,
+      "height": 897,
+      "downY": 926.9136000000001,
+      "upY": 547.2259999999989,
+      "manualTraversal": true
+    }
+  ]
+}
