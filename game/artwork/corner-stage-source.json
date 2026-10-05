@@ -1,0 +1,13 @@
+{
+  "tool": "image_gen.imagegen",
+  "stagePrompt": "Edit image 1 (DJ booth sprite) into one transparent game sprite of the SAME larger closed-front DJ booth, SAME girl, headphones, turntables and speakers, now standing on a low raised corner stage. Image 2 is perspective/style reference kitchen; image 3 is placement context only, do not reproduce the room or other objects. This sprite belongs in upper-left corner of that restaurant with left wall on its left and dining room extending right and downward. Angle the booth naturally toward center of dining room, a mild three-quarter view toward bottom right. Show counter top and a narrow left cabinet side; all cabinet, turntables, speaker bases and stage edges must use coherent SAME perspective/vanishing directions. Slightly elevated camera matching kitchen and table art, not eye-level/front-flat. Stage a simple low lavender wood platform with rounded front corners, thin gold trim, visible short front and left vertical faces, two small integrated steps on its front-right edge leading toward room. Booth has solid taller purple cabinet reaching stage floor so NO feet, legs or slippers visible. Stage is only a little wider than booth, compact enough for restaurant corner. Preserve painterly cream/purple/gold art, soft thick plum outlines, girl identity, head and hands. No wall, curtains, background, floor, text, additional people or detached decorations. Transparent pixels outside isolated combined booth-and-platform silhouette.",
+  "proportionPrompt": "Precise edit of this restaurant station sprite. Keep the furniture, equipment, perspective, cabinet front, platform if present, cream/purple/gold palette and thick painterly outlines unchanged. Scale the girl's head and upper body about 15 percent smaller relative to furniture, still clearly visible with her hands naturally resting on the counter, so she matches nearby seated guest sprite sizes rather than looking like a giant. Preserve same face, identity, hair, headphones if present, pose and clothes. Keep legs, feet and shoes COMPLETELY hidden behind closed cabinet. Remove ALL exterior purple glow, haze, ambient vignette or floor shadow outside the solid sprite silhouette. Actual fully transparent background around sharply readable illustrated silhouette. No scenery, text or added objects.",
+  "generated": {
+    "dj": "/Users/deanguedo/.codex/generated_images/01a107b9-e885-74c3-a752-b3956c6590b1/exec-d2cea9e3-161a-40c7-8aba-23e8cd7cf02a.png",
+    "cashier": "/Users/deanguedo/.codex/generated_images/01a107b9-e885-74c3-a752-b3956c6590b1/exec-67922e65-907c-4e34-a6fc-1eea9e38ade8.png"
+  },
+  "assets": [
+    "game/build/assets/station_dj.webp",
+    "game/build/assets/station_cashier.webp"
+  ]
+}

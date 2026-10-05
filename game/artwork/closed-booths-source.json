@@ -1,0 +1,9 @@
+{
+  "tool": "image_gen.imagegen",
+  "prompt": "Edit this transparent restaurant station sprite. Keep the character's face, hair, clothes, pose, countertop, equipment, cream/purple/gold palette, painterly thick outline style and perspective identical. Enlarge ONLY the booth front downward: make a taller solid purple cabinet with gold bottom plinth reaching the ground between its side columns. Completely conceal all character legs, feet and bunny slippers behind the opaque cabinet. No visible shoes anywhere. The furniture must be a grounded substantial counter with fully closed front, not a thin table on legs. Keep head and hands visible above the same counter. Preserve transparent background, no floor, no shadow baked background, no text.",
+  "generated": {
+    "dj": "/Users/deanguedo/.codex/generated_images/01a107b9-e885-74c3-a752-b3956c6590b1/exec-9503d911-d383-4320-ab57-88696a636300.png",
+    "cashier": "/Users/deanguedo/.codex/generated_images/01a107b9-e885-74c3-a752-b3956c6590b1/exec-cb394c0b-987f-40c7-95ad-5f49c4e97889.png"
+  },
+  "export": "Trim alpha margins and resize to max 512px WebP quality94; preserve generated originals."
+}

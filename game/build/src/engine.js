@@ -35,11 +35,11 @@ const TABLES=[
  {id:'moon',name:'Moon table',symbol:'moon',colour:'#8757cf',seat:{x:855,y:923},meet:{x:910,y:959},food:{x:730,y:825}},
  {id:'diamond',name:'Diamond table',symbol:'diamond',colour:'#cc6a19',seat:{x:1295,y:928},meet:{x:1350,y:964},food:{x:1170,y:830}}
 ];
-const KITCHEN={x:997,y:380}, SINK={x:1450,y:385}, ENTRY={x:1490,y:1000}, CASHIER={x:1610,y:730}, DJ={x:220,y:495};
+const KITCHEN={x:997,y:380}, SINK={x:1450,y:385}, ENTRY={x:1490,y:1000}, CASHIER={x:1610,y:730}, DJ={x:232,y:530};
 // Visible interior footprints. The unused baked-background obstacles are gone.
 const OBSTACLES=[
- [452,174,880,130],[80,480,280,120],[1490,305,208,173],
- [1500,500,240,150],
+ [452,174,880,130],[50,490,365,175],[1490,305,208,173],
+ [1470,510,280,170],
  ...TABLES.map(t=>[t.food.x-187,t.food.y-34,374,139])
 ];
 const BOUNDS={left:66,right:1734,top:325,bottom:1030};

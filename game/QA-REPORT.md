@@ -106,3 +106,10 @@ Replaced the two free-standing plants with a cashier station and open floor, rep
 Customers stay seated until checkout is free, walk to the cashier, transfer a coin, and exit through the new door. Persisted payments cannot repeat after reload; legacy departing guests remain safe. Three original synthesized tunes cycle when tapping the DJ; the selected track persists and mute stops music scheduling. No external audio files or requests.
 
 Validation: 27 production-engine checks; 9 offline/cache checks; 576 phone UI states with no failures; actual browser serving/approach/exit for all five customer types; 50 seated/chair visibility comparisons; five-customer checkout with a reload after the second payment (exactly five payments and five exits); DJ touch interaction and running AudioContext across five phone sizes. Evidence in tests/mobile-visual/restaurant-stations-results.json and restaurant-stations-preview.png. These are Chromium simulations, not physical-device listening or touch acceptance.
+
+
+## Grounded corner stage and closed counters — 2026-10-04
+
+Replaced station artwork with opaque tall cabinet fronts; all feet/shoes are concealed. Added a low raised stage with front-right steps beneath the DJ, turned toward the dining room in a coherent three-quarter perspective. Adjusted DJ/cashier body proportions against existing seated guests. Table and guest sizing is unchanged. Enlarged station footprints and DJ touch bounds; checkout still uses the reachable floor point outside the cashier footprint. Artwork prompts and exports are in artwork/closed-booths-source.json and artwork/corner-stage-source.json.
+
+Focused verification: 27 engine and 9 offline checks; five-customer checkout including save/reload and exactly five payments/exits; actual DJ taps and audio across five phone viewports. Browser scene preview in tests/mobile-visual/restaurant-stations-preview.png. Chromium simulation, not physical-device acceptance.
