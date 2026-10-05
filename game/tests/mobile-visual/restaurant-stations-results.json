@@ -1,0 +1,111 @@
+{
+  "kind": "Production browser paths and audio scheduling; not physical phone listening proof",
+  "payments": {
+    "paid": [
+      {
+        "id": 1,
+        "x": 1610,
+        "y": 730
+      },
+      {
+        "id": 2,
+        "x": 1610,
+        "y": 730
+      },
+      {
+        "id": 3,
+        "x": 1610,
+        "y": 730
+      },
+      {
+        "id": 4,
+        "x": 1610,
+        "y": 730
+      },
+      {
+        "id": 5,
+        "x": 1610,
+        "y": 730
+      }
+    ],
+    "exited": [
+      {
+        "id": 1,
+        "x": 1490,
+        "y": 1000,
+        "paid": true
+      },
+      {
+        "id": 2,
+        "x": 1490,
+        "y": 1000,
+        "paid": true
+      },
+      {
+        "id": 3,
+        "x": 1490,
+        "y": 1000,
+        "paid": true
+      },
+      {
+        "id": 4,
+        "x": 1490,
+        "y": 1000,
+        "paid": true
+      },
+      {
+        "id": 5,
+        "x": 1490,
+        "y": 1000,
+        "paid": true
+      }
+    ],
+    "halfway": true,
+    "maxPaying": 1,
+    "coins": 5,
+    "remaining": 0,
+    "entry": {
+      "x": 1490,
+      "y": 1000
+    },
+    "cashier": {
+      "x": 1610,
+      "y": 730
+    }
+  },
+  "phones": [
+    {
+      "width": 568,
+      "height": 320,
+      "track": 1,
+      "audio": "running"
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "track": 1,
+      "audio": "running"
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "track": 1,
+      "audio": "running"
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "track": 1,
+      "audio": "running"
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "track": 1,
+      "audio": "running"
+    }
+  ],
+  "persistedTrack": 2,
+  "muteStopsNotes": true,
+  "errors": []
+}

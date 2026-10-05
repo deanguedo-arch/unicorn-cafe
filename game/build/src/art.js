@@ -299,7 +299,7 @@ function drawRoomShell(c,d){
   sprite(z,'room_window',227,229,252,206);sprite(z,'room_window',1527,241,266,219);
   for(const x of [394,1380]){z.save();z.shadowColor='#ffd99099';z.shadowBlur=28;ellipse(z,x,359,34,7,'#47325235');sprite(z,'room_lamp',x,365,76,181);z.restore();}
   // The customer entrance is architecture, not a foreground mask.
-  sprite(z,'room_door',236,1045,162,166);
+  sprite(z,'room_door',1490,1045,162,166);
   shellCache[key]=layer;
  }
  c.drawImage(shellCache[key],0,0);
@@ -310,8 +310,8 @@ function drawStationLayer(c,t=0){
  // pixels outside the playable room shell on narrow camera crops.
  c.beginPath();c.rect(35,20,1730,1043);c.clip();
  c.save();c.shadowColor='#3d254144';c.shadowBlur=17;c.shadowOffsetY=9;sprite(c,'painted_kitchen',895,365,909,298);c.restore();
- sprite(c,'room_sofa',209,517,269,180);
- sprite(c,'room_plant',1661,645,102,122);sprite(c,'room_plant',110,1000,102,122);
+ ellipse(c,220,600,135,17,'#47325235');sprite(c,'station_dj',220,600,280,260);
+ ellipse(c,1620,650,110,15,'#47325235');sprite(c,'station_cashier',1620,650,240,245);
  ellipse(c,1450,359,105,10,'#47325235');sprite(c,'painted_sink',1450,365,234,216);
  for(let i=0;i<3;i++){const a=.45+.18*Math.sin(t*2+i);c.globalAlpha=a;star(c,1395+i*28,238+(i%2)*19,5+i,'#fff1ad',t*.1);}
  c.restore();

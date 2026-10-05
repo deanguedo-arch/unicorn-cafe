@@ -35,11 +35,11 @@ const TABLES=[
  {id:'moon',name:'Moon table',symbol:'moon',colour:'#8757cf',seat:{x:855,y:923},meet:{x:910,y:959},food:{x:730,y:825}},
  {id:'diamond',name:'Diamond table',symbol:'diamond',colour:'#cc6a19',seat:{x:1295,y:928},meet:{x:1350,y:964},food:{x:1170,y:830}}
 ];
-const KITCHEN={x:997,y:380}, SINK={x:1450,y:385}, ENTRY={x:236,y:1000};
+const KITCHEN={x:997,y:380}, SINK={x:1450,y:385}, ENTRY={x:1490,y:1000}, CASHIER={x:1610,y:730}, DJ={x:220,y:495};
 // Visible interior footprints. The unused baked-background obstacles are gone.
 const OBSTACLES=[
- [452,174,880,130],[80,405,259,112],[1490,305,208,173],
- [1610,533,102,112],[59,878,102,122],
+ [452,174,880,130],[80,480,280,120],[1490,305,208,173],
+ [1500,500,240,150],
  ...TABLES.map(t=>[t.food.x-187,t.food.y-34,374,139])
 ];
 const BOUNDS={left:66,right:1734,top:325,bottom:1030};
@@ -94,7 +94,7 @@ function pathfind(start,end){
  return result;
 }
 function blankTables(){return TABLES.map(()=>({status:'clean',dirty:null}));}
-function fresh(settings={},decor={}){return {...freshDayState(),schema:SCHEMA,version:VERSION,day:1,served:0,total:0,issued:0,nextId:1,customers:[],active:null,tray:null,dirtyTray:null,prep:null,stickers:[],completed:false,player:{x:445,y:911,facing:1},tables:blankTables(),decor:{...DEFAULT_DECOR,...decor},settings:{muted:!!settings.muted,reduced:!!settings.reduced}};}
+function fresh(settings={},decor={}){return {...freshDayState(),schema:SCHEMA,version:VERSION,day:1,served:0,total:0,coins:0,issued:0,nextId:1,customers:[],active:null,tray:null,dirtyTray:null,prep:null,stickers:[],completed:false,player:{x:445,y:911,facing:1},tables:blankTables(),decor:{...DEFAULT_DECOR,...decor},settings:{muted:!!settings.muted,reduced:!!settings.reduced,musicTrack:clampInt(settings.musicTrack,2)}};}
 function validDish(d){return typeof d==='string'&&MENU.includes(d);}
 function validVariant(d,v){return validDish(d)&&RECIPES[d].variants.some(x=>x.id===v);}
 function validDecor(obj){obj=obj&&typeof obj==='object'?{...obj}:{};if(!obj.tablecloth&&obj.tabletop)obj.tablecloth=obj.tabletop;const out={...DEFAULT_DECOR};for(const k of Object.keys(CUSTOMIZATION))if(obj&&CUSTOMIZATION[k].includes(obj[k]))out[k]=obj[k];return out;}
@@ -111,7 +111,7 @@ function cleanPrep(p,customers){
 function migrateV1(raw){
  if(!raw||raw.schema!==1||!Array.isArray(raw.customers))return null;
  const s=fresh(raw.settings||{});const num=(v,max)=>Number.isFinite(v)?clamp(Math.floor(v),0,max):0;
- s.day=Math.max(1,num(raw.day,100000));s.total=num(raw.total,10000000);s.served=num(raw.served,DAY_TARGET);s.issued=Math.max(s.served,num(raw.issued,DAY_TARGET));s.nextId=Math.max(1,num(raw.nextId,10000000));
+ s.coins=num(raw.coins,10000000);s.day=Math.max(1,num(raw.day,100000));s.total=num(raw.total,10000000);s.served=num(raw.served,DAY_TARGET);s.issued=Math.max(s.served,num(raw.issued,DAY_TARGET));s.nextId=Math.max(1,num(raw.nextId,10000000));
  s.stickers=Array.isArray(raw.stickers)?[...new Set(raw.stickers.filter(validDish))]:[];
  if(raw.player&&Number.isFinite(raw.player.x)&&Number.isFinite(raw.player.y)&&walkable(raw.player.x,raw.player.y))s.player={x:raw.player.x,y:raw.player.y,facing:raw.player.facing===-1?-1:1};
  const usedT=new Set(),usedI=new Set();
@@ -137,12 +137,12 @@ function cleanCoreSave(raw){
   if(raw?.schema===1)return migrateV1(raw);
   if(!raw||![2,SCHEMA].includes(raw.schema)||!Array.isArray(raw.customers))return null;
   const s=fresh(raw.settings||{},validDecor(raw.decor));const num=(v,max)=>Number.isFinite(v)?clamp(Math.floor(v),0,max):0;
-  s.day=Math.max(1,num(raw.day,100000));s.total=num(raw.total,10000000);s.served=num(raw.served,DAY_TARGET);s.issued=Math.max(s.served,num(raw.issued,DAY_TARGET));s.nextId=Math.max(1,num(raw.nextId,10000000));s.stickers=Array.isArray(raw.stickers)?[...new Set(raw.stickers.filter(validDish))]:[];
+  s.coins=num(raw.coins,10000000);s.day=Math.max(1,num(raw.day,100000));s.total=num(raw.total,10000000);s.served=num(raw.served,DAY_TARGET);s.issued=Math.max(s.served,num(raw.issued,DAY_TARGET));s.nextId=Math.max(1,num(raw.nextId,10000000));s.stickers=Array.isArray(raw.stickers)?[...new Set(raw.stickers.filter(validDish))]:[];
   if(raw.player&&Number.isFinite(raw.player.x)&&Number.isFinite(raw.player.y)&&walkable(raw.player.x,raw.player.y))s.player={x:raw.player.x,y:raw.player.y,facing:raw.player.facing===-1?-1:1};
   const usedT=new Set(),usedI=new Set();
   for(const c of raw.customers.slice(0,5)){
-   if(!c||!Number.isInteger(c.id)||c.id<1||usedI.has(c.id)||!TABLES[c.table]||usedT.has(c.table)||!validVariant(c.dish,c.variant)||!['arriving','waiting','ordered','eating','finished','leaving'].includes(c.phase))return null;
-   usedI.add(c.id);usedT.add(c.table);s.customers.push({id:c.id,table:c.table,dish:c.dish,variant:c.variant,type:['pink','blue','human','worker','manager'].includes(c.type)?c.type:'pink',phase:c.phase,x:Number.isFinite(c.x)?clamp(c.x,66,1734):ENTRY.x,y:Number.isFinite(c.y)?clamp(c.y,305,1030):ENTRY.y,eat:Number.isFinite(c.eat)?clamp(c.eat,0,12):0,deco:validDeco(c.dish,c.deco)});
+   if(!c||!Number.isInteger(c.id)||c.id<1||usedI.has(c.id)||!TABLES[c.table]||usedT.has(c.table)||!validVariant(c.dish,c.variant)||!['arriving','waiting','ordered','eating','finished','paying','leaving'].includes(c.phase))return null;
+   usedI.add(c.id);usedT.add(c.table);s.customers.push({id:c.id,table:c.table,dish:c.dish,variant:c.variant,type:['pink','blue','human','worker','manager'].includes(c.type)?c.type:'pink',phase:c.phase,paid:c.paid===true||c.phase==='leaving',x:Number.isFinite(c.x)?clamp(c.x,66,1734):ENTRY.x,y:Number.isFinite(c.y)?clamp(c.y,305,1030):ENTRY.y,eat:Number.isFinite(c.eat)?clamp(c.eat,0,12):0,deco:validDeco(c.dish,c.deco)});
   }
   if(Array.isArray(raw.tables))for(let i=0;i<TABLES.length;i++){
    const q=raw.tables[i];if(!q||!['clean','dirty','carried'].includes(q.status))continue;
@@ -154,7 +154,7 @@ function cleanCoreSave(raw){
   if(raw.dirtyTray&&TABLES[raw.dirtyTray.table]&&s.tables[raw.dirtyTray.table].status==='carried'&&validVariant(raw.dirtyTray.dish,raw.dirtyTray.variant))s.dirtyTray={table:raw.dirtyTray.table,dish:raw.dirtyTray.dish,variant:raw.dirtyTray.variant,deco:validDeco(raw.dirtyTray.dish,raw.dirtyTray.deco),wash:clamp(Math.floor(Number(raw.dirtyTray.wash)||0),0,5)};
   if(raw.prep&&!s.tray&&!s.dirtyTray)s.prep=cleanPrep(raw.prep,s.customers);if(s.prep)s.active=s.prep.orderId;
   // Repair table dirt from finished/leaving guests if an interrupted save missed it.
-  for(const c of s.customers)if(['finished','leaving'].includes(c.phase)&&s.tables[c.table].status==='clean'&&(!Array.isArray(raw.tables)||!raw.tables[c.table]))s.tables[c.table]={status:'dirty',dirty:{dish:c.dish,variant:c.variant,deco:null,orderId:c.id}};
+  for(const c of s.customers)if(['finished','paying','leaving'].includes(c.phase)&&s.tables[c.table].status==='clean'&&(!Array.isArray(raw.tables)||!raw.tables[c.table]))s.tables[c.table]={status:'dirty',dirty:{dish:c.dish,variant:c.variant,deco:null,orderId:c.id}};
   if(s.dirtyTray)s.tables[s.dirtyTray.table]={status:'carried',dirty:null};
   s.issued=clamp(Math.max(s.served,s.issued),0,DAY_TARGET);s.nextId=Math.max(s.nextId,...s.customers.map(c=>c.id+1),1);s.completed=!!raw.completed&&isDayClear(s);return s;
  }catch(_){return null;}
@@ -219,7 +219,8 @@ class Engine{
  remake(){const tray=this.s.tray;if(!tray)return false;this.s.active=tray.orderId;this.s.tray=null;this.s.prep=null;return true;}
  serve(table){const t=this.s.tray,c=this.atTable(table);if(!t)return {ok:false,reason:'empty'};if(!c||c.phase!=='ordered'||c.id!==t.orderId)return {ok:false,reason:'table',target:this.customer(t.orderId)?.table};if(c.dish!==t.dish)return {ok:false,reason:'dish'};if(c.variant!==t.variant)return {ok:false,reason:'variant'};c.phase='eating';c.eat=0;c.deco=t.deco||null;this.s.tray=null;this.s.served++;this.s.total++;if(!this.s.stickers.includes(c.dish))this.s.stickers.push(c.dish);this.s.active=this.nextOrder()?.id||null;return {ok:true,dish:c.dish,table};}
  finishEating(id){const c=this.customer(id);if(c?.phase!=='eating')return false;c.phase='finished';c.eat=0;this.s.tables[c.table]={status:'dirty',dirty:{dish:c.dish,variant:c.variant,deco:c.deco||null,orderId:c.id}};return true;}
- startLeaving(id){const c=this.customer(id);if(c?.phase!=='finished')return false;c.phase='leaving';return true;}
+ startLeaving(id){const c=this.customer(id);if(c?.phase!=='finished')return false;c.phase='paying';c.eat=0;return true;}
+ pay(id){const c=this.customer(id);if(c?.phase!=='paying'||c.paid||Math.hypot(c.x-CASHIER.x,c.y-CASHIER.y)>35)return false;c.paid=true;c.phase='leaving';this.s.coins++;return true;}
  remove(id){const c=this.customer(id);if(c?.phase!=='leaving')return false;this.s.customers=this.s.customers.filter(x=>x.id!==id);this.updateCompleted();return true;}
  pickDirty(table){const t=this.s.tables[table];if(!t||t.status!=='dirty'||!t.dirty||this.s.tray||this.s.dirtyTray||this.s.prep)return false;const d=t.dirty;this.s.dirtyTray={table,dish:d.dish,variant:d.variant,deco:d.deco||null,wash:0};this.s.tables[table]={status:'carried',dirty:null};return true;}
  washAct(){const d=this.s.dirtyTray;if(!d)return {ok:false,done:false};d.wash=clamp(d.wash+1,0,5);if(d.wash>=5){const table=d.table;this.s.dirtyTray=null;this.s.tables[table]={status:'clean',dirty:null};this.updateCompleted();return {ok:true,done:true,table};}return {ok:true,done:false,wash:d.wash};}
@@ -250,9 +251,9 @@ class Engine{
  guestSpeed(c){return 174*(.84+((c.id*17+this.s.day*13)%41)/100)*(this.s.pace.mood==='busy'?1.07:1);}
 
  setDecor(stage,value){if(!CUSTOMIZATION[stage]?.includes(value))return false;this.s.decor[stage]=value;return true;}
- newDay(){const old=this.s,n=fresh(old.settings,old.decor);n.day=old.day+1;n.total=old.total;n.stickers=[...old.stickers];n.nextId=old.nextId;n.pace.seed=(old.pace.seed+137*n.day)>>>0;this.s=n;return n;}
+ newDay(){const old=this.s,n=fresh(old.settings,old.decor);n.day=old.day+1;n.total=old.total;n.coins=old.coins;n.stickers=[...old.stickers];n.nextId=old.nextId;n.pace.seed=(old.pace.seed+137*n.day)>>>0;this.s=n;return n;}
  reset(){this.s=fresh(this.s.settings);}
  snapshot(){return clone(this.s);}
 }
-return {LUNCH_AT,LUNCH_MENU,CLEAN_TASKS,PREVIOUS_SAVE_KEYS,serviceClear,surfacesClean,safePoint,VERSION,SCHEMA,SAVE_KEY,LEGACY_SAVE_KEY,DAY_TARGET,RECIPES,MENU,SEQUENCE,TABLES,KITCHEN,SINK,ENTRY,OBSTACLES,BOUNDS,CUSTOMIZATION,DEFAULT_DECOR,Engine,fresh,cleanSave,migrateV1,validVariant,validDish,validDecor,pathfind,walkable,lineFree,clamp,clone,isDayClear};
+return {LUNCH_AT,LUNCH_MENU,CLEAN_TASKS,PREVIOUS_SAVE_KEYS,serviceClear,surfacesClean,safePoint,VERSION,SCHEMA,SAVE_KEY,LEGACY_SAVE_KEY,DAY_TARGET,RECIPES,MENU,SEQUENCE,TABLES,KITCHEN,SINK,ENTRY,CASHIER,DJ,OBSTACLES,BOUNDS,CUSTOMIZATION,DEFAULT_DECOR,Engine,fresh,cleanSave,migrateV1,validVariant,validDish,validDecor,pathfind,walkable,lineFree,clamp,clone,isDayClear};
 });

@@ -1,0 +1,20 @@
+{
+  "tool": "image_gen.imagegen",
+  "prompts": {
+    "cashier": "Create a single isolated whimsical restaurant cashier station sprite on transparent background. Match reference kitchen's hand painted children's mobile game illustration, purple wood cream countertop gold trims soft rounded edges thick plum outlines. Compact counter with heart ornament and small gold cash register, one gold coin on counter. Friendly brown-haired woman cashier smiling behind counter, head and shoulders clearly visible above countertop. Front three-quarter view same perspective as reference. Full sprite including feet, no floor no backdrop no text no detached objects. Counter wide low enough to see cashier, total roughly square silhouette.",
+    "dj": "Create a single isolated whimsical restaurant DJ booth sprite on transparent background. Match reference kitchen's hand painted children's mobile game illustration, purple wood cream countertop gold trims soft rounded edges thick plum outlines. Cute brown-haired girl based on second reference, wearing pastel headphones, smiling behind compact booth with two lavender vinyl turntables and heart ornament. Two integrated small rounded speakers at ends. Her head and shoulders clearly visible above booth, full sprite including feet. Front three-quarter view same perspective as kitchen. No floor no backdrop no text no detached notes. Total roughly square silhouette."
+  },
+  "sources": [
+    "game/build/assets/painted_kitchen.webp",
+    "game/build/assets/h_idle0.webp"
+  ],
+  "generated": {
+    "cashier": "/Users/deanguedo/.codex/generated_images/01a107b9-e885-74c3-a752-b3956c6590b1/exec-48d950a4-a3f0-435e-93f7-e5fe60e26c9a.png",
+    "dj": "/Users/deanguedo/.codex/generated_images/01a107b9-e885-74c3-a752-b3956c6590b1/exec-4b58b1ff-961a-4ccf-b9a6-3431c5f09454.png"
+  },
+  "export": "Trim transparent margin and resize to maximum 512 pixels; WebP quality 94; originals preserved.",
+  "assets": [
+    "game/build/assets/station_cashier.webp",
+    "game/build/assets/station_dj.webp"
+  ]
+}

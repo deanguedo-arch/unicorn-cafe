@@ -1,8 +1,12 @@
 {
   "kind": "production-engine deterministic tests, not physical-device or UI testing",
-  "passed": 26,
-  "total": 26,
+  "passed": 27,
+  "total": 27,
   "results": [
+    {
+      "name": "Cashier requires physical arrival, pays once and survives reload",
+      "pass": true
+    },
     {
       "name": "All 18 recipe/variation combinations through dish return/wash",
       "pass": true,

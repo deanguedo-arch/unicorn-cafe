@@ -97,3 +97,12 @@ Identity symbols sit on floor markers below the furniture. Interactive markers a
 Validation: all 576 simulated mobile states, 26 engine checks and nine offline checks passed. The dining UI test exercised arrival, nearby ordering/serving, all exit paths and reload. Fifty production-canvas comparisons cover five seated customers and five empty chairs across every table shape; empty chair pixels remain unobscured. Six phone/safe-area cases show zero customer pixels underneath the action control in the busy-room fixture. Heart tables with gold chairs, rainbow cloth and the user's room colours were visually inspected, along with the 568x320 view. Reports and screenshots are in `tests/mobile-visual/`. Checks use Chromium simulation, not a physical-device playthrough.
 
 The order-marker selection and picnic UI regression passed all 15 cases after the marker placement change; floor cleanup still passed six patches and 24 explicit strokes with reload/completion.
+
+
+## Cashier, DJ and entrance — 2026-10-04
+
+Replaced the two free-standing plants with a cashier station and open floor, replaced the sofa with a matching DJ booth, and moved the entrance to the bottom right clear of the action button. Original artwork remains preserved. New transparent station artwork and prompts are recorded in artwork/restaurant-stations-source.json.
+
+Customers stay seated until checkout is free, walk to the cashier, transfer a coin, and exit through the new door. Persisted payments cannot repeat after reload; legacy departing guests remain safe. Three original synthesized tunes cycle when tapping the DJ; the selected track persists and mute stops music scheduling. No external audio files or requests.
+
+Validation: 27 production-engine checks; 9 offline/cache checks; 576 phone UI states with no failures; actual browser serving/approach/exit for all five customer types; 50 seated/chair visibility comparisons; five-customer checkout with a reload after the second payment (exactly five payments and five exits); DJ touch interaction and running AudioContext across five phone sizes. Evidence in tests/mobile-visual/restaurant-stations-results.json and restaurant-stations-preview.png. These are Chromium simulations, not physical-device listening or touch acceptance.
