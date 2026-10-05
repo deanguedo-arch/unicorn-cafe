@@ -310,8 +310,9 @@ function drawStationLayer(c,t=0){
  // pixels outside the playable room shell on narrow camera crops.
  c.beginPath();c.rect(35,20,1730,1043);c.clip();
  c.save();c.shadowColor='#3d254144';c.shadowBlur=17;c.shadowOffsetY=9;sprite(c,'painted_kitchen',895,365,909,298);c.restore();
- ellipse(c,232,665,166,19,'#47325235');sprite(c,'station_dj',232,665,365,340);
- ellipse(c,1610,680,130,17,'#47325235');sprite(c,'station_cashier',1610,680,280,310);
+ // Tight contact shadows sit directly against the furniture feet.
+ ellipse(c,232,567,110,5,'#47325218');sprite(c,'station_dj',232,575,365,340,true);
+ ellipse(c,1610,805,95,4,'#47325218');sprite(c,'station_cashier',1610,810,280,310,true);
  ellipse(c,1450,359,105,10,'#47325235');sprite(c,'painted_sink',1450,365,234,216);
  for(let i=0;i<3;i++){const a=.45+.18*Math.sin(t*2+i);c.globalAlpha=a;star(c,1395+i*28,238+(i%2)*19,5+i,'#fff1ad',t*.1);}
  c.restore();

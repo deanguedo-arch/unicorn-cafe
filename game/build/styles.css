@@ -243,3 +243,7 @@ button{transition:transform .11s ease,filter .11s ease,box-shadow .11s ease}butt
 .picnic-target .day-dots{gap:3px}.picnic-target .day-dots>span{width:18px;height:18px}.picnic-target .day-dots svg{width:14px;height:14px}
 .picnic-items{display:flex;gap:10px}.picnic-items .day-choice{width:70px}
 @media(orientation:landscape) and (max-height:350px){.lunch-screen{grid-template-rows:44px minmax(0,1fr) 82px}.picnic-heading{font-size:15px}.lunch-screen .day-choice{height:64px}.picnic-target{height:64px;gap:4px;padding:4px 6px}.picnic-items{gap:7px}.picnic-items .day-choice{width:60px}.picnic-target>img{width:36px;height:44px}.lunch-screen .day-big{height:62px;min-height:62px}}
+
+/* Leave the raised DJ corner visible under the world HUD. */
+.world-ui .order-pin{left:50%;top:10px;transform:translateX(-50%);transform-origin:center top}
+@media(max-width:799px){.world-ui .order-pin{left:calc(50% - 32px);transform:translateX(-50%) scale(.85)}}

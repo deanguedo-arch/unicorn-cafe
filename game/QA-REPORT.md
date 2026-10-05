@@ -113,3 +113,12 @@ Validation: 27 production-engine checks; 9 offline/cache checks; 576 phone UI st
 Replaced station artwork with opaque tall cabinet fronts; all feet/shoes are concealed. Added a low raised stage with front-right steps beneath the DJ, turned toward the dining room in a coherent three-quarter perspective. Adjusted DJ/cashier body proportions against existing seated guests. Table and guest sizing is unchanged. Enlarged station footprints and DJ touch bounds; checkout still uses the reachable floor point outside the cashier footprint. Artwork prompts and exports are in artwork/closed-booths-source.json and artwork/corner-stage-source.json.
 
 Focused verification: 27 engine and 9 offline checks; five-customer checkout including save/reload and exactly five payments/exits; actual DJ taps and audio across five phone viewports. Browser scene preview in tests/mobile-visual/restaurant-stations-preview.png. Chromium simulation, not physical-device acceptance.
+
+
+## Mirrored stations and attached shadows — 2026-10-04
+
+Mirrored both station sprites without changing their art or scale. DJ platform moved 90 world pixels upward; cashier moved 130 pixels down and checkout moved to the clear floor in front. Updated collision footprints, DJ touch bounds and coin transfer toward the mirrored register. Replaced detached oversized shadow ovals with narrow low-opacity contact shadows at the furniture bases. Moved the world order card away from the DJ corner and compacted it on smaller screens. Tables and customer sizes remain unchanged.
+
+Focused checks: 27 engine and 9 offline checks; five guests walk to the new cashier point, pay exactly once across reload, and exit the bottom-right door; actual DJ taps across five phone sizes; seated/chair visibility and six phone action clearances pass. Final wide and 568x320 scenes inspected with five orders. Chromium simulations, not physical-device acceptance.
+
+Final phone layout batch: 576 states, zero failures and zero browser errors.
