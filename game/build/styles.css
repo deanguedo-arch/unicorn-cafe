@@ -247,3 +247,16 @@ button{transition:transform .11s ease,filter .11s ease,box-shadow .11s ease}butt
 /* Leave the raised DJ corner visible under the world HUD. */
 .world-ui .order-pin{left:50%;top:10px;transform:translateX(-50%);transform-origin:center top}
 @media(max-width:799px){.world-ui .order-pin{left:calc(50% - 32px);transform:translateX(-50%) scale(.85)}}
+
+/* Illustrated helper deliveries and the always-available cleanup guide. */
+.cleanup-find{display:flex;align-items:center;gap:4px;background:#fff1c4;color:#61496f;border:2px solid #dbb16d;border-radius:14px;padding:5px 8px;min-height:44px;font-weight:800;font-size:12px;cursor:pointer;pointer-events:auto}
+.cleanup-find svg{width:24px;height:24px;flex:none}
+.world-ui .order-pin:has(.cleanup-find){gap:8px;padding:6px 10px;left:12px;top:12px;transform:none;min-height:62px}
+.world-ui .order-pin:has(.cleanup-find) .cleanup-meter{width:80px}
+.picnic-items .day-choice{position:relative;width:94px;height:78px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:3px;gap:1px}
+.picnic-items .day-choice>img{width:42px;height:40px;object-fit:contain}
+.picnic-items .day-choice .helper-portrait{position:absolute;left:2px;top:-25px;width:34px;height:39px}
+.picnic-items .day-choice span{font-size:11px;font-weight:800}
+.self-order .order-portrait{height:52px;width:64px;object-fit:contain}
+.self-order>span{font-size:12px;text-align:center}
+@media(orientation:landscape) and (max-height:350px){.picnic-items .day-choice{width:68px;height:64px}.picnic-items .day-choice>img{width:34px;height:31px}.picnic-items .day-choice .helper-portrait{width:25px;height:30px;top:-19px}.picnic-items{gap:7px}.self-order .order-portrait{height:34px}}

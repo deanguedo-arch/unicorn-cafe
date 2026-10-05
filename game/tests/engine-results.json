@@ -1,7 +1,7 @@
 {
   "kind": "production-engine deterministic tests, not physical-device or UI testing",
-  "passed": 27,
-  "total": 27,
+  "passed": 29,
+  "total": 29,
   "results": [
     {
       "name": "Cashier requires physical arrival, pays once and survives reload",
@@ -81,6 +81,13 @@
       }
     },
     {
+      "name": "Wider dining aisles connect every service and cleanup target without crossing furniture",
+      "pass": true,
+      "detail": {
+        "routes": 576
+      }
+    },
+    {
       "name": "Safe migration of real Part 4-style partial recipe",
       "pass": true
     },
@@ -127,6 +134,10 @@
     },
     {
       "name": "Picnic matching persists every item, wrong choices do not consume lunch",
+      "pass": true
+    },
+    {
+      "name": "Cook your own lunch persists every recipe step and topping without consuming customer orders",
       "pass": true
     },
     {

@@ -1,0 +1,36 @@
+{
+  "scope": "Actual touch navigation to the last open-floor mess and four explicit mop strokes on five phone viewports",
+  "results": [
+    {
+      "width": 568,
+      "height": 320,
+      "found": true,
+      "explicitMopStrokes": 4
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "found": true,
+      "explicitMopStrokes": 4
+    },
+    {
+      "width": 740,
+      "height": 300,
+      "found": true,
+      "explicitMopStrokes": 4
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "found": true,
+      "explicitMopStrokes": 4
+    },
+    {
+      "width": 932,
+      "height": 430,
+      "found": true,
+      "explicitMopStrokes": 4
+    }
+  ],
+  "errors": []
+}

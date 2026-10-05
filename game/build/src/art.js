@@ -50,7 +50,7 @@ function drawFood(c,dish,variant,prep=null,t=0){
  if(dish==='pancakes'&&images.pancake_batter){
   if(s<=0){sprite(c,'pancake_batter',160,238,260,218);if(p>0)swirl(c,160,127,47,3,'#fff7d6');}
   else{plate(c);const count=prep?Math.ceil(f(1)*3):3;for(let i=0;i<count;i++){const y=229-i*29;sprite(c,'pancake_raw',160,y,211-i*5,81);if(f(2)>0){c.save();c.globalAlpha=f(2);sprite(c,'pancake_brown',160,y,211-i*5,81);c.restore();}}
-  if(variant&&f(4)>0){sprite(c,'pancake_syrup',160,149,101,68);for(let i=0;i<Math.ceil(f(4)*6);i++)sprite(c,variant==='banana'?'fruit_banana':'fruit_berries',110+(i*29)%103,143+(i%3)*13,34,30);}}
+  if(variant&&f(4)>0){sprite(c,'pancake_syrup',160,149,101,68);for(let i=0;i<Math.ceil(f(4)*6);i++){if(variant==='banana'){c.save();c.translate(123+(i%3)*34,123+Math.floor(i/3)*18);c.rotate((i%3-1)*.18);ellipse(c,0,2,14,8,'#bd8b4744');ellipse(c,0,0,14,8,grad(c,-8,8,'#fff9d8','#eacb84'),'#bd914e',1.5);ellipse(c,0,-1,10,5,'#fff3c2');for(let k=0;k<3;k++){const a=k*Math.PI*2/3;ellipse(c,Math.cos(a)*3,Math.sin(a)*2,1.2,1,'#a87743');}shine(c,-5,-3,4,1.5);c.restore();}else sprite(c,'fruit_berries',110+(i*29)%103,143+(i%3)*13,34,30);}}}
   c.restore();return;
  }
  if(dish==='smoothie'&&images.smoothie_blender){
@@ -179,14 +179,14 @@ function drawFood(c,dish,variant,prep=null,t=0){
 function iconSVG(name){
  const p={
  chicken:'<path d="m33 32 17 12q12-6 10 5 8 11-4 11L36 42Z" fill="#fff1d9"/><path d="M10 10C-3 24 9 52 26 47 58 44 48 12 29 15 24 1 12 4 10 10Z" fill="#e6a073"/><path d="m17 23 10 5m-11 8 10 4" stroke="#ba795f"/>',
- play:'<path d="M24 14 49 32 24 50Z" fill="#fff8e5"/>',
- back:'<path d="m38 16-17 16 17 16M22 32h29"/>',
- arrow:'<path d="M12 32h39M37 18l15 14-15 14"/>',
+ play:'<path d="M24 14 49 32 24 50Z" fill="#f2d084"/><path d="M27 22v18" stroke="#fff8e5" stroke-width="2"/>',
+ back:'<path d="M29 13 8 32l21 19V39h26V25H29Z" fill="#e3bd70"/><path d="M15 30 25 21" stroke="#fff7d8" stroke-width="2"/>',
+ arrow:'<path d="M35 13 56 32 35 51V39H9V25h26Z" fill="#e3bd70"/><path d="M14 28h20" stroke="#fff7d8" stroke-width="2"/>',
  pause:'<path d="M24 17v30M42 17v30" stroke-width="8"/>',
  settings:'<path d="M32 8 37 10 41 7 47 13 44 17 46 22 52 23 52 32 47 34 45 39 48 44 41 51 37 48 32 50 28 48 23 51 16 44 19 39 17 34 12 32 12 23 18 22 20 17 17 13 24 7 28 10Z" fill="#d8b6e8"/><circle cx="32" cy="29" r="9" fill="#fff1b0"/>',
  home:'<path d="m9 29 23-19 23 19M17 26v27h30V26M27 53V37h10v16"/>',
- mute:'<path d="M9 25h11l14-12v38L20 39H9Z"/><path d="m44 24 13 16m0-16L44 40"/>',
- sound:'<path d="M9 25h11l14-12v38L20 39H9Z"/><path d="M44 24q10 8 0 16m7-25q17 17 0 34"/>',
+ mute:'<path d="M9 25h11l14-12v38L20 39H9Z" fill="#d8b6e8"/><path d="m44 24 13 16m0-16L44 40"/>',
+ sound:'<path d="M9 25h11l14-12v38L20 39H9Z" fill="#d8b6e8"/><path d="M44 24q10 8 0 16m7-25q17 17 0 34"/>',
  check:'<path d="m13 33 12 12 27-28" stroke-width="7"/>',
  retry:'<path d="M13 27a21 21 0 1 1 2 18M13 12v16h17"/>',
  hand:'<path d="M25 34V14q0-8 7-8t7 8v15q16-2 16 9v8q-2 12-16 12H27L14 42q-5-8 1-10t10 2Z" fill="#ffe4c5"/>',
@@ -197,7 +197,7 @@ function iconSVG(name){
  star:'<path d="m32 6 8 17 18 3-13 13 3 18-16-9-16 9 3-18L6 26l18-3Z" fill="#ffe18b"/>',
  flower:'<path d="M32 19c-21-31-40 8-15 16-15 25 23 34 20 8 28 15 32-25 6-22 13-26-25-25-11-2Z" fill="#a2d9bb"/><circle cx="31" cy="30" r="8" fill="#fff0b0"/>',
  table:'<ellipse cx="32" cy="24" rx="25" ry="12" fill="#edbd8c"/><path d="m13 30-3 21m41-21 3 21M29 36v16"/>',
- tray:'<path d="M5 45h54M11 40h42c0-29-42-29-42 0ZM32 12v7"/><circle cx="32" cy="10" r="3" fill="#efd28b"/>',
+ tray:'<ellipse cx="32" cy="46" rx="27" ry="7" fill="#edcd83"/><path d="M11 40h42c0-29-42-29-42 0Z" fill="#d9c4ed"/><path d="M19 34q2-10 10-11" stroke="#fff8e5" stroke-width="3"/><circle cx="32" cy="17" r="4" fill="#efd28b"/>',
  order:'<rect x="13" y="9" width="39" height="47" rx="7" fill="#fff5dc"/><path d="M23 20h20M23 31h20M23 42h11"/>',
  spoon:'<ellipse cx="39" cy="18" rx="11" ry="15" transform="rotate(25 39 18)" fill="#d6dae9"/><path d="m33 30-16 27" stroke-width="7"/>',
  whisk:'<path d="m17 54 12-20M27 35C10-3 55-7 46 25L27 35ZM27 35C27 1 47 0 39 20Z" fill="#d1d6e7"/>',
@@ -230,7 +230,7 @@ function iconSVG(name){
  banana:'<path d="M11 20q9 29 39 24l5-10Q30 43 20 16Z" fill="#ffe177"/><path d="m18 17 2-7m31 34 5 4" stroke="#b88a43"/>',
  mango:'<path d="M18 12c-18 22 2 47 21 43 28-6 21-48-4-44-6-7-13-5-17 1Z" fill="#f7b45a"/><path d="M34 11q4-9 15-5M36 12q8 0 13 8" stroke="#7db477"/>',
  ladle:'<circle cx="43" cy="18" r="13" fill="#c9d5df"/><path d="m35 28-20 28" stroke-width="8"/>',
- spatula:'<path d="m22 7 16 0 3 26-22 0Z" fill="#c9d5df"/><path d="M30 33v25" stroke-width="8"/><path d="M26 13v12m8-12v12"/>',
+ spatula:'<g transform="rotate(22 32 32)"><rect x="27" y="28" width="10" height="30" rx="5" fill="#b18bdb"/><rect x="25" y="28" width="14" height="7" rx="3" fill="#ebc575"/><path d="M21 7h22q4 0 3 5l-3 16q-1 4-5 4H26q-4 0-5-4l-3-16q-1-5 3-5Z" fill="#bcdedc"/><path d="M26 13v10m6-10v10m6-10v10" stroke="#719aab" stroke-width="2.5"/><path d="M30 40v10M23 10h17" stroke="#fff8df" stroke-width="2"/></g>',
  blender:'<path d="M17 12h30l-5 29H22Z" fill="#b8dfe0"/><path d="M21 41h22l5 14H16Z" fill="#aa91c7"/><circle cx="32" cy="48" r="3" fill="#fff1b3"/>',
  cup:'<path d="M16 11h32l-4 45H20Z" fill="#f8e8f0"/><path d="M21 27h22"/>',
  bubbles:'<circle cx="19" cy="39" r="10" fill="#dff8ff"/><circle cx="36" cy="25" r="13" fill="#f6ecff"/><circle cx="49" cy="44" r="9" fill="#dff8ff"/><circle cx="13" cy="18" r="6" fill="#fff"/>',
@@ -244,12 +244,22 @@ function iconSVG(name){
  sprinkleStars:'<path d="m18 8 4 9 10 1-7 7 2 10-9-5-9 5 2-10-7-7 10-1Zm30 19 3 7 8 1-6 5 2 8-7-4-7 4 2-8-6-5 8-1Z" fill="#f2c75a"/>',
  sprinkleHearts:'<path d="M19 31C-2 17 9 5 19 15 29 5 40 17 19 31Zm27 22C24 38 35 27 46 37c11-10 22 1 0 16Z" fill="#ee86b2"/>'
  };
- const data=p[name]||p.chef;
- return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="#61496f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+data+'</svg>';
+ let data=p[name]||p.chef,defs='';let n=0;
+ data=data.replace(/fill="(#[0-9a-f]{6})"/gi,(_,colour)=>{const id='rr-'+name+'-'+n++;defs+=`<linearGradient id="${id}" x2="0" y2="1"><stop stop-color="${colour}"/><stop offset="1" stop-color="${colour}"/></linearGradient>`;const rgb=[1,3,5].map(i=>parseInt(colour.slice(i,i+2),16));const light='#'+rgb.map(v=>Math.round(v+(255-v)*.3).toString(16).padStart(2,'0')).join('');defs=defs.replace(`stop-color="${colour}"`, `stop-color="${light}"`);return `fill="url(#${id})"`;});
+ return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="#61496f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs>'+defs+'</defs><g style="filter:drop-shadow(0px 1px 0px #b18d6355)">'+data+'</g></svg>';
 }
-function icon(name){return iconSVG(name);}
-function toolData(name){
- const painted={tomato:'pizza_tomato',mushroom:'pizza_mushroom',cone:'ice_cone',vanilla:'ice_vanilla',scoop:'ice_strawberry',sprinkles:'ice_sprinkles',beans:'coffee_beans',flour:'cupcake_flour',egg:'cupcake_batter',bun:'burger_top',pan:'burger_patty',cheese:'burger_cheese',lettuce:'burger_lettuce',carrots:'soup_chunk',chopper:'soup_chunk',chicken:'chicken_raw',sweetpotato:'chicken_wedge',peas:'veg_peas',corn:'veg_corn',whisk:'pancake_batter',ladle:'pancake_batter',blueberries:'fruit_berries',banana:'fruit_banana',blender:'smoothie_blender',milk:'smoothie_milk',strawberry:'fruit_strawberry',mango:'fruit_mango',fruit:'fruit_strawberry',cup:'smoothie_strawberry'};if(painted[name]&&images[painted[name]])return window.RR_ASSETS[painted[name]];
+const PAINTED_CONTROLS={spatula:0,spoon:1,roller:2,kettle:3,brush:4,oven:5,stove:6,settings:7,arrow:8,back:9,retry:10,chef:11};
+function paintedControl(name){
+ const cell=PAINTED_CONTROLS[name],sheet=images.painted_tools_controls;if(cell===undefined||!sheet)return null;
+ const key='painted-control:'+name;if(cache[key])return cache[key];
+ const w=sheet.width/4,h=sheet.height/3,canvas=document.createElement('canvas');canvas.width=Math.round(w);canvas.height=Math.round(h);const c=canvas.getContext('2d');c.drawImage(sheet,(cell%4)*w,Math.floor(cell/4)*h,w,h,0,0,w,h);
+ const pixels=c.getImageData(0,0,canvas.width,canvas.height).data;let x1=canvas.width,y1=canvas.height,x2=0,y2=0;
+ for(let y=0;y<canvas.height;y++)for(let x=0;x<canvas.width;x++)if(pixels[(y*canvas.width+x)*4+3]>48){x1=Math.min(x1,x);y1=Math.min(y1,y);x2=Math.max(x2,x);y2=Math.max(y2,y);}
+ if(x1>x2)return null;const icon=document.createElement('canvas');icon.width=128;icon.height=128;const z=icon.getContext('2d'),iw=x2-x1+1,ih=y2-y1+1,scale=Math.min(116/iw,116/ih);z.drawImage(canvas,x1,y1,iw,ih,(128-iw*scale)/2,(128-ih*scale)/2,iw*scale,ih*scale);return cache[key]=icon.toDataURL();
+}
+function icon(name){const painted=paintedControl(name);return painted?`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-hidden="true"><image href="${painted}" width="64" height="64"/></svg>`:iconSVG(name);}
+function toolData(name){const control=paintedControl(name);if(control)return control;
+ const painted={tomato:'pizza_tomato',mushroom:'pizza_mushroom',cone:'ice_cone',vanilla:'ice_vanilla',scoop:'ice_strawberry',sprinkles:'ice_sprinkles',beans:'coffee_beans',flour:'cupcake_flour',egg:'cupcake_batter',bun:'burger_top',pan:'burger_patty',cheese:'burger_cheese',sauce:'pizza_sauce',cocoa:'cupcake_cocoa',lettuce:'burger_lettuce',carrots:'soup_chunk',chopper:'soup_chunk',chicken:'chicken_raw',sweetpotato:'chicken_wedge',peas:'veg_peas',corn:'veg_corn',whisk:'pancake_batter',ladle:'pancake_batter',blueberries:'fruit_berries',banana:'fruit_banana',blender:'smoothie_blender',milk:'smoothie_milk',strawberry:'fruit_strawberry',mango:'fruit_mango',fruit:'fruit_strawberry',cup:'smoothie_strawberry'};if(painted[name]&&images[painted[name]])return window.RR_ASSETS[painted[name]];
  if(images[name])return window.RR_ASSETS[name];
  const key='tool:'+name;if(!cache[key])cache[key]='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(iconSVG(name));return cache[key];
 }

@@ -10,6 +10,7 @@ async function fixture(kind,data={}){await page.evaluate(({kind,data})=>{
  if(kind==='cook'){const steps=R.RECIPES[d].steps;s.prep={orderId:1,dish:d,step:data.step,p:0,variant:steps[data.step]?.action==='choice'?null:v,deco:data.deco||'rainbow',done:data.step===steps.length,placements:[]};}
  if(kind==='wash'){s.tables[0]={status:'carried',dirty:null};s.dirtyTray={table:0,dish:d,variant:v,orderId:1,wash:0};}
  if(kind==='lunch'){s.customers=[];s.active=null;s.served=5;s.issued=5;s.lunch={done:false,meal:data.meal||null,packed:data.packed??(data.meal?3:0),bites:data.bites||0,sips:data.sips||0};}
+ if(kind==='lunch-cook'){s.customers=[];s.active=null;s.served=5;s.issued=5;s.prep=null;s.lunch={done:false,meal:d,packed:3,bites:0,sips:0,cooked:false,variant:null,prep:{orderId:0,dish:d,step:data.step,p:0,variant:RR.RECIPES[d].steps[data.step]?.action==='choice'?null:v,done:data.step===RR.RECIPES[d].steps.length,placements:[],deco:null}};}
  if(kind==='clean'||kind==='complete'||kind==='mop'){s.customers=[];s.active=null;s.served=10;s.issued=10;s.lunch={done:true,meal:'pizza',bites:3,sips:2};if(data.task?.startsWith('floor')||kind==='complete'||kind==='mop')s.cleaning=R.CLEAN_TASKS.map(t=>({id:t.id,p:t.kind==='floor'&&kind!=='complete'?0:t.need}));if(kind==='mop'){s.mopEquipped=!!data.equipped;s.player={...R.safePoint(data.near?R.CLEAN_TASKS.find(t=>t.id==='floor-0'):R.SINK),facing:1};}}
  if(kind==='mismatch'){s.tray={orderId:1,dish:'icecream',variant:'strawberry'};s.player={...R.TABLES[0].meet,facing:1};}
  __RR_TEST__.loadFixture(s);
@@ -17,7 +18,7 @@ async function fixture(kind,data={}){await page.evaluate(({kind,data})=>{
  if(kind==='menu')__RR_TEST__.openRecipeMenu();
  if(kind==='cook')__RR_TEST__.openCooking();
  if(kind==='wash')__RR_TEST__.openWash();
- if(kind==='lunch')__RR_TEST__.openLunch();
+ if(kind==='lunch'||kind==='lunch-cook')__RR_TEST__.openLunch();
  if(kind==='clean')__RR_TEST__.openClean(data.task);
  if(kind==='complete')__RR_TEST__.showComplete();
  if(kind==='mismatch')__RR_TEST__.route('table',1);
@@ -41,6 +42,7 @@ async function inspect(label,w,h,capture=false){const issues=await page.evaluate
  for(let stage=0;stage<6;stage++){await fixture('designer',{stage});await inspect(`designer-${stage}`,w,h,stage===3);}
  for(const kind of ['world','menu','wash','mismatch','complete']){await fixture(kind);await inspect(kind,w,h,true);}
  for(const data of [{},{meal:'pizza',packed:0},{meal:'pizza',packed:1},{meal:'pizza',packed:2},{meal:'pizza'},{meal:'pizza',bites:3},{meal:'pizza',bites:3,sips:2}]){await fixture('lunch',data);await inspect(`lunch-${data.meal||'choose'}-${data.packed??3}-${data.bites||0}-${data.sips||0}`,w,h,true);}
+ for(const dish of ['pizza','pancakes','soup','smoothie']){const steps=await page.evaluate(d=>RR.RECIPES[d].steps,dish);for(const step of [0,steps.findIndex(s=>s.action==='choice'),steps.length]){await fixture('lunch-cook',{dish,step});await inspect(`my-lunch-${dish}-${step}`,w,h,true);}}
  for(const task of ['table-0','kitchen','sink','window-left','floor-0']){await fixture('clean',{task});await inspect(`clean-${task}`,w,h,task==='floor-0');}
  for(const data of [{},{equipped:true},{equipped:true,near:true}]){await fixture('mop',data);await inspect(`mop-${data.equipped?'held':'pickup'}-${data.near?'near':'far'}`,w,h,true);}
  const recipes=await page.evaluate(()=>Object.fromEntries(RR.MENU.map(d=>[d,{steps:RR.RECIPES[d].steps.map(s=>s.action),variants:RR.RECIPES[d].variants.map(v=>v.id)}])));

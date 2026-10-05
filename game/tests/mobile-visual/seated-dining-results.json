@@ -28,34 +28,34 @@
       "shape": "round",
       "key": "guest_seated_human",
       "visible": 1537,
-      "covered": 1,
-      "fraction": 0.0006506180871828237
+      "covered": 3,
+      "fraction": 0.001951854261548471
     },
     {
       "shape": "round",
       "key": "empty-chair",
-      "visible": 2550,
+      "visible": 2543,
       "covered": 0,
       "fraction": 0
     },
     {
       "shape": "round",
       "key": "guest_seated_blue",
-      "visible": 3019,
+      "visible": 3024,
       "covered": 0,
       "fraction": 0
     },
     {
       "shape": "round",
       "key": "empty-chair",
-      "visible": 2544,
+      "visible": 2548,
       "covered": 0,
       "fraction": 0
     },
     {
       "shape": "round",
       "key": "guest_seated_worker",
-      "visible": 2228,
+      "visible": 2227,
       "covered": 0,
       "fraction": 0
     },
@@ -98,34 +98,34 @@
       "shape": "clover",
       "key": "guest_seated_human",
       "visible": 1537,
-      "covered": 1,
-      "fraction": 0.0006506180871828237
+      "covered": 3,
+      "fraction": 0.001951854261548471
     },
     {
       "shape": "clover",
       "key": "empty-chair",
-      "visible": 2550,
+      "visible": 2543,
       "covered": 0,
       "fraction": 0
     },
     {
       "shape": "clover",
       "key": "guest_seated_blue",
-      "visible": 3019,
+      "visible": 3024,
       "covered": 0,
       "fraction": 0
     },
     {
       "shape": "clover",
       "key": "empty-chair",
-      "visible": 2544,
+      "visible": 2548,
       "covered": 0,
       "fraction": 0
     },
     {
       "shape": "clover",
       "key": "guest_seated_worker",
-      "visible": 2228,
+      "visible": 2227,
       "covered": 0,
       "fraction": 0
     },
@@ -168,34 +168,34 @@
       "shape": "oval",
       "key": "guest_seated_human",
       "visible": 1537,
-      "covered": 1,
-      "fraction": 0.0006506180871828237
+      "covered": 3,
+      "fraction": 0.001951854261548471
     },
     {
       "shape": "oval",
       "key": "empty-chair",
-      "visible": 2550,
+      "visible": 2543,
       "covered": 0,
       "fraction": 0
     },
     {
       "shape": "oval",
       "key": "guest_seated_blue",
-      "visible": 3019,
+      "visible": 3024,
       "covered": 0,
       "fraction": 0
     },
     {
       "shape": "oval",
       "key": "empty-chair",
-      "visible": 2544,
+      "visible": 2548,
       "covered": 0,
       "fraction": 0
     },
     {
       "shape": "oval",
       "key": "guest_seated_worker",
-      "visible": 2228,
+      "visible": 2227,
       "covered": 0,
       "fraction": 0
     },
@@ -238,34 +238,34 @@
       "shape": "heart",
       "key": "guest_seated_human",
       "visible": 1537,
-      "covered": 1,
-      "fraction": 0.0006506180871828237
+      "covered": 3,
+      "fraction": 0.001951854261548471
     },
     {
       "shape": "heart",
       "key": "empty-chair",
-      "visible": 2550,
+      "visible": 2543,
       "covered": 0,
       "fraction": 0
     },
     {
       "shape": "heart",
       "key": "guest_seated_blue",
-      "visible": 3019,
+      "visible": 3024,
       "covered": 0,
       "fraction": 0
     },
     {
       "shape": "heart",
       "key": "empty-chair",
-      "visible": 2544,
+      "visible": 2548,
       "covered": 0,
       "fraction": 0
     },
     {
       "shape": "heart",
       "key": "guest_seated_worker",
-      "visible": 2228,
+      "visible": 2227,
       "covered": 0,
       "fraction": 0
     },
@@ -308,34 +308,34 @@
       "shape": "cloud",
       "key": "guest_seated_human",
       "visible": 1537,
-      "covered": 1,
-      "fraction": 0.0006506180871828237
+      "covered": 3,
+      "fraction": 0.001951854261548471
     },
     {
       "shape": "cloud",
       "key": "empty-chair",
-      "visible": 2550,
+      "visible": 2543,
       "covered": 0,
       "fraction": 0
     },
     {
       "shape": "cloud",
       "key": "guest_seated_blue",
-      "visible": 3019,
+      "visible": 3024,
       "covered": 0,
       "fraction": 0
     },
     {
       "shape": "cloud",
       "key": "empty-chair",
-      "visible": 2544,
+      "visible": 2548,
       "covered": 0,
       "fraction": 0
     },
     {
       "shape": "cloud",
       "key": "guest_seated_worker",
-      "visible": 2228,
+      "visible": 2227,
       "covered": 0,
       "fraction": 0
     },

@@ -35,12 +35,14 @@ const TABLES=[
  {id:'moon',name:'Moon table',symbol:'moon',colour:'#8757cf',seat:{x:855,y:923},meet:{x:910,y:959},food:{x:730,y:825}},
  {id:'diamond',name:'Diamond table',symbol:'diamond',colour:'#cc6a19',seat:{x:1295,y:928},meet:{x:1350,y:964},food:{x:1170,y:830}}
 ];
+for(const [i,x] of [[2,260],[3,715],[4,1170]]){const t=TABLES[i],dx=x-t.food.x;t.food.x+=dx;t.seat.x+=dx;t.meet.x+=dx;}
 const KITCHEN={x:997,y:380}, SINK={x:1450,y:385}, ENTRY={x:1490,y:1000}, CASHIER={x:1600,y:865}, DJ={x:232,y:440};
+// Chair feet define the dining footprint; armrests do not block the aisle.
 // Visible interior footprints. The unused baked-background obstacles are gone.
 const OBSTACLES=[
  [452,174,880,130],[50,400,365,175],[1490,305,208,173],
  [1470,660,280,150],
- ...TABLES.map(t=>[t.food.x-187,t.food.y-34,374,139])
+ ...TABLES.map(t=>[t.food.x-175,t.food.y-34,350,139])
 ];
 const BOUNDS={left:66,right:1734,top:325,bottom:1030};
 const CUSTOMIZATION={
@@ -58,9 +60,9 @@ const CLEAN_TASKS=[
  {id:'sink',kind:'sink',x:1450,y:385,artX:1450,artY:260,need:3},
  {id:'window-left',kind:'window',x:223,y:355,artX:223,artY:145,need:3},
  {id:'window-right',kind:'window',x:1400,y:343,artX:1527,artY:147,need:3},
- ...[[470,615],[979,625],[1497,566],[485,938],[980,999],[1530,980]].map(([x,y],i)=>({id:'floor-'+i,kind:'floor',x,y,artX:x,artY:y,need:4}))
+ ...[[470,615],[979,625],[1497,566],[485,938],[1020,735],[1110,1000]].map(([x,y],i)=>({id:'floor-'+i,kind:'floor',x,y,artX:x,artY:y,need:4}))
 ];
-function freshDayState(){return {phase:'morning',lunch:{done:false,meal:null,packed:0,bites:0,sips:0},mopEquipped:false,cleaning:CLEAN_TASKS.map(t=>({id:t.id,p:0})),pace:{elapsed:0,next:8,mood:'cozy',remaining:24,burst:0,seed:73129}};}
+function freshDayState(){return {phase:'morning',lunch:{done:false,meal:null,packed:0,bites:0,sips:0,cooked:false,variant:null,prep:null},mopEquipped:false,cleaning:CLEAN_TASKS.map(t=>({id:t.id,p:0})),pace:{elapsed:0,next:8,mood:'cozy',remaining:24,burst:0,seed:73129}};}
 function clampInt(v,max=1000000){return Number.isFinite(v)?clamp(Math.floor(v),0,max):0;}
 function safePoint(pt){
  if(walkable(pt.x,pt.y))return {x:pt.x,y:pt.y};
@@ -178,6 +180,10 @@ function cleanSave(raw){
  s.lunch={done:!old&&l.done===true,meal:LUNCH_MENU.includes(l.meal)?l.meal:null,packed:LUNCH_MENU.includes(l.meal)?(Number.isFinite(l.packed)?clampInt(l.packed,3):3):0,bites:clampInt(l.bites,3),sips:clampInt(l.sips,2)};
  if(!s.lunch.meal){s.lunch.bites=0;s.lunch.sips=0;}if(s.lunch.bites<3)s.lunch.sips=0;
  if(s.lunch.bites||s.lunch.sips)s.lunch.packed=3;
+ s.lunch.cooked=l.cooked===true||(!Object.hasOwn(l,'cooked')&&s.lunch.packed===3)||s.lunch.bites>0||s.lunch.done;
+ s.lunch.variant=validVariant(s.lunch.meal,l.variant)?l.variant:(s.lunch.cooked&&s.lunch.meal?RECIPES[s.lunch.meal].variants[0].id:null);
+ s.lunch.prep=!s.lunch.cooked&&s.lunch.packed===3?cleanPrep(l.prep,[{id:0,phase:'ordered'}]):null;
+ if(s.lunch.prep?.dish!==s.lunch.meal)s.lunch.prep=null;
  if(s.lunch.done){s.lunch.meal=s.lunch.meal||'pizza';s.lunch.packed=3;s.lunch.bites=3;s.lunch.sips=2;}
  s.mopEquipped=raw.mopEquipped===true;
  s.cleaning=CLEAN_TASKS.map(t=>({id:t.id,p:old?0:clampInt(Array.isArray(raw.cleaning)?raw.cleaning.find(q=>q?.id===t.id)?.p:0,t.need)}));
@@ -197,6 +203,9 @@ function cleanSave(raw){
 }
 class Engine{
  constructor(saved=null){this.s=cleanSave(saved)||fresh();}
+ get prep(){return this.s.phase==='lunch'?this.s.lunch.prep:this.s.prep;}
+ startLunchRecipe(){const l=this.s.lunch;if(this.s.phase!=='lunch'||!l.meal||l.packed<3||l.cooked)return false;if(!l.prep)l.prep={orderId:0,dish:l.meal,step:0,p:0,variant:null,deco:null,done:false,placements:[]};return true;}
+ finishLunchRecipe(){const l=this.s.lunch;if(this.s.phase!=='lunch'||!l.prep?.done||!validVariant(l.meal,l.prep.variant))return false;l.variant=l.prep.variant;l.cooked=true;l.prep=null;return true;}
  customer(id){return this.s.customers.find(c=>c.id===id)||null;}
  atTable(index){return this.s.customers.find(c=>c.table===index)||null;}
  nextOrder(){return this.s.customers.find(c=>c.phase==='ordered')||null;}
@@ -206,14 +215,14 @@ class Engine{
  takeOrder(id){const c=this.customer(id);if(!c||!['waiting','ordered'].includes(c.phase))return false;c.phase='ordered';this.s.active=id;return true;}
  selectOrder(id){const c=this.customer(id);if(c?.phase!=='ordered')return false;this.s.active=id;return true;}
  startRecipe(orderId,dish){const c=this.customer(orderId);if(!['morning','afternoon'].includes(this.s.phase)||this.s.tray||this.s.dirtyTray||c?.phase!=='ordered'||!validDish(dish))return false;this.s.active=orderId;this.s.prep={orderId,dish,step:0,p:0,variant:null,deco:null,done:false,placements:[]};return true;}
- act(value=null,meta=null){const p=this.s.prep;if(!p||p.done)return {ok:false};const st=RECIPES[p.dish].steps[p.step];if(!st)return {ok:false};
+ act(value=null,meta=null){const p=this.prep;if(!p||p.done)return {ok:false};const st=RECIPES[p.dish].steps[p.step];if(!st)return {ok:false};
   if(st.action==='choice'){if(!validVariant(p.dish,value))return {ok:false};p.variant=value;p.p=st.need;}
   else if(st.action==='decorate'){if(p.dish!=='cupcake'||!validDeco('cupcake',value))return {ok:false};p.deco=value;p.p=st.need;}
   else {if(st.action==='place'&&meta&&Number.isFinite(meta.x)&&Number.isFinite(meta.y))p.placements.push({x:clamp(meta.x,.05,.95),y:clamp(meta.y,.05,.95)});p.p++;}
   let advanced=false;if(p.p>=st.need){p.step++;p.p=0;advanced=true;}p.done=p.step>=RECIPES[p.dish].steps.length;return {ok:true,advanced,done:p.done};
  }
  redecorate(value){const p=this.s.prep;if(!p?.done||p.dish!=='cupcake'||!validDeco('cupcake',value))return false;p.deco=value;return true;}
- restartPrep(){const p=this.s.prep;if(!p)return false;return this.startRecipe(p.orderId,p.dish);}
+ restartPrep(){if(this.s.phase==='lunch'){this.s.lunch.prep=null;return this.startLunchRecipe();}const p=this.s.prep;if(!p)return false;return this.startRecipe(p.orderId,p.dish);}
  cancelPrep(){this.s.prep=null;}
  packMeal(){const p=this.s.prep;if(!p?.done||!validVariant(p.dish,p.variant)||this.s.tray||this.s.dirtyTray)return false;this.s.tray={orderId:p.orderId,dish:p.dish,variant:p.variant,deco:validDeco(p.dish,p.deco)};this.s.prep=null;return true;}
  remake(){const tray=this.s.tray;if(!tray)return false;this.s.active=tray.orderId;this.s.tray=null;this.s.prep=null;return true;}
@@ -231,9 +240,9 @@ class Engine{
   else if(s.phase!=='lunch')s.phase=s.lunch.done?'afternoon':'morning';
   s.completed=isDayClear(s);if(s.completed)s.phase='complete';return s.phase;
  }
- chooseLunch(meal){if(this.s.phase!=='lunch'||!LUNCH_MENU.includes(meal))return false;this.s.lunch.meal=meal;this.s.lunch.packed=0;this.s.lunch.bites=0;this.s.lunch.sips=0;return true;}
+ chooseLunch(meal){if(this.s.phase!=='lunch'||!LUNCH_MENU.includes(meal))return false;this.s.lunch.meal=meal;this.s.lunch.packed=0;this.s.lunch.bites=0;this.s.lunch.sips=0;this.s.lunch.cooked=false;this.s.lunch.variant=null;this.s.lunch.prep=null;return true;}
  packLunch(item){const l=this.s.lunch;if(this.s.phase!=='lunch'||!l.meal||l.packed>=3||item!==['meal','fruit','milk'][l.packed])return false;l.packed++;return true;}
- lunchAct(){const s=this.s,l=s.lunch;if(s.phase!=='lunch'||!l.meal||l.packed<3)return false;if(l.bites<3)l.bites++;else if(l.sips<2)l.sips++;else return false;return true;}
+ lunchAct(){const s=this.s,l=s.lunch;if(s.phase!=='lunch'||!l.meal||l.packed<3||!l.cooked)return false;if(l.bites<3)l.bites++;else if(l.sips<2)l.sips++;else return false;return true;}
  endLunch(){const s=this.s,l=s.lunch;if(s.phase!=='lunch'||!l.meal||l.bites<3||l.sips<2)return false;l.done=true;s.phase='afternoon';s.pace.next=3;s.pace.mood='normal';s.pace.remaining=20;this.updateDay();return true;}
  cleanTargets(){const s=this.s;if(s.phase!=='cleaning')return [];const floors=surfacesClean(s);return CLEAN_TASKS.filter(t=>(t.kind==='floor')===floors&&s.cleaning.find(q=>q.id===t.id).p<t.need);}
  pickupMop(){if(this.s.phase!=='cleaning'||!surfacesClean(this.s)||this.s.mopEquipped||Math.hypot(this.s.player.x-SINK.x,this.s.player.y-SINK.y)>112)return false;this.s.mopEquipped=true;return true;}

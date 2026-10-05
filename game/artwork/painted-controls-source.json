@@ -1,0 +1,25 @@
+{
+  "created": "2026-10-05",
+  "source": "/Users/deanguedo/.codex/generated_images/01a107b9-e885-74c3-a752-b3956c6590b1/exec-84fc7d1c-03ff-4423-9d86-c51a5f07f194.png",
+  "asset": "build/assets/painted_tools_controls.png",
+  "grid": {
+    "columns": 4,
+    "rows": 3
+  },
+  "cells": {
+    "spatula": 0,
+    "spoon": 1,
+    "roller": 2,
+    "kettle": 3,
+    "brush": 4,
+    "oven": 5,
+    "stove": 6,
+    "settings": 7,
+    "arrow": 8,
+    "back": 9,
+    "retry": 10,
+    "chef": 11
+  },
+  "reference": "build/assets/pancake_batter.webp",
+  "usage": "Runtime canvas extraction and alpha bounds keep every painted icon centered and contained; original sheet preserved."
+}
