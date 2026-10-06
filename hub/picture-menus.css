@@ -59,3 +59,10 @@ body:has(#game-shell:not([hidden])) #wallet{margin-left:68px}#loading{margin-lef
  .equipment-cell>button.vehicle-choice{height:77px}.equipment-cell{padding:5px}.equipment-cell .coin-price{font-size:17px}.equipment-layout{padding:7px}.equipment-grid{gap:9px}.outfit-cell canvas{height:76px}.outfit-cell{padding:4px}.outfit-cell button{margin:3px}.outfit-grid{gap:10px;padding:7px}
  .game-footer,.puzzle-footer{padding:5px 10px;min-height:56px}.puzzle-grid img{height:51px}.puzzle-grid{padding:7px;gap:7px}.puzzle-preview{padding:8px}.arcade-entry>.picture-sprite{width:42px!important;height:42px!important}.stamp-row{min-height:40px;padding:3px}.photo-controls>img{height:46px}.photo-layout{grid-template-columns:minmax(0,1fr) 130px;padding:8px}
 }
+/* Scenic puzzles keep the original full painting visible at every stage. */
+.puzzle-choices{overflow:auto;touch-action:pan-y}.puzzle-choices>.puzzle-grid{flex:none;min-height:0;overflow:visible}
+.legacy-continue{padding:0 10px 10px}.legacy-continue h2{font-size:16px;margin:4px 0 8px}.legacy-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.legacy-grid .puzzle-tile img{width:100%;height:64px;object-fit:contain}
+.completed-picture{flex:1;min-height:0;display:grid;place-items:center;padding:8px}.completed-picture img{width:100%;height:100%;min-height:0;object-fit:contain}.completed-picture+.round-result{flex:0;padding:6px;gap:12px;flex-wrap:nowrap}.completed-picture+.round-result>.picture-sprite{width:36px!important;height:36px!important}.completed-picture+.round-result .earned{font-size:20px}.completed-picture+.round-result .earned .picture-sprite{width:28px!important;height:28px!important}
+#round-canvas:focus-visible{outline:3px solid #f5cf69;outline-offset:-3px}.game-footer button{min-width:44px;min-height:44px}
+@media(prefers-reduced-motion:reduce){#panel *{scroll-behavior:auto;transition:none;animation:none}}
+.continue-count{position:absolute;left:5px;bottom:5px;display:flex;align-items:center;gap:3px;background:#fff0d8;color:#6a4776;padding:2px 4px;border-radius:4px;font-size:14px}.continue-count .picture-sprite{width:20px!important;height:20px!important}

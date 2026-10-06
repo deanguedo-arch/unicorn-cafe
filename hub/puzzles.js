@@ -1,9 +1,9 @@
 /* 48 distinct story pictures composed from preserved illustration pixels. */
 (()=>{'use strict';const A=UWArt,C=UWCatalog,cache=new Map(),extra={};let promise=null,backgrounds=null;
 const sources=['dog_idle','dog_happy','teddy','toyunicorn','ball','robot','apple','banana','cookie','donut','cupcake','icecream','bread','strawberry','cherries','grapes','peach','flowers','cake','milkshake','easy_house','easy_market','easy_restaurant','easy_toys','house','store','plant','picture','book'];
-async function load(bgs){backgrounds=bgs;if(!promise)promise=Promise.all(sources.map(k=>new Promise((resolve,reject)=>{const im=new Image();im.onload=()=>{extra[k]=im;resolve();};im.onerror=()=>reject(Error('Puzzle illustration '+k));im.src='./assets/puzzles/'+k+'.webp';})));await promise;}
+async function legacyLoad(){if(!promise)promise=Promise.all(sources.map(k=>new Promise((resolve,reject)=>{const im=new Image();im.onload=()=>{extra[k]=im;resolve();};im.onerror=()=>reject(Error('Puzzle illustration '+k));im.src='./assets/puzzles/'+k+'.webp';})));try{await promise;}catch(e){promise=null;throw e;}if(!backgrounds.street)backgrounds.street=await decode("./assets/mall/street.png");}
 function art(c,key,x,y,w,h,flip=false){A.sprite(c,extra[key]||A.images[{pancake:'pancake_syrup',coffee:'coffee_black',soup:'soup_carrot',chicken:'chicken_roast'}[key]||key],x,y,w,h,flip);}
-function picture(id){if(cache.has(id))return cache.get(id);const q=C.puzzles.find(p=>p.id===id);if(!q)throw Error('Unknown picture');const cv=document.createElement('canvas');cv.width=640;cv.height=440;const c=cv.getContext('2d'),i=q.index;
+function legacyPicture(id){if(cache.has(id))return cache.get(id);const q=C.puzzles.find(p=>p.id===id);if(!q)throw Error('Unknown picture');const cv=document.createElement('canvas');cv.width=640;cv.height=440;const c=cv.getContext('2d'),i=q.index;
  const bg={unicorns:'street',animals:'street',food:'boutique',outfits:'boutique',vehicles:'wheels',places:['village','street','mall','boutique','wheels','arcade','photo','boutique'][i]}[q.theme];c.drawImage(backgrounds[bg],0,0,640,440);
  if(q.theme==='places'){
   const detail=['house','flowers','plant','picture','ball','robot','book','toyunicorn'][i];art(c,detail,115,405,140,160);A.unicorn(c,415,416,125,{head:['bow','flower-crown','sunhat','helmet'][i%4]},i%2?'u_happy1':'u_idle0');
@@ -26,5 +26,12 @@ function picture(id){if(cache.has(id))return cache.get(id);const q=C.puzzles.fin
   art(c,['ball','dog_happy','flowers','robot','toyunicorn','dog_idle','teddy','plant'][i],515,395,130,150);for(let j=0;j<=i%4;j++)A.star(c,100+j*70,265-(j%2)*40,18,'#ffdd81');
  }
  cache.set(id,cv);return cv;}
-window.UWPuzzles={load,picture,cache};
+const masters=new Map(),pending=new Map();
+function record(id){return C.puzzles.find(q=>q.id===id);}
+async function decode(url){const im=new Image();im.src=url;await im.decode();if(!im.naturalWidth)throw Error('Picture unavailable');return im;}
+async function load(bgs){backgrounds=bgs;}
+async function ensure(id){const q=record(id);if(!q)throw Error('Unknown picture');if(!q.artVersion){await legacyLoad();return legacyPicture(id);}if(masters.has(id)){const im=masters.get(id);masters.delete(id);masters.set(id,im);return im;}if(!pending.has(id))pending.set(id,decode(q.image).then(im=>{if(im.naturalWidth!==q.width||im.naturalHeight!==q.height)throw Error('Picture dimensions do not match its version');masters.set(id,im);while(masters.size>2)masters.delete(masters.keys().next().value);return im;}).finally(()=>pending.delete(id)));return pending.get(id);}
+function picture(id){if(record(id)?.artVersion){if(!masters.has(id))throw Error('Decode the selected picture before play');return masters.get(id);}return legacyPicture(id);}
+function thumbnail(id){return record(id)?.thumbnail||legacyPicture(id).toDataURL();}
+window.UWPuzzles={load,picture,ensure,thumbnail,cache,masters};
 })();

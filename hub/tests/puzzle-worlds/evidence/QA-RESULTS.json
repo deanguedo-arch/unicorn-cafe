@@ -1,0 +1,135 @@
+{
+  "results": [
+    "Eight exact scenic previews replace the visible gallery; all 48 legacy IDs remain and masters load on demand",
+    "Failed master decode spends no coin; the same Play button retries successfully",
+    "All 24 deterministic cuts are closed, share exact reversed curves, have flat borders and single-owner raster coverage",
+    "Visible tabs pick up, socket holes reject pickup, and off-center pickup preserves the resting anchor",
+    "Touch placement, close, refresh and free resume retain placed pieces and the paid balance",
+    "All eight scenes finish at 4, 9 and 16 pieces using actual mouse/touch drops, returning one coin exactly once; cache stays bounded",
+    "Continue retains old paid rounds, their original composite art and rectangular cut, without new-scene completion badges",
+    "Keyboard controls, portrait cancellation and 44px controls survive high-DPI narrow landscape",
+    "No browser exceptions"
+  ],
+  "geometry": [
+    {
+      "id": "worlds-enchanted-garden-v1",
+      "count": 4,
+      "internal": 4
+    },
+    {
+      "id": "worlds-enchanted-garden-v1",
+      "count": 9,
+      "internal": 12
+    },
+    {
+      "id": "worlds-enchanted-garden-v1",
+      "count": 16,
+      "internal": 24
+    },
+    {
+      "id": "worlds-cloud-bakery-v1",
+      "count": 4,
+      "internal": 4
+    },
+    {
+      "id": "worlds-cloud-bakery-v1",
+      "count": 9,
+      "internal": 12
+    },
+    {
+      "id": "worlds-cloud-bakery-v1",
+      "count": 16,
+      "internal": 24
+    },
+    {
+      "id": "worlds-moonlit-library-v1",
+      "count": 4,
+      "internal": 4
+    },
+    {
+      "id": "worlds-moonlit-library-v1",
+      "count": 9,
+      "internal": 12
+    },
+    {
+      "id": "worlds-moonlit-library-v1",
+      "count": 16,
+      "internal": 24
+    },
+    {
+      "id": "worlds-bubble-palace-v1",
+      "count": 4,
+      "internal": 4
+    },
+    {
+      "id": "worlds-bubble-palace-v1",
+      "count": 9,
+      "internal": 12
+    },
+    {
+      "id": "worlds-bubble-palace-v1",
+      "count": 16,
+      "internal": 24
+    },
+    {
+      "id": "worlds-autumn-picnic-v1",
+      "count": 4,
+      "internal": 4
+    },
+    {
+      "id": "worlds-autumn-picnic-v1",
+      "count": 9,
+      "internal": 12
+    },
+    {
+      "id": "worlds-autumn-picnic-v1",
+      "count": 16,
+      "internal": 24
+    },
+    {
+      "id": "worlds-toy-train-v1",
+      "count": 4,
+      "internal": 4
+    },
+    {
+      "id": "worlds-toy-train-v1",
+      "count": 9,
+      "internal": 12
+    },
+    {
+      "id": "worlds-toy-train-v1",
+      "count": 16,
+      "internal": 24
+    },
+    {
+      "id": "worlds-snow-lantern-village-v1",
+      "count": 4,
+      "internal": 4
+    },
+    {
+      "id": "worlds-snow-lantern-village-v1",
+      "count": 9,
+      "internal": 12
+    },
+    {
+      "id": "worlds-snow-lantern-village-v1",
+      "count": 16,
+      "internal": 24
+    },
+    {
+      "id": "worlds-rainbow-waterfall-v1",
+      "count": 4,
+      "internal": 4
+    },
+    {
+      "id": "worlds-rainbow-waterfall-v1",
+      "count": 9,
+      "internal": 12
+    },
+    {
+      "id": "worlds-rainbow-waterfall-v1",
+      "count": 16,
+      "internal": 24
+    }
+  ]
+}

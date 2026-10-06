@@ -1,6 +1,6 @@
 {
   "date": "2026-10-06",
-  "status": "Simplified shopping and one-tap backpack; local browser checks passed; physical-device review pending",
+  "status": "Scenic puzzle worlds with shared jigsaw cuts; local acceptance checks passed; physical-device review pending",
   "files": {
     ".gitattributes": {
       "bytes": 265,
@@ -1931,20 +1931,20 @@
       "sha256": "9139e8594d468a061e54ae6cefe703e758631588afa86dbe44bd28348b560c75"
     },
     "hub/index.html": {
-      "bytes": 2967,
-      "sha256": "d345abcf107f61f1716443c3fa21dccd670232e96d050d7a8271cdd997d7babf"
+      "bytes": 2992,
+      "sha256": "94c69bc323089433b7da309d0aef224a6c58bda485b606839e30b4d1a1bed337"
     },
     "hub/mall.js": {
-      "bytes": 31949,
-      "sha256": "9d71f73291080cc320702166bc1533ac2061911c9758cab9541c928cd489b738"
+      "bytes": 36543,
+      "sha256": "5e89ab0dfe8d47f39679bcdd46f85c216b571bd9fd68ee40f95c99d9dc7feea4"
     },
     "hub/picture-menus.css": {
-      "bytes": 11168,
-      "sha256": "658fc83a76843f98afe31d680550d8cf9fc1f0227d6db69fadc5299c741ef865"
+      "bytes": 12573,
+      "sha256": "bd038af119978a6a2c16580ba6948dc1a039473ceb7b8a30de2f4649947c2eeb"
     },
     "hub/puzzles.js": {
-      "bytes": 4106,
-      "sha256": "99ff647e37dbcb04ece90cd8dd014a147c10af4902cbb2d4406fb2b86f0843c5"
+      "bytes": 5362,
+      "sha256": "30c9b615b40a94dd20c8f7ca056c008c33a948ae0bfd48120dbd5d4e64715e4e"
     },
     "hub/shared/art.js": {
       "bytes": 9014,
@@ -1955,8 +1955,8 @@
       "sha256": "6082d28ea3be0629a5c8ff57643556ee2e35bc4b06823a1a3e39977b752263fd"
     },
     "hub/shared/catalogue.js": {
-      "bytes": 2338,
-      "sha256": "1fa00f4c94cba88110a6dbefcac82ca3fedef284df789560cc092aa2f20b5363"
+      "bytes": 6500,
+      "sha256": "89280a72f2bd9fd188e3dd5c6dba16904b1c0e322543b121c895cce29e0982c5"
     },
     "hub/shared/portals.js": {
       "bytes": 2487,
@@ -2011,12 +2011,12 @@
       "sha256": "8ec6f60f082ae60715f18f80764b901c7fe476c2d80955d38b5df634df182793"
     },
     "hub/tests/mall/browser.cjs": {
-      "bytes": 15071,
-      "sha256": "87d3bb2fe5cc969f01e3b6885288f80c9d6c6a617d0356a5fd5755661eb4c8fe"
+      "bytes": 14777,
+      "sha256": "4a7fc911c05d10fee1f9222d474f27070f16c592110997ca20e46fa47ae5fa8c"
     },
     "hub/tests/mall/compatibility.cjs": {
-      "bytes": 3807,
-      "sha256": "f444b92c861e2d5d4896a4527f21f8e472725a44669b7d70e4dbd0f34258f502"
+      "bytes": 4124,
+      "sha256": "d578d5ca882231160609cf7279fe26630861aa565117e2fb8464d1c458c9c03b"
     },
     "hub/tests/mall/evidence/REVIEW-LINK-CHECK.json": {
       "bytes": 237,
@@ -2803,8 +2803,8 @@
       "sha256": "ddecfc87676f6523c306c770cfe3170a234c986be5306ce24bee9acda92ce404"
     },
     "hub/tests/mall/resilience-mobile.cjs": {
-      "bytes": 12552,
-      "sha256": "591c1eef6dcaa78a9bc7bc8eeafe566d56ed57a5faf4c95107756af635ff987d"
+      "bytes": 12584,
+      "sha256": "2189de3b0b8285101ae5a5fa2d1a8688053fcf2d3afd398df48c3dc4e11bddf8"
     },
     "hub/tests/release-browser.cjs": {
       "bytes": 8813,
@@ -2840,7 +2840,7 @@
     },
     "hub/tests/release-package-results.json": {
       "bytes": 645,
-      "sha256": "98055a7aa3338a6e7b8759d6977056c496862043f76e02e28de559c53b5b0d59"
+      "sha256": "ead96586850e91218473fe2189a55f0dcb962c0bcea292b0037548750e5e0c66"
     },
     "hub/tests/release-package.cjs": {
       "bytes": 3226,
@@ -3241,6 +3241,126 @@
     "hub/tests/quick-switch.cjs": {
       "bytes": 3488,
       "sha256": "09cc455dca8f3df0df046975f771187076d802bd54bc311c49233bcb05a8a153"
+    },
+    "hub/PUZZLE-WORLDS-INTEGRATION.md": {
+      "bytes": 4086,
+      "sha256": "cc9bcf08eab50a2cbe05c2a40c2db81dcc53599536c8e5b0cc3e8553ee54e19e"
+    },
+    "hub/assets/puzzles/worlds/v1/manifest.json": {
+      "bytes": 15487,
+      "sha256": "178f729743d27cae759df57bb258f6875197c164a549c8f4d070271790d4cdc6"
+    },
+    "hub/assets/puzzles/worlds/v1/uw-puzzle-autumn-picnic-v1-thumb.webp": {
+      "bytes": 60416,
+      "sha256": "3844c40eb390f3eeac41eeaa9392b80bf8c264ce1e185cc3f38482814d912c8d"
+    },
+    "hub/assets/puzzles/worlds/v1/uw-puzzle-autumn-picnic-v1.webp": {
+      "bytes": 621318,
+      "sha256": "ca36b513b340d4b9920c3091d22b199cef2af53599f21b3798243c755c8f8c00"
+    },
+    "hub/assets/puzzles/worlds/v1/uw-puzzle-bubble-palace-v1-thumb.webp": {
+      "bytes": 54870,
+      "sha256": "9a2dc6c97061f099a3a009ce8435eb0f1be45370409608a23edf03eb3512fc33"
+    },
+    "hub/assets/puzzles/worlds/v1/uw-puzzle-bubble-palace-v1.webp": {
+      "bytes": 469578,
+      "sha256": "d0d860e4a768c6598c5f2045cc738f96ca8837b24a20841ee6451b11923ae19f"
+    },
+    "hub/assets/puzzles/worlds/v1/uw-puzzle-cloud-bakery-v1-thumb.webp": {
+      "bytes": 50272,
+      "sha256": "2e091cc453720851de98eb5eb6a2ff15c12834dd096060c7ef3208db91f7fb82"
+    },
+    "hub/assets/puzzles/worlds/v1/uw-puzzle-cloud-bakery-v1.webp": {
+      "bytes": 449894,
+      "sha256": "a43f38282a4077c363322f0dc69df4d07396560c709348064e8d9dd8bbbc407c"
+    },
+    "hub/assets/puzzles/worlds/v1/uw-puzzle-enchanted-garden-v1-thumb.webp": {
+      "bytes": 63300,
+      "sha256": "570eef1f8060e8db75dd691573dfbb8afac07bfd8a3c427c9aa093c93ab2a3c8"
+    },
+    "hub/assets/puzzles/worlds/v1/uw-puzzle-enchanted-garden-v1.webp": {
+      "bytes": 655642,
+      "sha256": "64a7f5c28872a2a9eae829b8c5a7d1e1c9dd6bad075e83ab6dc981d771b814bb"
+    },
+    "hub/assets/puzzles/worlds/v1/uw-puzzle-moonlit-library-v1-thumb.webp": {
+      "bytes": 53508,
+      "sha256": "b3e09be64365c1925619369a2de165dbb0c9abd6898d83840349896fe79d2be7"
+    },
+    "hub/assets/puzzles/worlds/v1/uw-puzzle-moonlit-library-v1.webp": {
+      "bytes": 491822,
+      "sha256": "ef913a04aeb0d907874102e8da187237c5b533b27ac708961d99b5feb677316e"
+    },
+    "hub/assets/puzzles/worlds/v1/uw-puzzle-rainbow-waterfall-v1-thumb.webp": {
+      "bytes": 60908,
+      "sha256": "9e4db69636d88c81e4dfba6bb3ab8ef922490ff793356c55c616d17066c15d69"
+    },
+    "hub/assets/puzzles/worlds/v1/uw-puzzle-rainbow-waterfall-v1.webp": {
+      "bytes": 662138,
+      "sha256": "4b87f50ae826ad3d5d3cf2817e0e5428b09329e925e8cd79e460296efc290cee"
+    },
+    "hub/assets/puzzles/worlds/v1/uw-puzzle-snow-lantern-village-v1-thumb.webp": {
+      "bytes": 56880,
+      "sha256": "e19e8704cc2f1887cee3b456c9a397ca16086900ca7fb6815098ab9aeb017eef"
+    },
+    "hub/assets/puzzles/worlds/v1/uw-puzzle-snow-lantern-village-v1.webp": {
+      "bytes": 496664,
+      "sha256": "8086a2396ccbb21af217b57fc5b0c8d9a9626138979ec4d295a5f09e6c4bcfe8"
+    },
+    "hub/assets/puzzles/worlds/v1/uw-puzzle-toy-train-v1-thumb.webp": {
+      "bytes": 59610,
+      "sha256": "f5278b5bc778d20dd9a5a7552f9a5a1f5d8320bcecb540b7dfbdbde06d268390"
+    },
+    "hub/assets/puzzles/worlds/v1/uw-puzzle-toy-train-v1.webp": {
+      "bytes": 521028,
+      "sha256": "55b4f0b1bd2de1c16f3dce8f39923b906c68aaca1775503513fbc273238e8ea4"
+    },
+    "hub/shared/jigsaw.js": {
+      "bytes": 3093,
+      "sha256": "b91d28aa31076c49a8a07ddc3522489c7dbce52b6f0d24cff77585991de8a4ca"
+    },
+    "hub/tests/puzzle-worlds/browser.cjs": {
+      "bytes": 10313,
+      "sha256": "d0235809a51f6fd5f0d143c57edb3fc5da4fe116a350ad0d649e8e26449579ba"
+    },
+    "hub/tests/puzzle-worlds/evidence/QA-RESULTS.json": {
+      "bytes": 3184,
+      "sha256": "bed798e8ee5b07d3f434e5f3f947f743e2dbc0626ab390c3eaf3040389319c69"
+    },
+    "hub/tests/puzzle-worlds/evidence/gallery.png": {
+      "bytes": 1687750,
+      "sha256": "340116f9677742b29f604c7be4a9e7537755f740de3439d077ab442d54d48cca"
+    },
+    "hub/tests/puzzle-worlds/evidence/legacy-resume.png": {
+      "bytes": 819609,
+      "sha256": "10f209256c55da64794042e5178d3a24869e6e05e078f9d858664d889f68ae10"
+    },
+    "hub/tests/puzzle-worlds/evidence/loose-tabbed-piece.png": {
+      "bytes": 906538,
+      "sha256": "6f44d9be26e38359e5fda964e6fa8a96686a3846bd7657153aa3e94ed4d99a41"
+    },
+    "hub/tests/puzzle-worlds/evidence/narrow-landscape.png": {
+      "bytes": 435680,
+      "sha256": "8b0cc14c673319e9f2ed272ff7ff9503ba58f2772076f6882b7a6f5921691056"
+    },
+    "hub/tests/puzzle-worlds/evidence/partly-completed.png": {
+      "bytes": 962396,
+      "sha256": "43145463e2704848455a4595b685212a567bcead09b8f396f631b36032a7fea3"
+    },
+    "hub/tests/puzzle-worlds/evidence/seamless-completion.png": {
+      "bytes": 870161,
+      "sha256": "8f9c448e36f424144f09dc4f107e6d0df9329860e3636de14c19ca55ab693caf"
+    },
+    "hub/tests/puzzle-worlds/geometry.cjs": {
+      "bytes": 1660,
+      "sha256": "5260fb7bcd62abf39f407392a0285904d0726d1e43b7f127bf7a439d754a6625"
+    },
+    "hub/tests/puzzle-worlds/resilience.cjs": {
+      "bytes": 7317,
+      "sha256": "03ad4f2ad402ded4924ef9f54a5c6aa51300e3799f75c8cce9cd6892ca3bbc18"
+    },
+    "hub/tests/puzzle-worlds/live-smoke.cjs": {
+      "bytes": 3214,
+      "sha256": "5ee6cd0cb2ae4d844585881e0c19208ac97190c4c29dfa87dc49879791a5a280"
     }
   }
 }

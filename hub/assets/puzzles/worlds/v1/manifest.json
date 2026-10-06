@@ -1,0 +1,390 @@
+{
+  "schemaVersion": 1,
+  "collection": "Unicorn World Puzzle Worlds",
+  "createdUTC": "2026-10-06",
+  "status": "Implementation handoff only; not installed or executed",
+  "generation": "Eight separate built-in image generations, plus one targeted correction to Snow Lantern Village",
+  "sourcePolicy": "Runtime WebP files reused byte-for-byte from the delivered v1 collection at their native dimensions; no additional image compression, resizing, cropping or generation for this handoff.",
+  "runtimeEncoding": "WebP quality 92, method 6, opaque RGB",
+  "thumbnailEncoding": "WebP quality 90, warm cream contain background",
+  "scenes": [
+    {
+      "id": "worlds-enchanted-garden-v1",
+      "title": "Enchanted Garden",
+      "theme": "worlds",
+      "order": 0,
+      "artVersion": 1,
+      "shapeVersion": 1,
+      "visible": true,
+      "image": "runtime/uw-puzzle-enchanted-garden-v1.webp",
+      "thumbnail": "thumbnails/uw-puzzle-enchanted-garden-v1-thumb.webp",
+      "proposedImageUrl": "./assets/puzzles/worlds/v1/uw-puzzle-enchanted-garden-v1.webp",
+      "proposedThumbnailUrl": "./assets/puzzles/worlds/v1/uw-puzzle-enchanted-garden-v1-thumb.webp",
+      "width": 1512,
+      "height": 1040,
+      "thumbnailWidth": 378,
+      "thumbnailHeight": 260,
+      "fit": "contain",
+      "crop": null,
+      "alt": "A white rainbow-maned unicorn explores a flower garden beside a watering can, stream, arched bridge, and glass greenhouse.",
+      "pieceCounts": [
+        4,
+        9,
+        16
+      ],
+      "geometrySeed": "uw-jigsaw-v1|worlds-enchanted-garden-v1|<pieceCount>",
+      "bytes": {
+        "runtime": 655642,
+        "thumbnail": 63300
+      },
+      "sha256": {
+        "runtime": "64a7f5c28872a2a9eae829b8c5a7d1e1c9dd6bad075e83ab6dc981d771b814bb",
+        "thumbnail": "570eef1f8060e8db75dd691573dfbb8afac07bfd8a3c427c9aa093c93ab2a3c8"
+      },
+      "notes": "Peonies, greenhouse, bridge, watering can and snail give strong matching landmarks.",
+      "originalPng": {
+        "sceneId": "worlds-enchanted-garden-v1",
+        "title": "Enchanted Garden",
+        "filename": "uw-puzzle-enchanted-garden-v1.png",
+        "libraryFileId": "libfile_eb74aaffa3fc8191a013007fed1194ac",
+        "fileId": "file_00000000f49881f5a3abaed9e40055ca",
+        "width": 1512,
+        "height": 1040,
+        "bytes": 3249888,
+        "sha256": "7db4e6abf5603748dfbbd31298f59c400ce93e9d837335f1fbaa03df2c122b94",
+        "includedInThisZip": false
+      }
+    },
+    {
+      "id": "worlds-cloud-bakery-v1",
+      "title": "Cloud Bakery",
+      "theme": "worlds",
+      "order": 1,
+      "artVersion": 1,
+      "shapeVersion": 1,
+      "visible": true,
+      "image": "runtime/uw-puzzle-cloud-bakery-v1.webp",
+      "thumbnail": "thumbnails/uw-puzzle-cloud-bakery-v1-thumb.webp",
+      "proposedImageUrl": "./assets/puzzles/worlds/v1/uw-puzzle-cloud-bakery-v1.webp",
+      "proposedThumbnailUrl": "./assets/puzzles/worlds/v1/uw-puzzle-cloud-bakery-v1-thumb.webp",
+      "width": 1512,
+      "height": 1040,
+      "thumbnailWidth": 378,
+      "thumbnailHeight": 260,
+      "fit": "contain",
+      "crop": null,
+      "alt": "A white rainbow-maned unicorn mixes batter in a cloud bakery with a glowing pink oven, pastries, and a rainbow bridge.",
+      "pieceCounts": [
+        4,
+        9,
+        16
+      ],
+      "geometrySeed": "uw-jigsaw-v1|worlds-cloud-bakery-v1|<pieceCount>",
+      "bytes": {
+        "runtime": 449894,
+        "thumbnail": 50272
+      },
+      "sha256": {
+        "runtime": "a43f38282a4077c363322f0dc69df4d07396560c709348064e8d9dd8bbbc407c",
+        "thumbnail": "2e091cc453720851de98eb5eb6a2ff15c12834dd096060c7ef3208db91f7fb82"
+      },
+      "notes": "Oven, mixing bowl, pastry counter and cloud stair create a warm interior and airy distance.",
+      "originalPng": {
+        "sceneId": "worlds-cloud-bakery-v1",
+        "title": "Cloud Bakery",
+        "filename": "uw-puzzle-cloud-bakery-v1.png",
+        "libraryFileId": "libfile_ab7510f69ac48191898349ec1d09d8fb",
+        "fileId": "file_00000000b38c822fab330ee8b9da923e",
+        "width": 1512,
+        "height": 1040,
+        "bytes": 2600330,
+        "sha256": "d3a75d35023cbae7cc49b7115c8ed7984fa61ca772f41643de097d8595cc631c",
+        "includedInThisZip": false
+      }
+    },
+    {
+      "id": "worlds-moonlit-library-v1",
+      "title": "Moonlit Library",
+      "theme": "worlds",
+      "order": 2,
+      "artVersion": 1,
+      "shapeVersion": 1,
+      "visible": true,
+      "image": "runtime/uw-puzzle-moonlit-library-v1.webp",
+      "thumbnail": "thumbnails/uw-puzzle-moonlit-library-v1-thumb.webp",
+      "proposedImageUrl": "./assets/puzzles/worlds/v1/uw-puzzle-moonlit-library-v1.webp",
+      "proposedThumbnailUrl": "./assets/puzzles/worlds/v1/uw-puzzle-moonlit-library-v1-thumb.webp",
+      "width": 1512,
+      "height": 1040,
+      "thumbnailWidth": 378,
+      "thumbnailHeight": 260,
+      "fit": "contain",
+      "crop": null,
+      "alt": "A white rainbow-maned unicorn reads a blank open book in a cozy tree library with a moonlit window and telescope.",
+      "pieceCounts": [
+        4,
+        9,
+        16
+      ],
+      "geometrySeed": "uw-jigsaw-v1|worlds-moonlit-library-v1|<pieceCount>",
+      "bytes": {
+        "runtime": 491822,
+        "thumbnail": 53508
+      },
+      "sha256": {
+        "runtime": "ef913a04aeb0d907874102e8da187237c5b533b27ac708961d99b5feb677316e",
+        "thumbnail": "b3e09be64365c1925619369a2de165dbb0c9abd6898d83840349896fe79d2be7"
+      },
+      "notes": "Bookshelves, moon, telescope and open book separate the cozy foreground from the cool window.",
+      "originalPng": {
+        "sceneId": "worlds-moonlit-library-v1",
+        "title": "Moonlit Library",
+        "filename": "uw-puzzle-moonlit-library-v1.png",
+        "libraryFileId": "libfile_4747694ae25881919109766402e81003",
+        "fileId": "file_00000000b38481f5afb6ca2375c6bead",
+        "width": 1512,
+        "height": 1040,
+        "bytes": 2752547,
+        "sha256": "919548ca53fb25b9f8bebd679929e88f816200a109662d49fc5a7870fac52226",
+        "includedInThisZip": false
+      }
+    },
+    {
+      "id": "worlds-bubble-palace-v1",
+      "title": "Bubble Palace",
+      "theme": "worlds",
+      "order": 3,
+      "artVersion": 1,
+      "shapeVersion": 1,
+      "visible": true,
+      "image": "runtime/uw-puzzle-bubble-palace-v1.webp",
+      "thumbnail": "thumbnails/uw-puzzle-bubble-palace-v1-thumb.webp",
+      "proposedImageUrl": "./assets/puzzles/worlds/v1/uw-puzzle-bubble-palace-v1.webp",
+      "proposedThumbnailUrl": "./assets/puzzles/worlds/v1/uw-puzzle-bubble-palace-v1-thumb.webp",
+      "width": 1512,
+      "height": 1040,
+      "thumbnailWidth": 378,
+      "thumbnailHeight": 260,
+      "fit": "contain",
+      "crop": null,
+      "alt": "A white rainbow-maned unicorn stands in a clear air bubble beside a shell palace, coral, fish, and a seahorse.",
+      "pieceCounts": [
+        4,
+        9,
+        16
+      ],
+      "geometrySeed": "uw-jigsaw-v1|worlds-bubble-palace-v1|<pieceCount>",
+      "bytes": {
+        "runtime": 469578,
+        "thumbnail": 54870
+      },
+      "sha256": {
+        "runtime": "d0d860e4a768c6598c5f2045cc738f96ca8837b24a20841ee6451b11923ae19f",
+        "thumbnail": "9a2dc6c97061f099a3a009ce8435eb0f1be45370409608a23edf03eb3512fc33"
+      },
+      "notes": "The clear air bubble, shell palace, pearl and seahorse give a distinct underwater composition.",
+      "originalPng": {
+        "sceneId": "worlds-bubble-palace-v1",
+        "title": "Bubble Palace",
+        "filename": "uw-puzzle-bubble-palace-v1.png",
+        "libraryFileId": "libfile_11dc4210d0b481918ff2561fc433e547",
+        "fileId": "file_000000007a7481fb8c9549a498e1c534",
+        "width": 1512,
+        "height": 1040,
+        "bytes": 2734208,
+        "sha256": "1f84caa276a2ea0343d711258fde3acd03330bf812ef6c3e8e1617f8f8b3fa8a",
+        "includedInThisZip": false
+      }
+    },
+    {
+      "id": "worlds-autumn-picnic-v1",
+      "title": "Autumn Picnic",
+      "theme": "worlds",
+      "order": 4,
+      "artVersion": 1,
+      "shapeVersion": 1,
+      "visible": true,
+      "image": "runtime/uw-puzzle-autumn-picnic-v1.webp",
+      "thumbnail": "thumbnails/uw-puzzle-autumn-picnic-v1-thumb.webp",
+      "proposedImageUrl": "./assets/puzzles/worlds/v1/uw-puzzle-autumn-picnic-v1.webp",
+      "proposedThumbnailUrl": "./assets/puzzles/worlds/v1/uw-puzzle-autumn-picnic-v1-thumb.webp",
+      "width": 1512,
+      "height": 1040,
+      "thumbnailWidth": 378,
+      "thumbnailHeight": 260,
+      "fit": "contain",
+      "crop": null,
+      "alt": "A white rainbow-maned unicorn picnics among golden autumn trees near a log bridge, pumpkins, and a friendly hedgehog.",
+      "pieceCounts": [
+        4,
+        9,
+        16
+      ],
+      "geometrySeed": "uw-jigsaw-v1|worlds-autumn-picnic-v1|<pieceCount>",
+      "bytes": {
+        "runtime": 621318,
+        "thumbnail": 60416
+      },
+      "sha256": {
+        "runtime": "ca36b513b340d4b9920c3091d22b199cef2af53599f21b3798243c755c8f8c00",
+        "thumbnail": "3844c40eb390f3eeac41eeaa9392b80bf8c264ce1e185cc3f38482814d912c8d"
+      },
+      "notes": "Gold leaves, log bridge, picnic hamper, pumpkins and hedgehog make the seasonal change obvious.",
+      "originalPng": {
+        "sceneId": "worlds-autumn-picnic-v1",
+        "title": "Autumn Picnic",
+        "filename": "uw-puzzle-autumn-picnic-v1.png",
+        "libraryFileId": "libfile_b4cce24142b88191b6357e99fd6ee9eb",
+        "fileId": "file_00000000657881f697023fa71ed37ea0",
+        "width": 1512,
+        "height": 1040,
+        "bytes": 3117575,
+        "sha256": "60d76a4b62dc96c17427ed374062082b6d37fefdd5efa8e0f788e197543e01f1",
+        "includedInThisZip": false
+      }
+    },
+    {
+      "id": "worlds-toy-train-v1",
+      "title": "Toy Train Adventure",
+      "theme": "worlds",
+      "order": 5,
+      "artVersion": 1,
+      "shapeVersion": 1,
+      "visible": true,
+      "image": "runtime/uw-puzzle-toy-train-v1.webp",
+      "thumbnail": "thumbnails/uw-puzzle-toy-train-v1-thumb.webp",
+      "proposedImageUrl": "./assets/puzzles/worlds/v1/uw-puzzle-toy-train-v1.webp",
+      "proposedThumbnailUrl": "./assets/puzzles/worlds/v1/uw-puzzle-toy-train-v1-thumb.webp",
+      "width": 1512,
+      "height": 1040,
+      "thumbnailWidth": 378,
+      "thumbnailHeight": 260,
+      "fit": "contain",
+      "crop": null,
+      "alt": "A white rainbow-maned unicorn rides a pink toy train carrying colorful blocks and a teddy bear across a stone bridge.",
+      "pieceCounts": [
+        4,
+        9,
+        16
+      ],
+      "geometrySeed": "uw-jigsaw-v1|worlds-toy-train-v1|<pieceCount>",
+      "bytes": {
+        "runtime": 521028,
+        "thumbnail": 59610
+      },
+      "sha256": {
+        "runtime": "55b4f0b1bd2de1c16f3dce8f39923b906c68aaca1775503513fbc273238e8ea4",
+        "thumbnail": "f5278b5bc778d20dd9a5a7552f9a5a1f5d8320bcecb540b7dfbdbde06d268390"
+      },
+      "notes": "The locomotive and viaduct provide large directional shapes; retain the full train in every preview.",
+      "originalPng": {
+        "sceneId": "worlds-toy-train-v1",
+        "title": "Toy Train Adventure",
+        "filename": "uw-puzzle-toy-train-v1.png",
+        "libraryFileId": "libfile_135b3b24cae48191b0fcf648225744a4",
+        "fileId": "file_000000004fa481f8873dd7f41a9ae31b",
+        "width": 1512,
+        "height": 1040,
+        "bytes": 2850720,
+        "sha256": "97734040676852ee8e70ed0869f9ea2cfdcff95bb1b641601e7b1597cb549ab1",
+        "includedInThisZip": false
+      }
+    },
+    {
+      "id": "worlds-snow-lantern-village-v1",
+      "title": "Snow Lantern Village",
+      "theme": "worlds",
+      "order": 6,
+      "artVersion": 1,
+      "shapeVersion": 1,
+      "visible": true,
+      "image": "runtime/uw-puzzle-snow-lantern-village-v1.webp",
+      "thumbnail": "thumbnails/uw-puzzle-snow-lantern-village-v1-thumb.webp",
+      "proposedImageUrl": "./assets/puzzles/worlds/v1/uw-puzzle-snow-lantern-village-v1.webp",
+      "proposedThumbnailUrl": "./assets/puzzles/worlds/v1/uw-puzzle-snow-lantern-village-v1-thumb.webp",
+      "width": 1512,
+      "height": 1040,
+      "thumbnailWidth": 378,
+      "thumbnailHeight": 260,
+      "fit": "contain",
+      "crop": null,
+      "alt": "A white rainbow-maned unicorn in a berry scarf stands beside a sled in a snowy lantern village with a snow unicorn.",
+      "pieceCounts": [
+        4,
+        9,
+        16
+      ],
+      "geometrySeed": "uw-jigsaw-v1|worlds-snow-lantern-village-v1|<pieceCount>",
+      "bytes": {
+        "runtime": 496664,
+        "thumbnail": 56880
+      },
+      "sha256": {
+        "runtime": "8086a2396ccbb21af217b57fc5b0c8d9a9626138979ec4d295a5f09e6c4bcfe8",
+        "thumbnail": "e19e8704cc2f1887cee3b456c9a397ca16086900ca7fb6815098ab9aeb017eef"
+      },
+      "notes": "Warm lanterns and purple roofs contrast the snow. The stray rope was removed in a targeted edit.",
+      "originalPng": {
+        "sceneId": "worlds-snow-lantern-village-v1",
+        "title": "Snow Lantern Village",
+        "filename": "uw-puzzle-snow-lantern-village-v1.png",
+        "libraryFileId": "libfile_b05513d6309c819189260d8644075134",
+        "fileId": "file_00000000625081fb8b17f4a26ed504d1",
+        "width": 1512,
+        "height": 1040,
+        "bytes": 2785656,
+        "sha256": "1ba01a9e42e53f0ef1a90e95595aa2ca1064b2d25833c484776666dc20454633",
+        "includedInThisZip": false
+      }
+    },
+    {
+      "id": "worlds-rainbow-waterfall-v1",
+      "title": "Rainbow Waterfall",
+      "theme": "worlds",
+      "order": 7,
+      "artVersion": 1,
+      "shapeVersion": 1,
+      "visible": true,
+      "image": "runtime/uw-puzzle-rainbow-waterfall-v1.webp",
+      "thumbnail": "thumbnails/uw-puzzle-rainbow-waterfall-v1-thumb.webp",
+      "proposedImageUrl": "./assets/puzzles/worlds/v1/uw-puzzle-rainbow-waterfall-v1.webp",
+      "proposedThumbnailUrl": "./assets/puzzles/worlds/v1/uw-puzzle-rainbow-waterfall-v1-thumb.webp",
+      "width": 1513,
+      "height": 1040,
+      "thumbnailWidth": 378,
+      "thumbnailHeight": 260,
+      "fit": "contain",
+      "crop": null,
+      "alt": "A white rainbow-maned unicorn visits a rainbow waterfall with a crystal arch, waterwheel cottage, orchids, and a frog.",
+      "pieceCounts": [
+        4,
+        9,
+        16
+      ],
+      "geometrySeed": "uw-jigsaw-v1|worlds-rainbow-waterfall-v1|<pieceCount>",
+      "bytes": {
+        "runtime": 662138,
+        "thumbnail": 60908
+      },
+      "sha256": {
+        "runtime": "4b87f50ae826ad3d5d3cf2817e0e5428b09329e925e8cd79e460296efc290cee",
+        "thumbnail": "9e4db69636d88c81e4dfba6bb3ab8ef922490ff793356c55c616d17066c15d69"
+      },
+      "notes": "The crystal arch, waterfall, wheel, orchids and frog make multiple strong regional landmarks.",
+      "originalPng": {
+        "sceneId": "worlds-rainbow-waterfall-v1",
+        "title": "Rainbow Waterfall",
+        "filename": "uw-puzzle-rainbow-waterfall-v1.png",
+        "libraryFileId": "libfile_b7e41ab2c30881919fef20628e432992",
+        "fileId": "file_0000000001a8822f8a83ef463f2b46b5",
+        "width": 1513,
+        "height": 1040,
+        "bytes": 3239764,
+        "sha256": "22941851ad8525d14c392cf338e2594f94d082f75795888d464641522482a543",
+        "includedInThisZip": false
+      }
+    }
+  ],
+  "handoffVersion": "1.1",
+  "packaging": "One non-nested implementation ZIP; all eight native-resolution runtime WebP images and thumbnails included. Lossless PNG masters remain separately in Library."
+}
