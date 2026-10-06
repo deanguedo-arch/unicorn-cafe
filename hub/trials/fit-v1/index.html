@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Unicorn clothing fit trial</title><link rel="stylesheet" href="review.css"></head>
+<body>
+<header><a href="../../">← World</a><strong>Clothing fit trial</strong><span id="status" role="status">Loading pictures…</span></header>
+<main>
+<nav aria-label="Sample poses" id="poses"></nav>
+<div class="stage"><section><h2>Previous game fit</h2><canvas id="current" width="640" height="440" aria-label="Previous game clothing fit"></canvas></section><section><h2>Dot’s registered fit</h2><canvas id="trial" width="640" height="440" aria-label="New clothing fit; drag to move"></canvas></section></div>
+<div class="controls">
+ <fieldset><legend>Try pieces</legend><label><input id="bow" type="checkbox" checked> Bow</label><label><input id="tee" type="checkbox" checked> Shirt</label><label><input id="beads" type="checkbox" checked> Necklace</label></fieldset>
+ <button id="flip" type="button" aria-pressed="false">Face left</button><button id="move" type="button" aria-pressed="false">Move</button><button id="reset" type="button">Centre</button>
+ <label>Size <input id="size" type="range" min="50" max="125" value="90"></label>
+</div>
+<p>Drag either unicorn to move both. Five sampled poses; movement here tests registration, not a full animation cycle. The other 14 pose states and other clothing still need fitted artwork.</p>
+</main>
+<aside id="rotate" hidden><img src="../../assets/controls/icons/rotate.png" alt="Turn your phone sideways"><p>Turn sideways to try the outfits</p></aside>
+<script src="../../shared/catalogue.js"></script><script src="../../shared/sprites.js"></script><script src="legacy-art.js"></script><script src="renderer.js"></script><script src="review.js"></script>
+</body></html>

@@ -1,0 +1,366 @@
+{
+  "canvas": [
+    512,
+    512
+  ],
+  "origin": "top-left",
+  "base_registration": "metadata/base_registration.json",
+  "z_order": [
+    "original_base",
+    "necklace_near",
+    "head_bow"
+  ],
+  "method": "Uniform scaling, rotation and translation. Generated alpha retained. Original character files read only.",
+  "frames": [
+    {
+      "frame_id": "u_idle0",
+      "base_sha256": "36160efe1a4bfcfdd95a5fb085234a8da880826e5f4064294fa8d964a9ea1b04",
+      "layers": {
+        "necklace": {
+          "file": "layers/u_idle0__beads.png",
+          "visible_anchor_top_left": [
+            266,
+            333
+          ],
+          "visible_bbox": [
+            266,
+            333,
+            336,
+            364
+          ],
+          "uniform_scale_nominal": 0.06066176470588235,
+          "resampled_full_size": [
+            76,
+            76
+          ],
+          "rotation_degrees_ccw": 0,
+          "full_image_paste_origin": [
+            263,
+            309
+          ],
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "anchor_kind": "visible upper left, alpha>1",
+          "logical_to_stage": "Use parent registration.json for mapping back to exact source frame canvas"
+        },
+        "bow": {
+          "file": "layers/u_idle0__bow.png",
+          "visible_anchor_top_left": [
+            234,
+            189
+          ],
+          "visible_bbox": [
+            234,
+            189,
+            300,
+            246
+          ],
+          "uniform_scale_nominal": 0.3157894736842105,
+          "resampled_full_size": [
+            66,
+            57
+          ],
+          "rotation_degrees_ccw": 0,
+          "full_image_paste_origin": [
+            234,
+            189
+          ],
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "anchor_kind": "visible upper left, alpha>1",
+          "logical_to_stage": "Use parent registration.json for mapping back to exact source frame canvas"
+        }
+      }
+    },
+    {
+      "frame_id": "u_run2",
+      "base_sha256": "33a905cf3e9f76026ce46197e6061b1414975347274b5832f7427daac2e26c61",
+      "layers": {
+        "necklace": {
+          "file": "layers/u_run2__beads.png",
+          "visible_anchor_top_left": [
+            262,
+            338
+          ],
+          "visible_bbox": [
+            262,
+            338,
+            327,
+            366
+          ],
+          "uniform_scale_nominal": 0.05514705882352941,
+          "resampled_full_size": [
+            69,
+            69
+          ],
+          "rotation_degrees_ccw": 0,
+          "full_image_paste_origin": [
+            260,
+            316
+          ],
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "anchor_kind": "visible upper left, alpha>1",
+          "logical_to_stage": "Use parent registration.json for mapping back to exact source frame canvas"
+        },
+        "bow": {
+          "file": "layers/u_run2__bow.png",
+          "visible_anchor_top_left": [
+            264,
+            183
+          ],
+          "visible_bbox": [
+            264,
+            183,
+            331,
+            239
+          ],
+          "uniform_scale_nominal": 0.3157894736842105,
+          "resampled_full_size": [
+            66,
+            57
+          ],
+          "rotation_degrees_ccw": -4,
+          "full_image_paste_origin": [
+            262,
+            179
+          ],
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "anchor_kind": "visible upper left, alpha>1",
+          "logical_to_stage": "Use parent registration.json for mapping back to exact source frame canvas"
+        }
+      }
+    },
+    {
+      "frame_id": "u_happy1",
+      "base_sha256": "c4a4e3ef2a04883b1cc9e90e3ddff535ef12a80f86803fe57f7cdfc56564d0ee",
+      "layers": {
+        "necklace": {
+          "file": "layers/u_happy1__beads.png",
+          "visible_anchor_top_left": [
+            248,
+            280
+          ],
+          "visible_bbox": [
+            248,
+            280,
+            308,
+            310
+          ],
+          "uniform_scale_nominal": 0.051470588235294115,
+          "resampled_full_size": [
+            65,
+            65
+          ],
+          "rotation_degrees_ccw": 12,
+          "full_image_paste_origin": [
+            240,
+            256
+          ],
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "anchor_kind": "visible upper left, alpha>1",
+          "logical_to_stage": "Use parent registration.json for mapping back to exact source frame canvas"
+        },
+        "bow": {
+          "file": "layers/u_happy1__bow.png",
+          "visible_anchor_top_left": [
+            185,
+            177
+          ],
+          "visible_bbox": [
+            185,
+            177,
+            252,
+            238
+          ],
+          "uniform_scale_nominal": 0.3157894736842105,
+          "resampled_full_size": [
+            66,
+            57
+          ],
+          "rotation_degrees_ccw": 8,
+          "full_image_paste_origin": [
+            181,
+            174
+          ],
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "anchor_kind": "visible upper left, alpha>1",
+          "logical_to_stage": "Use parent registration.json for mapping back to exact source frame canvas"
+        }
+      }
+    },
+    {
+      "frame_id": "bike0",
+      "base_sha256": "0933fd0929cd4ca4f47c6966d5a1618209dd159e4800524a884811637712c416",
+      "layers": {
+        "necklace": {
+          "file": "layers/bike0__beads.png",
+          "visible_anchor_top_left": [
+            245,
+            223
+          ],
+          "visible_bbox": [
+            245,
+            223,
+            311,
+            252
+          ],
+          "uniform_scale_nominal": 0.05698529411764706,
+          "resampled_full_size": [
+            71,
+            71
+          ],
+          "rotation_degrees_ccw": 0,
+          "full_image_paste_origin": [
+            242,
+            201
+          ],
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "anchor_kind": "visible upper left, alpha>1",
+          "logical_to_stage": "Use parent registration.json for mapping back to exact source frame canvas"
+        },
+        "bow": {
+          "file": "layers/bike0__bow.png",
+          "visible_anchor_top_left": [
+            223,
+            93
+          ],
+          "visible_bbox": [
+            223,
+            93,
+            289,
+            150
+          ],
+          "uniform_scale_nominal": 0.3157894736842105,
+          "resampled_full_size": [
+            66,
+            57
+          ],
+          "rotation_degrees_ccw": 0,
+          "full_image_paste_origin": [
+            223,
+            93
+          ],
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "anchor_kind": "visible upper left, alpha>1",
+          "logical_to_stage": "Use parent registration.json for mapping back to exact source frame canvas"
+        }
+      }
+    },
+    {
+      "frame_id": "skateboard0",
+      "base_sha256": "3800aa6bfc1418be7298ff8cd2709797b77bb32d7256b24040c197e31728ed79",
+      "layers": {
+        "necklace": {
+          "file": "layers/skateboard0__beads.png",
+          "visible_anchor_top_left": [
+            250,
+            259
+          ],
+          "visible_bbox": [
+            250,
+            259,
+            316,
+            288
+          ],
+          "uniform_scale_nominal": 0.05698529411764706,
+          "resampled_full_size": [
+            71,
+            71
+          ],
+          "rotation_degrees_ccw": 0,
+          "full_image_paste_origin": [
+            247,
+            237
+          ],
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "anchor_kind": "visible upper left, alpha>1",
+          "logical_to_stage": "Use parent registration.json for mapping back to exact source frame canvas"
+        },
+        "bow": {
+          "file": "layers/skateboard0__bow.png",
+          "visible_anchor_top_left": [
+            229,
+            117
+          ],
+          "visible_bbox": [
+            229,
+            117,
+            295,
+            174
+          ],
+          "uniform_scale_nominal": 0.3157894736842105,
+          "resampled_full_size": [
+            66,
+            57
+          ],
+          "rotation_degrees_ccw": 0,
+          "full_image_paste_origin": [
+            229,
+            117
+          ],
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "anchor_kind": "visible upper left, alpha>1",
+          "logical_to_stage": "Use parent registration.json for mapping back to exact source frame canvas"
+        }
+      }
+    }
+  ],
+  "sources": {
+    "necklace": {
+      "path": "sources/beads_shallow_generated.png",
+      "sha256": "fe65b40c726e14f2bfd831eb928584e3d75dbe84221da739c4fe29efa2fde2f6",
+      "visible_alpha_gt_1_bbox": [
+        84,
+        437,
+        1172,
+        866
+      ],
+      "full_source_size": [
+        1254,
+        1254
+      ]
+    },
+    "bow": {
+      "path": "sources/original_bow.png",
+      "sha256": "05b0c99c65da6af5bf3dd247e8b2557cd4afe78805b012cb5dcf238cd033bfbc",
+      "visible_alpha_gt_1_bbox": [
+        0,
+        0,
+        209,
+        181
+      ],
+      "full_source_size": [
+        209,
+        181
+      ]
+    }
+  }
+}

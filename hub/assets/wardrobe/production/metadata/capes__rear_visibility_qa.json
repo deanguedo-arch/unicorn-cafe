@@ -1,0 +1,581 @@
+{
+  "revision": 2,
+  "item_pose_fits": 38,
+  "both_facings_checked": true,
+  "minimum_fully_unoccluded_cloth_pixels": 3033,
+  "minimum_trailing_extension_px": 21,
+  "minimum_ground_clearance_px": 11,
+  "strict_visibility_rule": "Rear alpha > 10 and original base alpha < 10, so the metric excludes fabric merely blending under the antialiased tail edge.",
+  "records": [
+    {
+      "item_id": "prize-rainbow-cape",
+      "frame_id": "u_idle0",
+      "fully_unoccluded_cloth_pixels": 7283,
+      "visible_cloth_bounds": [
+        59,
+        273,
+        178,
+        401
+      ],
+      "trailing_extension_beyond_full_base_left_px": 74,
+      "clearance_above_ground_pivot_px": 32,
+      "front_sha256_unchanged_from_revision1": true,
+      "stage_edge_clipping": false
+    },
+    {
+      "item_id": "prize-rainbow-cape",
+      "frame_id": "u_idle1",
+      "fully_unoccluded_cloth_pixels": 9430,
+      "visible_cloth_bounds": [
+        67,
+        267,
+        200,
+        405
+      ],
+      "trailing_extension_beyond_full_base_left_px": 81,
+      "clearance_above_ground_pivot_px": 28,
+      "front_sha256_unchanged_from_revision1": true,
+      "stage_edge_clipping": false
+    },
+    {
+      "item_id": "prize-rainbow-cape",
+      "frame_id": "u_run0",
+      "fully_unoccluded_cloth_pixels": 8006,
+      "visible_cloth_bounds": [
+        62,
+        248,
+        197,
+        395
+      ],
+      "trailing_extension_beyond_full_base_left_px": 65,
+      "clearance_above_ground_pivot_px": 38,
+      "front_sha256_unchanged_from_revision1": true,
+      "stage_edge_clipping": false
+    },
+    {
+      "item_id": "prize-rainbow-cape",
+      "frame_id": "u_run1",
+      "fully_unoccluded_cloth_pixels": 6352,
+      "visible_cloth_bounds": [
+        63,
+        264,
+        182,
+        401
+      ],
+      "trailing_extension_beyond_full_base_left_px": 58,
+      "clearance_above_ground_pivot_px": 32,
+      "front_sha256_unchanged_from_revision1": true,
+      "stage_edge_clipping": false
+    },
+    {
+      "item_id": "prize-rainbow-cape",
+      "frame_id": "u_run2",
+      "fully_unoccluded_cloth_pixels": 6761,
+      "visible_cloth_bounds": [
+        60,
+        260,
+        174,
+        408
+      ],
+      "trailing_extension_beyond_full_base_left_px": 51,
+      "clearance_above_ground_pivot_px": 25,
+      "front_sha256_unchanged_from_revision1": true,
+      "stage_edge_clipping": false
+    },
+    {
+      "item_id": "prize-rainbow-cape",
+      "frame_id": "u_run3",
+      "fully_unoccluded_cloth_pixels": 5133,
+      "visible_cloth_bounds": [
+        70,
+        257,
+        171,
+        410
+      ],
+      "trailing_extension_beyond_full_base_left_px": 38,
+      "clearance_above_ground_pivot_px": 23,
+      "front_sha256_unchanged_from_revision1": true,
+      "stage_edge_clipping": false
+    },
+    {
+      "item_id": "prize-rainbow-cape",
+      "frame_id": "u_run4",
+      "fully_unoccluded_cloth_pixels": 7386,
+      "visible_cloth_bounds": [
+        57,
+        244,
+        174,
+        406
+      ],
+      "trailing_extension_beyond_full_base_left_px": 60,
+      "clearance_above_ground_pivot_px": 27,
+      "front_sha256_unchanged_from_revision1": true,
+      "stage_edge_clipping": false
+    },
+    {
+      "item_id": "prize-rainbow-cape",
+      "frame_id": "u_run5",
+      "fully_unoccluded_cloth_pixels": 5944,
+      "visible_cloth_bounds": [
+        59,
+        251,
+        180,
+        422
+      ],
+      "trailing_extension_beyond_full_base_left_px": 47,
+      "clearance_above_ground_pivot_px": 11,
+      "front_sha256_unchanged_from_revision1": true,
+      "stage_edge_clipping": false
+    },
+    {
+      "item_id": "prize-rainbow-cape",
+      "frame_id": "u_happy0",
+      "fully_unoccluded_cloth_pixels": 3704,
+      "visible_cloth_bounds": [
+        85,
+        281,
+        191,
+        412
+      ],
+      "trailing_extension_beyond_full_base_left_px": 41,
+      "clearance_above_ground_pivot_px": 21,
+      "front_sha256_unchanged_from_revision1": true,
+      "stage_edge_clipping": false
+    },
+    {
+      "item_id": "prize-rainbow-cape",
+      "frame_id": "u_happy1",
+      "fully_unoccluded_cloth_pixels": 6728,
+      "visible_cloth_bounds": [
+        69,
+        256,
+        212,
+        392
+      ],
+      "trailing_extension_beyond_full_base_left_px": 72,
+      "clearance_above_ground_pivot_px": 41,
+      "front_sha256_unchanged_from_revision1": true,
+      "stage_edge_clipping": false
+    },
+    {
+      "item_id": "prize-rainbow-cape",
+      "frame_id": "u_happy2",
+      "fully_unoccluded_cloth_pixels": 6426,
+      "visible_cloth_bounds": [
+        83,
+        251,
+        168,
+        398
+      ],
+      "trailing_extension_beyond_full_base_left_px": 51,
+      "clearance_above_ground_pivot_px": 35,
+      "front_sha256_unchanged_from_revision1": true,
+      "stage_edge_clipping": false
+    },
+    {
+      "item_id": "prize-rainbow-cape",
+      "frame_id": "bike0",
+      "fully_unoccluded_cloth_pixels": 9891,
+      "visible_cloth_bounds": [
+        34,
+        150,
+        198,
+        309
+      ],
+      "trailing_extension_beyond_full_base_left_px": 66,
+      "clearance_above_ground_pivot_px": 136.52,
+      "front_sha256_unchanged_from_revision1": true,
+      "stage_edge_clipping": false
+    },
+    {
+      "item_id": "prize-rainbow-cape",
+      "frame_id": "bike1",
+      "fully_unoccluded_cloth_pixels": 9961,
+      "visible_cloth_bounds": [
+        34,
+        163,
+        197,
+        322
+      ],
+      "trailing_extension_beyond_full_base_left_px": 63,
+      "clearance_above_ground_pivot_px": 123.52,
+      "front_sha256_unchanged_from_revision1": true,
+      "stage_edge_clipping": false
+    },
+    {
+      "item_id": "prize-rainbow-cape",
+      "frame_id": "bike2",
+      "fully_unoccluded_cloth_pixels": 8909,
+      "visible_cloth_bounds": [
+        40,
+        157,
+        195,
+        321
+      ],
+      "trailing_extension_beyond_full_base_left_px": 53,
+      "clearance_above_ground_pivot_px": 124.52,
+      "front_sha256_unchanged_from_revision1": true,
+      "stage_edge_clipping": false
+    },
+    {
+      "item_id": "prize-rainbow-cape",
+      "frame_id": "bike3",
+      "fully_unoccluded_cloth_pixels": 8614,
+      "visible_cloth_bounds": [
+        34,
+        171,
+        199,
+        318
+      ],
+      "trailing_extension_beyond_full_base_left_px": 60,
+      "clearance_above_ground_pivot_px": 127.52,
+      "front_sha256_unchanged_from_revision1": true,
+      "stage_edge_clipping": false
+    },
+    {
+      "item_id": "prize-rainbow-cape",
+      "frame_id": "skateboard0",
+      "fully_unoccluded_cloth_pixels": 6684,
+      "visible_cloth_bounds": [
+        46,
+        177,
+        159,
+        328
+      ],
+      "trailing_extension_beyond_full_base_left_px": 53,
+      "clearance_above_ground_pivot_px": 97.02,
+      "front_sha256_unchanged_from_revision1": true,
+      "stage_edge_clipping": false
+    },
+    {
+      "item_id": "prize-rainbow-cape",
+      "frame_id": "skateboard1",
+      "fully_unoccluded_cloth_pixels": 5282,
+      "visible_cloth_bounds": [
+        68,
+        187,
+        235,
+        334
+      ],
+      "trailing_extension_beyond_full_base_left_px": 32,
+      "clearance_above_ground_pivot_px": 91.72,
+      "front_sha256_unchanged_from_revision1": true,
+      "stage_edge_clipping": false
+    },
+    {
+      "item_id": "prize-rainbow-cape",
+      "frame_id": "skateboard2",
+      "fully_unoccluded_cloth_pixels": 5766,
+      "visible_cloth_bounds": [
+        62,
+        181,
+        180,
+        334
+      ],
+      "trailing_extension_beyond_full_base_left_px": 35,
+      "clearance_above_ground_pivot_px": 91.72,
+      "front_sha256_unchanged_from_revision1": true,
+      "stage_edge_clipping": false
+    },
+    {
+      "item_id": "prize-rainbow-cape",
+      "frame_id": "skateboard3",
+      "fully_unoccluded_cloth_pixels": 3826,
+      "visible_cloth_bounds": [
+        66,
+        194,
+        231,
+        332
+      ],
+      "trailing_extension_beyond_full_base_left_px": 29,
+      "clearance_above_ground_pivot_px": 93.02,
+      "front_sha256_unchanged_from_revision1": true,
+      "stage_edge_clipping": false
+    },
+    {
+      "item_id": "legacy-hero",
+      "frame_id": "u_idle0",
+      "fully_unoccluded_cloth_pixels": 6631,
+      "visible_cloth_bounds": [
+        68,
+        267,
+        205,
+        398
+      ],
+      "trailing_extension_beyond_full_base_left_px": 65,
+      "clearance_above_ground_pivot_px": 35,
+      "front_sha256_unchanged_from_revision1": true,
+      "stage_edge_clipping": false
+    },
+    {
+      "item_id": "legacy-hero",
+      "frame_id": "u_idle1",
+      "fully_unoccluded_cloth_pixels": 7947,
+      "visible_cloth_bounds": [
+        64,
+        278,
+        200,
+        401
+      ],
+      "trailing_extension_beyond_full_base_left_px": 84,
+      "clearance_above_ground_pivot_px": 32,
+      "front_sha256_unchanged_from_revision1": true,
+      "stage_edge_clipping": false
+    },
+    {
+      "item_id": "legacy-hero",
+      "frame_id": "u_run0",
+      "fully_unoccluded_cloth_pixels": 5007,
+      "visible_cloth_bounds": [
+        73,
+        277,
+        187,
+        407
+      ],
+      "trailing_extension_beyond_full_base_left_px": 54,
+      "clearance_above_ground_pivot_px": 26,
+      "front_sha256_unchanged_from_revision1": true,
+      "stage_edge_clipping": false
+    },
+    {
+      "item_id": "legacy-hero",
+      "frame_id": "u_run1",
+      "fully_unoccluded_cloth_pixels": 5809,
+      "visible_cloth_bounds": [
+        59,
+        269,
+        183,
+        406
+      ],
+      "trailing_extension_beyond_full_base_left_px": 62,
+      "clearance_above_ground_pivot_px": 27,
+      "front_sha256_unchanged_from_revision1": true,
+      "stage_edge_clipping": false
+    },
+    {
+      "item_id": "legacy-hero",
+      "frame_id": "u_run2",
+      "fully_unoccluded_cloth_pixels": 4002,
+      "visible_cloth_bounds": [
+        72,
+        248,
+        151,
+        375
+      ],
+      "trailing_extension_beyond_full_base_left_px": 39,
+      "clearance_above_ground_pivot_px": 58,
+      "front_sha256_unchanged_from_revision1": true,
+      "stage_edge_clipping": false
+    },
+    {
+      "item_id": "legacy-hero",
+      "frame_id": "u_run3",
+      "fully_unoccluded_cloth_pixels": 3659,
+      "visible_cloth_bounds": [
+        71,
+        252,
+        169,
+        382
+      ],
+      "trailing_extension_beyond_full_base_left_px": 37,
+      "clearance_above_ground_pivot_px": 51,
+      "front_sha256_unchanged_from_revision1": true,
+      "stage_edge_clipping": false
+    },
+    {
+      "item_id": "legacy-hero",
+      "frame_id": "u_run4",
+      "fully_unoccluded_cloth_pixels": 5570,
+      "visible_cloth_bounds": [
+        58,
+        239,
+        146,
+        377
+      ],
+      "trailing_extension_beyond_full_base_left_px": 59,
+      "clearance_above_ground_pivot_px": 56,
+      "front_sha256_unchanged_from_revision1": true,
+      "stage_edge_clipping": false
+    },
+    {
+      "item_id": "legacy-hero",
+      "frame_id": "u_run5",
+      "fully_unoccluded_cloth_pixels": 5643,
+      "visible_cloth_bounds": [
+        44,
+        245,
+        130,
+        350
+      ],
+      "trailing_extension_beyond_full_base_left_px": 62,
+      "clearance_above_ground_pivot_px": 83,
+      "front_sha256_unchanged_from_revision1": true,
+      "stage_edge_clipping": false
+    },
+    {
+      "item_id": "legacy-hero",
+      "frame_id": "u_happy0",
+      "fully_unoccluded_cloth_pixels": 3033,
+      "visible_cloth_bounds": [
+        91,
+        284,
+        187,
+        409
+      ],
+      "trailing_extension_beyond_full_base_left_px": 35,
+      "clearance_above_ground_pivot_px": 24,
+      "front_sha256_unchanged_from_revision1": true,
+      "stage_edge_clipping": false
+    },
+    {
+      "item_id": "legacy-hero",
+      "frame_id": "u_happy1",
+      "fully_unoccluded_cloth_pixels": 5098,
+      "visible_cloth_bounds": [
+        89,
+        262,
+        212,
+        402
+      ],
+      "trailing_extension_beyond_full_base_left_px": 52,
+      "clearance_above_ground_pivot_px": 31,
+      "front_sha256_unchanged_from_revision1": true,
+      "stage_edge_clipping": false
+    },
+    {
+      "item_id": "legacy-hero",
+      "frame_id": "u_happy2",
+      "fully_unoccluded_cloth_pixels": 4709,
+      "visible_cloth_bounds": [
+        81,
+        268,
+        169,
+        399
+      ],
+      "trailing_extension_beyond_full_base_left_px": 53,
+      "clearance_above_ground_pivot_px": 34,
+      "front_sha256_unchanged_from_revision1": true,
+      "stage_edge_clipping": false
+    },
+    {
+      "item_id": "legacy-hero",
+      "frame_id": "bike0",
+      "fully_unoccluded_cloth_pixels": 6240,
+      "visible_cloth_bounds": [
+        44,
+        180,
+        198,
+        320
+      ],
+      "trailing_extension_beyond_full_base_left_px": 56,
+      "clearance_above_ground_pivot_px": 125.52,
+      "front_sha256_unchanged_from_revision1": true,
+      "stage_edge_clipping": false
+    },
+    {
+      "item_id": "legacy-hero",
+      "frame_id": "bike1",
+      "fully_unoccluded_cloth_pixels": 6617,
+      "visible_cloth_bounds": [
+        45,
+        150,
+        197,
+        287
+      ],
+      "trailing_extension_beyond_full_base_left_px": 52,
+      "clearance_above_ground_pivot_px": 158.52,
+      "front_sha256_unchanged_from_revision1": true,
+      "stage_edge_clipping": false
+    },
+    {
+      "item_id": "legacy-hero",
+      "frame_id": "bike2",
+      "fully_unoccluded_cloth_pixels": 6662,
+      "visible_cloth_bounds": [
+        39,
+        152,
+        195,
+        292
+      ],
+      "trailing_extension_beyond_full_base_left_px": 54,
+      "clearance_above_ground_pivot_px": 153.52,
+      "front_sha256_unchanged_from_revision1": true,
+      "stage_edge_clipping": false
+    },
+    {
+      "item_id": "legacy-hero",
+      "frame_id": "bike3",
+      "fully_unoccluded_cloth_pixels": 8191,
+      "visible_cloth_bounds": [
+        29,
+        177,
+        199,
+        323
+      ],
+      "trailing_extension_beyond_full_base_left_px": 65,
+      "clearance_above_ground_pivot_px": 122.52,
+      "front_sha256_unchanged_from_revision1": true,
+      "stage_edge_clipping": false
+    },
+    {
+      "item_id": "legacy-hero",
+      "frame_id": "skateboard0",
+      "fully_unoccluded_cloth_pixels": 3973,
+      "visible_cloth_bounds": [
+        55,
+        207,
+        159,
+        335
+      ],
+      "trailing_extension_beyond_full_base_left_px": 44,
+      "clearance_above_ground_pivot_px": 90.02,
+      "front_sha256_unchanged_from_revision1": true,
+      "stage_edge_clipping": false
+    },
+    {
+      "item_id": "legacy-hero",
+      "frame_id": "skateboard1",
+      "fully_unoccluded_cloth_pixels": 3122,
+      "visible_cloth_bounds": [
+        79,
+        176,
+        158,
+        305
+      ],
+      "trailing_extension_beyond_full_base_left_px": 21,
+      "clearance_above_ground_pivot_px": 120.72,
+      "front_sha256_unchanged_from_revision1": true,
+      "stage_edge_clipping": false
+    },
+    {
+      "item_id": "legacy-hero",
+      "frame_id": "skateboard2",
+      "fully_unoccluded_cloth_pixels": 4491,
+      "visible_cloth_bounds": [
+        62,
+        177,
+        201,
+        295
+      ],
+      "trailing_extension_beyond_full_base_left_px": 35,
+      "clearance_above_ground_pivot_px": 130.72,
+      "front_sha256_unchanged_from_revision1": true,
+      "stage_edge_clipping": false
+    },
+    {
+      "item_id": "legacy-hero",
+      "frame_id": "skateboard3",
+      "fully_unoccluded_cloth_pixels": 3299,
+      "visible_cloth_bounds": [
+        63,
+        200,
+        203,
+        332
+      ],
+      "trailing_extension_beyond_full_base_left_px": 32,
+      "clearance_above_ground_pivot_px": 93.02,
+      "front_sha256_unchanged_from_revision1": true,
+      "stage_edge_clipping": false
+    }
+  ]
+}

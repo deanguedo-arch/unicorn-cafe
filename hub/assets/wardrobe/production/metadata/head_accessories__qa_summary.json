@@ -1,0 +1,2922 @@
+{
+  "status": "pass",
+  "records": 323,
+  "head_items": 9,
+  "accessory_items": 8,
+  "poses": 19,
+  "facing_reviews": 646,
+  "approved_trial_byte_freezes": 10,
+  "combination_safe_baked_records": 76,
+  "accessory_naked_foreground_runtime_layers": 0,
+  "combination_tests": 57,
+  "occluded_dressed_pixel_changes": 0,
+  "checks": [
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "beads",
+      "frame_id": "u_idle0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "beads",
+      "frame_id": "u_idle1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "beads",
+      "frame_id": "u_run0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "beads",
+      "frame_id": "u_run1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "beads",
+      "frame_id": "u_run2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "beads",
+      "frame_id": "u_run3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "beads",
+      "frame_id": "u_run4",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "beads",
+      "frame_id": "u_run5",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "beads",
+      "frame_id": "u_happy0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "beads",
+      "frame_id": "u_happy1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "beads",
+      "frame_id": "u_happy2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "beads",
+      "frame_id": "bike0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "beads",
+      "frame_id": "bike1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "beads",
+      "frame_id": "bike2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "beads",
+      "frame_id": "bike3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "beads",
+      "frame_id": "skateboard0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "beads",
+      "frame_id": "skateboard1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "beads",
+      "frame_id": "skateboard2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "beads",
+      "frame_id": "skateboard3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "scarf",
+      "frame_id": "u_idle0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "scarf",
+      "frame_id": "u_idle1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "scarf",
+      "frame_id": "u_run0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "scarf",
+      "frame_id": "u_run1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "scarf",
+      "frame_id": "u_run2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "scarf",
+      "frame_id": "u_run3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "scarf",
+      "frame_id": "u_run4",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "scarf",
+      "frame_id": "u_run5",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "scarf",
+      "frame_id": "u_happy0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "scarf",
+      "frame_id": "u_happy1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "scarf",
+      "frame_id": "u_happy2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "scarf",
+      "frame_id": "bike0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "scarf",
+      "frame_id": "bike1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "scarf",
+      "frame_id": "bike2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "scarf",
+      "frame_id": "bike3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "scarf",
+      "frame_id": "skateboard0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "scarf",
+      "frame_id": "skateboard1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "scarf",
+      "frame_id": "skateboard2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "scarf",
+      "frame_id": "skateboard3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-gold-scarf",
+      "frame_id": "u_idle0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-gold-scarf",
+      "frame_id": "u_idle1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-gold-scarf",
+      "frame_id": "u_run0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-gold-scarf",
+      "frame_id": "u_run1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-gold-scarf",
+      "frame_id": "u_run2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-gold-scarf",
+      "frame_id": "u_run3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-gold-scarf",
+      "frame_id": "u_run4",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-gold-scarf",
+      "frame_id": "u_run5",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-gold-scarf",
+      "frame_id": "u_happy0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-gold-scarf",
+      "frame_id": "u_happy1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-gold-scarf",
+      "frame_id": "u_happy2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-gold-scarf",
+      "frame_id": "bike0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-gold-scarf",
+      "frame_id": "bike1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-gold-scarf",
+      "frame_id": "bike2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-gold-scarf",
+      "frame_id": "bike3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-gold-scarf",
+      "frame_id": "skateboard0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-gold-scarf",
+      "frame_id": "skateboard1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-gold-scarf",
+      "frame_id": "skateboard2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-gold-scarf",
+      "frame_id": "skateboard3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "glasses",
+      "frame_id": "u_idle0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "glasses",
+      "frame_id": "u_idle1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "glasses",
+      "frame_id": "u_run0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "glasses",
+      "frame_id": "u_run1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "glasses",
+      "frame_id": "u_run2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "glasses",
+      "frame_id": "u_run3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "glasses",
+      "frame_id": "u_run4",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "glasses",
+      "frame_id": "u_run5",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "glasses",
+      "frame_id": "u_happy0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "glasses",
+      "frame_id": "u_happy1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "glasses",
+      "frame_id": "u_happy2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "glasses",
+      "frame_id": "bike0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "glasses",
+      "frame_id": "bike1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "glasses",
+      "frame_id": "bike2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "glasses",
+      "frame_id": "bike3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "glasses",
+      "frame_id": "skateboard0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "glasses",
+      "frame_id": "skateboard1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "glasses",
+      "frame_id": "skateboard2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "glasses",
+      "frame_id": "skateboard3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-bubble-glasses",
+      "frame_id": "u_idle0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-bubble-glasses",
+      "frame_id": "u_idle1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-bubble-glasses",
+      "frame_id": "u_run0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-bubble-glasses",
+      "frame_id": "u_run1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-bubble-glasses",
+      "frame_id": "u_run2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-bubble-glasses",
+      "frame_id": "u_run3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-bubble-glasses",
+      "frame_id": "u_run4",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-bubble-glasses",
+      "frame_id": "u_run5",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-bubble-glasses",
+      "frame_id": "u_happy0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-bubble-glasses",
+      "frame_id": "u_happy1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-bubble-glasses",
+      "frame_id": "u_happy2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-bubble-glasses",
+      "frame_id": "bike0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-bubble-glasses",
+      "frame_id": "bike1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-bubble-glasses",
+      "frame_id": "bike2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-bubble-glasses",
+      "frame_id": "bike3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-bubble-glasses",
+      "frame_id": "skateboard0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-bubble-glasses",
+      "frame_id": "skateboard1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-bubble-glasses",
+      "frame_id": "skateboard2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-bubble-glasses",
+      "frame_id": "skateboard3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-mask",
+      "frame_id": "u_idle0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-mask",
+      "frame_id": "u_idle1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-mask",
+      "frame_id": "u_run0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-mask",
+      "frame_id": "u_run1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-mask",
+      "frame_id": "u_run2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-mask",
+      "frame_id": "u_run3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-mask",
+      "frame_id": "u_run4",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-mask",
+      "frame_id": "u_run5",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-mask",
+      "frame_id": "u_happy0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-mask",
+      "frame_id": "u_happy1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-mask",
+      "frame_id": "u_happy2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-mask",
+      "frame_id": "bike0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-mask",
+      "frame_id": "bike1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-mask",
+      "frame_id": "bike2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-mask",
+      "frame_id": "bike3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-mask",
+      "frame_id": "skateboard0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-mask",
+      "frame_id": "skateboard1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-mask",
+      "frame_id": "skateboard2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-mask",
+      "frame_id": "skateboard3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "satchel",
+      "frame_id": "u_idle0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "satchel",
+      "frame_id": "u_idle1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "satchel",
+      "frame_id": "u_run0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "satchel",
+      "frame_id": "u_run1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "satchel",
+      "frame_id": "u_run2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "satchel",
+      "frame_id": "u_run3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "satchel",
+      "frame_id": "u_run4",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "satchel",
+      "frame_id": "u_run5",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "satchel",
+      "frame_id": "u_happy0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "satchel",
+      "frame_id": "u_happy1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "satchel",
+      "frame_id": "u_happy2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "satchel",
+      "frame_id": "bike0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "satchel",
+      "frame_id": "bike1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "satchel",
+      "frame_id": "bike2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "satchel",
+      "frame_id": "bike3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "satchel",
+      "frame_id": "skateboard0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "satchel",
+      "frame_id": "skateboard1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "satchel",
+      "frame_id": "skateboard2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "satchel",
+      "frame_id": "skateboard3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-moon-bag",
+      "frame_id": "u_idle0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-moon-bag",
+      "frame_id": "u_idle1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-moon-bag",
+      "frame_id": "u_run0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-moon-bag",
+      "frame_id": "u_run1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-moon-bag",
+      "frame_id": "u_run2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-moon-bag",
+      "frame_id": "u_run3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-moon-bag",
+      "frame_id": "u_run4",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-moon-bag",
+      "frame_id": "u_run5",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-moon-bag",
+      "frame_id": "u_happy0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-moon-bag",
+      "frame_id": "u_happy1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-moon-bag",
+      "frame_id": "u_happy2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-moon-bag",
+      "frame_id": "bike0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-moon-bag",
+      "frame_id": "bike1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-moon-bag",
+      "frame_id": "bike2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-moon-bag",
+      "frame_id": "bike3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-moon-bag",
+      "frame_id": "skateboard0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-moon-bag",
+      "frame_id": "skateboard1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-moon-bag",
+      "frame_id": "skateboard2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-moon-bag",
+      "frame_id": "skateboard3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "bow",
+      "frame_id": "u_idle0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-star-bow",
+      "frame_id": "u_idle0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "flower-crown",
+      "frame_id": "u_idle0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "sunhat",
+      "frame_id": "u_idle0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "helmet",
+      "frame_id": "u_idle0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-comet-helmet",
+      "frame_id": "u_idle0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-princess",
+      "frame_id": "u_idle0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-chef",
+      "frame_id": "u_idle0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-space",
+      "frame_id": "u_idle0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "bow",
+      "frame_id": "u_idle1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-star-bow",
+      "frame_id": "u_idle1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "flower-crown",
+      "frame_id": "u_idle1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "sunhat",
+      "frame_id": "u_idle1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "helmet",
+      "frame_id": "u_idle1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-comet-helmet",
+      "frame_id": "u_idle1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-princess",
+      "frame_id": "u_idle1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-chef",
+      "frame_id": "u_idle1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-space",
+      "frame_id": "u_idle1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "bow",
+      "frame_id": "u_run0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-star-bow",
+      "frame_id": "u_run0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "flower-crown",
+      "frame_id": "u_run0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "sunhat",
+      "frame_id": "u_run0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "helmet",
+      "frame_id": "u_run0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-comet-helmet",
+      "frame_id": "u_run0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-princess",
+      "frame_id": "u_run0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-chef",
+      "frame_id": "u_run0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-space",
+      "frame_id": "u_run0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "bow",
+      "frame_id": "u_run1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-star-bow",
+      "frame_id": "u_run1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "flower-crown",
+      "frame_id": "u_run1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "sunhat",
+      "frame_id": "u_run1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "helmet",
+      "frame_id": "u_run1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-comet-helmet",
+      "frame_id": "u_run1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-princess",
+      "frame_id": "u_run1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-chef",
+      "frame_id": "u_run1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-space",
+      "frame_id": "u_run1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "bow",
+      "frame_id": "u_run2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-star-bow",
+      "frame_id": "u_run2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "flower-crown",
+      "frame_id": "u_run2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "sunhat",
+      "frame_id": "u_run2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "helmet",
+      "frame_id": "u_run2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-comet-helmet",
+      "frame_id": "u_run2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-princess",
+      "frame_id": "u_run2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-chef",
+      "frame_id": "u_run2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-space",
+      "frame_id": "u_run2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "bow",
+      "frame_id": "u_run3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-star-bow",
+      "frame_id": "u_run3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "flower-crown",
+      "frame_id": "u_run3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "sunhat",
+      "frame_id": "u_run3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "helmet",
+      "frame_id": "u_run3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-comet-helmet",
+      "frame_id": "u_run3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-princess",
+      "frame_id": "u_run3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-chef",
+      "frame_id": "u_run3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-space",
+      "frame_id": "u_run3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "bow",
+      "frame_id": "u_run4",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-star-bow",
+      "frame_id": "u_run4",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "flower-crown",
+      "frame_id": "u_run4",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "sunhat",
+      "frame_id": "u_run4",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "helmet",
+      "frame_id": "u_run4",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-comet-helmet",
+      "frame_id": "u_run4",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-princess",
+      "frame_id": "u_run4",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-chef",
+      "frame_id": "u_run4",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-space",
+      "frame_id": "u_run4",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "bow",
+      "frame_id": "u_run5",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-star-bow",
+      "frame_id": "u_run5",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "flower-crown",
+      "frame_id": "u_run5",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "sunhat",
+      "frame_id": "u_run5",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "helmet",
+      "frame_id": "u_run5",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-comet-helmet",
+      "frame_id": "u_run5",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-princess",
+      "frame_id": "u_run5",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-chef",
+      "frame_id": "u_run5",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-space",
+      "frame_id": "u_run5",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "bow",
+      "frame_id": "u_happy0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-star-bow",
+      "frame_id": "u_happy0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "flower-crown",
+      "frame_id": "u_happy0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "sunhat",
+      "frame_id": "u_happy0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "helmet",
+      "frame_id": "u_happy0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-comet-helmet",
+      "frame_id": "u_happy0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-princess",
+      "frame_id": "u_happy0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-chef",
+      "frame_id": "u_happy0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-space",
+      "frame_id": "u_happy0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "bow",
+      "frame_id": "u_happy1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-star-bow",
+      "frame_id": "u_happy1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "flower-crown",
+      "frame_id": "u_happy1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "sunhat",
+      "frame_id": "u_happy1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "helmet",
+      "frame_id": "u_happy1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-comet-helmet",
+      "frame_id": "u_happy1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-princess",
+      "frame_id": "u_happy1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-chef",
+      "frame_id": "u_happy1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-space",
+      "frame_id": "u_happy1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "bow",
+      "frame_id": "u_happy2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-star-bow",
+      "frame_id": "u_happy2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "flower-crown",
+      "frame_id": "u_happy2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "sunhat",
+      "frame_id": "u_happy2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "helmet",
+      "frame_id": "u_happy2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-comet-helmet",
+      "frame_id": "u_happy2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-princess",
+      "frame_id": "u_happy2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-chef",
+      "frame_id": "u_happy2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-space",
+      "frame_id": "u_happy2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "bow",
+      "frame_id": "bike0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-star-bow",
+      "frame_id": "bike0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "flower-crown",
+      "frame_id": "bike0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "sunhat",
+      "frame_id": "bike0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "helmet",
+      "frame_id": "bike0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-comet-helmet",
+      "frame_id": "bike0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-princess",
+      "frame_id": "bike0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-chef",
+      "frame_id": "bike0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-space",
+      "frame_id": "bike0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "bow",
+      "frame_id": "bike1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-star-bow",
+      "frame_id": "bike1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "flower-crown",
+      "frame_id": "bike1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "sunhat",
+      "frame_id": "bike1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "helmet",
+      "frame_id": "bike1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-comet-helmet",
+      "frame_id": "bike1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-princess",
+      "frame_id": "bike1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-chef",
+      "frame_id": "bike1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-space",
+      "frame_id": "bike1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "bow",
+      "frame_id": "bike2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-star-bow",
+      "frame_id": "bike2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "flower-crown",
+      "frame_id": "bike2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "sunhat",
+      "frame_id": "bike2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "helmet",
+      "frame_id": "bike2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-comet-helmet",
+      "frame_id": "bike2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-princess",
+      "frame_id": "bike2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-chef",
+      "frame_id": "bike2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-space",
+      "frame_id": "bike2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "bow",
+      "frame_id": "bike3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-star-bow",
+      "frame_id": "bike3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "flower-crown",
+      "frame_id": "bike3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "sunhat",
+      "frame_id": "bike3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "helmet",
+      "frame_id": "bike3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-comet-helmet",
+      "frame_id": "bike3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-princess",
+      "frame_id": "bike3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-chef",
+      "frame_id": "bike3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-space",
+      "frame_id": "bike3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "bow",
+      "frame_id": "skateboard0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-star-bow",
+      "frame_id": "skateboard0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "flower-crown",
+      "frame_id": "skateboard0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "sunhat",
+      "frame_id": "skateboard0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "helmet",
+      "frame_id": "skateboard0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-comet-helmet",
+      "frame_id": "skateboard0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-princess",
+      "frame_id": "skateboard0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-chef",
+      "frame_id": "skateboard0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-space",
+      "frame_id": "skateboard0",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "bow",
+      "frame_id": "skateboard1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-star-bow",
+      "frame_id": "skateboard1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "flower-crown",
+      "frame_id": "skateboard1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "sunhat",
+      "frame_id": "skateboard1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "helmet",
+      "frame_id": "skateboard1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-comet-helmet",
+      "frame_id": "skateboard1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-princess",
+      "frame_id": "skateboard1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-chef",
+      "frame_id": "skateboard1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-space",
+      "frame_id": "skateboard1",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "bow",
+      "frame_id": "skateboard2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-star-bow",
+      "frame_id": "skateboard2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "flower-crown",
+      "frame_id": "skateboard2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "sunhat",
+      "frame_id": "skateboard2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "helmet",
+      "frame_id": "skateboard2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-comet-helmet",
+      "frame_id": "skateboard2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-princess",
+      "frame_id": "skateboard2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-chef",
+      "frame_id": "skateboard2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-space",
+      "frame_id": "skateboard2",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "bow",
+      "frame_id": "skateboard3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-star-bow",
+      "frame_id": "skateboard3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "flower-crown",
+      "frame_id": "skateboard3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "sunhat",
+      "frame_id": "skateboard3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "helmet",
+      "frame_id": "skateboard3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "prize-comet-helmet",
+      "frame_id": "skateboard3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-princess",
+      "frame_id": "skateboard3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-chef",
+      "frame_id": "skateboard3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    },
+    {
+      "occluded_near_alpha_zero": true,
+      "item_id": "legacy-space",
+      "frame_id": "skateboard3",
+      "base_hash": true,
+      "layer_RGBA_canvas_hash": true,
+      "foreground_original_RGBA": true,
+      "frozen_trial_bytes": true
+    }
+  ]
+}

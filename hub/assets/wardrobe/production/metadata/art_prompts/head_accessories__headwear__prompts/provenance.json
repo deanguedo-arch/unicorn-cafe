@@ -1,0 +1,53 @@
+{
+  "tool": "built-in image_gen.imagegen",
+  "mode": "isolated image editing with genuine transparent output",
+  "source_commit": "637425ce2bdbb4805e0859034449e7d8bd523a20",
+  "generated_sources": [
+    {
+      "item_id": "helmet",
+      "source_file": "sources/helmet_fit_generated.png",
+      "sha256": "d70ec2c8f340857763431fc2d042f9f80e44ea196985d5841d84cae10af87f05"
+    },
+    {
+      "item_id": "prize-comet-helmet",
+      "source_file": "sources/comet_fit_generated.png",
+      "sha256": "34fc2d8132f58fbb5e5562e50759c0c90560fcb7e2116066cdf167648452b98c"
+    },
+    {
+      "item_id": "flower-crown",
+      "source_file": "sources/flower_fit_generated.png",
+      "sha256": "fc19d317766f3b6aba619a61e99d5b3c19605fe835fde94c197057dfb4f83785"
+    },
+    {
+      "item_id": "sunhat",
+      "source_file": "sources/sunhat_fit_generated.png",
+      "sha256": "6e4fb946d3c0b35192289f0cf812a75b5d43a0cd93bbb734b34bbbe6a1b7d5b8"
+    },
+    {
+      "item_id": "legacy-space",
+      "source_file": "sources/space_fit_generated.png",
+      "sha256": "a86b2c72a8311b128cfbfac46d927bcba7bf9e10c322c554b27a2e8092379a44"
+    }
+  ],
+  "rejected_source": {
+    "file": "sources/comet_fit_generated_rejected_glow.png",
+    "reason": "unwanted ambient purple glow; clean-background correction is production source"
+  },
+  "no_external_API_or_paid_third_party_service": true,
+  "no_character_generation": true,
+  "original_art_reuse": [
+    "bow",
+    "prize-star-bow",
+    "legacy-princess",
+    "legacy-chef"
+  ],
+  "post_generation_operations": [
+    "mechanical connected-component bounding-rectangle sprite extraction",
+    "uniform scaling",
+    "rotation",
+    "translation",
+    "exact original source-pixel foreground selection",
+    "alpha compositing",
+    "contact-sheet annotation"
+  ]
+}

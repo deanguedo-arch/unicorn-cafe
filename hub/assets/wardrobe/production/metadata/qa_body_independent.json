@@ -1,0 +1,84 @@
+{
+  "status": "pass_with_nonblocking_note",
+  "reviewed_at_utc": "2026-10-06T15:48:41Z",
+  "scope": {
+    "items": [
+      "mint tee",
+      "star jacket"
+    ],
+    "poses_per_item": 19,
+    "facings": [
+      "right",
+      "left"
+    ],
+    "composites_visually_reviewed": 76,
+    "cycle_families": [
+      "idle",
+      "run",
+      "happy",
+      "bike",
+      "skateboard"
+    ],
+    "all_decoded_gif_frames_reviewed_in_order": true,
+    "creative_assets_changed": false
+  },
+  "blocking_defects": [],
+  "visual_findings": [
+    {
+      "area": "head_mane_neck",
+      "result": "pass",
+      "finding": "Original faces, horns, ears and visible manes remain above body clothes; no visible garment intrusion into faces or rectangular neckline erasure"
+    },
+    {
+      "area": "sleeve_cuffs_limbs",
+      "result": "pass",
+      "finding": "Cuff openings align with visible limbs across standing, run and raised-arm poses; no detached cuff or cloth covering a hoof found"
+    },
+    {
+      "area": "bike_grips",
+      "result": "pass",
+      "finding": "Original forearms and pink grips remain in front of clothes in bike0\u20133 and both facings; no green or purple fabric intrusion into grips found"
+    },
+    {
+      "area": "skateboard_registration",
+      "result": "pass",
+      "finding": "Clothes follow each actual shifted skater pose; no independent garment slide, platform clipping or missing foreground leg found"
+    },
+    {
+      "area": "ordered_cycles",
+      "result": "pass",
+      "finding": "All phase identities and both facings are present in order; no omitted garment, gross registration jump or occlusion-order inversion found in decoded frame sequences"
+    }
+  ],
+  "nonblocking_notes": [
+    {
+      "item": "tee",
+      "frame": "u_happy2",
+      "finding": "The visible neckline under the chin is thinner and less ribbed than happy1. It remains attached and does not intrude into the original face. This is garment-style variation, not a foreground restoration failure."
+    }
+  ],
+  "verified_checks": {
+    "manifest_hashes_match_all38_records": true,
+    "all38_right_previews_match_documented_recomposition": true,
+    "all38_left_previews_are_exact_whole_composite_mirrors": true,
+    "all_foreground_selected_rgba_match_original_sources": true,
+    "all_canonical_base_hashes_match_registration": true,
+    "five_approved_tee_layer_hashes_unchanged": true,
+    "approved_bike0_grip_hash_unchanged": true
+  },
+  "honest_limits": [
+    "Asset-level visual review only; no live game was accessed or modified.",
+    "GIFs were inspected as ordered decoded frames; actual game timing, scaling, motion interpolation and runtime draw order remain untested.",
+    "Foreground selections were authored earlier by this reviewer; this is an independent check of the assembled body-item packages, not a second independent author of those masks."
+  ],
+  "evidence": {
+    "source_manifests": {
+      "tee_jacket/tee_final/manifest.json": "1fc07882cba1f801471f32325d06b384995e5ab8ae71bc5fcdb6d7012c33ccc2",
+      "star_jacket/manifest.json": "5f3909ce6e13c14a6f192b571abd7ffcac2b18960c9f92f10cf370066c4dd759"
+    },
+    "checks": "body_independent_qa/asset_checks.json",
+    "mirror_checks": "body_independent_qa/mirroring_tests.json",
+    "ordered_pose_contacts": "body_independent_qa/<tee|jacket>_<cycle>_ordered.jpg",
+    "actual_gif_frame_contacts": "body_independent_qa/<tee|jacket>_<cycle>_gif_frames.jpg"
+  }
+}

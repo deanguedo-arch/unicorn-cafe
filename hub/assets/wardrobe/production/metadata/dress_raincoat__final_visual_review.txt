@@ -1,0 +1,15 @@
+Final visual review: 2026-10-06, all 38 item/pose fits and 76 item/pose/facing composites.
+
+Reviewed full 19-pose contact sheets for each item in both facings, plus all 10 complete animation frame strips: idle 0,1; run 0–5; happy 0,1,2; bike 0–3; skateboard 0–3. GIFs were decoded to confirm exact frame counts and all source frames. No live game or source cadence changes were tested.
+
+Final checks: original character identity and exact face/mane pixels remain; dress skirt is short and ruffled above lower legs; coat has yellow fabric, folded hood, pink cuffs/buttons and pockets; each distinct foreleg pose is accommodated; all bicycle/skateboard geometry remains original; clothes sit behind exact-original grip/forearm pixels; both facings mirror as a whole. All original source files retain their hashes.
+
+Corrections made during review:
+- Uniform extraction-to-fit registration corrected the model's tendency to enlarge individual garments inside multi-pose extraction plates.
+- Exact-original head/mane cutouts removed reconstructed cloth across hair and face.
+- A second built-in image edit removed accidental bicycle grips, saddle and leg remnants in bike extractions.
+- A second built-in image edit removed retained white forearms/purple hooves in dress happy1/2 extractions.
+- Exact-original forearm visibility was restored inside those two sleeve openings using source-pixel selection masks only.
+- Detached near-invisible extraction islands were cropped out mechanically; retained cloth RGBA values were not repainted.
+
+The final layers contain garments, not redrawn character bases. All fit-reference images in sources are provenance only. The preview compositions use the unchanged original base stages.

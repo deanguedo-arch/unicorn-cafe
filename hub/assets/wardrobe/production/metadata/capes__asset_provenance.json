@@ -1,0 +1,32 @@
+[
+  {
+    "item_id": "prize-rainbow-cape",
+    "file": "source/wardrobe/prize-rainbow-cape-v2.png",
+    "sha256": "b48c4866f8a0c1ed9b73abc0a17cd2806dedc4d65807589f90e201c47ae49659",
+    "source_url": "https://github.com/deanguedo-arch/unicorn-cafe/blob/637425ce2bdbb4805e0859034449e7d8bd523a20/hub/assets/wardrobe/prize-rainbow-cape-v2.png",
+    "method": "Original source, no repaint; crop + uniform registration"
+  },
+  {
+    "item_id": "legacy-hero",
+    "file": "source/wardrobe/legacy-hero-v2.png",
+    "sha256": "172b4c81f67d89df5a47e42dcecaf2ec1ad89493196f5807da4fcc318dfc01ad",
+    "source_url": "https://github.com/deanguedo-arch/unicorn-cafe/blob/637425ce2bdbb4805e0859034449e7d8bd523a20/hub/assets/wardrobe/legacy-hero-v2.png",
+    "method": "Original source, no repaint; crop + uniform registration"
+  },
+  {
+    "file": "sources/rainbow_front_clasp_generated.png",
+    "sha256": "02038f2be39310ac1171105517097d94f195b836a075df5c19856fcf96f2323b",
+    "tool": "built-in image_gen.imagegen",
+    "generated_source_filename": "exec-1c54bffd-9723-49c9-8e9b-51a2f18e9f73.png",
+    "prompts": "metadata/prompts.json",
+    "content": "Isolated shallow front collar band and gold star clasp on true transparency; no character pixels"
+  },
+  {
+    "file": "sources/hero_front_clasp_generated.png",
+    "sha256": "6593a8aa4f30cf1ae7aff14d28efee316db30100b60ee5e4abcc643b0ac89163",
+    "tool": "built-in image_gen.imagegen",
+    "generated_source_filename": "exec-672a2e51-6e67-4ee1-a858-ecc38e2a9627.png",
+    "prompts": "metadata/prompts.json",
+    "content": "Isolated shallow front collar band and gold star clasp on true transparency; no character pixels"
+  }
+]

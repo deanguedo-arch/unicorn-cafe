@@ -1,0 +1,13 @@
+UNICORN WORLD FULL WARDROBE
+
+Start with manifest.json, atlas_index.json and INTEGRATION_GUIDE.txt.
+
+This production ZIP contains every runtime sprite, all original bases, frozen approved assets, CSV inventories, fit/occlusion metadata, QA results and overview/outfit contact sheets.
+
+UnicornWorld_Review_Previews.zip contains all 23 complete item contact sheets and five full-cycle movement previews. FULL_MOVEMENT_PREVIEW.gif combines those real frame sequences.
+
+The three PNG_Masters ZIPs contain the exact standalone 512px PNG layers as an alternative to atlas extraction. They are not additional items or outfits.
+
+Asset QA: 23 items, 19 poses, 437 fits, 874 single-item/facing render cases. All 680 layer images reconstruct exactly from the five lossless atlas pages. Six representative complete outfits were also rendered across all poses and both facings; combination review is non-exhaustive.
+
+No live game integration has been performed.

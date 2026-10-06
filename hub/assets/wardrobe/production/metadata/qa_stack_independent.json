@@ -1,0 +1,71 @@
+{
+  "status": "pass",
+  "reviewed_at_utc": "2026-10-06T15:59:37Z",
+  "scope": {
+    "outfits": [
+      "Approved_starters",
+      "Rainy_ride",
+      "Rainbow_party",
+      "Space_stars",
+      "Rainbow_explorer",
+      "Hero_prizes"
+    ],
+    "poses_per_outfit": 19,
+    "facings": [
+      "right",
+      "left"
+    ],
+    "outfit_facing_cases_visually_reviewed": 228,
+    "close_up_frames": [
+      "u_happy0",
+      "u_happy2",
+      "bike1",
+      "skateboard1"
+    ],
+    "creative_assets_changed": false
+  },
+  "blocking_defects": [],
+  "findings": [
+    "No aggregate-layer regression, missing body garment, blocked clothing hole, detached sleeve or displaced skater clothing found",
+    "Body original foreground remains before neck/head accessories; faces and manes remain canonical beneath intended wearable overlays",
+    "Bike grips and forearms remain visible in front of body garments; vehicle pixels remain canonical",
+    "Cape rear panels remain behind the original actor; front collars and bags render in front without covering the bike grip",
+    "All six outfits preserve their item identities and required slot order across both facings"
+  ],
+  "nonblocking_observations": [
+    "The space helmet rim intentionally covers much of the upper jacket and some beads. Those items are present underneath; this is overlap, not a missing-layer error.",
+    "The minor tee happy2 neckline variation recorded in qa_body_independent.json persists; it introduces no new stack defect."
+  ],
+  "independent_pixel_checks": {
+    "atlas_layers_reconstructed": 680,
+    "atlas_rgba_hash_mismatches": 0,
+    "original_foreground_layers_compared_to_canonical_source": 147,
+    "original_foreground_pixel_mismatches": 0,
+    "right_outfit_stacks_recomposed_in_documented_phase_order": 114,
+    "recomposition_mismatches": 0,
+    "whole_stack_mirror_pairs_verified": 114,
+    "mirror_mismatches": 0,
+    "approved_full_stacks_exact": true,
+    "approved_full_stack_count": 5,
+    "all19_packaged_base_hashes_match_canonical_registration": true
+  },
+  "limits": [
+    "Six representative outfits were reviewed; this is not exhaustive testing of every possible outfit combination.",
+    "Static source-contact and close-up asset review only; no live game or browser/device performance, collision, scaling or runtime acceptance testing.",
+    "This reviewer previously authored shared original-pixel foreground masks; this pass independently checks the assembled aggregate stacks against those inputs."
+  ],
+  "evidence": {
+    "detailed_checks": "body_independent_qa/stack_checks.json",
+    "final_right_sheets": "delivery/UnicornWorld_Full_Wardrobe/previews/OUTFIT_<outfit>__all19.jpg",
+    "left_sheets": "body_independent_qa/stack_<outfit>_left.jpg",
+    "close_ups": "body_independent_qa/stack_<outfit>_details.jpg",
+    "reviewed_contact_sha256": {
+      "Approved_starters": "1849cc49edcdfc62e438ac078f8bcd2dea93cbd7838eedd6250ea97ac8425c70",
+      "Rainy_ride": "2963004806578fe46c79b928ee8a69d7152b1912cb2a8ffa3fc05f26660a7123",
+      "Rainbow_party": "6f71f8ec60eb7e6afa8e605c58a77412e37a64a9220f22be7b51e28d46767875",
+      "Space_stars": "ec499f1efb60100e93928dd7bd86df7c0bd31ae792a07f9d4808432d6a00a3b1",
+      "Rainbow_explorer": "9cc07dce8b1029b6e20119453e251203e3ac7723114f76e5d8528361cd6ef53d",
+      "Hero_prizes": "cc4271f66efbdc64ec227e74862b9605f3938c140250746b3c8e8ad952799063"
+    }
+  }
+}

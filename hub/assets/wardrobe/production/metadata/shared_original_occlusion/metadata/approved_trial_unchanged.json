@@ -1,0 +1,128 @@
+[
+  {
+    "file": "approved_trial/originals/u_idle0.png",
+    "expected_sha256": "36160efe1a4bfcfdd95a5fb085234a8da880826e5f4064294fa8d964a9ea1b04",
+    "actual_sha256": "36160efe1a4bfcfdd95a5fb085234a8da880826e5f4064294fa8d964a9ea1b04",
+    "pass": true
+  },
+  {
+    "file": "approved_trial/layers/u_idle0__tee.png",
+    "expected_sha256": "240c30e1043e4f3ac0ea63cff853cbf94646283e341bbe7a11b3aa2ca0bd2372",
+    "actual_sha256": "240c30e1043e4f3ac0ea63cff853cbf94646283e341bbe7a11b3aa2ca0bd2372",
+    "pass": true
+  },
+  {
+    "file": "approved_trial/layers/u_idle0__beads.png",
+    "expected_sha256": "47004ad526a61c1e76450049263ed6a0b54d30082ebd7503ad3f54cf6ea7c32d",
+    "actual_sha256": "47004ad526a61c1e76450049263ed6a0b54d30082ebd7503ad3f54cf6ea7c32d",
+    "pass": true
+  },
+  {
+    "file": "approved_trial/layers/u_idle0__bow.png",
+    "expected_sha256": "a8135efb22797d9c26792cf2d4de9522a1940f4c021e26c0055963f36c91f63f",
+    "actual_sha256": "a8135efb22797d9c26792cf2d4de9522a1940f4c021e26c0055963f36c91f63f",
+    "pass": true
+  },
+  {
+    "file": "approved_trial/originals/u_run2.png",
+    "expected_sha256": "33a905cf3e9f76026ce46197e6061b1414975347274b5832f7427daac2e26c61",
+    "actual_sha256": "33a905cf3e9f76026ce46197e6061b1414975347274b5832f7427daac2e26c61",
+    "pass": true
+  },
+  {
+    "file": "approved_trial/layers/u_run2__tee.png",
+    "expected_sha256": "397155132b876798c6859dcaf369c77364d3802d05d0469f2c8eb67af6ad6746",
+    "actual_sha256": "397155132b876798c6859dcaf369c77364d3802d05d0469f2c8eb67af6ad6746",
+    "pass": true
+  },
+  {
+    "file": "approved_trial/layers/u_run2__beads.png",
+    "expected_sha256": "8e96ee45056f2e1275c4765f640d3946f037bbc3074013db4018dc7158baa012",
+    "actual_sha256": "8e96ee45056f2e1275c4765f640d3946f037bbc3074013db4018dc7158baa012",
+    "pass": true
+  },
+  {
+    "file": "approved_trial/layers/u_run2__bow.png",
+    "expected_sha256": "7abb829c1493b7c360906f8b51f91ccb8581f8956edbf8a099ac48a81c36d30c",
+    "actual_sha256": "7abb829c1493b7c360906f8b51f91ccb8581f8956edbf8a099ac48a81c36d30c",
+    "pass": true
+  },
+  {
+    "file": "approved_trial/originals/u_happy1.png",
+    "expected_sha256": "c4a4e3ef2a04883b1cc9e90e3ddff535ef12a80f86803fe57f7cdfc56564d0ee",
+    "actual_sha256": "c4a4e3ef2a04883b1cc9e90e3ddff535ef12a80f86803fe57f7cdfc56564d0ee",
+    "pass": true
+  },
+  {
+    "file": "approved_trial/layers/u_happy1__tee.png",
+    "expected_sha256": "3b4da891270f3e586841baa094cd18b3c99f884adee0ce5ba6ed7aab009e3717",
+    "actual_sha256": "3b4da891270f3e586841baa094cd18b3c99f884adee0ce5ba6ed7aab009e3717",
+    "pass": true
+  },
+  {
+    "file": "approved_trial/layers/u_happy1__beads.png",
+    "expected_sha256": "250d10b427b211dea5b4d319ac7e6c50e8ec90846b8fbe6fb3b8dbea9c460b90",
+    "actual_sha256": "250d10b427b211dea5b4d319ac7e6c50e8ec90846b8fbe6fb3b8dbea9c460b90",
+    "pass": true
+  },
+  {
+    "file": "approved_trial/layers/u_happy1__bow.png",
+    "expected_sha256": "818f11d04ddb02d08e7442931c64f9295855b4607342c71edf8805e80f3a6aa9",
+    "actual_sha256": "818f11d04ddb02d08e7442931c64f9295855b4607342c71edf8805e80f3a6aa9",
+    "pass": true
+  },
+  {
+    "file": "approved_trial/originals/bike0.png",
+    "expected_sha256": "0933fd0929cd4ca4f47c6966d5a1618209dd159e4800524a884811637712c416",
+    "actual_sha256": "0933fd0929cd4ca4f47c6966d5a1618209dd159e4800524a884811637712c416",
+    "pass": true
+  },
+  {
+    "file": "approved_trial/layers/bike0__tee.png",
+    "expected_sha256": "7bd234d9e7d979c8603bc7c6f31d8886863a7a499deb15273c4d7f04354e4392",
+    "actual_sha256": "7bd234d9e7d979c8603bc7c6f31d8886863a7a499deb15273c4d7f04354e4392",
+    "pass": true
+  },
+  {
+    "file": "approved_trial/layers/bike0__beads.png",
+    "expected_sha256": "5c3f9fe968c42d8b07ea16ae4bdc891f4ee7ff78333ed9bebecef5e92ee48639",
+    "actual_sha256": "5c3f9fe968c42d8b07ea16ae4bdc891f4ee7ff78333ed9bebecef5e92ee48639",
+    "pass": true
+  },
+  {
+    "file": "approved_trial/layers/bike0__bow.png",
+    "expected_sha256": "3a99970a97110657dd79750e5bedc37ee5efece332d3643f7c4676db609dce53",
+    "actual_sha256": "3a99970a97110657dd79750e5bedc37ee5efece332d3643f7c4676db609dce53",
+    "pass": true
+  },
+  {
+    "file": "approved_trial/layers/bike0__foreground.png",
+    "expected_sha256": "fc52ad78e28707b95241f99e7110440cc9a020dedaf4e8e9ea9d449d574bbcae",
+    "actual_sha256": "fc52ad78e28707b95241f99e7110440cc9a020dedaf4e8e9ea9d449d574bbcae",
+    "pass": true
+  },
+  {
+    "file": "approved_trial/originals/skateboard0.png",
+    "expected_sha256": "3800aa6bfc1418be7298ff8cd2709797b77bb32d7256b24040c197e31728ed79",
+    "actual_sha256": "3800aa6bfc1418be7298ff8cd2709797b77bb32d7256b24040c197e31728ed79",
+    "pass": true
+  },
+  {
+    "file": "approved_trial/layers/skateboard0__tee.png",
+    "expected_sha256": "fb022abcdd0fce0697f7663c45db9f09794ba3aab34de9307fbeefc375b4bf2f",
+    "actual_sha256": "fb022abcdd0fce0697f7663c45db9f09794ba3aab34de9307fbeefc375b4bf2f",
+    "pass": true
+  },
+  {
+    "file": "approved_trial/layers/skateboard0__beads.png",
+    "expected_sha256": "07e4f279d0513f0f774e3a723c7b8e84b4d4740385bf8e358ed250fcf847824c",
+    "actual_sha256": "07e4f279d0513f0f774e3a723c7b8e84b4d4740385bf8e358ed250fcf847824c",
+    "pass": true
+  },
+  {
+    "file": "approved_trial/layers/skateboard0__bow.png",
+    "expected_sha256": "a447d4a24d84eefd77dfe254075445953573aae62a4ba625663101d014849c09",
+    "actual_sha256": "a447d4a24d84eefd77dfe254075445953573aae62a4ba625663101d014849c09",
+    "pass": true
+  }
+]

@@ -1,0 +1,120 @@
+{
+  "frame_id": "bike0",
+  "layer_file": "layers/bike0__foreground.png",
+  "canvas": [
+    512,
+    512
+  ],
+  "draw_origin": [
+    0,
+    0
+  ],
+  "source_original": "originals/bike0.png",
+  "source_sha256": "0933fd0929cd4ca4f47c6966d5a1618209dd159e4800524a884811637712c416",
+  "layer_sha256": "fc52ad78e28707b95241f99e7110440cc9a020dedaf4e8e9ea9d449d574bbcae",
+  "selection_mask_file": "metadata/bike0_foreground_selection_mask.png",
+  "mask_kind": "Binary polygon spatial selection intersected with matching tee alpha>0. Every selected RGBA pixel copied verbatim from original base. No feather.",
+  "polygon_vertices": [
+    [
+      260,
+      246
+    ],
+    [
+      267,
+      242
+    ],
+    [
+      277,
+      239
+    ],
+    [
+      288,
+      238
+    ],
+    [
+      301,
+      240
+    ],
+    [
+      311,
+      244
+    ],
+    [
+      316,
+      251
+    ],
+    [
+      317,
+      258
+    ],
+    [
+      313,
+      265
+    ],
+    [
+      305,
+      271
+    ],
+    [
+      293,
+      275
+    ],
+    [
+      283,
+      276
+    ],
+    [
+      274,
+      274
+    ],
+    [
+      266,
+      271
+    ],
+    [
+      258,
+      267
+    ],
+    [
+      253,
+      263
+    ],
+    [
+      251,
+      258
+    ],
+    [
+      253,
+      252
+    ]
+  ],
+  "mask_bbox_exclusive": [
+    255,
+    238,
+    304,
+    268
+  ],
+  "selected_pixel_count": 818,
+  "restoration_pixel_changes": 761,
+  "z_order": [
+    "original_base",
+    "tee",
+    "bike0__foreground.png",
+    "beads",
+    "bow"
+  ],
+  "mirroring": "Apply the same whole-group mirror transform as the base and all other garment layers",
+  "purpose": "Restore original pink handlebar grip and adjacent foreground forearm over the fitted tee; preserve cuff opening while leaving the tee independent",
+  "qa": {
+    "selected_rgba_exactly_matches_original": true,
+    "alpha_zero_outside_mask": true,
+    "outside_mask_composite_changes": 0,
+    "any_canvas_edge_alpha": 0,
+    "manual_cuff_check": "Cuff edge remains intact at gameplay size; green overlap is removed from grip, and original forearm continues into grip without a floating fabric strip",
+    "base_untouched": true,
+    "no_unrelated_changes_where_tee_alpha_zero": 0
+  },
+  "polygon_region_file": "polygon_region.png",
+  "matching_tee_sha256": "7bd234d9e7d979c8603bc7c6f31d8886863a7a499deb15273c4d7f04354e4392",
+  "minimum_scope": "Exclude every pixel outside the polygon or where the tee contributes zero alpha, avoiding double-compositing unrelated semi-transparent original pixels"
+}

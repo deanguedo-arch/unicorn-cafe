@@ -1,0 +1,8 @@
+{
+  "repository": "https://github.com/deanguedo-arch/unicorn-cafe",
+  "commit": "637425ce2bdbb4805e0859034449e7d8bd523a20",
+  "catalogue": "https://github.com/deanguedo-arch/unicorn-cafe/blob/637425ce2bdbb4805e0859034449e7d8bd523a20/hub/shared/catalogue.js",
+  "renderer": "https://github.com/deanguedo-arch/unicorn-cafe/blob/637425ce2bdbb4805e0859034449e7d8bd523a20/hub/shared/art.js",
+  "source_asset_folder": "https://github.com/deanguedo-arch/unicorn-cafe/tree/637425ce2bdbb4805e0859034449e7d8bd523a20/hub/assets/wardrobe",
+  "scope_note": "Committed source snapshot, not verification of any uncommitted or currently running local build. Original base PNGs and accepted trial PNG bytes are included; high-resolution intermediate imagegen experiments are not runtime assets."
+}

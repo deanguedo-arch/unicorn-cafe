@@ -1,0 +1,60 @@
+Unicorn World Wardrobe Asset Scope
+
+This is the full authored wardrobe asset set for the current pinned Unicorn World source. It includes reusable layers, registration, occlusion rules and review material. Integrating it into the live game is a separate step.
+
+Coverage
+
+23 wearables across 19 canonical poses produce 437 item-and-pose records. Each has two-facing coverage, giving 874 single-item/pose/facing cases. A record can contain more than one layer, so 437 is not a PNG-file count. Left-facing behavior uses the correctly mirrored whole-character stack; it is not a separately redrawn character.
+
+Head items 9
+bow, flower-crown, sunhat, helmet, prize-star-bow, prize-comet-helmet, legacy-princess, legacy-chef, legacy-space
+
+Body items 6
+tee, star-jacket, rainbow-dress, raincoat, prize-rainbow-cape, legacy-hero
+
+Accessory items 8
+beads, scarf, glasses, satchel, prize-gold-scarf, prize-bubble-glasses, prize-moon-bag, legacy-mask
+
+Canonical poses 19
+u_idle0, u_idle1
+u_run0, u_run1, u_run2, u_run3, u_run4, u_run5
+u_happy0, u_happy1, u_happy2
+bike0, bike1, bike2, bike3
+skateboard0, skateboard1, skateboard2, skateboard3
+
+The two canonical vehicle families, bike and skateboard, are preserved. Their riding bases already contain the original unicorn and vehicle. They remain equipment items, outside the 23-wearable total.
+
+What is delivered
+
+- An authoritative master manifest for all 437 records
+- Registered transparent runtime layers and any required depth pieces
+- Lossless trimmed atlases with recorded content rectangles, trim offsets and pivots
+- Standalone PNG masters in separately packaged segments
+- Source hashes, transforms, prompts and provenance
+- Single-case review material and separate, non-exhaustive combination QA
+
+The release manifest and inventory specify the actual atlas pages, layer-file counts, ZIP segments and final check results. Reconstructing an atlas entry must reproduce the complete decoded RGBA of its master, including transparent-pixel RGB.
+
+What stays frozen
+
+The accepted trial's 15 wearable PNGs are preserved byte-for-byte: tee, beads and bow for u_idle0, u_run2, u_happy1, bike0 and skateboard0. Its original-pixel bike grip/forearm piece and five original base-stage PNGs are also byte-frozen.
+
+All canonical character and vehicle bases remain unchanged. Generated dressed-character references are not used as runtime bases. Existing item IDs, save fields, ownership rules, prices and collision logic were not changed by this asset work and must remain intact during integration.
+
+How fitting was completed
+
+Image generation supplied useful garment/accessory artwork, fitted references and extractions. Production fit also required pose-by-pose registration, uniform placement, transparent eye openings, appropriate horn/mane/limb/vehicle depth and visual/pixel checks. A generated image alone was not treated as a correctly registered runtime layer.
+
+Scarf and bag occlusion is baked into the runtime accessory alpha. Hidden accessory pixels reveal the already-dressed underlying stack. Naked canonical torso or foreleg pixels must not be restored across equipped clothing. Authoring-only foreground references are explicitly separate from runtime layers.
+
+Limits of the evidence
+
+The 874 single-case grid covers each current item, pose and facing. Combination visual QA is separate and non-exhaustive. It is not a claim that every head/body/accessory combination was reviewed. Refer to the release QA report for the exact executed checks and reviewed combinations.
+
+The existing game supports one head item, one body item and one accessory item. This work does not add multiple accessories, new wardrobe IDs, new canonical poses, new character designs or new gameplay features. Some new wearable art is crisper than the low-resolution original ground sprites.
+
+No live repository or game was changed by this asset production. The package does not claim live-game acceptance, runtime performance validation, save compatibility testing in the running game or a completed integration. Those checks belong to the later integration step described in INTEGRATION_GUIDE.txt.
+
+Source revision
+
+637425ce2bdbb4805e0859034449e7d8bd523a20

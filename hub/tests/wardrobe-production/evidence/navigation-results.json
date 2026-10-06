@@ -1,0 +1,349 @@
+{
+  "results": [
+    {
+      "name": "Reachable picture-guided approaches and explicit actions: village",
+      "pass": true,
+      "details": {
+        "entrances": 3
+      }
+    },
+    {
+      "name": "Reachable picture-guided approaches and explicit actions: street",
+      "pass": true,
+      "details": {
+        "entrances": 1
+      }
+    },
+    {
+      "name": "Reachable picture-guided approaches and explicit actions: mall",
+      "pass": true,
+      "details": {
+        "entrances": 4
+      }
+    },
+    {
+      "name": "Reachable picture-guided approaches and explicit actions: boutique",
+      "pass": true,
+      "details": {
+        "entrances": 2
+      }
+    },
+    {
+      "name": "Reachable picture-guided approaches and explicit actions: fitting",
+      "pass": true,
+      "details": {
+        "entrances": 1
+      }
+    },
+    {
+      "name": "Reachable picture-guided approaches and explicit actions: wheels",
+      "pass": true,
+      "details": {
+        "entrances": 2
+      }
+    },
+    {
+      "name": "Reachable picture-guided approaches and explicit actions: track",
+      "pass": true,
+      "details": {
+        "entrances": 1
+      }
+    },
+    {
+      "name": "Reachable picture-guided approaches and explicit actions: arcade",
+      "pass": true,
+      "details": {
+        "entrances": 4
+      }
+    },
+    {
+      "name": "Reachable picture-guided approaches and explicit actions: photo",
+      "pass": true,
+      "details": {
+        "entrances": 2
+      }
+    },
+    {
+      "name": "Large entrance areas keep scenes unchanged until the action button is pressed",
+      "pass": true,
+      "details": {
+        "entranceCount": 20
+      }
+    },
+    {
+      "name": "Actual taps walk to all eight exit areas and return to the correct parent",
+      "pass": true
+    },
+    {
+      "name": "Reloading or arriving on an exit does not create a return loop; its action button still works",
+      "pass": true
+    },
+    {
+      "name": "Portrait and backpack pause navigation without an accidental exit",
+      "pass": true
+    },
+    {
+      "name": "All nine world scenes keep 44px controls and clean floor cues at 568x320",
+      "pass": true
+    },
+    {
+      "name": "Clothing, necklaces, scarves, bags and hats keep original eyes/muzzle clear in every walking, riding and celebration pose, both directions",
+      "pass": true,
+      "details": {
+        "renderComparisons": 722
+      }
+    },
+    {
+      "name": "Café exit walks, saves its carried meal, pauses and resumes without a loop; lower-right return also works",
+      "pass": true
+    },
+    {
+      "name": "The café exit preserves all five table actions, including the diamond table; tapping the original doorway also returns",
+      "pass": true
+    },
+    {
+      "name": "All nine adventure maps have a reachable return area separate from their native treasure goal",
+      "pass": true,
+      "details": {
+        "maps": [
+          {
+            "id": "easy_house",
+            "ok": true,
+            "exit": {
+              "id": "exit",
+              "exit": true,
+              "x": 708,
+              "y": 816,
+              "rx": 120,
+              "ry": 48,
+              "picture": "home",
+              "state": {
+                "armed": true,
+                "pending": false,
+                "dwell": 0
+              }
+            },
+            "home": {
+              "x": 1035,
+              "y": 817,
+              "r": 64,
+              "safe": 182
+            }
+          },
+          {
+            "id": "easy_market",
+            "ok": true,
+            "exit": {
+              "id": "exit",
+              "exit": true,
+              "x": 1524,
+              "y": 780,
+              "rx": 120,
+              "ry": 48,
+              "picture": "home",
+              "state": {
+                "armed": true,
+                "pending": false,
+                "dwell": 0
+              }
+            },
+            "home": {
+              "x": 1707,
+              "y": 363,
+              "r": 66,
+              "safe": 176
+            }
+          },
+          {
+            "id": "easy_restaurant",
+            "ok": true,
+            "exit": {
+              "id": "exit",
+              "exit": true,
+              "x": 300,
+              "y": 708,
+              "rx": 120,
+              "ry": 48,
+              "picture": "home",
+              "state": {
+                "armed": true,
+                "pending": false,
+                "dwell": 0
+              }
+            },
+            "home": {
+              "x": 262,
+              "y": 1121,
+              "r": 65,
+              "safe": 187
+            }
+          },
+          {
+            "id": "easy_toys",
+            "ok": true,
+            "exit": {
+              "id": "exit",
+              "exit": true,
+              "x": 300,
+              "y": 720,
+              "rx": 120,
+              "ry": 48,
+              "picture": "home",
+              "state": {
+                "armed": true,
+                "pending": false,
+                "dwell": 0
+              }
+            },
+            "home": {
+              "x": 255,
+              "y": 1129,
+              "r": 65,
+              "safe": 190
+            }
+          },
+          {
+            "id": "sneak_house",
+            "ok": true,
+            "exit": {
+              "id": "exit",
+              "exit": true,
+              "x": 780,
+              "y": 492,
+              "rx": 120,
+              "ry": 48,
+              "picture": "home",
+              "state": {
+                "armed": true,
+                "pending": false,
+                "dwell": 0
+              }
+            },
+            "home": {
+              "x": 1400,
+              "y": 269,
+              "r": 60,
+              "safe": 190
+            }
+          },
+          {
+            "id": "sneak_market",
+            "ok": true,
+            "exit": {
+              "id": "exit",
+              "exit": true,
+              "x": 1020,
+              "y": 648,
+              "rx": 90,
+              "ry": 42,
+              "picture": "home",
+              "state": {
+                "armed": true,
+                "pending": false,
+                "dwell": 0
+              }
+            },
+            "home": {
+              "x": 1508,
+              "y": 361,
+              "r": 60,
+              "safe": 158
+            }
+          },
+          {
+            "id": "sneak_restaurant",
+            "ok": true,
+            "exit": {
+              "id": "exit",
+              "exit": true,
+              "x": 588,
+              "y": 840,
+              "rx": 120,
+              "ry": 48,
+              "picture": "home",
+              "state": {
+                "armed": true,
+                "pending": false,
+                "dwell": 0
+              }
+            },
+            "home": {
+              "x": 230,
+              "y": 983,
+              "r": 65,
+              "safe": 187
+            }
+          },
+          {
+            "id": "sneak_toys",
+            "ok": true,
+            "exit": {
+              "id": "exit",
+              "exit": true,
+              "x": 636,
+              "y": 780,
+              "rx": 120,
+              "ry": 48,
+              "picture": "home",
+              "state": {
+                "armed": true,
+                "pending": false,
+                "dwell": 0
+              }
+            },
+            "home": {
+              "x": 224,
+              "y": 990,
+              "r": 65,
+              "safe": 190
+            }
+          },
+          {
+            "id": "police_patrol",
+            "ok": true,
+            "exit": {
+              "id": "exit",
+              "exit": true,
+              "x": 636,
+              "y": 708,
+              "rx": 120,
+              "ry": 48,
+              "picture": "home",
+              "state": {
+                "armed": true,
+                "pending": false,
+                "dwell": 0
+              }
+            },
+            "home": {
+              "x": 724,
+              "y": 982,
+              "r": 58,
+              "safe": 118
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Actual adventure walking reaches its exit and retains carried treasure and in-flight position on reentry",
+      "pass": true
+    },
+    {
+      "name": "Forged return messages are ignored; navigation/reload retain the wallet, purchases and equipped outfit",
+      "pass": true
+    },
+    {
+      "name": "Standalone games retain native navigation and do not load world exit cues",
+      "pass": true
+    },
+    {
+      "name": "No page exceptions or missing artwork",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "failed": [],
+  "physicalDevice": false,
+  "childReview": false
+}

@@ -1,0 +1,1170 @@
+{
+  "title": "Mint tee full pose coverage",
+  "source_commit": "637425ce2bdbb4805e0859034449e7d8bd523a20",
+  "items": [
+    "tee"
+  ],
+  "pose_count": 19,
+  "facing_count": 2,
+  "canvas": [
+    512,
+    512
+  ],
+  "records": [
+    {
+      "item_id": "tee",
+      "slot": "body",
+      "frame_id": "u_idle0",
+      "canvas": [
+        512,
+        512
+      ],
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "base_file": "base/stages/u_idle0.png",
+      "base_sha256": "36160efe1a4bfcfdd95a5fb085234a8da880826e5f4064294fa8d964a9ea1b04",
+      "layers": {
+        "near": {
+          "file": "layers/tee__u_idle0__near.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "sha256": "240c30e1043e4f3ac0ea63cff853cbf94646283e341bbe7a11b3aa2ca0bd2372",
+          "visible_bounds": [
+            207,
+            319,
+            341,
+            397
+          ]
+        }
+      },
+      "z_order": [
+        "base",
+        "near"
+      ],
+      "frozen_approved_trial": true,
+      "source_provenance": "See metadata/production_provenance.json"
+    },
+    {
+      "item_id": "tee",
+      "slot": "body",
+      "frame_id": "u_idle1",
+      "canvas": [
+        512,
+        512
+      ],
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "base_file": "base/stages/u_idle1.png",
+      "base_sha256": "4e7384355aedec68dd527e88d582904d4977cae24de01689ad4a2d72a398ced1",
+      "layers": {
+        "near": {
+          "file": "layers/tee__u_idle1__near.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "sha256": "e56cd44b4ab42ca0dbc831a9fb75bbaf34d577bfb10a7d22bbbf522e9ea935b7",
+          "visible_bounds": [
+            202,
+            311,
+            336,
+            389
+          ]
+        },
+        "foreground": {
+          "file": "layers/tee__u_idle1__foreground.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "sha256": "ac6e75a61264dab909c9eadb8d4440d6763f0ebba53f6e5708748b962b6a4b08",
+          "visible_bounds": [
+            205,
+            311,
+            328,
+            360
+          ],
+          "source_pixels": "exact matching original frame",
+          "parts": [
+            "head_mane"
+          ]
+        }
+      },
+      "z_order": [
+        "base",
+        "near",
+        "foreground"
+      ],
+      "frozen_approved_trial": false,
+      "source_provenance": "See metadata/production_provenance.json"
+    },
+    {
+      "item_id": "tee",
+      "slot": "body",
+      "frame_id": "u_run0",
+      "canvas": [
+        512,
+        512
+      ],
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "base_file": "base/stages/u_run0.png",
+      "base_sha256": "16fb149b94beddd2fb0d94f16ee489d644a3a055d4a88f38b9e16184a6c80b2b",
+      "layers": {
+        "near": {
+          "file": "layers/tee__u_run0__near.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "sha256": "eac1d9ba7da244c62147e651b8911d46cc7b397dcbf18ac043dfd22e3b23ba2b",
+          "visible_bounds": [
+            204,
+            313,
+            336,
+            402
+          ]
+        },
+        "foreground": {
+          "file": "layers/tee__u_run0__foreground.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "sha256": "fe355d3f63b5198db73b5cde677b38b69eb5676e89512f357356a116a8ee3fad",
+          "visible_bounds": [
+            213,
+            313,
+            332,
+            349
+          ],
+          "source_pixels": "exact matching original frame",
+          "parts": [
+            "head_mane"
+          ]
+        }
+      },
+      "z_order": [
+        "base",
+        "near",
+        "foreground"
+      ],
+      "frozen_approved_trial": false,
+      "source_provenance": "See metadata/production_provenance.json"
+    },
+    {
+      "item_id": "tee",
+      "slot": "body",
+      "frame_id": "u_run1",
+      "canvas": [
+        512,
+        512
+      ],
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "base_file": "base/stages/u_run1.png",
+      "base_sha256": "b559162368ca98bfc148d4f34f21dc72f76d92334519c7ac61941b9c0a2e5c51",
+      "layers": {
+        "near": {
+          "file": "layers/tee__u_run1__near.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "sha256": "bfab1a406e3e8259d58cd75117bf2195eb7baa22f7a8d0a6bf68fb0ad3d9973d",
+          "visible_bounds": [
+            197,
+            312,
+            335,
+            395
+          ]
+        },
+        "foreground": {
+          "file": "layers/tee__u_run1__foreground.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "sha256": "6b9572156a0712a33f0cfe48dbb4138d6a7ac8327d962df91565431ce6ff4751",
+          "visible_bounds": [
+            211,
+            312,
+            325,
+            341
+          ],
+          "source_pixels": "exact matching original frame",
+          "parts": [
+            "head_mane"
+          ]
+        }
+      },
+      "z_order": [
+        "base",
+        "near",
+        "foreground"
+      ],
+      "frozen_approved_trial": false,
+      "source_provenance": "See metadata/production_provenance.json"
+    },
+    {
+      "item_id": "tee",
+      "slot": "body",
+      "frame_id": "u_run2",
+      "canvas": [
+        512,
+        512
+      ],
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "base_file": "base/stages/u_run2.png",
+      "base_sha256": "33a905cf3e9f76026ce46197e6061b1414975347274b5832f7427daac2e26c61",
+      "layers": {
+        "near": {
+          "file": "layers/tee__u_run2__near.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "sha256": "397155132b876798c6859dcaf369c77364d3802d05d0469f2c8eb67af6ad6746",
+          "visible_bounds": [
+            190,
+            300,
+            327,
+            389
+          ]
+        }
+      },
+      "z_order": [
+        "base",
+        "near"
+      ],
+      "frozen_approved_trial": true,
+      "source_provenance": "See metadata/production_provenance.json"
+    },
+    {
+      "item_id": "tee",
+      "slot": "body",
+      "frame_id": "u_run3",
+      "canvas": [
+        512,
+        512
+      ],
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "base_file": "base/stages/u_run3.png",
+      "base_sha256": "c9c86b37d334ebadb3b22071d80a5285191dd03ec5ff57438e278ff5f6f29dd4",
+      "layers": {
+        "near": {
+          "file": "layers/tee__u_run3__near.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "sha256": "c6e4856823ad9da225cbe59bc9be43dbd83a67a62aa6e6db4abb0d9b03c868de",
+          "visible_bounds": [
+            190,
+            323,
+            332,
+            412
+          ]
+        },
+        "foreground": {
+          "file": "layers/tee__u_run3__foreground.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "sha256": "0a880faee0834f4793fda0349da0583774f10a1d210f42cf23e9e1b722c2afca",
+          "visible_bounds": [
+            225,
+            323,
+            262,
+            348
+          ],
+          "source_pixels": "exact matching original frame",
+          "parts": [
+            "head_mane"
+          ]
+        }
+      },
+      "z_order": [
+        "base",
+        "near",
+        "foreground"
+      ],
+      "frozen_approved_trial": false,
+      "source_provenance": "See metadata/production_provenance.json"
+    },
+    {
+      "item_id": "tee",
+      "slot": "body",
+      "frame_id": "u_run4",
+      "canvas": [
+        512,
+        512
+      ],
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "base_file": "base/stages/u_run4.png",
+      "base_sha256": "c1d60d263dcf596ab054371c4bf4e0c2656c390d28f0436566d2554f8a7ce0be",
+      "layers": {
+        "near": {
+          "file": "layers/tee__u_run4__near.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "sha256": "c0f242ddefa22be1aae5c003513a114cc9490431acda3f982269d2515d92f793",
+          "visible_bounds": [
+            195,
+            317,
+            326,
+            409
+          ]
+        },
+        "foreground": {
+          "file": "layers/tee__u_run4__foreground.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "sha256": "6a69d6ddeca92204d098b79368b2345c4d25c8d24f898abae572c02562e5481b",
+          "visible_bounds": [
+            213,
+            317,
+            257,
+            332
+          ],
+          "source_pixels": "exact matching original frame",
+          "parts": [
+            "head_mane"
+          ]
+        }
+      },
+      "z_order": [
+        "base",
+        "near",
+        "foreground"
+      ],
+      "frozen_approved_trial": false,
+      "source_provenance": "See metadata/production_provenance.json"
+    },
+    {
+      "item_id": "tee",
+      "slot": "body",
+      "frame_id": "u_run5",
+      "canvas": [
+        512,
+        512
+      ],
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "base_file": "base/stages/u_run5.png",
+      "base_sha256": "e902ea07c28f14b45623c922a0804a148d23f5db6e912dc6a2c67796875f4c14",
+      "layers": {
+        "near": {
+          "file": "layers/tee__u_run5__near.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "sha256": "7203d9c86d2aef47d2fcff5fe6cab8dc9a184f8c632047eb961b27b3713b71d4",
+          "visible_bounds": [
+            184,
+            305,
+            322,
+            408
+          ]
+        },
+        "foreground": {
+          "file": "layers/tee__u_run5__foreground.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "sha256": "45fe8efb60c5ddabcc0073eaedd29a33c26f04e5b6132927e30c6afb3ab1cb04",
+          "visible_bounds": [
+            214,
+            305,
+            319,
+            348
+          ],
+          "source_pixels": "exact matching original frame",
+          "parts": [
+            "head_mane"
+          ]
+        }
+      },
+      "z_order": [
+        "base",
+        "near",
+        "foreground"
+      ],
+      "frozen_approved_trial": false,
+      "source_provenance": "See metadata/production_provenance.json"
+    },
+    {
+      "item_id": "tee",
+      "slot": "body",
+      "frame_id": "u_happy0",
+      "canvas": [
+        512,
+        512
+      ],
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "base_file": "base/stages/u_happy0.png",
+      "base_sha256": "565006f31e1ad806c52fdf53e9f1aa12db7c664e1694a899d3e054baf882a0b5",
+      "layers": {
+        "near": {
+          "file": "layers/tee__u_happy0__near.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "sha256": "4538e5d502db6c8ae3280958c2e0aa8a0050c9f868217a7137f8510dd5adcf8d",
+          "visible_bounds": [
+            212,
+            292,
+            357,
+            381
+          ]
+        },
+        "foreground": {
+          "file": "layers/tee__u_happy0__foreground.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "sha256": "7c4a3e47a831202020f30d37a500c938a38e63a117ab0ca3d86956a70b639d41",
+          "visible_bounds": [
+            212,
+            292,
+            342,
+            356
+          ],
+          "source_pixels": "exact matching original frame",
+          "parts": [
+            "head_mane"
+          ]
+        }
+      },
+      "z_order": [
+        "base",
+        "near",
+        "foreground"
+      ],
+      "frozen_approved_trial": false,
+      "source_provenance": "See metadata/production_provenance.json"
+    },
+    {
+      "item_id": "tee",
+      "slot": "body",
+      "frame_id": "u_happy1",
+      "canvas": [
+        512,
+        512
+      ],
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "base_file": "base/stages/u_happy1.png",
+      "base_sha256": "c4a4e3ef2a04883b1cc9e90e3ddff535ef12a80f86803fe57f7cdfc56564d0ee",
+      "layers": {
+        "near": {
+          "file": "layers/tee__u_happy1__near.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "sha256": "3b4da891270f3e586841baa094cd18b3c99f884adee0ce5ba6ed7aab009e3717",
+          "visible_bounds": [
+            199,
+            267,
+            336,
+            363
+          ]
+        }
+      },
+      "z_order": [
+        "base",
+        "near"
+      ],
+      "frozen_approved_trial": true,
+      "source_provenance": "See metadata/production_provenance.json"
+    },
+    {
+      "item_id": "tee",
+      "slot": "body",
+      "frame_id": "u_happy2",
+      "canvas": [
+        512,
+        512
+      ],
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "base_file": "base/stages/u_happy2.png",
+      "base_sha256": "add156857f5fd9d58f77c5a83f432adec762005c1f7ab8b5fe83ee6805bc6f38",
+      "layers": {
+        "near": {
+          "file": "layers/tee__u_happy2__near.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "sha256": "03bc2d52b2cb0c6c501aff4c939e309ed28305486f86613c095774347d495b99",
+          "visible_bounds": [
+            218,
+            290,
+            342,
+            390
+          ]
+        },
+        "foreground": {
+          "file": "layers/tee__u_happy2__foreground.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "sha256": "cefee25ef0c53fc0c6055446a9ad8626161ccac546277aad7f12ce90a0ec668c",
+          "visible_bounds": [
+            218,
+            290,
+            335,
+            362
+          ],
+          "source_pixels": "exact matching original frame",
+          "parts": [
+            "head_mane"
+          ]
+        }
+      },
+      "z_order": [
+        "base",
+        "near",
+        "foreground"
+      ],
+      "frozen_approved_trial": false,
+      "source_provenance": "See metadata/production_provenance.json"
+    },
+    {
+      "item_id": "tee",
+      "slot": "body",
+      "frame_id": "bike0",
+      "canvas": [
+        512,
+        512
+      ],
+      "pivot_stage": [
+        263.4254143646409,
+        445.52486187845307
+      ],
+      "base_file": "base/stages/bike0.png",
+      "base_sha256": "0933fd0929cd4ca4f47c6966d5a1618209dd159e4800524a884811637712c416",
+      "layers": {
+        "near": {
+          "file": "layers/tee__bike0__near.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "sha256": "7bd234d9e7d979c8603bc7c6f31d8886863a7a499deb15273c4d7f04354e4392",
+          "visible_bounds": [
+            190,
+            211,
+            310,
+            288
+          ]
+        },
+        "grip": {
+          "file": "layers/tee__bike0__grip.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "sha256": "fc52ad78e28707b95241f99e7110440cc9a020dedaf4e8e9ea9d449d574bbcae",
+          "visible_bounds": [
+            255,
+            238,
+            304,
+            268
+          ]
+        }
+      },
+      "z_order": [
+        "base",
+        "near",
+        "grip"
+      ],
+      "frozen_approved_trial": true,
+      "source_provenance": "See metadata/production_provenance.json"
+    },
+    {
+      "item_id": "tee",
+      "slot": "body",
+      "frame_id": "bike1",
+      "canvas": [
+        512,
+        512
+      ],
+      "pivot_stage": [
+        261.6574585635359,
+        445.52486187845307
+      ],
+      "base_file": "base/stages/bike1.png",
+      "base_sha256": "e99bd54c8e78c8ee36c6baec38c49063c76bc14357014fb84a6ab2b8647bb4ad",
+      "layers": {
+        "near": {
+          "file": "layers/tee__bike1__near.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "sha256": "5c7d76a8919423b6e36d2a84a7cb7bcc097e5f3c893db4f8dcf7851deaddf064",
+          "visible_bounds": [
+            190,
+            213,
+            310,
+            290
+          ]
+        },
+        "foreground": {
+          "file": "layers/tee__bike1__foreground.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "sha256": "75af842f77ff3e3f81dab12100ce11f924e9f65909984d640688ee8e70399a60",
+          "visible_bounds": [
+            211,
+            213,
+            305,
+            270
+          ],
+          "source_pixels": "exact matching original frame",
+          "parts": [
+            "head_mane",
+            "grip_forearm"
+          ]
+        }
+      },
+      "z_order": [
+        "base",
+        "near",
+        "foreground"
+      ],
+      "frozen_approved_trial": false,
+      "source_provenance": "See metadata/production_provenance.json"
+    },
+    {
+      "item_id": "tee",
+      "slot": "body",
+      "frame_id": "bike2",
+      "canvas": [
+        512,
+        512
+      ],
+      "pivot_stage": [
+        259.88950276243094,
+        445.52486187845307
+      ],
+      "base_file": "base/stages/bike2.png",
+      "base_sha256": "c0280e4d764a531d96e1a90e8eed9c0d7fe74dd2bef984aefa039b97516c39a8",
+      "layers": {
+        "near": {
+          "file": "layers/tee__bike2__near.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "sha256": "2ea7ffa65c361563c3166f012ba3d69a43a0a8a22ee83bd9773cd4c7c80daf02",
+          "visible_bounds": [
+            191,
+            213,
+            311,
+            290
+          ]
+        },
+        "foreground": {
+          "file": "layers/tee__bike2__foreground.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "sha256": "55f1a159adc0476bb0e86ac799ede20aa47daec1def06ef5ba90cb0a9a4b8574",
+          "visible_bounds": [
+            213,
+            213,
+            305,
+            270
+          ],
+          "source_pixels": "exact matching original frame",
+          "parts": [
+            "head_mane",
+            "grip_forearm"
+          ]
+        }
+      },
+      "z_order": [
+        "base",
+        "near",
+        "foreground"
+      ],
+      "frozen_approved_trial": false,
+      "source_provenance": "See metadata/production_provenance.json"
+    },
+    {
+      "item_id": "tee",
+      "slot": "body",
+      "frame_id": "bike3",
+      "canvas": [
+        512,
+        512
+      ],
+      "pivot_stage": [
+        259.18232044198896,
+        445.52486187845307
+      ],
+      "base_file": "base/stages/bike3.png",
+      "base_sha256": "a7a49ffc8b7d66fb783131a8c312e07c3cabb5de61e3f528f3153853e54c0781",
+      "layers": {
+        "near": {
+          "file": "layers/tee__bike3__near.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "sha256": "a68025a335ad85f04c5ceb1a731794960ddfc96f33ef75ec77755a698015fc98",
+          "visible_bounds": [
+            192,
+            213,
+            312,
+            290
+          ]
+        },
+        "foreground": {
+          "file": "layers/tee__bike3__foreground.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "sha256": "3487e69ea3ccce4ae92ba8988f7c3ae3e65b55e15df5006170379c08fdeeddc1",
+          "visible_bounds": [
+            213,
+            213,
+            306,
+            270
+          ],
+          "source_pixels": "exact matching original frame",
+          "parts": [
+            "head_mane",
+            "grip_forearm"
+          ]
+        }
+      },
+      "z_order": [
+        "base",
+        "near",
+        "foreground"
+      ],
+      "frozen_approved_trial": false,
+      "source_provenance": "See metadata/production_provenance.json"
+    },
+    {
+      "item_id": "tee",
+      "slot": "body",
+      "frame_id": "skateboard0",
+      "canvas": [
+        512,
+        512
+      ],
+      "pivot_stage": [
+        248.22099447513813,
+        425.01657458563534
+      ],
+      "base_file": "base/stages/skateboard0.png",
+      "base_sha256": "3800aa6bfc1418be7298ff8cd2709797b77bb32d7256b24040c197e31728ed79",
+      "layers": {
+        "near": {
+          "file": "layers/tee__skateboard0__near.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "sha256": "fb022abcdd0fce0697f7663c45db9f09794ba3aab34de9307fbeefc375b4bf2f",
+          "visible_bounds": [
+            177,
+            243,
+            321,
+            321
+          ]
+        }
+      },
+      "z_order": [
+        "base",
+        "near"
+      ],
+      "frozen_approved_trial": true,
+      "source_provenance": "See metadata/production_provenance.json"
+    },
+    {
+      "item_id": "tee",
+      "slot": "body",
+      "frame_id": "skateboard1",
+      "canvas": [
+        512,
+        512
+      ],
+      "pivot_stage": [
+        254.939226519337,
+        425.72375690607737
+      ],
+      "base_file": "base/stages/skateboard1.png",
+      "base_sha256": "d8649f42d0d188b23c910b0901fa5ede4b606b05223694fd7d395075e4790a51",
+      "layers": {
+        "near": {
+          "file": "layers/tee__skateboard1__near.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "sha256": "a7a2dd8e61666e0fd4806498a9b4c88b33e231e6fc73d2691641ad9e096e7825",
+          "visible_bounds": [
+            217,
+            244,
+            361,
+            322
+          ]
+        },
+        "foreground": {
+          "file": "layers/tee__skateboard1__foreground.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "sha256": "7792f10bb3673a983d0d31931184560b3d20c413e7b7a62babb4d95faad3c074",
+          "visible_bounds": [
+            224,
+            244,
+            343,
+            275
+          ],
+          "source_pixels": "exact matching original frame",
+          "parts": [
+            "head_mane"
+          ]
+        }
+      },
+      "z_order": [
+        "base",
+        "near",
+        "foreground"
+      ],
+      "frozen_approved_trial": false,
+      "source_provenance": "See metadata/production_provenance.json"
+    },
+    {
+      "item_id": "tee",
+      "slot": "body",
+      "frame_id": "skateboard2",
+      "canvas": [
+        512,
+        512
+      ],
+      "pivot_stage": [
+        252.11049723756906,
+        425.72375690607737
+      ],
+      "base_file": "base/stages/skateboard2.png",
+      "base_sha256": "4f5384cfb3a8549ca11ce51d027faaab4cac15760e66ad1ca03817bb22d3c62f",
+      "layers": {
+        "near": {
+          "file": "layers/tee__skateboard2__near.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "sha256": "50c9a34d62685fa980f224c0944e293e146950c59086e3e6269c25a4543663aa",
+          "visible_bounds": [
+            199,
+            244,
+            343,
+            322
+          ]
+        },
+        "foreground": {
+          "file": "layers/tee__skateboard2__foreground.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "sha256": "ebe88c6c1408e9af9e12e2251706c2ecec9b8f20016034b69dc4638ada6c4cf1",
+          "visible_bounds": [
+            203,
+            244,
+            324,
+            276
+          ],
+          "source_pixels": "exact matching original frame",
+          "parts": [
+            "head_mane"
+          ]
+        }
+      },
+      "z_order": [
+        "base",
+        "near",
+        "foreground"
+      ],
+      "frozen_approved_trial": false,
+      "source_provenance": "See metadata/production_provenance.json"
+    },
+    {
+      "item_id": "tee",
+      "slot": "body",
+      "frame_id": "skateboard3",
+      "canvas": [
+        512,
+        512
+      ],
+      "pivot_stage": [
+        253.87845303867402,
+        425.01657458563534
+      ],
+      "base_file": "base/stages/skateboard3.png",
+      "base_sha256": "bf94fc058aff4f7e83c6c063508aee0a089e4f0fbd43040dbf3265c4afa2f69e",
+      "layers": {
+        "near": {
+          "file": "layers/tee__skateboard3__near.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "sha256": "50c9a34d62685fa980f224c0944e293e146950c59086e3e6269c25a4543663aa",
+          "visible_bounds": [
+            199,
+            244,
+            343,
+            322
+          ]
+        },
+        "foreground": {
+          "file": "layers/tee__skateboard3__foreground.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "sha256": "f93f0218bb0a98b6b52625d06505460dc818d69c81e6126c8506cb8961b81e27",
+          "visible_bounds": [
+            206,
+            244,
+            325,
+            276
+          ],
+          "source_pixels": "exact matching original frame",
+          "parts": [
+            "head_mane"
+          ]
+        }
+      },
+      "z_order": [
+        "base",
+        "near",
+        "foreground"
+      ],
+      "frozen_approved_trial": false,
+      "source_provenance": "See metadata/production_provenance.json"
+    }
+  ],
+  "cycles": {
+    "idle": [
+      "u_idle0",
+      "u_idle1"
+    ],
+    "run": [
+      "u_run0",
+      "u_run1",
+      "u_run2",
+      "u_run3",
+      "u_run4",
+      "u_run5"
+    ],
+    "happy": [
+      "u_happy0",
+      "u_happy1",
+      "u_happy2"
+    ],
+    "bike": [
+      "bike0",
+      "bike1",
+      "bike2",
+      "bike3"
+    ],
+    "skateboard": [
+      "skateboard0",
+      "skateboard1",
+      "skateboard2",
+      "skateboard3"
+    ]
+  },
+  "integration": "Use fullstage/pivot and local z_order. Original-pixel foreground follows body cloth and precedes all accessories/headwear. Approved5 tee layers and approvedbike0grip are bytefrozen. Full sourceframecycles are previewed; livegame code is unchanged."
+}

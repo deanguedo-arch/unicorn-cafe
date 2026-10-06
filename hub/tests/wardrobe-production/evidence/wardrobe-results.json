@@ -1,0 +1,21 @@
+{
+  "results": [
+    {
+      "name": "All 874 single-item/facing cases and 342 representative outfit/facing cases match independent Pillow compositions",
+      "checked": 1216,
+      "maxDifference": 2
+    },
+    {
+      "name": "bike uses all four matching riding frames during actual movement"
+    },
+    {
+      "name": "skateboard uses all four matching riding frames during actual movement"
+    },
+    {
+      "name": "No browser exceptions or missing wardrobe resources"
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "physicalDevice": false
+}

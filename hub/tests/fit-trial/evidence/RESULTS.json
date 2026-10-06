@@ -1,0 +1,48 @@
+{
+  "results": [
+    {
+      "name": "All five full-canvas renders match the supplied right-facing composites within browser alpha rounding",
+      "comparisons": [
+        {
+          "frame": "u_idle0",
+          "maxChannelDifference": 2,
+          "channelsBeyondRounding": 0
+        },
+        {
+          "frame": "u_run2",
+          "maxChannelDifference": 2,
+          "channelsBeyondRounding": 0
+        },
+        {
+          "frame": "u_happy1",
+          "maxChannelDifference": 2,
+          "channelsBeyondRounding": 0
+        },
+        {
+          "frame": "bike0",
+          "maxChannelDifference": 2,
+          "channelsBeyondRounding": 0
+        },
+        {
+          "frame": "skateboard0",
+          "maxChannelDifference": 2,
+          "channelsBeyondRounding": 0
+        }
+      ]
+    },
+    {
+      "name": "Five poses, both facings and all eight item combinations work without errors",
+      "combinations": 80
+    },
+    {
+      "name": "Drag and movement controls work; portrait suspends and small landscape resumes without horizontal overflow"
+    },
+    {
+      "name": "No browser errors, missing images or save writes"
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "physicalDevice": false,
+  "productionWardrobeChanged": false
+}

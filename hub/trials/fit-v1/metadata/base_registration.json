@@ -1,0 +1,154 @@
+{
+  "plate_size": [
+    1536,
+    1024
+  ],
+  "cell_size": [
+    512,
+    512
+  ],
+  "frame_order": [
+    "u_idle0",
+    "u_run2",
+    "u_happy1",
+    "bike0",
+    "skateboard0"
+  ],
+  "frames": [
+    {
+      "frame_id": "u_idle0",
+      "plate_cell": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "logical_canvas": [
+        192,
+        192
+      ],
+      "scale_to_stage": 2,
+      "origin_in_stage": [
+        64,
+        64
+      ],
+      "foot_pivot_logical": [
+        96,
+        184.5
+      ],
+      "foot_pivot_stage": [
+        256,
+        433
+      ],
+      "base_stage_sha256": "36160efe1a4bfcfdd95a5fb085234a8da880826e5f4064294fa8d964a9ea1b04"
+    },
+    {
+      "frame_id": "u_run2",
+      "plate_cell": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "logical_canvas": [
+        192,
+        192
+      ],
+      "scale_to_stage": 2,
+      "origin_in_stage": [
+        64,
+        64
+      ],
+      "foot_pivot_logical": [
+        96,
+        184.5
+      ],
+      "foot_pivot_stage": [
+        256,
+        433
+      ],
+      "base_stage_sha256": "33a905cf3e9f76026ce46197e6061b1414975347274b5832f7427daac2e26c61"
+    },
+    {
+      "frame_id": "u_happy1",
+      "plate_cell": [
+        1024,
+        0,
+        512,
+        512
+      ],
+      "logical_canvas": [
+        192,
+        192
+      ],
+      "scale_to_stage": 2,
+      "origin_in_stage": [
+        64,
+        64
+      ],
+      "foot_pivot_logical": [
+        96,
+        184.5
+      ],
+      "foot_pivot_stage": [
+        256,
+        433
+      ],
+      "base_stage_sha256": "c4a4e3ef2a04883b1cc9e90e3ddff535ef12a80f86803fe57f7cdfc56564d0ee"
+    },
+    {
+      "frame_id": "bike0",
+      "plate_cell": [
+        0,
+        512,
+        512,
+        512
+      ],
+      "source_cell": [
+        0,
+        0,
+        543,
+        724
+      ],
+      "logical_canvas": [
+        192,
+        256
+      ],
+      "scale_to_stage": 2,
+      "origin_in_stage": [
+        64,
+        0
+      ],
+      "logical_scale_from_source": 0.35359116022099446,
+      "foot_pivot_stage": null,
+      "base_stage_sha256": "0933fd0929cd4ca4f47c6966d5a1618209dd159e4800524a884811637712c416"
+    },
+    {
+      "frame_id": "skateboard0",
+      "plate_cell": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "source_cell": [
+        0,
+        0,
+        543,
+        724
+      ],
+      "logical_canvas": [
+        192,
+        256
+      ],
+      "scale_to_stage": 2,
+      "origin_in_stage": [
+        64,
+        0
+      ],
+      "logical_scale_from_source": 0.35359116022099446,
+      "foot_pivot_stage": null,
+      "base_stage_sha256": "3800aa6bfc1418be7298ff8cd2709797b77bb32d7256b24040c197e31728ed79"
+    }
+  ]
+}

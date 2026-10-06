@@ -1,0 +1,4241 @@
+{
+  "revision": 2,
+  "revision_note": "Rear cloth now trails visibly beyond the tail with uniform scale, translation and rigid rotation. Front fastening files unchanged from revision 1.",
+  "title": "Unicorn World fitted cape layers",
+  "source_commit": "637425ce2bdbb4805e0859034449e7d8bd523a20",
+  "items": [
+    "prize-rainbow-cape",
+    "legacy-hero"
+  ],
+  "pose_count": 19,
+  "facing_count": 2,
+  "item_pose_fit_count": 38,
+  "canvas": [
+    512,
+    512
+  ],
+  "records": [
+    {
+      "item_id": "prize-rainbow-cape",
+      "frame_id": "u_idle0",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "base_file": "../base/stages/u_idle0.png",
+      "base_sha256": "36160efe1a4bfcfdd95a5fb085234a8da880826e5f4064294fa8d964a9ea1b04",
+      "layers": {
+        "rear": {
+          "file": "layers/prize-rainbow-cape__u_idle0__rear.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            57,
+            267,
+            281,
+            403
+          ],
+          "sha256": "6e1addb0b4d429251e8361f09e446e1f09a968c2a350a456a428c64c691732de"
+        },
+        "front": {
+          "file": "layers/prize-rainbow-cape__u_idle0__front.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            262,
+            331,
+            335,
+            355
+          ],
+          "sha256": "a0898343c3391a2713a5d36f884338bb2c4845fe6e3cc18acd6ed909d0f32caf"
+        }
+      },
+      "layer_order": [
+        "rear",
+        "base",
+        "front"
+      ],
+      "front_registration": {
+        "source": "sources/rainbow_front_clasp_generated.png",
+        "source_crop": [
+          503,
+          233,
+          1480,
+          549
+        ],
+        "origin": [
+          262,
+          331
+        ],
+        "width": 73,
+        "uniform_scale": 0.07471852610030706,
+        "rotation_degrees": 0,
+        "neck_anchor_stage": [
+          298.5,
+          343.0
+        ]
+      },
+      "rear_registration": {
+        "source": "../source/wardrobe/prize-rainbow-cape-v2.png",
+        "source_sha256": "b48c4866f8a0c1ed9b73abc0a17cd2806dedc4d65807589f90e201c47ae49659",
+        "source_cell_index": 0,
+        "source_cell": [
+          0,
+          0,
+          362,
+          362
+        ],
+        "source_region_clip_in_cell": [
+          47,
+          132,
+          299,
+          335
+        ],
+        "source_neck_pivot": [
+          247,
+          159
+        ],
+        "target_neck_pivot": [
+          245,
+          303
+        ],
+        "uniform_scale": 0.8200000000000001,
+        "translation": [
+          42,
+          173
+        ],
+        "rotation_degrees": -35,
+        "rotation_pivot_stage": [
+          245,
+          303
+        ],
+        "source_pose": "u_idle0",
+        "riding_reuse_note": null
+      },
+      "occlusion": "The original complete base is above the rear cloth, preserving exact mane, tail, limbs and vehicle pixels. Front fastening sits below jaw. No painted character patches."
+    },
+    {
+      "item_id": "prize-rainbow-cape",
+      "frame_id": "u_idle1",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "base_file": "../base/stages/u_idle1.png",
+      "base_sha256": "4e7384355aedec68dd527e88d582904d4977cae24de01689ad4a2d72a398ced1",
+      "layers": {
+        "rear": {
+          "file": "layers/prize-rainbow-cape__u_idle1__rear.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            65,
+            265,
+            284,
+            407
+          ],
+          "sha256": "400985c86e334e9fcc66fef09fd39ef73441b96e1a24524052483afb3a5f0261"
+        },
+        "front": {
+          "file": "layers/prize-rainbow-cape__u_idle1__front.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            258,
+            324,
+            330,
+            347
+          ],
+          "sha256": "e79b909915174e9821469b1f6a10d23ae808cb25d798dcb20ccdcc2966458e87"
+        }
+      },
+      "layer_order": [
+        "rear",
+        "base",
+        "front"
+      ],
+      "front_registration": {
+        "source": "sources/rainbow_front_clasp_generated.png",
+        "source_crop": [
+          503,
+          233,
+          1480,
+          549
+        ],
+        "origin": [
+          258,
+          324
+        ],
+        "width": 72,
+        "uniform_scale": 0.0736949846468782,
+        "rotation_degrees": 0,
+        "neck_anchor_stage": [
+          294.0,
+          335.5
+        ]
+      },
+      "rear_registration": {
+        "source": "../source/wardrobe/prize-rainbow-cape-v2.png",
+        "source_sha256": "b48c4866f8a0c1ed9b73abc0a17cd2806dedc4d65807589f90e201c47ae49659",
+        "source_cell_index": 1,
+        "source_cell": [
+          362,
+          0,
+          724,
+          362
+        ],
+        "source_region_clip_in_cell": [
+          51,
+          131,
+          303,
+          336
+        ],
+        "source_neck_pivot": [
+          246,
+          157
+        ],
+        "target_neck_pivot": [
+          244,
+          299
+        ],
+        "uniform_scale": 0.8200000000000001,
+        "translation": [
+          42,
+          170
+        ],
+        "rotation_degrees": -35,
+        "rotation_pivot_stage": [
+          244,
+          299
+        ],
+        "source_pose": "u_idle1",
+        "riding_reuse_note": null
+      },
+      "occlusion": "The original complete base is above the rear cloth, preserving exact mane, tail, limbs and vehicle pixels. Front fastening sits below jaw. No painted character patches."
+    },
+    {
+      "item_id": "prize-rainbow-cape",
+      "frame_id": "u_run0",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "base_file": "../base/stages/u_run0.png",
+      "base_sha256": "16fb149b94beddd2fb0d94f16ee489d644a3a055d4a88f38b9e16184a6c80b2b",
+      "layers": {
+        "rear": {
+          "file": "layers/prize-rainbow-cape__u_run0__rear.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            60,
+            246,
+            284,
+            397
+          ],
+          "sha256": "a1faf1ea87cefa187f6c25772e3f198e7cca5db893db049d2172247d47141b9b"
+        },
+        "front": {
+          "file": "layers/prize-rainbow-cape__u_run0__front.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            267,
+            335,
+            332,
+            356
+          ],
+          "sha256": "a948acaa03f134dcff3a69324380fd1c39bce7ba761be64fd094c4d670d23bc5"
+        }
+      },
+      "layer_order": [
+        "rear",
+        "base",
+        "front"
+      ],
+      "front_registration": {
+        "source": "sources/rainbow_front_clasp_generated.png",
+        "source_crop": [
+          503,
+          233,
+          1480,
+          549
+        ],
+        "origin": [
+          267,
+          335
+        ],
+        "width": 65,
+        "uniform_scale": 0.06653019447287616,
+        "rotation_degrees": 0,
+        "neck_anchor_stage": [
+          299.5,
+          345.5
+        ]
+      },
+      "rear_registration": {
+        "source": "../source/wardrobe/prize-rainbow-cape-v2.png",
+        "source_sha256": "b48c4866f8a0c1ed9b73abc0a17cd2806dedc4d65807589f90e201c47ae49659",
+        "source_cell_index": 2,
+        "source_cell": [
+          724,
+          0,
+          1086,
+          362
+        ],
+        "source_region_clip_in_cell": [
+          46,
+          136,
+          319,
+          331
+        ],
+        "source_neck_pivot": [
+          266,
+          165
+        ],
+        "target_neck_pivot": [
+          248,
+          307
+        ],
+        "uniform_scale": 0.8200000000000001,
+        "translation": [
+          30,
+          172
+        ],
+        "rotation_degrees": -35,
+        "rotation_pivot_stage": [
+          248,
+          307
+        ],
+        "source_pose": "u_run0",
+        "riding_reuse_note": null
+      },
+      "occlusion": "The original complete base is above the rear cloth, preserving exact mane, tail, limbs and vehicle pixels. Front fastening sits below jaw. No painted character patches."
+    },
+    {
+      "item_id": "prize-rainbow-cape",
+      "frame_id": "u_run1",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "base_file": "../base/stages/u_run1.png",
+      "base_sha256": "b559162368ca98bfc148d4f34f21dc72f76d92334519c7ac61941b9c0a2e5c51",
+      "layers": {
+        "rear": {
+          "file": "layers/prize-rainbow-cape__u_run1__rear.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            61,
+            263,
+            286,
+            403
+          ],
+          "sha256": "7c00abe0105a8a0ea845ef7290f5f5d8448f776c99f00ec9c208871a00351834"
+        },
+        "front": {
+          "file": "layers/prize-rainbow-cape__u_run1__front.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            263,
+            330,
+            338,
+            354
+          ],
+          "sha256": "a741ebd245a5d5e83a34e25d0dbfa270493f5c8d6b21e8b948c826a211c88f8a"
+        }
+      },
+      "layer_order": [
+        "rear",
+        "base",
+        "front"
+      ],
+      "front_registration": {
+        "source": "sources/rainbow_front_clasp_generated.png",
+        "source_crop": [
+          503,
+          233,
+          1480,
+          549
+        ],
+        "origin": [
+          263,
+          330
+        ],
+        "width": 75,
+        "uniform_scale": 0.0767656090071648,
+        "rotation_degrees": 0,
+        "neck_anchor_stage": [
+          300.5,
+          342.0
+        ]
+      },
+      "rear_registration": {
+        "source": "../source/wardrobe/prize-rainbow-cape-v2.png",
+        "source_sha256": "b48c4866f8a0c1ed9b73abc0a17cd2806dedc4d65807589f90e201c47ae49659",
+        "source_cell_index": 3,
+        "source_cell": [
+          1086,
+          0,
+          1448,
+          362
+        ],
+        "source_region_clip_in_cell": [
+          60,
+          134,
+          321,
+          333
+        ],
+        "source_neck_pivot": [
+          264,
+          161
+        ],
+        "target_neck_pivot": [
+          246,
+          304
+        ],
+        "uniform_scale": 0.8200000000000001,
+        "translation": [
+          30,
+          172
+        ],
+        "rotation_degrees": -35,
+        "rotation_pivot_stage": [
+          246,
+          304
+        ],
+        "source_pose": "u_run1",
+        "riding_reuse_note": null
+      },
+      "occlusion": "The original complete base is above the rear cloth, preserving exact mane, tail, limbs and vehicle pixels. Front fastening sits below jaw. No painted character patches."
+    },
+    {
+      "item_id": "prize-rainbow-cape",
+      "frame_id": "u_run2",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "base_file": "../base/stages/u_run2.png",
+      "base_sha256": "33a905cf3e9f76026ce46197e6061b1414975347274b5832f7427daac2e26c61",
+      "layers": {
+        "rear": {
+          "file": "layers/prize-rainbow-cape__u_run2__rear.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            58,
+            257,
+            284,
+            410
+          ],
+          "sha256": "61f30c6f57caf21809644e954fa41a225e1d5124306ed94dae4c248a451ec5aa"
+        },
+        "front": {
+          "file": "layers/prize-rainbow-cape__u_run2__front.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            259,
+            337,
+            328,
+            359
+          ],
+          "sha256": "a1ab757702de866efd77c8f431f9e5959921429f0a7895548eddd6e37ddd8d50"
+        }
+      },
+      "layer_order": [
+        "rear",
+        "base",
+        "front"
+      ],
+      "front_registration": {
+        "source": "sources/rainbow_front_clasp_generated.png",
+        "source_crop": [
+          503,
+          233,
+          1480,
+          549
+        ],
+        "origin": [
+          259,
+          337
+        ],
+        "width": 69,
+        "uniform_scale": 0.07062436028659161,
+        "rotation_degrees": 0,
+        "neck_anchor_stage": [
+          293.5,
+          348.0
+        ]
+      },
+      "rear_registration": {
+        "source": "../source/wardrobe/prize-rainbow-cape-v2.png",
+        "source_sha256": "b48c4866f8a0c1ed9b73abc0a17cd2806dedc4d65807589f90e201c47ae49659",
+        "source_cell_index": 4,
+        "source_cell": [
+          0,
+          362,
+          362,
+          724
+        ],
+        "source_region_clip_in_cell": [
+          39,
+          120,
+          308,
+          323
+        ],
+        "source_neck_pivot": [
+          248,
+          145
+        ],
+        "target_neck_pivot": [
+          245,
+          307
+        ],
+        "uniform_scale": 0.8200000000000001,
+        "translation": [
+          42,
+          188
+        ],
+        "rotation_degrees": -35,
+        "rotation_pivot_stage": [
+          245,
+          307
+        ],
+        "source_pose": "u_run2",
+        "riding_reuse_note": null
+      },
+      "occlusion": "The original complete base is above the rear cloth, preserving exact mane, tail, limbs and vehicle pixels. Front fastening sits below jaw. No painted character patches."
+    },
+    {
+      "item_id": "prize-rainbow-cape",
+      "frame_id": "u_run3",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "base_file": "../base/stages/u_run3.png",
+      "base_sha256": "c9c86b37d334ebadb3b22071d80a5285191dd03ec5ff57438e278ff5f6f29dd4",
+      "layers": {
+        "rear": {
+          "file": "layers/prize-rainbow-cape__u_run3__rear.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            69,
+            255,
+            287,
+            412
+          ],
+          "sha256": "382a640f66e3dd042b03e5070f66bbe5251682d857ac85b66d2c622d46f16714"
+        },
+        "front": {
+          "file": "layers/prize-rainbow-cape__u_run3__front.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            262,
+            340,
+            330,
+            362
+          ],
+          "sha256": "51adb53f250aafa18cc3d16192157b05a824c149db5e7e2533a2133d16e12a13"
+        }
+      },
+      "layer_order": [
+        "rear",
+        "base",
+        "front"
+      ],
+      "front_registration": {
+        "source": "sources/rainbow_front_clasp_generated.png",
+        "source_crop": [
+          503,
+          233,
+          1480,
+          549
+        ],
+        "origin": [
+          262,
+          340
+        ],
+        "width": 68,
+        "uniform_scale": 0.06960081883316274,
+        "rotation_degrees": 0,
+        "neck_anchor_stage": [
+          296.0,
+          351.0
+        ]
+      },
+      "rear_registration": {
+        "source": "../source/wardrobe/prize-rainbow-cape-v2.png",
+        "source_sha256": "b48c4866f8a0c1ed9b73abc0a17cd2806dedc4d65807589f90e201c47ae49659",
+        "source_cell_index": 5,
+        "source_cell": [
+          362,
+          362,
+          724,
+          724
+        ],
+        "source_region_clip_in_cell": [
+          48,
+          121,
+          311,
+          317
+        ],
+        "source_neck_pivot": [
+          256,
+          148
+        ],
+        "target_neck_pivot": [
+          250,
+          310
+        ],
+        "uniform_scale": 0.8200000000000001,
+        "translation": [
+          40,
+          189
+        ],
+        "rotation_degrees": -35,
+        "rotation_pivot_stage": [
+          250,
+          310
+        ],
+        "source_pose": "u_run3",
+        "riding_reuse_note": null
+      },
+      "occlusion": "The original complete base is above the rear cloth, preserving exact mane, tail, limbs and vehicle pixels. Front fastening sits below jaw. No painted character patches."
+    },
+    {
+      "item_id": "prize-rainbow-cape",
+      "frame_id": "u_run4",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "base_file": "../base/stages/u_run4.png",
+      "base_sha256": "c1d60d263dcf596ab054371c4bf4e0c2656c390d28f0436566d2554f8a7ce0be",
+      "layers": {
+        "rear": {
+          "file": "layers/prize-rainbow-cape__u_run4__rear.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            55,
+            242,
+            276,
+            408
+          ],
+          "sha256": "8286ce25dabee48e801ed0ce3018709c1bca08325d02ae3f7af46fe0068cb783"
+        },
+        "front": {
+          "file": "layers/prize-rainbow-cape__u_run4__front.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            253,
+            330,
+            315,
+            350
+          ],
+          "sha256": "ed6ae8ad2414e3cb51dd2e1ef7e5595de4640f84661916eb19403a35d161f227"
+        }
+      },
+      "layer_order": [
+        "rear",
+        "base",
+        "front"
+      ],
+      "front_registration": {
+        "source": "sources/rainbow_front_clasp_generated.png",
+        "source_crop": [
+          503,
+          233,
+          1480,
+          549
+        ],
+        "origin": [
+          253,
+          330
+        ],
+        "width": 62,
+        "uniform_scale": 0.06345957011258956,
+        "rotation_degrees": 0,
+        "neck_anchor_stage": [
+          284.0,
+          340.0
+        ]
+      },
+      "rear_registration": {
+        "source": "../source/wardrobe/prize-rainbow-cape-v2.png",
+        "source_sha256": "b48c4866f8a0c1ed9b73abc0a17cd2806dedc4d65807589f90e201c47ae49659",
+        "source_cell_index": 6,
+        "source_cell": [
+          724,
+          362,
+          1086,
+          724
+        ],
+        "source_region_clip_in_cell": [
+          42,
+          121,
+          308,
+          323
+        ],
+        "source_neck_pivot": [
+          251,
+          147
+        ],
+        "target_neck_pivot": [
+          238,
+          301
+        ],
+        "uniform_scale": 0.8200000000000001,
+        "translation": [
+          32,
+          180
+        ],
+        "rotation_degrees": -35,
+        "rotation_pivot_stage": [
+          238,
+          301
+        ],
+        "source_pose": "u_run4",
+        "riding_reuse_note": null
+      },
+      "occlusion": "The original complete base is above the rear cloth, preserving exact mane, tail, limbs and vehicle pixels. Front fastening sits below jaw. No painted character patches."
+    },
+    {
+      "item_id": "prize-rainbow-cape",
+      "frame_id": "u_run5",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "base_file": "../base/stages/u_run5.png",
+      "base_sha256": "e902ea07c28f14b45623c922a0804a148d23f5db6e912dc6a2c67796875f4c14",
+      "layers": {
+        "rear": {
+          "file": "layers/prize-rainbow-cape__u_run5__rear.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            57,
+            249,
+            288,
+            424
+          ],
+          "sha256": "bd8ec6aec0fd1029779748c78600121ad31d183ae7304d027a0d6dd2da91362a"
+        },
+        "front": {
+          "file": "layers/prize-rainbow-cape__u_run5__front.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            264,
+            342,
+            329,
+            363
+          ],
+          "sha256": "42f5b6ef0f9a373ee0d9c68cf0de07da2c5f21e37a88e9292bb38fd7d7484aa5"
+        }
+      },
+      "layer_order": [
+        "rear",
+        "base",
+        "front"
+      ],
+      "front_registration": {
+        "source": "sources/rainbow_front_clasp_generated.png",
+        "source_crop": [
+          503,
+          233,
+          1480,
+          549
+        ],
+        "origin": [
+          264,
+          342
+        ],
+        "width": 65,
+        "uniform_scale": 0.06653019447287616,
+        "rotation_degrees": 0,
+        "neck_anchor_stage": [
+          296.5,
+          352.5
+        ]
+      },
+      "rear_registration": {
+        "source": "../source/wardrobe/prize-rainbow-cape-v2.png",
+        "source_sha256": "b48c4866f8a0c1ed9b73abc0a17cd2806dedc4d65807589f90e201c47ae49659",
+        "source_cell_index": 7,
+        "source_cell": [
+          1086,
+          362,
+          1448,
+          724
+        ],
+        "source_region_clip_in_cell": [
+          38,
+          121,
+          323,
+          318
+        ],
+        "source_neck_pivot": [
+          263,
+          147
+        ],
+        "target_neck_pivot": [
+          248,
+          312
+        ],
+        "uniform_scale": 0.8200000000000001,
+        "translation": [
+          32,
+          191
+        ],
+        "rotation_degrees": -35,
+        "rotation_pivot_stage": [
+          248,
+          312
+        ],
+        "source_pose": "u_run5",
+        "riding_reuse_note": null
+      },
+      "occlusion": "The original complete base is above the rear cloth, preserving exact mane, tail, limbs and vehicle pixels. Front fastening sits below jaw. No painted character patches."
+    },
+    {
+      "item_id": "prize-rainbow-cape",
+      "frame_id": "u_happy0",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "base_file": "../base/stages/u_happy0.png",
+      "base_sha256": "565006f31e1ad806c52fdf53e9f1aa12db7c664e1694a899d3e054baf882a0b5",
+      "layers": {
+        "rear": {
+          "file": "layers/prize-rainbow-cape__u_happy0__rear.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            83,
+            261,
+            290,
+            414
+          ],
+          "sha256": "a2ae792013b851852076340b7188bca90a3a4ec3c97afc6189e14fd67b6aa501"
+        },
+        "front": {
+          "file": "layers/prize-rainbow-cape__u_happy0__front.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            271,
+            321,
+            334,
+            347
+          ],
+          "sha256": "42d94d77528b8de4d326c89ec014a694fcb188b4fe35109d8f124c6c665a0645"
+        }
+      },
+      "layer_order": [
+        "rear",
+        "base",
+        "front"
+      ],
+      "front_registration": {
+        "source": "sources/rainbow_front_clasp_generated.png",
+        "source_crop": [
+          503,
+          233,
+          1480,
+          549
+        ],
+        "origin": [
+          270,
+          320
+        ],
+        "width": 62,
+        "uniform_scale": 0.06345957011258956,
+        "rotation_degrees": 8,
+        "neck_anchor_stage": [
+          301.0,
+          335.0
+        ]
+      },
+      "rear_registration": {
+        "source": "../source/wardrobe/prize-rainbow-cape-v2.png",
+        "source_sha256": "b48c4866f8a0c1ed9b73abc0a17cd2806dedc4d65807589f90e201c47ae49659",
+        "source_cell_index": 8,
+        "source_cell": [
+          0,
+          724,
+          362,
+          1086
+        ],
+        "source_region_clip_in_cell": [
+          55,
+          102,
+          272,
+          297
+        ],
+        "source_neck_pivot": [
+          209,
+          128
+        ],
+        "target_neck_pivot": [
+          245,
+          297
+        ],
+        "uniform_scale": 0.8400000000000001,
+        "translation": [
+          69,
+          189
+        ],
+        "rotation_degrees": -35,
+        "rotation_pivot_stage": [
+          245,
+          297
+        ],
+        "source_pose": "u_happy0",
+        "riding_reuse_note": null
+      },
+      "occlusion": "The original complete base is above the rear cloth, preserving exact mane, tail, limbs and vehicle pixels. Front fastening sits below jaw. No painted character patches."
+    },
+    {
+      "item_id": "prize-rainbow-cape",
+      "frame_id": "u_happy1",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "base_file": "../base/stages/u_happy1.png",
+      "base_sha256": "c4a4e3ef2a04883b1cc9e90e3ddff535ef12a80f86803fe57f7cdfc56564d0ee",
+      "layers": {
+        "rear": {
+          "file": "layers/prize-rainbow-cape__u_happy1__rear.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            67,
+            232,
+            282,
+            394
+          ],
+          "sha256": "8a9c02c66f6c37e1ba1484c65ea11c22254c606abcfba1bb2cf6f90351585fad"
+        },
+        "front": {
+          "file": "layers/prize-rainbow-cape__u_happy1__front.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            246,
+            287,
+            315,
+            319
+          ],
+          "sha256": "757aae258d5662f0c1df7eb1219b3d0f41fd910ff3a430673eb273b6644ade7d"
+        }
+      },
+      "layer_order": [
+        "rear",
+        "base",
+        "front"
+      ],
+      "front_registration": {
+        "source": "sources/rainbow_front_clasp_generated.png",
+        "source_crop": [
+          503,
+          233,
+          1480,
+          549
+        ],
+        "origin": [
+          245,
+          286
+        ],
+        "width": 68,
+        "uniform_scale": 0.06960081883316274,
+        "rotation_degrees": 12,
+        "neck_anchor_stage": [
+          279.0,
+          304.0
+        ]
+      },
+      "rear_registration": {
+        "source": "../source/wardrobe/prize-rainbow-cape-v2.png",
+        "source_sha256": "b48c4866f8a0c1ed9b73abc0a17cd2806dedc4d65807589f90e201c47ae49659",
+        "source_cell_index": 9,
+        "source_cell": [
+          362,
+          724,
+          724,
+          1086
+        ],
+        "source_region_clip_in_cell": [
+          56,
+          91,
+          316,
+          292
+        ],
+        "source_neck_pivot": [
+          217,
+          119
+        ],
+        "target_neck_pivot": [
+          236,
+          269
+        ],
+        "uniform_scale": 0.8400000000000001,
+        "translation": [
+          54,
+          169
+        ],
+        "rotation_degrees": -35,
+        "rotation_pivot_stage": [
+          236,
+          269
+        ],
+        "source_pose": "u_happy1",
+        "riding_reuse_note": null
+      },
+      "occlusion": "The original complete base is above the rear cloth, preserving exact mane, tail, limbs and vehicle pixels. Front fastening sits below jaw. No painted character patches."
+    },
+    {
+      "item_id": "prize-rainbow-cape",
+      "frame_id": "u_happy2",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "base_file": "../base/stages/u_happy2.png",
+      "base_sha256": "add156857f5fd9d58f77c5a83f432adec762005c1f7ab8b5fe83ee6805bc6f38",
+      "layers": {
+        "rear": {
+          "file": "layers/prize-rainbow-cape__u_happy2__rear.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            82,
+            249,
+            284,
+            400
+          ],
+          "sha256": "355112cc93d9d1e87bf9aac3e07fe92dfe3f327e81894116880f8ea26f6d50a8"
+        },
+        "front": {
+          "file": "layers/prize-rainbow-cape__u_happy2__front.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            264,
+            321,
+            324,
+            350
+          ],
+          "sha256": "cec7da406ba23720e6f2d0dc085b1f7b3a72384141b40a17d3b4d700b25f5632"
+        }
+      },
+      "layer_order": [
+        "rear",
+        "base",
+        "front"
+      ],
+      "front_registration": {
+        "source": "sources/rainbow_front_clasp_generated.png",
+        "source_crop": [
+          503,
+          233,
+          1480,
+          549
+        ],
+        "origin": [
+          263,
+          319
+        ],
+        "width": 60,
+        "uniform_scale": 0.06141248720573183,
+        "rotation_degrees": 15,
+        "neck_anchor_stage": [
+          293.0,
+          336.5
+        ]
+      },
+      "rear_registration": {
+        "source": "../source/wardrobe/prize-rainbow-cape-v2.png",
+        "source_sha256": "b48c4866f8a0c1ed9b73abc0a17cd2806dedc4d65807589f90e201c47ae49659",
+        "source_cell_index": 10,
+        "source_cell": [
+          724,
+          724,
+          1086,
+          1086
+        ],
+        "source_region_clip_in_cell": [
+          54,
+          97,
+          287,
+          292
+        ],
+        "source_neck_pivot": [
+          226,
+          125
+        ],
+        "target_neck_pivot": [
+          240,
+          294
+        ],
+        "uniform_scale": 0.8400000000000001,
+        "translation": [
+          50,
+          189
+        ],
+        "rotation_degrees": -35,
+        "rotation_pivot_stage": [
+          240,
+          294
+        ],
+        "source_pose": "u_happy2",
+        "riding_reuse_note": null
+      },
+      "occlusion": "The original complete base is above the rear cloth, preserving exact mane, tail, limbs and vehicle pixels. Front fastening sits below jaw. No painted character patches."
+    },
+    {
+      "item_id": "prize-rainbow-cape",
+      "frame_id": "bike0",
+      "pivot_stage": [
+        263.4254143646409,
+        445.52486187845307
+      ],
+      "base_file": "../base/stages/bike0.png",
+      "base_sha256": "0933fd0929cd4ca4f47c6966d5a1618209dd159e4800524a884811637712c416",
+      "layers": {
+        "rear": {
+          "file": "layers/prize-rainbow-cape__bike0__rear.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            32,
+            148,
+            272,
+            310
+          ],
+          "sha256": "4cdf029fea2348b9c0389c62ac17af2e9059bc758ce103c8f78a1b161f8bd1b0"
+        },
+        "front": {
+          "file": "layers/prize-rainbow-cape__bike0__front.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            244,
+            223,
+            316,
+            246
+          ],
+          "sha256": "bfa60375be856f5cd48f920565e5b35fab14e3928d29c62aa40b841d9698e49d"
+        }
+      },
+      "layer_order": [
+        "rear",
+        "base",
+        "front"
+      ],
+      "front_registration": {
+        "source": "sources/rainbow_front_clasp_generated.png",
+        "source_crop": [
+          503,
+          233,
+          1480,
+          549
+        ],
+        "origin": [
+          244,
+          223
+        ],
+        "width": 72,
+        "uniform_scale": 0.0736949846468782,
+        "rotation_degrees": 0,
+        "neck_anchor_stage": [
+          280.0,
+          234.5
+        ]
+      },
+      "rear_registration": {
+        "source": "../source/wardrobe/prize-rainbow-cape-v2.png",
+        "source_sha256": "b48c4866f8a0c1ed9b73abc0a17cd2806dedc4d65807589f90e201c47ae49659",
+        "source_cell_index": 2,
+        "source_cell": [
+          724,
+          0,
+          1086,
+          362
+        ],
+        "source_region_clip_in_cell": [
+          46,
+          136,
+          319,
+          331
+        ],
+        "source_neck_pivot": [
+          266,
+          165
+        ],
+        "target_neck_pivot": [
+          233,
+          214
+        ],
+        "uniform_scale": 0.88,
+        "translation": [
+          -1,
+          69
+        ],
+        "rotation_degrees": -35,
+        "rotation_pivot_stage": [
+          233,
+          214
+        ],
+        "source_pose": "u_run0",
+        "riding_reuse_note": "Dedicated actual-riding-stage registration of reusable flowing cloth silhouette; no legacy celebration/idle fit fallback"
+      },
+      "occlusion": "The original complete base is above the rear cloth, preserving exact mane, tail, limbs and vehicle pixels. Front fastening sits below jaw. No painted character patches."
+    },
+    {
+      "item_id": "prize-rainbow-cape",
+      "frame_id": "bike1",
+      "pivot_stage": [
+        261.6574585635359,
+        445.52486187845307
+      ],
+      "base_file": "../base/stages/bike1.png",
+      "base_sha256": "e99bd54c8e78c8ee36c6baec38c49063c76bc14357014fb84a6ab2b8647bb4ad",
+      "layers": {
+        "rear": {
+          "file": "layers/prize-rainbow-cape__bike1__rear.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            32,
+            159,
+            274,
+            324
+          ],
+          "sha256": "5d02f8b266dc4461f397c72245ee8688e6e956819127098005fc3bb7477a89f7"
+        },
+        "front": {
+          "file": "layers/prize-rainbow-cape__bike1__front.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            243,
+            223,
+            315,
+            246
+          ],
+          "sha256": "ee89c0b0739bf458441b2fb6839e65c7075be5874c0c5f068e1397b86f88fa0f"
+        }
+      },
+      "layer_order": [
+        "rear",
+        "base",
+        "front"
+      ],
+      "front_registration": {
+        "source": "sources/rainbow_front_clasp_generated.png",
+        "source_crop": [
+          503,
+          233,
+          1480,
+          549
+        ],
+        "origin": [
+          243,
+          223
+        ],
+        "width": 72,
+        "uniform_scale": 0.0736949846468782,
+        "rotation_degrees": 0,
+        "neck_anchor_stage": [
+          279.0,
+          234.5
+        ]
+      },
+      "rear_registration": {
+        "source": "../source/wardrobe/prize-rainbow-cape-v2.png",
+        "source_sha256": "b48c4866f8a0c1ed9b73abc0a17cd2806dedc4d65807589f90e201c47ae49659",
+        "source_cell_index": 4,
+        "source_cell": [
+          0,
+          362,
+          362,
+          724
+        ],
+        "source_region_clip_in_cell": [
+          39,
+          120,
+          308,
+          323
+        ],
+        "source_neck_pivot": [
+          248,
+          145
+        ],
+        "target_neck_pivot": [
+          232,
+          214
+        ],
+        "uniform_scale": 0.88,
+        "translation": [
+          14,
+          86
+        ],
+        "rotation_degrees": -35,
+        "rotation_pivot_stage": [
+          232,
+          214
+        ],
+        "source_pose": "u_run2",
+        "riding_reuse_note": "Dedicated actual-riding-stage registration of reusable flowing cloth silhouette; no legacy celebration/idle fit fallback"
+      },
+      "occlusion": "The original complete base is above the rear cloth, preserving exact mane, tail, limbs and vehicle pixels. Front fastening sits below jaw. No painted character patches."
+    },
+    {
+      "item_id": "prize-rainbow-cape",
+      "frame_id": "bike2",
+      "pivot_stage": [
+        259.88950276243094,
+        445.52486187845307
+      ],
+      "base_file": "../base/stages/bike2.png",
+      "base_sha256": "c0280e4d764a531d96e1a90e8eed9c0d7fe74dd2bef984aefa039b97516c39a8",
+      "layers": {
+        "rear": {
+          "file": "layers/prize-rainbow-cape__bike2__rear.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            38,
+            155,
+            272,
+            324
+          ],
+          "sha256": "44ffcb99ee570581fb6a07a5de6f0a8170c0ce5ec205f3c467fdd961e89ee5cc"
+        },
+        "front": {
+          "file": "layers/prize-rainbow-cape__bike2__front.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            243,
+            223,
+            315,
+            246
+          ],
+          "sha256": "ee89c0b0739bf458441b2fb6839e65c7075be5874c0c5f068e1397b86f88fa0f"
+        }
+      },
+      "layer_order": [
+        "rear",
+        "base",
+        "front"
+      ],
+      "front_registration": {
+        "source": "sources/rainbow_front_clasp_generated.png",
+        "source_crop": [
+          503,
+          233,
+          1480,
+          549
+        ],
+        "origin": [
+          243,
+          223
+        ],
+        "width": 72,
+        "uniform_scale": 0.0736949846468782,
+        "rotation_degrees": 0,
+        "neck_anchor_stage": [
+          279.0,
+          234.5
+        ]
+      },
+      "rear_registration": {
+        "source": "../source/wardrobe/prize-rainbow-cape-v2.png",
+        "source_sha256": "b48c4866f8a0c1ed9b73abc0a17cd2806dedc4d65807589f90e201c47ae49659",
+        "source_cell_index": 5,
+        "source_cell": [
+          362,
+          362,
+          724,
+          724
+        ],
+        "source_region_clip_in_cell": [
+          48,
+          121,
+          311,
+          317
+        ],
+        "source_neck_pivot": [
+          256,
+          148
+        ],
+        "target_neck_pivot": [
+          232,
+          214
+        ],
+        "uniform_scale": 0.88,
+        "translation": [
+          7,
+          84
+        ],
+        "rotation_degrees": -35,
+        "rotation_pivot_stage": [
+          232,
+          214
+        ],
+        "source_pose": "u_run3",
+        "riding_reuse_note": "Dedicated actual-riding-stage registration of reusable flowing cloth silhouette; no legacy celebration/idle fit fallback"
+      },
+      "occlusion": "The original complete base is above the rear cloth, preserving exact mane, tail, limbs and vehicle pixels. Front fastening sits below jaw. No painted character patches."
+    },
+    {
+      "item_id": "prize-rainbow-cape",
+      "frame_id": "bike3",
+      "pivot_stage": [
+        259.18232044198896,
+        445.52486187845307
+      ],
+      "base_file": "../base/stages/bike3.png",
+      "base_sha256": "a7a49ffc8b7d66fb783131a8c312e07c3cabb5de61e3f528f3153853e54c0781",
+      "layers": {
+        "rear": {
+          "file": "layers/prize-rainbow-cape__bike3__rear.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            32,
+            169,
+            274,
+            320
+          ],
+          "sha256": "263b43c77a4039e2e0dac96862c467e819807e0b5aa9abe62867652d609e910c"
+        },
+        "front": {
+          "file": "layers/prize-rainbow-cape__bike3__front.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            242,
+            223,
+            314,
+            246
+          ],
+          "sha256": "673cb5579bb05b3a9452e779acbbdc960bb892f6716d344c8d0d651568537c46"
+        }
+      },
+      "layer_order": [
+        "rear",
+        "base",
+        "front"
+      ],
+      "front_registration": {
+        "source": "sources/rainbow_front_clasp_generated.png",
+        "source_crop": [
+          503,
+          233,
+          1480,
+          549
+        ],
+        "origin": [
+          242,
+          223
+        ],
+        "width": 72,
+        "uniform_scale": 0.0736949846468782,
+        "rotation_degrees": 0,
+        "neck_anchor_stage": [
+          278.0,
+          234.5
+        ]
+      },
+      "rear_registration": {
+        "source": "../source/wardrobe/prize-rainbow-cape-v2.png",
+        "source_sha256": "b48c4866f8a0c1ed9b73abc0a17cd2806dedc4d65807589f90e201c47ae49659",
+        "source_cell_index": 3,
+        "source_cell": [
+          1086,
+          0,
+          1448,
+          362
+        ],
+        "source_region_clip_in_cell": [
+          60,
+          134,
+          321,
+          333
+        ],
+        "source_neck_pivot": [
+          264,
+          161
+        ],
+        "target_neck_pivot": [
+          231,
+          214
+        ],
+        "uniform_scale": 0.88,
+        "translation": [
+          -1,
+          72
+        ],
+        "rotation_degrees": -35,
+        "rotation_pivot_stage": [
+          231,
+          214
+        ],
+        "source_pose": "u_run1",
+        "riding_reuse_note": "Dedicated actual-riding-stage registration of reusable flowing cloth silhouette; no legacy celebration/idle fit fallback"
+      },
+      "occlusion": "The original complete base is above the rear cloth, preserving exact mane, tail, limbs and vehicle pixels. Front fastening sits below jaw. No painted character patches."
+    },
+    {
+      "item_id": "prize-rainbow-cape",
+      "frame_id": "skateboard0",
+      "pivot_stage": [
+        248.22099447513813,
+        425.01657458563534
+      ],
+      "base_file": "../base/stages/skateboard0.png",
+      "base_sha256": "3800aa6bfc1418be7298ff8cd2709797b77bb32d7256b24040c197e31728ed79",
+      "layers": {
+        "rear": {
+          "file": "layers/prize-rainbow-cape__skateboard0__rear.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            45,
+            175,
+            274,
+            329
+          ],
+          "sha256": "0329f0c6cbfe882162a57349de46be309892b4d1d80bcd01719a3d2cf9cc7ab8"
+        },
+        "front": {
+          "file": "layers/prize-rainbow-cape__skateboard0__front.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            250,
+            259,
+            318,
+            281
+          ],
+          "sha256": "bed6d1d2a25fa440bc14b1aa7a4df50534ffc3916c374c4271cf167d9f38e05d"
+        }
+      },
+      "layer_order": [
+        "rear",
+        "base",
+        "front"
+      ],
+      "front_registration": {
+        "source": "sources/rainbow_front_clasp_generated.png",
+        "source_crop": [
+          503,
+          233,
+          1480,
+          549
+        ],
+        "origin": [
+          250,
+          259
+        ],
+        "width": 68,
+        "uniform_scale": 0.06960081883316274,
+        "rotation_degrees": 0,
+        "neck_anchor_stage": [
+          284.0,
+          270.0
+        ]
+      },
+      "rear_registration": {
+        "source": "../source/wardrobe/prize-rainbow-cape-v2.png",
+        "source_sha256": "b48c4866f8a0c1ed9b73abc0a17cd2806dedc4d65807589f90e201c47ae49659",
+        "source_cell_index": 2,
+        "source_cell": [
+          724,
+          0,
+          1086,
+          362
+        ],
+        "source_region_clip_in_cell": [
+          46,
+          136,
+          319,
+          331
+        ],
+        "source_neck_pivot": [
+          266,
+          165
+        ],
+        "target_neck_pivot": [
+          236,
+          238
+        ],
+        "uniform_scale": 0.8400000000000001,
+        "translation": [
+          13,
+          99
+        ],
+        "rotation_degrees": -35,
+        "rotation_pivot_stage": [
+          236,
+          238
+        ],
+        "source_pose": "u_run0",
+        "riding_reuse_note": "Dedicated actual-riding-stage registration of reusable flowing cloth silhouette; no legacy celebration/idle fit fallback"
+      },
+      "occlusion": "The original complete base is above the rear cloth, preserving exact mane, tail, limbs and vehicle pixels. Front fastening sits below jaw. No painted character patches."
+    },
+    {
+      "item_id": "prize-rainbow-cape",
+      "frame_id": "skateboard1",
+      "pivot_stage": [
+        254.939226519337,
+        425.72375690607737
+      ],
+      "base_file": "../base/stages/skateboard1.png",
+      "base_sha256": "d8649f42d0d188b23c910b0901fa5ede4b606b05223694fd7d395075e4790a51",
+      "layers": {
+        "rear": {
+          "file": "layers/prize-rainbow-cape__skateboard1__rear.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            66,
+            184,
+            297,
+            342
+          ],
+          "sha256": "27a7686d11e4fa591dfffa378f43de515a147179657c88ed958855d1cc39198e"
+        },
+        "front": {
+          "file": "layers/prize-rainbow-cape__skateboard1__front.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            283,
+            257,
+            351,
+            279
+          ],
+          "sha256": "810d0687047bb6065cb6876791f552a7649ed6dbbed1a8abd4039904449b6500"
+        }
+      },
+      "layer_order": [
+        "rear",
+        "base",
+        "front"
+      ],
+      "front_registration": {
+        "source": "sources/rainbow_front_clasp_generated.png",
+        "source_crop": [
+          503,
+          233,
+          1480,
+          549
+        ],
+        "origin": [
+          283,
+          257
+        ],
+        "width": 68,
+        "uniform_scale": 0.06960081883316274,
+        "rotation_degrees": 0,
+        "neck_anchor_stage": [
+          317.0,
+          268.0
+        ]
+      },
+      "rear_registration": {
+        "source": "../source/wardrobe/prize-rainbow-cape-v2.png",
+        "source_sha256": "b48c4866f8a0c1ed9b73abc0a17cd2806dedc4d65807589f90e201c47ae49659",
+        "source_cell_index": 4,
+        "source_cell": [
+          0,
+          362,
+          362,
+          724
+        ],
+        "source_region_clip_in_cell": [
+          39,
+          120,
+          308,
+          323
+        ],
+        "source_neck_pivot": [
+          248,
+          145
+        ],
+        "target_neck_pivot": [
+          257,
+          236
+        ],
+        "uniform_scale": 0.8400000000000001,
+        "translation": [
+          49,
+          114
+        ],
+        "rotation_degrees": -35,
+        "rotation_pivot_stage": [
+          257,
+          236
+        ],
+        "source_pose": "u_run2",
+        "riding_reuse_note": "Dedicated actual-riding-stage registration of reusable flowing cloth silhouette; no legacy celebration/idle fit fallback"
+      },
+      "occlusion": "The original complete base is above the rear cloth, preserving exact mane, tail, limbs and vehicle pixels. Front fastening sits below jaw. No painted character patches."
+    },
+    {
+      "item_id": "prize-rainbow-cape",
+      "frame_id": "skateboard2",
+      "pivot_stage": [
+        252.11049723756906,
+        425.72375690607737
+      ],
+      "base_file": "../base/stages/skateboard2.png",
+      "base_sha256": "4f5384cfb3a8549ca11ce51d027faaab4cac15760e66ad1ca03817bb22d3c62f",
+      "layers": {
+        "rear": {
+          "file": "layers/prize-rainbow-cape__skateboard2__rear.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            60,
+            179,
+            283,
+            340
+          ],
+          "sha256": "1c04d5b52012221c277aebe27c403fee62a83a741073f59aa3b60fe2eac49ecd"
+        },
+        "front": {
+          "file": "layers/prize-rainbow-cape__skateboard2__front.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            266,
+            257,
+            334,
+            279
+          ],
+          "sha256": "5f7955f4c9a2944d937b51fb95abe8674896ffe6f43831b84ff9070f3adaadd7"
+        }
+      },
+      "layer_order": [
+        "rear",
+        "base",
+        "front"
+      ],
+      "front_registration": {
+        "source": "sources/rainbow_front_clasp_generated.png",
+        "source_crop": [
+          503,
+          233,
+          1480,
+          549
+        ],
+        "origin": [
+          266,
+          257
+        ],
+        "width": 68,
+        "uniform_scale": 0.06960081883316274,
+        "rotation_degrees": 0,
+        "neck_anchor_stage": [
+          300.0,
+          268.0
+        ]
+      },
+      "rear_registration": {
+        "source": "../source/wardrobe/prize-rainbow-cape-v2.png",
+        "source_sha256": "b48c4866f8a0c1ed9b73abc0a17cd2806dedc4d65807589f90e201c47ae49659",
+        "source_cell_index": 5,
+        "source_cell": [
+          362,
+          362,
+          724,
+          724
+        ],
+        "source_region_clip_in_cell": [
+          48,
+          121,
+          311,
+          317
+        ],
+        "source_neck_pivot": [
+          256,
+          148
+        ],
+        "target_neck_pivot": [
+          246,
+          236
+        ],
+        "uniform_scale": 0.8400000000000001,
+        "translation": [
+          31,
+          112
+        ],
+        "rotation_degrees": -35,
+        "rotation_pivot_stage": [
+          246,
+          236
+        ],
+        "source_pose": "u_run3",
+        "riding_reuse_note": "Dedicated actual-riding-stage registration of reusable flowing cloth silhouette; no legacy celebration/idle fit fallback"
+      },
+      "occlusion": "The original complete base is above the rear cloth, preserving exact mane, tail, limbs and vehicle pixels. Front fastening sits below jaw. No painted character patches."
+    },
+    {
+      "item_id": "prize-rainbow-cape",
+      "frame_id": "skateboard3",
+      "pivot_stage": [
+        253.87845303867402,
+        425.01657458563534
+      ],
+      "base_file": "../base/stages/skateboard3.png",
+      "base_sha256": "bf94fc058aff4f7e83c6c063508aee0a089e4f0fbd43040dbf3265c4afa2f69e",
+      "layers": {
+        "rear": {
+          "file": "layers/prize-rainbow-cape__skateboard3__rear.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            64,
+            192,
+            295,
+            336
+          ],
+          "sha256": "e623c2b76c416486df5e5ad2ce027c1e4d39b4c982895d82c82a2da6d4cb0750"
+        },
+        "front": {
+          "file": "layers/prize-rainbow-cape__skateboard3__front.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            266,
+            257,
+            334,
+            279
+          ],
+          "sha256": "5f7955f4c9a2944d937b51fb95abe8674896ffe6f43831b84ff9070f3adaadd7"
+        }
+      },
+      "layer_order": [
+        "rear",
+        "base",
+        "front"
+      ],
+      "front_registration": {
+        "source": "sources/rainbow_front_clasp_generated.png",
+        "source_crop": [
+          503,
+          233,
+          1480,
+          549
+        ],
+        "origin": [
+          266,
+          257
+        ],
+        "width": 68,
+        "uniform_scale": 0.06960081883316274,
+        "rotation_degrees": 0,
+        "neck_anchor_stage": [
+          300.0,
+          268.0
+        ]
+      },
+      "rear_registration": {
+        "source": "../source/wardrobe/prize-rainbow-cape-v2.png",
+        "source_sha256": "b48c4866f8a0c1ed9b73abc0a17cd2806dedc4d65807589f90e201c47ae49659",
+        "source_cell_index": 3,
+        "source_cell": [
+          1086,
+          0,
+          1448,
+          362
+        ],
+        "source_region_clip_in_cell": [
+          60,
+          134,
+          321,
+          333
+        ],
+        "source_neck_pivot": [
+          264,
+          161
+        ],
+        "target_neck_pivot": [
+          255,
+          235
+        ],
+        "uniform_scale": 0.8400000000000001,
+        "translation": [
+          33,
+          100
+        ],
+        "rotation_degrees": -35,
+        "rotation_pivot_stage": [
+          255,
+          235
+        ],
+        "source_pose": "u_run1",
+        "riding_reuse_note": "Dedicated actual-riding-stage registration of reusable flowing cloth silhouette; no legacy celebration/idle fit fallback"
+      },
+      "occlusion": "The original complete base is above the rear cloth, preserving exact mane, tail, limbs and vehicle pixels. Front fastening sits below jaw. No painted character patches."
+    },
+    {
+      "item_id": "legacy-hero",
+      "frame_id": "u_idle0",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "base_file": "../base/stages/u_idle0.png",
+      "base_sha256": "36160efe1a4bfcfdd95a5fb085234a8da880826e5f4064294fa8d964a9ea1b04",
+      "layers": {
+        "rear": {
+          "file": "layers/legacy-hero__u_idle0__rear.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            66,
+            265,
+            300,
+            400
+          ],
+          "sha256": "b1c060cd4f69618836a3b598cf6753ac901fafcb40bfe57cfb09517f61c4f353"
+        },
+        "front": {
+          "file": "layers/legacy-hero__u_idle0__front.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            262,
+            331,
+            335,
+            354
+          ],
+          "sha256": "bfa399485bc299bf1c7ec847c34fda060996a920c858ea36220d95e3a51f14fd"
+        }
+      },
+      "layer_order": [
+        "rear",
+        "base",
+        "front"
+      ],
+      "front_registration": {
+        "source": "sources/hero_front_clasp_generated.png",
+        "source_crop": [
+          330,
+          224,
+          1652,
+          636
+        ],
+        "origin": [
+          262,
+          331
+        ],
+        "width": 73,
+        "uniform_scale": 0.05521936459909228,
+        "rotation_degrees": 0,
+        "neck_anchor_stage": [
+          298.5,
+          342.5
+        ]
+      },
+      "rear_registration": {
+        "source": "../source/wardrobe/legacy-hero-v2.png",
+        "source_sha256": "172b4c81f67d89df5a47e42dcecaf2ec1ad89493196f5807da4fcc318dfc01ad",
+        "source_cell_index": 0,
+        "source_cell": [
+          0,
+          0,
+          362,
+          362
+        ],
+        "source_region_clip_in_cell": [
+          49,
+          121,
+          330,
+          328
+        ],
+        "source_neck_pivot": [
+          263,
+          154
+        ],
+        "target_neck_pivot": [
+          253,
+          309
+        ],
+        "uniform_scale": 0.78,
+        "translation": [
+          48,
+          189
+        ],
+        "rotation_degrees": -35,
+        "rotation_pivot_stage": [
+          253,
+          309
+        ],
+        "source_pose": "u_idle0",
+        "riding_reuse_note": null
+      },
+      "occlusion": "The original complete base is above the rear cloth, preserving exact mane, tail, limbs and vehicle pixels. Front fastening sits below jaw. No painted character patches."
+    },
+    {
+      "item_id": "legacy-hero",
+      "frame_id": "u_idle1",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "base_file": "../base/stages/u_idle1.png",
+      "base_sha256": "4e7384355aedec68dd527e88d582904d4977cae24de01689ad4a2d72a398ced1",
+      "layers": {
+        "rear": {
+          "file": "layers/legacy-hero__u_idle1__rear.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            62,
+            271,
+            301,
+            402
+          ],
+          "sha256": "276c0e31cc72b58e900c52e130b6abc25d357d198ba7ebb30be011d70203df0e"
+        },
+        "front": {
+          "file": "layers/legacy-hero__u_idle1__front.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            258,
+            324,
+            330,
+            346
+          ],
+          "sha256": "81aeccefef3b37a048d29bd5ff90672e998c816250529150844d66856a253d44"
+        }
+      },
+      "layer_order": [
+        "rear",
+        "base",
+        "front"
+      ],
+      "front_registration": {
+        "source": "sources/hero_front_clasp_generated.png",
+        "source_crop": [
+          330,
+          224,
+          1652,
+          636
+        ],
+        "origin": [
+          258,
+          324
+        ],
+        "width": 72,
+        "uniform_scale": 0.05446293494704992,
+        "rotation_degrees": 0,
+        "neck_anchor_stage": [
+          294.0,
+          335.0
+        ]
+      },
+      "rear_registration": {
+        "source": "../source/wardrobe/legacy-hero-v2.png",
+        "source_sha256": "172b4c81f67d89df5a47e42dcecaf2ec1ad89493196f5807da4fcc318dfc01ad",
+        "source_cell_index": 1,
+        "source_cell": [
+          362,
+          0,
+          724,
+          362
+        ],
+        "source_region_clip_in_cell": [
+          69,
+          125,
+          344,
+          334
+        ],
+        "source_neck_pivot": [
+          274,
+          157
+        ],
+        "target_neck_pivot": [
+          252,
+          305
+        ],
+        "uniform_scale": 0.78,
+        "translation": [
+          38,
+          183
+        ],
+        "rotation_degrees": -35,
+        "rotation_pivot_stage": [
+          252,
+          305
+        ],
+        "source_pose": "u_idle1",
+        "riding_reuse_note": null
+      },
+      "occlusion": "The original complete base is above the rear cloth, preserving exact mane, tail, limbs and vehicle pixels. Front fastening sits below jaw. No painted character patches."
+    },
+    {
+      "item_id": "legacy-hero",
+      "frame_id": "u_run0",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "base_file": "../base/stages/u_run0.png",
+      "base_sha256": "16fb149b94beddd2fb0d94f16ee489d644a3a055d4a88f38b9e16184a6c80b2b",
+      "layers": {
+        "rear": {
+          "file": "layers/legacy-hero__u_run0__rear.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            71,
+            275,
+            302,
+            409
+          ],
+          "sha256": "18fdc874696e42df8f8beec7d4bc73958c073f50a8cb9474b637195fa40c920e"
+        },
+        "front": {
+          "file": "layers/legacy-hero__u_run0__front.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            267,
+            335,
+            332,
+            355
+          ],
+          "sha256": "f70fe7379ef0f45c50391f27d277d94735c7c07eab947c1d2815d417bbd20ab8"
+        }
+      },
+      "layer_order": [
+        "rear",
+        "base",
+        "front"
+      ],
+      "front_registration": {
+        "source": "sources/hero_front_clasp_generated.png",
+        "source_crop": [
+          330,
+          224,
+          1652,
+          636
+        ],
+        "origin": [
+          267,
+          335
+        ],
+        "width": 65,
+        "uniform_scale": 0.049167927382753406,
+        "rotation_degrees": 0,
+        "neck_anchor_stage": [
+          299.5,
+          345.0
+        ]
+      },
+      "rear_registration": {
+        "source": "../source/wardrobe/legacy-hero-v2.png",
+        "source_sha256": "172b4c81f67d89df5a47e42dcecaf2ec1ad89493196f5807da4fcc318dfc01ad",
+        "source_cell_index": 2,
+        "source_cell": [
+          724,
+          0,
+          1086,
+          362
+        ],
+        "source_region_clip_in_cell": [
+          65,
+          125,
+          345,
+          328
+        ],
+        "source_neck_pivot": [
+          276,
+          153
+        ],
+        "target_neck_pivot": [
+          256,
+          313
+        ],
+        "uniform_scale": 0.78,
+        "translation": [
+          41,
+          194
+        ],
+        "rotation_degrees": -35,
+        "rotation_pivot_stage": [
+          256,
+          313
+        ],
+        "source_pose": "u_run0",
+        "riding_reuse_note": null
+      },
+      "occlusion": "The original complete base is above the rear cloth, preserving exact mane, tail, limbs and vehicle pixels. Front fastening sits below jaw. No painted character patches."
+    },
+    {
+      "item_id": "legacy-hero",
+      "frame_id": "u_run1",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "base_file": "../base/stages/u_run1.png",
+      "base_sha256": "b559162368ca98bfc148d4f34f21dc72f76d92334519c7ac61941b9c0a2e5c51",
+      "layers": {
+        "rear": {
+          "file": "layers/legacy-hero__u_run1__rear.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            57,
+            268,
+            296,
+            407
+          ],
+          "sha256": "cc5debb0a07e04ed3ff6c70314308550791cfc763d416071c7c284973171d0bf"
+        },
+        "front": {
+          "file": "layers/legacy-hero__u_run1__front.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            263,
+            330,
+            338,
+            353
+          ],
+          "sha256": "54b9f7a9261f8eba10e74d6c1f95057630ff8322c62bac66e56e6423f5596f4b"
+        }
+      },
+      "layer_order": [
+        "rear",
+        "base",
+        "front"
+      ],
+      "front_registration": {
+        "source": "sources/hero_front_clasp_generated.png",
+        "source_crop": [
+          330,
+          224,
+          1652,
+          636
+        ],
+        "origin": [
+          263,
+          330
+        ],
+        "width": 75,
+        "uniform_scale": 0.056732223903177004,
+        "rotation_degrees": 0,
+        "neck_anchor_stage": [
+          300.5,
+          341.5
+        ]
+      },
+      "rear_registration": {
+        "source": "../source/wardrobe/legacy-hero-v2.png",
+        "source_sha256": "172b4c81f67d89df5a47e42dcecaf2ec1ad89493196f5807da4fcc318dfc01ad",
+        "source_cell_index": 3,
+        "source_cell": [
+          1086,
+          0,
+          1448,
+          362
+        ],
+        "source_region_clip_in_cell": [
+          44,
+          121,
+          329,
+          328
+        ],
+        "source_neck_pivot": [
+          268,
+          150
+        ],
+        "target_neck_pivot": [
+          254,
+          310
+        ],
+        "uniform_scale": 0.78,
+        "translation": [
+          45,
+          193
+        ],
+        "rotation_degrees": -35,
+        "rotation_pivot_stage": [
+          254,
+          310
+        ],
+        "source_pose": "u_run1",
+        "riding_reuse_note": null
+      },
+      "occlusion": "The original complete base is above the rear cloth, preserving exact mane, tail, limbs and vehicle pixels. Front fastening sits below jaw. No painted character patches."
+    },
+    {
+      "item_id": "legacy-hero",
+      "frame_id": "u_run2",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "base_file": "../base/stages/u_run2.png",
+      "base_sha256": "33a905cf3e9f76026ce46197e6061b1414975347274b5832f7427daac2e26c61",
+      "layers": {
+        "rear": {
+          "file": "layers/legacy-hero__u_run2__rear.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            70,
+            246,
+            298,
+            376
+          ],
+          "sha256": "d95483aa3eda7a8cf95ab8aef6ae29e343a0d596bbbfbd74e72ced3510607bf5"
+        },
+        "front": {
+          "file": "layers/legacy-hero__u_run2__front.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            259,
+            337,
+            328,
+            359
+          ],
+          "sha256": "4321d47e3af9649948725b0584d7489c6e266c276dadd9ee062f085c666f5069"
+        }
+      },
+      "layer_order": [
+        "rear",
+        "base",
+        "front"
+      ],
+      "front_registration": {
+        "source": "sources/hero_front_clasp_generated.png",
+        "source_crop": [
+          330,
+          224,
+          1652,
+          636
+        ],
+        "origin": [
+          259,
+          337
+        ],
+        "width": 69,
+        "uniform_scale": 0.05219364599092285,
+        "rotation_degrees": 0,
+        "neck_anchor_stage": [
+          293.5,
+          348.0
+        ]
+      },
+      "rear_registration": {
+        "source": "../source/wardrobe/legacy-hero-v2.png",
+        "source_sha256": "172b4c81f67d89df5a47e42dcecaf2ec1ad89493196f5807da4fcc318dfc01ad",
+        "source_cell_index": 4,
+        "source_cell": [
+          0,
+          362,
+          362,
+          724
+        ],
+        "source_region_clip_in_cell": [
+          47,
+          120,
+          340,
+          307
+        ],
+        "source_neck_pivot": [
+          275,
+          150
+        ],
+        "target_neck_pivot": [
+          253,
+          313
+        ],
+        "uniform_scale": 0.78,
+        "translation": [
+          38,
+          196
+        ],
+        "rotation_degrees": -35,
+        "rotation_pivot_stage": [
+          253,
+          313
+        ],
+        "source_pose": "u_run2",
+        "riding_reuse_note": null
+      },
+      "occlusion": "The original complete base is above the rear cloth, preserving exact mane, tail, limbs and vehicle pixels. Front fastening sits below jaw. No painted character patches."
+    },
+    {
+      "item_id": "legacy-hero",
+      "frame_id": "u_run3",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "base_file": "../base/stages/u_run3.png",
+      "base_sha256": "c9c86b37d334ebadb3b22071d80a5285191dd03ec5ff57438e278ff5f6f29dd4",
+      "layers": {
+        "rear": {
+          "file": "layers/legacy-hero__u_run3__rear.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            69,
+            251,
+            304,
+            384
+          ],
+          "sha256": "19f2a099d7cd22b39db9623a42e491e07272dc50c45883cf6de89429994e349f"
+        },
+        "front": {
+          "file": "layers/legacy-hero__u_run3__front.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            262,
+            340,
+            330,
+            361
+          ],
+          "sha256": "d881d1ce2ba898e4d4804add3f6b4bf4b4d83778abfadb464ccdfda82045dacc"
+        }
+      },
+      "layer_order": [
+        "rear",
+        "base",
+        "front"
+      ],
+      "front_registration": {
+        "source": "sources/hero_front_clasp_generated.png",
+        "source_crop": [
+          330,
+          224,
+          1652,
+          636
+        ],
+        "origin": [
+          262,
+          340
+        ],
+        "width": 68,
+        "uniform_scale": 0.05143721633888049,
+        "rotation_degrees": 0,
+        "neck_anchor_stage": [
+          296.0,
+          350.5
+        ]
+      },
+      "rear_registration": {
+        "source": "../source/wardrobe/legacy-hero-v2.png",
+        "source_sha256": "172b4c81f67d89df5a47e42dcecaf2ec1ad89493196f5807da4fcc318dfc01ad",
+        "source_cell_index": 5,
+        "source_cell": [
+          362,
+          362,
+          724,
+          724
+        ],
+        "source_region_clip_in_cell": [
+          39,
+          120,
+          342,
+          306
+        ],
+        "source_neck_pivot": [
+          273,
+          150
+        ],
+        "target_neck_pivot": [
+          258,
+          316
+        ],
+        "uniform_scale": 0.78,
+        "translation": [
+          45,
+          199
+        ],
+        "rotation_degrees": -35,
+        "rotation_pivot_stage": [
+          258,
+          316
+        ],
+        "source_pose": "u_run3",
+        "riding_reuse_note": null
+      },
+      "occlusion": "The original complete base is above the rear cloth, preserving exact mane, tail, limbs and vehicle pixels. Front fastening sits below jaw. No painted character patches."
+    },
+    {
+      "item_id": "legacy-hero",
+      "frame_id": "u_run4",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "base_file": "../base/stages/u_run4.png",
+      "base_sha256": "c1d60d263dcf596ab054371c4bf4e0c2656c390d28f0436566d2554f8a7ce0be",
+      "layers": {
+        "rear": {
+          "file": "layers/legacy-hero__u_run4__rear.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            56,
+            237,
+            288,
+            379
+          ],
+          "sha256": "202e866c25e4fe68d72d3218c6dbc5a32ba73d6c20b36f9c1f3b703a29c3b10f"
+        },
+        "front": {
+          "file": "layers/legacy-hero__u_run4__front.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            253,
+            330,
+            315,
+            349
+          ],
+          "sha256": "8d0d38c315e8760998ceeb73b8ccd60250fff0c95bdbee51503b24c5d8fadbe9"
+        }
+      },
+      "layer_order": [
+        "rear",
+        "base",
+        "front"
+      ],
+      "front_registration": {
+        "source": "sources/hero_front_clasp_generated.png",
+        "source_crop": [
+          330,
+          224,
+          1652,
+          636
+        ],
+        "origin": [
+          253,
+          330
+        ],
+        "width": 62,
+        "uniform_scale": 0.046898638426626324,
+        "rotation_degrees": 0,
+        "neck_anchor_stage": [
+          284.0,
+          339.5
+        ]
+      },
+      "rear_registration": {
+        "source": "../source/wardrobe/legacy-hero-v2.png",
+        "source_sha256": "172b4c81f67d89df5a47e42dcecaf2ec1ad89493196f5807da4fcc318dfc01ad",
+        "source_cell_index": 6,
+        "source_cell": [
+          724,
+          362,
+          1086,
+          724
+        ],
+        "source_region_clip_in_cell": [
+          40,
+          120,
+          337,
+          314
+        ],
+        "source_neck_pivot": [
+          276,
+          150
+        ],
+        "target_neck_pivot": [
+          246,
+          307
+        ],
+        "uniform_scale": 0.78,
+        "translation": [
+          31,
+          190
+        ],
+        "rotation_degrees": -35,
+        "rotation_pivot_stage": [
+          246,
+          307
+        ],
+        "source_pose": "u_run4",
+        "riding_reuse_note": null
+      },
+      "occlusion": "The original complete base is above the rear cloth, preserving exact mane, tail, limbs and vehicle pixels. Front fastening sits below jaw. No painted character patches."
+    },
+    {
+      "item_id": "legacy-hero",
+      "frame_id": "u_run5",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "base_file": "../base/stages/u_run5.png",
+      "base_sha256": "e902ea07c28f14b45623c922a0804a148d23f5db6e912dc6a2c67796875f4c14",
+      "layers": {
+        "rear": {
+          "file": "layers/legacy-hero__u_run5__rear.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            42,
+            243,
+            295,
+            390
+          ],
+          "sha256": "fb7d5a68e1ccf4a8483a72eec90ff4896fc830397285f625f71d200d5437deb6"
+        },
+        "front": {
+          "file": "layers/legacy-hero__u_run5__front.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            264,
+            342,
+            329,
+            362
+          ],
+          "sha256": "87c705ccef542ad267882dd949d27d1273b3e53a125d987e595b22199b4f7399"
+        }
+      },
+      "layer_order": [
+        "rear",
+        "base",
+        "front"
+      ],
+      "front_registration": {
+        "source": "sources/hero_front_clasp_generated.png",
+        "source_crop": [
+          330,
+          224,
+          1652,
+          636
+        ],
+        "origin": [
+          264,
+          342
+        ],
+        "width": 65,
+        "uniform_scale": 0.049167927382753406,
+        "rotation_degrees": 0,
+        "neck_anchor_stage": [
+          296.5,
+          352.0
+        ]
+      },
+      "rear_registration": {
+        "source": "../source/wardrobe/legacy-hero-v2.png",
+        "source_sha256": "172b4c81f67d89df5a47e42dcecaf2ec1ad89493196f5807da4fcc318dfc01ad",
+        "source_cell_index": 7,
+        "source_cell": [
+          1086,
+          362,
+          1448,
+          724
+        ],
+        "source_region_clip_in_cell": [
+          19,
+          119,
+          329,
+          309
+        ],
+        "source_neck_pivot": [
+          270,
+          146
+        ],
+        "target_neck_pivot": [
+          256,
+          318
+        ],
+        "uniform_scale": 0.78,
+        "translation": [
+          45,
+          204
+        ],
+        "rotation_degrees": -35,
+        "rotation_pivot_stage": [
+          256,
+          318
+        ],
+        "source_pose": "u_run5",
+        "riding_reuse_note": null
+      },
+      "occlusion": "The original complete base is above the rear cloth, preserving exact mane, tail, limbs and vehicle pixels. Front fastening sits below jaw. No painted character patches."
+    },
+    {
+      "item_id": "legacy-hero",
+      "frame_id": "u_happy0",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "base_file": "../base/stages/u_happy0.png",
+      "base_sha256": "565006f31e1ad806c52fdf53e9f1aa12db7c664e1694a899d3e054baf882a0b5",
+      "layers": {
+        "rear": {
+          "file": "layers/legacy-hero__u_happy0__rear.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            89,
+            269,
+            296,
+            410
+          ],
+          "sha256": "2a0c31186d722f76a2106072920daf22be0e17e9a1ad9a741cae63a8ce30eaa4"
+        },
+        "front": {
+          "file": "layers/legacy-hero__u_happy0__front.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            271,
+            321,
+            334,
+            346
+          ],
+          "sha256": "b6e99df6766ad6742a1858cc2999f5e57659b9b5f65d1811a387eb727a51b8eb"
+        }
+      },
+      "layer_order": [
+        "rear",
+        "base",
+        "front"
+      ],
+      "front_registration": {
+        "source": "sources/hero_front_clasp_generated.png",
+        "source_crop": [
+          330,
+          224,
+          1652,
+          636
+        ],
+        "origin": [
+          270,
+          320
+        ],
+        "width": 62,
+        "uniform_scale": 0.046898638426626324,
+        "rotation_degrees": 8,
+        "neck_anchor_stage": [
+          301.0,
+          334.5
+        ]
+      },
+      "rear_registration": {
+        "source": "../source/wardrobe/legacy-hero-v2.png",
+        "source_sha256": "172b4c81f67d89df5a47e42dcecaf2ec1ad89493196f5807da4fcc318dfc01ad",
+        "source_cell_index": 8,
+        "source_cell": [
+          0,
+          724,
+          362,
+          1086
+        ],
+        "source_region_clip_in_cell": [
+          56,
+          108,
+          285,
+          308
+        ],
+        "source_neck_pivot": [
+          212,
+          139
+        ],
+        "target_neck_pivot": [
+          241,
+          299
+        ],
+        "uniform_scale": 0.8,
+        "translation": [
+          71,
+          188
+        ],
+        "rotation_degrees": -35,
+        "rotation_pivot_stage": [
+          241,
+          299
+        ],
+        "source_pose": "u_happy0",
+        "riding_reuse_note": null
+      },
+      "occlusion": "The original complete base is above the rear cloth, preserving exact mane, tail, limbs and vehicle pixels. Front fastening sits below jaw. No painted character patches."
+    },
+    {
+      "item_id": "legacy-hero",
+      "frame_id": "u_happy1",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "base_file": "../base/stages/u_happy1.png",
+      "base_sha256": "c4a4e3ef2a04883b1cc9e90e3ddff535ef12a80f86803fe57f7cdfc56564d0ee",
+      "layers": {
+        "rear": {
+          "file": "layers/legacy-hero__u_happy1__rear.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            87,
+            237,
+            294,
+            404
+          ],
+          "sha256": "33b01e76ca7b5e7bdc56b8718fe1586d50ddc18fa8370792804f4d9e8c1d186b"
+        },
+        "front": {
+          "file": "layers/legacy-hero__u_happy1__front.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            246,
+            287,
+            315,
+            318
+          ],
+          "sha256": "09f09e08000993d243ede0786dabb530e0d4897c0e45bbd24ddfc4739b0b2721"
+        }
+      },
+      "layer_order": [
+        "rear",
+        "base",
+        "front"
+      ],
+      "front_registration": {
+        "source": "sources/hero_front_clasp_generated.png",
+        "source_crop": [
+          330,
+          224,
+          1652,
+          636
+        ],
+        "origin": [
+          245,
+          286
+        ],
+        "width": 68,
+        "uniform_scale": 0.05143721633888049,
+        "rotation_degrees": 12,
+        "neck_anchor_stage": [
+          279.0,
+          303.5
+        ]
+      },
+      "rear_registration": {
+        "source": "../source/wardrobe/legacy-hero-v2.png",
+        "source_sha256": "172b4c81f67d89df5a47e42dcecaf2ec1ad89493196f5807da4fcc318dfc01ad",
+        "source_cell_index": 9,
+        "source_cell": [
+          362,
+          724,
+          724,
+          1086
+        ],
+        "source_region_clip_in_cell": [
+          75,
+          95,
+          314,
+          303
+        ],
+        "source_neck_pivot": [
+          229,
+          126
+        ],
+        "target_neck_pivot": [
+          244,
+          275
+        ],
+        "uniform_scale": 0.8,
+        "translation": [
+          61,
+          174
+        ],
+        "rotation_degrees": -35,
+        "rotation_pivot_stage": [
+          244,
+          275
+        ],
+        "source_pose": "u_happy1",
+        "riding_reuse_note": null
+      },
+      "occlusion": "The original complete base is above the rear cloth, preserving exact mane, tail, limbs and vehicle pixels. Front fastening sits below jaw. No painted character patches."
+    },
+    {
+      "item_id": "legacy-hero",
+      "frame_id": "u_happy2",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "base_file": "../base/stages/u_happy2.png",
+      "base_sha256": "add156857f5fd9d58f77c5a83f432adec762005c1f7ab8b5fe83ee6805bc6f38",
+      "layers": {
+        "rear": {
+          "file": "layers/legacy-hero__u_happy2__rear.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            79,
+            262,
+            296,
+            400
+          ],
+          "sha256": "4f077201becbc66df3a3d28dcbfacf797fcc574855ebdbb1db7d5afb90c55431"
+        },
+        "front": {
+          "file": "layers/legacy-hero__u_happy2__front.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            264,
+            320,
+            324,
+            350
+          ],
+          "sha256": "9711215f9dedbbce2e707c6ff6cd7711955a0f0a8cc3e10ad43a3b592dc725ea"
+        }
+      },
+      "layer_order": [
+        "rear",
+        "base",
+        "front"
+      ],
+      "front_registration": {
+        "source": "sources/hero_front_clasp_generated.png",
+        "source_crop": [
+          330,
+          224,
+          1652,
+          636
+        ],
+        "origin": [
+          263,
+          319
+        ],
+        "width": 60,
+        "uniform_scale": 0.0453857791225416,
+        "rotation_degrees": 15,
+        "neck_anchor_stage": [
+          293.0,
+          336.5
+        ]
+      },
+      "rear_registration": {
+        "source": "../source/wardrobe/legacy-hero-v2.png",
+        "source_sha256": "172b4c81f67d89df5a47e42dcecaf2ec1ad89493196f5807da4fcc318dfc01ad",
+        "source_cell_index": 10,
+        "source_cell": [
+          724,
+          724,
+          1086,
+          1086
+        ],
+        "source_region_clip_in_cell": [
+          64,
+          106,
+          313,
+          306
+        ],
+        "source_neck_pivot": [
+          247,
+          138
+        ],
+        "target_neck_pivot": [
+          248,
+          300
+        ],
+        "uniform_scale": 0.8,
+        "translation": [
+          50,
+          190
+        ],
+        "rotation_degrees": -35,
+        "rotation_pivot_stage": [
+          248,
+          300
+        ],
+        "source_pose": "u_happy2",
+        "riding_reuse_note": null
+      },
+      "occlusion": "The original complete base is above the rear cloth, preserving exact mane, tail, limbs and vehicle pixels. Front fastening sits below jaw. No painted character patches."
+    },
+    {
+      "item_id": "legacy-hero",
+      "frame_id": "bike0",
+      "pivot_stage": [
+        263.4254143646409,
+        445.52486187845307
+      ],
+      "base_file": "../base/stages/bike0.png",
+      "base_sha256": "0933fd0929cd4ca4f47c6966d5a1618209dd159e4800524a884811637712c416",
+      "layers": {
+        "rear": {
+          "file": "layers/legacy-hero__bike0__rear.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            42,
+            178,
+            291,
+            322
+          ],
+          "sha256": "c05b47b5d5970c28416eb84ceac2f1cfa9f6168aa22cec668b8ecc94bb34dc4a"
+        },
+        "front": {
+          "file": "layers/legacy-hero__bike0__front.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            244,
+            223,
+            316,
+            245
+          ],
+          "sha256": "a50da5d59b4e94d9f3f40773faf9aa7363ce435c7345b4c42733eac9a0bdcb65"
+        }
+      },
+      "layer_order": [
+        "rear",
+        "base",
+        "front"
+      ],
+      "front_registration": {
+        "source": "sources/hero_front_clasp_generated.png",
+        "source_crop": [
+          330,
+          224,
+          1652,
+          636
+        ],
+        "origin": [
+          244,
+          223
+        ],
+        "width": 72,
+        "uniform_scale": 0.05446293494704992,
+        "rotation_degrees": 0,
+        "neck_anchor_stage": [
+          280.0,
+          234.0
+        ]
+      },
+      "rear_registration": {
+        "source": "../source/wardrobe/legacy-hero-v2.png",
+        "source_sha256": "172b4c81f67d89df5a47e42dcecaf2ec1ad89493196f5807da4fcc318dfc01ad",
+        "source_cell_index": 2,
+        "source_cell": [
+          724,
+          0,
+          1086,
+          362
+        ],
+        "source_region_clip_in_cell": [
+          65,
+          125,
+          345,
+          328
+        ],
+        "source_neck_pivot": [
+          276,
+          153
+        ],
+        "target_neck_pivot": [
+          241,
+          220
+        ],
+        "uniform_scale": 0.84,
+        "translation": [
+          9,
+          91
+        ],
+        "rotation_degrees": -35,
+        "rotation_pivot_stage": [
+          241,
+          220
+        ],
+        "source_pose": "u_run0",
+        "riding_reuse_note": "Dedicated actual-riding-stage registration of reusable flowing cloth silhouette; no legacy celebration/idle fit fallback"
+      },
+      "occlusion": "The original complete base is above the rear cloth, preserving exact mane, tail, limbs and vehicle pixels. Front fastening sits below jaw. No painted character patches."
+    },
+    {
+      "item_id": "legacy-hero",
+      "frame_id": "bike1",
+      "pivot_stage": [
+        261.6574585635359,
+        445.52486187845307
+      ],
+      "base_file": "../base/stages/bike1.png",
+      "base_sha256": "e99bd54c8e78c8ee36c6baec38c49063c76bc14357014fb84a6ab2b8647bb4ad",
+      "layers": {
+        "rear": {
+          "file": "layers/legacy-hero__bike1__rear.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            43,
+            149,
+            289,
+            289
+          ],
+          "sha256": "be18d60c2f4617d3321637f981b10e82197dbe827fe3f41aa117430372a1b4d8"
+        },
+        "front": {
+          "file": "layers/legacy-hero__bike1__front.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            243,
+            223,
+            315,
+            245
+          ],
+          "sha256": "e3a7b482c45e13369487ce6d4d75e32fb30e8938a6103ef492d0e9c1f8fb9600"
+        }
+      },
+      "layer_order": [
+        "rear",
+        "base",
+        "front"
+      ],
+      "front_registration": {
+        "source": "sources/hero_front_clasp_generated.png",
+        "source_crop": [
+          330,
+          224,
+          1652,
+          636
+        ],
+        "origin": [
+          243,
+          223
+        ],
+        "width": 72,
+        "uniform_scale": 0.05446293494704992,
+        "rotation_degrees": 0,
+        "neck_anchor_stage": [
+          279.0,
+          234.0
+        ]
+      },
+      "rear_registration": {
+        "source": "../source/wardrobe/legacy-hero-v2.png",
+        "source_sha256": "172b4c81f67d89df5a47e42dcecaf2ec1ad89493196f5807da4fcc318dfc01ad",
+        "source_cell_index": 4,
+        "source_cell": [
+          0,
+          362,
+          362,
+          724
+        ],
+        "source_region_clip_in_cell": [
+          47,
+          120,
+          340,
+          307
+        ],
+        "source_neck_pivot": [
+          275,
+          150
+        ],
+        "target_neck_pivot": [
+          240,
+          220
+        ],
+        "uniform_scale": 0.84,
+        "translation": [
+          9,
+          94
+        ],
+        "rotation_degrees": -35,
+        "rotation_pivot_stage": [
+          240,
+          220
+        ],
+        "source_pose": "u_run2",
+        "riding_reuse_note": "Dedicated actual-riding-stage registration of reusable flowing cloth silhouette; no legacy celebration/idle fit fallback"
+      },
+      "occlusion": "The original complete base is above the rear cloth, preserving exact mane, tail, limbs and vehicle pixels. Front fastening sits below jaw. No painted character patches."
+    },
+    {
+      "item_id": "legacy-hero",
+      "frame_id": "bike2",
+      "pivot_stage": [
+        259.88950276243094,
+        445.52486187845307
+      ],
+      "base_file": "../base/stages/bike2.png",
+      "base_sha256": "c0280e4d764a531d96e1a90e8eed9c0d7fe74dd2bef984aefa039b97516c39a8",
+      "layers": {
+        "rear": {
+          "file": "layers/legacy-hero__bike2__rear.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            36,
+            150,
+            289,
+            294
+          ],
+          "sha256": "ee46f44ed8e7492171fac0df7120210e035cdda004e5bd2009546b7efa82639f"
+        },
+        "front": {
+          "file": "layers/legacy-hero__bike2__front.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            243,
+            223,
+            315,
+            245
+          ],
+          "sha256": "e3a7b482c45e13369487ce6d4d75e32fb30e8938a6103ef492d0e9c1f8fb9600"
+        }
+      },
+      "layer_order": [
+        "rear",
+        "base",
+        "front"
+      ],
+      "front_registration": {
+        "source": "sources/hero_front_clasp_generated.png",
+        "source_crop": [
+          330,
+          224,
+          1652,
+          636
+        ],
+        "origin": [
+          243,
+          223
+        ],
+        "width": 72,
+        "uniform_scale": 0.05446293494704992,
+        "rotation_degrees": 0,
+        "neck_anchor_stage": [
+          279.0,
+          234.0
+        ]
+      },
+      "rear_registration": {
+        "source": "../source/wardrobe/legacy-hero-v2.png",
+        "source_sha256": "172b4c81f67d89df5a47e42dcecaf2ec1ad89493196f5807da4fcc318dfc01ad",
+        "source_cell_index": 5,
+        "source_cell": [
+          362,
+          362,
+          724,
+          724
+        ],
+        "source_region_clip_in_cell": [
+          39,
+          120,
+          342,
+          306
+        ],
+        "source_neck_pivot": [
+          273,
+          150
+        ],
+        "target_neck_pivot": [
+          240,
+          220
+        ],
+        "uniform_scale": 0.84,
+        "translation": [
+          11,
+          94
+        ],
+        "rotation_degrees": -35,
+        "rotation_pivot_stage": [
+          240,
+          220
+        ],
+        "source_pose": "u_run3",
+        "riding_reuse_note": "Dedicated actual-riding-stage registration of reusable flowing cloth silhouette; no legacy celebration/idle fit fallback"
+      },
+      "occlusion": "The original complete base is above the rear cloth, preserving exact mane, tail, limbs and vehicle pixels. Front fastening sits below jaw. No painted character patches."
+    },
+    {
+      "item_id": "legacy-hero",
+      "frame_id": "bike3",
+      "pivot_stage": [
+        259.18232044198896,
+        445.52486187845307
+      ],
+      "base_file": "../base/stages/bike3.png",
+      "base_sha256": "a7a49ffc8b7d66fb783131a8c312e07c3cabb5de61e3f528f3153853e54c0781",
+      "layers": {
+        "rear": {
+          "file": "layers/legacy-hero__bike3__rear.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            27,
+            175,
+            284,
+            325
+          ],
+          "sha256": "2e4bf938763db59954bd1b170becdf020aee4b205b8cdf1e73efd5d6651a526a"
+        },
+        "front": {
+          "file": "layers/legacy-hero__bike3__front.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            242,
+            223,
+            314,
+            245
+          ],
+          "sha256": "6ae53d88b87585b338a1c68e742d459215b106d3ccbfb732f5ecbf1aa643a653"
+        }
+      },
+      "layer_order": [
+        "rear",
+        "base",
+        "front"
+      ],
+      "front_registration": {
+        "source": "sources/hero_front_clasp_generated.png",
+        "source_crop": [
+          330,
+          224,
+          1652,
+          636
+        ],
+        "origin": [
+          242,
+          223
+        ],
+        "width": 72,
+        "uniform_scale": 0.05446293494704992,
+        "rotation_degrees": 0,
+        "neck_anchor_stage": [
+          278.0,
+          234.0
+        ]
+      },
+      "rear_registration": {
+        "source": "../source/wardrobe/legacy-hero-v2.png",
+        "source_sha256": "172b4c81f67d89df5a47e42dcecaf2ec1ad89493196f5807da4fcc318dfc01ad",
+        "source_cell_index": 3,
+        "source_cell": [
+          1086,
+          0,
+          1448,
+          362
+        ],
+        "source_region_clip_in_cell": [
+          44,
+          121,
+          329,
+          328
+        ],
+        "source_neck_pivot": [
+          268,
+          150
+        ],
+        "target_neck_pivot": [
+          239,
+          220
+        ],
+        "uniform_scale": 0.84,
+        "translation": [
+          14,
+          94
+        ],
+        "rotation_degrees": -35,
+        "rotation_pivot_stage": [
+          239,
+          220
+        ],
+        "source_pose": "u_run1",
+        "riding_reuse_note": "Dedicated actual-riding-stage registration of reusable flowing cloth silhouette; no legacy celebration/idle fit fallback"
+      },
+      "occlusion": "The original complete base is above the rear cloth, preserving exact mane, tail, limbs and vehicle pixels. Front fastening sits below jaw. No painted character patches."
+    },
+    {
+      "item_id": "legacy-hero",
+      "frame_id": "skateboard0",
+      "pivot_stage": [
+        248.22099447513813,
+        425.01657458563534
+      ],
+      "base_file": "../base/stages/skateboard0.png",
+      "base_sha256": "3800aa6bfc1418be7298ff8cd2709797b77bb32d7256b24040c197e31728ed79",
+      "layers": {
+        "rear": {
+          "file": "layers/legacy-hero__skateboard0__rear.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            54,
+            205,
+            291,
+            343
+          ],
+          "sha256": "0e7836b56536b26b34b4425f63f0766fa654a0148a649fc804e57df94c86a0f9"
+        },
+        "front": {
+          "file": "layers/legacy-hero__skateboard0__front.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            250,
+            259,
+            318,
+            280
+          ],
+          "sha256": "f94325443885dfc63a72dee548fa373edc84faf7bdcca041717327152c3d281b"
+        }
+      },
+      "layer_order": [
+        "rear",
+        "base",
+        "front"
+      ],
+      "front_registration": {
+        "source": "sources/hero_front_clasp_generated.png",
+        "source_crop": [
+          330,
+          224,
+          1652,
+          636
+        ],
+        "origin": [
+          250,
+          259
+        ],
+        "width": 68,
+        "uniform_scale": 0.05143721633888049,
+        "rotation_degrees": 0,
+        "neck_anchor_stage": [
+          284.0,
+          269.5
+        ]
+      },
+      "rear_registration": {
+        "source": "../source/wardrobe/legacy-hero-v2.png",
+        "source_sha256": "172b4c81f67d89df5a47e42dcecaf2ec1ad89493196f5807da4fcc318dfc01ad",
+        "source_cell_index": 2,
+        "source_cell": [
+          724,
+          0,
+          1086,
+          362
+        ],
+        "source_region_clip_in_cell": [
+          65,
+          125,
+          345,
+          328
+        ],
+        "source_neck_pivot": [
+          276,
+          153
+        ],
+        "target_neck_pivot": [
+          244,
+          244
+        ],
+        "uniform_scale": 0.8,
+        "translation": [
+          23,
+          122
+        ],
+        "rotation_degrees": -35,
+        "rotation_pivot_stage": [
+          244,
+          244
+        ],
+        "source_pose": "u_run0",
+        "riding_reuse_note": "Dedicated actual-riding-stage registration of reusable flowing cloth silhouette; no legacy celebration/idle fit fallback"
+      },
+      "occlusion": "The original complete base is above the rear cloth, preserving exact mane, tail, limbs and vehicle pixels. Front fastening sits below jaw. No painted character patches."
+    },
+    {
+      "item_id": "legacy-hero",
+      "frame_id": "skateboard1",
+      "pivot_stage": [
+        254.939226519337,
+        425.72375690607737
+      ],
+      "base_file": "../base/stages/skateboard1.png",
+      "base_sha256": "d8649f42d0d188b23c910b0901fa5ede4b606b05223694fd7d395075e4790a51",
+      "layers": {
+        "rear": {
+          "file": "layers/legacy-hero__skateboard1__rear.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            78,
+            174,
+            312,
+            308
+          ],
+          "sha256": "eb8a7f58edd3c963688294c95780ffaff8e42a184c934826eb806528ede61dda"
+        },
+        "front": {
+          "file": "layers/legacy-hero__skateboard1__front.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            283,
+            257,
+            351,
+            278
+          ],
+          "sha256": "77209ef307eb6e4d307bab4854b11b7a50dcca5069512d1b444d18eb3f43412b"
+        }
+      },
+      "layer_order": [
+        "rear",
+        "base",
+        "front"
+      ],
+      "front_registration": {
+        "source": "sources/hero_front_clasp_generated.png",
+        "source_crop": [
+          330,
+          224,
+          1652,
+          636
+        ],
+        "origin": [
+          283,
+          257
+        ],
+        "width": 68,
+        "uniform_scale": 0.05143721633888049,
+        "rotation_degrees": 0,
+        "neck_anchor_stage": [
+          317.0,
+          267.5
+        ]
+      },
+      "rear_registration": {
+        "source": "../source/wardrobe/legacy-hero-v2.png",
+        "source_sha256": "172b4c81f67d89df5a47e42dcecaf2ec1ad89493196f5807da4fcc318dfc01ad",
+        "source_cell_index": 4,
+        "source_cell": [
+          0,
+          362,
+          362,
+          724
+        ],
+        "source_region_clip_in_cell": [
+          47,
+          120,
+          340,
+          307
+        ],
+        "source_neck_pivot": [
+          275,
+          150
+        ],
+        "target_neck_pivot": [
+          265,
+          242
+        ],
+        "uniform_scale": 0.8,
+        "translation": [
+          45,
+          122
+        ],
+        "rotation_degrees": -35,
+        "rotation_pivot_stage": [
+          265,
+          242
+        ],
+        "source_pose": "u_run2",
+        "riding_reuse_note": "Dedicated actual-riding-stage registration of reusable flowing cloth silhouette; no legacy celebration/idle fit fallback"
+      },
+      "occlusion": "The original complete base is above the rear cloth, preserving exact mane, tail, limbs and vehicle pixels. Front fastening sits below jaw. No painted character patches."
+    },
+    {
+      "item_id": "legacy-hero",
+      "frame_id": "skateboard2",
+      "pivot_stage": [
+        252.11049723756906,
+        425.72375690607737
+      ],
+      "base_file": "../base/stages/skateboard2.png",
+      "base_sha256": "4f5384cfb3a8549ca11ce51d027faaab4cac15760e66ad1ca03817bb22d3c62f",
+      "layers": {
+        "rear": {
+          "file": "layers/legacy-hero__skateboard2__rear.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            60,
+            176,
+            302,
+            313
+          ],
+          "sha256": "786e34d2f58d6839aaea05e05fe027fb174941816391b669c0115c44f138acfd"
+        },
+        "front": {
+          "file": "layers/legacy-hero__skateboard2__front.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            266,
+            257,
+            334,
+            278
+          ],
+          "sha256": "0a1e97ab0bbbde174d0b3071ba9238c56cdce2714ea3898a29c0edbd34c878be"
+        }
+      },
+      "layer_order": [
+        "rear",
+        "base",
+        "front"
+      ],
+      "front_registration": {
+        "source": "sources/hero_front_clasp_generated.png",
+        "source_crop": [
+          330,
+          224,
+          1652,
+          636
+        ],
+        "origin": [
+          266,
+          257
+        ],
+        "width": 68,
+        "uniform_scale": 0.05143721633888049,
+        "rotation_degrees": 0,
+        "neck_anchor_stage": [
+          300.0,
+          267.5
+        ]
+      },
+      "rear_registration": {
+        "source": "../source/wardrobe/legacy-hero-v2.png",
+        "source_sha256": "172b4c81f67d89df5a47e42dcecaf2ec1ad89493196f5807da4fcc318dfc01ad",
+        "source_cell_index": 5,
+        "source_cell": [
+          362,
+          362,
+          724,
+          724
+        ],
+        "source_region_clip_in_cell": [
+          39,
+          120,
+          342,
+          306
+        ],
+        "source_neck_pivot": [
+          273,
+          150
+        ],
+        "target_neck_pivot": [
+          254,
+          242
+        ],
+        "uniform_scale": 0.8,
+        "translation": [
+          36,
+          122
+        ],
+        "rotation_degrees": -35,
+        "rotation_pivot_stage": [
+          254,
+          242
+        ],
+        "source_pose": "u_run3",
+        "riding_reuse_note": "Dedicated actual-riding-stage registration of reusable flowing cloth silhouette; no legacy celebration/idle fit fallback"
+      },
+      "occlusion": "The original complete base is above the rear cloth, preserving exact mane, tail, limbs and vehicle pixels. Front fastening sits below jaw. No painted character patches."
+    },
+    {
+      "item_id": "legacy-hero",
+      "frame_id": "skateboard3",
+      "pivot_stage": [
+        253.87845303867402,
+        425.01657458563534
+      ],
+      "base_file": "../base/stages/skateboard3.png",
+      "base_sha256": "bf94fc058aff4f7e83c6c063508aee0a089e4f0fbd43040dbf3265c4afa2f69e",
+      "layers": {
+        "rear": {
+          "file": "layers/legacy-hero__skateboard3__rear.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            61,
+            197,
+            306,
+            342
+          ],
+          "sha256": "661c1338dfe90fbe1ec33862220f8080228904537e0e76a6844d6534b0b2313d"
+        },
+        "front": {
+          "file": "layers/legacy-hero__skateboard3__front.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            266,
+            257,
+            334,
+            278
+          ],
+          "sha256": "0a1e97ab0bbbde174d0b3071ba9238c56cdce2714ea3898a29c0edbd34c878be"
+        }
+      },
+      "layer_order": [
+        "rear",
+        "base",
+        "front"
+      ],
+      "front_registration": {
+        "source": "sources/hero_front_clasp_generated.png",
+        "source_crop": [
+          330,
+          224,
+          1652,
+          636
+        ],
+        "origin": [
+          266,
+          257
+        ],
+        "width": 68,
+        "uniform_scale": 0.05143721633888049,
+        "rotation_degrees": 0,
+        "neck_anchor_stage": [
+          300.0,
+          267.5
+        ]
+      },
+      "rear_registration": {
+        "source": "../source/wardrobe/legacy-hero-v2.png",
+        "source_sha256": "172b4c81f67d89df5a47e42dcecaf2ec1ad89493196f5807da4fcc318dfc01ad",
+        "source_cell_index": 3,
+        "source_cell": [
+          1086,
+          0,
+          1448,
+          362
+        ],
+        "source_region_clip_in_cell": [
+          44,
+          121,
+          329,
+          328
+        ],
+        "source_neck_pivot": [
+          268,
+          150
+        ],
+        "target_neck_pivot": [
+          263,
+          241
+        ],
+        "uniform_scale": 0.8,
+        "translation": [
+          49,
+          121
+        ],
+        "rotation_degrees": -35,
+        "rotation_pivot_stage": [
+          263,
+          241
+        ],
+        "source_pose": "u_run1",
+        "riding_reuse_note": "Dedicated actual-riding-stage registration of reusable flowing cloth silhouette; no legacy celebration/idle fit fallback"
+      },
+      "occlusion": "The original complete base is above the rear cloth, preserving exact mane, tail, limbs and vehicle pixels. Front fastening sits below jaw. No painted character patches."
+    }
+  ],
+  "layer_order": "rear, original base, front fastening; then other authorized accessory/head layers",
+  "mirror_rule": "Mirror the whole registered 512px group about the per-frame pivot. Never mirror individual pieces independently.",
+  "method": "Source rear cape pixels are retained with alpha-preserving rectangular extraction, uniform scale, rigid rotation, and translation. Front clasp is original native imagegen transparent art, uniformly registered per pose. No nonuniform stretching or painted character pixels.",
+  "production_boundary": "Offline assets and visual tests only; no live-game changes or device testing."
+}

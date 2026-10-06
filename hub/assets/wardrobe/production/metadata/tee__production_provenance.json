@@ -1,0 +1,98 @@
+{
+  "approved_trial": "../../approved_trial/manifest.json",
+  "new_ground_sources": [
+    "../generated/tee_ground_a_extracted.png",
+    "../generated/tee_ground_b_extracted.png",
+    "../generated/u_happy0_individual_extracted.png",
+    "../generated/u_happy2_individual_extracted.png"
+  ],
+  "poses_with_rigid_reuse": {
+    "u_idle1": [
+      "u_idle0",
+      -5,
+      -8
+    ],
+    "bike1": [
+      "bike0",
+      0,
+      2
+    ],
+    "bike2": [
+      "bike0",
+      1,
+      2
+    ],
+    "bike3": [
+      "bike0",
+      2,
+      2
+    ],
+    "skateboard1": [
+      "skateboard0",
+      40,
+      1
+    ],
+    "skateboard2": [
+      "skateboard0",
+      22,
+      1
+    ],
+    "skateboard3": [
+      "skateboard0",
+      22,
+      1
+    ]
+  },
+  "new_ground_registration": {
+    "u_run0": {
+      "width": 132,
+      "paste": [
+        204,
+        313
+      ]
+    },
+    "u_run1": {
+      "width": 138,
+      "paste": [
+        197,
+        312
+      ]
+    },
+    "u_run3": {
+      "width": 142,
+      "paste": [
+        190,
+        323
+      ]
+    },
+    "u_run4": {
+      "width": 131,
+      "paste": [
+        195,
+        317
+      ]
+    },
+    "u_run5": {
+      "width": 138,
+      "paste": [
+        184,
+        305
+      ]
+    },
+    "u_happy0": {
+      "width": 145,
+      "paste": [
+        212,
+        292
+      ]
+    },
+    "u_happy2": {
+      "width": 124,
+      "paste": [
+        218,
+        290
+      ]
+    }
+  },
+  "method": "Uniform image registration only; original foreground cutouts restore anatomy; imagegen authored all creative garment pixels; no original character paint or nonuniform distortion."
+}

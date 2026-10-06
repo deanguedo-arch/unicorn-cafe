@@ -1,0 +1,31 @@
+{
+  "idle": [
+    "u_idle0",
+    "u_idle1"
+  ],
+  "run": [
+    "u_run0",
+    "u_run1",
+    "u_run2",
+    "u_run3",
+    "u_run4",
+    "u_run5"
+  ],
+  "happy": [
+    "u_happy0",
+    "u_happy1",
+    "u_happy2"
+  ],
+  "bike": [
+    "bike0",
+    "bike1",
+    "bike2",
+    "bike3"
+  ],
+  "skateboard": [
+    "skateboard0",
+    "skateboard1",
+    "skateboard2",
+    "skateboard3"
+  ]
+}

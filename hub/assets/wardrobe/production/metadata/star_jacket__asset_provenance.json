@@ -1,0 +1,140 @@
+{
+  "item_id": "star-jacket",
+  "source_commit": "637425ce2bdbb4805e0859034449e7d8bd523a20",
+  "date": "2026-10-06",
+  "creative_tool": "built-in image_gen",
+  "model_name": "not reported by tool",
+  "sources": [
+    {
+      "file": "sources/batch1_restylized.png",
+      "sha256": "b83946c71ad9654015cb7a846522272cea960f5e03e3a673a99d71fe0d694295",
+      "authored_with": "built-in image_gen tool",
+      "role": "creative fabric-only garment art",
+      "selected": true,
+      "selected_cells": [
+        "u_idle0",
+        "u_run2",
+        "u_happy1"
+      ]
+    },
+    {
+      "file": "sources/batch2_restylized.png",
+      "sha256": "9c2bdd414a04d0456b9d4295b606deaba32b631896b8ad8ba1efee54e8ec18d9",
+      "authored_with": "built-in image_gen tool",
+      "role": "creative fabric-only garment art",
+      "selected": true,
+      "selected_cells": [
+        "skateboard0",
+        "u_run5"
+      ]
+    },
+    {
+      "file": "sources/batch3_restylized.png",
+      "sha256": "076c368de07c304be4e9d5e4b8f3841aa68ca757bac0dc5760b43b1541d9be95",
+      "authored_with": "built-in image_gen tool",
+      "role": "creative fabric-only garment art",
+      "selected": true
+    },
+    {
+      "file": "sources/bike_star_visible.png",
+      "sha256": "e2f0781861006f6cb2ad10494589e62957061a95d0baf8208f43120d95d00d4c",
+      "authored_with": "built-in image_gen tool",
+      "role": "creative fabric-only garment art",
+      "selected": true
+    },
+    {
+      "file": "sources/u_happy0_short_fitted.png",
+      "sha256": "77edc7e80a21ee9454fc9991d50ea9bf80345b20d443a30f88630d6dab9b75b1",
+      "authored_with": "built-in image_gen tool",
+      "role": "creative fabric-only garment art",
+      "selected": true
+    },
+    {
+      "file": "sources/u_happy2_short_fitted.png",
+      "sha256": "856a312bd39d5e364ecc05ef2b4731da548a5efea1a4fbe4a56b383bd0a66e47",
+      "authored_with": "built-in image_gen tool",
+      "role": "creative fabric-only garment art",
+      "selected": true
+    }
+  ],
+  "references": [
+    {
+      "file": "source/wardrobe/items/star-jacket.png",
+      "sha256": "4790f6e24ab9176ce16a012b2a35170a1459df6c6e5973ea148ed4ca7ecb78dd"
+    },
+    {
+      "file": "source/wardrobe/star-jacket-v2.png",
+      "sha256": "955aab268da2b7c1cceb00f60270b759bac993a473b6f23bff906127691434b1"
+    },
+    {
+      "file": "base/registration.json",
+      "sha256": "cc9b00e808e2777540948d8ddb0fd63de52da5c70d8fc473bc1c8f51ad57c184"
+    },
+    {
+      "file": "work/approved_tee_fabric_plate.png",
+      "sha256": "2183014ad7916e30d937321f91925500c294a68b6850c1a08c87ba6989c83a65",
+      "role": "immutable or copied fit-reference input"
+    },
+    {
+      "file": "work/approved_tee_fitted_plate.png",
+      "sha256": "c16f2399fc2e240a4c2693b14919d1e86e05b4ca7dc31acd7ad817bad79a5304",
+      "role": "immutable or copied fit-reference input"
+    },
+    {
+      "file": "work/batch2_tee_fabric_plate.png",
+      "sha256": "355bd86e68345db1b4cfabac799f93c6a63f9703eb9a6cf2eedf6c0855479859",
+      "role": "immutable or copied fit-reference input"
+    },
+    {
+      "file": "work/batch2_tee_fitted_plate.png",
+      "sha256": "c60f53389a305e28dcfc5e1901848f741d581c5cb0aebebc4f87714bf497eb00",
+      "role": "immutable or copied fit-reference input"
+    },
+    {
+      "file": "work/batch3_tee_fabric_plate.png",
+      "sha256": "efb4e9a0137baf573d85dd12b2dc4791607fae30a4e4798b36d05f95b21f62bb",
+      "role": "immutable or copied fit-reference input"
+    },
+    {
+      "file": "work/batch3_tee_fitted_plate.png",
+      "sha256": "d2ae85c94346c697e598f18df56a8f1fc4a5e6eb74ebaac35dc490c21a62b240",
+      "role": "immutable or copied fit-reference input"
+    },
+    {
+      "file": "work/u_happy0_tee_fit.png",
+      "sha256": "e2204d2ba693d2da8cc3b881765a52d6937c55c5523ffa7d548f03a6928df702",
+      "role": "immutable or copied fit-reference input"
+    },
+    {
+      "file": "work/u_happy0_tee_reference.png",
+      "sha256": "4538e5d502db6c8ae3280958c2e0aa8a0050c9f868217a7137f8510dd5adcf8d",
+      "role": "immutable or copied fit-reference input"
+    },
+    {
+      "file": "work/u_happy2_tee_fit.png",
+      "sha256": "21911f650140edeaf21937ede669645be44eda2d0406d027076c3c7ce863e396",
+      "role": "immutable or copied fit-reference input"
+    },
+    {
+      "file": "work/u_happy2_tee_reference.png",
+      "sha256": "03bc2d52b2cb0c6c501aff4c939e309ed28305486f86613c095774347d495b99",
+      "role": "immutable or copied fit-reference input"
+    }
+  ],
+  "prompts": [
+    "metadata/batch1_prompt.txt",
+    "metadata/batch2_prompt.txt",
+    "metadata/batch3_prompt.txt",
+    "metadata/bike_prompt.txt",
+    "metadata/happy_short_prompt.txt"
+  ],
+  "registration_method": "Crop + uniform resize + translation only, using pose-specific fitted alpha silhouette references. No nonuniform stretching.",
+  "character_pixels": "Never generated or repainted; exact immutable originals plus copied original foreground pixels.",
+  "superseded_art": [
+    "batch1_restylized.png bottom-right bike0 cell: superseded by bike_star_visible.png so star remains visible",
+    "batch2_restylized.png bottom row: superseded by individual u_happy0/u_happy2 short-fitted sources"
+  ],
+  "implementation_scope": "Asset preparation only; no live app or repository changes.",
+  "shared_occlusion_contract": "../occlusion/manifest.json; masks are intersected with each jacket alpha before exact original pixels are copied.",
+  "reuse_translations": "../tee_jacket/tee_reuse_translations.json; matching pose-specific tee alpha bounds transfer these translations once."
+}

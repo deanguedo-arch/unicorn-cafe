@@ -1,0 +1,98 @@
+{
+  "frame_id": "bike2",
+  "part": "grip_forearm",
+  "layer_file": "occlusion/layers/bike2__grip_forearm.png",
+  "selection_mask_file": "occlusion/masks/bike2__grip_forearm.png",
+  "source_file": "base/stages/bike2.png",
+  "source_sha256": "c0280e4d764a531d96e1a90e8eed9c0d7fe74dd2bef984aefa039b97516c39a8",
+  "layer_sha256": "3c24b63c6eac2ab00b97b9c786954387ba0a30185059deead8ae78e4464cb9f9",
+  "selection_mask_sha256": "02d11ea669bc18e600360925931b02d3b2adac908ebae982273d9c94e740013b",
+  "canvas": [
+    512,
+    512
+  ],
+  "draw_origin": [
+    0,
+    0
+  ],
+  "polygon_vertices": [
+    [
+      [
+        255,
+        244
+      ],
+      [
+        264,
+        240
+      ],
+      [
+        275,
+        237
+      ],
+      [
+        288,
+        237
+      ],
+      [
+        300,
+        240
+      ],
+      [
+        309,
+        245
+      ],
+      [
+        314,
+        252
+      ],
+      [
+        314,
+        259
+      ],
+      [
+        309,
+        266
+      ],
+      [
+        300,
+        272
+      ],
+      [
+        290,
+        275
+      ],
+      [
+        278,
+        276
+      ],
+      [
+        266,
+        272
+      ],
+      [
+        256,
+        267
+      ],
+      [
+        249,
+        262
+      ],
+      [
+        247,
+        256
+      ],
+      [
+        250,
+        249
+      ]
+    ]
+  ],
+  "mask_bbox_exclusive": [
+    247,
+    237,
+    315,
+    277
+  ],
+  "selected_pixel_count": 2012,
+  "mask_kind": "Binary anatomical polygon union intersected with source alpha>0. No feather, no recolor, no interpolation. Every selected RGBA pixel copied verbatim."
+}

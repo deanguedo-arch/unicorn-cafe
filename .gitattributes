@@ -1,0 +1,4 @@
+# Imported production art/audit files are byte-frozen, including original CSV CRLFs.
+hub/assets/wardrobe/production/** -text -whitespace
+hub/assets/wardrobe/production/runtime.js text whitespace=blank-at-eol,blank-at-eof,space-before-tab
+hub/trials/fit-v1/** -text

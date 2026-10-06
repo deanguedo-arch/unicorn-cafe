@@ -1,0 +1,13 @@
+{
+  "sourceArchive": "UnicornWorld_Full_Wardrobe_Production.zip",
+  "archiveSHA256": "ccfeef629131b18f3ddb4e4bd685576776c668b9f081d90b848e69305b8092f7",
+  "sourceCommit": "637425ce2bdbb4805e0859034449e7d8bd523a20",
+  "sourceFilesUnchanged": true,
+  "verifiedFileHashes": 326,
+  "verifiedReconstructedLayers": 680,
+  "wearables": 23,
+  "poses": 19,
+  "fitRecords": 437,
+  "catalogueUnchanged": true,
+  "frozenTrialFilesVerified": 21
+}

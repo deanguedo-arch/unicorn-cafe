@@ -1,0 +1,457 @@
+{
+  "title": "Unicorn World small clothing fit trial",
+  "source_commit": "637425ce2bdbb4805e0859034449e7d8bd523a20",
+  "source_repository": "https://github.com/deanguedo-arch/unicorn-cafe",
+  "items": [
+    "tee",
+    "beads",
+    "bow"
+  ],
+  "pose_count": 5,
+  "facing_count": 2,
+  "canvas": [
+    512,
+    512
+  ],
+  "coordinates": "Pixels from top-left; x right, y down",
+  "records": [
+    {
+      "frame_id": "u_idle0",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "base_file": "originals/u_idle0.png",
+      "base_sha256": "36160efe1a4bfcfdd95a5fb085234a8da880826e5f4064294fa8d964a9ea1b04",
+      "layers": {
+        "tee": {
+          "file": "layers/u_idle0__tee.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            207,
+            320,
+            341,
+            396
+          ],
+          "source_region_clip": [
+            206,
+            319,
+            342,
+            397
+          ],
+          "sha256": "240c30e1043e4f3ac0ea63cff853cbf94646283e341bbe7a11b3aa2ca0bd2372"
+        },
+        "beads": {
+          "file": "layers/u_idle0__beads.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            266,
+            333,
+            336,
+            364
+          ],
+          "source_region_clip": null,
+          "sha256": "47004ad526a61c1e76450049263ed6a0b54d30082ebd7503ad3f54cf6ea7c32d"
+        },
+        "bow": {
+          "file": "layers/u_idle0__bow.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            234,
+            189,
+            300,
+            246
+          ],
+          "source_region_clip": null,
+          "sha256": "a8135efb22797d9c26792cf2d4de9522a1940f4c021e26c0055963f36c91f63f"
+        }
+      },
+      "layer_order": [
+        "base",
+        "tee",
+        "beads",
+        "bow"
+      ],
+      "mirroring": "Mirror the whole group about the pivot. Never mirror a garment independently."
+    },
+    {
+      "frame_id": "u_run2",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "base_file": "originals/u_run2.png",
+      "base_sha256": "33a905cf3e9f76026ce46197e6061b1414975347274b5832f7427daac2e26c61",
+      "layers": {
+        "tee": {
+          "file": "layers/u_run2__tee.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            190,
+            300,
+            327,
+            389
+          ],
+          "source_region_clip": [
+            189,
+            299,
+            328,
+            390
+          ],
+          "sha256": "397155132b876798c6859dcaf369c77364d3802d05d0469f2c8eb67af6ad6746"
+        },
+        "beads": {
+          "file": "layers/u_run2__beads.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            262,
+            338,
+            327,
+            366
+          ],
+          "source_region_clip": null,
+          "sha256": "8e96ee45056f2e1275c4765f640d3946f037bbc3074013db4018dc7158baa012"
+        },
+        "bow": {
+          "file": "layers/u_run2__bow.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            264,
+            183,
+            331,
+            239
+          ],
+          "source_region_clip": null,
+          "sha256": "7abb829c1493b7c360906f8b51f91ccb8581f8956edbf8a099ac48a81c36d30c"
+        }
+      },
+      "layer_order": [
+        "base",
+        "tee",
+        "beads",
+        "bow"
+      ],
+      "mirroring": "Mirror the whole group about the pivot. Never mirror a garment independently."
+    },
+    {
+      "frame_id": "u_happy1",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "base_file": "originals/u_happy1.png",
+      "base_sha256": "c4a4e3ef2a04883b1cc9e90e3ddff535ef12a80f86803fe57f7cdfc56564d0ee",
+      "layers": {
+        "tee": {
+          "file": "layers/u_happy1__tee.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            199,
+            267,
+            335,
+            363
+          ],
+          "source_region_clip": [
+            198,
+            266,
+            336,
+            364
+          ],
+          "sha256": "3b4da891270f3e586841baa094cd18b3c99f884adee0ce5ba6ed7aab009e3717"
+        },
+        "beads": {
+          "file": "layers/u_happy1__beads.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            248,
+            280,
+            308,
+            310
+          ],
+          "source_region_clip": null,
+          "sha256": "250d10b427b211dea5b4d319ac7e6c50e8ec90846b8fbe6fb3b8dbea9c460b90"
+        },
+        "bow": {
+          "file": "layers/u_happy1__bow.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            185,
+            177,
+            252,
+            238
+          ],
+          "source_region_clip": null,
+          "sha256": "818f11d04ddb02d08e7442931c64f9295855b4607342c71edf8805e80f3a6aa9"
+        }
+      },
+      "layer_order": [
+        "base",
+        "tee",
+        "beads",
+        "bow"
+      ],
+      "mirroring": "Mirror the whole group about the pivot. Never mirror a garment independently."
+    },
+    {
+      "frame_id": "bike0",
+      "pivot_stage": [
+        263.4254143646409,
+        445.52486187845307
+      ],
+      "base_file": "originals/bike0.png",
+      "base_sha256": "0933fd0929cd4ca4f47c6966d5a1618209dd159e4800524a884811637712c416",
+      "layers": {
+        "tee": {
+          "file": "layers/bike0__tee.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            190,
+            212,
+            309,
+            288
+          ],
+          "source_region_clip": [
+            189,
+            211,
+            310,
+            289
+          ],
+          "sha256": "7bd234d9e7d979c8603bc7c6f31d8886863a7a499deb15273c4d7f04354e4392"
+        },
+        "beads": {
+          "file": "layers/bike0__beads.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            245,
+            223,
+            311,
+            252
+          ],
+          "source_region_clip": null,
+          "sha256": "5c3f9fe968c42d8b07ea16ae4bdc891f4ee7ff78333ed9bebecef5e92ee48639"
+        },
+        "bow": {
+          "file": "layers/bike0__bow.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            223,
+            93,
+            289,
+            150
+          ],
+          "source_region_clip": null,
+          "sha256": "3a99970a97110657dd79750e5bedc37ee5efece332d3643f7c4676db609dce53"
+        },
+        "foreground": {
+          "file": "layers/bike0__foreground.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            255,
+            238,
+            304,
+            268
+          ],
+          "sha256": "fc52ad78e28707b95241f99e7110440cc9a020dedaf4e8e9ea9d449d574bbcae",
+          "pixel_source": "originals/bike0.png",
+          "mask_contract": "metadata/bike0_occlusion_contract.json"
+        }
+      },
+      "layer_order": [
+        "base",
+        "tee",
+        "foreground",
+        "beads",
+        "bow"
+      ],
+      "mirroring": "Mirror the whole group about the pivot. Never mirror a garment independently."
+    },
+    {
+      "frame_id": "skateboard0",
+      "pivot_stage": [
+        248.22099447513813,
+        425.01657458563534
+      ],
+      "base_file": "originals/skateboard0.png",
+      "base_sha256": "3800aa6bfc1418be7298ff8cd2709797b77bb32d7256b24040c197e31728ed79",
+      "layers": {
+        "tee": {
+          "file": "layers/skateboard0__tee.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            177,
+            243,
+            320,
+            321
+          ],
+          "source_region_clip": [
+            176,
+            242,
+            321,
+            322
+          ],
+          "sha256": "fb022abcdd0fce0697f7663c45db9f09794ba3aab34de9307fbeefc375b4bf2f"
+        },
+        "beads": {
+          "file": "layers/skateboard0__beads.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            250,
+            259,
+            316,
+            288
+          ],
+          "source_region_clip": null,
+          "sha256": "07e4f279d0513f0f774e3a723c7b8e84b4d4740385bf8e358ed250fcf847824c"
+        },
+        "bow": {
+          "file": "layers/skateboard0__bow.png",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            229,
+            117,
+            295,
+            174
+          ],
+          "source_region_clip": null,
+          "sha256": "a447d4a24d84eefd77dfe254075445953573aae62a4ba625663101d014849c09"
+        }
+      },
+      "layer_order": [
+        "base",
+        "tee",
+        "beads",
+        "bow"
+      ],
+      "mirroring": "Mirror the whole group about the pivot. Never mirror a garment independently."
+    }
+  ],
+  "registration_contract": "Keep every layer on its full 512 square canvas. Draw original base then tee then beads then bow at (0,0) in one group. Apply translation, scale, mirror, rotation, opacity and motion to the entire group about the per-frame pivot. Do not tightly crop and stretch individual layers to body rectangles.",
+  "occlusion_contract": "Tee alpha already contains pose-specific visible-cloth cutouts for the original mane and forelegs. Do not add the old oval sleeve patches or generic face polygon. Preserve original neck, limb and vehicle pixels through these cutouts. Any later change to the canonical pose requires its matching layer to be revalidated. For bike0, draw the supplied original-pixel grip/forearm foreground layer after tee and before beads. Its selected pixels exactly match the original base. Do not omit it or draw it above beads.",
+  "production_boundary": "Five sampled poses only. One of six run frames, one of three celebration frames, one of four bike frames and one of four skateboard frames. The preview tests registration while translating, mirroring and changing sampled poses; it is not a completed walk/pedaling cycle or live-game integration.",
+  "artwork_method": "Built-in image generation created fitted reference art and extracted only visible tee fabric. Final garment layers are independently registered by uniform scale and translation. Final previews use original base stages, never generated character redraws. Bow reuses original item art; beads use a generated shallow collar.",
+  "source_region_extraction": "Only an exact rectangular sprite crop around visible garment bounds plus one pixel was applied to discard remote alpha=1 specks. Generated alpha and colors within that rectangle are unchanged. No color painting, chroma key or nonuniform mesh distortion was used.",
+  "pending": [
+    "User visual approval",
+    "Remaining 14 pose states for this outfit",
+    "Complete walk and riding cycle checks",
+    "Live-game integration with approval",
+    "Other wardrobe items"
+  ],
+  "known_limitations": [
+    "New fabric is crisper than the low-resolution original ground sprites",
+    "This static fit trial does not establish temporal smoothness across missing animation frames",
+    "The published source may differ from an uncommitted or cached device revision"
+  ]
+}

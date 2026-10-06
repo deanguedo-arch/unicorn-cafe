@@ -1,0 +1,39 @@
+{
+  "results": [
+    {
+      "name": "All eleven clothing pose bounds match the preserved canonical sprite sizes",
+      "pass": true
+    },
+    {
+      "name": "Actual café walking mirrors the outfit while carrying a meal",
+      "pass": true
+    },
+    {
+      "name": "Café completion displays the equipped outfit on its celebration character",
+      "pass": true
+    },
+    {
+      "name": "Both game bridges connect and report progress without crypto.randomUUID, as on ordinary LAN HTTP",
+      "pass": true
+    },
+    {
+      "name": "World mute reaches both games, pauses their audio and preserves native sound preferences",
+      "pass": true
+    },
+    {
+      "name": "Adventure draws shared clothes in both directions, carried-object play and celebration",
+      "pass": true
+    },
+    {
+      "name": "Generated one-file café remains independently playable and makes no world-bridge requests",
+      "pass": true
+    },
+    {
+      "name": "No runtime exceptions during appearance and standalone checks",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "physicalDevice": false,
+  "childReview": false
+}

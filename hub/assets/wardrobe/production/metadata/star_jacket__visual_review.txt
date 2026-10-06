@@ -1,0 +1,37 @@
+Final asset visual review — 2026-10-06
+
+PASS: All 19 original poses reviewed in both facing directions, with all five
+complete ordered frame strips and cycle previews. Lavender jacket, pastel-pink
+trim, two gold buttons and gold star are retained. The bicycle variant carries
+its star on the visible side panel; original foreground forearms and grips are
+in front of the jacket on all four bicycle frames.
+
+PASS: Idle1 and all ride frames use their measured torso/neck translations,
+not the incorrectly constant source riding anchors. Skateboard1 shifts +40,+1
+from pose0 and skateboard2/3 +22,+1. Bike1/2/3 shift +0,+2 / +1,+2 / +2,+2.
+Idle1 shifts -5,-8. All reuse is rigid translation of a uniformly registered
+silhouette, with explicit separate layer files for every frame.
+
+PASS: Happy0 and happy2 were regenerated from corrected short-sleeve silhouettes
+and visually checked after exact-original head/mane restoration. Happy1 retains
+the approved raised-arm fit reference. No newly drawn character pixels are
+included. Source original stages retain their canonical hashes.
+
+PASS: All 19 garment layers and 19 selected original-pixel foreground layers
+are full 512×512 RGBA with transparent edges. Pixel checks show exact original
+pixels outside layer coverage, exact selected foreground RGBA, original opaque
+head/mane pixels unchanged, and exact whole-group mirrors.
+
+Shared-occlusion independent review: the occlusion asset worker confirmed all
+22 masks visually reviewed and stable on 2026-10-06, then independently inspected
+star-jacket happy0, run5, and bike1–3: clean head/mane restoration and original
+forearms correctly ahead of jacket. Frozen mask bytes are retained in sources.
+
+Corrected celebration source order: happy0, happy1, happy2, repeat. QA preview
+timing is intentionally readable and documented separately from runtime timing.
+Riding assets show the intended ordered four-frame cycles; no live code change
+is claimed for the existing six-run-frames modulo-four renderer behavior.
+
+Known visual difference: new fabric is crisper than low-resolution original
+ground sprites. This package does not claim rendering-texture parity, live-game
+integration, deployment, or on-device testing.

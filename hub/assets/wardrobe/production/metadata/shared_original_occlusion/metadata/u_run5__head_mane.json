@@ -1,0 +1,166 @@
+{
+  "frame_id": "u_run5",
+  "part": "head_mane",
+  "layer_file": "occlusion/layers/u_run5__head_mane.png",
+  "selection_mask_file": "occlusion/masks/u_run5__head_mane.png",
+  "source_file": "base/stages/u_run5.png",
+  "source_sha256": "e902ea07c28f14b45623c922a0804a148d23f5db6e912dc6a2c67796875f4c14",
+  "layer_sha256": "4e344960e98aed83d9f4643a66a251a12bfffcdb76ba06105d78ec18e244deb4",
+  "selection_mask_sha256": "231292f36bd77228a678065ed574a6f4ebc0e7103a16d319e528e5ee9572b569",
+  "canvas": [
+    512,
+    512
+  ],
+  "draw_origin": [
+    0,
+    0
+  ],
+  "polygon_vertices": [
+    [
+      [
+        230,
+        189
+      ],
+      [
+        275,
+        172
+      ],
+      [
+        321,
+        162
+      ],
+      [
+        365,
+        152
+      ],
+      [
+        401,
+        198
+      ],
+      [
+        415,
+        250
+      ],
+      [
+        405,
+        279
+      ],
+      [
+        403,
+        302
+      ],
+      [
+        398,
+        319
+      ],
+      [
+        384,
+        333
+      ],
+      [
+        369,
+        343
+      ],
+      [
+        351,
+        349
+      ],
+      [
+        332,
+        349
+      ],
+      [
+        313,
+        345
+      ],
+      [
+        295,
+        339
+      ],
+      [
+        280,
+        330
+      ],
+      [
+        271,
+        322
+      ],
+      [
+        273,
+        329
+      ],
+      [
+        263,
+        338
+      ],
+      [
+        251,
+        344
+      ],
+      [
+        238,
+        347
+      ],
+      [
+        226,
+        344
+      ],
+      [
+        220,
+        337
+      ],
+      [
+        226,
+        331
+      ],
+      [
+        233,
+        328
+      ],
+      [
+        220,
+        323
+      ],
+      [
+        212,
+        315
+      ],
+      [
+        206,
+        305
+      ],
+      [
+        202,
+        290
+      ],
+      [
+        204,
+        274
+      ],
+      [
+        214,
+        253
+      ],
+      [
+        232,
+        235
+      ],
+      [
+        236,
+        221
+      ],
+      [
+        229,
+        207
+      ]
+    ]
+  ],
+  "mask_bbox_exclusive": [
+    202,
+    170,
+    410,
+    350
+  ],
+  "selected_pixel_count": 25302,
+  "mask_kind": "Binary anatomical polygon union intersected with source alpha>0. No feather, no recolor, no interpolation. Every selected RGBA pixel copied verbatim."
+}

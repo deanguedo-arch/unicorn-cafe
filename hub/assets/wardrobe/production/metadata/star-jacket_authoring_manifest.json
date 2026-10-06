@@ -1,0 +1,1585 @@
+{
+  "item_id": "star-jacket",
+  "source_commit": "637425ce2bdbb4805e0859034449e7d8bd523a20",
+  "canvas": [
+    512,
+    512
+  ],
+  "pose_count": 19,
+  "facing_count": 2,
+  "status": "complete_asset_qa",
+  "records": [
+    {
+      "item_id": "star-jacket",
+      "frame_id": "u_idle0",
+      "base_file": "../base/stages/u_idle0.png",
+      "base_sha256": "36160efe1a4bfcfdd95a5fb085234a8da880826e5f4064294fa8d964a9ea1b04",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "layers": {
+        "garment": {
+          "file": "layers/u_idle0__star-jacket.png",
+          "sha256": "4d8281a8c8ee6f616465fd10fdf06c42036b2f517a0a1ed31f084e26bea13cf2",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            217,
+            322,
+            331,
+            394
+          ]
+        },
+        "foreground": {
+          "file": "layers/u_idle0__foreground.png",
+          "sha256": "af7ba79e988c1093d2bf62906beb06693ebdcae6612d7344cf0c6c41f12d6a72",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "source_original": "../base/stages/u_idle0.png",
+          "source_original_sha256": "36160efe1a4bfcfdd95a5fb085234a8da880826e5f4064294fa8d964a9ea1b04",
+          "selected_rgba_exactly_matches_original": true,
+          "selection_mask_file": "metadata/u_idle0_foreground_selection.png",
+          "selection_mask_sha256": "e3b521e709589ce6cf510f4ff5e6aeda8ac2b491471ab646d7f5eb033098e159",
+          "mask_rule": "Shared per-frame original head/mane and grip regions intersected with this garment alpha > 0. Bike0 uses the approved trial grip polygon."
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment",
+        "foreground"
+      ],
+      "registration": {
+        "source": "sources/batch1_restylized.png",
+        "source_sha256": "b83946c71ad9654015cb7a846522272cea960f5e03e3a673a99d71fe0d694295",
+        "source_pose": "u_idle0",
+        "cell": [
+          0,
+          0,
+          627,
+          627
+        ],
+        "crop_in_cell": [
+          256,
+          376,
+          469,
+          510
+        ],
+        "uniform_scale": 0.5373134328358209,
+        "resized_size": [
+          114,
+          72
+        ],
+        "paste_origin": [
+          217,
+          322
+        ],
+        "fit_reference": "star_jacket/sources/fit_references/u_idle0.png",
+        "fit_reference_sha256": "240c30e1043e4f3ac0ea63cff853cbf94646283e341bbe7a11b3aa2ca0bd2372"
+      }
+    },
+    {
+      "item_id": "star-jacket",
+      "frame_id": "u_idle1",
+      "base_file": "../base/stages/u_idle1.png",
+      "base_sha256": "4e7384355aedec68dd527e88d582904d4977cae24de01689ad4a2d72a398ced1",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "layers": {
+        "garment": {
+          "file": "layers/u_idle1__star-jacket.png",
+          "sha256": "4ff9ae83b04dff78bc993910dfa2911e2ce68180530c33542c87a79d6948c333",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            212,
+            314,
+            326,
+            386
+          ]
+        },
+        "foreground": {
+          "file": "layers/u_idle1__foreground.png",
+          "sha256": "60aaf53b2902019a541cc5878a7afbbce00500818d7fc173103618a8e99424a3",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "source_original": "../base/stages/u_idle1.png",
+          "source_original_sha256": "4e7384355aedec68dd527e88d582904d4977cae24de01689ad4a2d72a398ced1",
+          "selected_rgba_exactly_matches_original": true,
+          "selection_mask_file": "metadata/u_idle1_foreground_selection.png",
+          "selection_mask_sha256": "a81fd3d903157b9b2413dd42d92cf5c9caf419f81445164f6ae7ef9a07e7eb23",
+          "mask_rule": "Shared per-frame original head/mane and grip regions intersected with this garment alpha > 0. Bike0 uses the approved trial grip polygon."
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment",
+        "foreground"
+      ],
+      "registration": {
+        "source": "sources/batch1_restylized.png",
+        "source_sha256": "b83946c71ad9654015cb7a846522272cea960f5e03e3a673a99d71fe0d694295",
+        "source_pose": "u_idle0",
+        "cell": [
+          0,
+          0,
+          627,
+          627
+        ],
+        "crop_in_cell": [
+          256,
+          376,
+          469,
+          510
+        ],
+        "uniform_scale": 0.5373134328358209,
+        "resized_size": [
+          114,
+          72
+        ],
+        "paste_origin": [
+          212,
+          314
+        ],
+        "fit_reference": "star_jacket/sources/fit_references/u_idle1.png",
+        "fit_reference_sha256": "e56cd44b4ab42ca0dbc831a9fb75bbaf34d577bfb10a7d22bbbf522e9ea935b7"
+      }
+    },
+    {
+      "item_id": "star-jacket",
+      "frame_id": "u_run0",
+      "base_file": "../base/stages/u_run0.png",
+      "base_sha256": "16fb149b94beddd2fb0d94f16ee489d644a3a055d4a88f38b9e16184a6c80b2b",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "layers": {
+        "garment": {
+          "file": "layers/u_run0__star-jacket.png",
+          "sha256": "6d31b2237e5eb05d51dc30dead6e2ea0d7c7a7d95904d92004c1875e3bb91272",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            208,
+            314,
+            332,
+            400
+          ]
+        },
+        "foreground": {
+          "file": "layers/u_run0__foreground.png",
+          "sha256": "85d7d74db98ae5429675914002a283629cb86fcb1abce5950c1f5efdc605646e",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "source_original": "../base/stages/u_run0.png",
+          "source_original_sha256": "16fb149b94beddd2fb0d94f16ee489d644a3a055d4a88f38b9e16184a6c80b2b",
+          "selected_rgba_exactly_matches_original": true,
+          "selection_mask_file": "metadata/u_run0_foreground_selection.png",
+          "selection_mask_sha256": "fc9c130a1f4085028751888d952561cf8af3133ba8441ece45b663e3ae0f242e",
+          "mask_rule": "Shared per-frame original head/mane and grip regions intersected with this garment alpha > 0. Bike0 uses the approved trial grip polygon."
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment",
+        "foreground"
+      ],
+      "registration": {
+        "source": "sources/batch3_restylized.png",
+        "source_sha256": "076c368de07c304be4e9d5e4b8f3841aa68ca757bac0dc5760b43b1541d9be95",
+        "source_pose": "u_run0",
+        "cell": [
+          0,
+          0,
+          627,
+          627
+        ],
+        "crop_in_cell": [
+          251,
+          382,
+          412,
+          494
+        ],
+        "uniform_scale": 0.7678571428571429,
+        "resized_size": [
+          124,
+          86
+        ],
+        "paste_origin": [
+          208,
+          314
+        ],
+        "fit_reference": "star_jacket/sources/fit_references/u_run0.png",
+        "fit_reference_sha256": "eac1d9ba7da244c62147e651b8911d46cc7b397dcbf18ac043dfd22e3b23ba2b"
+      }
+    },
+    {
+      "item_id": "star-jacket",
+      "frame_id": "u_run1",
+      "base_file": "../base/stages/u_run1.png",
+      "base_sha256": "b559162368ca98bfc148d4f34f21dc72f76d92334519c7ac61941b9c0a2e5c51",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "layers": {
+        "garment": {
+          "file": "layers/u_run1__star-jacket.png",
+          "sha256": "516138c862102d0581287a8a135a97af25078a37aaacf0f2039bc0045bf0ab95",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            202,
+            314,
+            329,
+            394
+          ]
+        },
+        "foreground": {
+          "file": "layers/u_run1__foreground.png",
+          "sha256": "f780c56e8594d70136bd9a871b8e2a37d6d3e565271c568e12ad6b66d17286a9",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "source_original": "../base/stages/u_run1.png",
+          "source_original_sha256": "b559162368ca98bfc148d4f34f21dc72f76d92334519c7ac61941b9c0a2e5c51",
+          "selected_rgba_exactly_matches_original": true,
+          "selection_mask_file": "metadata/u_run1_foreground_selection.png",
+          "selection_mask_sha256": "1016478c15a39c32905c4e6f129b6e98d74765388a366f4dbac50b69eb12091e",
+          "mask_rule": "Shared per-frame original head/mane and grip regions intersected with this garment alpha > 0. Bike0 uses the approved trial grip polygon."
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment",
+        "foreground"
+      ],
+      "registration": {
+        "source": "sources/batch3_restylized.png",
+        "source_sha256": "076c368de07c304be4e9d5e4b8f3841aa68ca757bac0dc5760b43b1541d9be95",
+        "source_pose": "u_run1",
+        "cell": [
+          627,
+          0,
+          1254,
+          627
+        ],
+        "crop_in_cell": [
+          242,
+          381,
+          410,
+          487
+        ],
+        "uniform_scale": 0.7547169811320755,
+        "resized_size": [
+          127,
+          80
+        ],
+        "paste_origin": [
+          202,
+          314
+        ],
+        "fit_reference": "star_jacket/sources/fit_references/u_run1.png",
+        "fit_reference_sha256": "bfab1a406e3e8259d58cd75117bf2195eb7baa22f7a8d0a6bf68fb0ad3d9973d"
+      }
+    },
+    {
+      "item_id": "star-jacket",
+      "frame_id": "u_run2",
+      "base_file": "../base/stages/u_run2.png",
+      "base_sha256": "33a905cf3e9f76026ce46197e6061b1414975347274b5832f7427daac2e26c61",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "layers": {
+        "garment": {
+          "file": "layers/u_run2__star-jacket.png",
+          "sha256": "004d55da3e7cbb1ab93fad27d4b89652fbd9ee20fb82cee21895eba23307e47f",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            196,
+            302,
+            321,
+            387
+          ]
+        },
+        "foreground": {
+          "file": "layers/u_run2__foreground.png",
+          "sha256": "4a77419f6f35e3b2993a3c052de51fce4be2fef7226e60f882439b4b5c230553",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "source_original": "../base/stages/u_run2.png",
+          "source_original_sha256": "33a905cf3e9f76026ce46197e6061b1414975347274b5832f7427daac2e26c61",
+          "selected_rgba_exactly_matches_original": true,
+          "selection_mask_file": "metadata/u_run2_foreground_selection.png",
+          "selection_mask_sha256": "8dbbe4294051ece6c46f645a3c28ef5af60c60c4a70520b8bf1f7b49dc727476",
+          "mask_rule": "Shared per-frame original head/mane and grip regions intersected with this garment alpha > 0. Bike0 uses the approved trial grip polygon."
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment",
+        "foreground"
+      ],
+      "registration": {
+        "source": "sources/batch1_restylized.png",
+        "source_sha256": "b83946c71ad9654015cb7a846522272cea960f5e03e3a673a99d71fe0d694295",
+        "source_pose": "u_run2",
+        "cell": [
+          627,
+          0,
+          1254,
+          627
+        ],
+        "crop_in_cell": [
+          210,
+          357,
+          423,
+          502
+        ],
+        "uniform_scale": 0.5862068965517241,
+        "resized_size": [
+          125,
+          85
+        ],
+        "paste_origin": [
+          196,
+          302
+        ],
+        "fit_reference": "star_jacket/sources/fit_references/u_run2.png",
+        "fit_reference_sha256": "397155132b876798c6859dcaf369c77364d3802d05d0469f2c8eb67af6ad6746"
+      }
+    },
+    {
+      "item_id": "star-jacket",
+      "frame_id": "u_run3",
+      "base_file": "../base/stages/u_run3.png",
+      "base_sha256": "c9c86b37d334ebadb3b22071d80a5285191dd03ec5ff57438e278ff5f6f29dd4",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "layers": {
+        "garment": {
+          "file": "layers/u_run3__star-jacket.png",
+          "sha256": "ac54a5849ae6b53bf12416a8872d86bf1f1d370bf38b98c31104b66ab641f67e",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            196,
+            325,
+            325,
+            410
+          ]
+        },
+        "foreground": {
+          "file": "layers/u_run3__foreground.png",
+          "sha256": "045c92e1da1b1c961c2a6a8ea0990a480cf407d0d509609a4efe8698d27a5280",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "source_original": "../base/stages/u_run3.png",
+          "source_original_sha256": "c9c86b37d334ebadb3b22071d80a5285191dd03ec5ff57438e278ff5f6f29dd4",
+          "selected_rgba_exactly_matches_original": true,
+          "selection_mask_file": "metadata/u_run3_foreground_selection.png",
+          "selection_mask_sha256": "2eb7127bd7b39f12d4240c09ca411f77a6e6cab2902f67afb5bfe7bd49e18fed",
+          "mask_rule": "Shared per-frame original head/mane and grip regions intersected with this garment alpha > 0. Bike0 uses the approved trial grip polygon."
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment",
+        "foreground"
+      ],
+      "registration": {
+        "source": "sources/batch3_restylized.png",
+        "source_sha256": "076c368de07c304be4e9d5e4b8f3841aa68ca757bac0dc5760b43b1541d9be95",
+        "source_pose": "u_run3",
+        "cell": [
+          0,
+          627,
+          627,
+          1254
+        ],
+        "crop_in_cell": [
+          234,
+          396,
+          406,
+          509
+        ],
+        "uniform_scale": 0.7522123893805309,
+        "resized_size": [
+          129,
+          85
+        ],
+        "paste_origin": [
+          196,
+          325
+        ],
+        "fit_reference": "star_jacket/sources/fit_references/u_run3.png",
+        "fit_reference_sha256": "c6e4856823ad9da225cbe59bc9be43dbd83a67a62aa6e6db4abb0d9b03c868de"
+      }
+    },
+    {
+      "item_id": "star-jacket",
+      "frame_id": "u_run4",
+      "base_file": "../base/stages/u_run4.png",
+      "base_sha256": "c1d60d263dcf596ab054371c4bf4e0c2656c390d28f0436566d2554f8a7ce0be",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "layers": {
+        "garment": {
+          "file": "layers/u_run4__star-jacket.png",
+          "sha256": "ff3442aad92f4950a0f8b3b45da2e4cd8273ba22ace2034ec4ce8156f101612d",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            199,
+            319,
+            322,
+            407
+          ]
+        },
+        "foreground": {
+          "file": "layers/u_run4__foreground.png",
+          "sha256": "e2eea669dd8c4767cba4bd1e575d41b01c9b68db3f49fcfe676ec01ab8fa8fff",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "source_original": "../base/stages/u_run4.png",
+          "source_original_sha256": "c1d60d263dcf596ab054371c4bf4e0c2656c390d28f0436566d2554f8a7ce0be",
+          "selected_rgba_exactly_matches_original": true,
+          "selection_mask_file": "metadata/u_run4_foreground_selection.png",
+          "selection_mask_sha256": "9b7fbf460b2625fc4d37007333719d356d4f6a67216aa6cf9a2a8ab755490e8f",
+          "mask_rule": "Shared per-frame original head/mane and grip regions intersected with this garment alpha > 0. Bike0 uses the approved trial grip polygon."
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment",
+        "foreground"
+      ],
+      "registration": {
+        "source": "sources/batch3_restylized.png",
+        "source_sha256": "076c368de07c304be4e9d5e4b8f3841aa68ca757bac0dc5760b43b1541d9be95",
+        "source_pose": "u_run4",
+        "cell": [
+          627,
+          627,
+          1254,
+          1254
+        ],
+        "crop_in_cell": [
+          241,
+          387,
+          402,
+          502
+        ],
+        "uniform_scale": 0.7652173913043478,
+        "resized_size": [
+          123,
+          88
+        ],
+        "paste_origin": [
+          199,
+          319
+        ],
+        "fit_reference": "star_jacket/sources/fit_references/u_run4.png",
+        "fit_reference_sha256": "c0f242ddefa22be1aae5c003513a114cc9490431acda3f982269d2515d92f793"
+      }
+    },
+    {
+      "item_id": "star-jacket",
+      "frame_id": "u_run5",
+      "base_file": "../base/stages/u_run5.png",
+      "base_sha256": "e902ea07c28f14b45623c922a0804a148d23f5db6e912dc6a2c67796875f4c14",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "layers": {
+        "garment": {
+          "file": "layers/u_run5__star-jacket.png",
+          "sha256": "3e3b934cd0e9f78d5d280836283f59ca00591407629e4e2fd44b3ba6a1a32dd9",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            186,
+            306,
+            319,
+            407
+          ]
+        },
+        "foreground": {
+          "file": "layers/u_run5__foreground.png",
+          "sha256": "a46d2a9c14172dc8f09f6fb58945f8fef2f0f79135136cca481566c59528ad24",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "source_original": "../base/stages/u_run5.png",
+          "source_original_sha256": "e902ea07c28f14b45623c922a0804a148d23f5db6e912dc6a2c67796875f4c14",
+          "selected_rgba_exactly_matches_original": true,
+          "selection_mask_file": "metadata/u_run5_foreground_selection.png",
+          "selection_mask_sha256": "517e0110dab78f9d71c957f09dfbbe201eff8ad3cba06b24ec01487692ea6f5c",
+          "mask_rule": "Shared per-frame original head/mane and grip regions intersected with this garment alpha > 0. Bike0 uses the approved trial grip polygon."
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment",
+        "foreground"
+      ],
+      "registration": {
+        "source": "sources/batch2_restylized.png",
+        "source_sha256": "9c2bdd414a04d0456b9d4295b606deaba32b631896b8ad8ba1efee54e8ec18d9",
+        "source_pose": "u_run5",
+        "cell": [
+          627,
+          0,
+          1254,
+          627
+        ],
+        "crop_in_cell": [
+          218,
+          369,
+          403,
+          509
+        ],
+        "uniform_scale": 0.7214285714285714,
+        "resized_size": [
+          133,
+          101
+        ],
+        "paste_origin": [
+          186,
+          306
+        ],
+        "fit_reference": "star_jacket/sources/fit_references/u_run5.png",
+        "fit_reference_sha256": "7203d9c86d2aef47d2fcff5fe6cab8dc9a184f8c632047eb961b27b3713b71d4"
+      }
+    },
+    {
+      "item_id": "star-jacket",
+      "frame_id": "u_happy0",
+      "base_file": "../base/stages/u_happy0.png",
+      "base_sha256": "565006f31e1ad806c52fdf53e9f1aa12db7c664e1694a899d3e054baf882a0b5",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "layers": {
+        "garment": {
+          "file": "layers/u_happy0__star-jacket.png",
+          "sha256": "f57038913d798bcbafb71fc7de548749e38b4789e898217737a8127e9b1c42f4",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            212,
+            292,
+            357,
+            381
+          ]
+        },
+        "foreground": {
+          "file": "layers/u_happy0__foreground.png",
+          "sha256": "82966b3dcbdb6d66d85ab47f130fc4ea09a2670c425600ea2cc5a5f95f50483f",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "source_original": "../base/stages/u_happy0.png",
+          "source_original_sha256": "565006f31e1ad806c52fdf53e9f1aa12db7c664e1694a899d3e054baf882a0b5",
+          "selected_rgba_exactly_matches_original": true,
+          "selection_mask_file": "metadata/u_happy0_foreground_selection.png",
+          "selection_mask_sha256": "4d068979597de62598eaa214bf646bafcd4d0a902b3768d77717c646f730d12a",
+          "mask_rule": "Shared per-frame original head/mane and grip regions intersected with this garment alpha > 0. Bike0 uses the approved trial grip polygon."
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment",
+        "foreground"
+      ],
+      "registration": {
+        "source": "sources/u_happy0_short_fitted.png",
+        "source_sha256": "77edc7e80a21ee9454fc9991d50ea9bf80345b20d443a30f88630d6dab9b75b1",
+        "source_pose": "u_happy0",
+        "cell": [
+          0,
+          0,
+          1254,
+          1254
+        ],
+        "crop_in_cell": [
+          519,
+          715,
+          876,
+          934
+        ],
+        "uniform_scale": 0.4061624649859944,
+        "resized_size": [
+          145,
+          89
+        ],
+        "paste_origin": [
+          212,
+          292
+        ],
+        "fit_reference": "star_jacket/sources/fit_references/u_happy0.png",
+        "fit_reference_sha256": "4538e5d502db6c8ae3280958c2e0aa8a0050c9f868217a7137f8510dd5adcf8d"
+      }
+    },
+    {
+      "item_id": "star-jacket",
+      "frame_id": "u_happy1",
+      "base_file": "../base/stages/u_happy1.png",
+      "base_sha256": "c4a4e3ef2a04883b1cc9e90e3ddff535ef12a80f86803fe57f7cdfc56564d0ee",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "layers": {
+        "garment": {
+          "file": "layers/u_happy1__star-jacket.png",
+          "sha256": "6ff79f4f001e61a3572a6e0d1c7df9852d1d6a82ec51270f905938073350fc3d",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            201,
+            270,
+            334,
+            359
+          ]
+        },
+        "foreground": {
+          "file": "layers/u_happy1__foreground.png",
+          "sha256": "7acd487034a77e062e65bad225866749d1adb076a02769e3da221e3b27786923",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "source_original": "../base/stages/u_happy1.png",
+          "source_original_sha256": "c4a4e3ef2a04883b1cc9e90e3ddff535ef12a80f86803fe57f7cdfc56564d0ee",
+          "selected_rgba_exactly_matches_original": true,
+          "selection_mask_file": "metadata/u_happy1_foreground_selection.png",
+          "selection_mask_sha256": "5c17787a06bd7d27e43229218e94086a73d7cd00881250f1183a43590f09e5ad",
+          "mask_rule": "Shared per-frame original head/mane and grip regions intersected with this garment alpha > 0. Bike0 uses the approved trial grip polygon."
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment",
+        "foreground"
+      ],
+      "registration": {
+        "source": "sources/batch1_restylized.png",
+        "source_sha256": "b83946c71ad9654015cb7a846522272cea960f5e03e3a673a99d71fe0d694295",
+        "source_pose": "u_happy1",
+        "cell": [
+          0,
+          627,
+          627,
+          1254
+        ],
+        "crop_in_cell": [
+          224,
+          304,
+          464,
+          465
+        ],
+        "uniform_scale": 0.5541666666666667,
+        "resized_size": [
+          133,
+          89
+        ],
+        "paste_origin": [
+          201,
+          270
+        ],
+        "fit_reference": "star_jacket/sources/fit_references/u_happy1.png",
+        "fit_reference_sha256": "3b4da891270f3e586841baa094cd18b3c99f884adee0ce5ba6ed7aab009e3717"
+      }
+    },
+    {
+      "item_id": "star-jacket",
+      "frame_id": "u_happy2",
+      "base_file": "../base/stages/u_happy2.png",
+      "base_sha256": "add156857f5fd9d58f77c5a83f432adec762005c1f7ab8b5fe83ee6805bc6f38",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "layers": {
+        "garment": {
+          "file": "layers/u_happy2__star-jacket.png",
+          "sha256": "35dbc583889bb09a5be4196dad9c942d9391c313c441d4625866e1416cab831f",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            218,
+            290,
+            342,
+            390
+          ]
+        },
+        "foreground": {
+          "file": "layers/u_happy2__foreground.png",
+          "sha256": "842a60ea870b07e4ae3eae67599285220f47fedfae65fb5b693f9c364dc4d512",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "source_original": "../base/stages/u_happy2.png",
+          "source_original_sha256": "add156857f5fd9d58f77c5a83f432adec762005c1f7ab8b5fe83ee6805bc6f38",
+          "selected_rgba_exactly_matches_original": true,
+          "selection_mask_file": "metadata/u_happy2_foreground_selection.png",
+          "selection_mask_sha256": "74ee2fc1683f62cbc394dbce06fc713d26cf4e752362ece3de0c9017c1772b1c",
+          "mask_rule": "Shared per-frame original head/mane and grip regions intersected with this garment alpha > 0. Bike0 uses the approved trial grip polygon."
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment",
+        "foreground"
+      ],
+      "registration": {
+        "source": "sources/u_happy2_short_fitted.png",
+        "source_sha256": "856a312bd39d5e364ecc05ef2b4731da548a5efea1a4fbe4a56b383bd0a66e47",
+        "source_pose": "u_happy2",
+        "cell": [
+          0,
+          0,
+          1254,
+          1254
+        ],
+        "crop_in_cell": [
+          535,
+          708,
+          842,
+          956
+        ],
+        "uniform_scale": 0.4032258064516129,
+        "resized_size": [
+          124,
+          100
+        ],
+        "paste_origin": [
+          218,
+          290
+        ],
+        "fit_reference": "star_jacket/sources/fit_references/u_happy2.png",
+        "fit_reference_sha256": "03bc2d52b2cb0c6c501aff4c939e309ed28305486f86613c095774347d495b99"
+      }
+    },
+    {
+      "item_id": "star-jacket",
+      "frame_id": "bike0",
+      "base_file": "../base/stages/bike0.png",
+      "base_sha256": "0933fd0929cd4ca4f47c6966d5a1618209dd159e4800524a884811637712c416",
+      "pivot_stage": [
+        263.4254143646409,
+        445.52486187845307
+      ],
+      "layers": {
+        "garment": {
+          "file": "layers/bike0__star-jacket.png",
+          "sha256": "345d04509dcff1139714411e2e2972327e2213209440b9f49a05739b55fb3dfd",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            192,
+            216,
+            307,
+            283
+          ]
+        },
+        "foreground": {
+          "file": "layers/bike0__foreground.png",
+          "sha256": "ef8214208bf450cd97b72b638666e33363fb15ab283b46552ed7d755412a1355",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "source_original": "../base/stages/bike0.png",
+          "source_original_sha256": "0933fd0929cd4ca4f47c6966d5a1618209dd159e4800524a884811637712c416",
+          "selected_rgba_exactly_matches_original": true,
+          "selection_mask_file": "metadata/bike0_foreground_selection.png",
+          "selection_mask_sha256": "a353aaa9aa699d1b40d19fe26d3efd55d6140969087a4e0ca5e698ab2ddc457b",
+          "mask_rule": "Shared per-frame original head/mane and grip regions intersected with this garment alpha > 0. Bike0 uses the approved trial grip polygon."
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment",
+        "foreground"
+      ],
+      "registration": {
+        "source": "sources/bike_star_visible.png",
+        "source_sha256": "e2f0781861006f6cb2ad10494589e62957061a95d0baf8208f43120d95d00d4c",
+        "source_pose": "bike0",
+        "cell": [
+          0,
+          0,
+          1254,
+          1254
+        ],
+        "crop_in_cell": [
+          468,
+          530,
+          755,
+          696
+        ],
+        "uniform_scale": 0.40069686411149824,
+        "resized_size": [
+          115,
+          67
+        ],
+        "paste_origin": [
+          192,
+          216
+        ],
+        "fit_reference": "star_jacket/sources/fit_references/bike0.png",
+        "fit_reference_sha256": "7bd234d9e7d979c8603bc7c6f31d8886863a7a499deb15273c4d7f04354e4392"
+      }
+    },
+    {
+      "item_id": "star-jacket",
+      "frame_id": "bike1",
+      "base_file": "../base/stages/bike1.png",
+      "base_sha256": "e99bd54c8e78c8ee36c6baec38c49063c76bc14357014fb84a6ab2b8647bb4ad",
+      "pivot_stage": [
+        261.6574585635359,
+        445.52486187845307
+      ],
+      "layers": {
+        "garment": {
+          "file": "layers/bike1__star-jacket.png",
+          "sha256": "b44bde75b25adf12d85692b16ffd8eabccea3e7acdda5468fa6ed917053b7551",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            192,
+            218,
+            307,
+            285
+          ]
+        },
+        "foreground": {
+          "file": "layers/bike1__foreground.png",
+          "sha256": "13ae5ef21f8f8ea6f10fd64c8e3a036eb6d3d6bf297bd5d8d95b3d3e9ac0894b",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "source_original": "../base/stages/bike1.png",
+          "source_original_sha256": "e99bd54c8e78c8ee36c6baec38c49063c76bc14357014fb84a6ab2b8647bb4ad",
+          "selected_rgba_exactly_matches_original": true,
+          "selection_mask_file": "metadata/bike1_foreground_selection.png",
+          "selection_mask_sha256": "f1da0d2b3a6049c159b459141b418646f2fb3a43f777143d2a69e2ac31fe07cc",
+          "mask_rule": "Shared per-frame original head/mane and grip regions intersected with this garment alpha > 0. Bike0 uses the approved trial grip polygon."
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment",
+        "foreground"
+      ],
+      "registration": {
+        "source": "sources/bike_star_visible.png",
+        "source_sha256": "e2f0781861006f6cb2ad10494589e62957061a95d0baf8208f43120d95d00d4c",
+        "source_pose": "bike0",
+        "cell": [
+          0,
+          0,
+          1254,
+          1254
+        ],
+        "crop_in_cell": [
+          468,
+          530,
+          755,
+          696
+        ],
+        "uniform_scale": 0.40069686411149824,
+        "resized_size": [
+          115,
+          67
+        ],
+        "paste_origin": [
+          192,
+          218
+        ],
+        "fit_reference": "star_jacket/sources/fit_references/bike1.png",
+        "fit_reference_sha256": "5c7d76a8919423b6e36d2a84a7cb7bcc097e5f3c893db4f8dcf7851deaddf064"
+      }
+    },
+    {
+      "item_id": "star-jacket",
+      "frame_id": "bike2",
+      "base_file": "../base/stages/bike2.png",
+      "base_sha256": "c0280e4d764a531d96e1a90e8eed9c0d7fe74dd2bef984aefa039b97516c39a8",
+      "pivot_stage": [
+        259.88950276243094,
+        445.52486187845307
+      ],
+      "layers": {
+        "garment": {
+          "file": "layers/bike2__star-jacket.png",
+          "sha256": "173f75f4d8f81a382df230f18243a5e5dd03900cb6d23464dc9eac3e067225c3",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            193,
+            218,
+            308,
+            285
+          ]
+        },
+        "foreground": {
+          "file": "layers/bike2__foreground.png",
+          "sha256": "95a68ba23e2fa0d502b4b6c9e16124c9c13e70f2fbe36093f441e5e440b8572a",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "source_original": "../base/stages/bike2.png",
+          "source_original_sha256": "c0280e4d764a531d96e1a90e8eed9c0d7fe74dd2bef984aefa039b97516c39a8",
+          "selected_rgba_exactly_matches_original": true,
+          "selection_mask_file": "metadata/bike2_foreground_selection.png",
+          "selection_mask_sha256": "991f5dd05e8ce93d1d6797e12b8d4bc19720ac186b5845f9dd44de70f6421f69",
+          "mask_rule": "Shared per-frame original head/mane and grip regions intersected with this garment alpha > 0. Bike0 uses the approved trial grip polygon."
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment",
+        "foreground"
+      ],
+      "registration": {
+        "source": "sources/bike_star_visible.png",
+        "source_sha256": "e2f0781861006f6cb2ad10494589e62957061a95d0baf8208f43120d95d00d4c",
+        "source_pose": "bike0",
+        "cell": [
+          0,
+          0,
+          1254,
+          1254
+        ],
+        "crop_in_cell": [
+          468,
+          530,
+          755,
+          696
+        ],
+        "uniform_scale": 0.40069686411149824,
+        "resized_size": [
+          115,
+          67
+        ],
+        "paste_origin": [
+          193,
+          218
+        ],
+        "fit_reference": "star_jacket/sources/fit_references/bike2.png",
+        "fit_reference_sha256": "2ea7ffa65c361563c3166f012ba3d69a43a0a8a22ee83bd9773cd4c7c80daf02"
+      }
+    },
+    {
+      "item_id": "star-jacket",
+      "frame_id": "bike3",
+      "base_file": "../base/stages/bike3.png",
+      "base_sha256": "a7a49ffc8b7d66fb783131a8c312e07c3cabb5de61e3f528f3153853e54c0781",
+      "pivot_stage": [
+        259.18232044198896,
+        445.52486187845307
+      ],
+      "layers": {
+        "garment": {
+          "file": "layers/bike3__star-jacket.png",
+          "sha256": "a53f164d243f8222299a0bf0b34bc0d5965523dacdd636615b64e696765234ad",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            194,
+            218,
+            309,
+            285
+          ]
+        },
+        "foreground": {
+          "file": "layers/bike3__foreground.png",
+          "sha256": "53b18ea0d50119ad30d14f1f22c2b17e8ba1856c405845521ce2d5688bd20610",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "source_original": "../base/stages/bike3.png",
+          "source_original_sha256": "a7a49ffc8b7d66fb783131a8c312e07c3cabb5de61e3f528f3153853e54c0781",
+          "selected_rgba_exactly_matches_original": true,
+          "selection_mask_file": "metadata/bike3_foreground_selection.png",
+          "selection_mask_sha256": "045a73b80c406fd2b2807f3b42d150dfe3bc5bfa2cd2d475b528151f58cf6a67",
+          "mask_rule": "Shared per-frame original head/mane and grip regions intersected with this garment alpha > 0. Bike0 uses the approved trial grip polygon."
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment",
+        "foreground"
+      ],
+      "registration": {
+        "source": "sources/bike_star_visible.png",
+        "source_sha256": "e2f0781861006f6cb2ad10494589e62957061a95d0baf8208f43120d95d00d4c",
+        "source_pose": "bike0",
+        "cell": [
+          0,
+          0,
+          1254,
+          1254
+        ],
+        "crop_in_cell": [
+          468,
+          530,
+          755,
+          696
+        ],
+        "uniform_scale": 0.40069686411149824,
+        "resized_size": [
+          115,
+          67
+        ],
+        "paste_origin": [
+          194,
+          218
+        ],
+        "fit_reference": "star_jacket/sources/fit_references/bike3.png",
+        "fit_reference_sha256": "a68025a335ad85f04c5ceb1a731794960ddfc96f33ef75ec77755a698015fc98"
+      }
+    },
+    {
+      "item_id": "star-jacket",
+      "frame_id": "skateboard0",
+      "base_file": "../base/stages/skateboard0.png",
+      "base_sha256": "3800aa6bfc1418be7298ff8cd2709797b77bb32d7256b24040c197e31728ed79",
+      "pivot_stage": [
+        248.22099447513813,
+        425.01657458563534
+      ],
+      "layers": {
+        "garment": {
+          "file": "layers/skateboard0__star-jacket.png",
+          "sha256": "bac5b7959ef1dcab08202993cfa7f4c194ac048099a2617109e78bda00b46df0",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            184,
+            245,
+            313,
+            319
+          ]
+        },
+        "foreground": {
+          "file": "layers/skateboard0__foreground.png",
+          "sha256": "07acac2847384a17917b6f9efdcddcb4fe9a052db5b827e542ec196462237942",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "source_original": "../base/stages/skateboard0.png",
+          "source_original_sha256": "3800aa6bfc1418be7298ff8cd2709797b77bb32d7256b24040c197e31728ed79",
+          "selected_rgba_exactly_matches_original": true,
+          "selection_mask_file": "metadata/skateboard0_foreground_selection.png",
+          "selection_mask_sha256": "07b9e3c0c9baf6fda26a26c327885a60f2d9963ef78380bf5512b6448fff21fe",
+          "mask_rule": "Shared per-frame original head/mane and grip regions intersected with this garment alpha > 0. Bike0 uses the approved trial grip polygon."
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment",
+        "foreground"
+      ],
+      "registration": {
+        "source": "sources/batch2_restylized.png",
+        "source_sha256": "9c2bdd414a04d0456b9d4295b606deaba32b631896b8ad8ba1efee54e8ec18d9",
+        "source_pose": "skateboard0",
+        "cell": [
+          0,
+          0,
+          627,
+          627
+        ],
+        "crop_in_cell": [
+          214,
+          296,
+          392,
+          398
+        ],
+        "uniform_scale": 0.7254901960784313,
+        "resized_size": [
+          129,
+          74
+        ],
+        "paste_origin": [
+          184,
+          245
+        ],
+        "fit_reference": "star_jacket/sources/fit_references/skateboard0.png",
+        "fit_reference_sha256": "fb022abcdd0fce0697f7663c45db9f09794ba3aab34de9307fbeefc375b4bf2f"
+      }
+    },
+    {
+      "item_id": "star-jacket",
+      "frame_id": "skateboard1",
+      "base_file": "../base/stages/skateboard1.png",
+      "base_sha256": "d8649f42d0d188b23c910b0901fa5ede4b606b05223694fd7d395075e4790a51",
+      "pivot_stage": [
+        254.939226519337,
+        425.72375690607737
+      ],
+      "layers": {
+        "garment": {
+          "file": "layers/skateboard1__star-jacket.png",
+          "sha256": "f25575443dbe9bd9b2fe96da73c10b668c87eacaea7c989443c4259a7b2a83d5",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            224,
+            246,
+            353,
+            320
+          ]
+        },
+        "foreground": {
+          "file": "layers/skateboard1__foreground.png",
+          "sha256": "e1ddcbba1a3ac44f71c279d251ff6c829aced321c54d11ed9344145495529509",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "source_original": "../base/stages/skateboard1.png",
+          "source_original_sha256": "d8649f42d0d188b23c910b0901fa5ede4b606b05223694fd7d395075e4790a51",
+          "selected_rgba_exactly_matches_original": true,
+          "selection_mask_file": "metadata/skateboard1_foreground_selection.png",
+          "selection_mask_sha256": "9750bac6719a03997a9f6f011e95cf451a975162127cf8858fd7450bbb6f6658",
+          "mask_rule": "Shared per-frame original head/mane and grip regions intersected with this garment alpha > 0. Bike0 uses the approved trial grip polygon."
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment",
+        "foreground"
+      ],
+      "registration": {
+        "source": "sources/batch2_restylized.png",
+        "source_sha256": "9c2bdd414a04d0456b9d4295b606deaba32b631896b8ad8ba1efee54e8ec18d9",
+        "source_pose": "skateboard0",
+        "cell": [
+          0,
+          0,
+          627,
+          627
+        ],
+        "crop_in_cell": [
+          214,
+          296,
+          392,
+          398
+        ],
+        "uniform_scale": 0.7254901960784313,
+        "resized_size": [
+          129,
+          74
+        ],
+        "paste_origin": [
+          224,
+          246
+        ],
+        "fit_reference": "star_jacket/sources/fit_references/skateboard1.png",
+        "fit_reference_sha256": "a7a2dd8e61666e0fd4806498a9b4c88b33e231e6fc73d2691641ad9e096e7825"
+      }
+    },
+    {
+      "item_id": "star-jacket",
+      "frame_id": "skateboard2",
+      "base_file": "../base/stages/skateboard2.png",
+      "base_sha256": "4f5384cfb3a8549ca11ce51d027faaab4cac15760e66ad1ca03817bb22d3c62f",
+      "pivot_stage": [
+        252.11049723756906,
+        425.72375690607737
+      ],
+      "layers": {
+        "garment": {
+          "file": "layers/skateboard2__star-jacket.png",
+          "sha256": "8fa27b1e69ae199ceb8516ab0a6633c087a05140e53663c653375d2c0083ae30",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            206,
+            246,
+            335,
+            320
+          ]
+        },
+        "foreground": {
+          "file": "layers/skateboard2__foreground.png",
+          "sha256": "913145b10ab8fb2b6293c54c158439419068cc88ec53178f5392329a44ec839f",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "source_original": "../base/stages/skateboard2.png",
+          "source_original_sha256": "4f5384cfb3a8549ca11ce51d027faaab4cac15760e66ad1ca03817bb22d3c62f",
+          "selected_rgba_exactly_matches_original": true,
+          "selection_mask_file": "metadata/skateboard2_foreground_selection.png",
+          "selection_mask_sha256": "acbbf537a0ea7852fab02bf2f23f0095b1525b04c1fbcd1b7dba26408a776e55",
+          "mask_rule": "Shared per-frame original head/mane and grip regions intersected with this garment alpha > 0. Bike0 uses the approved trial grip polygon."
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment",
+        "foreground"
+      ],
+      "registration": {
+        "source": "sources/batch2_restylized.png",
+        "source_sha256": "9c2bdd414a04d0456b9d4295b606deaba32b631896b8ad8ba1efee54e8ec18d9",
+        "source_pose": "skateboard0",
+        "cell": [
+          0,
+          0,
+          627,
+          627
+        ],
+        "crop_in_cell": [
+          214,
+          296,
+          392,
+          398
+        ],
+        "uniform_scale": 0.7254901960784313,
+        "resized_size": [
+          129,
+          74
+        ],
+        "paste_origin": [
+          206,
+          246
+        ],
+        "fit_reference": "star_jacket/sources/fit_references/skateboard2.png",
+        "fit_reference_sha256": "50c9a34d62685fa980f224c0944e293e146950c59086e3e6269c25a4543663aa"
+      }
+    },
+    {
+      "item_id": "star-jacket",
+      "frame_id": "skateboard3",
+      "base_file": "../base/stages/skateboard3.png",
+      "base_sha256": "bf94fc058aff4f7e83c6c063508aee0a089e4f0fbd43040dbf3265c4afa2f69e",
+      "pivot_stage": [
+        253.87845303867402,
+        425.01657458563534
+      ],
+      "layers": {
+        "garment": {
+          "file": "layers/skateboard3__star-jacket.png",
+          "sha256": "8fa27b1e69ae199ceb8516ab0a6633c087a05140e53663c653375d2c0083ae30",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "visible_bounds": [
+            206,
+            246,
+            335,
+            320
+          ]
+        },
+        "foreground": {
+          "file": "layers/skateboard3__foreground.png",
+          "sha256": "899d950eef6cf224b3f7975e41159c13aa876a017f3d8a9c458eaecb78d021c0",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin": [
+            0,
+            0
+          ],
+          "source_original": "../base/stages/skateboard3.png",
+          "source_original_sha256": "bf94fc058aff4f7e83c6c063508aee0a089e4f0fbd43040dbf3265c4afa2f69e",
+          "selected_rgba_exactly_matches_original": true,
+          "selection_mask_file": "metadata/skateboard3_foreground_selection.png",
+          "selection_mask_sha256": "9d0ad6502db18e339cc2596775a791c90d68f2c86a2c1d0874f6eccf29e98bd7",
+          "mask_rule": "Shared per-frame original head/mane and grip regions intersected with this garment alpha > 0. Bike0 uses the approved trial grip polygon."
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment",
+        "foreground"
+      ],
+      "registration": {
+        "source": "sources/batch2_restylized.png",
+        "source_sha256": "9c2bdd414a04d0456b9d4295b606deaba32b631896b8ad8ba1efee54e8ec18d9",
+        "source_pose": "skateboard0",
+        "cell": [
+          0,
+          0,
+          627,
+          627
+        ],
+        "crop_in_cell": [
+          214,
+          296,
+          392,
+          398
+        ],
+        "uniform_scale": 0.7254901960784313,
+        "resized_size": [
+          129,
+          74
+        ],
+        "paste_origin": [
+          206,
+          246
+        ],
+        "fit_reference": "star_jacket/sources/fit_references/skateboard3.png",
+        "fit_reference_sha256": "50c9a34d62685fa980f224c0944e293e146950c59086e3e6269c25a4543663aa"
+      }
+    }
+  ],
+  "cycles": {
+    "idle": [
+      "u_idle0",
+      "u_idle1"
+    ],
+    "run": [
+      "u_run0",
+      "u_run1",
+      "u_run2",
+      "u_run3",
+      "u_run4",
+      "u_run5"
+    ],
+    "happy": [
+      "u_happy0",
+      "u_happy1",
+      "u_happy2"
+    ],
+    "bike": [
+      "bike0",
+      "bike1",
+      "bike2",
+      "bike3"
+    ],
+    "skateboard": [
+      "skateboard0",
+      "skateboard1",
+      "skateboard2",
+      "skateboard3"
+    ]
+  },
+  "mirror_contract": "Mirror the complete base, garment and exact-original foreground group together; do not mirror clothes independently.",
+  "draw_contract": "All RGBA layers are full 512x512 stages drawn at (0,0), with the source pivot retained."
+}

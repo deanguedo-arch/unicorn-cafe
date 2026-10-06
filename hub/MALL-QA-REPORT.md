@@ -91,3 +91,7 @@ This is local/browser proof, not physical iPhone/Safari or child acceptance. Web
 Publication was explicitly authorized after the local reviews. `build_world.py` packages the connected world in the established `game/pages/` folder; the existing GitHub Actions workflow remains unchanged. The rebuild command validates the world package, and the café's original offline checks use its separate `game/cafe-pages/` export. The new root entry opens the world, and the replacement worker only retires the old café root cache. Both native games remain independently launchable and their shared scripts use the checked project base URL. The original café builder and standalone export remain available. Full shared-world offline caching and automatic sync are still later work.
 
 The earlier two-door QA report, manifest and original screenshots are retained as historical evidence. [MALL-MANIFEST.json](MALL-MANIFEST.json) fingerprints this revision's source, new assets and selected current evidence.
+
+## Full fitted wardrobe integration — 2026-10-06
+
+The production wardrobe replaces the earlier generic garment placement. All 23 wearables have records for all 19 poses. See [WARDROBE-INTEGRATION.md](./WARDROBE-INTEGRATION.md) and `tests/wardrobe-production/evidence/` for exact atlas/base preservation, 1,216 independent composition comparisons, connected walking/carrying/celebrations, save recovery, legacy origins, WebKit and release checks. The earlier face-pixel results did not establish natural anatomical fit. Physical-phone and child review remain pending.

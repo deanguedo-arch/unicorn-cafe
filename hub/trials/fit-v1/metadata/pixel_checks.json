@@ -1,0 +1,37 @@
+{
+  "checks": [
+    {
+      "frame_id": "u_idle0",
+      "original_hash_unchanged": true,
+      "outside_overlay_pixel_changes": 0,
+      "double_mirror_identical": true
+    },
+    {
+      "frame_id": "u_run2",
+      "original_hash_unchanged": true,
+      "outside_overlay_pixel_changes": 0,
+      "double_mirror_identical": true
+    },
+    {
+      "frame_id": "u_happy1",
+      "original_hash_unchanged": true,
+      "outside_overlay_pixel_changes": 0,
+      "double_mirror_identical": true
+    },
+    {
+      "frame_id": "bike0",
+      "original_hash_unchanged": true,
+      "outside_overlay_pixel_changes": 0,
+      "double_mirror_identical": true
+    },
+    {
+      "frame_id": "skateboard0",
+      "original_hash_unchanged": true,
+      "outside_overlay_pixel_changes": 0,
+      "double_mirror_identical": true
+    }
+  ],
+  "sampled_pose_fit_review": true,
+  "live_game_tested": false,
+  "full_animation_cycles_tested": false
+}

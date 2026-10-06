@@ -1,0 +1,95 @@
+{
+  "status": "pass_small_fit_trial",
+  "frame_id": "u_happy1",
+  "canvas": [
+    512,
+    512
+  ],
+  "layer_file": "layers/u_happy1__tee.png",
+  "source_file": "sources/tee_u_happy1_extracted.png",
+  "source_size": [
+    1254,
+    1254
+  ],
+  "uniform_resize": [
+    250,
+    250
+  ],
+  "uniform_scale": 0.19936204146730463,
+  "paste_origin": [
+    136,
+    153
+  ],
+  "rotation_degrees": 0,
+  "visible_alpha_gt_1_bbox": [
+    199,
+    267,
+    335,
+    363
+  ],
+  "source_sha256": "0ac98ae889fbd09042cdd7b76725f5bd3dc2588874d87c5e1795f03dcaa4d692",
+  "base_sha256": "c4a4e3ef2a04883b1cc9e90e3ddff535ef12a80f86803fe57f7cdfc56564d0ee",
+  "provenance": {
+    "tool": "built-in image_gen",
+    "fitted_prompt": "metadata/happy_prompt_fitted_reference.txt",
+    "extract_prompt": "metadata/happy_prompt_extract_fitted.txt",
+    "references": [
+      "originals/u_happy1.png",
+      "sources/original_tee-v2.png"
+    ],
+    "method": "Generate a dressed fit reference; then extract only visible shirt fabric with imagegen; uniformly register extracted alpha layer onto the untouched original base",
+    "alpha": "Preserved generated alpha through deterministic uniform scaling and translation; no painted masks, chroma key, character reconstruction or nonuniform distortion",
+    "rejected_attempts": "Earlier standalone full-tube shirt attempts retained separately, not selected for integration"
+  },
+  "z_order": [
+    "originals/u_happy1.png",
+    "layers/u_happy1__tee.png",
+    "layers/u_happy1__beads.png",
+    "layers/u_happy1__bow.png"
+  ],
+  "qa": {
+    "base_hash_unchanged": true,
+    "outside_shirt_alpha_base_pixels_unchanged": true,
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "has_genuine_transparency": true,
+    "edge_alpha_max": 0,
+    "protected_areas": {
+      "left_eye": {
+        "rect": [
+          243,
+          235,
+          279,
+          264
+        ],
+        "max_alpha": 0
+      },
+      "right_eye": {
+        "rect": [
+          300,
+          228,
+          324,
+          255
+        ],
+        "max_alpha": 0
+      },
+      "muzzle": {
+        "rect": [
+          280,
+          254,
+          302,
+          276
+        ],
+        "max_alpha": 0
+      }
+    },
+    "visually_inspected": true,
+    "result": "Sleeves wrap both original raised forelegs; no floating cuff holes, no face coverage, and hem remains above hind legs. Beads now sit on the neckline and no longer overlap the heart.",
+    "remaining_fit_notes": [
+      "The new tee and accessories are crisper than the low-resolution original happy sprite; exact rendering texture parity is not claimed.",
+      "Only this one happy pose is covered, not the rest of the happy animation."
+    ]
+  }
+}

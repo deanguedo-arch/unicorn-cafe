@@ -1,0 +1,66 @@
+{
+  "u_idle0": {
+    "source": "sources/tee_u_idle0_extracted.png",
+    "source_size": [
+      1254,
+      1254
+    ],
+    "scale": 0.4082934609250399,
+    "resampled_size": [
+      512,
+      512
+    ],
+    "paste": [
+      0,
+      0
+    ]
+  },
+  "u_run2": {
+    "source": "sources/tee_u_run2_extracted.png",
+    "source_size": [
+      1254,
+      1254
+    ],
+    "scale": 0.4082934609250399,
+    "resampled_size": [
+      512,
+      512
+    ],
+    "paste": [
+      0,
+      0
+    ]
+  },
+  "bike0": {
+    "source": "sources/tee_bike0_extracted.png",
+    "source_size": [
+      1254,
+      1254
+    ],
+    "scale": 0.19936204146730463,
+    "resampled_size": [
+      250,
+      250
+    ],
+    "paste": [
+      116,
+      119
+    ]
+  },
+  "skateboard0": {
+    "source": "sources/tee_skateboard0_extracted.png",
+    "source_size": [
+      1254,
+      1254
+    ],
+    "scale": 0.30303030303030304,
+    "resampled_size": [
+      380,
+      380
+    ],
+    "paste": [
+      53,
+      64
+    ]
+  }
+}

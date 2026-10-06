@@ -1,7 +1,11 @@
 {
-  "date": "2026-10-05",
-  "status": "GitHub Pages replacement release authorized; browser checks passed; physical-device and child review pending",
+  "date": "2026-10-06",
+  "status": "Full fitted wardrobe integration; browser and source checks passed; physical-device and child review pending",
   "files": {
+    ".gitattributes": {
+      "bytes": 265,
+      "sha256": "ae2720316923dd9a982e6960bf42f8f362d49a7d9beca0a5433cfa935e495c46"
+    },
     ".github/workflows/pages.yml": {
       "bytes": 941,
       "sha256": "e4c143c3d4094212e65d767d15945498139a4914dfdabd197370bcf7cd63e0a9"
@@ -11,8 +15,8 @@
       "sha256": "eca75af5a7ad94eed0f1ca4e2ef8e2754ac1504a89d3138bd3af998a5414d9e0"
     },
     "PROJECT-RULES.md": {
-      "bytes": 5002,
-      "sha256": "ca2265019ab8bb40352637fc5642289a06e3118095a9af9dc0267a07d2c5ee8a"
+      "bytes": 5635,
+      "sha256": "0f97affd7abc8d09266b65f87f871fd0218606da716d932c869a28108d9f36b0"
     },
     "Play-World.command": {
       "bytes": 48,
@@ -39,20 +43,28 @@
       "sha256": "78ec939c30e342b5504263d4a45f91d8df51c96dc2390fe42c08d609b7276258"
     },
     "game/build/src/game.js": {
-      "bytes": 90317,
-      "sha256": "84856a844c6d80a3512f090aa0c3e517d615d4fea6e143286b46436d0117c0ca"
+      "bytes": 90048,
+      "sha256": "f3c4f92d82fcda00883a393d4f9d06840004438fdeb048033d7e55234c62d796"
     },
     "game/build/styles.css": {
       "bytes": 70991,
       "sha256": "cb6b45c2268bce36d8cafbe05c7d479d88d5779e1b098bc1f565d68288bb4933"
     },
+    "game/tests/offline_tests.js": {
+      "bytes": 4871,
+      "sha256": "ba30a5d364b00f3343071463ce085bb0cfd02460ca4dd7d8293702acc236ce60"
+    },
     "hub/MALL-QA-REPORT.md": {
-      "bytes": 16516,
-      "sha256": "1e72dc095f872709bc0d3c5ef0c71cfe8e54c41ae2d92564ec256e55c490f5bb"
+      "bytes": 17086,
+      "sha256": "06d38e79d2582aa4d8f90d16bec1baac5e5206718c5c82a2f2476aceb4ca2c24"
     },
     "hub/README.md": {
-      "bytes": 11307,
-      "sha256": "36cd3b4e066911a7a0914b54bb2dfa77f69609888b21e6ebceb06ded28f81822"
+      "bytes": 11660,
+      "sha256": "f5e30cbe298582ae531b5d6b1a66b5ff236eee62dc2700008372ef3c8650e90c"
+    },
+    "hub/WARDROBE-INTEGRATION.md": {
+      "bytes": 3348,
+      "sha256": "6dd6b474c5a370e58ad1dfe265efcf367da23d8c0134f77ce223460fb8e82636"
     },
     "hub/assets/controls/PROMPTS.json": {
       "bytes": 3918,
@@ -550,6 +562,1326 @@
       "bytes": 813139,
       "sha256": "b48c4866f8a0c1ed9b73abc0a17cd2806dedc4d65807589f90e201c47ae49659"
     },
+    "hub/assets/wardrobe/production/ASSET_SCOPE.txt": {
+      "bytes": 4185,
+      "sha256": "eeec8478cfec925c6fa7c19b63ff57367be0931396587e4c69c29a1228b32f19"
+    },
+    "hub/assets/wardrobe/production/IMPORT-RECORD.json": {
+      "bytes": 434,
+      "sha256": "d3c08ec31db5ff63d1d4e331efde2b9e9a55f078cd1d3bb6e1a469aa42c45618"
+    },
+    "hub/assets/wardrobe/production/INTEGRATION_GUIDE.txt": {
+      "bytes": 9980,
+      "sha256": "1d2d01377da9e4b70d2cfc02b06123bb9d97ea58c2c439320c95292534482fb3"
+    },
+    "hub/assets/wardrobe/production/SHA256SUMS.txt": {
+      "bytes": 41488,
+      "sha256": "c24ecd0662c140f040a42e47d6fcf72d4b1f533e079f32c08f04219979d40448"
+    },
+    "hub/assets/wardrobe/production/START_HERE.txt": {
+      "bytes": 948,
+      "sha256": "6031cb3f765da21006cc409f7f949c8e2dcdaf7db993fa38b692260936b9afe0"
+    },
+    "hub/assets/wardrobe/production/approved_trial/layers/bike0__beads.png": {
+      "bytes": 5127,
+      "sha256": "5c3f9fe968c42d8b07ea16ae4bdc891f4ee7ff78333ed9bebecef5e92ee48639"
+    },
+    "hub/assets/wardrobe/production/approved_trial/layers/bike0__bow.png": {
+      "bytes": 10389,
+      "sha256": "3a99970a97110657dd79750e5bedc37ee5efece332d3643f7c4676db609dce53"
+    },
+    "hub/assets/wardrobe/production/approved_trial/layers/bike0__foreground.png": {
+      "bytes": 3970,
+      "sha256": "fc52ad78e28707b95241f99e7110440cc9a020dedaf4e8e9ea9d449d574bbcae"
+    },
+    "hub/assets/wardrobe/production/approved_trial/layers/bike0__tee.png": {
+      "bytes": 16541,
+      "sha256": "7bd234d9e7d979c8603bc7c6f31d8886863a7a499deb15273c4d7f04354e4392"
+    },
+    "hub/assets/wardrobe/production/approved_trial/layers/skateboard0__beads.png": {
+      "bytes": 5126,
+      "sha256": "07e4f279d0513f0f774e3a723c7b8e84b4d4740385bf8e358ed250fcf847824c"
+    },
+    "hub/assets/wardrobe/production/approved_trial/layers/skateboard0__bow.png": {
+      "bytes": 10404,
+      "sha256": "a447d4a24d84eefd77dfe254075445953573aae62a4ba625663101d014849c09"
+    },
+    "hub/assets/wardrobe/production/approved_trial/layers/skateboard0__tee.png": {
+      "bytes": 20620,
+      "sha256": "fb022abcdd0fce0697f7663c45db9f09794ba3aab34de9307fbeefc375b4bf2f"
+    },
+    "hub/assets/wardrobe/production/approved_trial/layers/u_happy1__beads.png": {
+      "bytes": 4570,
+      "sha256": "250d10b427b211dea5b4d319ac7e6c50e8ec90846b8fbe6fb3b8dbea9c460b90"
+    },
+    "hub/assets/wardrobe/production/approved_trial/layers/u_happy1__bow.png": {
+      "bytes": 10354,
+      "sha256": "818f11d04ddb02d08e7442931c64f9295855b4607342c71edf8805e80f3a6aa9"
+    },
+    "hub/assets/wardrobe/production/approved_trial/layers/u_happy1__tee.png": {
+      "bytes": 23749,
+      "sha256": "3b4da891270f3e586841baa094cd18b3c99f884adee0ce5ba6ed7aab009e3717"
+    },
+    "hub/assets/wardrobe/production/approved_trial/layers/u_idle0__beads.png": {
+      "bytes": 5561,
+      "sha256": "47004ad526a61c1e76450049263ed6a0b54d30082ebd7503ad3f54cf6ea7c32d"
+    },
+    "hub/assets/wardrobe/production/approved_trial/layers/u_idle0__bow.png": {
+      "bytes": 10401,
+      "sha256": "a8135efb22797d9c26792cf2d4de9522a1940f4c021e26c0055963f36c91f63f"
+    },
+    "hub/assets/wardrobe/production/approved_trial/layers/u_idle0__tee.png": {
+      "bytes": 20405,
+      "sha256": "240c30e1043e4f3ac0ea63cff853cbf94646283e341bbe7a11b3aa2ca0bd2372"
+    },
+    "hub/assets/wardrobe/production/approved_trial/layers/u_run2__beads.png": {
+      "bytes": 4928,
+      "sha256": "8e96ee45056f2e1275c4765f640d3946f037bbc3074013db4018dc7158baa012"
+    },
+    "hub/assets/wardrobe/production/approved_trial/layers/u_run2__bow.png": {
+      "bytes": 10245,
+      "sha256": "7abb829c1493b7c360906f8b51f91ccb8581f8956edbf8a099ac48a81c36d30c"
+    },
+    "hub/assets/wardrobe/production/approved_trial/layers/u_run2__tee.png": {
+      "bytes": 22657,
+      "sha256": "397155132b876798c6859dcaf369c77364d3802d05d0469f2c8eb67af6ad6746"
+    },
+    "hub/assets/wardrobe/production/approved_trial/originals/bike0.png": {
+      "bytes": 206692,
+      "sha256": "0933fd0929cd4ca4f47c6966d5a1618209dd159e4800524a884811637712c416"
+    },
+    "hub/assets/wardrobe/production/approved_trial/originals/skateboard0.png": {
+      "bytes": 151396,
+      "sha256": "3800aa6bfc1418be7298ff8cd2709797b77bb32d7256b24040c197e31728ed79"
+    },
+    "hub/assets/wardrobe/production/approved_trial/originals/u_happy1.png": {
+      "bytes": 98112,
+      "sha256": "c4a4e3ef2a04883b1cc9e90e3ddff535ef12a80f86803fe57f7cdfc56564d0ee"
+    },
+    "hub/assets/wardrobe/production/approved_trial/originals/u_idle0.png": {
+      "bytes": 100252,
+      "sha256": "36160efe1a4bfcfdd95a5fb085234a8da880826e5f4064294fa8d964a9ea1b04"
+    },
+    "hub/assets/wardrobe/production/approved_trial/originals/u_run2.png": {
+      "bytes": 103983,
+      "sha256": "33a905cf3e9f76026ce46197e6061b1414975347274b5832f7427daac2e26c61"
+    },
+    "hub/assets/wardrobe/production/asset_manifest.csv": {
+      "bytes": 144564,
+      "sha256": "2618397ba9a8b44f8b5c4c8993f80a924b829fa87f4f79078df78012f41321a9"
+    },
+    "hub/assets/wardrobe/production/atlas_index.json": {
+      "bytes": 415099,
+      "sha256": "415d2d59a32bad90256cc337fc40bb2a170702d1b2a3bcf2e6b1f382131be4d2"
+    },
+    "hub/assets/wardrobe/production/atlases/wardrobe_00.png": {
+      "bytes": 1053128,
+      "sha256": "446fc394d36160509a4df052d4129e0e95b314e67b297ddbcc0b2ba4d5a033a2"
+    },
+    "hub/assets/wardrobe/production/atlases/wardrobe_01.png": {
+      "bytes": 1099784,
+      "sha256": "b6fce78c7a61a1f1374dda46113d29f027eae0c399e0cd64fa7569e735288774"
+    },
+    "hub/assets/wardrobe/production/atlases/wardrobe_02.png": {
+      "bytes": 1642292,
+      "sha256": "5f4554bae60c5905e85809cfae6a66d08550fc4a0541e1a97f21eb5d8721aecf"
+    },
+    "hub/assets/wardrobe/production/atlases/wardrobe_03.png": {
+      "bytes": 4725616,
+      "sha256": "f6d8c8a14aaeac53f664f2f8f37f42fabf6190c1cf44063d2de8404648e5bafd"
+    },
+    "hub/assets/wardrobe/production/atlases/wardrobe_04.png": {
+      "bytes": 2037398,
+      "sha256": "e054f421aee773c5aa731d71fb57e08bfb96898255065c0d3ad4f373f0b599b3"
+    },
+    "hub/assets/wardrobe/production/base/bike0.png": {
+      "bytes": 206692,
+      "sha256": "0933fd0929cd4ca4f47c6966d5a1618209dd159e4800524a884811637712c416"
+    },
+    "hub/assets/wardrobe/production/base/bike1.png": {
+      "bytes": 207958,
+      "sha256": "e99bd54c8e78c8ee36c6baec38c49063c76bc14357014fb84a6ab2b8647bb4ad"
+    },
+    "hub/assets/wardrobe/production/base/bike2.png": {
+      "bytes": 208818,
+      "sha256": "c0280e4d764a531d96e1a90e8eed9c0d7fe74dd2bef984aefa039b97516c39a8"
+    },
+    "hub/assets/wardrobe/production/base/bike3.png": {
+      "bytes": 208580,
+      "sha256": "a7a49ffc8b7d66fb783131a8c312e07c3cabb5de61e3f528f3153853e54c0781"
+    },
+    "hub/assets/wardrobe/production/base/skateboard0.png": {
+      "bytes": 151396,
+      "sha256": "3800aa6bfc1418be7298ff8cd2709797b77bb32d7256b24040c197e31728ed79"
+    },
+    "hub/assets/wardrobe/production/base/skateboard1.png": {
+      "bytes": 155952,
+      "sha256": "d8649f42d0d188b23c910b0901fa5ede4b606b05223694fd7d395075e4790a51"
+    },
+    "hub/assets/wardrobe/production/base/skateboard2.png": {
+      "bytes": 156907,
+      "sha256": "4f5384cfb3a8549ca11ce51d027faaab4cac15760e66ad1ca03817bb22d3c62f"
+    },
+    "hub/assets/wardrobe/production/base/skateboard3.png": {
+      "bytes": 155586,
+      "sha256": "bf94fc058aff4f7e83c6c063508aee0a089e4f0fbd43040dbf3265c4afa2f69e"
+    },
+    "hub/assets/wardrobe/production/base/u_happy0.png": {
+      "bytes": 102131,
+      "sha256": "565006f31e1ad806c52fdf53e9f1aa12db7c664e1694a899d3e054baf882a0b5"
+    },
+    "hub/assets/wardrobe/production/base/u_happy1.png": {
+      "bytes": 98112,
+      "sha256": "c4a4e3ef2a04883b1cc9e90e3ddff535ef12a80f86803fe57f7cdfc56564d0ee"
+    },
+    "hub/assets/wardrobe/production/base/u_happy2.png": {
+      "bytes": 98183,
+      "sha256": "add156857f5fd9d58f77c5a83f432adec762005c1f7ab8b5fe83ee6805bc6f38"
+    },
+    "hub/assets/wardrobe/production/base/u_idle0.png": {
+      "bytes": 100252,
+      "sha256": "36160efe1a4bfcfdd95a5fb085234a8da880826e5f4064294fa8d964a9ea1b04"
+    },
+    "hub/assets/wardrobe/production/base/u_idle1.png": {
+      "bytes": 91856,
+      "sha256": "4e7384355aedec68dd527e88d582904d4977cae24de01689ad4a2d72a398ced1"
+    },
+    "hub/assets/wardrobe/production/base/u_run0.png": {
+      "bytes": 97657,
+      "sha256": "16fb149b94beddd2fb0d94f16ee489d644a3a055d4a88f38b9e16184a6c80b2b"
+    },
+    "hub/assets/wardrobe/production/base/u_run1.png": {
+      "bytes": 102333,
+      "sha256": "b559162368ca98bfc148d4f34f21dc72f76d92334519c7ac61941b9c0a2e5c51"
+    },
+    "hub/assets/wardrobe/production/base/u_run2.png": {
+      "bytes": 103983,
+      "sha256": "33a905cf3e9f76026ce46197e6061b1414975347274b5832f7427daac2e26c61"
+    },
+    "hub/assets/wardrobe/production/base/u_run3.png": {
+      "bytes": 107037,
+      "sha256": "c9c86b37d334ebadb3b22071d80a5285191dd03ec5ff57438e278ff5f6f29dd4"
+    },
+    "hub/assets/wardrobe/production/base/u_run4.png": {
+      "bytes": 101585,
+      "sha256": "c1d60d263dcf596ab054371c4bf4e0c2656c390d28f0436566d2554f8a7ce0be"
+    },
+    "hub/assets/wardrobe/production/base/u_run5.png": {
+      "bytes": 107776,
+      "sha256": "e902ea07c28f14b45623c922a0804a148d23f5db6e912dc6a2c67796875f4c14"
+    },
+    "hub/assets/wardrobe/production/fit_manifest.csv": {
+      "bytes": 33843,
+      "sha256": "9b25e48ec082cd18f382da61d90c6c478c4fdda99ef5dbc02a3745ec829001fb"
+    },
+    "hub/assets/wardrobe/production/manifest.json": {
+      "bytes": 601552,
+      "sha256": "4a8c293d7b1c67b69b4b829fdcc56acedded3992dc07b1ab84801c165803721b"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/prize-gold-scarf__bike0.png": {
+      "bytes": 382,
+      "sha256": "e6f2fb90881713f3b6e0cf19ba1e9a4a98f46f9920730b647d8a7a6730cf9a94"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/prize-gold-scarf__bike1.png": {
+      "bytes": 364,
+      "sha256": "bf2d1badc2a7e9a01ce6863e06b2ef483a6d8108d04f1b4a006e260ceb794559"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/prize-gold-scarf__bike2.png": {
+      "bytes": 367,
+      "sha256": "0c742d411c9a0ff75acf6a5ac89c6ee9d41fd180116d47d3fc2da9d2e85f11fb"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/prize-gold-scarf__bike3.png": {
+      "bytes": 370,
+      "sha256": "68ab6d5e69c4448886c72109fe235cf8adf63cbfe045261909418996f7666ce7"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/prize-gold-scarf__skateboard0.png": {
+      "bytes": 380,
+      "sha256": "30f3db4c9f9f2a8cded1b5f162cce57c8742829c83b8bdc8b7e1158e2b465297"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/prize-gold-scarf__skateboard1.png": {
+      "bytes": 426,
+      "sha256": "1f3919a74430a8cc70e9549599b8b64b1c0d09fdaf2607b9cda0160c93baeee2"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/prize-gold-scarf__skateboard2.png": {
+      "bytes": 388,
+      "sha256": "c5ad2551c8b2e8a4d490ef413a53da722d225287be0efbb3a248ab2ca272279e"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/prize-gold-scarf__skateboard3.png": {
+      "bytes": 397,
+      "sha256": "88e5055870123a2e39d73f1494bf1df17dcd35f976566dab5503f79a261b89a2"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/prize-gold-scarf__u_happy0.png": {
+      "bytes": 534,
+      "sha256": "9a5bd55c55f2287f562fc38e60fda274a44aba86db70b01661767853c86e05d1"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/prize-gold-scarf__u_happy1.png": {
+      "bytes": 413,
+      "sha256": "1b3dfe39c00ade1e3fa1047e4940fb8bf9fe2ba7fabb1191d4a79c5b5fb134ca"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/prize-gold-scarf__u_happy2.png": {
+      "bytes": 388,
+      "sha256": "cab2ccc21ada75eb70e70726ab8dc9b8366c45a2eb5275a2077a701605edf003"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/prize-gold-scarf__u_idle0.png": {
+      "bytes": 459,
+      "sha256": "e44f91d0532ff5387d748dae0cb572f113c79766e80c4385c1e0b0edaced7e5c"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/prize-gold-scarf__u_idle1.png": {
+      "bytes": 556,
+      "sha256": "abf349247b946b0bee1b87a57705b56e9f516f58597562536768f3d43c0d828f"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/prize-gold-scarf__u_run0.png": {
+      "bytes": 587,
+      "sha256": "b68a613fcde8c3356dde7ebd5b4247e3613f2b2c12ae2f23552a56a466ec0024"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/prize-gold-scarf__u_run1.png": {
+      "bytes": 475,
+      "sha256": "177d8c0a532475f835b71372789c13655f7b833764ced9820f3d7be0cf0287fd"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/prize-gold-scarf__u_run2.png": {
+      "bytes": 529,
+      "sha256": "5027e44842fbae657aa97d4c1d3ba6e5075eda136bd2433294a53b594aa7dfb4"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/prize-gold-scarf__u_run3.png": {
+      "bytes": 597,
+      "sha256": "7b4c9905143f7338ec975dd2e57f77863b7e1ebf75cf734a6756612f25dc6892"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/prize-gold-scarf__u_run4.png": {
+      "bytes": 637,
+      "sha256": "1149832058be9aaf9ca778b1513ef9dbc8e194e75f2be8f00d8d5147f353394f"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/prize-gold-scarf__u_run5.png": {
+      "bytes": 646,
+      "sha256": "3a32ce8b9b7acb61bd454766b3807eb2f014d0321cf7e2f0c10a4bd0f819b073"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/prize-moon-bag__bike0.png": {
+      "bytes": 366,
+      "sha256": "b0de1c28e2568115d3d0ad77833f845f9654d0ed71a10bc62d3de706c771a3bc"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/prize-moon-bag__bike1.png": {
+      "bytes": 390,
+      "sha256": "e91cb32c110458a6f78b6a6939a85a11b62cec6bc145723e7994627cf6cfcd9d"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/prize-moon-bag__bike2.png": {
+      "bytes": 408,
+      "sha256": "ba4be65c353d38c4e87340a2bcd1f39f831124c3f25eda5cf0b9bd950875ca51"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/prize-moon-bag__bike3.png": {
+      "bytes": 388,
+      "sha256": "2fe8d49d23d5aa244d037ae7cbc5b976fa4308a96eeab1d43282537d80eea29d"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/prize-moon-bag__skateboard0.png": {
+      "bytes": 414,
+      "sha256": "571da3379c6d9b1e6d05ceb6da126c6c4cbd23939fc9141baaf1d7da4272bca6"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/prize-moon-bag__skateboard1.png": {
+      "bytes": 439,
+      "sha256": "65af84f60814998843d31a5bc511e679e737bcf54d3a76ee8685c6b5c31ba501"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/prize-moon-bag__skateboard2.png": {
+      "bytes": 436,
+      "sha256": "942c993c1c0d22a215bdedea020a9c91cc95ef5a8b604361575ced6169bb4473"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/prize-moon-bag__skateboard3.png": {
+      "bytes": 425,
+      "sha256": "0f0043c8a0819917a80061f3e099c1587ea66d4254b41691a207873de971a4af"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/prize-moon-bag__u_happy0.png": {
+      "bytes": 519,
+      "sha256": "c13c6abd35916bfbb86627494d666da1c3b98313200cda05d8eac89a3fe3cb18"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/prize-moon-bag__u_happy1.png": {
+      "bytes": 334,
+      "sha256": "ef2a4c8949cdab1ef24e678bdb88cc276b1fd75e62066e47011c2ce53996efe6"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/prize-moon-bag__u_happy2.png": {
+      "bytes": 510,
+      "sha256": "c6bb765990587a0c8b848a552d6274d53127d70727f387b85947f9caf8ebabd6"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/prize-moon-bag__u_idle0.png": {
+      "bytes": 460,
+      "sha256": "ead2bd16f9eb9a06f89c3d1f3045b72adb0d3a618d93fa1293f320b148fcc005"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/prize-moon-bag__u_idle1.png": {
+      "bytes": 560,
+      "sha256": "eafb6edc7b8e9d52b31af75b75f140f808d354c2d32d4c9f6a7187a461a62643"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/prize-moon-bag__u_run0.png": {
+      "bytes": 519,
+      "sha256": "17d316c9a63689378491a5880c389a93cf1ee9d274bcd6656a2086121f55a337"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/prize-moon-bag__u_run1.png": {
+      "bytes": 485,
+      "sha256": "8edc5619e59b1da0e9c3dc855f5c888c410b6067b3da4ab51d1a5e5989f751f0"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/prize-moon-bag__u_run2.png": {
+      "bytes": 484,
+      "sha256": "1b778d9ddc20d0bd219a8ec43e90a43c1e323f4a53b5a3afbfed6683a940e0b0"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/prize-moon-bag__u_run3.png": {
+      "bytes": 521,
+      "sha256": "c5b168953daf2d5c1aa027564b8012750b63e42587bdd8d2c63970e06c417971"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/prize-moon-bag__u_run4.png": {
+      "bytes": 546,
+      "sha256": "91d4360615cf4f8b86c1757f9e735cbfaf52f72a7b5ead719da5d1d6b6b728b5"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/prize-moon-bag__u_run5.png": {
+      "bytes": 557,
+      "sha256": "645f0959a467478a278c4ec2e19fc65ec4bfa7c4a0c58f758e3dae4ed9923aeb"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/satchel__bike0.png": {
+      "bytes": 357,
+      "sha256": "fe7da8e33a479c30e7e5a14fdbcf2717925d92c7e45274c91db06eede59d1792"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/satchel__bike1.png": {
+      "bytes": 381,
+      "sha256": "4442b65ff8c847bb46825f669168b14c65fe9aa6067dea15a71db9dd78578f2e"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/satchel__bike2.png": {
+      "bytes": 407,
+      "sha256": "b352cb7015d28f08cbc76a7c50aa745d6c5a5423f6237b438460d40858a78fe9"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/satchel__bike3.png": {
+      "bytes": 381,
+      "sha256": "ac5328abc84b4676bc31ef680bbdf3d265c67d6604aeafb98aab32aa0c69695f"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/satchel__skateboard0.png": {
+      "bytes": 404,
+      "sha256": "25b66147fc919fb0154547d84d6da467bbe62a3e797b90b2d7bb817104462fd3"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/satchel__skateboard1.png": {
+      "bytes": 433,
+      "sha256": "8e714b6e88e6cf1a4194f681c2b0bea55b83dbb5b4482a3e386134b47444727b"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/satchel__skateboard2.png": {
+      "bytes": 436,
+      "sha256": "fdd8dfa66816ca1c90daea914bd2462cd5e4bea9072055e80ac34123f4a23853"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/satchel__skateboard3.png": {
+      "bytes": 430,
+      "sha256": "fc97d7dc1bacce5f9d8728a4fabdbd7d124acdaec7c377ac89ae66f416deee95"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/satchel__u_happy0.png": {
+      "bytes": 498,
+      "sha256": "3c6abf4f919260064bcc441002b667e81b9a0c3d48ee1dfce9c9f28d077da362"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/satchel__u_happy1.png": {
+      "bytes": 334,
+      "sha256": "ef2a4c8949cdab1ef24e678bdb88cc276b1fd75e62066e47011c2ce53996efe6"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/satchel__u_happy2.png": {
+      "bytes": 501,
+      "sha256": "69df7a9b4096179e2ebfef668dafe22659a88ab162a3a3ac4efaebf17d3531cf"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/satchel__u_idle0.png": {
+      "bytes": 459,
+      "sha256": "1661646490af93df533b6ada94b639df3d2cec69743cc7973e7c46363a6fa3d0"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/satchel__u_idle1.png": {
+      "bytes": 557,
+      "sha256": "9fa31b15392b91cfaa546e5825388e802156267e702e149f9596a3b8e1e50a94"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/satchel__u_run0.png": {
+      "bytes": 512,
+      "sha256": "c839946e0db1d03ca07526e204339cd61809e80daa34f83ce12d11fe6a8bcbb6"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/satchel__u_run1.png": {
+      "bytes": 493,
+      "sha256": "dccefb8b3af1d04f6c88542851a84f7f7927dfac44b4e8d7d742706d3df75ab1"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/satchel__u_run2.png": {
+      "bytes": 485,
+      "sha256": "c2be10244151f38848f1cd4e5b4debf0ae43040c41b827a9ff4fcf369d6b3fa3"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/satchel__u_run3.png": {
+      "bytes": 514,
+      "sha256": "d2137dd99038c4ee03dd838ed5166c07c1a9fade2c5f5a8206dbe443a4e94dd4"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/satchel__u_run4.png": {
+      "bytes": 539,
+      "sha256": "814c11779add1c95b6b40f65996639bf21d0c1910d075278c4696336c997b01d"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/satchel__u_run5.png": {
+      "bytes": 565,
+      "sha256": "bd337787db52dd5281cc7fd500fe3edbe7a4f8e654ed10c62424fb42a0389a73"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/scarf__bike0.png": {
+      "bytes": 382,
+      "sha256": "e6f2fb90881713f3b6e0cf19ba1e9a4a98f46f9920730b647d8a7a6730cf9a94"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/scarf__bike1.png": {
+      "bytes": 364,
+      "sha256": "bf2d1badc2a7e9a01ce6863e06b2ef483a6d8108d04f1b4a006e260ceb794559"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/scarf__bike2.png": {
+      "bytes": 367,
+      "sha256": "0c742d411c9a0ff75acf6a5ac89c6ee9d41fd180116d47d3fc2da9d2e85f11fb"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/scarf__bike3.png": {
+      "bytes": 370,
+      "sha256": "68ab6d5e69c4448886c72109fe235cf8adf63cbfe045261909418996f7666ce7"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/scarf__skateboard0.png": {
+      "bytes": 382,
+      "sha256": "bcd8bd3a5631f9a877710323417edbbd46b182e8db35e9db3b4282a788c1258b"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/scarf__skateboard1.png": {
+      "bytes": 426,
+      "sha256": "1184be7277f9e6723f42540bc43a581068ef6489441835fb2141e20f08c39e18"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/scarf__skateboard2.png": {
+      "bytes": 389,
+      "sha256": "6a3a7e1d4b3d6aa164e534f8fd489e43c775cd5d79a8ee7ebd19b92fd17f69e4"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/scarf__skateboard3.png": {
+      "bytes": 397,
+      "sha256": "dfc3260b6264ace4b94ebab869743bea289eaa99aca6cb603f6b9465b2375e35"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/scarf__u_happy0.png": {
+      "bytes": 545,
+      "sha256": "bf6dbc6368cd4e0191f6a844738ac87ecd6a4b07c1ab22dae52b24536f8f322c"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/scarf__u_happy1.png": {
+      "bytes": 410,
+      "sha256": "fc35cd0740426ddd426ac04ce8dcf5874e0becc1ef68160f30f1ff26b6f63afb"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/scarf__u_happy2.png": {
+      "bytes": 391,
+      "sha256": "296e72cc4f0b6ef10cc73280cc337363528b402e51c4060b356bca07f2d15c35"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/scarf__u_idle0.png": {
+      "bytes": 465,
+      "sha256": "cb4ef5ce42c7c4a0aeedf0aee8d32ee75049e640c6b589b4b06bbfbd0b502d18"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/scarf__u_idle1.png": {
+      "bytes": 564,
+      "sha256": "aca92abac0fb2e02ce8878cf3eb3d6070115f83b301f478ea9210435e863fcf1"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/scarf__u_run0.png": {
+      "bytes": 584,
+      "sha256": "e0a91d7cf73d1d4e82b8667e9d8247525ef92995e50b938c98f08711fa23825e"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/scarf__u_run1.png": {
+      "bytes": 482,
+      "sha256": "4bbd38fc9cb3d73d8c55abdbd1da49708076d99a81b33c98aaf1cebb26d661e3"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/scarf__u_run2.png": {
+      "bytes": 532,
+      "sha256": "a6cbe4062b479dee9550a3e06c153c331e38ee82c9c6433e1c1b24e8daad48f6"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/scarf__u_run3.png": {
+      "bytes": 594,
+      "sha256": "8cdab82482e6c4b881ee85d3b01e69a2a55c22826a706674db6ee1f7cf4c03b6"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/scarf__u_run4.png": {
+      "bytes": 635,
+      "sha256": "74eeafbeab998cff7ebb72b20e27dbd5c100b96d3d81475b710e388a7f846a41"
+    },
+    "hub/assets/wardrobe/production/metadata/accessory_occlusion_masks/scarf__u_run5.png": {
+      "bytes": 656,
+      "sha256": "acc8409ca6b2b40129669e20050f9a6b88a77b5f1edc88e99d4042400e602506"
+    },
+    "hub/assets/wardrobe/production/metadata/approved_trial_freeze.json": {
+      "bytes": 4033,
+      "sha256": "023e0d64826951b56d05acf24dce2451d411ccf7642a27a67e7dbcb348cf1443"
+    },
+    "hub/assets/wardrobe/production/metadata/art_prompts/dress_raincoat__prompts/all_imagegen_prompts.json": {
+      "bytes": 29860,
+      "sha256": "916280965b627beab13eac2b2575d740d4631da4be181f04a3db72b37d3fd0f3"
+    },
+    "hub/assets/wardrobe/production/metadata/art_prompts/dress_raincoat__prompts/cleanup_prompts.json": {
+      "bytes": 3684,
+      "sha256": "4771920248d26ffebb6654c976094145ee0f277bf03f05caf2184ce86ed62d98"
+    },
+    "hub/assets/wardrobe/production/metadata/art_prompts/dress_raincoat__prompts/rainbow-dress__u_idle0_fit.txt": {
+      "bytes": 1480,
+      "sha256": "be238906f3467d14b1b01e806bdd1856009e979eefc0dcfab07ff2548876a0bd"
+    },
+    "hub/assets/wardrobe/production/metadata/art_prompts/dress_raincoat__prompts/raincoat__u_idle0_fit.txt": {
+      "bytes": 1357,
+      "sha256": "fcea4f95dc300e66b6a5379a311682070b6b3ff37c525fce49a380824e8c784b"
+    },
+    "hub/assets/wardrobe/production/metadata/art_prompts/head_accessories__accessories__prompts/beads_trial.txt": {
+      "bytes": 1473,
+      "sha256": "c6a17b275d1866e2742f40fef6ef4e1f09c57b339d2d9c2d783fc68f857e7b80"
+    },
+    "hub/assets/wardrobe/production/metadata/art_prompts/head_accessories__accessories__prompts/gold_scarf.txt": {
+      "bytes": 663,
+      "sha256": "58e5ecf2b1553c8353ae4b964faca6e749e02223c43f00f53c57355d3bf3a7bf"
+    },
+    "hub/assets/wardrobe/production/metadata/art_prompts/head_accessories__accessories__prompts/mask_open_fit.txt": {
+      "bytes": 1064,
+      "sha256": "28db09d94945835fcfb6958833bde519fa6385c43e753d22aaac727587e64264"
+    },
+    "hub/assets/wardrobe/production/metadata/art_prompts/head_accessories__accessories__prompts/moon_bag_strap.txt": {
+      "bytes": 763,
+      "sha256": "669a0a39c1fafe8eb66f50f310a4bc4c667638366bdcd07a6a56f7c98af6ef45"
+    },
+    "hub/assets/wardrobe/production/metadata/art_prompts/head_accessories__accessories__prompts/satchel_strap.txt": {
+      "bytes": 1118,
+      "sha256": "604225f4f08a83f29c06f989347fed97e1efe420d01e72d92897bb2be118077f"
+    },
+    "hub/assets/wardrobe/production/metadata/art_prompts/head_accessories__accessories__prompts/scarf_shallow.txt": {
+      "bytes": 1236,
+      "sha256": "ed5d1ab62111b3eb086da7d30a6bde72c3df09a7186ad75f707b679c028afb67"
+    },
+    "hub/assets/wardrobe/production/metadata/art_prompts/head_accessories__headwear__prompts/comet_initial_prompt.txt": {
+      "bytes": 971,
+      "sha256": "13ba539d2a7300901efad72b0eef0a3f4ecbdd80e5cbb7cdf7168dc6899233ad"
+    },
+    "hub/assets/wardrobe/production/metadata/art_prompts/head_accessories__headwear__prompts/imagegen_prompts.json": {
+      "bytes": 3573,
+      "sha256": "4065870a283cdcd677561ec2e02027294378076b849ec2dce91f409abf3d10d4"
+    },
+    "hub/assets/wardrobe/production/metadata/art_prompts/head_accessories__headwear__prompts/provenance.json": {
+      "bytes": 1788,
+      "sha256": "96091132237a2dd8376500b1388973f068fc783be2c1255901fb81f2ca6c1ddb"
+    },
+    "hub/assets/wardrobe/production/metadata/art_prompts/head_accessories__headwear__prompts/space_prompt.txt": {
+      "bytes": 1012,
+      "sha256": "c5302300665fcf9a3102c7edc64cdebeca280b28fe145ac6b5a0c858bceaebae"
+    },
+    "hub/assets/wardrobe/production/metadata/art_prompts/star_jacket/batch1_prompt.txt": {
+      "bytes": 1256,
+      "sha256": "b67f8504c37c3a23aa0350c0a8ee00607c88ce0243f64ffd728dce00f267f6cb"
+    },
+    "hub/assets/wardrobe/production/metadata/art_prompts/star_jacket/batch2_prompt.txt": {
+      "bytes": 1249,
+      "sha256": "194de8ccd7ccfd85dbceaa5b8e17baa86ca8de93688ac32a5fe15e272e2e663d"
+    },
+    "hub/assets/wardrobe/production/metadata/art_prompts/star_jacket/batch3_prompt.txt": {
+      "bytes": 1249,
+      "sha256": "194de8ccd7ccfd85dbceaa5b8e17baa86ca8de93688ac32a5fe15e272e2e663d"
+    },
+    "hub/assets/wardrobe/production/metadata/art_prompts/star_jacket/bike_prompt.txt": {
+      "bytes": 1089,
+      "sha256": "7c7351e032d0a17eb8f0f36c11d7715eada6d8ae3c24aaeb931687a336ae86ed"
+    },
+    "hub/assets/wardrobe/production/metadata/art_prompts/star_jacket/happy_short_prompt.txt": {
+      "bytes": 956,
+      "sha256": "6195fbf47a014d4f65d707ab512378fb0c869061d3dc5e60fa8b6c63fcd38ad1"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/prize-gold-scarf__bike0__foreground.png": {
+      "bytes": 1304,
+      "sha256": "7276938b87b4bd0f1b54db9c354e914d2eff985755c53e692d47c597a588ac5b"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/prize-gold-scarf__bike1__foreground.png": {
+      "bytes": 1220,
+      "sha256": "2891bd0944d61c3826d671be923d117c747a56601c669d7a01007673fa903aca"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/prize-gold-scarf__bike2__foreground.png": {
+      "bytes": 1231,
+      "sha256": "e83584450403f40112100aec27126cef33f142dd913f258201407dcf8286b085"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/prize-gold-scarf__bike3__foreground.png": {
+      "bytes": 1231,
+      "sha256": "52ea8e7e318704dd842a251722932b47ac3a6b376b806a9bc0231499664b67d5"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/prize-gold-scarf__skateboard0__foreground.png": {
+      "bytes": 1375,
+      "sha256": "cb7d1b2bce04cb339ee50755dd628e9750ed73d638f965ee1aac19b6d2e71176"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/prize-gold-scarf__skateboard1__foreground.png": {
+      "bytes": 1483,
+      "sha256": "104d424eb56bc1d29c18420f0aecaefcc544efb8948d71d9bd668107352cde20"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/prize-gold-scarf__skateboard2__foreground.png": {
+      "bytes": 1385,
+      "sha256": "8b547653a3469ae08ddcbe87f82cd1983cb586590aac36f2327299521ed3b800"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/prize-gold-scarf__skateboard3__foreground.png": {
+      "bytes": 1479,
+      "sha256": "271773a9a0a290b932822d9b37860683fbdf6b05081ca95a6de7e1a6d5e52a03"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/prize-gold-scarf__u_happy0__foreground.png": {
+      "bytes": 2387,
+      "sha256": "3edd94fc1c08b25cb34d722bc5568cb2e2d3bf437608fde738647cc4595e5eb4"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/prize-gold-scarf__u_happy1__foreground.png": {
+      "bytes": 1501,
+      "sha256": "ad712a1721c8e2df9e916e859c86faf45a7d5d87082e930b1a0bc075ff0498c6"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/prize-gold-scarf__u_happy2__foreground.png": {
+      "bytes": 1283,
+      "sha256": "614a4a29950ccf9eb9cba151980e517da1d2457926c4653532b33e31314d5871"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/prize-gold-scarf__u_idle0__foreground.png": {
+      "bytes": 1739,
+      "sha256": "3d87c0260b2ae3e23419d9bc3ef7b2c82b4e74de9e8e1b68940bc427fa4fcf57"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/prize-gold-scarf__u_idle1__foreground.png": {
+      "bytes": 2694,
+      "sha256": "8009783695c3006d5f6faf2f374e774aac91c6822e3becd15f4f06bb009f0df0"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/prize-gold-scarf__u_run0__foreground.png": {
+      "bytes": 2583,
+      "sha256": "9ce3c99ff16dbe67dd21843eed71d3db66f343e85c1a27f45083c52df9489c5c"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/prize-gold-scarf__u_run1__foreground.png": {
+      "bytes": 1724,
+      "sha256": "4f1b8e6ccf7ff0ac384c58d7972786cbaa6ff372423ce637ba573721e7ab9d3e"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/prize-gold-scarf__u_run2__foreground.png": {
+      "bytes": 2072,
+      "sha256": "635f516712a240dc69ee5552d012345cb94e5d69fac7182a83c6e4a3d121b4c1"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/prize-gold-scarf__u_run3__foreground.png": {
+      "bytes": 2483,
+      "sha256": "0ff8f18e915e1454a8ed460bf98318002d53e393b662d3f5cc85fb15b6b62c75"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/prize-gold-scarf__u_run4__foreground.png": {
+      "bytes": 2718,
+      "sha256": "294bcd257530b5e804b04fa33e01692987ab464b1fb7d309f236fb03975aacdc"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/prize-gold-scarf__u_run5__foreground.png": {
+      "bytes": 2864,
+      "sha256": "42e359979b196e4bba770bb4887a0bf7c28514d2813abbe13eae0ac113c818e0"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/prize-moon-bag__bike0__foreground.png": {
+      "bytes": 1210,
+      "sha256": "84a52b15909b350fd11783c06fbb94d26406fccf3ceeb9e8edc3a954be790d3b"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/prize-moon-bag__bike1__foreground.png": {
+      "bytes": 1238,
+      "sha256": "e196357838d1b82f62b1716022fba2e5c704bdcff115c7d0716b02124cef1867"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/prize-moon-bag__bike2__foreground.png": {
+      "bytes": 1319,
+      "sha256": "368dea2962a1a20b9b1c6024427c846cb6a5a33addd3025b2ccc74e7a5e68fd6"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/prize-moon-bag__bike3__foreground.png": {
+      "bytes": 1257,
+      "sha256": "0804bc0aa6a302d3fbc83db311c0765da48a0180fcfa52f85fdc5dc9873e63a6"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/prize-moon-bag__skateboard0__foreground.png": {
+      "bytes": 1552,
+      "sha256": "370835dcb9b8863aedd898c7bd127dea0cd5572eb331d513f696ec94a0ccecd0"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/prize-moon-bag__skateboard1__foreground.png": {
+      "bytes": 1745,
+      "sha256": "4faafdf187a895274ab998ee69381b068a00bf79f4644ff296a3691dd4563f0c"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/prize-moon-bag__skateboard2__foreground.png": {
+      "bytes": 1764,
+      "sha256": "7c2e465d679752365c793eef330410553973d75f146e55e2100b02fc3e174afd"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/prize-moon-bag__skateboard3__foreground.png": {
+      "bytes": 1652,
+      "sha256": "4e49db0726c97ddbbca0967daba1f9cdabc02ea3343f8a0dd256632ab14ad49b"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/prize-moon-bag__u_happy0__foreground.png": {
+      "bytes": 2035,
+      "sha256": "cd7491df3676269bd25f8023f15928a11296cbfe83211256db6ed2260c3a8816"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/prize-moon-bag__u_happy1__foreground.png": {
+      "bytes": 1096,
+      "sha256": "074065f07e35265d9695cced0f42844dbb02e5766c4ed185d0a372b2d033b093"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/prize-moon-bag__u_happy2__foreground.png": {
+      "bytes": 1782,
+      "sha256": "a72923f10a59804a01a7c9cbcdd96a3c8f01ea15be382c8b2b598962687a8c01"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/prize-moon-bag__u_idle0__foreground.png": {
+      "bytes": 2149,
+      "sha256": "5eead88f7a900c3696d1fd08b6f1ea2c6c605ed6ab3872cfc2c2c3fa9ba8afcc"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/prize-moon-bag__u_idle1__foreground.png": {
+      "bytes": 2577,
+      "sha256": "a2af8dd7db55914379fc9cc376546f48838ec73a49711c9adad4016a68154494"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/prize-moon-bag__u_run0__foreground.png": {
+      "bytes": 2343,
+      "sha256": "b9f8eeac0fa3300bbfb87becb11635772967e59ce33f754276400d643b52454c"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/prize-moon-bag__u_run1__foreground.png": {
+      "bytes": 2081,
+      "sha256": "0b592f2cd5317506e07de46216e3034d164d2737fdab2c2e157bf5664bea4158"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/prize-moon-bag__u_run2__foreground.png": {
+      "bytes": 2130,
+      "sha256": "2b0f6bc235cd84645eb8744de4c35a68172f74e6eb03743a670bc068a7543583"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/prize-moon-bag__u_run3__foreground.png": {
+      "bytes": 2772,
+      "sha256": "b6f7166a0bade9f34b39e09d019296811f92edf88df9e1d0040770fd36164764"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/prize-moon-bag__u_run4__foreground.png": {
+      "bytes": 2205,
+      "sha256": "20e70e3715207f1251275fcc6472655b15ca96e3a491e405a28635e49d72ab62"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/prize-moon-bag__u_run5__foreground.png": {
+      "bytes": 3121,
+      "sha256": "d7b0eac25dae6312441c6677f2f55cf2b88da98a0a6d39f1d4ecb362cdbb826e"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/satchel__bike0__foreground.png": {
+      "bytes": 1190,
+      "sha256": "bb5f6a4fa02064ee2e0d201af521228ad04f73bd81d8cffc7afa2c324d0e0631"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/satchel__bike1__foreground.png": {
+      "bytes": 1219,
+      "sha256": "539089772921d5e97844c5468fa61f4baf87b917d7f10a467c22bfbe12a6064f"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/satchel__bike2__foreground.png": {
+      "bytes": 1305,
+      "sha256": "9754e81adecf7509706558f5b619132add1fbb434d1b350466e2fcf374b80004"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/satchel__bike3__foreground.png": {
+      "bytes": 1204,
+      "sha256": "b5b8047e1569cc436bcebc0a7a7660ebc6d2c324c632fafd5c7754dd1b281983"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/satchel__skateboard0__foreground.png": {
+      "bytes": 1529,
+      "sha256": "cae8a0e4a6fa926330044c02a61902203c7cb9904e953f4e45b50d5f8cdeee68"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/satchel__skateboard1__foreground.png": {
+      "bytes": 1740,
+      "sha256": "fc1961b2aef0debfa5b1c406193bcbccc9d9e4fbef70996fc0cbb345f2eb5f00"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/satchel__skateboard2__foreground.png": {
+      "bytes": 1746,
+      "sha256": "2251117c3f9f879daa1aff19336534766c59f92e700dccdadb605559c6a0c23b"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/satchel__skateboard3__foreground.png": {
+      "bytes": 1627,
+      "sha256": "71374e0e571c560cb3a4c6da480990d184a68ff8e5cf66df17e5fa729d6f9288"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/satchel__u_happy0__foreground.png": {
+      "bytes": 1995,
+      "sha256": "4b97e126417e1c33369496ac0998bd2eb2c5f8dee53b602e8d093e144ad70c61"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/satchel__u_happy1__foreground.png": {
+      "bytes": 1096,
+      "sha256": "074065f07e35265d9695cced0f42844dbb02e5766c4ed185d0a372b2d033b093"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/satchel__u_happy2__foreground.png": {
+      "bytes": 1746,
+      "sha256": "57a3e2e7d17da9c5d4ff021f26a863f4dfe4a1d442cc00727ca491237dba5eb1"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/satchel__u_idle0__foreground.png": {
+      "bytes": 2119,
+      "sha256": "76382a80f4338b8935e4646e47dbae0a282960bd9727b69a47aeb7124775f446"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/satchel__u_idle1__foreground.png": {
+      "bytes": 2519,
+      "sha256": "b9bc807189f7037bd89eeb36e652cffab7ca8884b1e068fdb6a1481f09026780"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/satchel__u_run0__foreground.png": {
+      "bytes": 2311,
+      "sha256": "b73552544ba45ada6ba8f7314f35a481a57d95df97beda1becb443517413db23"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/satchel__u_run1__foreground.png": {
+      "bytes": 2092,
+      "sha256": "d7b8adf7596585fbd8937ff8f5b6cc3ec4e1671f064aa25864fb95291d61e78f"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/satchel__u_run2__foreground.png": {
+      "bytes": 2116,
+      "sha256": "e94a32ca5729e711595da96d70b40c5b809e58225cc4532a6d947d0e1351dc41"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/satchel__u_run3__foreground.png": {
+      "bytes": 2714,
+      "sha256": "0d12e966a26251344693b7d187bdb2168873b878ea63f23ccb457655eee95b36"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/satchel__u_run4__foreground.png": {
+      "bytes": 2161,
+      "sha256": "155cf9a936c0e5944055aa0ddb8d9c6c267ffd85fba0f096a8ae95529211f635"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/satchel__u_run5__foreground.png": {
+      "bytes": 3074,
+      "sha256": "9d87646755738049dd3e7fb8adeeac6ecf7319bec3e7a08789fe899fa136fccd"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/scarf__bike0__foreground.png": {
+      "bytes": 1304,
+      "sha256": "7276938b87b4bd0f1b54db9c354e914d2eff985755c53e692d47c597a588ac5b"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/scarf__bike1__foreground.png": {
+      "bytes": 1220,
+      "sha256": "2891bd0944d61c3826d671be923d117c747a56601c669d7a01007673fa903aca"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/scarf__bike2__foreground.png": {
+      "bytes": 1231,
+      "sha256": "e83584450403f40112100aec27126cef33f142dd913f258201407dcf8286b085"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/scarf__bike3__foreground.png": {
+      "bytes": 1231,
+      "sha256": "52ea8e7e318704dd842a251722932b47ac3a6b376b806a9bc0231499664b67d5"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/scarf__skateboard0__foreground.png": {
+      "bytes": 1376,
+      "sha256": "507ee43a115f846f5b1201e3517b1f064d0227d93665717da0f17054592bc47c"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/scarf__skateboard1__foreground.png": {
+      "bytes": 1493,
+      "sha256": "045c3a731c7135541673ba82bf6f6267965e5d4f7273f5242fc04d55886cacbf"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/scarf__skateboard2__foreground.png": {
+      "bytes": 1389,
+      "sha256": "4aed601adc20d6aa6582f1ddf0587a997fb6553619cec35a541d83f4127be8f6"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/scarf__skateboard3__foreground.png": {
+      "bytes": 1487,
+      "sha256": "9ec48deb45c853d91439fb51fcabda6194428c9ccc78e8aadd3bc2370ceb1898"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/scarf__u_happy0__foreground.png": {
+      "bytes": 2451,
+      "sha256": "7fbf15b7b7d76aa5e9d4a4c141864b747da4498ad2a0c5c416fce9533ccaa88f"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/scarf__u_happy1__foreground.png": {
+      "bytes": 1508,
+      "sha256": "ab097b225713ed13edccf49def3f24dd9a3699a5aa894a874382ebe3da07f0e3"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/scarf__u_happy2__foreground.png": {
+      "bytes": 1286,
+      "sha256": "2f3ee5e3ce342a8a7d8793f6c0a6a8a5b7cfa768b059000125ccac2a7b1c22af"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/scarf__u_idle0__foreground.png": {
+      "bytes": 1768,
+      "sha256": "674d67313f7d75bbbb297fcf8221bf915150daa6e49a54bc7739857fb80cc111"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/scarf__u_idle1__foreground.png": {
+      "bytes": 2750,
+      "sha256": "bff147767ef447b18b1e0c0e01b13c9558bd1ddb07fdb218cb5d394c338807bd"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/scarf__u_run0__foreground.png": {
+      "bytes": 2623,
+      "sha256": "45841d0dd7593c297d879b3609c40cd892cc12e1fe0250316194de54c7688759"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/scarf__u_run1__foreground.png": {
+      "bytes": 1753,
+      "sha256": "1ba1aa0c2cf8975119617f279e44bacfb858288a1759ec7eee1a5eefdc00f407"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/scarf__u_run2__foreground.png": {
+      "bytes": 2071,
+      "sha256": "8f6f6c2ba5cbcd4a8a8eb6c36c54244114797dae716cbb8251736ef7a90129e5"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/scarf__u_run3__foreground.png": {
+      "bytes": 2524,
+      "sha256": "a00cce482463f058ae5bc567092f6e3d5e64e5d6be9fa9069dbef63eee87a2eb"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/scarf__u_run4__foreground.png": {
+      "bytes": 2804,
+      "sha256": "93a6a5815a229e8227e9c81da268332fe1207d6328019f82be3600ebffc9b6b7"
+    },
+    "hub/assets/wardrobe/production/metadata/authoring_foreground_references_NOT_RUNTIME/scarf__u_run5__foreground.png": {
+      "bytes": 2971,
+      "sha256": "b007c104ed39e194c930cfed425b531cd46a4967d1ecc82a2a65bc7fa5aff36c"
+    },
+    "hub/assets/wardrobe/production/metadata/base_registration.json": {
+      "bytes": 18558,
+      "sha256": "cc9b00e808e2777540948d8ddb0fd63de52da5c70d8fc473bc1c8f51ad57c184"
+    },
+    "hub/assets/wardrobe/production/metadata/canonical_catalogue_reference.js": {
+      "bytes": 2339,
+      "sha256": "d9c38df9b619207172a1643733811f47500ec089f6065b1647a7011635e9dfa7"
+    },
+    "hub/assets/wardrobe/production/metadata/capes__asset_provenance.json": {
+      "bytes": 1668,
+      "sha256": "9400e65acb448957504866fd933fd5adbe65d70eb3fdae9d8706c51d07d6a910"
+    },
+    "hub/assets/wardrobe/production/metadata/capes__prompts.json": {
+      "bytes": 1791,
+      "sha256": "5d736b795b0448e3fb045b5965afa8ad65ab1accd7be0de55c30238cce7a5fef"
+    },
+    "hub/assets/wardrobe/production/metadata/capes__rear_visibility_qa.json": {
+      "bytes": 15776,
+      "sha256": "5f6360ec569d8dcda5a3bf24f0bb48c5e723ebe9a3a2865650124229c5174421"
+    },
+    "hub/assets/wardrobe/production/metadata/capes_authoring_manifest.json": {
+      "bytes": 105903,
+      "sha256": "823fb7e20aaf10cb3fb93d03b3cb700ab6db01e5aae43872cab7d5c624eb00ff"
+    },
+    "hub/assets/wardrobe/production/metadata/dress_raincoat__final_visual_review.txt": {
+      "bytes": 1727,
+      "sha256": "3eaadda7ae17ff945acb9d488ae67270591e506eb52bc72f88ecb6e7f327026a"
+    },
+    "hub/assets/wardrobe/production/metadata/dress_raincoat__pixel_and_coverage_checks.json": {
+      "bytes": 28552,
+      "sha256": "aec3b963ac178fc40439b7fa048d10e08442f8e0cddda24f3ac233fe47ca384d"
+    },
+    "hub/assets/wardrobe/production/metadata/dress_raincoat_authoring_manifest.json": {
+      "bytes": 89598,
+      "sha256": "98373c882bc15b45db869455d5943d17bafe6528e44db7991ebb482715e7b973"
+    },
+    "hub/assets/wardrobe/production/metadata/head_accessories__qa_report.json": {
+      "bytes": 26513,
+      "sha256": "351c509809f061f882a4c60345054e51d35f0dbb5e6dce77d9beccd20a92c20e"
+    },
+    "hub/assets/wardrobe/production/metadata/head_accessories__qa_summary.json": {
+      "bytes": 81075,
+      "sha256": "5421208f20df780f49f74d689b397634b77cb4e6a6f24e11fa8160eb93adaf53"
+    },
+    "hub/assets/wardrobe/production/metadata/head_accessories_authoring_manifest.json": {
+      "bytes": 1106830,
+      "sha256": "8459a7054d8d03b7e4d19246b1114c2f1e53239e60e6c497a250b7b7168d11dc"
+    },
+    "hub/assets/wardrobe/production/metadata/occlusion__manifest.json": {
+      "bytes": 68222,
+      "sha256": "4d35f571d6dd4d07e91563f63fa8891ec6898015cae8ec0c0b8071d08aa78091"
+    },
+    "hub/assets/wardrobe/production/metadata/occlusion__pixel_checks.json": {
+      "bytes": 5136,
+      "sha256": "7631512c7c107f8144cf253cafe43731ef61ae6ace4d104579c037b6c7596eac"
+    },
+    "hub/assets/wardrobe/production/metadata/qa_body_independent.json": {
+      "bytes": 3448,
+      "sha256": "cb54b35b7575cc01eda74ed42e6b233e7729ccbea6969f3684bcc2edd38c41be"
+    },
+    "hub/assets/wardrobe/production/metadata/qa_report.json": {
+      "bytes": 317319,
+      "sha256": "12e0e64e8edae0eb1c257b6dfefe7c5d1b077969febed17792f38575725f5c1e"
+    },
+    "hub/assets/wardrobe/production/metadata/qa_stack_independent.json": {
+      "bytes": 3409,
+      "sha256": "1bdcfa9e8866e9894a9722a625fa1662427b96046df510d7d541637621ea1f0b"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/layers/bike0__head_mane.png": {
+      "bytes": 55138,
+      "sha256": "8d1d588ad8022e2d352200a7638c003f2dd475aa6b9c6d889dc5a4ddc427be5c"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/layers/bike1__grip_forearm.png": {
+      "bytes": 7057,
+      "sha256": "eb26a32cb303d93f81b7cee7d9f17d79d9cd7a9cbf6cb540cdd4b5dc5833d878"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/layers/bike1__head_mane.png": {
+      "bytes": 55099,
+      "sha256": "8ff4547e82f7c31b42c385b1d3f0b001c5f8dd9a37b8c275b16967f5c9048a53"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/layers/bike2__grip_forearm.png": {
+      "bytes": 6845,
+      "sha256": "3c24b63c6eac2ab00b97b9c786954387ba0a30185059deead8ae78e4464cb9f9"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/layers/bike2__head_mane.png": {
+      "bytes": 55622,
+      "sha256": "c5f88f194353ec187a0f2d73dc9c55b220323ec06420a8ed9bc36c723f92614e"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/layers/bike3__grip_forearm.png": {
+      "bytes": 7097,
+      "sha256": "9734f780248da767c7e9dbc5adcdce0068dac2497393bb8d00fc9a5524a5d677"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/layers/bike3__head_mane.png": {
+      "bytes": 55397,
+      "sha256": "c7a8f8b7050170c516028116baee0bab0d7b41a6281a8cf5a2a60dbb91aa890b"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/layers/skateboard0__head_mane.png": {
+      "bytes": 60833,
+      "sha256": "b36e17add228ebb74c57b1db1a4b481d206e087712c566a034aea5bef38894e9"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/layers/skateboard1__head_mane.png": {
+      "bytes": 62239,
+      "sha256": "64765baa9e5c3d501d25c83c756d07e347b4d20ead9f5fce556287afa2eda935"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/layers/skateboard2__head_mane.png": {
+      "bytes": 62187,
+      "sha256": "c430f5b4da1f320f77eef032437277b1f5aa25bfd3c9bd9077a9b81bc149592b"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/layers/skateboard3__head_mane.png": {
+      "bytes": 60604,
+      "sha256": "d0085335f1babcc3c32a212d0d060f5886dc68c3a089bd451ad7ba4f4946e242"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/layers/u_happy0__head_mane.png": {
+      "bytes": 57831,
+      "sha256": "2d75b20c785f70e4e88cf58ec770ed86cdbf6877e84e0d67c24a7ce8883c3ce1"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/layers/u_happy1__head_mane.png": {
+      "bytes": 47832,
+      "sha256": "6e286afb2fd1153ddc7c5ea619165088de74c465da9efac1526a886d9a8bf581"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/layers/u_happy2__head_mane.png": {
+      "bytes": 57521,
+      "sha256": "2410021d31ef26906ee24a9e11b2a17bfb665282c9602a7a545ad25534eaac94"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/layers/u_idle0__head_mane.png": {
+      "bytes": 62325,
+      "sha256": "c035f031a6e84053a1eea0b690e20ac5075487539de5db80535f05f143b794b0"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/layers/u_idle1__head_mane.png": {
+      "bytes": 58503,
+      "sha256": "0a52219991cd817a7468ae73a101ac61be4fc38ab9e1e262f70bd0f4e5538ce0"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/layers/u_run0__head_mane.png": {
+      "bytes": 57683,
+      "sha256": "e7ea4d2409ef77776d44356669223d64c87ee15b7ffe088b59a8e2b4d9e6444e"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/layers/u_run1__head_mane.png": {
+      "bytes": 59665,
+      "sha256": "a3b675df2e656c06664ec83904f0a46b93a08e2bb41a168f3e770c8b5e4d23b8"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/layers/u_run2__head_mane.png": {
+      "bytes": 60125,
+      "sha256": "cd48e3b308bd54ac3f4210aeb2b3e16dbf676f8e3110c0e4507a5c8244c96081"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/layers/u_run3__head_mane.png": {
+      "bytes": 62430,
+      "sha256": "bb4adf3ac1aedafa396a1250975b26b36f5db1bc3ec06a90919d8db325b25a53"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/layers/u_run4__head_mane.png": {
+      "bytes": 60341,
+      "sha256": "7dfb788408b6e023a8fe8032ae38abb2acca60d1407bc9b51c0fb4f2dc6b77ca"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/layers/u_run5__head_mane.png": {
+      "bytes": 60792,
+      "sha256": "4e344960e98aed83d9f4643a66a251a12bfffcdb76ba06105d78ec18e244deb4"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/manifest.json": {
+      "bytes": 68222,
+      "sha256": "4d35f571d6dd4d07e91563f63fa8891ec6898015cae8ec0c0b8071d08aa78091"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/masks/bike0__head_mane.png": {
+      "bytes": 1828,
+      "sha256": "a04ee5e1509482b9c7acb513949203d8e2e2b17ee253025926f341d56ff537f7"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/masks/bike1__grip_forearm.png": {
+      "bytes": 621,
+      "sha256": "c65570df4c742c23104702aad57fb4ee6b11195346e30e1499d8b1b269829955"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/masks/bike1__head_mane.png": {
+      "bytes": 1851,
+      "sha256": "f4aeae42833142143dcaede32571df7932b620880ed084458b3bc132287afc9b"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/masks/bike2__grip_forearm.png": {
+      "bytes": 610,
+      "sha256": "02d11ea669bc18e600360925931b02d3b2adac908ebae982273d9c94e740013b"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/masks/bike2__head_mane.png": {
+      "bytes": 1912,
+      "sha256": "2272b5fb6b0cffca430dd32fd6678c3b7ea072a5bcb6401cf764af7ba981ba81"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/masks/bike3__grip_forearm.png": {
+      "bytes": 611,
+      "sha256": "50bd5885777c40f874cea92bea5d9f247c7d2e2c0b6466c7749e1b415c74e887"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/masks/bike3__head_mane.png": {
+      "bytes": 1837,
+      "sha256": "a58f004431ef28d40ebff0b89428c75269c3fa7cc3ac3ec76e351b5739569ca9"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/masks/skateboard0__head_mane.png": {
+      "bytes": 1975,
+      "sha256": "9e44c57e252083fa9e33a70b4e4ec72c1e94551578f7f4e742c0990d48056ab7"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/masks/skateboard1__head_mane.png": {
+      "bytes": 1840,
+      "sha256": "1b62bc0f439c7ab5686d9144f54d8f7e1bc69217f40e3eb1fd60b1e32551c005"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/masks/skateboard2__head_mane.png": {
+      "bytes": 1818,
+      "sha256": "54646ef93597a66a9f2dd989ab362c10ae2921077c7fb9739c9cc64c4db89fa3"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/masks/skateboard3__head_mane.png": {
+      "bytes": 1880,
+      "sha256": "74be39d814e755b6bb90d1cf8070dc34e7f48201ebe92bd82673151cfafa6dd9"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/masks/u_happy0__head_mane.png": {
+      "bytes": 1858,
+      "sha256": "ae06744f4f1f1e07ffdb06a13caac8d3c24e6f6054b21c9638736b9f0d4fa44c"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/masks/u_happy1__head_mane.png": {
+      "bytes": 1980,
+      "sha256": "de95cfe2e4b66743f64318b09546ad83511ee46b48eb9422792d8bf135e5bfa5"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/masks/u_happy2__head_mane.png": {
+      "bytes": 1865,
+      "sha256": "3e887dd403b14b26ad6f3ec1d19e01e1d20e15cee4bd16a59c0ce5d7f87bc99b"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/masks/u_idle0__head_mane.png": {
+      "bytes": 1942,
+      "sha256": "e391f519fd7f74a1d3f59df741805ef313eee1801d15f6e5675eefe0f2246f9a"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/masks/u_idle1__head_mane.png": {
+      "bytes": 1903,
+      "sha256": "53fb29dc83af3fb799063372edf1320ab3dfd00d56854a1bb4d4931ccf7bbd1d"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/masks/u_run0__head_mane.png": {
+      "bytes": 1776,
+      "sha256": "742314d7642739a4bd675c920b9e24fe1f111596ea16c13d7bc44f57771d1c63"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/masks/u_run1__head_mane.png": {
+      "bytes": 1680,
+      "sha256": "8a6d365e5f9b565d3ed1cf13d4e6b80298954a20ec7c2636c7a517dac284c766"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/masks/u_run2__head_mane.png": {
+      "bytes": 1760,
+      "sha256": "5c85491de1095034e7165b05e9bb11958b0f2ad961fe5cdd014a10a6a6181856"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/masks/u_run3__head_mane.png": {
+      "bytes": 1777,
+      "sha256": "843b9caf1dabd11566426b42c9e85c17a767831fd28353fd2fa1807ca11b1127"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/masks/u_run4__head_mane.png": {
+      "bytes": 1793,
+      "sha256": "642e985304eb906a0abdb01d0fe9c5df5a60f418cbdc352e0b9bfa59bca51600"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/masks/u_run5__head_mane.png": {
+      "bytes": 1802,
+      "sha256": "231292f36bd77228a678065ed574a6f4ebc0e7103a16d319e528e5ee9572b569"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/metadata/SHA256SUMS.txt": {
+      "bytes": 12672,
+      "sha256": "4b3e0cc81726640a35d328d399b088ad81034c9495bad572c6b8e3e4adbf8b33"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/metadata/approved_trial_unchanged.json": {
+      "bytes": 5475,
+      "sha256": "3cd8ee755ad6ae2c72113267aa606c9b66aab4fabcf57cc4c77602cdddc2a8af"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/metadata/bike0__head_mane.json": {
+      "bytes": 2453,
+      "sha256": "95e4678dd11f10161a93353048f458d93c19af5852f39d34d1b73c232b4cb167"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/metadata/bike1__grip_forearm.json": {
+      "bytes": 1583,
+      "sha256": "ef3efcadcf7aa47971b059ab258d75753e13e67db1d4678b72ef01d4964650ac"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/metadata/bike1__head_mane.json": {
+      "bytes": 2411,
+      "sha256": "f0a249b76f457e97bab4625ecb989ee340f25e76c71ff0319e33ae8793367b6c"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/metadata/bike2__grip_forearm.json": {
+      "bytes": 1583,
+      "sha256": "225c52b58586f491543c729f7c2f3de407a044350333c7f92d99920938a4ddca"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/metadata/bike2__head_mane.json": {
+      "bytes": 2369,
+      "sha256": "93dd82c274f48d257bfd0cddf3d48b70c5bbf2c6ef9169161e9d94c4d66a8373"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/metadata/bike3__grip_forearm.json": {
+      "bytes": 1583,
+      "sha256": "2d49549c5b8af27fe6c9b50f6071e0bba9248d111d0fbcdccf5c94a5aa9c7f17"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/metadata/bike3__head_mane.json": {
+      "bytes": 2537,
+      "sha256": "25c1bb539867c2bce0142918ec4a5c18c946081874a189eab60fca0c1c3f8870"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/metadata/pixel_checks.json": {
+      "bytes": 5136,
+      "sha256": "7631512c7c107f8144cf253cafe43731ef61ae6ace4d104579c037b6c7596eac"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/metadata/polygons.json": {
+      "bytes": 38437,
+      "sha256": "871bb6eb70bc070411cf91704531578aef7420a4e646ad9b0b1ae6839abca309"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/metadata/skateboard0__head_mane.json": {
+      "bytes": 2519,
+      "sha256": "9bac863d4a0c4b0ea303982000e05118cb13297ce1570719176559e0fde0d23e"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/metadata/skateboard1__head_mane.json": {
+      "bytes": 2519,
+      "sha256": "57fe78d9c23f5430cb92673e4c8f75b2ea20ed7a3a626b66958f3bd71004580b"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/metadata/skateboard2__head_mane.json": {
+      "bytes": 2519,
+      "sha256": "186bf86fc0a13d8c710e678c6a609a5a40c564f9a6408fda58177262d1b01549"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/metadata/skateboard3__head_mane.json": {
+      "bytes": 2519,
+      "sha256": "1b62bd662005e9da8cd9cefa1303ecf9dd557a0a64f9aa3c3ac7e2e98491d90f"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/metadata/u_happy0__head_mane.json": {
+      "bytes": 2259,
+      "sha256": "21b0895555b1c5180623212e71ac3ec0b392928286db1e7825c35efb6d27283d"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/metadata/u_happy1__head_mane.json": {
+      "bytes": 2913,
+      "sha256": "c88871bc57d29ebdbaa1baa71861725777fadefec4e5df5cc7b21b51c51dcea2"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/metadata/u_happy2__head_mane.json": {
+      "bytes": 2385,
+      "sha256": "c23abca0210e90e18cad4303124d1910db282c55e6ec53b4d2978006352dedfd"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/metadata/u_idle0__head_mane.json": {
+      "bytes": 2255,
+      "sha256": "9129a473d937d155376d481e224af96d43b4530c803b982df6fc664aca108aef"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/metadata/u_idle1__head_mane.json": {
+      "bytes": 2255,
+      "sha256": "8aa3b08ac619cc39ef231f9a9099de7fde077243e31b3dc68d24419bbc9c36c6"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/metadata/u_run0__head_mane.json": {
+      "bytes": 2293,
+      "sha256": "324a92f391870de7b8d1fcdb781984a00fe95468af1f9231a3c578e66d7ffd66"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/metadata/u_run1__head_mane.json": {
+      "bytes": 2251,
+      "sha256": "a2003e61fee7293a40ea0172b0ec04c407362dd8ab38130742e9a0eca7f2d9af"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/metadata/u_run2__head_mane.json": {
+      "bytes": 2251,
+      "sha256": "5f117d622ad3dece423eeaa97c1e10800e1f2a7f9bb1735dec3b760717227004"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/metadata/u_run3__head_mane.json": {
+      "bytes": 2293,
+      "sha256": "cc62d1e3063b510e1f22b6b56e2f5bbb1069dc4414cdd6c879f41a66781c7e7b"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/metadata/u_run4__head_mane.json": {
+      "bytes": 2293,
+      "sha256": "ee24c92f2690a604dbb27d015df991b4bee9ff091b653bb6f13e52ab93ac10fe"
+    },
+    "hub/assets/wardrobe/production/metadata/shared_original_occlusion/metadata/u_run5__head_mane.json": {
+      "bytes": 2293,
+      "sha256": "4448fa910a11ba393a49f089de126909ba68bfbf7173c4a188b4c552dd16bbad"
+    },
+    "hub/assets/wardrobe/production/metadata/source_links.json": {
+      "bytes": 780,
+      "sha256": "5d770b99fa3b92b2d00643fbfd4afe9edd819d6918a745199563a1cab19a95f5"
+    },
+    "hub/assets/wardrobe/production/metadata/star-jacket_authoring_manifest.json": {
+      "bytes": 47209,
+      "sha256": "5f3909ce6e13c14a6f192b571abd7ffcac2b18960c9f92f10cf370066c4dd759"
+    },
+    "hub/assets/wardrobe/production/metadata/star_jacket__animation_sequences.json": {
+      "bytes": 378,
+      "sha256": "1bc6007ff3b9b171d0f9b6885b6af91e28617bb1accc722574d844694efe1345"
+    },
+    "hub/assets/wardrobe/production/metadata/star_jacket__asset_provenance.json": {
+      "bytes": 5558,
+      "sha256": "77049d996e5769c965aae4b48459d462e33aedbd16fe4b62680f918d0a18bb6c"
+    },
+    "hub/assets/wardrobe/production/metadata/star_jacket__visual_review.txt": {
+      "bytes": 2216,
+      "sha256": "a2437951ada5d9d09f8cb4a479b2790c8920f0020caf451924f1926fa0b6b439"
+    },
+    "hub/assets/wardrobe/production/metadata/tee__production_provenance.json": {
+      "bytes": 1633,
+      "sha256": "a11c96139bab9d11436b8a45955ac70930d72a55730eb8165ca3d737b4713ea1"
+    },
+    "hub/assets/wardrobe/production/metadata/tee__prompts.json": {
+      "bytes": 6919,
+      "sha256": "c8c40867b5b69728a2e0ce830ab1de689632878e0e28e761b25c91cab58e635e"
+    },
+    "hub/assets/wardrobe/production/metadata/tee_authoring_manifest.json": {
+      "bytes": 27458,
+      "sha256": "1fc07882cba1f801471f32325d06b384995e5ab8ae71bc5fcdb6d7012c33ccc2"
+    },
+    "hub/assets/wardrobe/production/previews/FULL_WARDROBE_23.jpg": {
+      "bytes": 168495,
+      "sha256": "3f9e0adeb439a22dc107ee1a0d39fc77c9466f2503309bb800bb7ff4d14797bc"
+    },
+    "hub/assets/wardrobe/production/previews/OUTFIT_Approved_starters__all19.jpg": {
+      "bytes": 186185,
+      "sha256": "1849cc49edcdfc62e438ac078f8bcd2dea93cbd7838eedd6250ea97ac8425c70"
+    },
+    "hub/assets/wardrobe/production/previews/OUTFIT_Hero_prizes__all19.jpg": {
+      "bytes": 206706,
+      "sha256": "cc4271f66efbdc64ec227e74862b9605f3938c140250746b3c8e8ad952799063"
+    },
+    "hub/assets/wardrobe/production/previews/OUTFIT_Rainbow_explorer__all19.jpg": {
+      "bytes": 211084,
+      "sha256": "9cc07dce8b1029b6e20119453e251203e3ac7723114f76e5d8528361cd6ef53d"
+    },
+    "hub/assets/wardrobe/production/previews/OUTFIT_Rainbow_party__all19.jpg": {
+      "bytes": 203652,
+      "sha256": "6f71f8ec60eb7e6afa8e605c58a77412e37a64a9220f22be7b51e28d46767875"
+    },
+    "hub/assets/wardrobe/production/previews/OUTFIT_Rainy_ride__all19.jpg": {
+      "bytes": 199711,
+      "sha256": "2963004806578fe46c79b928ee8a69d7152b1912cb2a8ffa3fc05f26660a7123"
+    },
+    "hub/assets/wardrobe/production/previews/OUTFIT_Space_stars__all19.jpg": {
+      "bytes": 222804,
+      "sha256": "ec499f1efb60100e93928dd7bd86df7c0bd31ae792a07f9d4808432d6a00a3b1"
+    },
+    "hub/assets/wardrobe/production/runtime.js": {
+      "bytes": 1016786,
+      "sha256": "ffe9f6c83a370f99cb71406408b434a0134a59b5bceb253dc11f18e47f4de2a3"
+    },
     "hub/assets/wardrobe/rainbow-dress-v2.png": {
       "bytes": 1082238,
       "sha256": "97ec32226c97f4c6302fb5afea8a373a26c00bba5f87f93dee85febe7ce8259c"
@@ -603,8 +1935,8 @@
       "sha256": "d345abcf107f61f1716443c3fa21dccd670232e96d050d7a8271cdd997d7babf"
     },
     "hub/mall.js": {
-      "bytes": 31803,
-      "sha256": "aa24efe0f62af66ad0b250db8d49288ef31201f6ce402743b24d4f4bde532fa3"
+      "bytes": 31813,
+      "sha256": "700ebe84baa29f647af935fbc31eff8157c65d8e85deb4f39dcb94947e46086f"
     },
     "hub/picture-menus.css": {
       "bytes": 11168,
@@ -615,8 +1947,8 @@
       "sha256": "99ff647e37dbcb04ece90cd8dd014a147c10af4902cbb2d4406fb2b86f0843c5"
     },
     "hub/shared/art.js": {
-      "bytes": 10206,
-      "sha256": "6a9dd293428a038b0ddb81904cd1cdb0828d2691de64da603b38a5986a90523d"
+      "bytes": 9014,
+      "sha256": "ee391692b81e33b8408e47e4a1917cf94f8d7fc6877d7ec36663ca50025e9c4e"
     },
     "hub/shared/bridge.js": {
       "bytes": 4302,
@@ -638,9 +1970,45 @@
       "bytes": 16667,
       "sha256": "cffd1e662c7b6d269e899544362266ce0b873cba555f0832ac2027cebc862743"
     },
+    "hub/tests/fit-trial/browser.cjs": {
+      "bytes": 4667,
+      "sha256": "d39c2fefbb5588be84d37e243c61309dbd30f025a37269eb94a741c4623f2ffa"
+    },
+    "hub/tests/fit-trial/evidence/Bike-sample.png": {
+      "bytes": 262807,
+      "sha256": "724cbb58cc8e465a123fdb318501e915745eb4757fa1e122b5726f33390b760c"
+    },
+    "hub/tests/fit-trial/evidence/Celebrating.png": {
+      "bytes": 164523,
+      "sha256": "56d37379ee359234959aaaa23cf4284d36c0bb6bc6897cb925c9fcaa37d2656c"
+    },
+    "hub/tests/fit-trial/evidence/RESULTS.json": {
+      "bytes": 1260,
+      "sha256": "86c4dd79d0454caa44191e9d296feba4049d2a43c171be73f83df03db2cbb80f"
+    },
+    "hub/tests/fit-trial/evidence/Running-sample.png": {
+      "bytes": 167818,
+      "sha256": "fc787b127a97fe9965e2b9fef7b48bdaffb66cc73b50e9ec098e8729d182186f"
+    },
+    "hub/tests/fit-trial/evidence/Skateboard-sample.png": {
+      "bytes": 213869,
+      "sha256": "385a73d6ed779d7057a81aa663ce04b94f6cc45d254388c40df61a22d2aca8e6"
+    },
+    "hub/tests/fit-trial/evidence/Standing.png": {
+      "bytes": 161852,
+      "sha256": "1d9d85b6c773b4327bc7ab1fe81127c198d2fa4123249efe2cc56c80e10c30be"
+    },
+    "hub/tests/fit-trial/evidence/landscape-568.png": {
+      "bytes": 34720,
+      "sha256": "0fbfbd94b15513bf9e7eaed093cd7d59c89242e6a2f6d788d02abfbb0570b90f"
+    },
+    "hub/tests/fit-trial/evidence/landscape-852.png": {
+      "bytes": 77821,
+      "sha256": "9aff54e74adde7f8936cb0550ef468c8bd731e1ca753e2a7f9534cb1ed3ef5f0"
+    },
     "hub/tests/mall/appearance-standalone.cjs": {
-      "bytes": 7968,
-      "sha256": "1c4078fe1c9d62dd26e26ff9bdec86d1731c255b920b071820b4c0cfa529423b"
+      "bytes": 8436,
+      "sha256": "8ec6f60f082ae60715f18f80764b901c7fe476c2d80955d38b5df634df182793"
     },
     "hub/tests/mall/browser.cjs": {
       "bytes": 15071,
@@ -950,6 +2318,14 @@
       "bytes": 577370,
       "sha256": "9344db3b59f6b7bd23c3dfbaf919c2ae73a02064f34581d35b8d49546439fede"
     },
+    "hub/tests/mall/evidence/navigation/mall-568x320.png": {
+      "bytes": 283047,
+      "sha256": "c9055874de8856c2b563831683cd75ee157313be8cd8ab16fa172f2ccba1280a"
+    },
+    "hub/tests/mall/evidence/navigation/mall-852x393.png": {
+      "bytes": 423980,
+      "sha256": "f24fa9bc2d7acf1971cbf552ec4fb40f27f8c274a8b511657bc8f055f62ed615"
+    },
     "hub/tests/mall/evidence/navigation/mall/QA-RESULTS.json": {
       "bytes": 2161,
       "sha256": "b5cb471a72e7a1c32c7d378ea5e2abb511e761cf9e1627f9bfcb2160cd9a20fa"
@@ -1021,14 +2397,6 @@
     "hub/tests/mall/evidence/navigation/mall/shop-844x390.png": {
       "bytes": 126586,
       "sha256": "b572348a986538e60d701a164060688c3e8c4a77a5475789b479d0e35b6b191e"
-    },
-    "hub/tests/mall/evidence/navigation/mall-568x320.png": {
-      "bytes": 283047,
-      "sha256": "c9055874de8856c2b563831683cd75ee157313be8cd8ab16fa172f2ccba1280a"
-    },
-    "hub/tests/mall/evidence/navigation/mall-852x393.png": {
-      "bytes": 423980,
-      "sha256": "f24fa9bc2d7acf1971cbf552ec4fb40f27f8c274a8b511657bc8f055f62ed615"
     },
     "hub/tests/mall/evidence/navigation/mobile/QA-RESULTS.json": {
       "bytes": 1338,
@@ -1423,12 +2791,12 @@
       "sha256": "7cf26a55bc285ebdef5ba60bce0a082178aa3adbdb43b84d49b8be901ee322dd"
     },
     "hub/tests/mall/navigation.cjs": {
-      "bytes": 14145,
-      "sha256": "36e3a69a080adf4f9e41a700f1e2718af7016f91d18ac5c76a9e0754052197c7"
+      "bytes": 14371,
+      "sha256": "bdb9dbfe5f82f03b387064449cf0c5e3296949c2ae65c3fb506c9865dbb942d8"
     },
     "hub/tests/mall/picture-menus.cjs": {
-      "bytes": 14156,
-      "sha256": "432db3f36a94239e75c4e8efc6b7c68984c0a2abe9bfbd2f926a4f44dcfb02e9"
+      "bytes": 14118,
+      "sha256": "843c3598cd025831935139b2e5101d2ee1ccaf83f7665bf059b16506ed8b091d"
     },
     "hub/tests/mall/profile.cjs": {
       "bytes": 3580,
@@ -1439,8 +2807,8 @@
       "sha256": "591c1eef6dcaa78a9bc7bc8eeafe566d56ed57a5faf4c95107756af635ff987d"
     },
     "hub/tests/release-browser.cjs": {
-      "bytes": 8412,
-      "sha256": "8bdc2550131c6898a11aaba465fb807bda70ddd19eff6b0f029861e5c075b921"
+      "bytes": 8813,
+      "sha256": "5132084073e4b0ec68d52b0d3f289b412d18156f9555c9de038a3679cbe8a4e6"
     },
     "hub/tests/release-evidence/QA-RESULTS.json": {
       "bytes": 1017,
@@ -1472,11 +2840,87 @@
     },
     "hub/tests/release-package-results.json": {
       "bytes": 645,
-      "sha256": "38f2e266e33aa93d8933d8d18910bd2c994971ba5e38251f27b90cbf32f18ef4"
+      "sha256": "98055a7aa3338a6e7b8759d6977056c496862043f76e02e28de559c53b5b0d59"
     },
     "hub/tests/release-package.cjs": {
       "bytes": 3226,
       "sha256": "b8b34f940615e07839dd1c39110634b1c9403671d25e65c659d0c29dfb446376"
+    },
+    "hub/tests/wardrobe-production/assets.py": {
+      "bytes": 3781,
+      "sha256": "610740a98a3f40d5cca91f1e0fe69b33f88fca7a65c41f31a71c2d7fa1c34498"
+    },
+    "hub/tests/wardrobe-production/browser.cjs": {
+      "bytes": 4903,
+      "sha256": "c47d1a1850a33ff1805237b5c29a795a88fbafde617c1c884364f33e97f04416"
+    },
+    "hub/tests/wardrobe-production/evidence/adventure-wearing-carrying-left.png": {
+      "bytes": 455909,
+      "sha256": "4d2d8af6380841633b867a413efdac42fcfd014d5f3bf91715ac6f6e71cad17c"
+    },
+    "hub/tests/wardrobe-production/evidence/adventure-wearing-celebration.png": {
+      "bytes": 451786,
+      "sha256": "372ab6b0216c20e1861a5b03bbbb8fb7e9926d008c823d1cd0769ddc46bc345a"
+    },
+    "hub/tests/wardrobe-production/evidence/all-19-starter-poses.png": {
+      "bytes": 1040532,
+      "sha256": "22313aeb43b6a2ef351ebb0b808dee6dc4fe126be2d61091f0d0e44369f68051"
+    },
+    "hub/tests/wardrobe-production/evidence/all-clothing-and-riding-poses.png": {
+      "bytes": 2106738,
+      "sha256": "ad84501a0ee06b1cc70e8cd4445c7344953a9b2233cf092410df0b1ad24bb75d"
+    },
+    "hub/tests/wardrobe-production/evidence/appearance-results.json": {
+      "bytes": 1118,
+      "sha256": "12c7cf331c94dfb5f3061df3e9f689b53f28205f5f5bcf258d4ccdabddc6f54f"
+    },
+    "hub/tests/wardrobe-production/evidence/assets-results.json": {
+      "bytes": 182,
+      "sha256": "41e3c80f3d5fc83537c0f901ebd8b6be3f9ee721892deb6d0197c5020f5efec4"
+    },
+    "hub/tests/wardrobe-production/evidence/cafe-wearing-carrying-left.png": {
+      "bytes": 329786,
+      "sha256": "c6577f7903dd26879f118e67c0e29dcdb622b2d194b54f2b5ad3da69569b0255"
+    },
+    "hub/tests/wardrobe-production/evidence/compatibility-results.json": {
+      "bytes": 216,
+      "sha256": "82570349135c6a294dcea55d1b0571a6a1f968485e88832db5fb295ac5009187"
+    },
+    "hub/tests/wardrobe-production/evidence/mall-results.json": {
+      "bytes": 2161,
+      "sha256": "b5cb471a72e7a1c32c7d378ea5e2abb511e761cf9e1627f9bfcb2160cd9a20fa"
+    },
+    "hub/tests/wardrobe-production/evidence/menus-results.json": {
+      "bytes": 1701,
+      "sha256": "c4d01547370578b60a216c9c2363395811bfbb112d245a8c0517f740d510444a"
+    },
+    "hub/tests/wardrobe-production/evidence/navigation-results.json": {
+      "bytes": 8717,
+      "sha256": "e2db4989dfd6d1eebdd8da6cfb8291f44921f15b2c414bba529137dd82fb186e"
+    },
+    "hub/tests/wardrobe-production/evidence/recovery-results.json": {
+      "bytes": 1338,
+      "sha256": "c754d000d01624e19a77badef4a09846ed2a7d4fe04e5d19d2e914d14a37bd81"
+    },
+    "hub/tests/wardrobe-production/evidence/release-results.json": {
+      "bytes": 1017,
+      "sha256": "512b4efcbad2e0571d5d8b87857c5cfd46764fefaf755ad81cc74fbcf4e166a4"
+    },
+    "hub/tests/wardrobe-production/evidence/run5-helmet-review.png": {
+      "bytes": 333581,
+      "sha256": "015066390949fc2c32cf830f0b047f94f05cd91442279e62e4cee1a45e39f40f"
+    },
+    "hub/tests/wardrobe-production/evidence/wardrobe-project-path.png": {
+      "bytes": 207556,
+      "sha256": "6057c14f78d32a0442d016b4f088ec95d6428553e12c32f0e55b1d1daba5d3b3"
+    },
+    "hub/tests/wardrobe-production/evidence/wardrobe-results.json": {
+      "bytes": 549,
+      "sha256": "15075ae0f21c9b12633b55c0bb16cb64d98e0356690caea973be6a6bcf35a659"
+    },
+    "hub/tests/wardrobe-production/evidence/world-small-landscape.png": {
+      "bytes": 391541,
+      "sha256": "8952238e899c68a2892219fe7c7f03c78d4be33b0fc2bddad549f0e11808ea21"
     },
     "hub/tools/build-navigation.py": {
       "bytes": 2792,
@@ -1486,13 +2930,297 @@
       "bytes": 5626,
       "sha256": "5f87414e78023a40630c7f6d3b07fb312f96c76ac658a2aa64d5a1d4893afcab"
     },
+    "hub/trials/fit-v1/IMPORT.json": {
+      "bytes": 311,
+      "sha256": "50b39fd5c589f3ea88bf392db7aaf461acec4ce1e0e62690ac4371c7cb159afd"
+    },
+    "hub/trials/fit-v1/README.txt": {
+      "bytes": 2311,
+      "sha256": "fbf2a8e63e4b53c8674770264cfbfd4ae570b2f8f3a2dd168b1d955565403ad9"
+    },
+    "hub/trials/fit-v1/REVIEW.md": {
+      "bytes": 2212,
+      "sha256": "416b8d2f0b1d5e7aa250427da9dd63c4bc51c009be10f7fbc3d849c338331f81"
+    },
+    "hub/trials/fit-v1/index.html": {
+      "bytes": 1862,
+      "sha256": "b3e8329b6631fbee43ff0eb087b8fcf886f94167b4e0867d44966c348c9b15c3"
+    },
+    "hub/trials/fit-v1/layers/bike0__beads.png": {
+      "bytes": 5127,
+      "sha256": "5c3f9fe968c42d8b07ea16ae4bdc891f4ee7ff78333ed9bebecef5e92ee48639"
+    },
+    "hub/trials/fit-v1/layers/bike0__bow.png": {
+      "bytes": 10389,
+      "sha256": "3a99970a97110657dd79750e5bedc37ee5efece332d3643f7c4676db609dce53"
+    },
+    "hub/trials/fit-v1/layers/bike0__foreground.png": {
+      "bytes": 3970,
+      "sha256": "fc52ad78e28707b95241f99e7110440cc9a020dedaf4e8e9ea9d449d574bbcae"
+    },
+    "hub/trials/fit-v1/layers/bike0__tee.png": {
+      "bytes": 16541,
+      "sha256": "7bd234d9e7d979c8603bc7c6f31d8886863a7a499deb15273c4d7f04354e4392"
+    },
+    "hub/trials/fit-v1/layers/skateboard0__beads.png": {
+      "bytes": 5126,
+      "sha256": "07e4f279d0513f0f774e3a723c7b8e84b4d4740385bf8e358ed250fcf847824c"
+    },
+    "hub/trials/fit-v1/layers/skateboard0__bow.png": {
+      "bytes": 10404,
+      "sha256": "a447d4a24d84eefd77dfe254075445953573aae62a4ba625663101d014849c09"
+    },
+    "hub/trials/fit-v1/layers/skateboard0__tee.png": {
+      "bytes": 20620,
+      "sha256": "fb022abcdd0fce0697f7663c45db9f09794ba3aab34de9307fbeefc375b4bf2f"
+    },
+    "hub/trials/fit-v1/layers/u_happy1__beads.png": {
+      "bytes": 4570,
+      "sha256": "250d10b427b211dea5b4d319ac7e6c50e8ec90846b8fbe6fb3b8dbea9c460b90"
+    },
+    "hub/trials/fit-v1/layers/u_happy1__bow.png": {
+      "bytes": 10354,
+      "sha256": "818f11d04ddb02d08e7442931c64f9295855b4607342c71edf8805e80f3a6aa9"
+    },
+    "hub/trials/fit-v1/layers/u_happy1__tee.png": {
+      "bytes": 23749,
+      "sha256": "3b4da891270f3e586841baa094cd18b3c99f884adee0ce5ba6ed7aab009e3717"
+    },
+    "hub/trials/fit-v1/layers/u_idle0__beads.png": {
+      "bytes": 5561,
+      "sha256": "47004ad526a61c1e76450049263ed6a0b54d30082ebd7503ad3f54cf6ea7c32d"
+    },
+    "hub/trials/fit-v1/layers/u_idle0__bow.png": {
+      "bytes": 10401,
+      "sha256": "a8135efb22797d9c26792cf2d4de9522a1940f4c021e26c0055963f36c91f63f"
+    },
+    "hub/trials/fit-v1/layers/u_idle0__tee.png": {
+      "bytes": 20405,
+      "sha256": "240c30e1043e4f3ac0ea63cff853cbf94646283e341bbe7a11b3aa2ca0bd2372"
+    },
+    "hub/trials/fit-v1/layers/u_run2__beads.png": {
+      "bytes": 4928,
+      "sha256": "8e96ee45056f2e1275c4765f640d3946f037bbc3074013db4018dc7158baa012"
+    },
+    "hub/trials/fit-v1/layers/u_run2__bow.png": {
+      "bytes": 10245,
+      "sha256": "7abb829c1493b7c360906f8b51f91ccb8581f8956edbf8a099ac48a81c36d30c"
+    },
+    "hub/trials/fit-v1/layers/u_run2__tee.png": {
+      "bytes": 22657,
+      "sha256": "397155132b876798c6859dcaf369c77364d3802d05d0469f2c8eb67af6ad6746"
+    },
+    "hub/trials/fit-v1/legacy-art.js": {
+      "bytes": 10206,
+      "sha256": "6a9dd293428a038b0ddb81904cd1cdb0828d2691de64da603b38a5986a90523d"
+    },
+    "hub/trials/fit-v1/manifest.json": {
+      "bytes": 12690,
+      "sha256": "1830bfcaf2cb7649988cc61846deb155010a65155db3f5ab7efa940092253e6f"
+    },
+    "hub/trials/fit-v1/metadata/SHA256SUMS.txt": {
+      "bytes": 5993,
+      "sha256": "cdd6cb0cfb3d3261f904614a5ee10cd2dfadc88b0dfc64728e5185b280c8565d"
+    },
+    "hub/trials/fit-v1/metadata/accessory_source_transforms.json": {
+      "bytes": 9378,
+      "sha256": "4e47d78ea08fafa634e292deea873aa5e480530f2902436d192200cf628b1b43"
+    },
+    "hub/trials/fit-v1/metadata/base_registration.json": {
+      "bytes": 2727,
+      "sha256": "1aacecef7a4ffabf07dec28aafed58c0f2ee0e8a665cd5ecd0f155017a23712a"
+    },
+    "hub/trials/fit-v1/metadata/beads_prompt.txt": {
+      "bytes": 1473,
+      "sha256": "c6a17b275d1866e2742f40fef6ef4e1f09c57b339d2d9c2d783fc68f857e7b80"
+    },
+    "hub/trials/fit-v1/metadata/bike0_foreground_selection_mask.png": {
+      "bytes": 608,
+      "sha256": "287520473a0ec1d0c8106c8b2390927d3fdb26fceade7e72322f2a8a56e21e0d"
+    },
+    "hub/trials/fit-v1/metadata/bike0_occlusion_contract.json": {
+      "bytes": 2493,
+      "sha256": "8c03fdc8f63f70e6e9ce8732fe55aa5b53adcc346e7c0a44a90a276c1a767291"
+    },
+    "hub/trials/fit-v1/metadata/happy_prompt_extract_fitted.txt": {
+      "bytes": 1153,
+      "sha256": "d8a0a861a04a23746a5517f97de0dc77239b056ec28314e60ce0c8bd252800e4"
+    },
+    "hub/trials/fit-v1/metadata/happy_prompt_fitted_reference.txt": {
+      "bytes": 1335,
+      "sha256": "e5e5b66eca526614c44c464fbb313fad92f0755b538a64e4df97486cb0ad8aff"
+    },
+    "hub/trials/fit-v1/metadata/happy_tee_source_transform.json": {
+      "bytes": 2701,
+      "sha256": "2841fbbdbfb6b6be4a2fb281391f294a8bcda99c4424bb38ae78f642e92c2af2"
+    },
+    "hub/trials/fit-v1/metadata/independent_visual_review.txt": {
+      "bytes": 470,
+      "sha256": "8ac64c304a5f10b31150e54835fbff5e38adfd506a7a3576c5e2d05cafb348dd"
+    },
+    "hub/trials/fit-v1/metadata/pixel_checks.json": {
+      "bytes": 932,
+      "sha256": "1ff2c5bf30bde3162eb8b2207ae35ede03fb53d3b58077771e3fe9fb9bed22a7"
+    },
+    "hub/trials/fit-v1/metadata/source_links.json": {
+      "bytes": 2392,
+      "sha256": "c0058b3298f2efffd5af16e075b54f3c1ecec31254f0d7d27cac91b8f9238d49"
+    },
+    "hub/trials/fit-v1/metadata/tee_prompts.json": {
+      "bytes": 9806,
+      "sha256": "8c233920e64801aa4411662f0d2725dbd58a71b580e10891d5b1fab9f79918c8"
+    },
+    "hub/trials/fit-v1/metadata/tee_source_transforms.json": {
+      "bytes": 992,
+      "sha256": "cdafdcef37084b33fae6f2e2a3c4109b338815f220f7f51013dbeabacb115e2a"
+    },
+    "hub/trials/fit-v1/originals/bike0.png": {
+      "bytes": 206692,
+      "sha256": "0933fd0929cd4ca4f47c6966d5a1618209dd159e4800524a884811637712c416"
+    },
+    "hub/trials/fit-v1/originals/skateboard0.png": {
+      "bytes": 151396,
+      "sha256": "3800aa6bfc1418be7298ff8cd2709797b77bb32d7256b24040c197e31728ed79"
+    },
+    "hub/trials/fit-v1/originals/u_happy1.png": {
+      "bytes": 98112,
+      "sha256": "c4a4e3ef2a04883b1cc9e90e3ddff535ef12a80f86803fe57f7cdfc56564d0ee"
+    },
+    "hub/trials/fit-v1/originals/u_idle0.png": {
+      "bytes": 100252,
+      "sha256": "36160efe1a4bfcfdd95a5fb085234a8da880826e5f4064294fa8d964a9ea1b04"
+    },
+    "hub/trials/fit-v1/originals/u_run2.png": {
+      "bytes": 103983,
+      "sha256": "33a905cf3e9f76026ce46197e6061b1414975347274b5832f7427daac2e26c61"
+    },
+    "hub/trials/fit-v1/previews/FIVE_POSE_FIT.jpg": {
+      "bytes": 211925,
+      "sha256": "6206d1c234ca0d9fec780c6c25b35b544c36f494e1cb8e876a290595a348c004"
+    },
+    "hub/trials/fit-v1/previews/MOVEMENT_REGISTRATION.gif": {
+      "bytes": 2490640,
+      "sha256": "36530a7ae2cbab8b80534139dc0867f4838929797c9a29af56c3d8a827935f32"
+    },
+    "hub/trials/fit-v1/previews/ORIGINAL_AND_TRIAL.jpg": {
+      "bytes": 198081,
+      "sha256": "ac541cb3b8dba365e86bd0fde95a0bcbaa6df3614f4aada9f6359c72ab962842"
+    },
+    "hub/trials/fit-v1/previews/bike0__left.png": {
+      "bytes": 213038,
+      "sha256": "b4fba8966d73d73ee134e8cb1c426c1e06e389aa273e9b8c4511acef6ba30feb"
+    },
+    "hub/trials/fit-v1/previews/bike0__right.png": {
+      "bytes": 212948,
+      "sha256": "cebc73e0f46ab8969f68dea080c423db4491894f6403c93edfd459767a713128"
+    },
+    "hub/trials/fit-v1/previews/skateboard0__left.png": {
+      "bytes": 157326,
+      "sha256": "678e5d978b9fbbc1203742f71e82bf62540d74496c34f23482e7b72b2f13e412"
+    },
+    "hub/trials/fit-v1/previews/skateboard0__right.png": {
+      "bytes": 157152,
+      "sha256": "943001004e278096f55d133ba49230e4d706f2eeb1b0ab001d0854271418b6f8"
+    },
+    "hub/trials/fit-v1/previews/u_happy1__left.png": {
+      "bytes": 109479,
+      "sha256": "649e1fe2d11b5059c2d442c52df9cf45c154ec249e32244da6629a6a9cbce8f2"
+    },
+    "hub/trials/fit-v1/previews/u_happy1__right.png": {
+      "bytes": 109450,
+      "sha256": "15880fb23c0679a51044075518df6e9187ad60667883e527ba93362207c26860"
+    },
+    "hub/trials/fit-v1/previews/u_idle0__left.png": {
+      "bytes": 108128,
+      "sha256": "4e09010fb818942ccef1648541182c17abb007ddb344edc402f848cbd535fd80"
+    },
+    "hub/trials/fit-v1/previews/u_idle0__right.png": {
+      "bytes": 108342,
+      "sha256": "f43f4b302a7dd9f274fb1c89ae831f59be545de4957c79af1c66631fa21ee750"
+    },
+    "hub/trials/fit-v1/previews/u_run2__left.png": {
+      "bytes": 113783,
+      "sha256": "aceca9768f540dd98fc390b05f8198035caa49d661eff39ba067a475c7424596"
+    },
+    "hub/trials/fit-v1/previews/u_run2__right.png": {
+      "bytes": 114415,
+      "sha256": "088eaee6979fd272f101a94ed7ed15ae1e6342fb1fd99bda2dd724699aab5c2c"
+    },
+    "hub/trials/fit-v1/renderer.js": {
+      "bytes": 1484,
+      "sha256": "ee6744ed2caf9063e4845ff6265c5f8120b78a632d74a5a4eeeb09acad3956b2"
+    },
+    "hub/trials/fit-v1/review.css": {
+      "bytes": 2437,
+      "sha256": "727942a009832166d0da80970376ae8fc2f951803cd7b2fcf4f5fe7c363e4d98"
+    },
+    "hub/trials/fit-v1/review.js": {
+      "bytes": 4438,
+      "sha256": "a51c9f591381cdae16ff48e8504d4d58be48fbd8f2cdc916cc5a047779a413d8"
+    },
+    "hub/trials/fit-v1/sources/beads_shallow_generated.png": {
+      "bytes": 395649,
+      "sha256": "fe65b40c726e14f2bfd831eb928584e3d75dbe84221da739c4fe29efa2fde2f6"
+    },
+    "hub/trials/fit-v1/sources/original_beads.png": {
+      "bytes": 46126,
+      "sha256": "e53af810b34510931e52fd666b9609eb05a8b36ad8cef98e4d645860016f87e9"
+    },
+    "hub/trials/fit-v1/sources/original_bike-riding-v2.png": {
+      "bytes": 1497159,
+      "sha256": "3a49afeb2f928b0825602ea7b2b19a41c02204e1bdfae547fa4a5fd3469ccc10"
+    },
+    "hub/trials/fit-v1/sources/original_bow.png": {
+      "bytes": 59376,
+      "sha256": "05b0c99c65da6af5bf3dd247e8b2557cd4afe78805b012cb5dcf238cd033bfbc"
+    },
+    "hub/trials/fit-v1/sources/original_skateboard-riding-v2.png": {
+      "bytes": 1124737,
+      "sha256": "7177e4ec5a6c7882d08e577003d26d2dc5aa9a197cefb2047bf569cf626d288d"
+    },
+    "hub/trials/fit-v1/sources/original_tee-v2.png": {
+      "bytes": 520546,
+      "sha256": "a5958c2ced3a282631e3823d5918d26a5a8a0626314ffa75f5dd31c3161f754b"
+    },
+    "hub/trials/fit-v1/sources/original_u_happy1.webp": {
+      "bytes": 23806,
+      "sha256": "22411f7b9e7326cffaae1a8677d2f309ae7acc513a230608abfdefd5afe5fd56"
+    },
+    "hub/trials/fit-v1/sources/original_u_idle0.webp": {
+      "bytes": 24824,
+      "sha256": "dc75e909c6f7661102fc00b8c9603f645d940a75629a31c3c78096b841f43ccf"
+    },
+    "hub/trials/fit-v1/sources/original_u_run2.webp": {
+      "bytes": 25578,
+      "sha256": "012da330a8d322bdbc1d04d4b7ec3fa7114a282ea4817c90d3ac5e822e375b59"
+    },
+    "hub/trials/fit-v1/sources/tee_bike0_extracted.png": {
+      "bytes": 262210,
+      "sha256": "67ba022f44829c41463a98bfa956139428e5545363fcd3059bb5331ba6095600"
+    },
+    "hub/trials/fit-v1/sources/tee_skateboard0_extracted.png": {
+      "bytes": 174698,
+      "sha256": "e414c46e8d165f21fe9453f125c3bda5fa58a850acb7d0f3312f639ef996a4c5"
+    },
+    "hub/trials/fit-v1/sources/tee_u_happy1_extracted.png": {
+      "bytes": 363464,
+      "sha256": "0ac98ae889fbd09042cdd7b76725f5bd3dc2588874d87c5e1795f03dcaa4d692"
+    },
+    "hub/trials/fit-v1/sources/tee_u_idle0_extracted.png": {
+      "bytes": 116620,
+      "sha256": "faa679d2d2d1ab330d9a9deecd60f59825be510aa616dfc97f10692612f46e60"
+    },
+    "hub/trials/fit-v1/sources/tee_u_run2_extracted.png": {
+      "bytes": 130251,
+      "sha256": "76405c827f28f8eacb45ccb87fbb24e162ef5affc29785e7e8df57f4c13c704a"
+    },
     "hub/world.css": {
       "bytes": 11838,
       "sha256": "07526647d565670988fe31c6265ef24f4bb4a8cae46733a091220bbe4ccde42e"
     },
     "hub/world.js": {
-      "bytes": 18389,
-      "sha256": "dc0bad1dfa35ec3dd674779311c1e8693910105d93858937eb6d4edc37cec27c"
+      "bytes": 18470,
+      "sha256": "17eb806a976e52b40c52d9d71cfacc9383382719df22c2ebe82dfed92ab323d3"
     },
     "hub_preview.py": {
       "bytes": 2286,
@@ -1509,10 +3237,6 @@
     "rebuild.py": {
       "bytes": 457,
       "sha256": "36709478f93bbe15983b1734f4a91074c90d92979cde2ef3257f91550a327038"
-    },
-    "game/tests/offline_tests.js": {
-      "bytes": 4871,
-      "sha256": "ba30a5d364b00f3343071463ce085bb0cfd02460ca4dd7d8293702acc236ce60"
     }
   }
 }

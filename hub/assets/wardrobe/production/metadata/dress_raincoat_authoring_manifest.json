@@ -1,0 +1,3075 @@
+{
+  "version": 1,
+  "status": "Final fitted body layers; no live-game integration performed",
+  "source_commit": "637425ce2bdbb4805e0859034449e7d8bd523a20",
+  "items": [
+    "rainbow-dress",
+    "raincoat"
+  ],
+  "slot": "body",
+  "canvas": [
+    512,
+    512
+  ],
+  "frame_order": [
+    "u_idle0",
+    "u_idle1",
+    "u_run0",
+    "u_run1",
+    "u_run2",
+    "u_run3",
+    "u_run4",
+    "u_run5",
+    "u_happy0",
+    "u_happy1",
+    "u_happy2",
+    "bike0",
+    "bike1",
+    "bike2",
+    "bike3",
+    "skateboard0",
+    "skateboard1",
+    "skateboard2",
+    "skateboard3"
+  ],
+  "facing_policy": "Source faces right. Mirror base and garment together for left, pixel x maps to 511-x; continuous stage pivot x maps to 512-x.",
+  "layer_order": [
+    "base",
+    "garment"
+  ],
+  "occlusion_policy": "Exact-original per-frame head/mane and bike grip/forearm selection cutouts are already applied to garment alpha only where original base alpha is nonzero. Dress happy1/2 also restore exact-original forearm visibility. No additional foreground file is needed for these final garment layers.",
+  "registration_policy": "Original bases remain byte-identical. Garments use only uniform scale and translation with per-pose source registration; no generic body rectangle stretching.",
+  "records": [
+    {
+      "item_id": "rainbow-dress",
+      "frame_id": "u_idle0",
+      "layers": {
+        "garment": {
+          "file": "layers/rainbow-dress__u_idle0.png",
+          "sha256": "cfd1e5fe7898fd6fda260c9f4a1475b2cbfa7f4bb022f3f63bf1774e6ebbfc31",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin_stage": [
+            0,
+            0
+          ],
+          "crop_file": "cropped/rainbow-dress__u_idle0.png",
+          "crop_sha256": "aa4d7758c695ee50425430c5aebe66c548380ed9fbbfe5180c6fc7c7735e883f",
+          "crop_rect_stage_xywh": [
+            177,
+            323,
+            169,
+            75
+          ]
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment"
+      ],
+      "base_file": "../base/stages/u_idle0.png",
+      "base_sha256": "36160efe1a4bfcfdd95a5fb085234a8da880826e5f4064294fa8d964a9ea1b04",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "crop_pivot_xy": [
+        79,
+        110
+      ],
+      "left_pivot_stage": [
+        256,
+        433
+      ],
+      "logical_canvas": [
+        192,
+        192
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          64
+        ]
+      },
+      "source_fit_plate": "sources/rainbow-dress__u_idle0_fit.png",
+      "source_extracted_plate": "sources/rainbow-dress__u_idle0_extracted.png",
+      "source_cell_index": 0,
+      "source_cell_count_per_axis": 1,
+      "uniform_nominal_512_to_stage": {
+        "scale": 0.9839747739364781,
+        "translation": [
+          3.6701832495394617,
+          5.428433278274678
+        ]
+      },
+      "registration_metadata": [
+        "metadata/registration_draft.json",
+        "metadata/extraction_registration.json"
+      ],
+      "occlusion_metadata": "metadata/occlusion_checks.json",
+      "preview_right": "previews/rainbow-dress__u_idle0__right.png",
+      "preview_left": "previews/rainbow-dress__u_idle0__left.png",
+      "visual_review": "Frame-level garment fit, short hem, cuff/limb alignment, face/mane clearance and riding overlap checked in both facings"
+    },
+    {
+      "item_id": "rainbow-dress",
+      "frame_id": "u_idle1",
+      "layers": {
+        "garment": {
+          "file": "layers/rainbow-dress__u_idle1.png",
+          "sha256": "b475e54c7a16bb27872a20ec5b5f649f29a012d0f39b080532af776914cce206",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin_stage": [
+            0,
+            0
+          ],
+          "crop_file": "cropped/rainbow-dress__u_idle1.png",
+          "crop_sha256": "7d9db6a2b4663dfda7abcf72f29012e9f63ecdf4da8eb43bc0480c55ca89acc6",
+          "crop_rect_stage_xywh": [
+            176,
+            321,
+            169,
+            91
+          ]
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment"
+      ],
+      "base_file": "../base/stages/u_idle1.png",
+      "base_sha256": "4e7384355aedec68dd527e88d582904d4977cae24de01689ad4a2d72a398ced1",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "crop_pivot_xy": [
+        80,
+        112
+      ],
+      "left_pivot_stage": [
+        256,
+        433
+      ],
+      "logical_canvas": [
+        192,
+        192
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          64
+        ]
+      },
+      "source_fit_plate": "sources/rainbow-dress__groundA_fit.png",
+      "source_extracted_plate": "sources/rainbow-dress__groundA_extracted.png",
+      "source_cell_index": 0,
+      "source_cell_count_per_axis": 2,
+      "uniform_nominal_512_to_stage": {
+        "scale": 0.7318063221108994,
+        "translation": [
+          75.43245454371146,
+          84.67739072671853
+        ]
+      },
+      "registration_metadata": [
+        "metadata/registration_draft.json",
+        "metadata/extraction_registration.json"
+      ],
+      "occlusion_metadata": "metadata/occlusion_checks.json",
+      "preview_right": "previews/rainbow-dress__u_idle1__right.png",
+      "preview_left": "previews/rainbow-dress__u_idle1__left.png",
+      "visual_review": "Frame-level garment fit, short hem, cuff/limb alignment, face/mane clearance and riding overlap checked in both facings"
+    },
+    {
+      "item_id": "rainbow-dress",
+      "frame_id": "u_run0",
+      "layers": {
+        "garment": {
+          "file": "layers/rainbow-dress__u_run0.png",
+          "sha256": "ceced5d62f790129fb0a298f6a817efd3ff27651e22563c5a195605120bc324c",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin_stage": [
+            0,
+            0
+          ],
+          "crop_file": "cropped/rainbow-dress__u_run0.png",
+          "crop_sha256": "ba7f73654b3ebfd930b876ece0054c32960c1437b189682dfcebe5b8c388365f",
+          "crop_rect_stage_xywh": [
+            170,
+            324,
+            173,
+            86
+          ]
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment"
+      ],
+      "base_file": "../base/stages/u_run0.png",
+      "base_sha256": "16fb149b94beddd2fb0d94f16ee489d644a3a055d4a88f38b9e16184a6c80b2b",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "crop_pivot_xy": [
+        86,
+        109
+      ],
+      "left_pivot_stage": [
+        256,
+        433
+      ],
+      "logical_canvas": [
+        192,
+        192
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          64
+        ]
+      },
+      "source_fit_plate": "sources/rainbow-dress__groundA_fit.png",
+      "source_extracted_plate": "sources/rainbow-dress__groundA_extracted.png",
+      "source_cell_index": 1,
+      "source_cell_count_per_axis": 2,
+      "uniform_nominal_512_to_stage": {
+        "scale": 0.7123184917766985,
+        "translation": [
+          62.21470064214069,
+          98.4768198295214
+        ]
+      },
+      "registration_metadata": [
+        "metadata/registration_draft.json",
+        "metadata/extraction_registration.json"
+      ],
+      "occlusion_metadata": "metadata/occlusion_checks.json",
+      "preview_right": "previews/rainbow-dress__u_run0__right.png",
+      "preview_left": "previews/rainbow-dress__u_run0__left.png",
+      "visual_review": "Frame-level garment fit, short hem, cuff/limb alignment, face/mane clearance and riding overlap checked in both facings"
+    },
+    {
+      "item_id": "rainbow-dress",
+      "frame_id": "u_run1",
+      "layers": {
+        "garment": {
+          "file": "layers/rainbow-dress__u_run1.png",
+          "sha256": "c6f14a7657713493fbc4493f630c817bd4bdd8969b7ef9af782cd44541bf6ba7",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin_stage": [
+            0,
+            0
+          ],
+          "crop_file": "cropped/rainbow-dress__u_run1.png",
+          "crop_sha256": "451c2519550511c18c86993443be97ced4cbddf769445fafc83dad3248df42a7",
+          "crop_rect_stage_xywh": [
+            178,
+            316,
+            165,
+            83
+          ]
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment"
+      ],
+      "base_file": "../base/stages/u_run1.png",
+      "base_sha256": "b559162368ca98bfc148d4f34f21dc72f76d92334519c7ac61941b9c0a2e5c51",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "crop_pivot_xy": [
+        78,
+        117
+      ],
+      "left_pivot_stage": [
+        256,
+        433
+      ],
+      "logical_canvas": [
+        192,
+        192
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          64
+        ]
+      },
+      "source_fit_plate": "sources/rainbow-dress__groundA_fit.png",
+      "source_extracted_plate": "sources/rainbow-dress__groundA_extracted.png",
+      "source_cell_index": 2,
+      "source_cell_count_per_axis": 2,
+      "uniform_nominal_512_to_stage": {
+        "scale": 0.6913229413685614,
+        "translation": [
+          80.30280627580953,
+          134.57363437314095
+        ]
+      },
+      "registration_metadata": [
+        "metadata/registration_draft.json",
+        "metadata/extraction_registration.json"
+      ],
+      "occlusion_metadata": "metadata/occlusion_checks.json",
+      "preview_right": "previews/rainbow-dress__u_run1__right.png",
+      "preview_left": "previews/rainbow-dress__u_run1__left.png",
+      "visual_review": "Frame-level garment fit, short hem, cuff/limb alignment, face/mane clearance and riding overlap checked in both facings"
+    },
+    {
+      "item_id": "rainbow-dress",
+      "frame_id": "u_run2",
+      "layers": {
+        "garment": {
+          "file": "layers/rainbow-dress__u_run2.png",
+          "sha256": "a66f0c6ce97db79b895cb3a3ca6b991524f2e8a60337ee04f47055e7a7ca9435",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin_stage": [
+            0,
+            0
+          ],
+          "crop_file": "cropped/rainbow-dress__u_run2.png",
+          "crop_sha256": "4e8addab026bb970eede5a9190bbe463d411c0f5f4187744b2c2db7a87c77a18",
+          "crop_rect_stage_xywh": [
+            167,
+            307,
+            181,
+            90
+          ]
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment"
+      ],
+      "base_file": "../base/stages/u_run2.png",
+      "base_sha256": "33a905cf3e9f76026ce46197e6061b1414975347274b5832f7427daac2e26c61",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "crop_pivot_xy": [
+        89,
+        126
+      ],
+      "left_pivot_stage": [
+        256,
+        433
+      ],
+      "logical_canvas": [
+        192,
+        192
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          64
+        ]
+      },
+      "source_fit_plate": "sources/rainbow-dress__groundA_fit.png",
+      "source_extracted_plate": "sources/rainbow-dress__groundA_extracted.png",
+      "source_cell_index": 3,
+      "source_cell_count_per_axis": 2,
+      "uniform_nominal_512_to_stage": {
+        "scale": 0.7696124089582632,
+        "translation": [
+          42.22231219434475,
+          93.25468065843927
+        ]
+      },
+      "registration_metadata": [
+        "metadata/registration_draft.json",
+        "metadata/extraction_registration.json"
+      ],
+      "occlusion_metadata": "metadata/occlusion_checks.json",
+      "preview_right": "previews/rainbow-dress__u_run2__right.png",
+      "preview_left": "previews/rainbow-dress__u_run2__left.png",
+      "visual_review": "Frame-level garment fit, short hem, cuff/limb alignment, face/mane clearance and riding overlap checked in both facings"
+    },
+    {
+      "item_id": "rainbow-dress",
+      "frame_id": "u_run3",
+      "layers": {
+        "garment": {
+          "file": "layers/rainbow-dress__u_run3.png",
+          "sha256": "068ea1d108e4239f066797e506048e7d443a33b139833e81111b5201c80c4f5f",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin_stage": [
+            0,
+            0
+          ],
+          "crop_file": "cropped/rainbow-dress__u_run3.png",
+          "crop_sha256": "70abd3e2f8f9652f380ab540a8f35b6b99d4a567cdb4bb7183bde145ffd855f4",
+          "crop_rect_stage_xywh": [
+            166,
+            303,
+            177,
+            102
+          ]
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment"
+      ],
+      "base_file": "../base/stages/u_run3.png",
+      "base_sha256": "c9c86b37d334ebadb3b22071d80a5285191dd03ec5ff57438e278ff5f6f29dd4",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "crop_pivot_xy": [
+        90,
+        130
+      ],
+      "left_pivot_stage": [
+        256,
+        433
+      ],
+      "logical_canvas": [
+        192,
+        192
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          64
+        ]
+      },
+      "source_fit_plate": "sources/rainbow-dress__groundB_fit.png",
+      "source_extracted_plate": "sources/rainbow-dress__groundB_extracted.png",
+      "source_cell_index": 0,
+      "source_cell_count_per_axis": 2,
+      "uniform_nominal_512_to_stage": {
+        "scale": 0.7108431556901098,
+        "translation": [
+          54.2857243157068,
+          83.69596343989801
+        ]
+      },
+      "registration_metadata": [
+        "metadata/registration_draft.json",
+        "metadata/extraction_registration.json"
+      ],
+      "occlusion_metadata": "metadata/occlusion_checks.json",
+      "preview_right": "previews/rainbow-dress__u_run3__right.png",
+      "preview_left": "previews/rainbow-dress__u_run3__left.png",
+      "visual_review": "Frame-level garment fit, short hem, cuff/limb alignment, face/mane clearance and riding overlap checked in both facings"
+    },
+    {
+      "item_id": "rainbow-dress",
+      "frame_id": "u_run4",
+      "layers": {
+        "garment": {
+          "file": "layers/rainbow-dress__u_run4.png",
+          "sha256": "a572c6e38912ec4a82f4a196d0f0e17fd4b18066ecc3855816e64760503f61be",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin_stage": [
+            0,
+            0
+          ],
+          "crop_file": "cropped/rainbow-dress__u_run4.png",
+          "crop_sha256": "51383ff6870e8e95fa112a184fe1afcd6193ad50db3ce0c38e29e88cac016281",
+          "crop_rect_stage_xywh": [
+            156,
+            298,
+            173,
+            100
+          ]
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment"
+      ],
+      "base_file": "../base/stages/u_run4.png",
+      "base_sha256": "c1d60d263dcf596ab054371c4bf4e0c2656c390d28f0436566d2554f8a7ce0be",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "crop_pivot_xy": [
+        100,
+        135
+      ],
+      "left_pivot_stage": [
+        256,
+        433
+      ],
+      "logical_canvas": [
+        192,
+        192
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          64
+        ]
+      },
+      "source_fit_plate": "sources/rainbow-dress__groundB_fit.png",
+      "source_extracted_plate": "sources/rainbow-dress__groundB_extracted.png",
+      "source_cell_index": 1,
+      "source_cell_count_per_axis": 2,
+      "uniform_nominal_512_to_stage": {
+        "scale": 0.6924172588112387,
+        "translation": [
+          53.76321128355131,
+          80.16119151724746
+        ]
+      },
+      "registration_metadata": [
+        "metadata/registration_draft.json",
+        "metadata/extraction_registration.json"
+      ],
+      "occlusion_metadata": "metadata/occlusion_checks.json",
+      "preview_right": "previews/rainbow-dress__u_run4__right.png",
+      "preview_left": "previews/rainbow-dress__u_run4__left.png",
+      "visual_review": "Frame-level garment fit, short hem, cuff/limb alignment, face/mane clearance and riding overlap checked in both facings"
+    },
+    {
+      "item_id": "rainbow-dress",
+      "frame_id": "u_run5",
+      "layers": {
+        "garment": {
+          "file": "layers/rainbow-dress__u_run5.png",
+          "sha256": "cb491e23ebac76da361e2450c94279e97399f47bdf4f9db52bd97d072eaeee1f",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin_stage": [
+            0,
+            0
+          ],
+          "crop_file": "cropped/rainbow-dress__u_run5.png",
+          "crop_sha256": "2e5b7cf344d0364328e64e200a5e6f77d18a2a802f4ed9ee354a1f721645a93d",
+          "crop_rect_stage_xywh": [
+            169,
+            304,
+            180,
+            98
+          ]
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment"
+      ],
+      "base_file": "../base/stages/u_run5.png",
+      "base_sha256": "e902ea07c28f14b45623c922a0804a148d23f5db6e912dc6a2c67796875f4c14",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "crop_pivot_xy": [
+        87,
+        129
+      ],
+      "left_pivot_stage": [
+        256,
+        433
+      ],
+      "logical_canvas": [
+        192,
+        192
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          64
+        ]
+      },
+      "source_fit_plate": "sources/rainbow-dress__groundB_fit.png",
+      "source_extracted_plate": "sources/rainbow-dress__groundB_extracted.png",
+      "source_cell_index": 2,
+      "source_cell_count_per_axis": 2,
+      "uniform_nominal_512_to_stage": {
+        "scale": 0.7161180849973285,
+        "translation": [
+          56.09146543026122,
+          117.50656374584409
+        ]
+      },
+      "registration_metadata": [
+        "metadata/registration_draft.json",
+        "metadata/extraction_registration.json"
+      ],
+      "occlusion_metadata": "metadata/occlusion_checks.json",
+      "preview_right": "previews/rainbow-dress__u_run5__right.png",
+      "preview_left": "previews/rainbow-dress__u_run5__left.png",
+      "visual_review": "Frame-level garment fit, short hem, cuff/limb alignment, face/mane clearance and riding overlap checked in both facings"
+    },
+    {
+      "item_id": "rainbow-dress",
+      "frame_id": "u_happy0",
+      "layers": {
+        "garment": {
+          "file": "layers/rainbow-dress__u_happy0.png",
+          "sha256": "6b5a77734effe098bb4374f07beec0c1765f109d655bc743b7944bb9d32df878",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin_stage": [
+            0,
+            0
+          ],
+          "crop_file": "cropped/rainbow-dress__u_happy0.png",
+          "crop_sha256": "25820d143e0adbbfe5c53f37e740940b242b0f365a21492c24809cff211eb9ef",
+          "crop_rect_stage_xywh": [
+            162,
+            284,
+            198,
+            121
+          ]
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment"
+      ],
+      "base_file": "../base/stages/u_happy0.png",
+      "base_sha256": "565006f31e1ad806c52fdf53e9f1aa12db7c664e1694a899d3e054baf882a0b5",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "crop_pivot_xy": [
+        94,
+        149
+      ],
+      "left_pivot_stage": [
+        256,
+        433
+      ],
+      "logical_canvas": [
+        192,
+        192
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          64
+        ]
+      },
+      "source_fit_plate": "sources/rainbow-dress__groundB_fit.png",
+      "source_extracted_plate": "sources/rainbow-dress__groundB_extracted.png",
+      "source_cell_index": 3,
+      "source_cell_count_per_axis": 2,
+      "uniform_nominal_512_to_stage": {
+        "scale": 0.6846316546401584,
+        "translation": [
+          55.540085759131,
+          129.93569824604083
+        ]
+      },
+      "registration_metadata": [
+        "metadata/registration_draft.json",
+        "metadata/extraction_registration.json"
+      ],
+      "occlusion_metadata": "metadata/occlusion_checks.json",
+      "preview_right": "previews/rainbow-dress__u_happy0__right.png",
+      "preview_left": "previews/rainbow-dress__u_happy0__left.png",
+      "visual_review": "Frame-level garment fit, short hem, cuff/limb alignment, face/mane clearance and riding overlap checked in both facings"
+    },
+    {
+      "item_id": "rainbow-dress",
+      "frame_id": "u_happy1",
+      "layers": {
+        "garment": {
+          "file": "layers/rainbow-dress__u_happy1.png",
+          "sha256": "d3437eb2b4db117c65125dcea5e804474af334139276c6b88097c341d1500ca4",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin_stage": [
+            0,
+            0
+          ],
+          "crop_file": "cropped/rainbow-dress__u_happy1.png",
+          "crop_sha256": "d1efa3cf72aed0451456d0abc02e86ff9952d92f26f29655948072a3739246a3",
+          "crop_rect_stage_xywh": [
+            189,
+            271,
+            168,
+            126
+          ]
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment"
+      ],
+      "base_file": "../base/stages/u_happy1.png",
+      "base_sha256": "c4a4e3ef2a04883b1cc9e90e3ddff535ef12a80f86803fe57f7cdfc56564d0ee",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "crop_pivot_xy": [
+        67,
+        162
+      ],
+      "left_pivot_stage": [
+        256,
+        433
+      ],
+      "logical_canvas": [
+        192,
+        192
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          64
+        ]
+      },
+      "source_fit_plate": "sources/rainbow-dress__happy_fit.png",
+      "source_extracted_plate": "sources/rainbow-dress__happy_extracted.png",
+      "source_cell_index": 0,
+      "source_cell_count_per_axis": 2,
+      "uniform_nominal_512_to_stage": {
+        "scale": 0.8642865611785382,
+        "translation": [
+          18.427448754193474,
+          37.192457550302166
+        ]
+      },
+      "registration_metadata": [
+        "metadata/registration_draft.json",
+        "metadata/extraction_registration.json"
+      ],
+      "occlusion_metadata": "metadata/occlusion_checks.json",
+      "preview_right": "previews/rainbow-dress__u_happy1__right.png",
+      "preview_left": "previews/rainbow-dress__u_happy1__left.png",
+      "visual_review": "Frame-level garment fit, short hem, cuff/limb alignment, face/mane clearance and riding overlap checked in both facings"
+    },
+    {
+      "item_id": "rainbow-dress",
+      "frame_id": "u_happy2",
+      "layers": {
+        "garment": {
+          "file": "layers/rainbow-dress__u_happy2.png",
+          "sha256": "34a908ad166bf95dd4ce8739e9ab9ebfe53358ef556b2ca2bdd69d40efc51125",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin_stage": [
+            0,
+            0
+          ],
+          "crop_file": "cropped/rainbow-dress__u_happy2.png",
+          "crop_sha256": "d2333f1031d1b4b2ea4c76f2965ef7ad45f60ec7359353ff88fd96c4552a959b",
+          "crop_rect_stage_xywh": [
+            196,
+            296,
+            153,
+            110
+          ]
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment"
+      ],
+      "base_file": "../base/stages/u_happy2.png",
+      "base_sha256": "add156857f5fd9d58f77c5a83f432adec762005c1f7ab8b5fe83ee6805bc6f38",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "crop_pivot_xy": [
+        60,
+        137
+      ],
+      "left_pivot_stage": [
+        256,
+        433
+      ],
+      "logical_canvas": [
+        192,
+        192
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          64
+        ]
+      },
+      "source_fit_plate": "sources/rainbow-dress__happy_fit.png",
+      "source_extracted_plate": "sources/rainbow-dress__happy_extracted.png",
+      "source_cell_index": 1,
+      "source_cell_count_per_axis": 2,
+      "uniform_nominal_512_to_stage": {
+        "scale": 0.8085018745350543,
+        "translation": [
+          65.22602246088789,
+          63.822410937625655
+        ]
+      },
+      "registration_metadata": [
+        "metadata/registration_draft.json",
+        "metadata/extraction_registration.json"
+      ],
+      "occlusion_metadata": "metadata/occlusion_checks.json",
+      "preview_right": "previews/rainbow-dress__u_happy2__right.png",
+      "preview_left": "previews/rainbow-dress__u_happy2__left.png",
+      "visual_review": "Frame-level garment fit, short hem, cuff/limb alignment, face/mane clearance and riding overlap checked in both facings"
+    },
+    {
+      "item_id": "rainbow-dress",
+      "frame_id": "bike0",
+      "layers": {
+        "garment": {
+          "file": "layers/rainbow-dress__bike0.png",
+          "sha256": "285070a37b17600c5aac59c4ec0643cdf8c3c75eb58201b1d9d2ac298ff899fb",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin_stage": [
+            0,
+            0
+          ],
+          "crop_file": "cropped/rainbow-dress__bike0.png",
+          "crop_sha256": "c5b86be8f016e87d95448c814a8952ec67a506f0343ffa1c3bd60816c9ff4096",
+          "crop_rect_stage_xywh": [
+            155,
+            214,
+            161,
+            92
+          ]
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment"
+      ],
+      "base_file": "../base/stages/bike0.png",
+      "base_sha256": "0933fd0929cd4ca4f47c6966d5a1618209dd159e4800524a884811637712c416",
+      "pivot_stage": [
+        263.4254143646409,
+        445.52486187845307
+      ],
+      "crop_pivot_xy": [
+        108.42541436464091,
+        231.52486187845307
+      ],
+      "left_pivot_stage": [
+        248.57458563535909,
+        445.52486187845307
+      ],
+      "logical_canvas": [
+        192,
+        256
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          0
+        ]
+      },
+      "source_fit_plate": "sources/rainbow-dress__bike_fit.png",
+      "source_extracted_plate": "sources/rainbow-dress__bike_extracted.png",
+      "source_cell_index": 0,
+      "source_cell_count_per_axis": 2,
+      "uniform_nominal_512_to_stage": {
+        "scale": 0.5805284160850346,
+        "translation": [
+          88.22615253768815,
+          104.05422653118822
+        ]
+      },
+      "registration_metadata": [
+        "metadata/registration_draft.json",
+        "metadata/extraction_registration.json"
+      ],
+      "occlusion_metadata": "metadata/occlusion_checks.json",
+      "preview_right": "previews/rainbow-dress__bike0__right.png",
+      "preview_left": "previews/rainbow-dress__bike0__left.png",
+      "visual_review": "Frame-level garment fit, short hem, cuff/limb alignment, face/mane clearance and riding overlap checked in both facings"
+    },
+    {
+      "item_id": "rainbow-dress",
+      "frame_id": "bike1",
+      "layers": {
+        "garment": {
+          "file": "layers/rainbow-dress__bike1.png",
+          "sha256": "f9ea72b089f4d8421df1583bdbe4504b5b11b56b980cbe7cbc52e51a972ddffb",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin_stage": [
+            0,
+            0
+          ],
+          "crop_file": "cropped/rainbow-dress__bike1.png",
+          "crop_sha256": "dcb535dcc9da9a1ef124fe6212eb938db58918940da05335f1d9403efa951c6c",
+          "crop_rect_stage_xywh": [
+            152,
+            217,
+            155,
+            87
+          ]
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment"
+      ],
+      "base_file": "../base/stages/bike1.png",
+      "base_sha256": "e99bd54c8e78c8ee36c6baec38c49063c76bc14357014fb84a6ab2b8647bb4ad",
+      "pivot_stage": [
+        261.6574585635359,
+        445.52486187845307
+      ],
+      "crop_pivot_xy": [
+        109.6574585635359,
+        228.52486187845307
+      ],
+      "left_pivot_stage": [
+        250.3425414364641,
+        445.52486187845307
+      ],
+      "logical_canvas": [
+        192,
+        256
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          0
+        ]
+      },
+      "source_fit_plate": "sources/rainbow-dress__bike_fit.png",
+      "source_extracted_plate": "sources/rainbow-dress__bike_extracted.png",
+      "source_cell_index": 1,
+      "source_cell_count_per_axis": 2,
+      "uniform_nominal_512_to_stage": {
+        "scale": 0.5975354087870179,
+        "translation": [
+          84.20882867650218,
+          91.3873962368738
+        ]
+      },
+      "registration_metadata": [
+        "metadata/registration_draft.json",
+        "metadata/extraction_registration.json"
+      ],
+      "occlusion_metadata": "metadata/occlusion_checks.json",
+      "preview_right": "previews/rainbow-dress__bike1__right.png",
+      "preview_left": "previews/rainbow-dress__bike1__left.png",
+      "visual_review": "Frame-level garment fit, short hem, cuff/limb alignment, face/mane clearance and riding overlap checked in both facings"
+    },
+    {
+      "item_id": "rainbow-dress",
+      "frame_id": "bike2",
+      "layers": {
+        "garment": {
+          "file": "layers/rainbow-dress__bike2.png",
+          "sha256": "c82f60a71a0ffb9ee66e9308554645dc4272b7732227385f3f55083e1529ce5a",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin_stage": [
+            0,
+            0
+          ],
+          "crop_file": "cropped/rainbow-dress__bike2.png",
+          "crop_sha256": "26c6b9d5c272bf58dcdcfbe4c7bcc22dc638f26e5a6810039d1f129681449840",
+          "crop_rect_stage_xywh": [
+            152,
+            214,
+            163,
+            95
+          ]
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment"
+      ],
+      "base_file": "../base/stages/bike2.png",
+      "base_sha256": "c0280e4d764a531d96e1a90e8eed9c0d7fe74dd2bef984aefa039b97516c39a8",
+      "pivot_stage": [
+        259.88950276243094,
+        445.52486187845307
+      ],
+      "crop_pivot_xy": [
+        107.88950276243094,
+        231.52486187845307
+      ],
+      "left_pivot_stage": [
+        252.11049723756906,
+        445.52486187845307
+      ],
+      "logical_canvas": [
+        192,
+        256
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          0
+        ]
+      },
+      "source_fit_plate": "sources/rainbow-dress__bike_fit.png",
+      "source_extracted_plate": "sources/rainbow-dress__bike_extracted.png",
+      "source_cell_index": 2,
+      "source_cell_count_per_axis": 2,
+      "uniform_nominal_512_to_stage": {
+        "scale": 0.5948259835746602,
+        "translation": [
+          80.73416074400978,
+          118.14348409514697
+        ]
+      },
+      "registration_metadata": [
+        "metadata/registration_draft.json",
+        "metadata/extraction_registration.json"
+      ],
+      "occlusion_metadata": "metadata/occlusion_checks.json",
+      "preview_right": "previews/rainbow-dress__bike2__right.png",
+      "preview_left": "previews/rainbow-dress__bike2__left.png",
+      "visual_review": "Frame-level garment fit, short hem, cuff/limb alignment, face/mane clearance and riding overlap checked in both facings"
+    },
+    {
+      "item_id": "rainbow-dress",
+      "frame_id": "bike3",
+      "layers": {
+        "garment": {
+          "file": "layers/rainbow-dress__bike3.png",
+          "sha256": "9306199ab9983c5b40e189ffb5be1be90506c0294aaa0f9a330d00c04560a9bf",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin_stage": [
+            0,
+            0
+          ],
+          "crop_file": "cropped/rainbow-dress__bike3.png",
+          "crop_sha256": "6888ab0026f5ba7f8644e20c5faa652d26c4d175883ea3ea64127e412d6e59c8",
+          "crop_rect_stage_xywh": [
+            160,
+            215,
+            152,
+            86
+          ]
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment"
+      ],
+      "base_file": "../base/stages/bike3.png",
+      "base_sha256": "a7a49ffc8b7d66fb783131a8c312e07c3cabb5de61e3f528f3153853e54c0781",
+      "pivot_stage": [
+        259.18232044198896,
+        445.52486187845307
+      ],
+      "crop_pivot_xy": [
+        99.18232044198896,
+        230.52486187845307
+      ],
+      "left_pivot_stage": [
+        252.81767955801104,
+        445.52486187845307
+      ],
+      "logical_canvas": [
+        192,
+        256
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          0
+        ]
+      },
+      "source_fit_plate": "sources/rainbow-dress__bike_fit.png",
+      "source_extracted_plate": "sources/rainbow-dress__bike_extracted.png",
+      "source_cell_index": 3,
+      "source_cell_count_per_axis": 2,
+      "uniform_nominal_512_to_stage": {
+        "scale": 0.5730664573516489,
+        "translation": [
+          98.12158285853505,
+          120.18728717213301
+        ]
+      },
+      "registration_metadata": [
+        "metadata/registration_draft.json",
+        "metadata/extraction_registration.json"
+      ],
+      "occlusion_metadata": "metadata/occlusion_checks.json",
+      "preview_right": "previews/rainbow-dress__bike3__right.png",
+      "preview_left": "previews/rainbow-dress__bike3__left.png",
+      "visual_review": "Frame-level garment fit, short hem, cuff/limb alignment, face/mane clearance and riding overlap checked in both facings"
+    },
+    {
+      "item_id": "rainbow-dress",
+      "frame_id": "skateboard0",
+      "layers": {
+        "garment": {
+          "file": "layers/rainbow-dress__skateboard0.png",
+          "sha256": "d831e4655eb4f1c7af7fdaf8e9431b8daad0f93069ac20d0d26aff1c117011b8",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin_stage": [
+            0,
+            0
+          ],
+          "crop_file": "cropped/rainbow-dress__skateboard0.png",
+          "crop_sha256": "af8583feb140036346e778cd92cdf25329256cca8aa11d7443fd33459371a86f",
+          "crop_rect_stage_xywh": [
+            149,
+            237,
+            176,
+            86
+          ]
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment"
+      ],
+      "base_file": "../base/stages/skateboard0.png",
+      "base_sha256": "3800aa6bfc1418be7298ff8cd2709797b77bb32d7256b24040c197e31728ed79",
+      "pivot_stage": [
+        248.22099447513813,
+        425.01657458563534
+      ],
+      "crop_pivot_xy": [
+        99.22099447513813,
+        188.01657458563534
+      ],
+      "left_pivot_stage": [
+        263.7790055248619,
+        425.01657458563534
+      ],
+      "logical_canvas": [
+        192,
+        256
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          0
+        ]
+      },
+      "source_fit_plate": "sources/rainbow-dress__skateboard_fit.png",
+      "source_extracted_plate": "sources/rainbow-dress__skateboard_extracted.png",
+      "source_cell_index": 0,
+      "source_cell_count_per_axis": 2,
+      "uniform_nominal_512_to_stage": {
+        "scale": 0.6651037463648279,
+        "translation": [
+          56.09393679588613,
+          69.14175245469644
+        ]
+      },
+      "registration_metadata": [
+        "metadata/registration_draft.json",
+        "metadata/extraction_registration.json"
+      ],
+      "occlusion_metadata": "metadata/occlusion_checks.json",
+      "preview_right": "previews/rainbow-dress__skateboard0__right.png",
+      "preview_left": "previews/rainbow-dress__skateboard0__left.png",
+      "visual_review": "Frame-level garment fit, short hem, cuff/limb alignment, face/mane clearance and riding overlap checked in both facings"
+    },
+    {
+      "item_id": "rainbow-dress",
+      "frame_id": "skateboard1",
+      "layers": {
+        "garment": {
+          "file": "layers/rainbow-dress__skateboard1.png",
+          "sha256": "4df4d341ac775c73e6d7011248167592350b6ab20b2ad9e86726bc9b7179428f",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin_stage": [
+            0,
+            0
+          ],
+          "crop_file": "cropped/rainbow-dress__skateboard1.png",
+          "crop_sha256": "e7c30898b7c4920e5b7f24ae8737a15b6d2e918c0ba44dfb0f6cec73252ee8b3",
+          "crop_rect_stage_xywh": [
+            148,
+            231,
+            210,
+            98
+          ]
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment"
+      ],
+      "base_file": "../base/stages/skateboard1.png",
+      "base_sha256": "d8649f42d0d188b23c910b0901fa5ede4b606b05223694fd7d395075e4790a51",
+      "pivot_stage": [
+        254.939226519337,
+        425.72375690607737
+      ],
+      "crop_pivot_xy": [
+        106.93922651933701,
+        194.72375690607737
+      ],
+      "left_pivot_stage": [
+        257.060773480663,
+        425.72375690607737
+      ],
+      "logical_canvas": [
+        192,
+        256
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          0
+        ]
+      },
+      "source_fit_plate": "sources/rainbow-dress__skateboard_fit.png",
+      "source_extracted_plate": "sources/rainbow-dress__skateboard_extracted.png",
+      "source_cell_index": 1,
+      "source_cell_count_per_axis": 2,
+      "uniform_nominal_512_to_stage": {
+        "scale": 0.7053019404872719,
+        "translation": [
+          68.02835274781387,
+          57.08239592787499
+        ]
+      },
+      "registration_metadata": [
+        "metadata/registration_draft.json",
+        "metadata/extraction_registration.json"
+      ],
+      "occlusion_metadata": "metadata/occlusion_checks.json",
+      "preview_right": "previews/rainbow-dress__skateboard1__right.png",
+      "preview_left": "previews/rainbow-dress__skateboard1__left.png",
+      "visual_review": "Frame-level garment fit, short hem, cuff/limb alignment, face/mane clearance and riding overlap checked in both facings"
+    },
+    {
+      "item_id": "rainbow-dress",
+      "frame_id": "skateboard2",
+      "layers": {
+        "garment": {
+          "file": "layers/rainbow-dress__skateboard2.png",
+          "sha256": "51abd1ae5132332ce916e7a9ba1e4770dab6b800dfd3f106263146269c4f666a",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin_stage": [
+            0,
+            0
+          ],
+          "crop_file": "cropped/rainbow-dress__skateboard2.png",
+          "crop_sha256": "769ebd9de29dd05417a22b90243c29169f1c47e6812b1fb7ed59d656c897df71",
+          "crop_rect_stage_xywh": [
+            156,
+            233,
+            187,
+            96
+          ]
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment"
+      ],
+      "base_file": "../base/stages/skateboard2.png",
+      "base_sha256": "4f5384cfb3a8549ca11ce51d027faaab4cac15760e66ad1ca03817bb22d3c62f",
+      "pivot_stage": [
+        252.11049723756906,
+        425.72375690607737
+      ],
+      "crop_pivot_xy": [
+        96.11049723756906,
+        192.72375690607737
+      ],
+      "left_pivot_stage": [
+        259.88950276243094,
+        425.72375690607737
+      ],
+      "logical_canvas": [
+        192,
+        256
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          0
+        ]
+      },
+      "source_fit_plate": "sources/rainbow-dress__skateboard_fit.png",
+      "source_extracted_plate": "sources/rainbow-dress__skateboard_extracted.png",
+      "source_cell_index": 2,
+      "source_cell_count_per_axis": 2,
+      "uniform_nominal_512_to_stage": {
+        "scale": 0.7178447486042991,
+        "translation": [
+          53.871932264348736,
+          83.27281801059131
+        ]
+      },
+      "registration_metadata": [
+        "metadata/registration_draft.json",
+        "metadata/extraction_registration.json"
+      ],
+      "occlusion_metadata": "metadata/occlusion_checks.json",
+      "preview_right": "previews/rainbow-dress__skateboard2__right.png",
+      "preview_left": "previews/rainbow-dress__skateboard2__left.png",
+      "visual_review": "Frame-level garment fit, short hem, cuff/limb alignment, face/mane clearance and riding overlap checked in both facings"
+    },
+    {
+      "item_id": "rainbow-dress",
+      "frame_id": "skateboard3",
+      "layers": {
+        "garment": {
+          "file": "layers/rainbow-dress__skateboard3.png",
+          "sha256": "22ac61506f94ab91898b59856723f877db2d39012ebfee797d33b051426f5d26",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin_stage": [
+            0,
+            0
+          ],
+          "crop_file": "cropped/rainbow-dress__skateboard3.png",
+          "crop_sha256": "f59ff387d85a966f81e9dfee2800ae63ecaec076146119a97ff78425fef9bf9b",
+          "crop_rect_stage_xywh": [
+            163,
+            235,
+            184,
+            93
+          ]
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment"
+      ],
+      "base_file": "../base/stages/skateboard3.png",
+      "base_sha256": "bf94fc058aff4f7e83c6c063508aee0a089e4f0fbd43040dbf3265c4afa2f69e",
+      "pivot_stage": [
+        253.87845303867402,
+        425.01657458563534
+      ],
+      "crop_pivot_xy": [
+        90.87845303867402,
+        190.01657458563534
+      ],
+      "left_pivot_stage": [
+        258.121546961326,
+        425.01657458563534
+      ],
+      "logical_canvas": [
+        192,
+        256
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          0
+        ]
+      },
+      "source_fit_plate": "sources/rainbow-dress__skateboard_fit.png",
+      "source_extracted_plate": "sources/rainbow-dress__skateboard_extracted.png",
+      "source_cell_index": 3,
+      "source_cell_count_per_axis": 2,
+      "uniform_nominal_512_to_stage": {
+        "scale": 0.7075019125148337,
+        "translation": [
+          50.371978064097846,
+          86.5250049151898
+        ]
+      },
+      "registration_metadata": [
+        "metadata/registration_draft.json",
+        "metadata/extraction_registration.json"
+      ],
+      "occlusion_metadata": "metadata/occlusion_checks.json",
+      "preview_right": "previews/rainbow-dress__skateboard3__right.png",
+      "preview_left": "previews/rainbow-dress__skateboard3__left.png",
+      "visual_review": "Frame-level garment fit, short hem, cuff/limb alignment, face/mane clearance and riding overlap checked in both facings"
+    },
+    {
+      "item_id": "raincoat",
+      "frame_id": "u_idle0",
+      "layers": {
+        "garment": {
+          "file": "layers/raincoat__u_idle0.png",
+          "sha256": "24e2881bd69508a80daefe9b3c05ce76fb56fbde004fe3bd3d0ec24d73606f64",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin_stage": [
+            0,
+            0
+          ],
+          "crop_file": "cropped/raincoat__u_idle0.png",
+          "crop_sha256": "c8df32cf2e4f1f4f72f651cf4bd1e331157a78ddc2ba5a29339894239fc11ee6",
+          "crop_rect_stage_xywh": [
+            193,
+            268,
+            152,
+            131
+          ]
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment"
+      ],
+      "base_file": "../base/stages/u_idle0.png",
+      "base_sha256": "36160efe1a4bfcfdd95a5fb085234a8da880826e5f4064294fa8d964a9ea1b04",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "crop_pivot_xy": [
+        63,
+        165
+      ],
+      "left_pivot_stage": [
+        256,
+        433
+      ],
+      "logical_canvas": [
+        192,
+        192
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          64
+        ]
+      },
+      "source_fit_plate": "sources/raincoat__u_idle0_fit.png",
+      "source_extracted_plate": "sources/raincoat__u_idle0_extracted.png",
+      "source_cell_index": 0,
+      "source_cell_count_per_axis": 1,
+      "uniform_nominal_512_to_stage": {
+        "scale": 0.998308513523165,
+        "translation": [
+          0.1977782922429811,
+          2.9289220421098388
+        ]
+      },
+      "registration_metadata": [
+        "metadata/registration_draft.json",
+        "metadata/extraction_registration.json"
+      ],
+      "occlusion_metadata": "metadata/occlusion_checks.json",
+      "preview_right": "previews/raincoat__u_idle0__right.png",
+      "preview_left": "previews/raincoat__u_idle0__left.png",
+      "visual_review": "Frame-level garment fit, short hem, cuff/limb alignment, face/mane clearance and riding overlap checked in both facings"
+    },
+    {
+      "item_id": "raincoat",
+      "frame_id": "u_idle1",
+      "layers": {
+        "garment": {
+          "file": "layers/raincoat__u_idle1.png",
+          "sha256": "ac6104cd7c8f8b7137a9ad7c94a19b957e19ddaea1d137bec8610f08813abd65",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin_stage": [
+            0,
+            0
+          ],
+          "crop_file": "cropped/raincoat__u_idle1.png",
+          "crop_sha256": "49343fb445776ffc15c3b6cf63ba6978836b7ff6c9fca67505f443d9a88f5aef",
+          "crop_rect_stage_xywh": [
+            226,
+            319,
+            124,
+            76
+          ]
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment"
+      ],
+      "base_file": "../base/stages/u_idle1.png",
+      "base_sha256": "4e7384355aedec68dd527e88d582904d4977cae24de01689ad4a2d72a398ced1",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "crop_pivot_xy": [
+        30,
+        114
+      ],
+      "left_pivot_stage": [
+        256,
+        433
+      ],
+      "logical_canvas": [
+        192,
+        192
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          64
+        ]
+      },
+      "source_fit_plate": "sources/raincoat__groundA_fit.png",
+      "source_extracted_plate": "sources/raincoat__groundA_extracted.png",
+      "source_cell_index": 0,
+      "source_cell_count_per_axis": 2,
+      "uniform_nominal_512_to_stage": {
+        "scale": 0.5984562970828133,
+        "translation": [
+          102.53249705546976,
+          149.52038832279717
+        ]
+      },
+      "registration_metadata": [
+        "metadata/registration_draft.json",
+        "metadata/extraction_registration.json"
+      ],
+      "occlusion_metadata": "metadata/occlusion_checks.json",
+      "preview_right": "previews/raincoat__u_idle1__right.png",
+      "preview_left": "previews/raincoat__u_idle1__left.png",
+      "visual_review": "Frame-level garment fit, short hem, cuff/limb alignment, face/mane clearance and riding overlap checked in both facings"
+    },
+    {
+      "item_id": "raincoat",
+      "frame_id": "u_run0",
+      "layers": {
+        "garment": {
+          "file": "layers/raincoat__u_run0.png",
+          "sha256": "27f38defdc1899cf265a79dd99feea3c19ab595da27b79adaa6da208b15dc625",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin_stage": [
+            0,
+            0
+          ],
+          "crop_file": "cropped/raincoat__u_run0.png",
+          "crop_sha256": "f585c0068b7f589c1cb622f19d36d33770373b3a02f68928f292b993e7c2891e",
+          "crop_rect_stage_xywh": [
+            212,
+            324,
+            123,
+            86
+          ]
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment"
+      ],
+      "base_file": "../base/stages/u_run0.png",
+      "base_sha256": "16fb149b94beddd2fb0d94f16ee489d644a3a055d4a88f38b9e16184a6c80b2b",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "crop_pivot_xy": [
+        44,
+        109
+      ],
+      "left_pivot_stage": [
+        256,
+        433
+      ],
+      "logical_canvas": [
+        192,
+        192
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          64
+        ]
+      },
+      "source_fit_plate": "sources/raincoat__groundA_fit.png",
+      "source_extracted_plate": "sources/raincoat__groundA_extracted.png",
+      "source_cell_index": 1,
+      "source_cell_count_per_axis": 2,
+      "uniform_nominal_512_to_stage": {
+        "scale": 0.5838741331100998,
+        "translation": [
+          109.77555392469407,
+          161.43919884300402
+        ]
+      },
+      "registration_metadata": [
+        "metadata/registration_draft.json",
+        "metadata/extraction_registration.json"
+      ],
+      "occlusion_metadata": "metadata/occlusion_checks.json",
+      "preview_right": "previews/raincoat__u_run0__right.png",
+      "preview_left": "previews/raincoat__u_run0__left.png",
+      "visual_review": "Frame-level garment fit, short hem, cuff/limb alignment, face/mane clearance and riding overlap checked in both facings"
+    },
+    {
+      "item_id": "raincoat",
+      "frame_id": "u_run1",
+      "layers": {
+        "garment": {
+          "file": "layers/raincoat__u_run1.png",
+          "sha256": "4d3cab5e209387a7fb280c399c0360d6babe261e1ad2437973ed143088614567",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin_stage": [
+            0,
+            0
+          ],
+          "crop_file": "cropped/raincoat__u_run1.png",
+          "crop_sha256": "b97e28e591b78a840c260bb74432e496c4882f5e67d1c8daa212eae85ca2dc52",
+          "crop_rect_stage_xywh": [
+            210,
+            316,
+            128,
+            80
+          ]
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment"
+      ],
+      "base_file": "../base/stages/u_run1.png",
+      "base_sha256": "b559162368ca98bfc148d4f34f21dc72f76d92334519c7ac61941b9c0a2e5c51",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "crop_pivot_xy": [
+        46,
+        117
+      ],
+      "left_pivot_stage": [
+        256,
+        433
+      ],
+      "logical_canvas": [
+        192,
+        192
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          64
+        ]
+      },
+      "source_fit_plate": "sources/raincoat__groundA_fit.png",
+      "source_extracted_plate": "sources/raincoat__groundA_extracted.png",
+      "source_cell_index": 2,
+      "source_cell_count_per_axis": 2,
+      "uniform_nominal_512_to_stage": {
+        "scale": 0.6358688790830812,
+        "translation": [
+          77.50344124274744,
+          160.75663060431006
+        ]
+      },
+      "registration_metadata": [
+        "metadata/registration_draft.json",
+        "metadata/extraction_registration.json"
+      ],
+      "occlusion_metadata": "metadata/occlusion_checks.json",
+      "preview_right": "previews/raincoat__u_run1__right.png",
+      "preview_left": "previews/raincoat__u_run1__left.png",
+      "visual_review": "Frame-level garment fit, short hem, cuff/limb alignment, face/mane clearance and riding overlap checked in both facings"
+    },
+    {
+      "item_id": "raincoat",
+      "frame_id": "u_run2",
+      "layers": {
+        "garment": {
+          "file": "layers/raincoat__u_run2.png",
+          "sha256": "21c8ab5095e47fbd71b5215f1c45f7af629420e1b3af4124359883920253af77",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin_stage": [
+            0,
+            0
+          ],
+          "crop_file": "cropped/raincoat__u_run2.png",
+          "crop_sha256": "930aeb689aa4eae7f3a9bfc91831b46bf021d9e06f1c618978496c5ddb779c1a",
+          "crop_rect_stage_xywh": [
+            218,
+            315,
+            128,
+            79
+          ]
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment"
+      ],
+      "base_file": "../base/stages/u_run2.png",
+      "base_sha256": "33a905cf3e9f76026ce46197e6061b1414975347274b5832f7427daac2e26c61",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "crop_pivot_xy": [
+        38,
+        118
+      ],
+      "left_pivot_stage": [
+        256,
+        433
+      ],
+      "logical_canvas": [
+        192,
+        192
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          64
+        ]
+      },
+      "source_fit_plate": "sources/raincoat__groundA_fit.png",
+      "source_extracted_plate": "sources/raincoat__groundA_extracted.png",
+      "source_cell_index": 3,
+      "source_cell_count_per_axis": 2,
+      "uniform_nominal_512_to_stage": {
+        "scale": 0.598352945850998,
+        "translation": [
+          109.14370278042847,
+          170.59521904796713
+        ]
+      },
+      "registration_metadata": [
+        "metadata/registration_draft.json",
+        "metadata/extraction_registration.json"
+      ],
+      "occlusion_metadata": "metadata/occlusion_checks.json",
+      "preview_right": "previews/raincoat__u_run2__right.png",
+      "preview_left": "previews/raincoat__u_run2__left.png",
+      "visual_review": "Frame-level garment fit, short hem, cuff/limb alignment, face/mane clearance and riding overlap checked in both facings"
+    },
+    {
+      "item_id": "raincoat",
+      "frame_id": "u_run3",
+      "layers": {
+        "garment": {
+          "file": "layers/raincoat__u_run3.png",
+          "sha256": "a7e80882b73e387f14b228537bcc576c2ffcca2a29cc192a013b33b27692af6f",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin_stage": [
+            0,
+            0
+          ],
+          "crop_file": "cropped/raincoat__u_run3.png",
+          "crop_sha256": "e374fd27ae5dde1673decebc70da32f9b42bf57f627435d34b056e837a438ab9",
+          "crop_rect_stage_xywh": [
+            177,
+            299,
+            165,
+            102
+          ]
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment"
+      ],
+      "base_file": "../base/stages/u_run3.png",
+      "base_sha256": "c9c86b37d334ebadb3b22071d80a5285191dd03ec5ff57438e278ff5f6f29dd4",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "crop_pivot_xy": [
+        79,
+        134
+      ],
+      "left_pivot_stage": [
+        256,
+        433
+      ],
+      "logical_canvas": [
+        192,
+        192
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          64
+        ]
+      },
+      "source_fit_plate": "sources/raincoat__groundB_fit.png",
+      "source_extracted_plate": "sources/raincoat__groundB_extracted.png",
+      "source_cell_index": 0,
+      "source_cell_count_per_axis": 2,
+      "uniform_nominal_512_to_stage": {
+        "scale": 0.7321553039369173,
+        "translation": [
+          51.8451004142951,
+          93.29195011184976
+        ]
+      },
+      "registration_metadata": [
+        "metadata/registration_draft.json",
+        "metadata/extraction_registration.json"
+      ],
+      "occlusion_metadata": "metadata/occlusion_checks.json",
+      "preview_right": "previews/raincoat__u_run3__right.png",
+      "preview_left": "previews/raincoat__u_run3__left.png",
+      "visual_review": "Frame-level garment fit, short hem, cuff/limb alignment, face/mane clearance and riding overlap checked in both facings"
+    },
+    {
+      "item_id": "raincoat",
+      "frame_id": "u_run4",
+      "layers": {
+        "garment": {
+          "file": "layers/raincoat__u_run4.png",
+          "sha256": "1899cd10498b15fb30e1bb5c75177963ef53bb6bda6c65737495149bf312db98",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin_stage": [
+            0,
+            0
+          ],
+          "crop_file": "cropped/raincoat__u_run4.png",
+          "crop_sha256": "5a445bbd86df41e5fcc298d72717535b71977d3a69dfbfe0fceebe4abb5ddb59",
+          "crop_rect_stage_xywh": [
+            170,
+            284,
+            145,
+            109
+          ]
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment"
+      ],
+      "base_file": "../base/stages/u_run4.png",
+      "base_sha256": "c1d60d263dcf596ab054371c4bf4e0c2656c390d28f0436566d2554f8a7ce0be",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "crop_pivot_xy": [
+        86,
+        149
+      ],
+      "left_pivot_stage": [
+        256,
+        433
+      ],
+      "logical_canvas": [
+        192,
+        192
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          64
+        ]
+      },
+      "source_fit_plate": "sources/raincoat__groundB_fit.png",
+      "source_extracted_plate": "sources/raincoat__groundB_extracted.png",
+      "source_cell_index": 1,
+      "source_cell_count_per_axis": 2,
+      "uniform_nominal_512_to_stage": {
+        "scale": 0.7244865357257595,
+        "translation": [
+          51.201236915318795,
+          84.98508533881872
+        ]
+      },
+      "registration_metadata": [
+        "metadata/registration_draft.json",
+        "metadata/extraction_registration.json"
+      ],
+      "occlusion_metadata": "metadata/occlusion_checks.json",
+      "preview_right": "previews/raincoat__u_run4__right.png",
+      "preview_left": "previews/raincoat__u_run4__left.png",
+      "visual_review": "Frame-level garment fit, short hem, cuff/limb alignment, face/mane clearance and riding overlap checked in both facings"
+    },
+    {
+      "item_id": "raincoat",
+      "frame_id": "u_run5",
+      "layers": {
+        "garment": {
+          "file": "layers/raincoat__u_run5.png",
+          "sha256": "100dd0d07fc62693934d3e6ad03f87e408d38fd3dd0f7d919dfacaafa93ea8b7",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin_stage": [
+            0,
+            0
+          ],
+          "crop_file": "cropped/raincoat__u_run5.png",
+          "crop_sha256": "6a2666fc96fce9677933808730a97cc82fcb6f98511b887e7841b9cc1c4a7d57",
+          "crop_rect_stage_xywh": [
+            175,
+            293,
+            143,
+            106
+          ]
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment"
+      ],
+      "base_file": "../base/stages/u_run5.png",
+      "base_sha256": "e902ea07c28f14b45623c922a0804a148d23f5db6e912dc6a2c67796875f4c14",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "crop_pivot_xy": [
+        81,
+        140
+      ],
+      "left_pivot_stage": [
+        256,
+        433
+      ],
+      "logical_canvas": [
+        192,
+        192
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          64
+        ]
+      },
+      "source_fit_plate": "sources/raincoat__groundB_fit.png",
+      "source_extracted_plate": "sources/raincoat__groundB_extracted.png",
+      "source_cell_index": 2,
+      "source_cell_count_per_axis": 2,
+      "uniform_nominal_512_to_stage": {
+        "scale": 0.6669817101563951,
+        "translation": [
+          61.26185908411163,
+          135.75973178492313
+        ]
+      },
+      "registration_metadata": [
+        "metadata/registration_draft.json",
+        "metadata/extraction_registration.json"
+      ],
+      "occlusion_metadata": "metadata/occlusion_checks.json",
+      "preview_right": "previews/raincoat__u_run5__right.png",
+      "preview_left": "previews/raincoat__u_run5__left.png",
+      "visual_review": "Frame-level garment fit, short hem, cuff/limb alignment, face/mane clearance and riding overlap checked in both facings"
+    },
+    {
+      "item_id": "raincoat",
+      "frame_id": "u_happy0",
+      "layers": {
+        "garment": {
+          "file": "layers/raincoat__u_happy0.png",
+          "sha256": "c416dfd84b76245e57149df1cb33dfe1748da4909cb25f712c4454323e636384",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin_stage": [
+            0,
+            0
+          ],
+          "crop_file": "cropped/raincoat__u_happy0.png",
+          "crop_sha256": "582e095cc41e7b5a2ebe3fd8455c7cf98303db54c58adc8e6fc8a96e988f18f0",
+          "crop_rect_stage_xywh": [
+            186,
+            280,
+            181,
+            109
+          ]
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment"
+      ],
+      "base_file": "../base/stages/u_happy0.png",
+      "base_sha256": "565006f31e1ad806c52fdf53e9f1aa12db7c664e1694a899d3e054baf882a0b5",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "crop_pivot_xy": [
+        70,
+        153
+      ],
+      "left_pivot_stage": [
+        256,
+        433
+      ],
+      "logical_canvas": [
+        192,
+        192
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          64
+        ]
+      },
+      "source_fit_plate": "sources/raincoat__groundB_fit.png",
+      "source_extracted_plate": "sources/raincoat__groundB_extracted.png",
+      "source_cell_index": 3,
+      "source_cell_count_per_axis": 2,
+      "uniform_nominal_512_to_stage": {
+        "scale": 0.6637811173770236,
+        "translation": [
+          66.79757409749557,
+          131.00711855599587
+        ]
+      },
+      "registration_metadata": [
+        "metadata/registration_draft.json",
+        "metadata/extraction_registration.json"
+      ],
+      "occlusion_metadata": "metadata/occlusion_checks.json",
+      "preview_right": "previews/raincoat__u_happy0__right.png",
+      "preview_left": "previews/raincoat__u_happy0__left.png",
+      "visual_review": "Frame-level garment fit, short hem, cuff/limb alignment, face/mane clearance and riding overlap checked in both facings"
+    },
+    {
+      "item_id": "raincoat",
+      "frame_id": "u_happy1",
+      "layers": {
+        "garment": {
+          "file": "layers/raincoat__u_happy1.png",
+          "sha256": "1604670aaf062dbd227ac085092fcedf93dd1a5292d891d4a53ad578a20570c5",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin_stage": [
+            0,
+            0
+          ],
+          "crop_file": "cropped/raincoat__u_happy1.png",
+          "crop_sha256": "cdbbe3cfcfe4fc67e5bb43c69eda4770232f220c545a7da80d4a699ffc7d70be",
+          "crop_rect_stage_xywh": [
+            186,
+            238,
+            182,
+            136
+          ]
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment"
+      ],
+      "base_file": "../base/stages/u_happy1.png",
+      "base_sha256": "c4a4e3ef2a04883b1cc9e90e3ddff535ef12a80f86803fe57f7cdfc56564d0ee",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "crop_pivot_xy": [
+        70,
+        195
+      ],
+      "left_pivot_stage": [
+        256,
+        433
+      ],
+      "logical_canvas": [
+        192,
+        192
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          64
+        ]
+      },
+      "source_fit_plate": "sources/raincoat__happy_fit.png",
+      "source_extracted_plate": "sources/raincoat__happy_extracted.png",
+      "source_cell_index": 0,
+      "source_cell_count_per_axis": 2,
+      "uniform_nominal_512_to_stage": {
+        "scale": 0.6408797921652613,
+        "translation": [
+          98.44413326779107,
+          78.29950860972733
+        ]
+      },
+      "registration_metadata": [
+        "metadata/registration_draft.json",
+        "metadata/extraction_registration.json"
+      ],
+      "occlusion_metadata": "metadata/occlusion_checks.json",
+      "preview_right": "previews/raincoat__u_happy1__right.png",
+      "preview_left": "previews/raincoat__u_happy1__left.png",
+      "visual_review": "Frame-level garment fit, short hem, cuff/limb alignment, face/mane clearance and riding overlap checked in both facings"
+    },
+    {
+      "item_id": "raincoat",
+      "frame_id": "u_happy2",
+      "layers": {
+        "garment": {
+          "file": "layers/raincoat__u_happy2.png",
+          "sha256": "35330700bcbb8506c2cda7fdbf684966865902124780f16f6f78c120f66cfa90",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin_stage": [
+            0,
+            0
+          ],
+          "crop_file": "cropped/raincoat__u_happy2.png",
+          "crop_sha256": "80268aa669889a6f338f137511050c535757ddab542af7d0250e79ce8f3e27a9",
+          "crop_rect_stage_xywh": [
+            233,
+            276,
+            133,
+            106
+          ]
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment"
+      ],
+      "base_file": "../base/stages/u_happy2.png",
+      "base_sha256": "add156857f5fd9d58f77c5a83f432adec762005c1f7ab8b5fe83ee6805bc6f38",
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "crop_pivot_xy": [
+        23,
+        157
+      ],
+      "left_pivot_stage": [
+        256,
+        433
+      ],
+      "logical_canvas": [
+        192,
+        192
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          64
+        ]
+      },
+      "source_fit_plate": "sources/raincoat__happy_fit.png",
+      "source_extracted_plate": "sources/raincoat__happy_extracted.png",
+      "source_cell_index": 1,
+      "source_cell_count_per_axis": 2,
+      "uniform_nominal_512_to_stage": {
+        "scale": 0.5622015566658997,
+        "translation": [
+          125.13625586596602,
+          113.43670232872267
+        ]
+      },
+      "registration_metadata": [
+        "metadata/registration_draft.json",
+        "metadata/extraction_registration.json"
+      ],
+      "occlusion_metadata": "metadata/occlusion_checks.json",
+      "preview_right": "previews/raincoat__u_happy2__right.png",
+      "preview_left": "previews/raincoat__u_happy2__left.png",
+      "visual_review": "Frame-level garment fit, short hem, cuff/limb alignment, face/mane clearance and riding overlap checked in both facings"
+    },
+    {
+      "item_id": "raincoat",
+      "frame_id": "bike0",
+      "layers": {
+        "garment": {
+          "file": "layers/raincoat__bike0.png",
+          "sha256": "c1948de791eebd6c7b18cc5e0a71e7fa07e344f3fefaa332f88b71b303a6ba4c",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin_stage": [
+            0,
+            0
+          ],
+          "crop_file": "cropped/raincoat__bike0.png",
+          "crop_sha256": "f8e07e485321280c1c8a51af7b7a4fcd38ca594e4265fb4af57bcf05cdcf83f5",
+          "crop_rect_stage_xywh": [
+            175,
+            211,
+            127,
+            94
+          ]
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment"
+      ],
+      "base_file": "../base/stages/bike0.png",
+      "base_sha256": "0933fd0929cd4ca4f47c6966d5a1618209dd159e4800524a884811637712c416",
+      "pivot_stage": [
+        263.4254143646409,
+        445.52486187845307
+      ],
+      "crop_pivot_xy": [
+        88.42541436464091,
+        234.52486187845307
+      ],
+      "left_pivot_stage": [
+        248.57458563535909,
+        445.52486187845307
+      ],
+      "logical_canvas": [
+        192,
+        256
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          0
+        ]
+      },
+      "source_fit_plate": "sources/raincoat__bike_fit.png",
+      "source_extracted_plate": "sources/raincoat__bike_extracted.png",
+      "source_cell_index": 0,
+      "source_cell_count_per_axis": 2,
+      "uniform_nominal_512_to_stage": {
+        "scale": 0.5747289303225855,
+        "translation": [
+          91.2793264325123,
+          98.95092971476763
+        ]
+      },
+      "registration_metadata": [
+        "metadata/registration_draft.json",
+        "metadata/extraction_registration.json"
+      ],
+      "occlusion_metadata": "metadata/occlusion_checks.json",
+      "preview_right": "previews/raincoat__bike0__right.png",
+      "preview_left": "previews/raincoat__bike0__left.png",
+      "visual_review": "Frame-level garment fit, short hem, cuff/limb alignment, face/mane clearance and riding overlap checked in both facings"
+    },
+    {
+      "item_id": "raincoat",
+      "frame_id": "bike1",
+      "layers": {
+        "garment": {
+          "file": "layers/raincoat__bike1.png",
+          "sha256": "8d060942ac80fdbfc159b8503611037ebb97238abce29c2c67112aab4c0cfdcc",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin_stage": [
+            0,
+            0
+          ],
+          "crop_file": "cropped/raincoat__bike1.png",
+          "crop_sha256": "c6fffacfefe0b4e654e3c50c7dbd164e34daa212a45d1dcb8e33e99b5be387c3",
+          "crop_rect_stage_xywh": [
+            177,
+            215,
+            122,
+            85
+          ]
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment"
+      ],
+      "base_file": "../base/stages/bike1.png",
+      "base_sha256": "e99bd54c8e78c8ee36c6baec38c49063c76bc14357014fb84a6ab2b8647bb4ad",
+      "pivot_stage": [
+        261.6574585635359,
+        445.52486187845307
+      ],
+      "crop_pivot_xy": [
+        84.6574585635359,
+        230.52486187845307
+      ],
+      "left_pivot_stage": [
+        250.3425414364641,
+        445.52486187845307
+      ],
+      "logical_canvas": [
+        192,
+        256
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          0
+        ]
+      },
+      "source_fit_plate": "sources/raincoat__bike_fit.png",
+      "source_extracted_plate": "sources/raincoat__bike_extracted.png",
+      "source_cell_index": 1,
+      "source_cell_count_per_axis": 2,
+      "uniform_nominal_512_to_stage": {
+        "scale": 0.5701614220387079,
+        "translation": [
+          86.88485195913294,
+          92.6516570087799
+        ]
+      },
+      "registration_metadata": [
+        "metadata/registration_draft.json",
+        "metadata/extraction_registration.json"
+      ],
+      "occlusion_metadata": "metadata/occlusion_checks.json",
+      "preview_right": "previews/raincoat__bike1__right.png",
+      "preview_left": "previews/raincoat__bike1__left.png",
+      "visual_review": "Frame-level garment fit, short hem, cuff/limb alignment, face/mane clearance and riding overlap checked in both facings"
+    },
+    {
+      "item_id": "raincoat",
+      "frame_id": "bike2",
+      "layers": {
+        "garment": {
+          "file": "layers/raincoat__bike2.png",
+          "sha256": "289319081cdfe94d8305f2072e4f0c28a5c6c48dbfa7eb253a9faa5a73aa41d3",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin_stage": [
+            0,
+            0
+          ],
+          "crop_file": "cropped/raincoat__bike2.png",
+          "crop_sha256": "cd637047576e3872abaf2eb1c6ad4d7affa2719173f3389efab9bd834719e1b4",
+          "crop_rect_stage_xywh": [
+            177,
+            212,
+            121,
+            83
+          ]
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment"
+      ],
+      "base_file": "../base/stages/bike2.png",
+      "base_sha256": "c0280e4d764a531d96e1a90e8eed9c0d7fe74dd2bef984aefa039b97516c39a8",
+      "pivot_stage": [
+        259.88950276243094,
+        445.52486187845307
+      ],
+      "crop_pivot_xy": [
+        82.88950276243094,
+        233.52486187845307
+      ],
+      "left_pivot_stage": [
+        252.11049723756906,
+        445.52486187845307
+      ],
+      "logical_canvas": [
+        192,
+        256
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          0
+        ]
+      },
+      "source_fit_plate": "sources/raincoat__bike_fit.png",
+      "source_extracted_plate": "sources/raincoat__bike_extracted.png",
+      "source_cell_index": 2,
+      "source_cell_count_per_axis": 2,
+      "uniform_nominal_512_to_stage": {
+        "scale": 0.6060098496264504,
+        "translation": [
+          80.53012297125854,
+          86.71679524015272
+        ]
+      },
+      "registration_metadata": [
+        "metadata/registration_draft.json",
+        "metadata/extraction_registration.json"
+      ],
+      "occlusion_metadata": "metadata/occlusion_checks.json",
+      "preview_right": "previews/raincoat__bike2__right.png",
+      "preview_left": "previews/raincoat__bike2__left.png",
+      "visual_review": "Frame-level garment fit, short hem, cuff/limb alignment, face/mane clearance and riding overlap checked in both facings"
+    },
+    {
+      "item_id": "raincoat",
+      "frame_id": "bike3",
+      "layers": {
+        "garment": {
+          "file": "layers/raincoat__bike3.png",
+          "sha256": "f25a0a194f5bfeec2372e2a194c3557cad07b6600938485672e4d4ff32647bde",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin_stage": [
+            0,
+            0
+          ],
+          "crop_file": "cropped/raincoat__bike3.png",
+          "crop_sha256": "7b3f5ad9ab7fa0f7194bf60449ded7c735ddcc57695a7b2f260b41be195b9631",
+          "crop_rect_stage_xywh": [
+            187,
+            214,
+            117,
+            77
+          ]
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment"
+      ],
+      "base_file": "../base/stages/bike3.png",
+      "base_sha256": "a7a49ffc8b7d66fb783131a8c312e07c3cabb5de61e3f528f3153853e54c0781",
+      "pivot_stage": [
+        259.18232044198896,
+        445.52486187845307
+      ],
+      "crop_pivot_xy": [
+        72.18232044198896,
+        231.52486187845307
+      ],
+      "left_pivot_stage": [
+        252.81767955801104,
+        445.52486187845307
+      ],
+      "logical_canvas": [
+        192,
+        256
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          0
+        ]
+      },
+      "source_fit_plate": "sources/raincoat__bike_fit.png",
+      "source_extracted_plate": "sources/raincoat__bike_extracted.png",
+      "source_cell_index": 3,
+      "source_cell_count_per_axis": 2,
+      "uniform_nominal_512_to_stage": {
+        "scale": 0.5764975948792438,
+        "translation": [
+          86.19578736425711,
+          90.70655237454164
+        ]
+      },
+      "registration_metadata": [
+        "metadata/registration_draft.json",
+        "metadata/extraction_registration.json"
+      ],
+      "occlusion_metadata": "metadata/occlusion_checks.json",
+      "preview_right": "previews/raincoat__bike3__right.png",
+      "preview_left": "previews/raincoat__bike3__left.png",
+      "visual_review": "Frame-level garment fit, short hem, cuff/limb alignment, face/mane clearance and riding overlap checked in both facings"
+    },
+    {
+      "item_id": "raincoat",
+      "frame_id": "skateboard0",
+      "layers": {
+        "garment": {
+          "file": "layers/raincoat__skateboard0.png",
+          "sha256": "ad6bece06d04c3fd06023737df55ae8a6de364ded99209bf79b093e441ec416b",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin_stage": [
+            0,
+            0
+          ],
+          "crop_file": "cropped/raincoat__skateboard0.png",
+          "crop_sha256": "3f835b25545f7040b60ee18a2ac68e047b45870f02b58a515a189c6b89fded3e",
+          "crop_rect_stage_xywh": [
+            174,
+            243,
+            157,
+            86
+          ]
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment"
+      ],
+      "base_file": "../base/stages/skateboard0.png",
+      "base_sha256": "3800aa6bfc1418be7298ff8cd2709797b77bb32d7256b24040c197e31728ed79",
+      "pivot_stage": [
+        248.22099447513813,
+        425.01657458563534
+      ],
+      "crop_pivot_xy": [
+        74.22099447513813,
+        182.01657458563534
+      ],
+      "left_pivot_stage": [
+        263.7790055248619,
+        425.01657458563534
+      ],
+      "logical_canvas": [
+        192,
+        256
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          0
+        ]
+      },
+      "source_fit_plate": "sources/raincoat__skateboard_fit.png",
+      "source_extracted_plate": "sources/raincoat__skateboard_extracted.png",
+      "source_cell_index": 0,
+      "source_cell_count_per_axis": 2,
+      "uniform_nominal_512_to_stage": {
+        "scale": 0.6430207799719926,
+        "translation": [
+          73.26891467941535,
+          75.93183472018121
+        ]
+      },
+      "registration_metadata": [
+        "metadata/registration_draft.json",
+        "metadata/extraction_registration.json"
+      ],
+      "occlusion_metadata": "metadata/occlusion_checks.json",
+      "preview_right": "previews/raincoat__skateboard0__right.png",
+      "preview_left": "previews/raincoat__skateboard0__left.png",
+      "visual_review": "Frame-level garment fit, short hem, cuff/limb alignment, face/mane clearance and riding overlap checked in both facings"
+    },
+    {
+      "item_id": "raincoat",
+      "frame_id": "skateboard1",
+      "layers": {
+        "garment": {
+          "file": "layers/raincoat__skateboard1.png",
+          "sha256": "7507336076977a3c9b2794106d0c1b314504089d7059a1ba7f6a39a6154399f6",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin_stage": [
+            0,
+            0
+          ],
+          "crop_file": "cropped/raincoat__skateboard1.png",
+          "crop_sha256": "3a8622cc618853d4561c6b70968836b0aebfef6b9ab22ee824d352bc372d5e05",
+          "crop_rect_stage_xywh": [
+            195,
+            218,
+            170,
+            114
+          ]
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment"
+      ],
+      "base_file": "../base/stages/skateboard1.png",
+      "base_sha256": "d8649f42d0d188b23c910b0901fa5ede4b606b05223694fd7d395075e4790a51",
+      "pivot_stage": [
+        254.939226519337,
+        425.72375690607737
+      ],
+      "crop_pivot_xy": [
+        59.93922651933701,
+        207.72375690607737
+      ],
+      "left_pivot_stage": [
+        257.060773480663,
+        425.72375690607737
+      ],
+      "logical_canvas": [
+        192,
+        256
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          0
+        ]
+      },
+      "source_fit_plate": "sources/raincoat__skateboard_fit.png",
+      "source_extracted_plate": "sources/raincoat__skateboard_extracted.png",
+      "source_cell_index": 1,
+      "source_cell_count_per_axis": 2,
+      "uniform_nominal_512_to_stage": {
+        "scale": 0.6419249614278405,
+        "translation": [
+          93.05265277848164,
+          77.61681615510733
+        ]
+      },
+      "registration_metadata": [
+        "metadata/registration_draft.json",
+        "metadata/extraction_registration.json"
+      ],
+      "occlusion_metadata": "metadata/occlusion_checks.json",
+      "preview_right": "previews/raincoat__skateboard1__right.png",
+      "preview_left": "previews/raincoat__skateboard1__left.png",
+      "visual_review": "Frame-level garment fit, short hem, cuff/limb alignment, face/mane clearance and riding overlap checked in both facings"
+    },
+    {
+      "item_id": "raincoat",
+      "frame_id": "skateboard2",
+      "layers": {
+        "garment": {
+          "file": "layers/raincoat__skateboard2.png",
+          "sha256": "b929c2c86f6d6672d2866b9d923c0e5b5ce2a9958bf1e5bc70c166389b974b66",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin_stage": [
+            0,
+            0
+          ],
+          "crop_file": "cropped/raincoat__skateboard2.png",
+          "crop_sha256": "f462e561f83324da5df84fa3ef3746f8a48050e2bc30a25174f427994c850a7f",
+          "crop_rect_stage_xywh": [
+            189,
+            236,
+            161,
+            92
+          ]
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment"
+      ],
+      "base_file": "../base/stages/skateboard2.png",
+      "base_sha256": "4f5384cfb3a8549ca11ce51d027faaab4cac15760e66ad1ca03817bb22d3c62f",
+      "pivot_stage": [
+        252.11049723756906,
+        425.72375690607737
+      ],
+      "crop_pivot_xy": [
+        63.110497237569064,
+        189.72375690607737
+      ],
+      "left_pivot_stage": [
+        259.88950276243094,
+        425.72375690607737
+      ],
+      "logical_canvas": [
+        192,
+        256
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          0
+        ]
+      },
+      "source_fit_plate": "sources/raincoat__skateboard_fit.png",
+      "source_extracted_plate": "sources/raincoat__skateboard_extracted.png",
+      "source_cell_index": 2,
+      "source_cell_count_per_axis": 2,
+      "uniform_nominal_512_to_stage": {
+        "scale": 0.6535555289196403,
+        "translation": [
+          89.40920552836833,
+          92.91038054841289
+        ]
+      },
+      "registration_metadata": [
+        "metadata/registration_draft.json",
+        "metadata/extraction_registration.json"
+      ],
+      "occlusion_metadata": "metadata/occlusion_checks.json",
+      "preview_right": "previews/raincoat__skateboard2__right.png",
+      "preview_left": "previews/raincoat__skateboard2__left.png",
+      "visual_review": "Frame-level garment fit, short hem, cuff/limb alignment, face/mane clearance and riding overlap checked in both facings"
+    },
+    {
+      "item_id": "raincoat",
+      "frame_id": "skateboard3",
+      "layers": {
+        "garment": {
+          "file": "layers/raincoat__skateboard3.png",
+          "sha256": "67937439fe0ec40a0e8c742f62f44cc3bd61a243ad8608269de0b71ec597b565",
+          "canvas": [
+            512,
+            512
+          ],
+          "draw_origin_stage": [
+            0,
+            0
+          ],
+          "crop_file": "cropped/raincoat__skateboard3.png",
+          "crop_sha256": "271add9fa2f245a38d4c1681d546e5fd53c5e754b1ae9663f50bbfc59b0bbd94",
+          "crop_rect_stage_xywh": [
+            182,
+            222,
+            168,
+            111
+          ]
+        }
+      },
+      "layer_order": [
+        "base",
+        "garment"
+      ],
+      "base_file": "../base/stages/skateboard3.png",
+      "base_sha256": "bf94fc058aff4f7e83c6c063508aee0a089e4f0fbd43040dbf3265c4afa2f69e",
+      "pivot_stage": [
+        253.87845303867402,
+        425.01657458563534
+      ],
+      "crop_pivot_xy": [
+        71.87845303867402,
+        203.01657458563534
+      ],
+      "left_pivot_stage": [
+        258.121546961326,
+        425.01657458563534
+      ],
+      "logical_canvas": [
+        192,
+        256
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          0
+        ]
+      },
+      "source_fit_plate": "sources/raincoat__skateboard_fit.png",
+      "source_extracted_plate": "sources/raincoat__skateboard_extracted.png",
+      "source_cell_index": 3,
+      "source_cell_count_per_axis": 2,
+      "uniform_nominal_512_to_stage": {
+        "scale": 0.6274808127583478,
+        "translation": [
+          82.64643895290301,
+          102.02928295994118
+        ]
+      },
+      "registration_metadata": [
+        "metadata/registration_draft.json",
+        "metadata/extraction_registration.json"
+      ],
+      "occlusion_metadata": "metadata/occlusion_checks.json",
+      "preview_right": "previews/raincoat__skateboard3__right.png",
+      "preview_left": "previews/raincoat__skateboard3__left.png",
+      "visual_review": "Frame-level garment fit, short hem, cuff/limb alignment, face/mane clearance and riding overlap checked in both facings"
+    }
+  ],
+  "animation_cycles": {
+    "idle": [
+      "u_idle0",
+      "u_idle1"
+    ],
+    "run": [
+      "u_run0",
+      "u_run1",
+      "u_run2",
+      "u_run3",
+      "u_run4",
+      "u_run5"
+    ],
+    "happy": [
+      "u_happy0",
+      "u_happy1",
+      "u_happy2"
+    ],
+    "bike": [
+      "bike0",
+      "bike1",
+      "bike2",
+      "bike3"
+    ],
+    "skateboard": [
+      "skateboard0",
+      "skateboard1",
+      "skateboard2",
+      "skateboard3"
+    ]
+  },
+  "animations": [
+    {
+      "item_id": "rainbow-dress",
+      "cycle": "idle",
+      "sequence": [
+        "u_idle0",
+        "u_idle1"
+      ],
+      "expected_frame_count": 2,
+      "decoded_gif_frame_count": 2,
+      "both_facings_per_frame": true,
+      "gif": "animations/rainbow-dress__idle__both_facings.gif",
+      "gif_sha256": "d2f9f9fee5790e7f6d751571dde1ffd02ec5d4562252f511b470860a42d5d1cd",
+      "frame_contact_sheet": "animations/rainbow-dress__idle__all_frames.jpg",
+      "preview_duration_ms": 450,
+      "duration_note": "Illustrative preview cadence; does not change source game timing."
+    },
+    {
+      "item_id": "rainbow-dress",
+      "cycle": "run",
+      "sequence": [
+        "u_run0",
+        "u_run1",
+        "u_run2",
+        "u_run3",
+        "u_run4",
+        "u_run5"
+      ],
+      "expected_frame_count": 6,
+      "decoded_gif_frame_count": 6,
+      "both_facings_per_frame": true,
+      "gif": "animations/rainbow-dress__run__both_facings.gif",
+      "gif_sha256": "4f06f2858f1c30229a2b1b75a801c88cded7d5c5cb8dc3c4f97974fdf3744234",
+      "frame_contact_sheet": "animations/rainbow-dress__run__all_frames.jpg",
+      "preview_duration_ms": 110,
+      "duration_note": "Illustrative preview cadence; does not change source game timing."
+    },
+    {
+      "item_id": "rainbow-dress",
+      "cycle": "happy",
+      "sequence": [
+        "u_happy0",
+        "u_happy1",
+        "u_happy2"
+      ],
+      "expected_frame_count": 3,
+      "decoded_gif_frame_count": 3,
+      "both_facings_per_frame": true,
+      "gif": "animations/rainbow-dress__happy__both_facings.gif",
+      "gif_sha256": "2d6bfce839f8d604c23a67c5e47a102da55bbf4b005b9240f50f3fc9a58009ba",
+      "frame_contact_sheet": "animations/rainbow-dress__happy__all_frames.jpg",
+      "preview_duration_ms": 180,
+      "duration_note": "Illustrative preview cadence; does not change source game timing."
+    },
+    {
+      "item_id": "rainbow-dress",
+      "cycle": "bike",
+      "sequence": [
+        "bike0",
+        "bike1",
+        "bike2",
+        "bike3"
+      ],
+      "expected_frame_count": 4,
+      "decoded_gif_frame_count": 4,
+      "both_facings_per_frame": true,
+      "gif": "animations/rainbow-dress__bike__both_facings.gif",
+      "gif_sha256": "902fd434aced66c8b33ae40b48f221364e3692ad7448c4c1953b1049bcb59977",
+      "frame_contact_sheet": "animations/rainbow-dress__bike__all_frames.jpg",
+      "preview_duration_ms": 150,
+      "duration_note": "Illustrative preview cadence; does not change source game timing."
+    },
+    {
+      "item_id": "rainbow-dress",
+      "cycle": "skateboard",
+      "sequence": [
+        "skateboard0",
+        "skateboard1",
+        "skateboard2",
+        "skateboard3"
+      ],
+      "expected_frame_count": 4,
+      "decoded_gif_frame_count": 4,
+      "both_facings_per_frame": true,
+      "gif": "animations/rainbow-dress__skateboard__both_facings.gif",
+      "gif_sha256": "94efae2afcd19de9a9e8b216e07cbb874b5d11e432bf0a3cec58b3ba757a1830",
+      "frame_contact_sheet": "animations/rainbow-dress__skateboard__all_frames.jpg",
+      "preview_duration_ms": 150,
+      "duration_note": "Illustrative preview cadence; does not change source game timing."
+    },
+    {
+      "item_id": "raincoat",
+      "cycle": "idle",
+      "sequence": [
+        "u_idle0",
+        "u_idle1"
+      ],
+      "expected_frame_count": 2,
+      "decoded_gif_frame_count": 2,
+      "both_facings_per_frame": true,
+      "gif": "animations/raincoat__idle__both_facings.gif",
+      "gif_sha256": "cff80113ab546a50a9e1a03890ae03392e3033910c6d872b7cd83a156aad3f6e",
+      "frame_contact_sheet": "animations/raincoat__idle__all_frames.jpg",
+      "preview_duration_ms": 450,
+      "duration_note": "Illustrative preview cadence; does not change source game timing."
+    },
+    {
+      "item_id": "raincoat",
+      "cycle": "run",
+      "sequence": [
+        "u_run0",
+        "u_run1",
+        "u_run2",
+        "u_run3",
+        "u_run4",
+        "u_run5"
+      ],
+      "expected_frame_count": 6,
+      "decoded_gif_frame_count": 6,
+      "both_facings_per_frame": true,
+      "gif": "animations/raincoat__run__both_facings.gif",
+      "gif_sha256": "6e365b5bef649f965f32185a170cb250b66782f5160fd205948eee22315f5394",
+      "frame_contact_sheet": "animations/raincoat__run__all_frames.jpg",
+      "preview_duration_ms": 110,
+      "duration_note": "Illustrative preview cadence; does not change source game timing."
+    },
+    {
+      "item_id": "raincoat",
+      "cycle": "happy",
+      "sequence": [
+        "u_happy0",
+        "u_happy1",
+        "u_happy2"
+      ],
+      "expected_frame_count": 3,
+      "decoded_gif_frame_count": 3,
+      "both_facings_per_frame": true,
+      "gif": "animations/raincoat__happy__both_facings.gif",
+      "gif_sha256": "1dfc58cbb35314c94e9090e395249cda6fd516415ece38b9e8ea6ac29c1eeb15",
+      "frame_contact_sheet": "animations/raincoat__happy__all_frames.jpg",
+      "preview_duration_ms": 180,
+      "duration_note": "Illustrative preview cadence; does not change source game timing."
+    },
+    {
+      "item_id": "raincoat",
+      "cycle": "bike",
+      "sequence": [
+        "bike0",
+        "bike1",
+        "bike2",
+        "bike3"
+      ],
+      "expected_frame_count": 4,
+      "decoded_gif_frame_count": 4,
+      "both_facings_per_frame": true,
+      "gif": "animations/raincoat__bike__both_facings.gif",
+      "gif_sha256": "5066f386c52fdbb1789b16c1b72818b5a456852236a857e074a3257d75456829",
+      "frame_contact_sheet": "animations/raincoat__bike__all_frames.jpg",
+      "preview_duration_ms": 150,
+      "duration_note": "Illustrative preview cadence; does not change source game timing."
+    },
+    {
+      "item_id": "raincoat",
+      "cycle": "skateboard",
+      "sequence": [
+        "skateboard0",
+        "skateboard1",
+        "skateboard2",
+        "skateboard3"
+      ],
+      "expected_frame_count": 4,
+      "decoded_gif_frame_count": 4,
+      "both_facings_per_frame": true,
+      "gif": "animations/raincoat__skateboard__both_facings.gif",
+      "gif_sha256": "1992a08b1e267c11615e7ed77d0c427b054a49851359fe836ebb10ba5c12d3e8",
+      "frame_contact_sheet": "animations/raincoat__skateboard__all_frames.jpg",
+      "preview_duration_ms": 150,
+      "duration_note": "Illustrative preview cadence; does not change source game timing."
+    }
+  ],
+  "source_art_provenance": "metadata/source_art_provenance.json",
+  "qa": "metadata/pixel_and_coverage_checks.json",
+  "preview_contacts": [
+    "previews/rainbow-dress_ALL19_right.jpg",
+    "previews/rainbow-dress_ALL19_left.jpg",
+    "previews/raincoat_ALL19_right.jpg",
+    "previews/raincoat_ALL19_left.jpg"
+  ]
+}

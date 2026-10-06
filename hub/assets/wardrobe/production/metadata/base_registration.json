@@ -1,0 +1,1057 @@
+{
+  "source_commit": "637425ce2bdbb4805e0859034449e7d8bd523a20",
+  "canvas": [
+    512,
+    512
+  ],
+  "frame_order": [
+    "u_idle0",
+    "u_idle1",
+    "u_run0",
+    "u_run1",
+    "u_run2",
+    "u_run3",
+    "u_run4",
+    "u_run5",
+    "u_happy0",
+    "u_happy1",
+    "u_happy2",
+    "bike0",
+    "bike1",
+    "bike2",
+    "bike3",
+    "skateboard0",
+    "skateboard1",
+    "skateboard2",
+    "skateboard3"
+  ],
+  "frames": [
+    {
+      "frame_id": "u_idle0",
+      "canvas": [
+        512,
+        512
+      ],
+      "base_file": "base/stages/u_idle0.png",
+      "base_sha256": "36160efe1a4bfcfdd95a5fb085234a8da880826e5f4064294fa8d964a9ea1b04",
+      "logical_canvas": [
+        192,
+        192
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          64
+        ]
+      },
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "source_pose_anchors_logical": {
+        "bounds": [
+          33,
+          44,
+          159,
+          185
+        ],
+        "head": [
+          114,
+          70
+        ],
+        "body": [
+          98,
+          137
+        ],
+        "eyes": [
+          130,
+          108
+        ],
+        "neck": [
+          130,
+          128
+        ],
+        "fit": [
+          72,
+          118,
+          64,
+          45
+        ]
+      }
+    },
+    {
+      "frame_id": "u_idle1",
+      "canvas": [
+        512,
+        512
+      ],
+      "base_file": "base/stages/u_idle1.png",
+      "base_sha256": "4e7384355aedec68dd527e88d582904d4977cae24de01689ad4a2d72a398ced1",
+      "logical_canvas": [
+        192,
+        192
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          64
+        ]
+      },
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "source_pose_anchors_logical": {
+        "bounds": [
+          40,
+          43,
+          152,
+          185
+        ],
+        "head": [
+          114,
+          68
+        ],
+        "body": [
+          98,
+          137
+        ],
+        "eyes": [
+          128,
+          105
+        ],
+        "neck": [
+          127,
+          126
+        ],
+        "fit": [
+          73,
+          116,
+          61,
+          46
+        ]
+      }
+    },
+    {
+      "frame_id": "u_run0",
+      "canvas": [
+        512,
+        512
+      ],
+      "base_file": "base/stages/u_run0.png",
+      "base_sha256": "16fb149b94beddd2fb0d94f16ee489d644a3a055d4a88f38b9e16184a6c80b2b",
+      "logical_canvas": [
+        192,
+        192
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          64
+        ]
+      },
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "source_pose_anchors_logical": {
+        "bounds": [
+          30,
+          54,
+          161,
+          185
+        ],
+        "head": [
+          129,
+          82
+        ],
+        "body": [
+          105,
+          137
+        ],
+        "eyes": [
+          137,
+          111
+        ],
+        "neck": [
+          135,
+          130
+        ],
+        "fit": [
+          79,
+          119,
+          67,
+          44
+        ]
+      }
+    },
+    {
+      "frame_id": "u_run1",
+      "canvas": [
+        512,
+        512
+      ],
+      "base_file": "base/stages/u_run1.png",
+      "base_sha256": "b559162368ca98bfc148d4f34f21dc72f76d92334519c7ac61941b9c0a2e5c51",
+      "logical_canvas": [
+        192,
+        192
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          64
+        ]
+      },
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "source_pose_anchors_logical": {
+        "bounds": [
+          26,
+          50,
+          165,
+          186
+        ],
+        "head": [
+          128,
+          76
+        ],
+        "body": [
+          102,
+          140
+        ],
+        "eyes": [
+          139,
+          110
+        ],
+        "neck": [
+          137,
+          132
+        ],
+        "fit": [
+          77,
+          120,
+          70,
+          46
+        ]
+      }
+    },
+    {
+      "frame_id": "u_run2",
+      "canvas": [
+        512,
+        512
+      ],
+      "base_file": "base/stages/u_run2.png",
+      "base_sha256": "33a905cf3e9f76026ce46197e6061b1414975347274b5832f7427daac2e26c61",
+      "logical_canvas": [
+        192,
+        192
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          64
+        ]
+      },
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "source_pose_anchors_logical": {
+        "bounds": [
+          22,
+          53,
+          170,
+          185
+        ],
+        "head": [
+          136,
+          76
+        ],
+        "body": [
+          103,
+          137
+        ],
+        "eyes": [
+          148,
+          108
+        ],
+        "neck": [
+          145,
+          129
+        ],
+        "fit": [
+          73,
+          118,
+          80,
+          47
+        ]
+      }
+    },
+    {
+      "frame_id": "u_run3",
+      "canvas": [
+        512,
+        512
+      ],
+      "base_file": "base/stages/u_run3.png",
+      "base_sha256": "c9c86b37d334ebadb3b22071d80a5285191dd03ec5ff57438e278ff5f6f29dd4",
+      "logical_canvas": [
+        192,
+        192
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          64
+        ]
+      },
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "source_pose_anchors_logical": {
+        "bounds": [
+          20,
+          56,
+          172,
+          186
+        ],
+        "head": [
+          132,
+          78
+        ],
+        "body": [
+          108,
+          139
+        ],
+        "eyes": [
+          145,
+          110
+        ],
+        "neck": [
+          143,
+          129
+        ],
+        "fit": [
+          74,
+          120,
+          79,
+          47
+        ]
+      }
+    },
+    {
+      "frame_id": "u_run4",
+      "canvas": [
+        512,
+        512
+      ],
+      "base_file": "base/stages/u_run4.png",
+      "base_sha256": "c1d60d263dcf596ab054371c4bf4e0c2656c390d28f0436566d2554f8a7ce0be",
+      "logical_canvas": [
+        192,
+        192
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          64
+        ]
+      },
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "source_pose_anchors_logical": {
+        "bounds": [
+          25,
+          51,
+          167,
+          185
+        ],
+        "head": [
+          128,
+          73
+        ],
+        "body": [
+          100,
+          138
+        ],
+        "eyes": [
+          142,
+          107
+        ],
+        "neck": [
+          139,
+          129
+        ],
+        "fit": [
+          75,
+          118,
+          73,
+          46
+        ]
+      }
+    },
+    {
+      "frame_id": "u_run5",
+      "canvas": [
+        512,
+        512
+      ],
+      "base_file": "base/stages/u_run5.png",
+      "base_sha256": "e902ea07c28f14b45623c922a0804a148d23f5db6e912dc6a2c67796875f4c14",
+      "logical_canvas": [
+        192,
+        192
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          64
+        ]
+      },
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "source_pose_anchors_logical": {
+        "bounds": [
+          19,
+          53,
+          173,
+          186
+        ],
+        "head": [
+          132,
+          76
+        ],
+        "body": [
+          105,
+          139
+        ],
+        "eyes": [
+          150,
+          108
+        ],
+        "neck": [
+          145,
+          129
+        ],
+        "fit": [
+          71,
+          118,
+          84,
+          47
+        ]
+      }
+    },
+    {
+      "frame_id": "u_happy0",
+      "canvas": [
+        512,
+        512
+      ],
+      "base_file": "base/stages/u_happy0.png",
+      "base_sha256": "565006f31e1ad806c52fdf53e9f1aa12db7c664e1694a899d3e054baf882a0b5",
+      "logical_canvas": [
+        192,
+        192
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          64
+        ]
+      },
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "source_pose_anchors_logical": {
+        "bounds": [
+          31,
+          41,
+          160,
+          185
+        ],
+        "head": [
+          110,
+          70
+        ],
+        "body": [
+          111,
+          139
+        ],
+        "eyes": [
+          120,
+          108
+        ],
+        "neck": [
+          116,
+          126
+        ],
+        "fit": [
+          85,
+          113,
+          69,
+          52
+        ]
+      }
+    },
+    {
+      "frame_id": "u_happy1",
+      "canvas": [
+        512,
+        512
+      ],
+      "base_file": "base/stages/u_happy1.png",
+      "base_sha256": "c4a4e3ef2a04883b1cc9e90e3ddff535ef12a80f86803fe57f7cdfc56564d0ee",
+      "logical_canvas": [
+        192,
+        192
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          64
+        ]
+      },
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "source_pose_anchors_logical": {
+        "bounds": [
+          37,
+          32,
+          155,
+          185
+        ],
+        "head": [
+          102,
+          61
+        ],
+        "body": [
+          107,
+          134
+        ],
+        "eyes": [
+          111,
+          97
+        ],
+        "neck": [
+          110,
+          120
+        ],
+        "fit": [
+          64,
+          100,
+          87,
+          61
+        ]
+      }
+    },
+    {
+      "frame_id": "u_happy2",
+      "canvas": [
+        512,
+        512
+      ],
+      "base_file": "base/stages/u_happy2.png",
+      "base_sha256": "add156857f5fd9d58f77c5a83f432adec762005c1f7ab8b5fe83ee6805bc6f38",
+      "logical_canvas": [
+        192,
+        192
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          64
+        ]
+      },
+      "pivot_stage": [
+        256,
+        433
+      ],
+      "source_pose_anchors_logical": {
+        "bounds": [
+          35,
+          44,
+          158,
+          184
+        ],
+        "head": [
+          103,
+          75
+        ],
+        "body": [
+          105,
+          136
+        ],
+        "eyes": [
+          112,
+          111
+        ],
+        "neck": [
+          108,
+          131
+        ],
+        "fit": [
+          84,
+          116,
+          70,
+          47
+        ]
+      }
+    },
+    {
+      "frame_id": "bike0",
+      "canvas": [
+        512,
+        512
+      ],
+      "base_file": "base/stages/bike0.png",
+      "base_sha256": "0933fd0929cd4ca4f47c6966d5a1618209dd159e4800524a884811637712c416",
+      "logical_canvas": [
+        192,
+        256
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          0
+        ]
+      },
+      "pivot_stage": [
+        263.4254143646409,
+        445.52486187845307
+      ],
+      "source_pose_anchors_logical": {
+        "bounds": [
+          17.325966850828728,
+          35.35911602209944,
+          182.09944751381215,
+          222.7624309392265
+        ],
+        "head": [
+          110,
+          64
+        ],
+        "body": [
+          86,
+          131
+        ],
+        "eyes": [
+          122,
+          94
+        ],
+        "neck": [
+          117,
+          112
+        ],
+        "fit": [
+          67,
+          111,
+          61,
+          39
+        ]
+      }
+    },
+    {
+      "frame_id": "bike1",
+      "canvas": [
+        512,
+        512
+      ],
+      "base_file": "base/stages/bike1.png",
+      "base_sha256": "e99bd54c8e78c8ee36c6baec38c49063c76bc14357014fb84a6ab2b8647bb4ad",
+      "logical_canvas": [
+        192,
+        256
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          0
+        ]
+      },
+      "pivot_stage": [
+        261.6574585635359,
+        445.52486187845307
+      ],
+      "source_pose_anchors_logical": {
+        "bounds": [
+          15.91160220994475,
+          35.71270718232044,
+          181.74585635359117,
+          222.7624309392265
+        ],
+        "head": [
+          110,
+          64
+        ],
+        "body": [
+          86,
+          131
+        ],
+        "eyes": [
+          122,
+          94
+        ],
+        "neck": [
+          117,
+          112
+        ],
+        "fit": [
+          67,
+          111,
+          61,
+          39
+        ]
+      }
+    },
+    {
+      "frame_id": "bike2",
+      "canvas": [
+        512,
+        512
+      ],
+      "base_file": "base/stages/bike2.png",
+      "base_sha256": "c0280e4d764a531d96e1a90e8eed9c0d7fe74dd2bef984aefa039b97516c39a8",
+      "logical_canvas": [
+        192,
+        256
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          0
+        ]
+      },
+      "pivot_stage": [
+        259.88950276243094,
+        445.52486187845307
+      ],
+      "source_pose_anchors_logical": {
+        "bounds": [
+          14.143646408839778,
+          35.35911602209944,
+          181.74585635359117,
+          222.7624309392265
+        ],
+        "head": [
+          110,
+          64
+        ],
+        "body": [
+          86,
+          131
+        ],
+        "eyes": [
+          122,
+          94
+        ],
+        "neck": [
+          117,
+          112
+        ],
+        "fit": [
+          67,
+          111,
+          61,
+          39
+        ]
+      }
+    },
+    {
+      "frame_id": "bike3",
+      "canvas": [
+        512,
+        512
+      ],
+      "base_file": "base/stages/bike3.png",
+      "base_sha256": "a7a49ffc8b7d66fb783131a8c312e07c3cabb5de61e3f528f3153853e54c0781",
+      "logical_canvas": [
+        192,
+        256
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          0
+        ]
+      },
+      "pivot_stage": [
+        259.18232044198896,
+        445.52486187845307
+      ],
+      "source_pose_anchors_logical": {
+        "bounds": [
+          14.497237569060772,
+          35.35911602209944,
+          180.68508287292818,
+          222.7624309392265
+        ],
+        "head": [
+          110,
+          64
+        ],
+        "body": [
+          86,
+          131
+        ],
+        "eyes": [
+          122,
+          94
+        ],
+        "neck": [
+          117,
+          112
+        ],
+        "fit": [
+          67,
+          111,
+          61,
+          39
+        ]
+      }
+    },
+    {
+      "frame_id": "skateboard0",
+      "canvas": [
+        512,
+        512
+      ],
+      "base_file": "base/stages/skateboard0.png",
+      "base_sha256": "3800aa6bfc1418be7298ff8cd2709797b77bb32d7256b24040c197e31728ed79",
+      "logical_canvas": [
+        192,
+        256
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          0
+        ]
+      },
+      "pivot_stage": [
+        248.22099447513813,
+        425.01657458563534
+      ],
+      "source_pose_anchors_logical": {
+        "bounds": [
+          16.972375690607734,
+          45.25966850828729,
+          167.24861878453038,
+          212.50828729281767
+        ],
+        "head": [
+          114,
+          76
+        ],
+        "body": [
+          98,
+          143
+        ],
+        "eyes": [
+          128,
+          113
+        ],
+        "neck": [
+          130,
+          129
+        ],
+        "fit": [
+          72,
+          123,
+          68,
+          43
+        ]
+      }
+    },
+    {
+      "frame_id": "skateboard1",
+      "canvas": [
+        512,
+        512
+      ],
+      "base_file": "base/stages/skateboard1.png",
+      "base_sha256": "d8649f42d0d188b23c910b0901fa5ede4b606b05223694fd7d395075e4790a51",
+      "logical_canvas": [
+        192,
+        256
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          0
+        ]
+      },
+      "pivot_stage": [
+        254.939226519337,
+        425.72375690607737
+      ],
+      "source_pose_anchors_logical": {
+        "bounds": [
+          17.67955801104972,
+          45.25966850828729,
+          173.2596685082873,
+          212.86187845303866
+        ],
+        "head": [
+          114,
+          76
+        ],
+        "body": [
+          98,
+          143
+        ],
+        "eyes": [
+          128,
+          113
+        ],
+        "neck": [
+          130,
+          129
+        ],
+        "fit": [
+          72,
+          123,
+          68,
+          43
+        ]
+      }
+    },
+    {
+      "frame_id": "skateboard2",
+      "canvas": [
+        512,
+        512
+      ],
+      "base_file": "base/stages/skateboard2.png",
+      "base_sha256": "4f5384cfb3a8549ca11ce51d027faaab4cac15760e66ad1ca03817bb22d3c62f",
+      "logical_canvas": [
+        192,
+        256
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          0
+        ]
+      },
+      "pivot_stage": [
+        252.11049723756906,
+        425.72375690607737
+      ],
+      "source_pose_anchors_logical": {
+        "bounds": [
+          15.91160220994475,
+          45.25966850828729,
+          172.1988950276243,
+          212.86187845303866
+        ],
+        "head": [
+          114,
+          76
+        ],
+        "body": [
+          98,
+          143
+        ],
+        "eyes": [
+          128,
+          113
+        ],
+        "neck": [
+          130,
+          129
+        ],
+        "fit": [
+          72,
+          123,
+          68,
+          43
+        ]
+      }
+    },
+    {
+      "frame_id": "skateboard3",
+      "canvas": [
+        512,
+        512
+      ],
+      "base_file": "base/stages/skateboard3.png",
+      "base_sha256": "bf94fc058aff4f7e83c6c063508aee0a089e4f0fbd43040dbf3265c4afa2f69e",
+      "logical_canvas": [
+        192,
+        256
+      ],
+      "logical_to_stage": {
+        "scale": 2,
+        "origin": [
+          64,
+          0
+        ]
+      },
+      "pivot_stage": [
+        253.87845303867402,
+        425.01657458563534
+      ],
+      "source_pose_anchors_logical": {
+        "bounds": [
+          15.204419889502763,
+          45.25966850828729,
+          174.67403314917127,
+          212.50828729281767
+        ],
+        "head": [
+          114,
+          76
+        ],
+        "body": [
+          98,
+          143
+        ],
+        "eyes": [
+          128,
+          113
+        ],
+        "neck": [
+          130,
+          129
+        ],
+        "fit": [
+          72,
+          123,
+          68,
+          43
+        ]
+      }
+    }
+  ],
+  "rule": "Draw every layer at (0,0) on full512stage; transform whole group about pivot. Original stages immutable. Approved trial layer bytes frozen."
+}

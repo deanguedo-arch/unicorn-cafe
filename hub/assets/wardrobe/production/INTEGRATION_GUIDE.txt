@@ -1,0 +1,100 @@
+Unicorn World Wardrobe Integration Guide
+
+This package supplies fitted, reusable artwork for the current Unicorn World wardrobe. It is ready for a separate integration step. It does not modify the live game, and asset QA is not a claim of live-game acceptance.
+
+Use the release master manifest as the authority for the 437 item-and-pose records, layer order, source hashes, atlas locations, trim offsets and pivots. Do not infer registration from an image's visible bounds or from a shop icon.
+
+Source revision
+
+The work is pinned to commit 637425ce2bdbb4805e0859034449e7d8bd523a20. The source catalogue has nine head items, six body items and eight accessories. Bike and skateboard are two existing equipment items with canonical riding bases; they are not additional wearable slots.
+
+Keep the existing item IDs, saved outfit fields, ownership rules, prices, equipment selection, movement and collision logic. The integration should change how those existing IDs are rendered. It should not rename items, migrate ownership, resize collision bodies to match garment bounds or add accessory slots.
+
+One shared frame for the whole character
+
+Choose the canonical frame once, then use that same frame ID for the base, body, headwear, accessory and any matching foreground pieces. Never advance clothing independently from the character. Do not reuse a ground-pose garment on a riding frame through the old clothFrame fallback.
+
+The 19 shared IDs and their actual cycle order are:
+- Idle: u_idle0, u_idle1
+- Run: u_run0, u_run1, u_run2, u_run3, u_run4, u_run5
+- Happy: u_happy0, u_happy1, u_happy2
+- Bike: bike0, bike1, bike2, bike3
+- Skateboard: skateboard0, skateboard1, skateboard2, skateboard3
+
+Each sequence repeats from its last entry to its first. Happy is 0,1,2,repeat; do not insert a reverse 1 step. Preview timing is illustrative. Retain the game's intended timing while selecting the correct ordered frames.
+
+The inspected ride renderer currently derives a ride index from the last digit of a six-frame u_run ID, then applies modulo four. A repeating six-frame walk sequence therefore maps to ride indices 0,1,2,3,0,1 before restarting. In the later integration, decouple the four-frame riding index from the six-frame run index. Select bike0-3 or skateboard0-3 from the riding animation clock, then use that exact ride frame throughout the layer stack. This package does not apply that runtime fix.
+
+Canvas and pivot registration
+
+Every standalone runtime layer is registered on an untrimmed 512 by 512 stage. Draw it at stage origin (0,0), not at its visible-content rectangle.
+
+Ground frames use a 192 by 192 logical canvas, scale 2 into the stage, and stage origin (64,64). A logical point (x,y) therefore maps to stage point (64+2x,64+2y). The ground stage foot pivot is (256,433), corresponding to logical pivot (96,184.5).
+
+Riding stages use the supplied per-frame registration. Their logical canvas is 192 by 256, with scale 2 and stage origin (64,0). Their pivots are measured per frame and differ between frames. Read them from the manifest or base registration; do not substitute the ground foot pivot or one fixed riding pivot.
+
+Apply translation, facing, display scale, rotation, bobbing and group opacity to the completed character group. Conceptually: move to the world anchor, apply the group transform, move by the negative recorded stage pivot, then draw every registered layer in that local stage space. Mirror the whole group around the same pivot. Do not mirror a garment alone or centre each trimmed piece separately.
+
+Atlas entries and standalone masters
+
+The trimmed atlases are storage representations of the full-stage layers. For each entry, use its recorded atlas content rectangle and trim offset. The rectangle identifies which atlas pixels belong to the piece. The trim offset identifies where those pixels belong on the original 512 stage.
+
+To reconstruct a layer, start with a transparent 512 by 512 RGBA canvas and copy the atlas content rectangle at the recorded trim offset, without resampling. Its decoded RGBA bytes must match the standalone master exactly. That includes RGB bytes in fully transparent pixels; visual equality alone is insufficient.
+
+For direct rendering, place the atlas content at that same trim offset within the shared stage transform. Keep its native pixel width and height before the group scale. Do not stretch an atlas rectangle into the whole stage or a guessed body box.
+
+Atlas guard pixels and packing gutters are not visible artwork. Honor the entry's recorded content rectangle and guard metadata; do not draw padding as part of the sprite. Use nearest-neighbor sampling for pixel-exact inspection. If the final renderer uses interpolation, test it at the actual game scales with the provided guards and consistent alpha handling. Clamp texture addressing and constrain sampling to the sprite's content and guards. Clamping only the outer atlas edge does not prevent bleeding from a neighbouring sprite. Do not enable mipmaps or change the padding policy without checking sprite edges at the intended scales.
+
+Use a consistent source-over alpha convention. Verify PNG reconstruction before any GPU upload or premultiplication conversion. Do not recolor, quantize, threshold alpha or resample masters during import.
+
+The approved trial PNG files are also byte-frozen. A reconstructed image can match their decoded RGBA while having a different PNG encoding. Keep the supplied frozen standalone files unchanged when checking their file-level hashes.
+
+Layer order and occlusion
+
+Follow the frame's explicit layer list. The shared ordering is:
+1. Rear wearable pieces, such as cape backs or rear eyewear branches
+2. Canonical base, including its vehicle when using a riding frame
+3. Body garment layers
+4. Body-scoped original foreground pieces required by that body fit
+5. Pre-clipped accessory near layers
+6. Headwear layers
+7. Headwear-scoped original horn and ear foreground pieces
+
+A foreground piece is valid only for its recorded item, frame and depth. Do not apply a generic face polygon or old oval sleeve patches on top of the new fitted layers. Do not redraw a vehicle separately over a canonical riding base that already includes it.
+
+Most importantly, accessory occlusion must reveal the already-dressed underlying stack. It must not paste naked canonical torso or foreleg pixels over a shirt or coat.
+
+All 76 scarf, gold-scarf, satchel and moon-bag pose records use combination-safe near PNGs with their hidden pixels already transparent. Draw those manifest-referenced PNGs normally. Their binary occlusion masks and source_foreground_reference files are retained for authoring and audit; the reference images are not runtime draws. If rebuilding from an unoccluded source, apply its mask to the accessory alone, or restore the masked area from a snapshot of the already-dressed pre-accessory composite. Never substitute the naked base for that snapshot.
+
+The visible bag strap remains connected to the bag. The return branch hidden behind the wearer is omitted from the visible runtime piece. This is recorded in its provenance. Eyewear uses genuine transparent openings so the original eyes remain visible.
+
+Slots and combinations
+
+Equip at most one head item, one body item and one accessory item, as in the existing catalogue. Beads, scarves, glasses, masks and bags all share the accessory slot. This package does not add support for equipping several accessories together.
+
+Single-item coverage and combination QA are different checks. The full single-case grid is 23 wearables by 19 poses by two facings, or 874 cases. The release QA summary records the executed checks and their results. Combination visual QA is separately documented and non-exhaustive; it does not establish that every possible head/body/accessory combination has been visually reviewed.
+
+The accessory composition correction was checked on all 19 poses for tee plus satchel, tee plus gold scarf, and raincoat plus moon bag. In those 57 cases, clipped accessory regions revealed the pre-accessory dressed RGBA exactly. This verifies that occlusion behavior, not every aspect of body-garment fit or live gameplay.
+
+Integration acceptance checklist
+
+Before accepting the later game change:
+- Verify the pinned base and frozen-trial hashes before import
+- Reconstruct every atlas entry to its 512 stage and compare decoded RGBA with its master
+- Load records by unchanged item ID and the character's shared frame ID
+- Check idle, all six run frames, all three happy frames and both four-frame riding cycles
+- Check both facings at actual game scales, including movement, pivots, clipping and texture edges
+- Check cuffs, mane, horn, eyes, bag straps, forelegs, handlebars and vehicle occlusion
+- Test representative cross-slot combinations separately from single-item tests
+- Confirm existing saves, ownership, prices, equipment behavior and collisions remain unchanged
+- Treat runtime performance and live-game acceptance as integration tests, not as results implied by these asset previews
+
+How the artwork was made
+
+Image generation was used to draw wearable derivatives, make fitted reference images and extract visible fabric where useful. It did not by itself guarantee correct canvas registration, transparent openings or consistent fit across animation frames. The finished work also required measured registration, uniform transforms, source-grounded occlusion and pixel/visual QA.
+
+Generated dressed-character images were intermediate fitting references only. Runtime bases are the unchanged canonical characters and vehicles, with separate wearable layers. No generated character redraw is substituted for a base.
+
+Source basis
+
+Pinned source/catalogue.js, source/art.js and source/wardrobe/SPRITES.json; base/registration.json and base/frame_order.json; the approved-trial manifest; the release master manifest, checksums and QA reports. The release manifest governs final file paths and atlas field names.
