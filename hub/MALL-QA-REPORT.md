@@ -95,3 +95,12 @@ The earlier two-door QA report, manifest and original screenshots are retained a
 ## Full fitted wardrobe integration — 2026-10-06
 
 The production wardrobe replaces the earlier generic garment placement. All 23 wearables have records for all 19 poses. See [WARDROBE-INTEGRATION.md](./WARDROBE-INTEGRATION.md) and `tests/wardrobe-production/evidence/` for exact atlas/base preservation, 1,216 independent composition comparisons, connected walking/carrying/celebrations, save recovery, legacy origins, WebKit and release checks. The earlier face-pixel results did not establish natural anatomical fit. Physical-phone and child review remain pending.
+
+
+## 2026-10-06: simpler shopping and quick switching
+
+Removed the intermediate shopping street and fitting-room scene. The neighbourhood enters the mall directly; the boutique mirror opens its wardrobe directly; the mall camera opens the photo booth directly. Old saved scene names map safely to their remaining parent scenes.
+
+Owned clothing tiles wear immediately; unpaid items remain free previews, cleared when the panel closes. Removal saves immediately. Backpack categories share one row and show the current fitted unicorn. Removed hearts from clothing/equipment switching. Purchases, native saves, wardrobe artwork, bridges and economy remain intact.
+
+Isolated Chrome checks passed for direct entries, one-tap equip/removal, unpaid preview isolation, photos and outfit reload, 852x393 and 568x320 touch targets. Picture-menu, bowling and native restaurant toolbar checks passed; release-browser checks passed for both games, earnings, purchases, reload, portrait suspension and old cached café save preservation. Physical phone/child review remains pending.

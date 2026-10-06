@@ -1,6 +1,6 @@
 {
   "date": "2026-10-06",
-  "status": "Full fitted wardrobe integration; browser and source checks passed; physical-device and child review pending",
+  "status": "Simplified shopping and one-tap backpack; local browser checks passed; physical-device review pending",
   "files": {
     ".gitattributes": {
       "bytes": 265,
@@ -55,8 +55,8 @@
       "sha256": "ba30a5d364b00f3343071463ce085bb0cfd02460ca4dd7d8293702acc236ce60"
     },
     "hub/MALL-QA-REPORT.md": {
-      "bytes": 17086,
-      "sha256": "06d38e79d2582aa4d8f90d16bec1baac5e5206718c5c82a2f2476aceb4ca2c24"
+      "bytes": 18154,
+      "sha256": "e7d30844d3b29abc1bfcb818154e3ae29c59796c701ec3e09f70c153a2bd892a"
     },
     "hub/README.md": {
       "bytes": 11660,
@@ -1935,8 +1935,8 @@
       "sha256": "d345abcf107f61f1716443c3fa21dccd670232e96d050d7a8271cdd997d7babf"
     },
     "hub/mall.js": {
-      "bytes": 31813,
-      "sha256": "700ebe84baa29f647af935fbc31eff8157c65d8e85deb4f39dcb94947e46086f"
+      "bytes": 31949,
+      "sha256": "9d71f73291080cc320702166bc1533ac2061911c9758cab9541c928cd489b738"
     },
     "hub/picture-menus.css": {
       "bytes": 11168,
@@ -2791,12 +2791,12 @@
       "sha256": "7cf26a55bc285ebdef5ba60bce0a082178aa3adbdb43b84d49b8be901ee322dd"
     },
     "hub/tests/mall/navigation.cjs": {
-      "bytes": 14371,
-      "sha256": "bdb9dbfe5f82f03b387064449cf0c5e3296949c2ae65c3fb506c9865dbb942d8"
+      "bytes": 14298,
+      "sha256": "32290764ba66e7ce50f48a944a3253b71e34d71cd65aa84b96c0e9035d14ec5c"
     },
     "hub/tests/mall/picture-menus.cjs": {
-      "bytes": 14118,
-      "sha256": "843c3598cd025831935139b2e5101d2ee1ccaf83f7665bf059b16506ed8b091d"
+      "bytes": 14131,
+      "sha256": "fa2af25338fbf6454ead0f394138cd78a326eb0be3a70aa96eebd79a18776a4b"
     },
     "hub/tests/mall/profile.cjs": {
       "bytes": 3580,
@@ -3219,8 +3219,8 @@
       "sha256": "07526647d565670988fe31c6265ef24f4bb4a8cae46733a091220bbe4ccde42e"
     },
     "hub/world.js": {
-      "bytes": 18470,
-      "sha256": "17eb806a976e52b40c52d9d71cfacc9383382719df22c2ebe82dfed92ab323d3"
+      "bytes": 18127,
+      "sha256": "4ba9e54822a6df83e67ac8707943b3aa6ebd9a621ca512b71bf97dee895cd5a7"
     },
     "hub_preview.py": {
       "bytes": 2286,
@@ -3237,6 +3237,10 @@
     "rebuild.py": {
       "bytes": 457,
       "sha256": "36709478f93bbe15983b1734f4a91074c90d92979cde2ef3257f91550a327038"
+    },
+    "hub/tests/quick-switch.cjs": {
+      "bytes": 3488,
+      "sha256": "09cc455dca8f3df0df046975f771187076d802bd54bc311c49233bcb05a8a153"
     }
   }
 }
