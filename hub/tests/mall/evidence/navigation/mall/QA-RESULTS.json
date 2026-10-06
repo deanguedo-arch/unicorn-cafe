@@ -1,0 +1,80 @@
+{
+  "results": [
+    {
+      "name": "Existing café earnings credit exactly once through actual bridge",
+      "pass": true
+    },
+    {
+      "name": "Game reentry does not repeat the old-coin credit",
+      "pass": true
+    },
+    {
+      "name": "Buy and equip; unaffordable clothes can be tried on and do not escape fitting room",
+      "pass": true
+    },
+    {
+      "name": "Real café payment hook adds one shared coin",
+      "pass": true
+    },
+    {
+      "name": "Adventure win pays three; duplicate completion does not pay twice",
+      "pass": true
+    },
+    {
+      "name": "Legitimate replay completion pays again",
+      "pass": true
+    },
+    {
+      "name": "Duplicate earned messages and concurrent purchases are charged/credited once",
+      "pass": true
+    },
+    {
+      "name": "Three-slot wardrobe and outfit photo album save actual rendered clothes",
+      "pass": true
+    },
+    {
+      "name": "All six themed shelves contain 48 distinct illustrated puzzles",
+      "pass": true
+    },
+    {
+      "name": "Real puzzle drag/snapping, reload resume without charge, one refund and stamp on completion",
+      "pass": true
+    },
+    {
+      "name": "4-, 9-, and 16-piece puzzle saves are independent",
+      "pass": true
+    },
+    {
+      "name": "Playable three-throw bowling round awards score-based coins",
+      "pass": true
+    },
+    {
+      "name": "Star Catcher freezes in portrait and applies fifteen-star reward",
+      "pass": true
+    },
+    {
+      "name": "Free equipment trial, permanent bike purchase, outdoor movement boost, indoor ownership retained",
+      "pass": true
+    },
+    {
+      "name": "Café reset retains world possessions and does not repeat import",
+      "pass": true
+    },
+    {
+      "name": "Four landscape layouts keep boutique, outfit cards and 44px controls accessible",
+      "pass": true
+    },
+    {
+      "name": "No runtime exceptions or failed asset requests",
+      "pass": true
+    },
+    {
+      "name": "Unavailable saving does not deduct money or grant an item",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "failed": [],
+  "physicalDevice": false,
+  "childReview": false
+}

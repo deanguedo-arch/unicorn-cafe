@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-05",
+  "suites": [
+    {
+      "suite": "adventure/QA-RESULTS.json",
+      "checks": 23,
+      "pass": true
+    },
+    {
+      "suite": "appearance/QA-RESULTS.json",
+      "checks": 8,
+      "pass": true
+    },
+    {
+      "suite": "compatibility/QA-RESULTS.json",
+      "checks": 2,
+      "pass": true
+    },
+    {
+      "suite": "hub/QA-RESULTS.json",
+      "checks": 17,
+      "pass": true
+    },
+    {
+      "suite": "mall/QA-RESULTS.json",
+      "checks": 18,
+      "pass": true
+    },
+    {
+      "suite": "mobile/QA-RESULTS.json",
+      "checks": 8,
+      "pass": true
+    },
+    {
+      "suite": "profile.log",
+      "checks": 6,
+      "pass": true
+    },
+    {
+      "suite": "mall/engine-results.json",
+      "checks": 30,
+      "pass": true
+    }
+  ],
+  "namedChecks": 112,
+  "syntax": true,
+  "pythonParsing": true,
+  "diffWhitespace": true,
+  "provenanceHashes": true,
+  "physicalDevice": false,
+  "childReview": false,
+  "published": false
+}

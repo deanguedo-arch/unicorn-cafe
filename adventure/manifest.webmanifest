@@ -1,0 +1,25 @@
+{
+  "name": "Sneaky Unicorn v15 \u2014 Family Treasure Team",
+  "short_name": "Sneaky Unicorn",
+  "description": "Baby unicorns expand carry capacity, Rainbow Blast remembers the last movement direction, and regular opponents stay jailed until the whole patrol is captured and released together.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#21182f",
+  "theme_color": "#231936",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

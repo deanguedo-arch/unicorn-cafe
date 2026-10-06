@@ -1,0 +1,62 @@
+{
+  "route": "built-in image_gen, reference village-concept.png",
+  "assets": {
+    "street": {
+      "path": "hub/assets/mall/street.png",
+      "source": "/Users/deanguedo/.codex/generated_images/01a10d6c-522f-7633-aa66-aa09084e1004/exec-9900f5f0-5c9c-4b9b-b636-cce6f891c4b6.png",
+      "sha256": "7652a957ac302f413f980fdbb9d57b51676f077b745dcc3ef0803778f0d85ee7",
+      "size": [
+        1536,
+        1024
+      ]
+    },
+    "mall": {
+      "path": "hub/assets/mall/mall.png",
+      "source": "/Users/deanguedo/.codex/generated_images/01a10d6c-522f-7633-aa66-aa09084e1004/exec-bac2d505-33ad-4cb0-af08-8cc956295f36.png",
+      "sha256": "d17e2f7665c5442f1c1c63038dbbe06146ed6b33787a68f2c3f84b292db934d8",
+      "size": [
+        1536,
+        1024
+      ]
+    },
+    "boutique": {
+      "path": "hub/assets/mall/boutique.png",
+      "source": "/Users/deanguedo/.codex/generated_images/01a10d6c-522f-7633-aa66-aa09084e1004/exec-52fcc354-dcf5-4adf-94ff-f4f3e63b9b6b.png",
+      "sha256": "591cb21ef767bbd4f7bf8308258be1ba1842aa00acd9f421a22fe9e9792be7d3",
+      "size": [
+        1536,
+        1024
+      ]
+    },
+    "wheels": {
+      "path": "hub/assets/mall/wheels.png",
+      "source": "/Users/deanguedo/.codex/generated_images/01a10d6c-522f-7633-aa66-aa09084e1004/exec-3ec1f34f-5708-474a-8e08-3489dffa6d7d.png",
+      "sha256": "4eb5ac6b6654f97b396a5d314adb57e7cc68054c78777139c79b742dc7d3fe81",
+      "size": [
+        1536,
+        1024
+      ]
+    },
+    "arcade": {
+      "path": "hub/assets/mall/arcade.png",
+      "source": "/Users/deanguedo/.codex/generated_images/01a10d6c-522f-7633-aa66-aa09084e1004/exec-f397e175-180b-4c9e-8c52-e35c3b964dad.png",
+      "sha256": "3ab2176c1ac431c2ecc1959012f56b054df65a21b011b52dfb9ffac6e9142b8d",
+      "size": [
+        1536,
+        1024
+      ]
+    },
+    "photo": {
+      "path": "hub/assets/mall/photo.png",
+      "source": "/Users/deanguedo/.codex/generated_images/01a10d6c-522f-7633-aa66-aa09084e1004/exec-6a696bbb-c675-4718-916e-de2fb29c1460.png",
+      "sha256": "2d5d5c75bb4c2b2bc356d493504fba8bd549a4adaff6dd19c4a250d8109bcf92",
+      "size": [
+        1536,
+        1024
+      ]
+    }
+  },
+  "style_reference": "hub/assets/village-concept.png (unchanged)",
+  "prompt_file": "hub/assets/mall/PROMPTS.json",
+  "status": "new implementation artwork; awaiting child/device review"
+}

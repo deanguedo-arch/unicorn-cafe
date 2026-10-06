@@ -1,0 +1,16 @@
+{
+  "id": "./index.html",
+  "name": "Unicorn World",
+  "short_name": "Unicorn World",
+  "description": "Explore, cook, shop, dress up and play in one connected unicorn world.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#503b64",
+  "theme_color": "#503b64",
+  "icons": [
+    {"src": "game/build/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "game/build/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"}
+  ]
+}

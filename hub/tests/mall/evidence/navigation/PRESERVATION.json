@@ -1,0 +1,13 @@
+{
+  "game/build/src/engine.js": "78ec939c30e342b5504263d4a45f91d8df51c96dc2390fe42c08d609b7276258",
+  "hub/assets/village-concept.png": "1b60048baaf89114c4e312e3cf8ff25a6aa727db083e761b3e6158967466b934",
+  "canonicalPoseFilesUnchanged": 11,
+  "adventureDataAndAppendedArtUnchanged": true,
+  "completeLevelDefinitionsUnchanged": true,
+  "nativeSchemaUnchanged": true,
+  "nativeKeys": [
+    "sneaky-unicorn-restaurant-v1-4",
+    "sneaky-unicorn-midnight-v15"
+  ],
+  "allSixSceneIllustrationsUnchanged": true
+}

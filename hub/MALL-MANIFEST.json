@@ -1,0 +1,1518 @@
+{
+  "date": "2026-10-05",
+  "status": "GitHub Pages replacement release authorized; browser checks passed; physical-device and child review pending",
+  "files": {
+    ".github/workflows/pages.yml": {
+      "bytes": 941,
+      "sha256": "e4c143c3d4094212e65d767d15945498139a4914dfdabd197370bcf7cd63e0a9"
+    },
+    ".gitignore": {
+      "bytes": 164,
+      "sha256": "eca75af5a7ad94eed0f1ca4e2ef8e2754ac1504a89d3138bd3af998a5414d9e0"
+    },
+    "PROJECT-RULES.md": {
+      "bytes": 5002,
+      "sha256": "ca2265019ab8bb40352637fc5642289a06e3118095a9af9dc0267a07d2c5ee8a"
+    },
+    "Play-World.command": {
+      "bytes": 48,
+      "sha256": "604e1bfc601b59a99f2329c17da77c1e3786d0348ac2edb4d830daf3f0050ce8"
+    },
+    "README.md": {
+      "bytes": 3427,
+      "sha256": "0a4de72d305c1926c378d4192547bd2e8a160db236d6194ee3c217c11cfb5e55"
+    },
+    "UNICORN-WORLD-VISION.md": {
+      "bytes": 1969,
+      "sha256": "68d77beb9df3cbb3c5958984e69610d360de91cffb1b8b797636e74f03b913e4"
+    },
+    "adventure/index.html": {
+      "bytes": 18553614,
+      "sha256": "9f86a131ce5cf6df39d751ae5baa908d3311b9935ac2b372439a2a61986bc78e"
+    },
+    "build_world.py": {
+      "bytes": 3403,
+      "sha256": "87a3a80c520dfd88954f0e059109d6771d260181368cd93ec78426ab56f5caf3"
+    },
+    "game/build/src/engine.js": {
+      "bytes": 29996,
+      "sha256": "78ec939c30e342b5504263d4a45f91d8df51c96dc2390fe42c08d609b7276258"
+    },
+    "game/build/src/game.js": {
+      "bytes": 90317,
+      "sha256": "84856a844c6d80a3512f090aa0c3e517d615d4fea6e143286b46436d0117c0ca"
+    },
+    "game/build/styles.css": {
+      "bytes": 70991,
+      "sha256": "cb6b45c2268bce36d8cafbe05c7d479d88d5779e1b098bc1f565d68288bb4933"
+    },
+    "hub/MALL-QA-REPORT.md": {
+      "bytes": 16516,
+      "sha256": "1e72dc095f872709bc0d3c5ef0c71cfe8e54c41ae2d92564ec256e55c490f5bb"
+    },
+    "hub/README.md": {
+      "bytes": 11307,
+      "sha256": "36cd3b4e066911a7a0914b54bb2dfa77f69609888b21e6ebceb06ded28f81822"
+    },
+    "hub/assets/controls/PROMPTS.json": {
+      "bytes": 3918,
+      "sha256": "7daeee6c0b221522ee2ae64a51f2580209c3031372aebe9e249d554120663b18"
+    },
+    "hub/assets/controls/PROVENANCE.json": {
+      "bytes": 660,
+      "sha256": "897072759c4c3dbd1b87aac1d77e5d8dafc2c9fcbb44858aca70b819603cc70c"
+    },
+    "hub/assets/controls/icons/album.png": {
+      "bytes": 66984,
+      "sha256": "436fdf7ed348b99931ff0984a3bde979e1b4b4539a6b91ee476befc55c568801"
+    },
+    "hub/assets/controls/icons/arrow.png": {
+      "bytes": 34950,
+      "sha256": "5c98368f586b2ebfa39e103b222df5b3c8db8b5d1cf7aa892021c4c921a52caa"
+    },
+    "hub/assets/controls/icons/back.png": {
+      "bytes": 35301,
+      "sha256": "126f27c1d41d1b8bc6cb3d2fc3efa1a5c5466d6daf56995eff6a8744973d1dde"
+    },
+    "hub/assets/controls/icons/bag.png": {
+      "bytes": 66191,
+      "sha256": "1ad4072b1527bdb8d966cfa8e5dafc7d3c9c5b53e952924bd18305c70158a309"
+    },
+    "hub/assets/controls/icons/ball.png": {
+      "bytes": 49062,
+      "sha256": "982d01cb903ecf9781a5e0dc8c545cccaab97cf9660ace2f3f2188c9787ec49c"
+    },
+    "hub/assets/controls/icons/basket.png": {
+      "bytes": 62286,
+      "sha256": "321868cee9c40b9e0f4a7d91ebb542f3c84ec7a4691d708875affb4bd8113e13"
+    },
+    "hub/assets/controls/icons/buy.png": {
+      "bytes": 62716,
+      "sha256": "887dead9bcced600143381f6e0f391dc81ab03eeb9378f375e4d26a1225544fd"
+    },
+    "hub/assets/controls/icons/camera.png": {
+      "bytes": 66458,
+      "sha256": "d582c92b09661cce0cf55905cc1eb5c6f2fc060bc84dc07274ba6a373927d790"
+    },
+    "hub/assets/controls/icons/check.png": {
+      "bytes": 40205,
+      "sha256": "c38bd237d76becfc255700fe1100b84fe9865a4482891f99c6bdf146c3ddcf9c"
+    },
+    "hub/assets/controls/icons/chef.png": {
+      "bytes": 51765,
+      "sha256": "bd6e39924205006a34d53909cd46050d12ba36d0e1583d2935f72e1f8035f307"
+    },
+    "hub/assets/controls/icons/close.png": {
+      "bytes": 47439,
+      "sha256": "03d6268242007ac3ec05ca47c1aaece5a291ccddbab59649860f4c9fe711e3ed"
+    },
+    "hub/assets/controls/icons/coin.png": {
+      "bytes": 53238,
+      "sha256": "f2db62a4c88e47e3e03dfc5622ee9cea36a9f50b95a388b48b7c19bbe5070d1d"
+    },
+    "hub/assets/controls/icons/diamond.png": {
+      "bytes": 48084,
+      "sha256": "c5d0884c9751dfcf28622f683b9aacaede867f0b019fdcccb602369efbfbdb5a"
+    },
+    "hub/assets/controls/icons/door.png": {
+      "bytes": 57288,
+      "sha256": "18b6e914fbb7002d0fe87e3d9f7f7fa4b84c24d715fa7bea0a0b23c7f4154d4e"
+    },
+    "hub/assets/controls/icons/flower.png": {
+      "bytes": 53332,
+      "sha256": "e58fa84558cf13cb18d4511b308ba231ce99c6f5c6a8c929853f48393b4eb94f"
+    },
+    "hub/assets/controls/icons/grid16.png": {
+      "bytes": 54716,
+      "sha256": "539515aa30a9e84008ab202c971465e70b281689b087bd807d5977a88a9c16d1"
+    },
+    "hub/assets/controls/icons/grid4.png": {
+      "bytes": 42568,
+      "sha256": "8e1e4f37cbcaaee753f9938dec589e3f0ef8153479bb570226e236b6984f383a"
+    },
+    "hub/assets/controls/icons/grid9.png": {
+      "bytes": 53511,
+      "sha256": "58a6bdd131de4be58b2c04be212e320d919f6eb8367fe17a4ef687254be74434"
+    },
+    "hub/assets/controls/icons/hand.png": {
+      "bytes": 39721,
+      "sha256": "ecf3e2cdd60756e74ed2bf35c9613acec1e5051f1a17985d7b1af9f9db81090a"
+    },
+    "hub/assets/controls/icons/hanger.png": {
+      "bytes": 40678,
+      "sha256": "c2f302b32d0c646772aaeaa4cba2afd9ec484cb341f017d0def316e3ff9f6a2b"
+    },
+    "hub/assets/controls/icons/heart.png": {
+      "bytes": 43155,
+      "sha256": "61788c6934477c2266a8eb697d1f8ca33086dfb02f73c32ab22c376afc2aefa9"
+    },
+    "hub/assets/controls/icons/home.png": {
+      "bytes": 79538,
+      "sha256": "f66e5883cb7fdd2523cde642e830d52c9af5361313da246b4d0570ee895f8c4d"
+    },
+    "hub/assets/controls/icons/mirror.png": {
+      "bytes": 60156,
+      "sha256": "b780b9998ea25d33705a6d77f19a37aad7f94a67a9be239cc8010eae4c8e9327"
+    },
+    "hub/assets/controls/icons/moon.png": {
+      "bytes": 41351,
+      "sha256": "068c0c16be72716ba5f3231704b1a5875ec7007a0d69b1f4351ec141edaf7c8d"
+    },
+    "hub/assets/controls/icons/mute.png": {
+      "bytes": 43760,
+      "sha256": "41a719c2e262f5a7655a2cc9d397736a19606bca621fd56c1c5e14a876aec49f"
+    },
+    "hub/assets/controls/icons/outfits.png": {
+      "bytes": 59151,
+      "sha256": "617578a2f0bc975ad9df5bb3f2f238669e9fb9062acf0388d22aeecee0d3ca15"
+    },
+    "hub/assets/controls/icons/pause.png": {
+      "bytes": 29449,
+      "sha256": "8c33e660d6af9d75c2515ea2dd44058106850b1b809ab3dd5d9474bdfc3093ff"
+    },
+    "hub/assets/controls/icons/pins.png": {
+      "bytes": 51618,
+      "sha256": "b04fd321d06810d31047301623e84b012777828631310ab2c1dc82caad53bc18"
+    },
+    "hub/assets/controls/icons/play.png": {
+      "bytes": 37544,
+      "sha256": "9edc6b8bc7b21b03e5654fcf0b5bebf95454de6c179eeac8682a59c7a13b8b34"
+    },
+    "hub/assets/controls/icons/puzzle.png": {
+      "bytes": 59852,
+      "sha256": "0cb3ff5a8e2042f0781356062c6d1637e41cbc978db8634d6a04d200d8fe8701"
+    },
+    "hub/assets/controls/icons/retry.png": {
+      "bytes": 44263,
+      "sha256": "e55f7206aaccc0cf0767d6df170ee6f216dbac03b5d45a4043f4249959ac8a21"
+    },
+    "hub/assets/controls/icons/rotate.png": {
+      "bytes": 49636,
+      "sha256": "c6341e18fd009638c544cfb1a73d29af0edf7d138a431cab8aeac55592fe6599"
+    },
+    "hub/assets/controls/icons/save.png": {
+      "bytes": 62255,
+      "sha256": "7c3f8b9088213f1382527df21a802aa6b9ab7cb9db8010d451066cde16aebbc2"
+    },
+    "hub/assets/controls/icons/settings.png": {
+      "bytes": 48652,
+      "sha256": "529161b02c99f2762ee38afea2d90b5ef9d429956859d24b51c1ebe8bf423345"
+    },
+    "hub/assets/controls/icons/sound.png": {
+      "bytes": 46685,
+      "sha256": "14f631335518abb6f356fbcb43c213c5d030a5a844e0395b30c97a15a5d2e4ee"
+    },
+    "hub/assets/controls/icons/star.png": {
+      "bytes": 46357,
+      "sha256": "38771942bfc9fe31c990d0d6eba187accdaaa5c9c6bd5981e10fc611a771645a"
+    },
+    "hub/assets/controls/props/bowling-pin.png": {
+      "bytes": 516712,
+      "sha256": "1896bb8ecc1e07aa507a7343613c1457cd3a97e048bf56a927d9492f3d406d66"
+    },
+    "hub/assets/controls/props/catching-basket.png": {
+      "bytes": 1128422,
+      "sha256": "fb4bad240192d950e93f0693823545ea2b9b02f96f3fff789469b23e7d862fff"
+    },
+    "hub/assets/controls/source/bowling-lane-v2.png": {
+      "bytes": 2223879,
+      "sha256": "8aa2a73121f1a927c63b9c64efe8e0afb53edc42dfe4320fab24703cadd73ebe"
+    },
+    "hub/assets/controls/source/bowling-pin-v2.png": {
+      "bytes": 558996,
+      "sha256": "0b724101377f8687bb1adda65c4ee29d872a9967d794154487faef5448fb56b8"
+    },
+    "hub/assets/controls/source/catching-basket-v2.png": {
+      "bytes": 1127569,
+      "sha256": "05d44edf8ec3cc6027c6c2c76c4d2b56f951dc9f103b0dd99354d449f157f14f"
+    },
+    "hub/assets/controls/source/controls-v2.png": {
+      "bytes": 1846278,
+      "sha256": "e97e12fcad845e682da47c8793add9a80e89af55c240c5fede6bfbe72f80e1e5"
+    },
+    "hub/assets/mall/PROMPTS.json": {
+      "bytes": 2823,
+      "sha256": "92fccc7480e9026934251a80354050260b41225cbef301dc912d3b5e3b0ffe6e"
+    },
+    "hub/assets/mall/PROVENANCE.json": {
+      "bytes": 2341,
+      "sha256": "70d1afa5228e7da5eb192cc07ea1492f5e3fc090fb61f5ae309679586a7977be"
+    },
+    "hub/assets/mall/arcade.png": {
+      "bytes": 2426035,
+      "sha256": "3ab2176c1ac431c2ecc1959012f56b054df65a21b011b52dfb9ffac6e9142b8d"
+    },
+    "hub/assets/mall/boutique.png": {
+      "bytes": 2224615,
+      "sha256": "591cb21ef767bbd4f7bf8308258be1ba1842aa00acd9f421a22fe9e9792be7d3"
+    },
+    "hub/assets/mall/mall.png": {
+      "bytes": 2268140,
+      "sha256": "d17e2f7665c5442f1c1c63038dbbe06146ed6b33787a68f2c3f84b292db934d8"
+    },
+    "hub/assets/mall/photo.png": {
+      "bytes": 2181103,
+      "sha256": "2d5d5c75bb4c2b2bc356d493504fba8bd549a4adaff6dd19c4a250d8109bcf92"
+    },
+    "hub/assets/mall/street.png": {
+      "bytes": 2609323,
+      "sha256": "7652a957ac302f413f980fdbb9d57b51676f077b745dcc3ef0803778f0d85ee7"
+    },
+    "hub/assets/mall/wheels.png": {
+      "bytes": 2447915,
+      "sha256": "4eb5ac6b6654f97b396a5d314adb57e7cc68054c78777139c79b742dc7d3fe81"
+    },
+    "hub/assets/navigation/PROMPTS.json": {
+      "bytes": 3574,
+      "sha256": "745bdcdcb95f9014b677f70c36d974e2122bb31034fecfbe1c5e6c4eda6779fd"
+    },
+    "hub/assets/navigation/PROVENANCE.json": {
+      "bytes": 2176,
+      "sha256": "4404f6f424160b2f8867f931e7e2808118c6a90aedc638cd05ca5390a2225d50"
+    },
+    "hub/assets/navigation/entrance-mat.png": {
+      "bytes": 434599,
+      "sha256": "a27cf4d61da00f0f8312893dbf5dd86fddbde579a092cae2076fb166cbeaa7fa"
+    },
+    "hub/assets/navigation/entrances-v1.png": {
+      "bytes": 1224704,
+      "sha256": "cecd82e98d92426866c583935ef2e7b9cc42a2166ff122d280ca7c21096b7e82"
+    },
+    "hub/assets/navigation/exit-mat.png": {
+      "bytes": 432606,
+      "sha256": "c4b07085c8dd54e5a2d3f57b53acd7987d1d6f6a3623f4f4bed88a0ad43a6db8"
+    },
+    "hub/assets/navigation/floor-cues-v2.png": {
+      "bytes": 461678,
+      "sha256": "8ceccec436a4da141252525e5e188785b5fb2687867eb31f0440fc5ac5423a29"
+    },
+    "hub/assets/navigation/floor-exit-arrow.png": {
+      "bytes": 169150,
+      "sha256": "d95e4d0bbb12b9630ea49499257012f48807f2cc705aa3b09aacc0edb3c70e50"
+    },
+    "hub/assets/navigation/floor-footprints.png": {
+      "bytes": 259818,
+      "sha256": "cf2460fd89f011123f1f1d61c8a69be43e81843edbbeda39165f1f47c9de79c1"
+    },
+    "hub/assets/navigation/picture-plaque.png": {
+      "bytes": 338034,
+      "sha256": "cfccac8e86cfe00d7f490183c46ea00da46437a92269755afd681e01ac512395"
+    },
+    "hub/assets/puzzles/PROVENANCE.json": {
+      "bytes": 4629,
+      "sha256": "d6ec9a64c65fdfc2eb6437d0bed5d416aebecaab54489205bf04bf5d6240e15c"
+    },
+    "hub/assets/puzzles/apple.webp": {
+      "bytes": 36812,
+      "sha256": "43d522b791fbfb76c1ad93d7efdaa89c90de2a33d23ba328ab81bbf1841296cd"
+    },
+    "hub/assets/puzzles/ball.webp": {
+      "bytes": 19146,
+      "sha256": "107b533bf29293164f9e59c521df26adc4fd0fd33c58b84fa426991c35c56ff8"
+    },
+    "hub/assets/puzzles/banana.webp": {
+      "bytes": 27882,
+      "sha256": "c7dc021ff3bb53cffef8619e3279379b16ac9da10d2ab90d301ed3d34abedaff"
+    },
+    "hub/assets/puzzles/book.webp": {
+      "bytes": 17532,
+      "sha256": "a8c11b49f96deb1062672784fc373e4e6c645b64e7f8f866b5719e56c04ca13e"
+    },
+    "hub/assets/puzzles/bread.webp": {
+      "bytes": 33644,
+      "sha256": "e5ef1a68591480854c0aa42333e33561c91b5e3d59b28e02e6cc783894aff54b"
+    },
+    "hub/assets/puzzles/cake.webp": {
+      "bytes": 21936,
+      "sha256": "15b05e16153188a005c0e0efddbaa9a152679f9f65e9b09f29010931aec84960"
+    },
+    "hub/assets/puzzles/cherries.webp": {
+      "bytes": 32164,
+      "sha256": "7c6f1df489ce50b07eacaedac578e4ed1b1e941e47ef2906fec0f943d5e45649"
+    },
+    "hub/assets/puzzles/cookie.webp": {
+      "bytes": 42192,
+      "sha256": "a38059c89aab9a158191745bedc6a13399ae3931d2dff57ea9e7e86de72b7bfb"
+    },
+    "hub/assets/puzzles/cupcake.webp": {
+      "bytes": 45628,
+      "sha256": "9b250155761a34cd86d8ec2e6ed79388819e0a3c7311fc277361d7bee759471e"
+    },
+    "hub/assets/puzzles/dog_happy.webp": {
+      "bytes": 38260,
+      "sha256": "1f1afe7233381ec5540e57fcf0c98a5fd01ffcd573bb0794b7592159e71516b0"
+    },
+    "hub/assets/puzzles/dog_idle.webp": {
+      "bytes": 40058,
+      "sha256": "96e69bddc2757ed3375b42fbdb9a8b270e18da191c75bf59f753796e3b22b993"
+    },
+    "hub/assets/puzzles/donut.webp": {
+      "bytes": 47530,
+      "sha256": "b8403d71b4b020cc909d0b615fa54f099792330a317a29ade0f0ec957453dabc"
+    },
+    "hub/assets/puzzles/easy_house.webp": {
+      "bytes": 330548,
+      "sha256": "2aa269c9383e519ff58a73977ef47bc55acaa9ff59f4d610857c7f3fd184eb36"
+    },
+    "hub/assets/puzzles/easy_market.webp": {
+      "bytes": 366402,
+      "sha256": "a9133cde4b75d123656604544c34224b996e4267079ee50b9a49bdec73d88569"
+    },
+    "hub/assets/puzzles/easy_restaurant.webp": {
+      "bytes": 127014,
+      "sha256": "f066ad40b1a58d8c1f0a066e53e8b5af42e90fbd7bb66f3652e44c9dff495e35"
+    },
+    "hub/assets/puzzles/easy_toys.webp": {
+      "bytes": 154448,
+      "sha256": "6ab3c2579a18d8a9f4d6d10c2def9b2887183ea3efadb598dbf9dbb828f835f0"
+    },
+    "hub/assets/puzzles/flowers.webp": {
+      "bytes": 21586,
+      "sha256": "03710810929ba04a822564cce3f1bf95f1a9327eaaac9250409093704bba575b"
+    },
+    "hub/assets/puzzles/grapes.webp": {
+      "bytes": 35352,
+      "sha256": "88fa2fa5b8dc9b500daeff7da077abb6899ad7782a4bbca4ad7e8ccd5303eda1"
+    },
+    "hub/assets/puzzles/house.webp": {
+      "bytes": 254488,
+      "sha256": "60ccfe3b0991f0ddeb8ef5da0163b4c9400e0540d711e4732a61f6d66259b1ec"
+    },
+    "hub/assets/puzzles/icecream.webp": {
+      "bytes": 30182,
+      "sha256": "e966468cf30d509f7fa6a9118e1bda2c1ed34163b73a0b9a111b5a7e87a703b5"
+    },
+    "hub/assets/puzzles/milkshake.webp": {
+      "bytes": 12838,
+      "sha256": "85c17578af63d7739c5597f72300caa22464cb3251a6817a38594c425ad827f2"
+    },
+    "hub/assets/puzzles/peach.webp": {
+      "bytes": 32698,
+      "sha256": "b7c8e1c1ff47ae037d329b3469f453ddc2e28ec7344b177b063064f287b92bc9"
+    },
+    "hub/assets/puzzles/picture.webp": {
+      "bytes": 7662,
+      "sha256": "24d858fff4673db9b65b06b41e77f74be8881c66b0d4f9dacabcf10c4cccbae2"
+    },
+    "hub/assets/puzzles/plant.webp": {
+      "bytes": 40064,
+      "sha256": "42f4f0176050b8608b7e79905f15b53ede0f097c40298fdf34ad907f525656d5"
+    },
+    "hub/assets/puzzles/robot.webp": {
+      "bytes": 14908,
+      "sha256": "256d1b934c934f89f07f662afcb3a6d0a535cbe1812085a75a430757945e7ab4"
+    },
+    "hub/assets/puzzles/store.webp": {
+      "bytes": 377592,
+      "sha256": "d8b5c2830fff86e408bb11774627539916e541f9f1e7e914069d083e690d45a4"
+    },
+    "hub/assets/puzzles/strawberry.webp": {
+      "bytes": 33996,
+      "sha256": "1cee29a7392674d479aad3640998ccabf73ac5924c012f06c2e7a9bd3ec95c5d"
+    },
+    "hub/assets/puzzles/teddy.webp": {
+      "bytes": 27268,
+      "sha256": "a59c899b2c92fe708dec123d4f074be933c396b1b513f815fff367fe01a164d8"
+    },
+    "hub/assets/puzzles/toyunicorn.webp": {
+      "bytes": 22696,
+      "sha256": "8559c1cfa6c3ccbcc192b1553c72d86f612a5f2652f135c0d015060251580ef5"
+    },
+    "hub/assets/village-concept.png": {
+      "bytes": 2575404,
+      "sha256": "1b60048baaf89114c4e312e3cf8ff25a6aa727db083e761b3e6158967466b934"
+    },
+    "hub/assets/wardrobe/BUILD.json": {
+      "bytes": 16945,
+      "sha256": "7115386efd7ec1a1f8b0e595642a573bbaf0af56522708a40ccd36945de66474"
+    },
+    "hub/assets/wardrobe/PROMPTS.json": {
+      "bytes": 21890,
+      "sha256": "57482604f8555c527c5d8a35569cf4d75fd6497804b885c069b2edaf3f6ac03c"
+    },
+    "hub/assets/wardrobe/PROVENANCE.json": {
+      "bytes": 4747,
+      "sha256": "19087fdedb1ff950141c3188494f1b386ffc722d568a5b261214c1b20cdca70f"
+    },
+    "hub/assets/wardrobe/SPRITES.json": {
+      "bytes": 36075,
+      "sha256": "185978bd93edc90c6f39104112e29487cf4b8ee672d20d9a8b3b98f9b6a0b7a8"
+    },
+    "hub/assets/wardrobe/catalogue-v2.png": {
+      "bytes": 1837462,
+      "sha256": "f22dc285a0d7314bb382219104dd1162a79c81fa5d48d0f06882863abcc87697"
+    },
+    "hub/assets/wardrobe/items/beads.png": {
+      "bytes": 46126,
+      "sha256": "e53af810b34510931e52fd666b9609eb05a8b36ad8cef98e4d645860016f87e9"
+    },
+    "hub/assets/wardrobe/items/bike.png": {
+      "bytes": 99989,
+      "sha256": "3ed0cee52dfaf6356d6ec418fe2b9d84f0d9e735ddf8b090f8d7f47d7904bc97"
+    },
+    "hub/assets/wardrobe/items/bow.png": {
+      "bytes": 59376,
+      "sha256": "05b0c99c65da6af5bf3dd247e8b2557cd4afe78805b012cb5dcf238cd033bfbc"
+    },
+    "hub/assets/wardrobe/items/flower-crown.png": {
+      "bytes": 75214,
+      "sha256": "b914b39d403da1c3e1da98824a2bfaa280991def2480d12dd79fad889de69b38"
+    },
+    "hub/assets/wardrobe/items/glasses.png": {
+      "bytes": 52520,
+      "sha256": "21bb6f92bf78a86cc6cbac2022801e7b42b20847a1d787ab6654bd58c9471841"
+    },
+    "hub/assets/wardrobe/items/helmet.png": {
+      "bytes": 77519,
+      "sha256": "72e864587fe8f4f229e9008d5dde17c3131340480a766f80e06d42a7a2e4d5c2"
+    },
+    "hub/assets/wardrobe/items/legacy-chef.png": {
+      "bytes": 67490,
+      "sha256": "45f1780ef956ffc0c922ca2ab6df9fb236c17b23036bbec50d1bf00bbdf6496a"
+    },
+    "hub/assets/wardrobe/items/legacy-hero.png": {
+      "bytes": 73851,
+      "sha256": "559926afb9cc659ff71f238490113ab615f54c5b1c32d22db6601cd47e1e3445"
+    },
+    "hub/assets/wardrobe/items/legacy-mask.png": {
+      "bytes": 53659,
+      "sha256": "2da9cbce2e15be0adae90fb4b9ab55acbbda3c8705f2cbc556916fb89c0195fa"
+    },
+    "hub/assets/wardrobe/items/legacy-princess.png": {
+      "bytes": 67453,
+      "sha256": "1522dd9d7aa2c542ac2646c69639aa312e40dcb689b067b14819cac39b8779ff"
+    },
+    "hub/assets/wardrobe/items/legacy-space.png": {
+      "bytes": 81442,
+      "sha256": "29853552301b392be7dded03a0ecf82280c278417257ae06cd4589547b63c785"
+    },
+    "hub/assets/wardrobe/items/prize-bubble-glasses.png": {
+      "bytes": 56307,
+      "sha256": "63e7bf9da2432e5142513cebb195fc181e4067ee53dbfd5e936403fbcb69eef4"
+    },
+    "hub/assets/wardrobe/items/prize-comet-helmet.png": {
+      "bytes": 83657,
+      "sha256": "fa5730ee2c322d36337dd0a09fc2cc0c17867ac18f77222a03754c46c251ecf9"
+    },
+    "hub/assets/wardrobe/items/prize-gold-scarf.png": {
+      "bytes": 78329,
+      "sha256": "1f959c6bc19fd4779ab92d2568616cd3b53f959998237d0bbc35eae01046722e"
+    },
+    "hub/assets/wardrobe/items/prize-moon-bag.png": {
+      "bytes": 71243,
+      "sha256": "4a1438ee2140f745319c984bb8e3f1592965c8dfa297560141c021ebb5b182dc"
+    },
+    "hub/assets/wardrobe/items/prize-rainbow-cape.png": {
+      "bytes": 86572,
+      "sha256": "6369f1213a0b098e143e0f1f77b66e1ca041ba905ee1bb19105d9e60fc1d6b88"
+    },
+    "hub/assets/wardrobe/items/prize-star-bow.png": {
+      "bytes": 70378,
+      "sha256": "3c3cca9b1fcfd17af6b4abf8b138ab1bb9ec4c34b74bd92bea9ce3fb4bb59f84"
+    },
+    "hub/assets/wardrobe/items/rainbow-dress.png": {
+      "bytes": 99102,
+      "sha256": "693c465fec93207cdff5a765f679203acb1631f51a216237e680df2a9731a295"
+    },
+    "hub/assets/wardrobe/items/raincoat.png": {
+      "bytes": 88479,
+      "sha256": "012571cb2a8ab82441a5871624ad5c02df23496223fc10029a9bf3d5ee8a1f38"
+    },
+    "hub/assets/wardrobe/items/satchel.png": {
+      "bytes": 69727,
+      "sha256": "38dde04d098b13abb59743e41a0533cea47e6bde94219f0dc8fc19b342837112"
+    },
+    "hub/assets/wardrobe/items/scarf.png": {
+      "bytes": 79628,
+      "sha256": "80453a8a68d79291fe0df1544169bb23fb3ee19c56fbdbf44c0bbc3fac801e17"
+    },
+    "hub/assets/wardrobe/items/skateboard.png": {
+      "bytes": 60232,
+      "sha256": "ba6754697af90d366c0808ff88fda78ae58b42d97419f7ddb20ba824ec060238"
+    },
+    "hub/assets/wardrobe/items/star-jacket.png": {
+      "bytes": 79295,
+      "sha256": "4790f6e24ab9176ce16a012b2a35170a1459df6c6e5973ea148ed4ca7ecb78dd"
+    },
+    "hub/assets/wardrobe/items/sunhat.png": {
+      "bytes": 67764,
+      "sha256": "c9faf61d48390247dfa347fc079eb5c4b699292ef189bda7d81d2d4f29d9af73"
+    },
+    "hub/assets/wardrobe/items/tee.png": {
+      "bytes": 78292,
+      "sha256": "eba683bd17f32e9049ffb21f3d2210b6a2ead09cbe13533557de396a8de0de08"
+    },
+    "hub/assets/wardrobe/legacy-hero-v2.png": {
+      "bytes": 714716,
+      "sha256": "172b4c81f67d89df5a47e42dcecaf2ec1ad89493196f5807da4fcc318dfc01ad"
+    },
+    "hub/assets/wardrobe/prize-rainbow-cape-v2.png": {
+      "bytes": 813139,
+      "sha256": "b48c4866f8a0c1ed9b73abc0a17cd2806dedc4d65807589f90e201c47ae49659"
+    },
+    "hub/assets/wardrobe/rainbow-dress-v2.png": {
+      "bytes": 1082238,
+      "sha256": "97ec32226c97f4c6302fb5afea8a373a26c00bba5f87f93dee85febe7ce8259c"
+    },
+    "hub/assets/wardrobe/raincoat-v2.png": {
+      "bytes": 957264,
+      "sha256": "09eff52f3dd812b1872f71ff5339870985176c3fe8fb22eed77290d947f75779"
+    },
+    "hub/assets/wardrobe/source/bike-riding-v2.png": {
+      "bytes": 1497159,
+      "sha256": "3a49afeb2f928b0825602ea7b2b19a41c02204e1bdfae547fa4a5fd3469ccc10"
+    },
+    "hub/assets/wardrobe/source/canonical-poses-reference.png": {
+      "bytes": 476394,
+      "sha256": "db5e56e6a9c27fb0342a36b1b3ac1324a982eeaf2f4bd407ca01c8f9f35703e2"
+    },
+    "hub/assets/wardrobe/source/clear-eyewear-v2.png": {
+      "bytes": 849201,
+      "sha256": "07b250adb1b8674d7895202efc95bd67c1a300fb1c6143296e058dd47aa4c1b4"
+    },
+    "hub/assets/wardrobe/source/skateboard-riding-v2.png": {
+      "bytes": 1124737,
+      "sha256": "7177e4ec5a6c7882d08e577003d26d2dc5aa9a197cefb2047bf569cf626d288d"
+    },
+    "hub/assets/wardrobe/star-jacket-v2.png": {
+      "bytes": 778153,
+      "sha256": "955aab268da2b7c1cceb00f60270b759bac993a473b6f23bff906127691434b1"
+    },
+    "hub/assets/wardrobe/tee-v2.png": {
+      "bytes": 520546,
+      "sha256": "a5958c2ced3a282631e3823d5918d26a5a8a0626314ffa75f5dd31c3161f754b"
+    },
+    "hub/assets/wardrobe/worn/glasses.png": {
+      "bytes": 183206,
+      "sha256": "ac11fbe58816a30fcdcead89dcfcee8c00966fe862860660fcd51e93932f3098"
+    },
+    "hub/assets/wardrobe/worn/legacy-mask.png": {
+      "bytes": 232944,
+      "sha256": "bdab3deb7e11076619ad0650c695b0f50d7c33beddf7923d28c9397e70b4e5a1"
+    },
+    "hub/assets/wardrobe/worn/legacy-space.png": {
+      "bytes": 233103,
+      "sha256": "9ffb651c53abd24238f05d84fce3477c2995218900a474be0a4441338bc17892"
+    },
+    "hub/assets/wardrobe/worn/prize-bubble-glasses.png": {
+      "bytes": 187637,
+      "sha256": "9139e8594d468a061e54ae6cefe703e758631588afa86dbe44bd28348b560c75"
+    },
+    "hub/index.html": {
+      "bytes": 2967,
+      "sha256": "d345abcf107f61f1716443c3fa21dccd670232e96d050d7a8271cdd997d7babf"
+    },
+    "hub/mall.js": {
+      "bytes": 31803,
+      "sha256": "aa24efe0f62af66ad0b250db8d49288ef31201f6ce402743b24d4f4bde532fa3"
+    },
+    "hub/picture-menus.css": {
+      "bytes": 11168,
+      "sha256": "658fc83a76843f98afe31d680550d8cf9fc1f0227d6db69fadc5299c741ef865"
+    },
+    "hub/puzzles.js": {
+      "bytes": 4106,
+      "sha256": "99ff647e37dbcb04ece90cd8dd014a147c10af4902cbb2d4406fb2b86f0843c5"
+    },
+    "hub/shared/art.js": {
+      "bytes": 10206,
+      "sha256": "6a9dd293428a038b0ddb81904cd1cdb0828d2691de64da603b38a5986a90523d"
+    },
+    "hub/shared/bridge.js": {
+      "bytes": 4302,
+      "sha256": "6082d28ea3be0629a5c8ff57643556ee2e35bc4b06823a1a3e39977b752263fd"
+    },
+    "hub/shared/catalogue.js": {
+      "bytes": 2338,
+      "sha256": "1fa00f4c94cba88110a6dbefcac82ca3fedef284df789560cc092aa2f20b5363"
+    },
+    "hub/shared/portals.js": {
+      "bytes": 2487,
+      "sha256": "2ef0e14686881760ef07bf05c0ad88ff8dfed7bc7f19b6db5a7e7e4e6f64d0fc"
+    },
+    "hub/shared/profile.js": {
+      "bytes": 8347,
+      "sha256": "b1ff5fe2acd0e54f369825438ccd395ffe0010274da70cd8d4f5425998a55914"
+    },
+    "hub/shared/sprites.js": {
+      "bytes": 16667,
+      "sha256": "cffd1e662c7b6d269e899544362266ce0b873cba555f0832ac2027cebc862743"
+    },
+    "hub/tests/mall/appearance-standalone.cjs": {
+      "bytes": 7968,
+      "sha256": "1c4078fe1c9d62dd26e26ff9bdec86d1731c255b920b071820b4c0cfa529423b"
+    },
+    "hub/tests/mall/browser.cjs": {
+      "bytes": 15071,
+      "sha256": "87d3bb2fe5cc969f01e3b6885288f80c9d6c6a617d0356a5fd5755661eb4c8fe"
+    },
+    "hub/tests/mall/compatibility.cjs": {
+      "bytes": 3807,
+      "sha256": "f444b92c861e2d5d4896a4527f21f8e472725a44669b7d70e4dbd0f34258f502"
+    },
+    "hub/tests/mall/evidence/REVIEW-LINK-CHECK.json": {
+      "bytes": 237,
+      "sha256": "95a1137db83c2504940ba605f7d71f94a8ca836d37116d8b5b4903b64a6c4fe8"
+    },
+    "hub/tests/mall/evidence/VERIFICATION.json": {
+      "bytes": 977,
+      "sha256": "718ede94997ade31c340792425ee6b9c597259826785dc46fe19424a8c6667d2"
+    },
+    "hub/tests/mall/evidence/adventure/QA-RESULTS.json": {
+      "bytes": 2792,
+      "sha256": "8524864e5ad033ccebe4c1c8f07f4154e1289017dbc54317f96c8e4849130bc5"
+    },
+    "hub/tests/mall/evidence/appearance/QA-RESULTS.json": {
+      "bytes": 1118,
+      "sha256": "12c7cf331c94dfb5f3061df3e9f689b53f28205f5f5bcf258d4ccdabddc6f54f"
+    },
+    "hub/tests/mall/evidence/appearance/adventure-wearing-carrying-left.png": {
+      "bytes": 462240,
+      "sha256": "acb4585a5b05813b85493383f62724da17e24266f05388360f6d81343b2914cb"
+    },
+    "hub/tests/mall/evidence/appearance/adventure-wearing-carrying-right.png": {
+      "bytes": 461351,
+      "sha256": "e47a43a1a76298c19f02969195eed71d3429cbba11f35006b76775b53381b289"
+    },
+    "hub/tests/mall/evidence/appearance/adventure-wearing-celebration.png": {
+      "bytes": 460738,
+      "sha256": "e5ff880f4f0bc2568ebc7b138c2e8d7d5938b44868246ff154a344216a90f741"
+    },
+    "hub/tests/mall/evidence/appearance/all-eleven-outfit-poses.png": {
+      "bytes": 470056,
+      "sha256": "89266f20ae44c0f7fb21d84fbba6614327eeccf8740c346fe9ac65d8c57b085a"
+    },
+    "hub/tests/mall/evidence/appearance/cafe-generated-standalone.png": {
+      "bytes": 343332,
+      "sha256": "ab728c0480310e9a5c910c0d1b642eb9742ab1b8fe27214434adff988478f7ae"
+    },
+    "hub/tests/mall/evidence/appearance/cafe-wearing-carrying-left.png": {
+      "bytes": 332639,
+      "sha256": "73fc095eb9ac1a9e15c5e3cdf81588e6d923ca868ec61d82a976ce8a5d7bfaad"
+    },
+    "hub/tests/mall/evidence/appearance/cafe-wearing-celebration.png": {
+      "bytes": 233188,
+      "sha256": "ac9fec9c4429f1de943eadbf2c6b1eda1d0c43f63b1f200739a0ea9bf6a60d49"
+    },
+    "hub/tests/mall/evidence/compatibility/Chromium-legacy-origins.png": {
+      "bytes": 217800,
+      "sha256": "dda7d06c84b905f94a84108c10e11e2d181bed0ba0189586abcc4f2900120fd3"
+    },
+    "hub/tests/mall/evidence/compatibility/QA-RESULTS.json": {
+      "bytes": 216,
+      "sha256": "82570349135c6a294dcea55d1b0571a6a1f968485e88832db5fb295ac5009187"
+    },
+    "hub/tests/mall/evidence/compatibility/WebKit-same-origin.png": {
+      "bytes": 278575,
+      "sha256": "3ad154a411dbd41c5c1149238e1734d658340202165ad5e32cb78d93d8cd3b3a"
+    },
+    "hub/tests/mall/evidence/hub/QA-RESULTS.json": {
+      "bytes": 1896,
+      "sha256": "bd5647f771f34b99d7187977c7368faae5fff8033df17ba55af2d81a83cf4f51"
+    },
+    "hub/tests/mall/evidence/mall/PRESERVATION.json": {
+      "bytes": 381,
+      "sha256": "344cb1a7d1e299aab7b92a55a79c5150802fc68bb75a770367e11fd94103d9e4"
+    },
+    "hub/tests/mall/evidence/mall/QA-RESULTS.json": {
+      "bytes": 2161,
+      "sha256": "b5cb471a72e7a1c32c7d378ea5e2abb511e761cf9e1627f9bfcb2160cd9a20fa"
+    },
+    "hub/tests/mall/evidence/mall/boutique-844x390.png": {
+      "bytes": 134575,
+      "sha256": "983d6c473ed866f14dc3f0dd832049b5bbca9298382a990111060f0eae87f2ec"
+    },
+    "hub/tests/mall/evidence/mall/bowling-result.png": {
+      "bytes": 98794,
+      "sha256": "7d3e140acb4e2d60bb55852b428b4426721b015059cbec55972b22ac96e87aae"
+    },
+    "hub/tests/mall/evidence/mall/engine-results.json": {
+      "bytes": 4257,
+      "sha256": "5ac50f519e8bd83f699da7c0a9381b4af4dd03fb8f69b25d97d0da2e2e04d868"
+    },
+    "hub/tests/mall/evidence/mall/free-skateboard-trial.png": {
+      "bytes": 411075,
+      "sha256": "17fec8dfb259af88cdc5d60c5fa1d4da3830707078afbebf25a2558215769f44"
+    },
+    "hub/tests/mall/evidence/mall/jigsaw-partial.png": {
+      "bytes": 204753,
+      "sha256": "b5a3c7eba463dd40ed1081ee6d411e16665b191d1dd94cf0bfe69678b2f30ec8"
+    },
+    "hub/tests/mall/evidence/mall/mall-844x390.png": {
+      "bytes": 406340,
+      "sha256": "f033d092b8b2c696c657e52dd5c12f7fb9aea94c525b3300e597272b1f06c01c"
+    },
+    "hub/tests/mall/evidence/mall/outfits-568x320.png": {
+      "bytes": 65130,
+      "sha256": "f735b85c01be31be73242ca7311ad0403b96a30d42406c9cb8c1eb660c9a1d0f"
+    },
+    "hub/tests/mall/evidence/mall/photo-album.png": {
+      "bytes": 117320,
+      "sha256": "bf3d8774818691e9720bc009acbfe4472e29c54f4f73bfecad7d25c264079d8d"
+    },
+    "hub/tests/mall/evidence/mall/shop-568x320.png": {
+      "bytes": 41264,
+      "sha256": "33d18b9ac21698d86a080f519280ef9c884644c32c0d5aba6d47ee868170f153"
+    },
+    "hub/tests/mall/evidence/mobile/QA-RESULTS.json": {
+      "bytes": 1337,
+      "sha256": "2404a5fb8dc43aed18427b0bc083743b59abaf90c63c3302e9705a01e9d8574b"
+    },
+    "hub/tests/mall/evidence/mobile/mobile-boutique-right-action.png": {
+      "bytes": 86977,
+      "sha256": "43cfcfecef34eba93032b991e20b528747b5b243fb1bb3e911cd576276106e55"
+    },
+    "hub/tests/mall/evidence/mobile/mobile-bowling-right-roll.png": {
+      "bytes": 25245,
+      "sha256": "d225d2ab961d73458b693e83c50dc59d8177dc5150be6f034ce0975a91693e59"
+    },
+    "hub/tests/mall/evidence/mobile/mobile-jigsaw-16-touch.png": {
+      "bytes": 107869,
+      "sha256": "a87e30f61e3a45675c82d57692043cfb66c20cc89ef7adb377f38caca119d84c"
+    },
+    "hub/tests/mall/evidence/mobile/portrait-pause.png": {
+      "bytes": 3939,
+      "sha256": "21a678b93e025a9411c9ed01f51e324155a3963b0dfff73a0e8eb8bf611978b2"
+    },
+    "hub/tests/mall/evidence/navigation/PRESERVATION.json": {
+      "bytes": 508,
+      "sha256": "ddc6ae5659562b1da0983cd82b962357afc9cc6cb3e5575e43a8a89663de3278"
+    },
+    "hub/tests/mall/evidence/navigation/QA-RESULTS.json": {
+      "bytes": 8717,
+      "sha256": "e2db4989dfd6d1eebdd8da6cfb8291f44921f15b2c414bba529137dd82fb186e"
+    },
+    "hub/tests/mall/evidence/navigation/VERIFICATION.json": {
+      "bytes": 1489,
+      "sha256": "3b494b15e40987fb650d1beaa8f1bf6b49b4bd979190e08da4ad832ade660796"
+    },
+    "hub/tests/mall/evidence/navigation/adventure-exit-852x393.png": {
+      "bytes": 477523,
+      "sha256": "172081a21c2059abbbd3ac95ced2de4de51c9c6c926a54c9e55ec60e6ed3ac55"
+    },
+    "hub/tests/mall/evidence/navigation/adventure-exit-and-necklace.png": {
+      "bytes": 477523,
+      "sha256": "172081a21c2059abbbd3ac95ced2de4de51c9c6c926a54c9e55ec60e6ed3ac55"
+    },
+    "hub/tests/mall/evidence/navigation/adventure-exits/MAPS.json": {
+      "bytes": 3768,
+      "sha256": "7517ad0020e1d6590a244a038abdcbe5d3d6e1d243812dfbaa8d69b1bb42e163"
+    },
+    "hub/tests/mall/evidence/navigation/adventure-exits/easy_house.png": {
+      "bytes": 489362,
+      "sha256": "3bdd8ef593d9f7dbcd82c190b49d048839e390eb6e77129e98f8ef6e56e94439"
+    },
+    "hub/tests/mall/evidence/navigation/adventure-exits/easy_market.png": {
+      "bytes": 423549,
+      "sha256": "54c54e6828a4ac1b63e87dfb079487f5b3efb44bc197828b17ecbda13c71a4bb"
+    },
+    "hub/tests/mall/evidence/navigation/adventure-exits/easy_restaurant.png": {
+      "bytes": 234265,
+      "sha256": "f13938b4dca1668fb9102ce340818c669ae8e8ef5494c170865724fb05033400"
+    },
+    "hub/tests/mall/evidence/navigation/adventure-exits/easy_toys.png": {
+      "bytes": 178354,
+      "sha256": "00ae8af59a6fdcfa69b0d068c0410627a9a977fae17047fe4a6ac01e4e22beb5"
+    },
+    "hub/tests/mall/evidence/navigation/adventure-exits/police_patrol.png": {
+      "bytes": 571620,
+      "sha256": "c4a0ef92142e82ac6d8e3998be75fee173d034f5dd5fac0b59c8bcbb58ac05f1"
+    },
+    "hub/tests/mall/evidence/navigation/adventure-exits/sneak_house.png": {
+      "bytes": 439795,
+      "sha256": "bd3952e7f9ef0fc142f14d70486e1438ee1ca1b79a705c30484a5e547028f3c9"
+    },
+    "hub/tests/mall/evidence/navigation/adventure-exits/sneak_market.png": {
+      "bytes": 496329,
+      "sha256": "ab41590fac6c5fa39b232ab9ea258f2c34f03d3e364918c510b58a98fa363f55"
+    },
+    "hub/tests/mall/evidence/navigation/adventure-exits/sneak_restaurant.png": {
+      "bytes": 218976,
+      "sha256": "fe4d5bcb481724bd0aa9a23089557487e1fff0a2eb4404660dd9c192353460a4"
+    },
+    "hub/tests/mall/evidence/navigation/adventure-exits/sneak_toys.png": {
+      "bytes": 210351,
+      "sha256": "f9ec3201da6e21fcb7d0e12a1a892470ff1e4bd03f6582ad56f85e24d49ccfc5"
+    },
+    "hub/tests/mall/evidence/navigation/appearance/QA-RESULTS.json": {
+      "bytes": 1118,
+      "sha256": "12c7cf331c94dfb5f3061df3e9f689b53f28205f5f5bcf258d4ccdabddc6f54f"
+    },
+    "hub/tests/mall/evidence/navigation/appearance/adventure-wearing-carrying-left.png": {
+      "bytes": 455468,
+      "sha256": "49122a99d9d217aa2e40de9a4707887923b324a473387f522445125ed52158e4"
+    },
+    "hub/tests/mall/evidence/navigation/appearance/adventure-wearing-carrying-right.png": {
+      "bytes": 454896,
+      "sha256": "1741e40e195a5d4ffaa1b0406a1c63c50160bd3115aeb0a59a3dd773598f0bb2"
+    },
+    "hub/tests/mall/evidence/navigation/appearance/adventure-wearing-celebration.png": {
+      "bytes": 451819,
+      "sha256": "32549132194bd4e51c591ddb2b921b93151c5aaabba550fb2b4ab57a4e949140"
+    },
+    "hub/tests/mall/evidence/navigation/appearance/all-eleven-outfit-poses.png": {
+      "bytes": 581429,
+      "sha256": "08b1ae34db4caad3f18a7f7462018ecde3ae4653675f5a941e5b99b9b637ac25"
+    },
+    "hub/tests/mall/evidence/navigation/appearance/cafe-generated-standalone.png": {
+      "bytes": 343624,
+      "sha256": "f05a831fd87ea205b9451a86f6d1add5a794c25629a838d37061aeeb172bf5ed"
+    },
+    "hub/tests/mall/evidence/navigation/appearance/cafe-wearing-carrying-left.png": {
+      "bytes": 331533,
+      "sha256": "d589cae473cfdbd1bdd57c7f845c5a00eb936bb54a93907b9e519656b9ffa805"
+    },
+    "hub/tests/mall/evidence/navigation/appearance/cafe-wearing-celebration.png": {
+      "bytes": 234775,
+      "sha256": "66589ff907ebb7af99fab2bceb61cf9c6622722000fcda94795a3c30a4b6db69"
+    },
+    "hub/tests/mall/evidence/navigation/arcade-568x320.png": {
+      "bytes": 303635,
+      "sha256": "097d61ddf134fcd6a15b15107e10a0e620be9533af4ada97a9af67d233ed17ee"
+    },
+    "hub/tests/mall/evidence/navigation/arcade-852x393.png": {
+      "bytes": 485647,
+      "sha256": "07d6cbb7b5aaa736c80ba9f0f7e0254335934be4ac3f4a8a55555039c707ab08"
+    },
+    "hub/tests/mall/evidence/navigation/boutique-568x320.png": {
+      "bytes": 270676,
+      "sha256": "26185273ca169a827c4f2d4a1e9b27a05ddd1b539f722e612a68b3427e0139da"
+    },
+    "hub/tests/mall/evidence/navigation/boutique-852x393.png": {
+      "bytes": 409056,
+      "sha256": "3a3f5c0fb10728abc5dcf584961fa571fd96a3fc9f1abcc9f4ed46fc580698d7"
+    },
+    "hub/tests/mall/evidence/navigation/cafe-exit-852x393.png": {
+      "bytes": 307611,
+      "sha256": "71a0338f3db88ff5d023a94f5866e20f72cd74d1c5d388a81c1976e242446841"
+    },
+    "hub/tests/mall/evidence/navigation/cafe-exit-and-necklace.png": {
+      "bytes": 307611,
+      "sha256": "71a0338f3db88ff5d023a94f5866e20f72cd74d1c5d388a81c1976e242446841"
+    },
+    "hub/tests/mall/evidence/navigation/compatibility/Chromium-legacy-origins.png": {
+      "bytes": 236894,
+      "sha256": "a4c1c648a676b58df7fe86fc35301cadd799d115a78267995b37c933eb818042"
+    },
+    "hub/tests/mall/evidence/navigation/compatibility/QA-RESULTS.json": {
+      "bytes": 216,
+      "sha256": "82570349135c6a294dcea55d1b0571a6a1f968485e88832db5fb295ac5009187"
+    },
+    "hub/tests/mall/evidence/navigation/compatibility/WebKit-same-origin.png": {
+      "bytes": 316893,
+      "sha256": "4ea37133d005eef8d9df9eec38aa46ab1a5d3ecbaed57569f14603c298f441ea"
+    },
+    "hub/tests/mall/evidence/navigation/fitting-568x320.png": {
+      "bytes": 269140,
+      "sha256": "0cbb18ce9923504e345ab3eb8c1ab475fc5b20a57f59bfd737f968e35aaa6652"
+    },
+    "hub/tests/mall/evidence/navigation/fitting-852x393.png": {
+      "bytes": 406982,
+      "sha256": "5c29eb085d9b09f72f58bccd58094ffdf9b76f2afddb73c35f99199b2ab3ff51"
+    },
+    "hub/tests/mall/evidence/navigation/hub/QA-RESULTS.json": {
+      "bytes": 1896,
+      "sha256": "bd5647f771f34b99d7187977c7368faae5fff8033df17ba55af2d81a83cf4f51"
+    },
+    "hub/tests/mall/evidence/navigation/hub/adventure-playing.png": {
+      "bytes": 438339,
+      "sha256": "35dd0b638dc537a435a77f3d4a7ce80c1e4ed99606b44518a2de4f7579284db9"
+    },
+    "hub/tests/mall/evidence/navigation/hub/cafe-playing.png": {
+      "bytes": 163082,
+      "sha256": "bb9764fe263f08c1ab136304b73d4f0fd7bfa4623205cf67aab6ecc53cb1d618"
+    },
+    "hub/tests/mall/evidence/navigation/hub/hub-1280x720.png": {
+      "bytes": 1600249,
+      "sha256": "ac59681bbe29844278516cac45edf8bdc121720f204dca503e4f634f7107f220"
+    },
+    "hub/tests/mall/evidence/navigation/hub/hub-568x320.png": {
+      "bytes": 378979,
+      "sha256": "79002653087cb9148e154b522af31be44025e5a449e5808bf16b37d550f04955"
+    },
+    "hub/tests/mall/evidence/navigation/hub/hub-667x375.png": {
+      "bytes": 510084,
+      "sha256": "1007cc65d12f885b816c5b5a4b1fcc1c45c5692b7647e384f14307de9b4e7f8a"
+    },
+    "hub/tests/mall/evidence/navigation/hub/hub-740x300.png": {
+      "bytes": 370034,
+      "sha256": "ae931ac7293b12f33dbe3c90760228cdcc858d600581dd9de77909a16321d65f"
+    },
+    "hub/tests/mall/evidence/navigation/hub/hub-844x390.png": {
+      "bytes": 575120,
+      "sha256": "541830012a2ca7c9a2cf5d733d7aae383b5f06768c9c5de950973b38372e60f0"
+    },
+    "hub/tests/mall/evidence/navigation/hub/hub-932x430.png": {
+      "bytes": 684522,
+      "sha256": "89d9a5076045d6db8e769bfe2d38123d1544f48241a1ebec47daa1b75b3d34b0"
+    },
+    "hub/tests/mall/evidence/navigation/hub/hub-cafe-door.png": {
+      "bytes": 577370,
+      "sha256": "9344db3b59f6b7bd23c3dfbaf919c2ae73a02064f34581d35b8d49546439fede"
+    },
+    "hub/tests/mall/evidence/navigation/mall/QA-RESULTS.json": {
+      "bytes": 2161,
+      "sha256": "b5cb471a72e7a1c32c7d378ea5e2abb511e761cf9e1627f9bfcb2160cd9a20fa"
+    },
+    "hub/tests/mall/evidence/navigation/mall/boutique-844x390.png": {
+      "bytes": 202894,
+      "sha256": "857cf6cceb18491d419f0ab49b953308cac598510631372fde5e901d60df5b8f"
+    },
+    "hub/tests/mall/evidence/navigation/mall/bowling-result.png": {
+      "bytes": 130634,
+      "sha256": "e234ab426a037c0855c052407634999b2843c48f0287d567b2371327967d983a"
+    },
+    "hub/tests/mall/evidence/navigation/mall/cafe-backpack-change.png": {
+      "bytes": 299005,
+      "sha256": "c72db868c3a41e81bcdd10cd339e4a754b8c4df5afe9ac0820debc858ea0d5ab"
+    },
+    "hub/tests/mall/evidence/navigation/mall/free-skateboard-trial.png": {
+      "bytes": 422337,
+      "sha256": "2abe50e158a7c21e30eb404c886377e1fdfd05642f8ac0634b70e9b29c04a218"
+    },
+    "hub/tests/mall/evidence/navigation/mall/jigsaw-partial.png": {
+      "bytes": 204195,
+      "sha256": "bd2006725a297451f19014a90bca60d8a72fe3d580a1e9ffe194fa6f3fba0e4f"
+    },
+    "hub/tests/mall/evidence/navigation/mall/mall-844x390.png": {
+      "bytes": 419885,
+      "sha256": "44c1968621be4ba1e24b4889be1823f06760da237bf373854d501e79bae00825"
+    },
+    "hub/tests/mall/evidence/navigation/mall/outfit-adventure-win.png": {
+      "bytes": 448036,
+      "sha256": "4d43b2ff3e02263e61e0d470b34cdf81ec159d93ef6fb35205655319821205db"
+    },
+    "hub/tests/mall/evidence/navigation/mall/outfit-cafe.png": {
+      "bytes": 298854,
+      "sha256": "732924f601cc58fcc42bd22e3eaf4fb433380d92a4e3b3be03c3c22c1443eaff"
+    },
+    "hub/tests/mall/evidence/navigation/mall/outfits-1280x720.png": {
+      "bytes": 208083,
+      "sha256": "cd7c14177561c04b90710fbbe29d0613b0b02828e42c56506599474d266b1f86"
+    },
+    "hub/tests/mall/evidence/navigation/mall/outfits-568x320.png": {
+      "bytes": 98124,
+      "sha256": "16b1dad43dc1ade3e94ea1e22014761b70a12cdeb4a37c1e1fb6296a4827ef40"
+    },
+    "hub/tests/mall/evidence/navigation/mall/outfits-667x375.png": {
+      "bytes": 121284,
+      "sha256": "d5a042e5056408c8f626eb1b061378f76cf192a3d37b4a2b81fb63e5de75bdca"
+    },
+    "hub/tests/mall/evidence/navigation/mall/outfits-844x390.png": {
+      "bytes": 136230,
+      "sha256": "4b39f48af722cbd6182959ff29e76edb9983a068652d746fb41a1ec3e90e82b2"
+    },
+    "hub/tests/mall/evidence/navigation/mall/photo-album.png": {
+      "bytes": 120199,
+      "sha256": "82b1139b271e134ced41734f66dfab5dccfe2f1d0f584caf59b2e6a6b7ab96ba"
+    },
+    "hub/tests/mall/evidence/navigation/mall/shop-1280x720.png": {
+      "bytes": 329439,
+      "sha256": "04633327d03998b0a790fd5f5f8d86c09bbe7152de5fb400aec6f23e855f2615"
+    },
+    "hub/tests/mall/evidence/navigation/mall/shop-568x320.png": {
+      "bytes": 140237,
+      "sha256": "5ea0c9cf90a3013a54876bcd81e17046e68bc9548f8445feb72bad64c90c1d37"
+    },
+    "hub/tests/mall/evidence/navigation/mall/shop-667x375.png": {
+      "bytes": 99453,
+      "sha256": "ab08ef8e87db007a4d19aed0dd0a52992cab1a98d0286a69fbced2f94a247033"
+    },
+    "hub/tests/mall/evidence/navigation/mall/shop-844x390.png": {
+      "bytes": 126586,
+      "sha256": "b572348a986538e60d701a164060688c3e8c4a77a5475789b479d0e35b6b191e"
+    },
+    "hub/tests/mall/evidence/navigation/mall-568x320.png": {
+      "bytes": 283047,
+      "sha256": "c9055874de8856c2b563831683cd75ee157313be8cd8ab16fa172f2ccba1280a"
+    },
+    "hub/tests/mall/evidence/navigation/mall-852x393.png": {
+      "bytes": 423980,
+      "sha256": "f24fa9bc2d7acf1971cbf552ec4fb40f27f8c274a8b511657bc8f055f62ed615"
+    },
+    "hub/tests/mall/evidence/navigation/mobile/QA-RESULTS.json": {
+      "bytes": 1338,
+      "sha256": "c754d000d01624e19a77badef4a09846ed2a7d4fe04e5d19d2e914d14a37bd81"
+    },
+    "hub/tests/mall/evidence/navigation/mobile/mobile-boutique-right-action.png": {
+      "bytes": 140835,
+      "sha256": "76bf2e1461265d50a8310d86868dc22a9f99df0427e9aa4fd55a52e549cfcc85"
+    },
+    "hub/tests/mall/evidence/navigation/mobile/mobile-bowling-right-roll.png": {
+      "bytes": 242093,
+      "sha256": "36ca750a0eb939674c88a47bc950d53789d479070cc1aaa9d6bfa3262130854d"
+    },
+    "hub/tests/mall/evidence/navigation/mobile/mobile-jigsaw-16-touch.png": {
+      "bytes": 117335,
+      "sha256": "46abac1fd4baf0951414677aba42fe09d9938d6f5581416a78dc716cc58f9b8f"
+    },
+    "hub/tests/mall/evidence/navigation/mobile/portrait-pause.png": {
+      "bytes": 30965,
+      "sha256": "bc68cc1c37aa57f5165cedd78528054947dcd1887e82217f985d00d105cd4ff6"
+    },
+    "hub/tests/mall/evidence/navigation/photo-568x320.png": {
+      "bytes": 261952,
+      "sha256": "594c3066749e7dff77398bb4e4604c72292f8d2b4c31b7fbfc75c8d5da492ad4"
+    },
+    "hub/tests/mall/evidence/navigation/photo-852x393.png": {
+      "bytes": 424509,
+      "sha256": "92aedc1384564bb9e31312d6e5324fe95a138b9ad32ae61f5637c06665f4b7bd"
+    },
+    "hub/tests/mall/evidence/navigation/picture-menus/QA-RESULTS.json": {
+      "bytes": 1689,
+      "sha256": "57dee1237b0a79f340d75e4db6ef8265da4551bfafec35f629cffa60d8299d87"
+    },
+    "hub/tests/mall/evidence/navigation/picture-menus/all-clothing-and-riding-poses.png": {
+      "bytes": 2056410,
+      "sha256": "f950086ddd7f6796c9a34601a409bfb932c2fd205ea88cfba73be8760c738c5c"
+    },
+    "hub/tests/mall/evidence/navigation/picture-menus/bike-568x320.png": {
+      "bytes": 158210,
+      "sha256": "81f36448d239f1e35f34302e3ba8b1ca9744e84b829b9534c2b3c7e67f9c7629"
+    },
+    "hub/tests/mall/evidence/navigation/picture-menus/bike-852x393.png": {
+      "bytes": 270678,
+      "sha256": "4d6d1fa6bdefc6529f8c8e09d7709d92df19435caeb9c4e56819e1a5a9d832b8"
+    },
+    "hub/tests/mall/evidence/navigation/picture-menus/boutique-568x320.png": {
+      "bytes": 141294,
+      "sha256": "9e740ec43c1b3ea9621ee09a81962414e214de8aee50ebb77d827e2a2e6eeb4c"
+    },
+    "hub/tests/mall/evidence/navigation/picture-menus/boutique-852x393.png": {
+      "bytes": 204279,
+      "sha256": "d03b43cc356c4a3ad8dbd67b385126721fe99e9ff424748becb53f5eeaf96d32"
+    },
+    "hub/tests/mall/evidence/navigation/picture-menus/bowling-aim-left.png": {
+      "bytes": 414679,
+      "sha256": "96e928769e5eab55ebe47b55220965153b7d47bb6475d8e6b4936c5d1091e594"
+    },
+    "hub/tests/mall/evidence/navigation/picture-menus/bowling-preview-568x320.png": {
+      "bytes": 203802,
+      "sha256": "0c2c64cb1c01915bc7814c0c499d833f1d82b9ba7cd7a1a6a63943e093eb3166"
+    },
+    "hub/tests/mall/evidence/navigation/picture-menus/bowling-preview-852x393.png": {
+      "bytes": 359617,
+      "sha256": "ea10d99a9a70e5c42070b5e11f59eb2b53646fa71bc484e2ee44624d45062e95"
+    },
+    "hub/tests/mall/evidence/navigation/picture-menus/bowling-result.png": {
+      "bytes": 131761,
+      "sha256": "198c7112388d48e53896c561dda4ff6f9cccf9dab5d31a781baeed28fc177894"
+    },
+    "hub/tests/mall/evidence/navigation/picture-menus/bowling-visible-impact.png": {
+      "bytes": 412129,
+      "sha256": "8807d4326d18ce461696c58fa2bf3c00b73634d5b50ce0f4b7ef100074e77ae1"
+    },
+    "hub/tests/mall/evidence/navigation/picture-menus/catcher-preview-568x320.png": {
+      "bytes": 209481,
+      "sha256": "bbf1dbb8883e9d7d4fdd6dcd4ba752735e83dd07affc77a1175b6e23cbfc2dbd"
+    },
+    "hub/tests/mall/evidence/navigation/picture-menus/catcher-preview-852x393.png": {
+      "bytes": 373608,
+      "sha256": "aa15c67f556be12777e10e887ddc880333a0af89470d3d3e1d875c4bfef513ee"
+    },
+    "hub/tests/mall/evidence/navigation/picture-menus/generated-controls.png": {
+      "bytes": 634160,
+      "sha256": "999df584fd65da4f30a1b4849a7796d697ae54c39c86a35f3697599a17c502b6"
+    },
+    "hub/tests/mall/evidence/navigation/picture-menus/library-568x320.png": {
+      "bytes": 168824,
+      "sha256": "8e73dc1fec34b6941da1857cf80ab73875c63e5684774ca7af0b4e87ed5b64ac"
+    },
+    "hub/tests/mall/evidence/navigation/picture-menus/library-852x393.png": {
+      "bytes": 249758,
+      "sha256": "7d8ce2c30f8d63912c7b897ee442b57c19bb3f16fa49085070ccc3b25f07eeda"
+    },
+    "hub/tests/mall/evidence/navigation/picture-menus/photo-568x320.png": {
+      "bytes": 226018,
+      "sha256": "60ae5255571a5918876969952e7d742443f7631b31bdfe941993b91103296fbe"
+    },
+    "hub/tests/mall/evidence/navigation/picture-menus/photo-852x393.png": {
+      "bytes": 364101,
+      "sha256": "d4ab9c21fc7ad0a9d2e2d58c261ced3f95b516c87f5c509d635af148113d705e"
+    },
+    "hub/tests/mall/evidence/navigation/picture-menus/restaurant-toolbar-ticket-568x320.png": {
+      "bytes": 65275,
+      "sha256": "8af1beadd91f21d09c809db9d77abbc70abb6def056a3791226b6ead622112e2"
+    },
+    "hub/tests/mall/evidence/navigation/picture-menus/restaurant-toolbar-ticket-852x393.png": {
+      "bytes": 110888,
+      "sha256": "c0c55ec640798309f89c0e90ab1c3b2d2a55d4682957022f4ee01d757a220bcc"
+    },
+    "hub/tests/mall/evidence/navigation/picture-menus/skateboard-568x320.png": {
+      "bytes": 157061,
+      "sha256": "ba71923f1972399e76fd9ac2e3d91e2e806242ca8eeaa9e385e0c303ea3d1980"
+    },
+    "hub/tests/mall/evidence/navigation/picture-menus/skateboard-852x393.png": {
+      "bytes": 267910,
+      "sha256": "59480cc4e852ccfc39e7156f841255c3db30f74156e92f9f936dfe1c13d18f47"
+    },
+    "hub/tests/mall/evidence/navigation/street-568x320.png": {
+      "bytes": 318767,
+      "sha256": "57cc8bd636ec20885ee5375db343274c0de7d601dfd3664c3a935ae1ad1d1211"
+    },
+    "hub/tests/mall/evidence/navigation/street-852x393.png": {
+      "bytes": 482121,
+      "sha256": "88ab49cbded8aa7cb859fca83c0a8cbe3a0fea7af0265bc8ef0b9aa7b9874b34"
+    },
+    "hub/tests/mall/evidence/navigation/track-568x320.png": {
+      "bytes": 284936,
+      "sha256": "41d863a6ad5402f6d00fbd8d39bf51a3d1a847df6382ce77372e74946595b033"
+    },
+    "hub/tests/mall/evidence/navigation/track-852x393.png": {
+      "bytes": 428709,
+      "sha256": "7160fa72e7cdfe3292352456d3603c0401ceebd2dd8ea58da6cf25ea2e6960f4"
+    },
+    "hub/tests/mall/evidence/navigation/village-568x320.png": {
+      "bytes": 392012,
+      "sha256": "6bed54b1637e243a950f58401d317b08bb4e3a9c0e6d71afd84e2c109de3878a"
+    },
+    "hub/tests/mall/evidence/navigation/village-852x393.png": {
+      "bytes": 595431,
+      "sha256": "a8625e68174b0713af132088f0492bbca85d6983e18e87769af29e686ed31bd3"
+    },
+    "hub/tests/mall/evidence/navigation/wardrobe-fit-all-poses.png": {
+      "bytes": 3529091,
+      "sha256": "10b8dfe1b3ae52e223cdbb6716759e9b12781ef79306cd4e7a01ada159b3bc0b"
+    },
+    "hub/tests/mall/evidence/navigation/wheels-568x320.png": {
+      "bytes": 284197,
+      "sha256": "a81e83690a78f234305dddbf766983437df5c9fb77680ee440683e40e9b4782a"
+    },
+    "hub/tests/mall/evidence/navigation/wheels-852x393.png": {
+      "bytes": 427641,
+      "sha256": "1cc9f1835fdfe1e5291657923633a613404def4e3afd66bff1a5e8a575bd27a9"
+    },
+    "hub/tests/mall/evidence/profile.log": {
+      "bytes": 467,
+      "sha256": "74099bf4059188f54c108a075b4e9f587ba0b75be963bf793d1770e1cf3cf0b1"
+    },
+    "hub/tests/mall/evidence/v2/VERIFICATION.json": {
+      "bytes": 827,
+      "sha256": "2ffc39bf5a7062e0ddba504fdc4843581b351601539866076f47cd8a48031117"
+    },
+    "hub/tests/mall/evidence/v2/appearance/QA-RESULTS.json": {
+      "bytes": 1118,
+      "sha256": "12c7cf331c94dfb5f3061df3e9f689b53f28205f5f5bcf258d4ccdabddc6f54f"
+    },
+    "hub/tests/mall/evidence/v2/appearance/adventure-wearing-carrying-left.png": {
+      "bytes": 453162,
+      "sha256": "a6b479b64999450505abb4b387f64322eaf4e12f4cac3ee1ae3e1abf3b012b57"
+    },
+    "hub/tests/mall/evidence/v2/appearance/adventure-wearing-carrying-right.png": {
+      "bytes": 453284,
+      "sha256": "ba751b8572323af0db7155f6ce2701e22784d0b89caac5142da8e7db0ed7c64b"
+    },
+    "hub/tests/mall/evidence/v2/appearance/adventure-wearing-celebration.png": {
+      "bytes": 451939,
+      "sha256": "68452119682004f6502739ec1fb1ecd0ad3a0389e0213212185e176ba3b38b13"
+    },
+    "hub/tests/mall/evidence/v2/appearance/all-eleven-outfit-poses.png": {
+      "bytes": 590139,
+      "sha256": "ece894c79983cb91dec0f3a191389e8062a80d3c265dc056081fc47204e4732d"
+    },
+    "hub/tests/mall/evidence/v2/appearance/cafe-generated-standalone.png": {
+      "bytes": 343230,
+      "sha256": "e6aa0f057c8d4d420b06c8d7870a71d8bd91bba7980e1bb55a048f9ff5f5b522"
+    },
+    "hub/tests/mall/evidence/v2/appearance/cafe-wearing-carrying-left.png": {
+      "bytes": 329569,
+      "sha256": "3ff214eed00dee43e0bdaf0a8d44385bdf6f9fd34a16050f3cca331fdaa0d3e6"
+    },
+    "hub/tests/mall/evidence/v2/appearance/cafe-wearing-celebration.png": {
+      "bytes": 235451,
+      "sha256": "c06dbc86e38c7dd642f3439e2407f1d3ea343630b492abb9bb46196175abbd58"
+    },
+    "hub/tests/mall/evidence/v2/compatibility/Chromium-legacy-origins.png": {
+      "bytes": 236795,
+      "sha256": "1c23f43ebdd2ff9f659d7c26c59370ff65724e09ca2644ec8bbab2b154bbfa94"
+    },
+    "hub/tests/mall/evidence/v2/compatibility/QA-RESULTS.json": {
+      "bytes": 216,
+      "sha256": "82570349135c6a294dcea55d1b0571a6a1f968485e88832db5fb295ac5009187"
+    },
+    "hub/tests/mall/evidence/v2/compatibility/WebKit-same-origin.png": {
+      "bytes": 316555,
+      "sha256": "bd6b15fa49bd743731c277691aefc9246914e14315201d4b7cdb52361c0951bf"
+    },
+    "hub/tests/mall/evidence/v2/mall/PRESERVATION.json": {
+      "bytes": 381,
+      "sha256": "344cb1a7d1e299aab7b92a55a79c5150802fc68bb75a770367e11fd94103d9e4"
+    },
+    "hub/tests/mall/evidence/v2/mall/QA-RESULTS.json": {
+      "bytes": 2161,
+      "sha256": "b5cb471a72e7a1c32c7d378ea5e2abb511e761cf9e1627f9bfcb2160cd9a20fa"
+    },
+    "hub/tests/mall/evidence/v2/mall/boutique-844x390.png": {
+      "bytes": 205891,
+      "sha256": "5c08b3a7137fb28ca31ebd3b3c1af25843a7c6b9832d9314220a7c4c3c2d3024"
+    },
+    "hub/tests/mall/evidence/v2/mall/bowling-result.png": {
+      "bytes": 127957,
+      "sha256": "8634bacd6a36642d4a96572dee1cdeb9b29b5464ddc4e06c56f7383fc7b0032d"
+    },
+    "hub/tests/mall/evidence/v2/mall/cafe-backpack-change.png": {
+      "bytes": 297283,
+      "sha256": "ff3c077695229a6339b64691e4f21f225a5f01c8f8737a0eeddcfcec97a3070b"
+    },
+    "hub/tests/mall/evidence/v2/mall/free-skateboard-trial.png": {
+      "bytes": 420900,
+      "sha256": "3084453e6030b39a04e7aed9cb3273338d088b196c662f16fe30c26b27c5bb97"
+    },
+    "hub/tests/mall/evidence/v2/mall/jigsaw-partial.png": {
+      "bytes": 203801,
+      "sha256": "44282663b7d233451d904d72e45063866815f3e02c241f75ec0e9bc57c15fbcf"
+    },
+    "hub/tests/mall/evidence/v2/mall/mall-844x390.png": {
+      "bytes": 412223,
+      "sha256": "4af15bd1e8aed738c507f6ea10e7b5f34ff7d667a071141849a74a11f5425443"
+    },
+    "hub/tests/mall/evidence/v2/mall/outfit-adventure-win.png": {
+      "bytes": 448048,
+      "sha256": "04e8be75432c4a0d5513a2604c3fd1dc90c4bd074ca6d1c30a73a8524dc87321"
+    },
+    "hub/tests/mall/evidence/v2/mall/outfit-cafe.png": {
+      "bytes": 297000,
+      "sha256": "606eb687e81f3e045df80e696314b286e688ee81df0d30340b2a479298cafbe0"
+    },
+    "hub/tests/mall/evidence/v2/mall/outfits-1280x720.png": {
+      "bytes": 205537,
+      "sha256": "7de43fc07416123e305b37e47850ec1e6815b4634e303105faed8843115d4500"
+    },
+    "hub/tests/mall/evidence/v2/mall/outfits-568x320.png": {
+      "bytes": 95172,
+      "sha256": "5c85f2e3ab7c8e39f37f7c73f5f0723066a49299c479c5d5652c75af6f356da3"
+    },
+    "hub/tests/mall/evidence/v2/mall/outfits-667x375.png": {
+      "bytes": 118343,
+      "sha256": "07b8b294aaa1569dd3f613d8b003142ce3441946accf1941eb4c6ad471122922"
+    },
+    "hub/tests/mall/evidence/v2/mall/outfits-844x390.png": {
+      "bytes": 133234,
+      "sha256": "b98634455373641c301cf865ceba0769dea1e0dd5694fae750bdedb28660c1e8"
+    },
+    "hub/tests/mall/evidence/v2/mall/photo-album.png": {
+      "bytes": 120079,
+      "sha256": "0496ba2fa9264d4efdd33796064265f1a6cbeb9aea835e835b01082bfc2bc6e4"
+    },
+    "hub/tests/mall/evidence/v2/mall/shop-1280x720.png": {
+      "bytes": 336858,
+      "sha256": "930592496e8edbb24454813fc583022ef8073fbaec71a6ab22c69706d7cf20f3"
+    },
+    "hub/tests/mall/evidence/v2/mall/shop-568x320.png": {
+      "bytes": 141752,
+      "sha256": "d6c68e0db54c878c7eb6f693c9b283e75de7607b9f1e4af91f91b0fd76801b7b"
+    },
+    "hub/tests/mall/evidence/v2/mall/shop-667x375.png": {
+      "bytes": 117823,
+      "sha256": "bac637de46dee5d9069601be2fa5b6c1fed36dbcf231fccc77ef57bd1dc1c236"
+    },
+    "hub/tests/mall/evidence/v2/mall/shop-844x390.png": {
+      "bytes": 129620,
+      "sha256": "4f9c59bfc56ab66e8b4f8cbc97a488679f534a88508915eeae8c6712eff8b92c"
+    },
+    "hub/tests/mall/evidence/v2/mobile/QA-RESULTS.json": {
+      "bytes": 1338,
+      "sha256": "c754d000d01624e19a77badef4a09846ed2a7d4fe04e5d19d2e914d14a37bd81"
+    },
+    "hub/tests/mall/evidence/v2/mobile/mobile-boutique-right-action.png": {
+      "bytes": 142392,
+      "sha256": "2f04a567df4b3fb921da0fe4bf3146fdcdeb7428e827ee2faa262e0c20503c38"
+    },
+    "hub/tests/mall/evidence/v2/mobile/mobile-bowling-right-roll.png": {
+      "bytes": 241220,
+      "sha256": "33a14d60163f73d39774b4d41213784b4c6c6a7255c036344cfbe7c5261a8be9"
+    },
+    "hub/tests/mall/evidence/v2/mobile/mobile-jigsaw-16-touch.png": {
+      "bytes": 116915,
+      "sha256": "10a08963b1f6381c3c292517d32e01b6a617d9dff9d8164314aae667c41aa815"
+    },
+    "hub/tests/mall/evidence/v2/mobile/portrait-pause.png": {
+      "bytes": 30291,
+      "sha256": "a44142020799a8d7fc51b51260749c45316ee8e0548108b54237b960b34bfe4f"
+    },
+    "hub/tests/mall/evidence/v2/picture-menus/PRESERVATION.json": {
+      "bytes": 1729,
+      "sha256": "5680803c40252a1f78fbbc2ba789f3fc43dcce95bac2c7f17aabbe7d6e4f6733"
+    },
+    "hub/tests/mall/evidence/v2/picture-menus/QA-RESULTS.json": {
+      "bytes": 1689,
+      "sha256": "57dee1237b0a79f340d75e4db6ef8265da4551bfafec35f629cffa60d8299d87"
+    },
+    "hub/tests/mall/evidence/v2/picture-menus/all-clothing-and-riding-poses.png": {
+      "bytes": 2067580,
+      "sha256": "6c1f87d16d478bed9109b10953c12acb32f4f28aebf2d4207a48fe798e74102c"
+    },
+    "hub/tests/mall/evidence/v2/picture-menus/bike-568x320.png": {
+      "bytes": 158305,
+      "sha256": "3f936b198093beb1ff6371c65a8cb28ab12510b3cf508304d48ad73ddfc3209b"
+    },
+    "hub/tests/mall/evidence/v2/picture-menus/bike-852x393.png": {
+      "bytes": 270605,
+      "sha256": "5c9b12f27662c271a844a34dfa82c849643174fe5be8b87ea0b7ed6a350fd346"
+    },
+    "hub/tests/mall/evidence/v2/picture-menus/boutique-568x320.png": {
+      "bytes": 141413,
+      "sha256": "9279ad1df7101b99bfb19ce5bb6f6afd8ed8f1b0ea8eac91454b618bf0576983"
+    },
+    "hub/tests/mall/evidence/v2/picture-menus/boutique-852x393.png": {
+      "bytes": 204448,
+      "sha256": "df01062ec1f05e71012b837f90e5ee47c1aaa371c05935344964a15fea671c6f"
+    },
+    "hub/tests/mall/evidence/v2/picture-menus/bowling-aim-left.png": {
+      "bytes": 414679,
+      "sha256": "96e928769e5eab55ebe47b55220965153b7d47bb6475d8e6b4936c5d1091e594"
+    },
+    "hub/tests/mall/evidence/v2/picture-menus/bowling-preview-568x320.png": {
+      "bytes": 203802,
+      "sha256": "0c2c64cb1c01915bc7814c0c499d833f1d82b9ba7cd7a1a6a63943e093eb3166"
+    },
+    "hub/tests/mall/evidence/v2/picture-menus/bowling-preview-852x393.png": {
+      "bytes": 359617,
+      "sha256": "ea10d99a9a70e5c42070b5e11f59eb2b53646fa71bc484e2ee44624d45062e95"
+    },
+    "hub/tests/mall/evidence/v2/picture-menus/bowling-result.png": {
+      "bytes": 131761,
+      "sha256": "198c7112388d48e53896c561dda4ff6f9cccf9dab5d31a781baeed28fc177894"
+    },
+    "hub/tests/mall/evidence/v2/picture-menus/bowling-visible-impact.png": {
+      "bytes": 412134,
+      "sha256": "17d0522d69728dc630b0dc5c53ea2eddca392e66df605b0fe0a73c6ffc54fa73"
+    },
+    "hub/tests/mall/evidence/v2/picture-menus/catcher-preview-568x320.png": {
+      "bytes": 209511,
+      "sha256": "e281814f089da46ae0c908b96c44e04601312ea730d3e86b204b9e980a2656fe"
+    },
+    "hub/tests/mall/evidence/v2/picture-menus/catcher-preview-852x393.png": {
+      "bytes": 373657,
+      "sha256": "df84f5499bd8b9c80b392db43ba8c30070a74ac9b293dac865f45fe56b71623c"
+    },
+    "hub/tests/mall/evidence/v2/picture-menus/generated-controls.png": {
+      "bytes": 634160,
+      "sha256": "999df584fd65da4f30a1b4849a7796d697ae54c39c86a35f3697599a17c502b6"
+    },
+    "hub/tests/mall/evidence/v2/picture-menus/library-568x320.png": {
+      "bytes": 168826,
+      "sha256": "6d6f7dabac462d93c1768692acfaef5b6a31025121dc2e4f45fb7fe3ae9153d0"
+    },
+    "hub/tests/mall/evidence/v2/picture-menus/library-852x393.png": {
+      "bytes": 249794,
+      "sha256": "383925b2ec8b32f88d0a6aeeef353e9f050474c96e1839c1c4f2a6cda5cf00bc"
+    },
+    "hub/tests/mall/evidence/v2/picture-menus/photo-568x320.png": {
+      "bytes": 226354,
+      "sha256": "2dc1f1a9ed63749b32be4e4363440b3fe1093a18cf35869b4ab206ff5326a6a0"
+    },
+    "hub/tests/mall/evidence/v2/picture-menus/photo-852x393.png": {
+      "bytes": 364492,
+      "sha256": "3f0a60b90edc716e19be0cf6aea2ad9a191b318eaf950a8cc091c2c3c6adfa7f"
+    },
+    "hub/tests/mall/evidence/v2/picture-menus/restaurant-toolbar-ticket-568x320.png": {
+      "bytes": 65193,
+      "sha256": "797dbfa0e46292a363e4442cc7047228f3dc3bd7e10eecebd8ca63490dc94b0f"
+    },
+    "hub/tests/mall/evidence/v2/picture-menus/restaurant-toolbar-ticket-852x393.png": {
+      "bytes": 110879,
+      "sha256": "0f00ea5ccb4bfef63e42f6639d6a877d229b5f6c90bbd2abdc3cea0ae2483236"
+    },
+    "hub/tests/mall/evidence/v2/picture-menus/skateboard-568x320.png": {
+      "bytes": 156933,
+      "sha256": "5699ea1c0982a052381d0dbecca9a818c6e91e7ea8c6efa6132f49fb8e71e563"
+    },
+    "hub/tests/mall/evidence/v2/picture-menus/skateboard-852x393.png": {
+      "bytes": 268109,
+      "sha256": "7cf26a55bc285ebdef5ba60bce0a082178aa3adbdb43b84d49b8be901ee322dd"
+    },
+    "hub/tests/mall/navigation.cjs": {
+      "bytes": 14145,
+      "sha256": "36e3a69a080adf4f9e41a700f1e2718af7016f91d18ac5c76a9e0754052197c7"
+    },
+    "hub/tests/mall/picture-menus.cjs": {
+      "bytes": 14156,
+      "sha256": "432db3f36a94239e75c4e8efc6b7c68984c0a2abe9bfbd2f926a4f44dcfb02e9"
+    },
+    "hub/tests/mall/profile.cjs": {
+      "bytes": 3580,
+      "sha256": "ddecfc87676f6523c306c770cfe3170a234c986be5306ce24bee9acda92ce404"
+    },
+    "hub/tests/mall/resilience-mobile.cjs": {
+      "bytes": 12552,
+      "sha256": "591c1eef6dcaa78a9bc7bc8eeafe566d56ed57a5faf4c95107756af635ff987d"
+    },
+    "hub/tests/release-browser.cjs": {
+      "bytes": 8412,
+      "sha256": "8bdc2550131c6898a11aaba465fb807bda70ddd19eff6b0f029861e5c075b921"
+    },
+    "hub/tests/release-evidence/QA-RESULTS.json": {
+      "bytes": 1017,
+      "sha256": "5831fcf85aa86d40051e8447a4695ea37215ff470906e09ded4647347a190e59"
+    },
+    "hub/tests/release-evidence/adventure-project-path.png": {
+      "bytes": 453908,
+      "sha256": "4ff62e57a1588f050ce86f89073bbfe65db2b26ebecd0a9b98d1b5856c9fed11"
+    },
+    "hub/tests/release-evidence/cafe-project-path.png": {
+      "bytes": 300452,
+      "sha256": "465b871ea772c9edf78b3cc47051a66416fb8cc8f86c44c4b0595ddc8202139f"
+    },
+    "hub/tests/release-evidence/old-cafe-save-retained.png": {
+      "bytes": 236277,
+      "sha256": "4ca235c3ec8bbbe2fa1b986482617343e717e0a0bf33909879b086287b33e780"
+    },
+    "hub/tests/release-evidence/wardrobe-project-path.png": {
+      "bytes": 207746,
+      "sha256": "fa22e00b2bd34a82885a849a6586b8127dbb26ca3e928c047bc158a6bbaf7d80"
+    },
+    "hub/tests/release-evidence/world-entry.png": {
+      "bytes": 595191,
+      "sha256": "6996aa668b65b0487ee64640a63515cdac5a93821163a089fe6dc95a91adc96c"
+    },
+    "hub/tests/release-evidence/world-small-landscape.png": {
+      "bytes": 391601,
+      "sha256": "88f1247689144d7b95e370ee52a99a9285a3c0317ef940a26d0eed421e69b114"
+    },
+    "hub/tests/release-package-results.json": {
+      "bytes": 645,
+      "sha256": "38f2e266e33aa93d8933d8d18910bd2c994971ba5e38251f27b90cbf32f18ef4"
+    },
+    "hub/tests/release-package.cjs": {
+      "bytes": 3226,
+      "sha256": "b8b34f940615e07839dd1c39110634b1c9403671d25e65c659d0c29dfb446376"
+    },
+    "hub/tools/build-navigation.py": {
+      "bytes": 2792,
+      "sha256": "362aa5935cd0b6f2d5af2e2b48fd5ca8334aa1edb8cbad81ee985e229aa6614f"
+    },
+    "hub/tools/build-sprites.py": {
+      "bytes": 5626,
+      "sha256": "5f87414e78023a40630c7f6d3b07fb312f96c76ac658a2aa64d5a1d4893afcab"
+    },
+    "hub/world.css": {
+      "bytes": 11838,
+      "sha256": "07526647d565670988fe31c6265ef24f4bb4a8cae46733a091220bbe4ccde42e"
+    },
+    "hub/world.js": {
+      "bytes": 18389,
+      "sha256": "dc0bad1dfa35ec3dd674779311c1e8693910105d93858937eb6d4edc37cec27c"
+    },
+    "hub_preview.py": {
+      "bytes": 2286,
+      "sha256": "0f97040da2ac1cc081b69762567caea81626e854118bcd0da1a9850f80d87958"
+    },
+    "index.html": {
+      "bytes": 1293,
+      "sha256": "a907e61f5d0ec9e08b8d9808087ab285a13a31ce3204949624011bd0b3451e44"
+    },
+    "manifest.webmanifest": {
+      "bytes": 571,
+      "sha256": "1ee9f6c7901195f45a7f28cb7144442b0ecd285a1511a0c4160c25d40fe07938"
+    },
+    "rebuild.py": {
+      "bytes": 457,
+      "sha256": "36709478f93bbe15983b1734f4a91074c90d92979cde2ef3257f91550a327038"
+    },
+    "game/tests/offline_tests.js": {
+      "bytes": 4871,
+      "sha256": "ba30a5d364b00f3343071463ce085bb0cfd02460ca4dd7d8293702acc236ce60"
+    }
+  }
+}

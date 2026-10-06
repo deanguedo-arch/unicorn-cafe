@@ -1,0 +1,7 @@
+PASS Catalogue: 48 unique puzzles, three free pieces, nine shop wearables, six prizes
+PASS Purchase is permanent, re-buy costs nothing, unaffordable purchase cannot alter state
+PASS Only owned outfit pieces can be equipped or saved
+PASS Legacy costumes respect secret counts and stay owned
+PASS Paid jigsaw resumes for free, saves each difficulty, and refunds once on completion
+PASS All skill reward thresholds and five-stamp prize
+6 profile behaviour checks passed

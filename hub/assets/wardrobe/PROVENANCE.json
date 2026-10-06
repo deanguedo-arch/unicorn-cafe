@@ -1,0 +1,86 @@
+{
+  "route": "built-in image_gen",
+  "reference": "hub/assets/wardrobe/source/canonical-poses-reference.png plus hub/assets/village-concept.png",
+  "assets": {
+    "tee": {
+      "source": "/Users/deanguedo/.codex/generated_images/01a10d6c-522f-7633-aa66-aa09084e1004/exec-7685cdd8-ff4d-4bbd-8a3c-9073d7426305.png",
+      "path": "hub/assets/wardrobe/tee-v2.png",
+      "bytes": 520546,
+      "sha256": "a5958c2ced3a282631e3823d5918d26a5a8a0626314ffa75f5dd31c3161f754b"
+    },
+    "star-jacket": {
+      "source": "/Users/deanguedo/.codex/generated_images/01a10d6c-522f-7633-aa66-aa09084e1004/exec-cece0a34-5ed0-4094-9e1c-a91619125e7b.png",
+      "path": "hub/assets/wardrobe/star-jacket-v2.png",
+      "bytes": 778153,
+      "sha256": "955aab268da2b7c1cceb00f60270b759bac993a473b6f23bff906127691434b1"
+    },
+    "rainbow-dress": {
+      "source": "/Users/deanguedo/.codex/generated_images/01a10d6c-522f-7633-aa66-aa09084e1004/exec-68132403-8cd5-4e0b-884e-e0a828a6036c.png",
+      "path": "hub/assets/wardrobe/rainbow-dress-v2.png",
+      "bytes": 1082238,
+      "sha256": "97ec32226c97f4c6302fb5afea8a373a26c00bba5f87f93dee85febe7ce8259c"
+    },
+    "raincoat": {
+      "source": "/Users/deanguedo/.codex/generated_images/01a10d6c-522f-7633-aa66-aa09084e1004/exec-89c813a2-0af7-41b7-a16d-150cf4738401.png",
+      "path": "hub/assets/wardrobe/raincoat-v2.png",
+      "bytes": 957264,
+      "sha256": "09eff52f3dd812b1872f71ff5339870985176c3fe8fb22eed77290d947f75779"
+    },
+    "prize-rainbow-cape": {
+      "source": "/Users/deanguedo/.codex/generated_images/01a10d6c-522f-7633-aa66-aa09084e1004/exec-a06d4715-f995-44cf-8a43-ee4681b8be68.png",
+      "path": "hub/assets/wardrobe/prize-rainbow-cape-v2.png",
+      "bytes": 813139,
+      "sha256": "b48c4866f8a0c1ed9b73abc0a17cd2806dedc4d65807589f90e201c47ae49659"
+    },
+    "legacy-hero": {
+      "source": "/Users/deanguedo/.codex/generated_images/01a10d6c-522f-7633-aa66-aa09084e1004/exec-6c37eba3-5752-4975-aff7-f21bda5fe447.png",
+      "path": "hub/assets/wardrobe/legacy-hero-v2.png",
+      "bytes": 714716,
+      "sha256": "172b4c81f67d89df5a47e42dcecaf2ec1ad89493196f5807da4fcc318dfc01ad"
+    },
+    "catalogue": {
+      "source": "/Users/deanguedo/.codex/generated_images/01a10d6c-522f-7633-aa66-aa09084e1004/exec-b8754692-074d-4a16-a6d4-ce270a502f15.png",
+      "path": "hub/assets/wardrobe/catalogue-v2.png",
+      "bytes": 1837462,
+      "sha256": "f22dc285a0d7314bb382219104dd1162a79c81fa5d48d0f06882863abcc87697"
+    },
+    "bike-riding": {
+      "source": "/Users/deanguedo/.codex/generated_images/01a10d6c-522f-7633-aa66-aa09084e1004/exec-67cd913a-4cf1-4e7d-97a4-dd5661090025.png",
+      "path": "hub/assets/wardrobe/source/bike-riding-v2.png",
+      "bytes": 1497159,
+      "sha256": "3a49afeb2f928b0825602ea7b2b19a41c02204e1bdfae547fa4a5fd3469ccc10"
+    },
+    "skateboard-riding": {
+      "source": "/Users/deanguedo/.codex/generated_images/01a10d6c-522f-7633-aa66-aa09084e1004/exec-fd96bc06-5352-4fc9-8610-849f73b42c86.png",
+      "path": "hub/assets/wardrobe/source/skateboard-riding-v2.png",
+      "bytes": 1124737,
+      "sha256": "7177e4ec5a6c7882d08e577003d26d2dc5aa9a197cefb2047bf569cf626d288d"
+    },
+    "clear-eyewear": {
+      "source": "/Users/deanguedo/.codex/generated_images/01a10d6c-522f-7633-aa66-aa09084e1004/exec-e2253e93-ac5d-4a60-bcb8-128b78b6c465.png",
+      "path": "hub/assets/wardrobe/source/clear-eyewear-v2.png",
+      "bytes": 849201,
+      "sha256": "07b250adb1b8674d7895202efc95bd67c1a300fb1c6143296e058dd47aa4c1b4"
+    },
+    "bowling-lane": {
+      "source": "/Users/deanguedo/.codex/generated_images/01a10d6c-522f-7633-aa66-aa09084e1004/exec-663d778b-91b9-4f8b-92ef-b071f38bc27e.png",
+      "path": "hub/assets/controls/source/bowling-lane-v2.png",
+      "bytes": 2223879,
+      "sha256": "8aa2a73121f1a927c63b9c64efe8e0afb53edc42dfe4320fab24703cadd73ebe"
+    },
+    "bowling-pin": {
+      "source": "/Users/deanguedo/.codex/generated_images/01a10d6c-522f-7633-aa66-aa09084e1004/exec-7610ab59-3a24-4f8c-9a45-2507b7b5483f.png",
+      "path": "hub/assets/controls/source/bowling-pin-v2.png",
+      "bytes": 558996,
+      "sha256": "0b724101377f8687bb1adda65c4ee29d872a9967d794154487faef5448fb56b8"
+    },
+    "catching-basket": {
+      "source": "/Users/deanguedo/.codex/generated_images/01a10d6c-522f-7633-aa66-aa09084e1004/exec-27eb22e6-a71f-4e42-b0f4-086ed2103c16.png",
+      "path": "hub/assets/controls/source/catching-basket-v2.png",
+      "bytes": 1127569,
+      "sha256": "05d44edf8ec3cc6027c6c2c76c4d2b56f951dc9f103b0dd99354d449f157f14f"
+    }
+  },
+  "packaging": "Exact alpha-preserving sprite crops with hub/tools/build-sprites.py. No painted substitutes or canonical asset edits.",
+  "promptSet": "hub/assets/wardrobe/PROMPTS.json"
+}

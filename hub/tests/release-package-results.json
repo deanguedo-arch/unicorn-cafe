@@ -1,0 +1,24 @@
+{
+  "results": [
+    {
+      "name": "Every packaged file matches its release checksum",
+      "pass": true,
+      "details": {
+        "files": 354
+      }
+    },
+    {
+      "name": "The root launches Unicorn World, retains both games and landscape installation, and excludes QA/source ZIPs",
+      "pass": true
+    },
+    {
+      "name": "Both game bridges use the checked project base, rather than the hosting domain root",
+      "pass": true
+    },
+    {
+      "name": "The replacement root worker retires only the old café root cache and cannot erase native/shared saves or sibling caches",
+      "pass": true
+    }
+  ],
+  "files": 354
+}

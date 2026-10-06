@@ -1,0 +1,104 @@
+{
+  "results": [
+    {
+      "name": "Five picture places with distinct theme pictures, no visible reading, persistent settings",
+      "pass": true
+    },
+    {
+      "name": "Existing native and legacy saves survive unchanged on launch",
+      "pass": true
+    },
+    {
+      "name": "Keyboard settings, picture help, saved sound/motion, static gentle guidance",
+      "pass": true
+    },
+    {
+      "name": "All five actual place buttons, picture HUD/blast, keyboard gear while playing",
+      "pass": true
+    },
+    {
+      "name": "Movement and blast guidance disappear after real actions",
+      "pass": true
+    },
+    {
+      "name": "Settings and portrait freeze/restore play, reset, win, pause, and selection",
+      "pass": true
+    },
+    {
+      "name": "Rotation preserves open help/settings and their paused state",
+      "pass": true
+    },
+    {
+      "name": "Contact reset retains native carried treasure",
+      "pass": true
+    },
+    {
+      "name": "Both real baby rescues, three carrying slots, contact preservation, bulk deposit",
+      "pass": true,
+      "details": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "name": "Regular opponents release together; police captures stay jailed",
+      "pass": true
+    },
+    {
+      "name": "Rainbow blast preserves last real movement direction; idle has no fallback",
+      "pass": true
+    },
+    {
+      "name": "Real collected completion, celebration, replay, next location, pause/resume",
+      "pass": true
+    },
+    {
+      "name": "Nine full-area layouts, including desktop and 251px iframe height; theme pictures clear and buttons at least 44px",
+      "pass": true
+    },
+    {
+      "name": "Landscape notch and bottom inset spacing",
+      "pass": true
+    },
+    {
+      "name": "Real animation loop freezes and resumes with settings",
+      "pass": true
+    },
+    {
+      "name": "Real phone drag/cancel and rainbow-button touch",
+      "pass": true
+    },
+    {
+      "name": "Hub return/reentry, retained help, portrait suspension, 44px home button",
+      "pass": true
+    },
+    {
+      "name": "Existing cafe still fits 568x320 hub layout and returns normally",
+      "pass": true
+    },
+    {
+      "name": "Rejected orientation lock leaves landscape play usable",
+      "pass": true
+    },
+    {
+      "name": "Artwork failure presents a picture retry control",
+      "pass": true
+    },
+    {
+      "name": "Standalone offline reload serves all picture assets from updated scoped cache",
+      "pass": true
+    },
+    {
+      "name": "Missing offline copy also shows a wordless retry",
+      "pass": true
+    },
+    {
+      "name": "No browser JavaScript errors across tested flows",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "physicalPhoneTest": false,
+  "childTest": false
+}

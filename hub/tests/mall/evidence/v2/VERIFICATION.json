@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-05",
+  "revision": "generated wardrobe and picture menus",
+  "suites": [
+    {
+      "suite": "picture-menus/QA-RESULTS.json",
+      "checks": 10,
+      "pass": true
+    },
+    {
+      "suite": "mall/QA-RESULTS.json",
+      "checks": 18,
+      "pass": true
+    },
+    {
+      "suite": "mobile/QA-RESULTS.json",
+      "checks": 8,
+      "pass": true
+    },
+    {
+      "suite": "appearance/QA-RESULTS.json",
+      "checks": 8,
+      "pass": true
+    },
+    {
+      "suite": "compatibility/QA-RESULTS.json",
+      "checks": 2,
+      "pass": true
+    }
+  ],
+  "namedChecks": 46,
+  "syntax": true,
+  "pythonParsing": true,
+  "cssParsing": true,
+  "diffWhitespace": true,
+  "canonicalPreservation": true,
+  "generatedAssetHashes": true,
+  "physicalDevice": false,
+  "childReview": false,
+  "published": false
+}

@@ -272,3 +272,20 @@ button{transition:transform .11s ease,filter .11s ease,box-shadow .11s ease}butt
 .designer-picker .custom-choice.selected{outline:3px solid #edbd5e;box-shadow:inset 0 0 0 3px #fff7da,0 4px 0 #9f744d}
 .designer-open{background:radial-gradient(circle at 35% 25%,#fffdf1,#d5b7e4);box-shadow:inset 0 0 0 2px #b287c4,0 4px 0 #78547c}
 @media(orientation:landscape) and (max-height:540px){.designer-tabs{gap:5px}.designer-tab{max-height:none;align-self:stretch;font-size:8px;padding:3px;gap:0;border-radius:13px}.designer-tab img{width:30px;height:26px}.designer-tab.selected:after{font-size:10px;right:4px;top:1px}}
+.small-round>svg,.small-round>.picture-sprite{max-width:100%;max-height:100%;width:28px;height:28px;object-fit:contain}
+.small-round{padding:7px}
+/* Keep the order-card diamond below the pictures, including on short phones. */
+.kitchen-screen>.ticket{padding-bottom:20px}
+.ticket:after{width:12px;height:12px;bottom:-9px;pointer-events:none}
+.cook-order .ticket:after{display:none}
+@media(orientation:landscape) and (max-height:540px){
+ .kitchen-screen{grid-template-rows:60px minmax(0,1fr)}
+ .kitchen-header{height:60px;min-height:60px;padding:6px 12px;gap:12px;grid-template-columns:44px minmax(0,1fr) 44px;border-bottom-width:2px}
+ .kitchen-header .small-round{width:44px;height:44px;padding:7px}
+ .kitchen-title-pic{height:44px;padding:3px 10px;gap:8px}
+ .kitchen-title-pic img{width:38px;height:28px;max-width:38px;max-height:28px}
+ .kitchen-title-pic svg{width:25px;height:25px;max-width:25px;max-height:25px}
+ .kitchen-screen>.ticket{padding:7px 6px 20px;gap:5px}
+ .cook-layout .kitchen-header{height:50px;min-height:50px;padding:3px}
+ .cook-layout{grid-template-rows:50px minmax(0,1fr) 64px}
+}

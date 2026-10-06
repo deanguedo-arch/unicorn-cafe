@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-05",
+  "revision": "uncluttered entrance and exit cues; clothing fit and original face preserved",
+  "suites": [
+    {
+      "suite": "QA-RESULTS.json",
+      "checks": 22,
+      "pass": true
+    },
+    {
+      "suite": "picture-menus/QA-RESULTS.json",
+      "checks": 10,
+      "pass": true
+    },
+    {
+      "suite": "mall/QA-RESULTS.json",
+      "checks": 18,
+      "pass": true
+    },
+    {
+      "suite": "mobile/QA-RESULTS.json",
+      "checks": 8,
+      "pass": true
+    },
+    {
+      "suite": "appearance/QA-RESULTS.json",
+      "checks": 8,
+      "pass": true
+    },
+    {
+      "suite": "compatibility/QA-RESULTS.json",
+      "checks": 2,
+      "pass": true
+    },
+    {
+      "suite": "hub/QA-RESULTS.json",
+      "checks": 17,
+      "pass": true
+    }
+  ],
+  "namedChecks": 85,
+  "facePixelRenderComparisons": 722,
+  "worldScenesVisuallyReviewed": 9,
+  "adventureExitMapsVisuallyReviewed": 9,
+  "syntax": true,
+  "javascriptFilesCompiled": 23,
+  "embeddedScriptsCompiled": 3,
+  "pythonParsing": true,
+  "cssParsing": true,
+  "cssParser": "existing canvas-helper postcss dependency, read-only",
+  "diffWhitespace": true,
+  "canonicalPreservation": true,
+  "generatedAssetHashes": true,
+  "generatedImagesVerified": 128,
+  "physicalDevice": false,
+  "childReview": false,
+  "published": false,
+  "publicationAuthorized": true,
+  "releasePackage": "hub/tests/release-package-results.json",
+  "releaseBrowser": "hub/tests/release-evidence/QA-RESULTS.json"
+}

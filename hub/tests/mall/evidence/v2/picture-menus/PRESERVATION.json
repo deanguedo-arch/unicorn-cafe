@@ -1,0 +1,27 @@
+{
+  "cafeEngineUnchanged": true,
+  "cafeEngineSha256": "78ec939c30e342b5504263d4a45f91d8df51c96dc2390fe42c08d609b7276258",
+  "adventureEmbeddedArtUnchanged": true,
+  "adventureArtSha256": "d3cf7a6986d9fd9a6449fa64c4470462698fda7520413c33c2633e309425e8b7",
+  "villageUnchanged": true,
+  "villageSha256": "1b60048baaf89114c4e312e3cf8ff25a6aa727db083e761b3e6158967466b934",
+  "canonicalUnicornsUnchanged": true,
+  "canonicalUnicorns": {
+    "game/build/assets/u_happy0.webp": "89060fc576fa58c53ce5caaabc0bc24437959734163468b909c25dcd79b028fe",
+    "game/build/assets/u_happy1.webp": "22411f7b9e7326cffaae1a8677d2f309ae7acc513a230608abfdefd5afe5fd56",
+    "game/build/assets/u_happy2.webp": "dc01aa7f25aedb6538beb165534dc5a8a7aa5e9f05dc925cb905be4e0c90a2ab",
+    "game/build/assets/u_idle0.webp": "dc75e909c6f7661102fc00b8c9603f645d940a75629a31c3c78096b841f43ccf",
+    "game/build/assets/u_idle1.webp": "0930b914bbb0cabeee1a7e2148a199f29945f6462615f69a3ca4822c680f3e9b",
+    "game/build/assets/u_run0.webp": "08ece334a927e16a775273f1c617df1004ab790b9d96bd9656737171c0f13892",
+    "game/build/assets/u_run1.webp": "79466fc46d05660380fb97d0f86d31774c5c334c7f81a83917dadee6005c6cd9",
+    "game/build/assets/u_run2.webp": "012da330a8d322bdbc1d04d4b7ec3fa7114a282ea4817c90d3ac5e822e375b59",
+    "game/build/assets/u_run3.webp": "5a13321a2cf2c2cc5de128d0bf58a02fbc27f310c3773bfc71b5da8ac7441ba4",
+    "game/build/assets/u_run4.webp": "7a2f55f51f8ccbfc4c6aaaf1ef9777ef88e32e7710414895ecdb130c8b0f5370",
+    "game/build/assets/u_run5.webp": "7ec3493b8565541244f9315504983accf82cd995cecc3244bb73763adb67e36c"
+  },
+  "nativeKeys": [
+    "sneaky-unicorn-restaurant-v1-4",
+    "sneaky-unicorn-midnight-v15"
+  ],
+  "nativeSchemaChanged": false
+}

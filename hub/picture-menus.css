@@ -1,0 +1,61 @@
+/* Restaurant picture menus: illustrated choices, previews, and space around each control. */
+.picture-sprite{display:inline-block;object-fit:contain;vertical-align:middle;flex-shrink:0;pointer-events:none}
+#world-tools{top:max(8px,env(safe-area-inset-top));left:max(12px,env(safe-area-inset-left));right:max(12px,env(safe-area-inset-right));gap:12px}
+#world-tools button{padding:7px;width:48px;height:44px;border:2px solid #e8cfa8;box-shadow:0 2px 0 #75557f,inset 0 0 0 2px #fff8dc;background:#fff1d7;border-radius:12px}
+#world-tools .picture-sprite{width:28px;height:28px}
+#wallet{height:44px;gap:7px;padding:6px 9px;min-width:76px}#coin-picture{width:26px;height:26px}#coin-picture .picture-sprite{width:26px;height:26px}
+#game-shell header{height:60px;padding:8px max(12px,env(safe-area-inset-left));border-bottom:0}
+#return{width:56px;height:44px;min-height:44px;padding:7px;background:#fff1d7;border:2px solid #e7cba7;border-radius:12px;box-shadow:0 2px 0 #75557f,inset 0 0 0 2px #fff8dc}
+#return .picture-sprite{width:32px;height:28px}#frames{height:calc(100% - 60px)}
+body:has(#game-shell:not([hidden])) #wallet{margin-left:68px}#loading{margin-left:100px}
+#enter{padding:9px}#enter>.picture-sprite{width:100%;height:100%}#enter #destination{width:29px;height:29px;bottom:8px;right:8px;padding:3px;background:#fff4da;border-radius:7px}
+#guide .picture-sprite{width:45%;height:54px}#rotate .picture-sprite{width:min(48vw,190px);height:min(48vw,190px)}
+#panel{inset:max(60px,env(safe-area-inset-top)) max(10px,env(safe-area-inset-right)) max(8px,env(safe-area-inset-bottom)) max(10px,env(safe-area-inset-left));background:#8c76a0;border:2px solid #efdab7;border-radius:8px}
+#panel-head{height:58px;padding:7px 12px;gap:12px;background:#fff0d8;border-bottom:2px solid #d9b6c8}
+#panel-symbol{width:42px;height:40px;display:flex;align-items:center;justify-content:center}#panel-symbol .picture-sprite{width:34px;height:34px}
+#panel button{border:3px solid #c294bf;border-radius:14px;background:#f9eed6;padding:7px;box-shadow:0 3px 0 #624674,inset 0 0 0 2px #fffbdc}
+#panel-close{height:44px;width:44px;padding:8px}#panel-close .picture-sprite{height:24px;width:24px}
+#panel-body{color:#fff4dc}#panel-body .picture-sprite{width:34px;height:34px}#panel-body .picture-button .picture-sprite{width:32px;height:32px}
+#panel-body button:disabled{opacity:.5}#panel-body button[aria-pressed=true]{border-color:#f4ca60;background:#fff3d4;outline:3px solid #ffe28d;outline-offset:-6px}
+.panel-tabs{padding:7px 12px;gap:12px;background:#f7e7cd;border-bottom:2px solid #d5b2cb;min-height:58px}
+.panel-tabs button{width:48px;height:44px;padding:6px!important;flex:0 0 48px}.panel-tabs .picture-sprite{width:30px!important;height:30px!important}
+.coin-price{color:#6a4776;gap:5px;font-size:20px}.coin-price .picture-sprite{width:24px!important;height:24px!important}
+.shop-layout{grid-template-columns:minmax(160px,30%) minmax(0,1fr)}
+.mirror-pane{padding:8px;background:#7e648f;border-right:0}.mirror-pane canvas{max-width:310px;max-height:100%;width:100%;height:100%;object-fit:contain}
+.shop-right{overflow:hidden}.item-grid{grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:12px;padding:14px;align-content:center;flex:1}
+.item-button{min-height:116px;gap:5px;padding:9px!important}.item-button>img:not(.picture-sprite){width:82px;height:78px}.item-button .coin-price{font-size:17px}
+.item-button .coin-price .picture-sprite{width:18px!important;height:18px!important}.item-button .owned-mark{width:21px;height:21px;top:5px;right:5px}.item-button .owned-mark .picture-sprite{width:19px!important;height:19px!important}
+.shop-actions{margin-top:auto;gap:14px;padding:8px 14px;background:#f7e7cd;border-top:2px solid #d5b2cb;min-height:64px}
+.shop-actions button{flex:0 0 52px;height:46px}.shop-actions .primary-action{flex-basis:64px;margin-left:auto}.shop-actions>.coin-price{order:4;margin-left:auto}
+.outfit-grid{flex:1;align-items:center;gap:16px;padding:14px}.outfit-cell{background:#f8ebd2;border:3px solid #c394bc;border-radius:14px;padding:7px;box-shadow:0 3px 0 #644776}.outfit-cell canvas{max-height:190px}.outfit-cell button{margin:5px}
+.wishlist-row{background:#f7e7cd;padding:8px;color:#6a4776}.wishlist-row .picture-sprite{width:25px!important;height:25px!important}
+.equipment-layout{display:grid;grid-template-columns:minmax(180px,40%) minmax(0,1fr);flex:1;min-height:0;gap:12px;padding:12px}
+.ride-preview{display:flex;align-items:center;justify-content:center;min-height:0;background:#7c638d;border:2px solid #ae8fb9;border-radius:8px;overflow:hidden}.ride-preview canvas{width:100%;height:100%;object-fit:contain}
+.equipment-grid{padding:0;gap:16px;min-width:0;align-items:center}.equipment-cell{background:#f8ebd2;border:3px solid #c394bc;border-radius:14px;padding:10px;box-shadow:0 3px 0 #644776;max-width:230px;flex:1;min-width:0}
+.equipment-cell>img{width:100%;height:132px}.equipment-cell>button.vehicle-choice{display:block;width:100%;height:140px;background:none!important;border:0!important;box-shadow:none!important;margin:0;padding:3px!important}.vehicle-choice>img{width:100%;height:100%;object-fit:contain}
+.equipment-cell .vehicle-controls{display:flex;justify-content:space-between;gap:10px}.equipment-cell .vehicle-controls button{margin:6px 0 0}.equipment-cell .primary-action{margin-left:auto}
+.round-intro{display:grid;grid-template-columns:minmax(0,1fr) 185px;padding:12px;gap:14px;align-items:stretch;min-height:0;position:relative}
+.arcade-preview{min-height:0;border:3px solid #ead4ac;border-radius:10px;overflow:hidden;background:#6e557f}.arcade-preview canvas{width:100%;height:100%;object-fit:contain;display:block}
+.arcade-entry{display:flex;flex-direction:column;align-items:center;justify-content:space-between;background:#f8ebd2;border:3px solid #c394bc;border-radius:12px;padding:12px;gap:10px;color:#6a4776}
+.arcade-entry>.picture-sprite{width:76px!important;height:76px!important}.arcade-entry .entry-price{display:flex;align-items:center;gap:7px}.arcade-entry .entry-controls{display:flex;align-items:center;justify-content:space-between;width:100%;gap:12px}.round-intro .primary-action{position:static;width:64px;min-height:48px;margin-left:auto}
+.stamp-row{min-height:47px;gap:9px;background:#f4e5cf;flex-shrink:0}.stamp-row .picture-sprite{width:25px!important;height:25px!important}.stamp-row>img:not(.picture-sprite){width:48px;height:40px}
+.round-result{color:#6a4776;background:#f4e5cf}.round-result>.picture-sprite{width:80px!important;height:80px!important}.round-result .earned .picture-sprite{width:40px!important;height:40px!important}
+.game-toolbar{color:#6a4776;padding:4px 12px;gap:10px}.game-toolbar .picture-sprite{width:25px!important;height:25px!important}
+.game-footer{background:#f7e7cd;gap:16px;padding:7px 12px;min-height:62px}.game-footer .picture-sprite{width:32px!important;height:32px!important}.game-footer button{height:46px;min-width:58px!important}.game-footer .primary-action{margin-left:auto}.game-footer .throw-pictures{display:flex;align-items:center;gap:9px}.throw-pictures .used{opacity:.27}
+.library-layout{display:grid;grid-template-columns:minmax(160px,35%) minmax(0,1fr);min-height:0;flex:1}.puzzle-preview{padding:12px;display:grid;place-items:center;background:#7e648f;min-height:0}.puzzle-preview img{width:100%;max-height:100%;object-fit:contain;border:4px solid #fff1d1;border-radius:10px}.puzzle-choices{min-width:0;min-height:0;display:flex;flex-direction:column}.puzzle-grid{grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(2,minmax(66px,1fr));gap:10px;padding:12px;align-content:stretch}.puzzle-tile{min-width:0;min-height:66px;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:8px!important}.puzzle-grid .puzzle-tile>img{display:block;width:100%;height:100%;max-height:140px;object-fit:contain;border-radius:5px}.puzzle-grid .owned-mark .picture-sprite{height:21px!important;width:21px!important}
+.theme-tabs{min-height:52px;gap:10px;padding:6px 12px}.theme-tabs button{flex:1;min-width:44px;width:auto}.theme-tabs img{width:35px;height:27px}.puzzle-footer{background:#f4e5cf;color:#6a4776;gap:12px;padding:7px 12px;min-height:62px}.puzzle-footer .picture-sprite{width:32px!important;height:32px!important}
+.photo-layout{display:grid;grid-template-columns:minmax(0,1fr) 150px;gap:14px;padding:14px;flex:1;min-height:0}.photo-preview{min-width:0;max-height:100%;width:100%;height:100%;border:5px solid #fff1d7;border-radius:8px}.photo-controls{display:flex;flex-direction:column;align-items:center;justify-content:space-between;background:#f7e8d0;border:3px solid #c394bc;border-radius:12px;padding:10px;gap:8px}.photo-controls>img{height:70px;width:95px;object-fit:contain}.photo-controls .primary-action{align-self:flex-end;margin-top:auto}.photo-grid img{border:5px solid #fff1d7;box-shadow:0 3px 0 #624674}.photo-grid{gap:16px}
+.game-canvas{height:0;flex:1}.game-toolbar{min-width:0}
+#picture-toast .picture-sprite{width:30px;height:30px}.storage-note .picture-sprite{width:54px!important;height:54px!important}
+@media(max-height:540px){
+ #panel-head{height:54px;padding:5px 12px}.panel-tabs{min-height:54px;padding:5px 12px}
+ .item-grid{grid-template-columns:repeat(auto-fill,minmax(91px,1fr));padding:10px;gap:10px;align-content:start}.item-button{min-height:98px;padding:7px!important}.item-button>img:not(.picture-sprite){width:70px;height:63px}
+ .shop-actions{padding:7px 12px;min-height:60px}.equipment-layout{grid-template-columns:36% minmax(0,1fr);padding:10px;gap:12px}.equipment-cell{padding:7px}.equipment-cell>button.vehicle-choice{height:105px}.equipment-cell>img{height:100px}.equipment-grid{gap:12px}
+ .round-intro{grid-template-columns:minmax(0,1fr) 158px;padding:9px;gap:12px}.arcade-entry{padding:8px;gap:6px}.arcade-entry>.picture-sprite{width:54px!important;height:54px!important}
+ .puzzle-grid{padding:8px;gap:8px;align-content:start}.puzzle-grid img{height:65px}.library-layout{grid-template-columns:31% minmax(0,1fr)}.theme-tabs{min-height:52px}.photo-layout{padding:10px;gap:12px}.outfit-cell canvas{height:110px}.outfit-grid{padding:10px;gap:14px}
+}
+@media(max-height:350px){
+ #panel{inset:58px 8px 6px}#panel-head{height:50px;padding:3px 10px}.panel-tabs{padding:4px 10px;min-height:52px}.shop-actions{padding:5px 10px;min-height:56px}.item-grid{padding:7px;gap:8px;grid-template-columns:repeat(auto-fill,minmax(80px,1fr))}.item-button{min-height:87px}.item-button>img:not(.picture-sprite){width:60px;height:53px}
+ .equipment-cell>button.vehicle-choice{height:77px}.equipment-cell{padding:5px}.equipment-cell .coin-price{font-size:17px}.equipment-layout{padding:7px}.equipment-grid{gap:9px}.outfit-cell canvas{height:76px}.outfit-cell{padding:4px}.outfit-cell button{margin:3px}.outfit-grid{gap:10px;padding:7px}
+ .game-footer,.puzzle-footer{padding:5px 10px;min-height:56px}.puzzle-grid img{height:51px}.puzzle-grid{padding:7px;gap:7px}.puzzle-preview{padding:8px}.arcade-entry>.picture-sprite{width:42px!important;height:42px!important}.stamp-row{min-height:40px;padding:3px}.photo-controls>img{height:46px}.photo-layout{grid-template-columns:minmax(0,1fr) 130px;padding:8px}
+}

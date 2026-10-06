@@ -1,0 +1,59 @@
+{
+  "route": "built-in image_gen",
+  "source": "/Users/deanguedo/.codex/generated_images/01a10d6c-522f-7633-aa66-aa09084e1004/exec-d8f54e95-0b81-4917-af3d-a5b97dc0916a.png",
+  "atlas": "hub/assets/navigation/entrances-v1.png",
+  "sha256": "cecd82e98d92426866c583935ef2e7b9cc42a2166ff122d280ca7c21096b7e82",
+  "promptSet": "hub/assets/navigation/PROMPTS.json",
+  "packaging": "Exact alpha-bounded crops only. Source pixels, canonical backgrounds and artwork preserved.",
+  "sprites": {
+    "entrance-mat": {
+      "path": "hub/assets/navigation/entrance-mat.png",
+      "size": [
+        660,
+        376
+      ],
+      "sha256": "a27cf4d61da00f0f8312893dbf5dd86fddbde579a092cae2076fb166cbeaa7fa"
+    },
+    "exit-mat": {
+      "path": "hub/assets/navigation/exit-mat.png",
+      "size": [
+        665,
+        378
+      ],
+      "sha256": "c4b07085c8dd54e5a2d3f57b53acd7987d1d6f6a3623f4f4bed88a0ad43a6db8"
+    },
+    "picture-plaque": {
+      "path": "hub/assets/navigation/picture-plaque.png",
+      "size": [
+        584,
+        457
+      ],
+      "sha256": "cfccac8e86cfe00d7f490183c46ea00da46437a92269755afd681e01ac512395"
+    }
+  },
+  "status": "Oversized mats and plaques retired after user visual review; retained as source history only.",
+  "current": {
+    "source": "/Users/deanguedo/.codex/generated_images/01a10d6c-522f-7633-aa66-aa09084e1004/exec-0f300ef0-bf44-43bb-9702-81cac8809488.png",
+    "atlas": "hub/assets/navigation/floor-cues-v2.png",
+    "sha256": "8ceccec436a4da141252525e5e188785b5fb2687867eb31f0440fc5ac5423a29",
+    "sprites": {
+      "floor-footprints": {
+        "path": "hub/assets/navigation/floor-footprints.png",
+        "size": [
+          614,
+          432
+        ],
+        "sha256": "cf2460fd89f011123f1f1d61c8a69be43e81843edbbeda39165f1f47c9de79c1"
+      },
+      "floor-exit-arrow": {
+        "path": "hub/assets/navigation/floor-exit-arrow.png",
+        "size": [
+          533,
+          358
+        ],
+        "sha256": "d95e4d0bbb12b9630ea49499257012f48807f2cc705aa3b09aacc0edb3c70e50"
+      }
+    },
+    "rendering": "Small floor markings and a nearby soft highlight; no duplicated signs, oversized rugs or added doors."
+  }
+}

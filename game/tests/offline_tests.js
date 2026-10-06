@@ -1,6 +1,7 @@
 /* Cache/worker logic simulation, NOT a real installed PWA test. */
 const vm=require('node:vm'),fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
-const root=path.join(__dirname,'..','pages'),source=fs.readFileSync(path.join(root,'sw.js'),'utf8');const report=[];
+const worldPackage=fs.existsSync(path.join(__dirname,'..','pages','RELEASE.json'))&&fs.readFileSync(path.join(__dirname,'..','pages','index.html'),'utf8').includes("new URL('./hub/'+location.search,location.href)");
+const root=path.join(__dirname,'..',worldPackage?'cafe-pages':'pages'),source=fs.readFileSync(path.join(root,'sw.js'),'utf8');const report=[];
 async function test(name,fn){try{const detail=await fn();report.push({name,pass:true,detail});console.log('PASS',name);}catch(e){report.push({name,pass:false,error:e.stack});console.error('FAIL',name,e.stack);}}
 function harness(fail=false){
  const scope='https://test.invalid/restaurant/',handlers={},db=new Map(),state={claimed:false,skip:false,network:0},key=q=>new URL(typeof q==='string'?q:q.url,scope).href;

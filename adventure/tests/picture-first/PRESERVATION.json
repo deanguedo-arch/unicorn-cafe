@@ -1,0 +1,95 @@
+{
+  "checks": [
+    {
+      "source": "const DATA=",
+      "unchanged": true,
+      "sha256": "a2324f865160ba61d149891128baa5099503910e548e2d2b0913e8f935489c0b"
+    },
+    {
+      "source": "Object.assign(DATA,",
+      "unchanged": true,
+      "sha256": "bc768eab0fa6fe00c29e743bc624ede5ff1dbb0aa76e83c53db591a37e899328"
+    },
+    {
+      "source": "const ATLAS=",
+      "unchanged": true,
+      "sha256": "49bc423c7aea4ffbce553df46b8ea5ccc9342e7b3719988481a96bddd950fdd9"
+    },
+    {
+      "source": "const LEVELS = ",
+      "unchanged": true,
+      "sha256": "9c9e76b14089ac5ae9ef2c7e8afbe3a9f5918811a908123c4221621977fe5942"
+    },
+    {
+      "source": "LEVELS.push(",
+      "unchanged": true,
+      "sha256": "0b3260d042123da0f20550c89b8766dc344b739aa389d68a251a4b97cf6ae97c"
+    },
+    {
+      "source": "const V9_PLAYABLE=",
+      "unchanged": true,
+      "sha256": "9727f095ae4c7e0f92d2da97ae139805e71af7e32d5b832cf79b12b77d90081d"
+    },
+    {
+      "source": "const V9=",
+      "unchanged": true,
+      "sha256": "3306c9330aa80e69f8066ef63b79c97456a71431438d9a788325f4a22748cb49"
+    },
+    {
+      "source": "cloneScene",
+      "unchanged": true,
+      "sha256": "25e0cf8252ae4d53210403330e8da84398dba328003c3c64f1ebbeea3f261ede"
+    },
+    {
+      "source": "movement",
+      "unchanged": true,
+      "sha256": "9ff9a0e5e0c100be68db3c50b45a033161c7fda7eb875f1be85fc3604fd67e8f"
+    },
+    {
+      "source": "carriedEntries",
+      "unchanged": true,
+      "sha256": "629af6b9e41229e8f1f2e7970f0cb80fc256128bd628164a3cd63feeb2912a09"
+    },
+    {
+      "source": "carryCapacity",
+      "unchanged": true,
+      "sha256": "6afb557d40dfeceadbda60fe2609a507ab75f82084c3f268fba0a2be63dbd58c"
+    },
+    {
+      "source": "firstFreeCarrier",
+      "unchanged": true,
+      "sha256": "cf58824c421bbe015f4615744b004d35e5a67f307c3c906746d43ce1062d9d8b"
+    },
+    {
+      "source": "assignCarrier",
+      "unchanged": true,
+      "sha256": "373582e619291553f8f7113df3c82a4d693ef64437d3ac1d4d1237561e3cc314"
+    },
+    {
+      "source": "clearCarrierFor",
+      "unchanged": true,
+      "sha256": "873710b2dff3d4d5ca1648c54abf872570ee458ad293e0e05cf1d231df921f0a"
+    },
+    {
+      "source": "valid",
+      "unchanged": true,
+      "sha256": "0d2ab6780f20da6330cb18e7d32feb7562e31b78f8f28026e6664c213608cf19"
+    },
+    {
+      "source": "slide",
+      "unchanged": true,
+      "sha256": "83c23996e0b2ffa0678da87d6ef7ff2774bd5c94f2ad962c0e808a84b06cae3d"
+    },
+    {
+      "source": "safestRoutePoint",
+      "unchanged": true,
+      "sha256": "f1abff9cd6ef7736b171ebab446d6e4fa65c2a04fc5c63354a1b245ba75aa81e"
+    },
+    {
+      "source": "starsEarned",
+      "unchanged": true,
+      "sha256": "a443c7ecae863e55f558522e47846298bed02a56271598c2a6d18954ec5e6a9e"
+    }
+  ],
+  "baseline": "Original current index.html captured before picture-first edits; import packages remain preserved"
+}

@@ -1,0 +1,653 @@
+{
+  "processing": "Exact source rectangle crops, with complete glyph bounds across nominal grid edges. Generated alpha and colors retained; no repainting or canonical asset changes.",
+  "outputs": {
+    "assets/wardrobe/items/bow.png": {
+      "sha256": "05b0c99c65da6af5bf3dd247e8b2557cd4afe78805b012cb5dcf238cd033bfbc",
+      "size": [
+        209,
+        181
+      ],
+      "mode": "RGBA"
+    },
+    "assets/wardrobe/items/tee.png": {
+      "sha256": "eba683bd17f32e9049ffb21f3d2210b6a2ead09cbe13533557de396a8de0de08",
+      "size": [
+        220,
+        201
+      ],
+      "mode": "RGBA"
+    },
+    "assets/wardrobe/items/beads.png": {
+      "sha256": "e53af810b34510931e52fd666b9609eb05a8b36ad8cef98e4d645860016f87e9",
+      "size": [
+        196,
+        164
+      ],
+      "mode": "RGBA"
+    },
+    "assets/wardrobe/items/flower-crown.png": {
+      "sha256": "b914b39d403da1c3e1da98824a2bfaa280991def2480d12dd79fad889de69b38",
+      "size": [
+        227,
+        171
+      ],
+      "mode": "RGBA"
+    },
+    "assets/wardrobe/items/sunhat.png": {
+      "sha256": "c9faf61d48390247dfa347fc079eb5c4b699292ef189bda7d81d2d4f29d9af73",
+      "size": [
+        236,
+        182
+      ],
+      "mode": "RGBA"
+    },
+    "assets/wardrobe/items/helmet.png": {
+      "sha256": "72e864587fe8f4f229e9008d5dde17c3131340480a766f80e06d42a7a2e4d5c2",
+      "size": [
+        213,
+        204
+      ],
+      "mode": "RGBA"
+    },
+    "assets/wardrobe/items/star-jacket.png": {
+      "sha256": "4790f6e24ab9176ce16a012b2a35170a1459df6c6e5973ea148ed4ca7ecb78dd",
+      "size": [
+        227,
+        185
+      ],
+      "mode": "RGBA"
+    },
+    "assets/wardrobe/items/rainbow-dress.png": {
+      "sha256": "693c465fec93207cdff5a765f679203acb1631f51a216237e680df2a9731a295",
+      "size": [
+        234,
+        231
+      ],
+      "mode": "RGBA"
+    },
+    "assets/wardrobe/items/raincoat.png": {
+      "sha256": "012571cb2a8ab82441a5871624ad5c02df23496223fc10029a9bf3d5ee8a1f38",
+      "size": [
+        230,
+        225
+      ],
+      "mode": "RGBA"
+    },
+    "assets/wardrobe/items/scarf.png": {
+      "sha256": "80453a8a68d79291fe0df1544169bb23fb3ee19c56fbdbf44c0bbc3fac801e17",
+      "size": [
+        212,
+        207
+      ],
+      "mode": "RGBA"
+    },
+    "assets/wardrobe/items/glasses.png": {
+      "sha256": "21bb6f92bf78a86cc6cbac2022801e7b42b20847a1d787ab6654bd58c9471841",
+      "size": [
+        236,
+        193
+      ],
+      "mode": "RGBA"
+    },
+    "assets/wardrobe/items/satchel.png": {
+      "sha256": "38dde04d098b13abb59743e41a0533cea47e6bde94219f0dc8fc19b342837112",
+      "size": [
+        191,
+        226
+      ],
+      "mode": "RGBA"
+    },
+    "assets/wardrobe/items/skateboard.png": {
+      "sha256": "ba6754697af90d366c0808ff88fda78ae58b42d97419f7ddb20ba824ec060238",
+      "size": [
+        222,
+        169
+      ],
+      "mode": "RGBA"
+    },
+    "assets/wardrobe/items/bike.png": {
+      "sha256": "3ed0cee52dfaf6356d6ec418fe2b9d84f0d9e735ddf8b090f8d7f47d7904bc97",
+      "size": [
+        234,
+        210
+      ],
+      "mode": "RGBA"
+    },
+    "assets/wardrobe/items/prize-star-bow.png": {
+      "sha256": "3c3cca9b1fcfd17af6b4abf8b138ab1bb9ec4c34b74bd92bea9ce3fb4bb59f84",
+      "size": [
+        207,
+        220
+      ],
+      "mode": "RGBA"
+    },
+    "assets/wardrobe/items/prize-rainbow-cape.png": {
+      "sha256": "6369f1213a0b098e143e0f1f77b66e1ca041ba905ee1bb19105d9e60fc1d6b88",
+      "size": [
+        243,
+        251
+      ],
+      "mode": "RGBA"
+    },
+    "assets/wardrobe/items/prize-comet-helmet.png": {
+      "sha256": "fa5730ee2c322d36337dd0a09fc2cc0c17867ac18f77222a03754c46c251ecf9",
+      "size": [
+        242,
+        250
+      ],
+      "mode": "RGBA"
+    },
+    "assets/wardrobe/items/prize-gold-scarf.png": {
+      "sha256": "1f959c6bc19fd4779ab92d2568616cd3b53f959998237d0bbc35eae01046722e",
+      "size": [
+        217,
+        212
+      ],
+      "mode": "RGBA"
+    },
+    "assets/wardrobe/items/prize-bubble-glasses.png": {
+      "sha256": "63e7bf9da2432e5142513cebb195fc181e4067ee53dbfd5e936403fbcb69eef4",
+      "size": [
+        243,
+        207
+      ],
+      "mode": "RGBA"
+    },
+    "assets/wardrobe/items/prize-moon-bag.png": {
+      "sha256": "4a1438ee2140f745319c984bb8e3f1592965c8dfa297560141c021ebb5b182dc",
+      "size": [
+        191,
+        251
+      ],
+      "mode": "RGBA"
+    },
+    "assets/wardrobe/items/legacy-princess.png": {
+      "sha256": "1522dd9d7aa2c542ac2646c69639aa312e40dcb689b067b14819cac39b8779ff",
+      "size": [
+        234,
+        193
+      ],
+      "mode": "RGBA"
+    },
+    "assets/wardrobe/items/legacy-hero.png": {
+      "sha256": "559926afb9cc659ff71f238490113ab615f54c5b1c32d22db6601cd47e1e3445",
+      "size": [
+        242,
+        201
+      ],
+      "mode": "RGBA"
+    },
+    "assets/wardrobe/items/legacy-mask.png": {
+      "sha256": "2da9cbce2e15be0adae90fb4b9ab55acbbda3c8705f2cbc556916fb89c0195fa",
+      "size": [
+        229,
+        142
+      ],
+      "mode": "RGBA"
+    },
+    "assets/wardrobe/items/legacy-chef.png": {
+      "sha256": "45f1780ef956ffc0c922ca2ab6df9fb236c17b23036bbec50d1bf00bbdf6496a",
+      "size": [
+        226,
+        202
+      ],
+      "mode": "RGBA"
+    },
+    "assets/wardrobe/items/legacy-space.png": {
+      "sha256": "29853552301b392be7dded03a0ecf82280c278417257ae06cd4589547b63c785",
+      "size": [
+        221,
+        209
+      ],
+      "mode": "RGBA"
+    },
+    "assets/wardrobe/catalogue-v2.png": {
+      "sha256": "f22dc285a0d7314bb382219104dd1162a79c81fa5d48d0f06882863abcc87697",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA"
+    },
+    "assets/wardrobe/worn/glasses.png": {
+      "sha256": "ac11fbe58816a30fcdcead89dcfcee8c00966fe862860660fcd51e93932f3098",
+      "size": [
+        612,
+        305
+      ],
+      "mode": "RGBA"
+    },
+    "assets/wardrobe/worn/prize-bubble-glasses.png": {
+      "sha256": "9139e8594d468a061e54ae6cefe703e758631588afa86dbe44bd28348b560c75",
+      "size": [
+        606,
+        305
+      ],
+      "mode": "RGBA"
+    },
+    "assets/wardrobe/worn/legacy-mask.png": {
+      "sha256": "bdab3deb7e11076619ad0650c695b0f50d7c33beddf7923d28c9397e70b4e5a1",
+      "size": [
+        590,
+        337
+      ],
+      "mode": "RGBA"
+    },
+    "assets/wardrobe/worn/legacy-space.png": {
+      "sha256": "9ffb651c53abd24238f05d84fce3477c2995218900a474be0a4441338bc17892",
+      "size": [
+        553,
+        508
+      ],
+      "mode": "RGBA"
+    },
+    "assets/wardrobe/source/clear-eyewear-v2.png": {
+      "sha256": "07b250adb1b8674d7895202efc95bd67c1a300fb1c6143296e058dd47aa4c1b4",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA"
+    },
+    "assets/wardrobe/tee-v2.png": {
+      "sha256": "a5958c2ced3a282631e3823d5918d26a5a8a0626314ffa75f5dd31c3161f754b",
+      "size": [
+        1448,
+        1086
+      ],
+      "mode": "RGBA"
+    },
+    "assets/wardrobe/star-jacket-v2.png": {
+      "sha256": "955aab268da2b7c1cceb00f60270b759bac993a473b6f23bff906127691434b1",
+      "size": [
+        1448,
+        1086
+      ],
+      "mode": "RGBA"
+    },
+    "assets/wardrobe/rainbow-dress-v2.png": {
+      "sha256": "97ec32226c97f4c6302fb5afea8a373a26c00bba5f87f93dee85febe7ce8259c",
+      "size": [
+        1448,
+        1086
+      ],
+      "mode": "RGBA"
+    },
+    "assets/wardrobe/raincoat-v2.png": {
+      "sha256": "09eff52f3dd812b1872f71ff5339870985176c3fe8fb22eed77290d947f75779",
+      "size": [
+        1448,
+        1086
+      ],
+      "mode": "RGBA"
+    },
+    "assets/wardrobe/prize-rainbow-cape-v2.png": {
+      "sha256": "b48c4866f8a0c1ed9b73abc0a17cd2806dedc4d65807589f90e201c47ae49659",
+      "size": [
+        1448,
+        1086
+      ],
+      "mode": "RGBA"
+    },
+    "assets/wardrobe/legacy-hero-v2.png": {
+      "sha256": "172b4c81f67d89df5a47e42dcecaf2ec1ad89493196f5807da4fcc318dfc01ad",
+      "size": [
+        1448,
+        1086
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/icons/back.png": {
+      "sha256": "126f27c1d41d1b8bc6cb3d2fc3efa1a5c5466d6daf56995eff6a8744973d1dde",
+      "size": [
+        173,
+        145
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/icons/close.png": {
+      "sha256": "03d6268242007ac3ec05ca47c1aaece5a291ccddbab59649860f4c9fe711e3ed",
+      "size": [
+        157,
+        156
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/icons/coin.png": {
+      "sha256": "f2db62a4c88e47e3e03dfc5622ee9cea36a9f50b95a388b48b7c19bbe5070d1d",
+      "size": [
+        167,
+        164
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/icons/bag.png": {
+      "sha256": "1ad4072b1527bdb8d966cfa8e5dafc7d3c9c5b53e952924bd18305c70158a309",
+      "size": [
+        190,
+        179
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/icons/hanger.png": {
+      "sha256": "c2f302b32d0c646772aaeaa4cba2afd9ec484cb341f017d0def316e3ff9f6a2b",
+      "size": [
+        191,
+        149
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/icons/mirror.png": {
+      "sha256": "b780b9998ea25d33705a6d77f19a37aad7f94a67a9be239cc8010eae4c8e9327",
+      "size": [
+        169,
+        200
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/icons/camera.png": {
+      "sha256": "d582c92b09661cce0cf55905cc1eb5c6f2fc060bc84dc07274ba6a373927d790",
+      "size": [
+        182,
+        183
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/icons/album.png": {
+      "sha256": "436fdf7ed348b99931ff0984a3bde979e1b4b4539a6b91ee476befc55c568801",
+      "size": [
+        187,
+        189
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/icons/play.png": {
+      "sha256": "9edc6b8bc7b21b03e5654fcf0b5bebf95454de6c179eeac8682a59c7a13b8b34",
+      "size": [
+        147,
+        165
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/icons/check.png": {
+      "sha256": "c38bd237d76becfc255700fe1100b84fe9865a4482891f99c6bdf146c3ddcf9c",
+      "size": [
+        181,
+        154
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/icons/star.png": {
+      "sha256": "38771942bfc9fe31c990d0d6eba187accdaaa5c9c6bd5981e10fc611a771645a",
+      "size": [
+        178,
+        173
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/icons/puzzle.png": {
+      "sha256": "0cb3ff5a8e2042f0781356062c6d1637e41cbc978db8634d6a04d200d8fe8701",
+      "size": [
+        187,
+        191
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/icons/pins.png": {
+      "sha256": "b04fd321d06810d31047301623e84b012777828631310ab2c1dc82caad53bc18",
+      "size": [
+        156,
+        182
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/icons/basket.png": {
+      "sha256": "321868cee9c40b9e0f4a7d91ebb542f3c84ec7a4691d708875affb4bd8113e13",
+      "size": [
+        185,
+        177
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/icons/save.png": {
+      "sha256": "7c3f8b9088213f1382527df21a802aa6b9ab7cb9db8010d451066cde16aebbc2",
+      "size": [
+        172,
+        192
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/icons/outfits.png": {
+      "sha256": "617578a2f0bc975ad9df5bb3f2f238669e9fb9062acf0388d22aeecee0d3ca15",
+      "size": [
+        211,
+        150
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/icons/home.png": {
+      "sha256": "f66e5883cb7fdd2523cde642e830d52c9af5361313da246b4d0570ee895f8c4d",
+      "size": [
+        210,
+        184
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/icons/buy.png": {
+      "sha256": "887dead9bcced600143381f6e0f391dc81ab03eeb9378f375e4d26a1225544fd",
+      "size": [
+        181,
+        179
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/icons/heart.png": {
+      "sha256": "61788c6934477c2266a8eb697d1f8ca33086dfb02f73c32ab22c376afc2aefa9",
+      "size": [
+        177,
+        148
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/icons/sound.png": {
+      "sha256": "14f631335518abb6f356fbcb43c213c5d030a5a844e0395b30c97a15a5d2e4ee",
+      "size": [
+        180,
+        144
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/icons/mute.png": {
+      "sha256": "41a719c2e262f5a7655a2cc9d397736a19606bca621fd56c1c5e14a876aec49f",
+      "size": [
+        183,
+        144
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/icons/hand.png": {
+      "sha256": "ecf3e2cdd60756e74ed2bf35c9613acec1e5051f1a17985d7b1af9f9db81090a",
+      "size": [
+        179,
+        152
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/icons/door.png": {
+      "sha256": "18b6e914fbb7002d0fe87e3d9f7f7fa4b84c24d715fa7bea0a0b23c7f4154d4e",
+      "size": [
+        155,
+        189
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/icons/rotate.png": {
+      "sha256": "c6341e18fd009638c544cfb1a73d29af0edf7d138a431cab8aeac55592fe6599",
+      "size": [
+        185,
+        161
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/icons/grid4.png": {
+      "sha256": "8e1e4f37cbcaaee753f9938dec589e3f0ef8153479bb570226e236b6984f383a",
+      "size": [
+        150,
+        164
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/icons/grid9.png": {
+      "sha256": "58a6bdd131de4be58b2c04be212e320d919f6eb8367fe17a4ef687254be74434",
+      "size": [
+        172,
+        159
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/icons/grid16.png": {
+      "sha256": "539515aa30a9e84008ab202c971465e70b281689b087bd807d5977a88a9c16d1",
+      "size": [
+        162,
+        161
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/icons/retry.png": {
+      "sha256": "e55f7206aaccc0cf0767d6df170ee6f216dbac03b5d45a4043f4249959ac8a21",
+      "size": [
+        157,
+        156
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/icons/settings.png": {
+      "sha256": "529161b02c99f2762ee38afea2d90b5ef9d429956859d24b51c1ebe8bf423345",
+      "size": [
+        167,
+        165
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/icons/pause.png": {
+      "sha256": "8c33e660d6af9d75c2515ea2dd44058106850b1b809ab3dd5d9474bdfc3093ff",
+      "size": [
+        127,
+        137
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/icons/arrow.png": {
+      "sha256": "5c98368f586b2ebfa39e103b222df5b3c8db8b5d1cf7aa892021c4c921a52caa",
+      "size": [
+        170,
+        145
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/icons/ball.png": {
+      "sha256": "982d01cb903ecf9781a5e0dc8c545cccaab97cf9660ace2f3f2188c9787ec49c",
+      "size": [
+        170,
+        170
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/icons/chef.png": {
+      "sha256": "bd6e39924205006a34d53909cd46050d12ba36d0e1583d2935f72e1f8035f307",
+      "size": [
+        182,
+        182
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/icons/diamond.png": {
+      "sha256": "c5d0884c9751dfcf28622f683b9aacaede867f0b019fdcccb602369efbfbdb5a",
+      "size": [
+        148,
+        186
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/icons/moon.png": {
+      "sha256": "068c0c16be72716ba5f3231704b1a5875ec7007a0d69b1f4351ec141edaf7c8d",
+      "size": [
+        163,
+        170
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/icons/flower.png": {
+      "sha256": "e58fa84558cf13cb18d4511b308ba231ce99c6f5c6a8c929853f48393b4eb94f",
+      "size": [
+        166,
+        180
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/source/controls-v2.png": {
+      "sha256": "e97e12fcad845e682da47c8793add9a80e89af55c240c5fede6bfbe72f80e1e5",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA"
+    },
+    "assets/wardrobe/source/bike-riding-v2.png": {
+      "sha256": "3a49afeb2f928b0825602ea7b2b19a41c02204e1bdfae547fa4a5fd3469ccc10",
+      "size": [
+        2172,
+        724
+      ],
+      "mode": "RGBA"
+    },
+    "assets/wardrobe/source/skateboard-riding-v2.png": {
+      "sha256": "7177e4ec5a6c7882d08e577003d26d2dc5aa9a197cefb2047bf569cf626d288d",
+      "size": [
+        2172,
+        724
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/props/bowling-pin.png": {
+      "sha256": "1896bb8ecc1e07aa507a7343613c1457cd3a97e048bf56a927d9492f3d406d66",
+      "size": [
+        534,
+        1236
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/source/bowling-pin-v2.png": {
+      "sha256": "0b724101377f8687bb1adda65c4ee29d872a9967d794154487faef5448fb56b8",
+      "size": [
+        1122,
+        1402
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/props/catching-basket.png": {
+      "sha256": "fb4bad240192d950e93f0693823545ea2b9b02f96f3fff789469b23e7d862fff",
+      "size": [
+        1081,
+        759
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/source/catching-basket-v2.png": {
+      "sha256": "05d44edf8ec3cc6027c6c2c76c4d2b56f951dc9f103b0dd99354d449f157f14f",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA"
+    },
+    "assets/controls/source/bowling-lane-v2.png": {
+      "sha256": "8aa2a73121f1a927c63b9c64efe8e0afb53edc42dfe4320fab24703cadd73ebe",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB"
+    }
+  }
+}

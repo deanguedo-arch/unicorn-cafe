@@ -1,0 +1,14 @@
+{
+  "results": [
+    {
+      "name": "Chromium legacy origins",
+      "pass": true
+    },
+    {
+      "name": "WebKit same origin",
+      "pass": true
+    }
+  ],
+  "physicalSafari": false,
+  "physicalDevice": false
+}

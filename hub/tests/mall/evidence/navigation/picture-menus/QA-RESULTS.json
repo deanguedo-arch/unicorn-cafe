@@ -1,0 +1,55 @@
+{
+  "results": [
+    {
+      "name": "25 illustrated items, 36 controls, 66 clothing poses and eight riding poses load successfully",
+      "pass": true,
+      "details": {
+        "items": 25,
+        "icons": 36,
+        "bodyFrames": 66,
+        "rides": 8,
+        "allLoaded": true
+      }
+    },
+    {
+      "name": "Illustrated menus fit 852x393 landscape: padded toolbar, contained pictures and lower-right actions",
+      "pass": true
+    },
+    {
+      "name": "Illustrated menus fit 568x320 landscape: padded toolbar, contained pictures and lower-right actions",
+      "pass": true
+    },
+    {
+      "name": "Real mouse/touch aiming, six-pin hit, fresh ten-pin throws, visible impact and portrait pause; free demonstration changes no money or stamps",
+      "pass": true
+    },
+    {
+      "name": "Paid bowling resumes after reload for free and returns two coins plus one stamp exactly once after three actual rolls",
+      "pass": true
+    },
+    {
+      "name": "Free fitted photo preview saves to the existing local album",
+      "pass": true
+    },
+    {
+      "name": "Restaurant second toolbar has padding and its diamond stays below all order pictures at 852x393",
+      "pass": true
+    },
+    {
+      "name": "Restaurant second toolbar has padding and its diamond stays below all order pictures at 568x320",
+      "pass": true
+    },
+    {
+      "name": "Appearance review sheet captures all six body pieces in every original pose and both four-frame rides",
+      "pass": true
+    },
+    {
+      "name": "No page exceptions or missing sprite requests",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "failed": [],
+  "physicalDevice": false,
+  "childReview": false
+}

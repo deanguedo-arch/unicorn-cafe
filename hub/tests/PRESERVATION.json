@@ -1,0 +1,12 @@
+{
+  "baseline_head": "624349312bb9ee0ea34ea139e98d719de5bf1d2a",
+  "prior_files": 362,
+  "changed_prior_files": [
+    "UNICORN-WORLD-VISION.md",
+    "PROJECT-RULES.md",
+    "game/build/src/game.js",
+    "adventure/index.html"
+  ],
+  "unexpected_changes": [],
+  "preserved_prior_files": 358
+}

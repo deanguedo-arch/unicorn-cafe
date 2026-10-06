@@ -1,0 +1,121 @@
+{
+  "source": "adventure/index.html const DATA; unchanged extracted embedded pixels",
+  "assets": {
+    "dog_idle": {
+      "path": "hub/assets/puzzles/dog_idle.webp",
+      "sha256": "96e69bddc2757ed3375b42fbdb9a8b270e18da191c75bf59f753796e3b22b993"
+    },
+    "dog_happy": {
+      "path": "hub/assets/puzzles/dog_happy.webp",
+      "sha256": "1f1afe7233381ec5540e57fcf0c98a5fd01ffcd573bb0794b7592159e71516b0"
+    },
+    "teddy": {
+      "path": "hub/assets/puzzles/teddy.webp",
+      "sha256": "a59c899b2c92fe708dec123d4f074be933c396b1b513f815fff367fe01a164d8"
+    },
+    "toyunicorn": {
+      "path": "hub/assets/puzzles/toyunicorn.webp",
+      "sha256": "8559c1cfa6c3ccbcc192b1553c72d86f612a5f2652f135c0d015060251580ef5"
+    },
+    "ball": {
+      "path": "hub/assets/puzzles/ball.webp",
+      "sha256": "107b533bf29293164f9e59c521df26adc4fd0fd33c58b84fa426991c35c56ff8"
+    },
+    "robot": {
+      "path": "hub/assets/puzzles/robot.webp",
+      "sha256": "256d1b934c934f89f07f662afcb3a6d0a535cbe1812085a75a430757945e7ab4"
+    },
+    "apple": {
+      "path": "hub/assets/puzzles/apple.webp",
+      "sha256": "43d522b791fbfb76c1ad93d7efdaa89c90de2a33d23ba328ab81bbf1841296cd"
+    },
+    "banana": {
+      "path": "hub/assets/puzzles/banana.webp",
+      "sha256": "c7dc021ff3bb53cffef8619e3279379b16ac9da10d2ab90d301ed3d34abedaff"
+    },
+    "cookie": {
+      "path": "hub/assets/puzzles/cookie.webp",
+      "sha256": "a38059c89aab9a158191745bedc6a13399ae3931d2dff57ea9e7e86de72b7bfb"
+    },
+    "donut": {
+      "path": "hub/assets/puzzles/donut.webp",
+      "sha256": "b8403d71b4b020cc909d0b615fa54f099792330a317a29ade0f0ec957453dabc"
+    },
+    "cupcake": {
+      "path": "hub/assets/puzzles/cupcake.webp",
+      "sha256": "9b250155761a34cd86d8ec2e6ed79388819e0a3c7311fc277361d7bee759471e"
+    },
+    "icecream": {
+      "path": "hub/assets/puzzles/icecream.webp",
+      "sha256": "e966468cf30d509f7fa6a9118e1bda2c1ed34163b73a0b9a111b5a7e87a703b5"
+    },
+    "bread": {
+      "path": "hub/assets/puzzles/bread.webp",
+      "sha256": "e5ef1a68591480854c0aa42333e33561c91b5e3d59b28e02e6cc783894aff54b"
+    },
+    "strawberry": {
+      "path": "hub/assets/puzzles/strawberry.webp",
+      "sha256": "1cee29a7392674d479aad3640998ccabf73ac5924c012f06c2e7a9bd3ec95c5d"
+    },
+    "cherries": {
+      "path": "hub/assets/puzzles/cherries.webp",
+      "sha256": "7c6f1df489ce50b07eacaedac578e4ed1b1e941e47ef2906fec0f943d5e45649"
+    },
+    "grapes": {
+      "path": "hub/assets/puzzles/grapes.webp",
+      "sha256": "88fa2fa5b8dc9b500daeff7da077abb6899ad7782a4bbca4ad7e8ccd5303eda1"
+    },
+    "peach": {
+      "path": "hub/assets/puzzles/peach.webp",
+      "sha256": "b7c8e1c1ff47ae037d329b3469f453ddc2e28ec7344b177b063064f287b92bc9"
+    },
+    "flowers": {
+      "path": "hub/assets/puzzles/flowers.webp",
+      "sha256": "03710810929ba04a822564cce3f1bf95f1a9327eaaac9250409093704bba575b"
+    },
+    "cake": {
+      "path": "hub/assets/puzzles/cake.webp",
+      "sha256": "15b05e16153188a005c0e0efddbaa9a152679f9f65e9b09f29010931aec84960"
+    },
+    "milkshake": {
+      "path": "hub/assets/puzzles/milkshake.webp",
+      "sha256": "85c17578af63d7739c5597f72300caa22464cb3251a6817a38594c425ad827f2"
+    },
+    "easy_house": {
+      "path": "hub/assets/puzzles/easy_house.webp",
+      "sha256": "2aa269c9383e519ff58a73977ef47bc55acaa9ff59f4d610857c7f3fd184eb36"
+    },
+    "easy_market": {
+      "path": "hub/assets/puzzles/easy_market.webp",
+      "sha256": "a9133cde4b75d123656604544c34224b996e4267079ee50b9a49bdec73d88569"
+    },
+    "easy_restaurant": {
+      "path": "hub/assets/puzzles/easy_restaurant.webp",
+      "sha256": "f066ad40b1a58d8c1f0a066e53e8b5af42e90fbd7bb66f3652e44c9dff495e35"
+    },
+    "easy_toys": {
+      "path": "hub/assets/puzzles/easy_toys.webp",
+      "sha256": "6ab3c2579a18d8a9f4d6d10c2def9b2887183ea3efadb598dbf9dbb828f835f0"
+    },
+    "house": {
+      "path": "hub/assets/puzzles/house.webp",
+      "sha256": "60ccfe3b0991f0ddeb8ef5da0163b4c9400e0540d711e4732a61f6d66259b1ec"
+    },
+    "store": {
+      "path": "hub/assets/puzzles/store.webp",
+      "sha256": "d8b5c2830fff86e408bb11774627539916e541f9f1e7e914069d083e690d45a4"
+    },
+    "plant": {
+      "path": "hub/assets/puzzles/plant.webp",
+      "sha256": "42f4f0176050b8608b7e79905f15b53ede0f097c40298fdf34ad907f525656d5"
+    },
+    "picture": {
+      "path": "hub/assets/puzzles/picture.webp",
+      "sha256": "24d858fff4673db9b65b06b41e77f74be8881c66b0d4f9dacabcf10c4cccbae2"
+    },
+    "book": {
+      "path": "hub/assets/puzzles/book.webp",
+      "sha256": "a8c11b49f96deb1062672784fc373e4e6c645b64e7f8f866b5719e56c04ca13e"
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "hub/index.html": {
+    "bytes": 2417,
+    "sha256": "89b2498d9d57bc95c2b9a277eab6ca1de9195900b51f51a66f4c7374e547d128"
+  },
+  "hub/world.css": {
+    "bytes": 2469,
+    "sha256": "8329c0fc4703a3c44397c38385224f1b1a160a1a98e01b769911108c5c577c1e"
+  },
+  "hub/world.js": {
+    "bytes": 13244,
+    "sha256": "0fa13c24a24c546147f1455a6ecdac34439628b7a08fb5d1e82cf132c472e0d4"
+  },
+  "hub/README.md": {
+    "bytes": 3956,
+    "sha256": "a8a67fccabb36be4994c4e9ed9a666675ad5ddd692d8b71917533131cd087f4e"
+  },
+  "hub/ART-PROVENANCE.json": {
+    "bytes": 992,
+    "sha256": "6944dc9f7d107728ca2b1414bf79a8d9aa291267775bbcfbe0f4a8842fa16f2f"
+  },
+  "hub/QA-REPORT.md": {
+    "bytes": 2291,
+    "sha256": "f53c82a506c956bbcd78f0a4dcfac60ebf290c30bc69cb9c201bb0e76714cf87"
+  },
+  "hub/tests/hub-844x390.png": {
+    "bytes": 638723,
+    "sha256": "91271592e5f453096148f2dacb31f6db8295ac4410365763d489306b4709d341"
+  },
+  "hub/tests/browser.cjs": {
+    "bytes": 9401,
+    "sha256": "a1b738f4778d37adc6663bb93a39614b3c0e16f5a60f13e9aa90f9fab1236fbb"
+  },
+  "hub/tests/hub-1280x720.png": {
+    "bytes": 1584691,
+    "sha256": "5f70671082477d89aa00bf4b6b67104b899b9e194fdad599d6b3a07d27a4872b"
+  },
+  "hub/tests/PRESERVATION.json": {
+    "bytes": 292,
+    "sha256": "014cc3549fb42810e5ee1f5fe8a473ae861fd196f3e773e05b5b09f1c8580068"
+  },
+  "hub/tests/hub-568x320.png": {
+    "bytes": 384424,
+    "sha256": "b9b767f0fb7c0e358e476427ba60c4cb6551586379f792f2e29a4734f7aab37b"
+  },
+  "hub/tests/cafe-door.png": {
+    "bytes": 637194,
+    "sha256": "69e07ea0ea210c13e4a8ccd4a768be3da23fbd1d2a638bfeb5d395e5c2dfed6b"
+  },
+  "hub/tests/cafe-playing.png": {
+    "bytes": 156098,
+    "sha256": "01ebca074992cb3ce495cc77537a9352d0531b1b3690b2723cf1a9380ca50b15"
+  },
+  "hub/tests/hub-667x375.png": {
+    "bytes": 513229,
+    "sha256": "b4834c26028a7c2805900295ee415024b921039fce469bb2fb9fe133b769774e"
+  },
+  "hub/tests/hub-740x300.png": {
+    "bytes": 440724,
+    "sha256": "afe14d110a14949121bb34dd79ec6c030dc1d656b0bc1c001922b8904cb551d4"
+  },
+  "hub/tests/actual-runtime.png": {
+    "bytes": 1609296,
+    "sha256": "21d8de31a7be1baa98ad7d49c0873e72054dd6fd95f9849c1ba2500bc9a6ad9e"
+  },
+  "hub/tests/QA-RESULTS.json": {
+    "bytes": 1894,
+    "sha256": "49da77887f8425c99b38ee451c4917cf38fad24d33213250eaa12a54b4bfef90"
+  },
+  "hub/tests/adventure-playing.png": {
+    "bytes": 414407,
+    "sha256": "df093636c9e8c414f242414f098a8a407d845743c59a05b0d1926210ce9dba4d"
+  },
+  "hub/tests/REVIEW-LINK-CHECK.json": {
+    "bytes": 143,
+    "sha256": "f680f8c8d0ac766e6d62727874fe760e93da54fe3bc9e7bf51203629f685dc60"
+  },
+  "hub/tests/hub-932x430.png": {
+    "bytes": 759090,
+    "sha256": "a71f6e1b9bc6cda6f25e717097f07ee61311a5be8e79daf2a2f39a292a15d678"
+  },
+  "hub/assets/village-concept.png": {
+    "bytes": 2575404,
+    "sha256": "1b60048baaf89114c4e312e3cf8ff25a6aa727db083e761b3e6158967466b934"
+  }
+}

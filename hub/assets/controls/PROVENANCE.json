@@ -1,0 +1,14 @@
+{
+  "route": "built-in image_gen",
+  "reference": "Canonical unicorn sprite atlas and unchanged village illustration",
+  "assets": {
+    "controls": {
+      "source": "/Users/deanguedo/.codex/generated_images/01a10d6c-522f-7633-aa66-aa09084e1004/exec-6a20467e-7a4d-4c13-9f36-4cb7a41cbe59.png",
+      "path": "hub/assets/controls/source/controls-v2.png",
+      "bytes": 1846278,
+      "sha256": "e97e12fcad845e682da47c8793add9a80e89af55c240c5fede6bfbe72f80e1e5"
+    }
+  },
+  "packaging": "Exact alpha-preserving sprite crops with hub/tools/build-sprites.py. No painted substitutes or canonical asset edits.",
+  "promptSet": "hub/assets/controls/PROMPTS.json"
+}

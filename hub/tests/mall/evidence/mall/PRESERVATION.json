@@ -1,0 +1,11 @@
+{
+  "cafeEngineUnchanged": true,
+  "adventureEmbeddedArtUnchanged": true,
+  "adventureArtSha256": "d3cf7a6986d9fd9a6449fa64c4470462698fda7520413c33c2633e309425e8b7",
+  "villageSha256": "1b60048baaf89114c4e312e3cf8ff25a6aa727db083e761b3e6158967466b934",
+  "nativeKeys": [
+    "sneaky-unicorn-restaurant-v1-4",
+    "sneaky-unicorn-midnight-v15"
+  ],
+  "nativeSchemaChanged": false
+}

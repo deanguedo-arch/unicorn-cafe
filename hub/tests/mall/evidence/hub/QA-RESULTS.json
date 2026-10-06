@@ -1,0 +1,76 @@
+{
+  "results": [
+    {
+      "name": "Fresh start loads world and only needed games",
+      "pass": true
+    },
+    {
+      "name": "Actual keyboard walk reaches café, without accidental entry",
+      "pass": true
+    },
+    {
+      "name": "Fresh hub → actual café designer → open restaurant",
+      "pass": true
+    },
+    {
+      "name": "Café saves before return; hidden game simulation pauses",
+      "pass": true
+    },
+    {
+      "name": "Café reentry resumes same unfinished cooking session",
+      "pass": true
+    },
+    {
+      "name": "Home enters actual adventure; actual keyboard moves unicorn",
+      "pass": true
+    },
+    {
+      "name": "Adventure return/reentry preserves in-flight player, mode and progress",
+      "pass": true
+    },
+    {
+      "name": "Reload retains native café partial recipe and adventure earned progress",
+      "pass": true
+    },
+    {
+      "name": "Touch joystick movement and pointer-cancel stop without stray target",
+      "pass": true
+    },
+    {
+      "name": "Expansion path requires explicit doorway action",
+      "pass": true
+    },
+    {
+      "name": "Rapid enter taps create no duplicate games; return spawn avoids entry loop",
+      "pass": true
+    },
+    {
+      "name": "Portrait picture gate and narrow landscape recovery",
+      "pass": true
+    },
+    {
+      "name": "Six landscape layouts retain visible 44px+ context button",
+      "pass": true
+    },
+    {
+      "name": "Background/foreground clears held controls",
+      "pass": true
+    },
+    {
+      "name": "All requested assets load; no browser errors or HTTP failures",
+      "pass": true
+    },
+    {
+      "name": "Independent launch /game/build/?qa=1",
+      "pass": true
+    },
+    {
+      "name": "Independent launch /adventure/?qa=1",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "failed": [],
+  "physicalPhoneTest": false,
+  "childTest": false
+}

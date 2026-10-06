@@ -1,0 +1,8 @@
+{
+  "url": "http://localhost:8790/hub/?legacy=1",
+  "origins": [
+    "http://localhost:8787",
+    "http://127.0.0.1:8788"
+  ],
+  "errors": []
+}

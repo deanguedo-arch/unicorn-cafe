@@ -1,0 +1,44 @@
+{
+  "layouts": [
+    [
+      568,
+      271
+    ],
+    [
+      740,
+      251
+    ],
+    [
+      568,
+      320
+    ],
+    [
+      667,
+      375
+    ],
+    [
+      740,
+      300
+    ],
+    [
+      844,
+      390
+    ],
+    [
+      932,
+      430
+    ],
+    [
+      1280,
+      720
+    ],
+    [
+      1443,
+      1338
+    ]
+  ],
+  "oneNativePicturePerTile": true,
+  "noCircleBadges": true,
+  "allPicturesContained": true,
+  "allMenuImagesLoaded": true
+}

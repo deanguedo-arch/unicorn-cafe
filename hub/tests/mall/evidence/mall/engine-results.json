@@ -1,0 +1,166 @@
+{
+  "kind": "production-engine deterministic tests, not physical-device or UI testing",
+  "passed": 30,
+  "total": 30,
+  "results": [
+    {
+      "name": "Cashier requires physical arrival, pays once and survives reload",
+      "pass": true
+    },
+    {
+      "name": "All 18 recipe/variation combinations through dish return/wash",
+      "pass": true,
+      "detail": {
+        "combinations": 18
+      }
+    },
+    {
+      "name": "Wrong flavour stays carried, remake preserves customer",
+      "pass": true
+    },
+    {
+      "name": "Wrong dish and wrong table cannot eat or consume tray",
+      "pass": true
+    },
+    {
+      "name": "Every cupcake sprinkle choice is correct, also change when ready",
+      "pass": true,
+      "detail": {
+        "cases": 6
+      }
+    },
+    {
+      "name": "Halfway stops arrivals at FIVE, not mid-cooking or with abandoned guests",
+      "pass": true
+    },
+    {
+      "name": "Full day = five guests, playable lunch, five more, surfaces then floors",
+      "pass": true,
+      "detail": {
+        "guests": 10,
+        "recipes": 9,
+        "cleaningTasks": 15
+      }
+    },
+    {
+      "name": "Lunch save/reload after EVERY bite/sip, no duplicate lunch",
+      "pass": true
+    },
+    {
+      "name": "Final cleaning persists at each individual scrub and final state",
+      "pass": true,
+      "detail": {
+        "savedStrokes": 51
+      }
+    },
+    {
+      "name": "Closing waits for eating, guest exit, dish return AND all cleaning",
+      "pass": true
+    },
+    {
+      "name": "Washed dish does not reappear on save/reload while guest leaves",
+      "pass": true
+    },
+    {
+      "name": "No replacement until dirty dish is actually returned and washed",
+      "pass": true
+    },
+    {
+      "name": "27,000 customization states validate without moving collision geometry",
+      "pass": true,
+      "detail": {
+        "states": 27000,
+        "choices": 33
+      }
+    },
+    {
+      "name": "All interaction/cleanup targets have reachable safe floor points",
+      "pass": true,
+      "detail": {
+        "targets": 22
+      }
+    },
+    {
+      "name": "Wider dining aisles connect every service and cleanup target without crossing furniture",
+      "pass": true,
+      "detail": {
+        "routes": 576
+      }
+    },
+    {
+      "name": "Cashier aisle stays open at its actual floor coordinates",
+      "pass": true,
+      "detail": {
+        "aisleCentreWidth": 79
+      }
+    },
+    {
+      "name": "Safe migration of real Part 4-style partial recipe",
+      "pass": true
+    },
+    {
+      "name": "Completed older release stays complete, no forced extra guest",
+      "pass": true
+    },
+    {
+      "name": "Older save past midpoint takes one safe catch-up lunch",
+      "pass": true
+    },
+    {
+      "name": "Corrupt/unknown storage inputs fall back to playable fresh state",
+      "pass": true
+    },
+    {
+      "name": "Malformed carried table recovery avoids softlock",
+      "pass": true
+    },
+    {
+      "name": "Pacing cycles cozy/normal/busy, bounded speeds and capacity",
+      "pass": true,
+      "detail": {
+        "moods": [
+          "cozy",
+          "normal",
+          "busy"
+        ],
+        "issued": 1,
+        "walkRange": "146–231px/s"
+      }
+    },
+    {
+      "name": "Pacing does not advance during lunch, cleaning or completed play",
+      "pass": true
+    },
+    {
+      "name": "Replay retains decor, collection, mute and reduced-motion preferences",
+      "pass": true
+    },
+    {
+      "name": "Partial pizza placements persist and no automatic meal packing",
+      "pass": true
+    },
+    {
+      "name": "Picnic matching persists every item, wrong choices do not consume lunch",
+      "pass": true
+    },
+    {
+      "name": "Cook your own lunch persists every recipe step and topping without consuming customer orders",
+      "pass": true
+    },
+    {
+      "name": "Existing lunch saves keep bites and skip the new packing step",
+      "pass": true
+    },
+    {
+      "name": "Mopping requires collecting the mop, proximity and explicit strokes",
+      "pass": true
+    },
+    {
+      "name": "Seated guests resume at chairs with nearby reachable service points",
+      "pass": true,
+      "detail": {
+        "chairs": 5
+      }
+    }
+  ]
+}

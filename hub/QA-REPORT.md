@@ -1,0 +1,11 @@
+# First hub — local verification
+
+Both door → actual game → picture return → reentry loops passed in a fresh isolated Chromium context on port 8890. The review URL on port 8790 was separately verified using the original game origins, again in isolated browser storage. The user's actual browser profile and saves were not read, cleared or seeded.
+
+Checks passed: fresh start and lazy loading; actual keyboard walking to café; café designer and open-restaurant UI; partial cooking save before return; hidden simulation frozen; same cooking session on reentry; actual adventure map selection and keyboard motion; same live adventure state on return/reentry; reload preserves café partial recipe and adventure earned stars through the native completion/save function; actual emulated touch drag and touch cancellation; closed upper-route collision; rapid enter taps; safe return spawn; portrait picture gate and landscape recovery; 568×320, 667×375, 740×300, 844×390, 932×430 and 1280×720 layouts; background/foreground held-control cancellation; independent game launch; all requested assets loaded; zero page errors and zero HTTP failures in the end-to-end run.
+
+Café engine suite reported all 30 gameplay/migration tests PASS. Its final attempt to write its historical engine-results.json was blocked by the repo write sandbox, so that existing report was not overwritten. JavaScript syntax checks passed for hub, café and both adventure scripts. Baseline comparison confirms only the documented hooks and project-rule/vision updates changed prior files; canonical art, recipes/engine and other user work remain byte-identical.
+
+Important scope: seeded isolated fixtures cover a partially prepared café recipe and completed adventure stars. Native UI and actual movement were also exercised; fixtures are not a claim that a full adventure level or full ten-guest restaurant day was manually played in this pass. The original adventure saves earned progress, not unfinished level state across reload. Same-tab return/reentry retains the unfinished level in memory.
+
+A physical iPhone, Safari storage behavior, installed/offline hub, child readability and LAN/public hosting were not tested. The localhost loop is the delivered local review result. No push/publish/deploy.

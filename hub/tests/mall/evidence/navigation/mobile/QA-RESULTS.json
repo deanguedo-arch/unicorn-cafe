@@ -1,0 +1,43 @@
+{
+  "results": [
+    {
+      "name": "Child purchase/equip requests are acknowledged; repeated purchase charges once and unowned equip is rejected",
+      "pass": true
+    },
+    {
+      "name": "Unacknowledged café earnings survive interruption and are paid exactly once on reconnect",
+      "pass": true
+    },
+    {
+      "name": "Native write failure recovers the journal and its earning without paying the customer twice",
+      "pass": true
+    },
+    {
+      "name": "Interrupted IndexedDB purchase rolls back money, ownership, equipment and receipt together",
+      "pass": true
+    },
+    {
+      "name": "Shop, free arcade instructions, paid-round start and bowling roll keep a 44px lower-right action",
+      "pass": true
+    },
+    {
+      "name": "16-piece phone jigsaw supports real touch snapping, touch cancellation, rotation suspension and free resume",
+      "pass": true,
+      "details": {
+        "viewport": "568x320",
+        "pieceHeight": 42.736918604651166
+      }
+    },
+    {
+      "name": "Five completed low-score rounds unlock the selected cosmetic; duplicate finishes award nothing extra",
+      "pass": true
+    },
+    {
+      "name": "No browser runtime exceptions during failure recovery or mobile play",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "physicalDevice": false,
+  "childReview": false
+}

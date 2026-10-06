@@ -1,0 +1,236 @@
+[
+  {
+    "id": "easy_house",
+    "exit": {
+      "id": "exit",
+      "exit": true,
+      "x": 708,
+      "y": 816,
+      "rx": 120,
+      "ry": 48,
+      "picture": "home",
+      "state": {
+        "armed": true,
+        "pending": false,
+        "dwell": 0
+      }
+    },
+    "spawn": {
+      "x": 1116,
+      "y": 790
+    },
+    "baseW": 2073,
+    "baseH": 1167,
+    "w": 4363,
+    "h": 1167,
+    "valid": true
+  },
+  {
+    "id": "easy_market",
+    "exit": {
+      "id": "exit",
+      "exit": true,
+      "x": 1524,
+      "y": 780,
+      "rx": 120,
+      "ry": 48,
+      "picture": "home",
+      "state": {
+        "armed": true,
+        "pending": false,
+        "dwell": 0
+      }
+    },
+    "spawn": {
+      "x": 1776,
+      "y": 454
+    },
+    "baseW": 2073,
+    "baseH": 1167,
+    "w": 4363,
+    "h": 1167,
+    "valid": true
+  },
+  {
+    "id": "easy_restaurant",
+    "exit": {
+      "id": "exit",
+      "exit": true,
+      "x": 300,
+      "y": 708,
+      "rx": 120,
+      "ry": 48,
+      "picture": "home",
+      "state": {
+        "armed": true,
+        "pending": false,
+        "dwell": 0
+      }
+    },
+    "spawn": {
+      "x": 308,
+      "y": 1007
+    },
+    "baseW": 2052,
+    "baseH": 1254,
+    "w": 4342,
+    "h": 1254,
+    "valid": true
+  },
+  {
+    "id": "easy_toys",
+    "exit": {
+      "id": "exit",
+      "exit": true,
+      "x": 300,
+      "y": 720,
+      "rx": 120,
+      "ry": 48,
+      "picture": "home",
+      "state": {
+        "armed": true,
+        "pending": false,
+        "dwell": 0
+      }
+    },
+    "spawn": {
+      "x": 301,
+      "y": 1003
+    },
+    "baseW": 2052,
+    "baseH": 1254,
+    "w": 4342,
+    "h": 1254,
+    "valid": true
+  },
+  {
+    "id": "sneak_house",
+    "exit": {
+      "id": "exit",
+      "exit": true,
+      "x": 780,
+      "y": 492,
+      "rx": 120,
+      "ry": 48,
+      "picture": "home",
+      "state": {
+        "armed": true,
+        "pending": false,
+        "dwell": 0
+      }
+    },
+    "spawn": {
+      "x": 1398,
+      "y": 355
+    },
+    "baseW": 1672,
+    "baseH": 941,
+    "w": 3962,
+    "h": 1100,
+    "valid": true
+  },
+  {
+    "id": "sneak_market",
+    "exit": {
+      "id": "exit",
+      "exit": true,
+      "x": 1020,
+      "y": 648,
+      "rx": 90,
+      "ry": 42,
+      "picture": "home",
+      "state": {
+        "armed": true,
+        "pending": false,
+        "dwell": 0
+      }
+    },
+    "spawn": {
+      "x": 1438,
+      "y": 402
+    },
+    "baseW": 1672,
+    "baseH": 941,
+    "w": 3962,
+    "h": 1100,
+    "valid": true
+  },
+  {
+    "id": "sneak_restaurant",
+    "exit": {
+      "id": "exit",
+      "exit": true,
+      "x": 588,
+      "y": 840,
+      "rx": 120,
+      "ry": 48,
+      "picture": "home",
+      "state": {
+        "armed": true,
+        "pending": false,
+        "dwell": 0
+      }
+    },
+    "spawn": {
+      "x": 270,
+      "y": 883
+    },
+    "baseW": 1800,
+    "baseH": 1100,
+    "w": 4090,
+    "h": 1100,
+    "valid": true
+  },
+  {
+    "id": "sneak_toys",
+    "exit": {
+      "id": "exit",
+      "exit": true,
+      "x": 636,
+      "y": 780,
+      "rx": 120,
+      "ry": 48,
+      "picture": "home",
+      "state": {
+        "armed": true,
+        "pending": false,
+        "dwell": 0
+      }
+    },
+    "spawn": {
+      "x": 264,
+      "y": 880
+    },
+    "baseW": 1800,
+    "baseH": 1100,
+    "w": 4090,
+    "h": 1100,
+    "valid": true
+  },
+  {
+    "id": "police_patrol",
+    "exit": {
+      "id": "exit",
+      "exit": true,
+      "x": 636,
+      "y": 708,
+      "rx": 120,
+      "ry": 48,
+      "picture": "home",
+      "state": {
+        "armed": true,
+        "pending": false,
+        "dwell": 0
+      }
+    },
+    "spawn": {
+      "x": 724,
+      "y": 970
+    },
+    "baseW": 1448,
+    "baseH": 1086,
+    "w": 1448,
+    "h": 1086,
+    "valid": true
+  }
+]
