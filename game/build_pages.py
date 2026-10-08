@@ -9,7 +9,7 @@ const PREFIX='sneaky-restaurant:'+new URL(self.registration.scope).pathname+':';
 const CACHE=PREFIX+'''+json.dumps('2.0.0-'+revision)+''';
 const FILES='''+json.dumps(files,indent=2)+''';
 self.addEventListener('install',event=>event.waitUntil(
- caches.open(CACHE).then(cache=>cache.addAll(FILES)).then(()=>self.skipWaiting())
+ caches.open(CACHE).then(cache=>cache.addAll(FILES.map(file=>new Request(file,{cache:'reload'})))).then(()=>self.skipWaiting())
 ));
 self.addEventListener('activate',event=>event.waitUntil(
  caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith(PREFIX)&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())
