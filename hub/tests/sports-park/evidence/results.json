@@ -3,6 +3,7 @@
     "South hub entrance loads park",
     "All five stations, gates, ramps and both seam crossings reachable",
     "Gardens, hoop base and both nets collide",
+    "Basketball release returns to ready after its authored 150ms",
     "Real drag/release scores a basket",
     "Basketball miss keeps completed baskets",
     "Three baskets complete one bounded round",

@@ -22,7 +22,7 @@ Activities are free practice; no sports earnings or purchase prices were specifi
 
 | Activity | Controls and goal |
 | --- | --- |
-| Bike | Familiar drag/arrow movement; three illustrated gates, then return to the north entrance. The next gate has a ring and an edge arrow when offscreen. |
+| Bike | Familiar drag/arrow movement; three illustrated gates, then return to the north entrance. The next gate has a ring and an edge arrow when offscreen; the hand button repeats the drag picture guide. |
 | Skate | Familiar movement across the supplied shallow bank and rounded roller. A small grounded height change follows each feature. Flat bypasses count; no jump timing is required. |
 | Basketball | Drag the aim toward the hoop and release, or press the persistent ball picture for an assisted shot. Make three baskets. A miss resets only the ball. |
 | Tennis/Pong | Drag along the near baseline, or move left/right. Follow the incoming ball's target ring and press the racket pose to swing. Early input queues until the ball approaches. Five returns; misses re-serve. |
@@ -40,7 +40,7 @@ The supplied receding volleyball net has an approximately 22-pixel deviation on 
 
 ## Verification
 
-Isolated Chromium browser checks (26 gameplay and 16 visual/runtime checks), plus WebKit landscape/touch checks, cover every activity goal, a real basketball pointer shot, tennis alignment/miss, volleyball embedded-ball handoff, all mirrored anchors, both actual keyboard seam crossings, real checkpoint movement, collision reachability, hoop alpha/pixel coverage, reload, portrait suspension/captured-drag cancellation, backpack pause, exit safety, storage failure and 44px controls at 932×430 and 568×320.
+Isolated Chromium browser checks (27 gameplay and 16 visual/runtime checks), plus WebKit landscape/touch checks, cover every activity goal, a real basketball pointer shot, tennis alignment/miss, volleyball embedded-ball handoff, all mirrored anchors, both actual keyboard seam crossings, real checkpoint movement, collision reachability, hoop alpha/pixel coverage, reload, portrait suspension/captured-drag cancellation, backpack pause, exit safety, storage failure and 44px controls at 932×430 and 568×320.
 
 Run with an isolated source preview on port 8890:
 
