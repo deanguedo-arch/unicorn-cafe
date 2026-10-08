@@ -1,6 +1,9 @@
 /* Connected Unicorn World. Native game saves remain owned by their games. */
 (()=>{'use strict';const $=id=>document.getElementById(id),canvas=$('scene'),ctx=canvas.getContext('2d'),A=UWArt,C=UWCatalog,N=UWPortals;
 const params=new URLSearchParams(location.search),qa=params.get('qa')==='1',legacy=params.get('legacy')==='1',STORE='unicorn-world-hub-v1';
+
+// Cancel native image dragging and selection without cancelling gameplay pointers or scrolling.
+for(const type of ['contextmenu','dragstart','selectstart'])document.addEventListener(type,e=>{if(!e.target.closest?.('input:not([type=range]):not([type=checkbox]):not([type=radio]),textarea,[contenteditable=true]'))e.preventDefault();},{capture:true});
 const service=new UWProfile.Profile(),frames=new Map(),images={},keys=new Set(),player={x:830,y:620,facing:1};
 let scene='village',scale=1,ox=0,oy=0,dpr=1,last=0,time=0,drag=null,target=null,route=[],focused=null,active=null,loaded=false,moving=false,portrait=false,returning=false,panelOpen=false,lastPersist=0,panelPausePromise=null,panelPauseResolve=null,navGeneration=0;
 const park=new UWSportsPark({player,service,canvas,announce,draw,clear,paused:()=>portrait||panelOpen||document.hidden,equipment:()=>{mall.bagTab="equipment";mall.open("backpack");}});

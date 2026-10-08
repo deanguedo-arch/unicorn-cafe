@@ -3,6 +3,9 @@
  * Sourcepack characters/environment remain the visual authority; furniture now combines image-generated interior assets with original sourcepack sprites.
  */
 (function(){'use strict';
+// Cancel native image dragging and selection without cancelling gameplay pointers or scrolling.
+for(const type of ['contextmenu','dragstart','selectstart'])document.addEventListener(type,e=>{if(!e.target.closest?.('input:not([type=range]):not([type=checkbox]):not([type=radio]),textarea,[contenteditable=true]'))e.preventDefault();},{capture:true});
+
 const R=window.RR,A=window.RRArt,$=id=>document.getElementById(id);
 const dom={app:$('app'),world:$('world'),stage:$('stage'),customizer:$('customizer'),kitchen:$('kitchen-screen'),ui:$('world-ui'),modal:$('modal-root'),primary:$('primary'),orderPin:$('order-pin'),guide:$('movement-guide')};
 const ctx=dom.world.getContext('2d',{alpha:false});

@@ -1,5 +1,5 @@
 /* Sneaky Unicorn v15. Only this app's cache is managed here. */
-const VERSION='15.0.0-pictures-3';
+const VERSION='15.0.0-pictures-4-touch';
 const ROOT=new URL(self.registration.scope);
 const PREFIX='sneaky-unicorn-scope-'+encodeURIComponent(ROOT.pathname)+'-';
 const CACHE=PREFIX+VERSION;

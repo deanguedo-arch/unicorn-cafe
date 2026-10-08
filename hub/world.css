@@ -13,3 +13,8 @@
 #panel.playing{inset:max(6px,env(safe-area-inset-top)) max(6px,env(safe-area-inset-right)) max(6px,env(safe-area-inset-bottom)) max(6px,env(safe-area-inset-left))}body:has(#panel.playing) #world-tools{visibility:hidden}#panel-head #round-meter{flex:1;min-width:0;font-size:18px}body:has(#panel:not([hidden])) #picture-toast{top:58px;bottom:auto;left:auto;right:72px;transform:none;padding:3px 8px}
 /* Landscape mobile contract: the contextual action stays in the lower right. */
 #panel-body{position:relative}.shop-actions .primary-action{order:5;margin-left:auto;flex:0 0 58px}.game-footer{justify-content:space-between;padding:4px 12px}.game-footer .primary-action{order:5;margin-left:auto}.game-footer #guide-toggle{margin-left:auto}.game-footer:has([data-action=roll]){justify-content:flex-end}.puzzle-footer{justify-content:flex-start;padding:4px 12px}.puzzle-footer .coin-price{margin-left:auto}.puzzle-footer .primary-action{order:5}.round-intro .primary-action{position:absolute;right:12px;bottom:12px}.round-result .primary-action{order:5;margin-left:auto}
+
+/* Let the game own press/drag gestures instead of Safari image/text callouts. */
+body,body *{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+img{-webkit-user-drag:none;user-drag:none}
+input:not([type=range]):not([type=checkbox]):not([type=radio]),textarea,[contenteditable=true],[contenteditable=true] *{-webkit-user-select:text;user-select:text;-webkit-touch-callout:default}

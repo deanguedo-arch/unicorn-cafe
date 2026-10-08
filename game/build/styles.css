@@ -289,3 +289,8 @@ button{transition:transform .11s ease,filter .11s ease,box-shadow .11s ease}butt
  .cook-layout .kitchen-header{height:50px;min-height:50px;padding:3px}
  .cook-layout{grid-template-rows:50px minmax(0,1fr) 64px}
 }
+
+/* Let the game own press/drag gestures instead of Safari image/text callouts. */
+body,body *{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+img{-webkit-user-drag:none;user-drag:none}
+input:not([type=range]):not([type=checkbox]):not([type=radio]),textarea,[contenteditable=true],[contenteditable=true] *{-webkit-user-select:text;user-select:text;-webkit-touch-callout:default}

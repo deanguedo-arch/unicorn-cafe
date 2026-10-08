@@ -233,6 +233,11 @@ button:active{transform:translateY(3px) scale(.97)}
 @media(orientation:landscape) and (max-height:540px){.picture-panel{width:min(680px,100%);padding:14px}.settings-grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}.settings-grid button{min-height:116px;padding:8px}.menu-art{width:68px;height:68px}}
 @media(max-height:350px){.picture-panel{padding:10px}.settings-grid{gap:8px}.settings-grid button{min-height:94px;padding:6px;gap:4px}.menu-art{width:54px;height:54px}.settings-grid button span{font-size:11px}.parent-copy{margin-top:10px}}
 
+
+/* Let the game own press/drag gestures instead of Safari image/text callouts. */
+body,body *{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+img{-webkit-user-drag:none;user-drag:none}
+input:not([type=range]):not([type=checkbox]):not([type=radio]),textarea,[contenteditable=true],[contenteditable=true] *{-webkit-user-select:text;user-select:text;-webkit-touch-callout:default}
 </style>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -576,7 +581,10 @@ window.addEventListener('keydown',e=>{if(controlsBlocked()||e.defaultPrevented)r
 window.addEventListener('keyup',e=>input.keys.delete(e.code));
 window.addEventListener('blur',()=>{clearInput();if(!controlsBlocked()&&G.mode==='play')pause();});
 document.addEventListener('visibilitychange',()=>{if(document.hidden){clearInput();if(!flags.uiPaused&&!flags.portraitBlocked&&!flags.hubPaused&&G.mode==='play')pause();audio.suspend();}last=performance.now();accum=0;});
-window.addEventListener('contextmenu',e=>e.preventDefault());
+
+// Cancel native image dragging and selection without cancelling gameplay pointers or scrolling.
+for(const type of ['contextmenu','dragstart','selectstart'])document.addEventListener(type,e=>{if(!e.target.closest?.('input:not([type=range]):not([type=checkbox]):not([type=radio]),textarea,[contenteditable=true]'))e.preventDefault();},{capture:true});
+
 function resize(){
  const r=canvas.getBoundingClientRect();view.w=Math.max(1,r.width);view.h=Math.max(1,r.height);view.dpr=Math.min(2,window.devicePixelRatio||1);
  canvas.width=Math.round(view.w*view.dpr);canvas.height=Math.round(view.h*view.dpr);
