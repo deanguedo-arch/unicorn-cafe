@@ -6,9 +6,10 @@ async function test(name,fn){try{const detail=await fn();report.push({name,pass:
 function harness(fail=false){
  const scope='https://test.invalid/restaurant/',handlers={},db=new Map(),state={claimed:false,skip:false,network:0},key=q=>new URL(typeof q==='string'?q:q.url,scope).href;
  db.set('sneaky-restaurant:/restaurant/:1.3.0-p4',new Map());db.set('sneaky-adventure:/restaurant/:9',new Map());db.set('sneaky-restaurant:/another-game/:1.2',new Map());
- const caches={open:async name=>{if(!db.has(name))db.set(name,new Map());let store=db.get(name);return {addAll:async files=>{if(fail)throw Error('Injected install failure');for(const f of files){const file=path.join(root,f.replace(/^\.\//,''));assert(fs.existsSync(file));store.set(key(f),{url:key(f),body:fs.readFileSync(file)});}},match:async (req,opts)=>{let k=key(req);if(opts?.ignoreSearch)k=k.split('?')[0];return store.get(k)||null;}};},keys:async()=>[...db.keys()],delete:async name=>db.delete(name)};
+ const caches={open:async name=>{if(!db.has(name))db.set(name,new Map());let store=db.get(name);return {addAll:async files=>{if(fail)throw Error('Injected install failure');for(const f of files){assert.equal(f.cache,'reload');const file=path.join(root,new URL(key(f)).pathname.slice(new URL(scope).pathname.length));assert(fs.existsSync(file));store.set(key(f),{url:key(f),body:fs.readFileSync(file)});}},match:async (req,opts)=>{let k=key(req);if(opts?.ignoreSearch)k=k.split('?')[0];return store.get(k)||null;}};},keys:async()=>[...db.keys()],delete:async name=>db.delete(name)};
  const self={registration:{scope},location:{origin:'https://test.invalid'},addEventListener:(t,f)=>handlers[t]=f,skipWaiting:async()=>{state.skip=true},clients:{claim:async()=>{state.claimed=true}}};
- vm.runInNewContext(source,{self,caches,URL,fetch:async()=>{state.network++;throw Error('Network offline');},console});
+ class ScopedRequest extends Request{constructor(input,options){super(new URL(input,scope),options);}}
+ vm.runInNewContext(source,{self,caches,URL,Request:ScopedRequest,fetch:async()=>{state.network++;throw Error('Network offline');},console});
  async function emit(t){let promise;handlers[t]({waitUntil:p=>promise=p});await promise;}
  async function get(url,mode='navigate',method='GET'){let promise;handlers.fetch({request:{url:new URL(url,scope).href,mode,method},respondWith:p=>promise=p});return promise?await promise:undefined;}
  return {db,state,emit,get};
