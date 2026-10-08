@@ -1,0 +1,15 @@
+# Full sports wardrobe handoff
+
+Start with `Unicorn_Full_Wardrobe_Coverage.html`, then serve this extracted folder with a static HTTP server and open `review-index.html`. The viewer renders every item in both facings at source scale, provides independent equip/remove selectors, and shows six complete outfits per pose. The HTML report is also saved separately to Library; its proof links resolve after extracting this ZIP.
+
+This isolated handoff contains 23 wearables across 10 sports poses and 4 candidate skate poses: 322 item/pose records, 409 clothing PNGs and 14 pose bases. The nine established basketball starter fits and all 437 original walking/riding records are preserved. Runtime sources, editable geometry, selection schema, original source references, proposed integration patch and full evidence are included. No canonical game files or user saves were modified.
+
+Fresh final verification: 2,077 browser checks and 945 static checks passed, including 644 native item/facing renders, 644 equip/remove/restore cases and 168 full outfit renders. Independent image review is pinned to the same final manifest in `evidence/reviewer/FINAL_REVIEW.json`. The 8,820 selection combinations are logical checks, not rendered outfits.
+
+All 13 original timeline gates and all 183 expanded timeline checks pass. The landing source-image filtering seam is repaired in the isolated renderer without changing any accepted clothing or pose assets. Complete right-facing actors are filtered once at caller device-pixel scale, then reflected at 1:1; strict scaled mirrors have zero differing pixels, and every accepted native capture remains byte-identical. See `MIRROR_FIX.md` and `evidence/mirror-investigation/FIX_RESULTS.json`. Skate timing and registration remain proposed review data; no canonical input trigger, hop controller or collision contract has been installed.
+
+Canonical sources were rechecked at main/e680b869c3e85481a0ee5904accdb51a1fb8dc00 with a clean tracked working tree. All 45 frozen sports/wardrobe contract files match d0c139cc93df9046ea18a1d4fd5646ec0964a37e byte for byte; current mobile gesture fixes are retained. The exact supported local thread is “Plan unicorn mall game”, ID 01a10d6c-522f-7633-aa66-aa09084e1004, currently idle with its latest turn completed.
+
+No remaining clothing artwork is required for this approved isolated coverage. Next work is canonical sports integration and whole-game checks, plus a separately approved skate trigger/controller/collision contract. See `INTEGRATION.md` before installing. The earlier cloud basketball overlay attempts remain rejected reference experiments and are not included as fitted art.
+
+`PAYLOAD_SHA256.json` records complete hashes of every packaged payload except itself. The packager verifies payload stability, ZIP CRC and every stored payload hash. Saves, account data, secrets, dependencies and unrelated backgrounds are excluded. Fifty-six selected native outfit proof PNGs and 56 readable overview sheets are included; all 812 native-case hashes are in the browser receipt, with other raw cases reproducible in the viewer to avoid duplicating hundreds of megabytes.

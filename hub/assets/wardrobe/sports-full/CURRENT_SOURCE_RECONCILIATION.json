@@ -1,0 +1,287 @@
+{
+  "observed_utc": "2026-10-08T22:21:40.943271+00:00",
+  "isolated_source_commit": "d0c139cc93df9046ea18a1d4fd5646ec0964a37e",
+  "canonical_commit": "e680b869c3e85481a0ee5904accdb51a1fb8dc00",
+  "compared_source_files": 45,
+  "differences": [],
+  "all_shared_renderers_catalogue_and_pose_assets_byte_identical": true,
+  "canonical_changes": "Only gesture prevention, cache refresh and offline test support outside shared wardrobe/pose contracts; isolated integration patch retains those files untouched.",
+  "rows": [
+    {
+      "path": "hub/shared/profile.js",
+      "same": true,
+      "isolated_sha256": "b1ff5fe2acd0e54f369825438ccd395ffe0010274da70cd8d4f5425998a55914",
+      "canonical_sha256": "b1ff5fe2acd0e54f369825438ccd395ffe0010274da70cd8d4f5425998a55914"
+    },
+    {
+      "path": "hub/shared/sports.js",
+      "same": true,
+      "isolated_sha256": "7d455457edcea425fc3c62350dd3a4818692747b9abfa4cb49eaceb1b1cfe9d8",
+      "canonical_sha256": "7d455457edcea425fc3c62350dd3a4818692747b9abfa4cb49eaceb1b1cfe9d8"
+    },
+    {
+      "path": "hub/shared/sports-data.js",
+      "same": true,
+      "isolated_sha256": "40c8113053f1348d421b414d877269112e7eb1d42d0e6e64e4d8c74632a3a348",
+      "canonical_sha256": "40c8113053f1348d421b414d877269112e7eb1d42d0e6e64e4d8c74632a3a348"
+    },
+    {
+      "path": "hub/shared/sprites.js",
+      "same": true,
+      "isolated_sha256": "cffd1e662c7b6d269e899544362266ce0b873cba555f0832ac2027cebc862743",
+      "canonical_sha256": "cffd1e662c7b6d269e899544362266ce0b873cba555f0832ac2027cebc862743"
+    },
+    {
+      "path": "hub/shared/catalogue.js",
+      "same": true,
+      "isolated_sha256": "89280a72f2bd9fd188e3dd5c6dba16904b1c0e322543b121c895cce29e0982c5",
+      "canonical_sha256": "89280a72f2bd9fd188e3dd5c6dba16904b1c0e322543b121c895cce29e0982c5"
+    },
+    {
+      "path": "hub/shared/art.js",
+      "same": true,
+      "isolated_sha256": "ee391692b81e33b8408e47e4a1917cf94f8d7fc6877d7ec36663ca50025e9c4e",
+      "canonical_sha256": "ee391692b81e33b8408e47e4a1917cf94f8d7fc6877d7ec36663ca50025e9c4e"
+    },
+    {
+      "path": "hub/assets/wardrobe/production/INTEGRATION_GUIDE.txt",
+      "same": true,
+      "isolated_sha256": "1d2d01377da9e4b70d2cfc02b06123bb9d97ea58c2c439320c95292534482fb3",
+      "canonical_sha256": "1d2d01377da9e4b70d2cfc02b06123bb9d97ea58c2c439320c95292534482fb3"
+    },
+    {
+      "path": "hub/assets/wardrobe/production/runtime.js",
+      "same": true,
+      "isolated_sha256": "ffe9f6c83a370f99cb71406408b434a0134a59b5bceb253dc11f18e47f4de2a3",
+      "canonical_sha256": "ffe9f6c83a370f99cb71406408b434a0134a59b5bceb253dc11f18e47f4de2a3"
+    },
+    {
+      "path": "hub/assets/wardrobe/production/IMPORT-RECORD.json",
+      "same": true,
+      "isolated_sha256": "d3c08ec31db5ff63d1d4e331efde2b9e9a55f078cd1d3bb6e1a469aa42c45618",
+      "canonical_sha256": "d3c08ec31db5ff63d1d4e331efde2b9e9a55f078cd1d3bb6e1a469aa42c45618"
+    },
+    {
+      "path": "hub/assets/wardrobe/production/manifest.json",
+      "same": true,
+      "isolated_sha256": "4a8c293d7b1c67b69b4b829fdcc56acedded3992dc07b1ab84801c165803721b",
+      "canonical_sha256": "4a8c293d7b1c67b69b4b829fdcc56acedded3992dc07b1ab84801c165803721b"
+    },
+    {
+      "path": "hub/assets/wardrobe/production/ASSET_SCOPE.txt",
+      "same": true,
+      "isolated_sha256": "eeec8478cfec925c6fa7c19b63ff57367be0931396587e4c69c29a1228b32f19",
+      "canonical_sha256": "eeec8478cfec925c6fa7c19b63ff57367be0931396587e4c69c29a1228b32f19"
+    },
+    {
+      "path": "hub/assets/wardrobe/production/atlas_index.json",
+      "same": true,
+      "isolated_sha256": "415d2d59a32bad90256cc337fc40bb2a170702d1b2a3bcf2e6b1f382131be4d2",
+      "canonical_sha256": "415d2d59a32bad90256cc337fc40bb2a170702d1b2a3bcf2e6b1f382131be4d2"
+    },
+    {
+      "path": "hub/assets/wardrobe/production/atlases/wardrobe_01.png",
+      "same": true,
+      "isolated_sha256": "b6fce78c7a61a1f1374dda46113d29f027eae0c399e0cd64fa7569e735288774",
+      "canonical_sha256": "b6fce78c7a61a1f1374dda46113d29f027eae0c399e0cd64fa7569e735288774"
+    },
+    {
+      "path": "hub/assets/wardrobe/production/atlases/wardrobe_00.png",
+      "same": true,
+      "isolated_sha256": "446fc394d36160509a4df052d4129e0e95b314e67b297ddbcc0b2ba4d5a033a2",
+      "canonical_sha256": "446fc394d36160509a4df052d4129e0e95b314e67b297ddbcc0b2ba4d5a033a2"
+    },
+    {
+      "path": "hub/assets/wardrobe/production/atlases/wardrobe_02.png",
+      "same": true,
+      "isolated_sha256": "5f4554bae60c5905e85809cfae6a66d08550fc4a0541e1a97f21eb5d8721aecf",
+      "canonical_sha256": "5f4554bae60c5905e85809cfae6a66d08550fc4a0541e1a97f21eb5d8721aecf"
+    },
+    {
+      "path": "hub/assets/wardrobe/production/atlases/wardrobe_03.png",
+      "same": true,
+      "isolated_sha256": "f6d8c8a14aaeac53f664f2f8f37f42fabf6190c1cf44063d2de8404648e5bafd",
+      "canonical_sha256": "f6d8c8a14aaeac53f664f2f8f37f42fabf6190c1cf44063d2de8404648e5bafd"
+    },
+    {
+      "path": "hub/assets/wardrobe/production/atlases/wardrobe_04.png",
+      "same": true,
+      "isolated_sha256": "e054f421aee773c5aa731d71fb57e08bfb96898255065c0d3ad4f373f0b599b3",
+      "canonical_sha256": "e054f421aee773c5aa731d71fb57e08bfb96898255065c0d3ad4f373f0b599b3"
+    },
+    {
+      "path": "hub/assets/wardrobe/production/base/u_run5.png",
+      "same": true,
+      "isolated_sha256": "e902ea07c28f14b45623c922a0804a148d23f5db6e912dc6a2c67796875f4c14",
+      "canonical_sha256": "e902ea07c28f14b45623c922a0804a148d23f5db6e912dc6a2c67796875f4c14"
+    },
+    {
+      "path": "hub/assets/wardrobe/production/base/u_run4.png",
+      "same": true,
+      "isolated_sha256": "c1d60d263dcf596ab054371c4bf4e0c2656c390d28f0436566d2554f8a7ce0be",
+      "canonical_sha256": "c1d60d263dcf596ab054371c4bf4e0c2656c390d28f0436566d2554f8a7ce0be"
+    },
+    {
+      "path": "hub/assets/wardrobe/production/base/u_run0.png",
+      "same": true,
+      "isolated_sha256": "16fb149b94beddd2fb0d94f16ee489d644a3a055d4a88f38b9e16184a6c80b2b",
+      "canonical_sha256": "16fb149b94beddd2fb0d94f16ee489d644a3a055d4a88f38b9e16184a6c80b2b"
+    },
+    {
+      "path": "hub/assets/wardrobe/production/base/skateboard3.png",
+      "same": true,
+      "isolated_sha256": "bf94fc058aff4f7e83c6c063508aee0a089e4f0fbd43040dbf3265c4afa2f69e",
+      "canonical_sha256": "bf94fc058aff4f7e83c6c063508aee0a089e4f0fbd43040dbf3265c4afa2f69e"
+    },
+    {
+      "path": "hub/assets/wardrobe/production/base/skateboard2.png",
+      "same": true,
+      "isolated_sha256": "4f5384cfb3a8549ca11ce51d027faaab4cac15760e66ad1ca03817bb22d3c62f",
+      "canonical_sha256": "4f5384cfb3a8549ca11ce51d027faaab4cac15760e66ad1ca03817bb22d3c62f"
+    },
+    {
+      "path": "hub/assets/wardrobe/production/base/u_run1.png",
+      "same": true,
+      "isolated_sha256": "b559162368ca98bfc148d4f34f21dc72f76d92334519c7ac61941b9c0a2e5c51",
+      "canonical_sha256": "b559162368ca98bfc148d4f34f21dc72f76d92334519c7ac61941b9c0a2e5c51"
+    },
+    {
+      "path": "hub/assets/wardrobe/production/base/u_idle1.png",
+      "same": true,
+      "isolated_sha256": "4e7384355aedec68dd527e88d582904d4977cae24de01689ad4a2d72a398ced1",
+      "canonical_sha256": "4e7384355aedec68dd527e88d582904d4977cae24de01689ad4a2d72a398ced1"
+    },
+    {
+      "path": "hub/assets/wardrobe/production/base/u_run3.png",
+      "same": true,
+      "isolated_sha256": "c9c86b37d334ebadb3b22071d80a5285191dd03ec5ff57438e278ff5f6f29dd4",
+      "canonical_sha256": "c9c86b37d334ebadb3b22071d80a5285191dd03ec5ff57438e278ff5f6f29dd4"
+    },
+    {
+      "path": "hub/assets/wardrobe/production/base/skateboard0.png",
+      "same": true,
+      "isolated_sha256": "3800aa6bfc1418be7298ff8cd2709797b77bb32d7256b24040c197e31728ed79",
+      "canonical_sha256": "3800aa6bfc1418be7298ff8cd2709797b77bb32d7256b24040c197e31728ed79"
+    },
+    {
+      "path": "hub/assets/wardrobe/production/base/skateboard1.png",
+      "same": true,
+      "isolated_sha256": "d8649f42d0d188b23c910b0901fa5ede4b606b05223694fd7d395075e4790a51",
+      "canonical_sha256": "d8649f42d0d188b23c910b0901fa5ede4b606b05223694fd7d395075e4790a51"
+    },
+    {
+      "path": "hub/assets/wardrobe/production/base/u_run2.png",
+      "same": true,
+      "isolated_sha256": "33a905cf3e9f76026ce46197e6061b1414975347274b5832f7427daac2e26c61",
+      "canonical_sha256": "33a905cf3e9f76026ce46197e6061b1414975347274b5832f7427daac2e26c61"
+    },
+    {
+      "path": "hub/assets/wardrobe/production/base/u_idle0.png",
+      "same": true,
+      "isolated_sha256": "36160efe1a4bfcfdd95a5fb085234a8da880826e5f4064294fa8d964a9ea1b04",
+      "canonical_sha256": "36160efe1a4bfcfdd95a5fb085234a8da880826e5f4064294fa8d964a9ea1b04"
+    },
+    {
+      "path": "hub/assets/wardrobe/production/base/u_happy0.png",
+      "same": true,
+      "isolated_sha256": "565006f31e1ad806c52fdf53e9f1aa12db7c664e1694a899d3e054baf882a0b5",
+      "canonical_sha256": "565006f31e1ad806c52fdf53e9f1aa12db7c664e1694a899d3e054baf882a0b5"
+    },
+    {
+      "path": "hub/assets/wardrobe/production/base/u_happy1.png",
+      "same": true,
+      "isolated_sha256": "c4a4e3ef2a04883b1cc9e90e3ddff535ef12a80f86803fe57f7cdfc56564d0ee",
+      "canonical_sha256": "c4a4e3ef2a04883b1cc9e90e3ddff535ef12a80f86803fe57f7cdfc56564d0ee"
+    },
+    {
+      "path": "hub/assets/wardrobe/production/base/u_happy2.png",
+      "same": true,
+      "isolated_sha256": "add156857f5fd9d58f77c5a83f432adec762005c1f7ab8b5fe83ee6805bc6f38",
+      "canonical_sha256": "add156857f5fd9d58f77c5a83f432adec762005c1f7ab8b5fe83ee6805bc6f38"
+    },
+    {
+      "path": "hub/assets/wardrobe/production/base/bike1.png",
+      "same": true,
+      "isolated_sha256": "e99bd54c8e78c8ee36c6baec38c49063c76bc14357014fb84a6ab2b8647bb4ad",
+      "canonical_sha256": "e99bd54c8e78c8ee36c6baec38c49063c76bc14357014fb84a6ab2b8647bb4ad"
+    },
+    {
+      "path": "hub/assets/wardrobe/production/base/bike0.png",
+      "same": true,
+      "isolated_sha256": "0933fd0929cd4ca4f47c6966d5a1618209dd159e4800524a884811637712c416",
+      "canonical_sha256": "0933fd0929cd4ca4f47c6966d5a1618209dd159e4800524a884811637712c416"
+    },
+    {
+      "path": "hub/assets/wardrobe/production/base/bike2.png",
+      "same": true,
+      "isolated_sha256": "c0280e4d764a531d96e1a90e8eed9c0d7fe74dd2bef984aefa039b97516c39a8",
+      "canonical_sha256": "c0280e4d764a531d96e1a90e8eed9c0d7fe74dd2bef984aefa039b97516c39a8"
+    },
+    {
+      "path": "hub/assets/wardrobe/production/base/bike3.png",
+      "same": true,
+      "isolated_sha256": "a7a49ffc8b7d66fb783131a8c312e07c3cabb5de61e3f528f3153853e54c0781",
+      "canonical_sha256": "a7a49ffc8b7d66fb783131a8c312e07c3cabb5de61e3f528f3153853e54c0781"
+    },
+    {
+      "path": "hub/assets/sports/v3/props/volleyball.png",
+      "same": true,
+      "isolated_sha256": "046edc671c9527f5d56cccfce079e2e6c2fc4c8c3b88687f4b43df2ac9c2a265",
+      "canonical_sha256": "046edc671c9527f5d56cccfce079e2e6c2fc4c8c3b88687f4b43df2ac9c2a265"
+    },
+    {
+      "path": "hub/assets/sports/v3/props/tennis-ball.png",
+      "same": true,
+      "isolated_sha256": "51e4cdbdb110d4ae2590d2f09e6e503e7324b6d5eedab5aba9e5dcf18e37fe45",
+      "canonical_sha256": "51e4cdbdb110d4ae2590d2f09e6e503e7324b6d5eedab5aba9e5dcf18e37fe45"
+    },
+    {
+      "path": "hub/assets/sports/v3/props/basketball.png",
+      "same": true,
+      "isolated_sha256": "19384a9106b803cbc0dff62bf6098ba455ab8f21e886f24bc7ec8a35e5bdb581",
+      "canonical_sha256": "19384a9106b803cbc0dff62bf6098ba455ab8f21e886f24bc7ec8a35e5bdb581"
+    },
+    {
+      "path": "hub/assets/sports/v3/actions/basketball-actions.png",
+      "same": true,
+      "isolated_sha256": "0a9358f1ab02b753e8a6f321ab740460205f4b28942536aaf89378eb7c341725",
+      "canonical_sha256": "0a9358f1ab02b753e8a6f321ab740460205f4b28942536aaf89378eb7c341725"
+    },
+    {
+      "path": "hub/assets/sports/v3/actions/action-manifest.json",
+      "same": true,
+      "isolated_sha256": "351229e0405d4cb3a465adaab0da1a2c3b72871468e0387d731dc9291d550e03",
+      "canonical_sha256": "351229e0405d4cb3a465adaab0da1a2c3b72871468e0387d731dc9291d550e03"
+    },
+    {
+      "path": "hub/assets/sports/v3/actions/volleyball-actions.png",
+      "same": true,
+      "isolated_sha256": "8314493964e85d55dc7223d0592261a13ab58069cd60ef1a267911c0f80c0fc4",
+      "canonical_sha256": "8314493964e85d55dc7223d0592261a13ab58069cd60ef1a267911c0f80c0fc4"
+    },
+    {
+      "path": "hub/assets/sports/v3/actions/volleyball-set-fitted.png",
+      "same": true,
+      "isolated_sha256": "83f59b357803d9a616cb0a2e54718da32cf1e216402e630db2db2ac69c92b14c",
+      "canonical_sha256": "83f59b357803d9a616cb0a2e54718da32cf1e216402e630db2db2ac69c92b14c"
+    },
+    {
+      "path": "hub/assets/sports/v3/actions/tennis-actions.png",
+      "same": true,
+      "isolated_sha256": "8efaa56d92604e11be15a0f692b67366718665076a9a629e8bc7aff4fec379e0",
+      "canonical_sha256": "8efaa56d92604e11be15a0f692b67366718665076a9a629e8bc7aff4fec379e0"
+    },
+    {
+      "path": "hub/assets/sports/v3/actions/README.txt",
+      "same": true,
+      "isolated_sha256": "2055e47930fabf31511c88551d72af68bcaa6af6f8ca8367edf5a09cf6c0185e",
+      "canonical_sha256": "2055e47930fabf31511c88551d72af68bcaa6af6f8ca8367edf5a09cf6c0185e"
+    }
+  ],
+  "final_readonly_recheck_utc": "2026-10-08T22:51:49.605762+00:00",
+  "canonical_branch": "main",
+  "canonical_dirty_paths": [],
+  "final_readonly_recheck": "all45 hashes unchanged",
+  "renderer_fix_readonly_recheck_utc": "2026-10-08T23:24:49.196148+00:00",
+  "renderer_fix_readonly_recheck": "all45 canonical source hashes unchanged; canonical not modified"
+}

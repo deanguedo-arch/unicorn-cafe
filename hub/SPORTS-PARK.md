@@ -29,7 +29,7 @@ Sports do not change wallet balance or ownership. The bike and skate areas are f
 
 Each ball game has three independently saved opponent levels: the supplied starter, Mint Pop, then Disco Comet. Winning unlocks the next level. Unlocked picture cards allow replay; locked cards are disabled and gray. Their ball-flight baselines are 1.75, 1.25 and 0.90 seconds, with within-rally variation. AI movement is 65/130/210 world units per second, reaction delays 0.45/0.25/0.12 seconds and interception tolerances 32/43/50. Edge contacts angle returns across the court, allowing skillful placement to beat faster opponents. Point pauses start the next ball automatically; only the beginning of a match requires a serve press.
 
-The two new opponent models are complete generated sprites with baked rackets and separate bump poses, stored under `assets/sports/opponents/`. Their exact crops, ground pivots and contact points are defined in opponentFrame(); source pixels and provenance are retained. Original supplied art is unchanged. The original bump/contact poses are also used for the starter opponent so contacts align with actual racket/hands. Near-side sports clothing remains pending.
+The two new opponent models are complete generated sprites with baked rackets and separate bump poses, stored under `assets/sports/opponents/`. Their exact crops, ground pivots and contact points are defined in opponentFrame(); source pixels and provenance are retained. Original supplied art is unchanged. The original bump/contact poses are also used for the starter opponent so contacts align with actual racket/hands. Near-side sports clothing now uses the supplied full sports wardrobe adapter, with owned items in the original six layer phases.
 
 Floor taps follow collision-checked routes. The middle garden has a wider passable ring, both courts have usable full painted aprons and side entrances, and the volleyball court opens directly from the central north approach. The action button recognizes each whole court apron, so approaching a tiny central station is no longer required. Nets and garden centers remain blocked. The original maps are retained; collision extents follow their visible floor and apron areas, without adding a new map join.
 
@@ -39,13 +39,13 @@ The top-left back picture leaves the current activity; from free walking it retu
 
 ## Missing art and known limits
 
-These packs do **not** include fitted wardrobe layers for sports action poses, sports running loops, rear views, airborne skate tricks, activity sound effects, or a hub-to-park seam overlay. The supplied plain sports unicorn is used during ball practice; equipped clothes remain owned and return when practice ends. Existing canonical walking and outfit-compatible riding remain available. No generic clothing overlay, second racket, substitute animation, or unrelated artwork is added.
+These packs do **not** include fitted wardrobe layers for sports action poses, sports running loops, rear views, airborne skate tricks, activity sound effects, or a hub-to-park seam overlay. The later full sports wardrobe handoff supplies fitted layers for all ten ball-action poses. Owned equipped clothes now appear during ball practice, and while walking to retrieve the basketball. Original sprites, ball attachments and contact points remain unchanged. Existing canonical walking and outfit-compatible riding remain available. No generic clothing overlay, second racket, substitute animation, or unrelated artwork is added.
 
 The supplied receding volleyball net has an approximately 22-pixel deviation on either side of the painted x=768 centerline. Its declared placement is retained, with a collision band that covers the actual posts. The hub connection uses its established entrance transition; continuous scrolling begins within the three-section park. Collision shapes were calibrated against the maps rather than treating proposed source geometry as already tested.
 
 ## Verification
 
-Fresh Chromium and WebKit checks cover basketball movement, timed scores, physical pickup, release cutout removal, tennis body/contact alignment and opponent interception, automatic returns, three-point wins/losses, all three beatable difficulty levels and saved unlocks, bounded matches, collision-safe routes to every entrance, actual tap navigation around the middle garden, owned-equipment persistence, supplied checksums, exact hoop foreground coverage, seam crossings, touch controls, pause, exits and storage failure. The corrected artwork trial remains preparation material; it is not imported as clothing or an airborne skate animation.
+Fresh Chromium and WebKit checks cover basketball movement, timed scores, physical pickup, release cutout removal, tennis body/contact alignment and opponent interception, automatic returns, three-point wins/losses, all three beatable difficulty levels and saved unlocks, bounded matches, collision-safe routes to every entrance, actual tap navigation around the middle garden, owned-equipment persistence, supplied checksums, exact hoop foreground coverage, seam crossings, touch controls, pause, exits and storage failure. The earlier preflight trial remains preparation material. The later full sports wardrobe handoff is installed for ball sports; its four candidate skate-hop poses remain unused by the current riding controller.
 
 Run with an isolated source preview on port 8890:
 
@@ -58,3 +58,9 @@ node hub/tests/sports-park/navigation.cjs
 ```
 
 Screenshots and result files are in `tests/sports-park/evidence/`. The test runner uses fresh browser contexts and never seeds a real player's browser. Existing quick-switch, mall gameplay (18), failure/mobile (8), package integrity (4), and packaged project-path browser checks (5) also pass. Browser emulation and static art checks are not a physical-phone or child usability review.
+
+## Full sports wardrobe handoff
+
+The 2026-10-08 full handoff is retained in `assets/wardrobe/sports-full/`: 23 existing wearables, ten sports poses and four candidate hop poses (322 registration records). `shared/full-sports-fits.js` applies original trim offsets and phase order at the same ground pivot, source scale and facing as the native actor. The patch adds loading and per-player outfit hooks; opponents remain independent. Existing 437 walking/riding records, catalogue IDs, prices, ownership and native saves are unchanged. Hand-off SHA256 checks, mirror investigation and integration notes remain alongside the assets.
+
+`tests/sports-park/wardrobe.cjs` exercises all 460 sports item/facing cases in Chromium and WebKit, actual equipped scenes, reload and portrait suspension. With `SPORTS_HANDOFF` pointing to the extracted original ZIP, it also compares 40 complete native outfits pixel-for-pixel against supplied proof PNGs. The golden captures include held basketballs, rackets, sleeves, protected expressions and multi-slot combinations. Physical-phone and child review remain pending.

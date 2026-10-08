@@ -1,0 +1,12 @@
+{
+  "source_zip": "Unicorn_Full_Sports_Wardrobe_Handoff.zip",
+  "source_zip_sha256": "ef907edd800f031f45988e9ea786e7273ec91b2de99301cde52d55e9ef524ea8",
+  "source_commit": "e680b869c3e85481a0ee5904accdb51a1fb8dc00",
+  "runtime_adapter": "hub/shared/full-sports-fits.js",
+  "runtime_adapter_sha256": "223d5840b6e5fdb1a060e3fb60912f2c9cb79e4743e3fc6f1874bce90ea4dd41",
+  "payload_verified_files": 833,
+  "runtime_asset_transform": "None. Original layer PNGs, registration, phases and trim offsets retained.",
+  "sports_integration": "Supplied integration/sports.js.patch, with unchanged ball physics, action timing and opponents.",
+  "skate_status": "Art and isolated adapter retained; no new hop input/controller installed. Existing fitted riding is unchanged.",
+  "native_progress": "No save migration or ownership grants."
+}

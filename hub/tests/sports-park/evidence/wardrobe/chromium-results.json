@@ -1,0 +1,10 @@
+{
+  "engine": "Chromium",
+  "cases": 460,
+  "records": 322,
+  "sportsPoses": 10,
+  "wearables": 23,
+  "golden": 40,
+  "profileRetained": true,
+  "errors": []
+}

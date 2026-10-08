@@ -1,0 +1,202 @@
+{
+  "purpose": "Review-only annotation of immutable native-source horn contours for authoring; no runtime/generator mutation",
+  "coordinate_system": "full source cell native pixels, x right/y down, no actor origin or pivot applied",
+  "frames": [
+    {
+      "frame_id": "basketball_ready",
+      "source_base_file": "bases/basketball_ready.png",
+      "base_sha256": "8439cc4d03a60baa9041ff14ab8cab48b19b846796ab89e8d28859c540be0cae",
+      "canvas": [
+        724,
+        724
+      ],
+      "path": "M 535 117 C 518 113 486 155 458 195 C 456 206 473 228 492 233 C 505 238 515 232 518 220 C 530 197 543 147 543 130 C 543 123 540 118 535 117 Z",
+      "confidence": "manual contour traced on native source; approximate 1\u20133 px boundary; review mask output before acceptance",
+      "ends_at": "lower elliptical horn ring; exclude orange/pink forelock beneath and beside",
+      "annotation_file": "basketball_ready__contour_annotation.png"
+    },
+    {
+      "frame_id": "basketball_aim",
+      "source_base_file": "bases/basketball_aim.png",
+      "base_sha256": "113661d605f3d4a619328535e4e18dcc268092a06fb6350d04217d2e962c7fde",
+      "canvas": [
+        724,
+        724
+      ],
+      "path": "M 406 111 C 394 110 385 135 379 160 L 374 188 C 372 202 385 216 402 219 C 416 220 427 210 430 196 C 429 171 419 135 417 120 C 415 114 411 111 406 111 Z",
+      "confidence": "manual contour traced on native source; approximate 1\u20133 px boundary; review mask output before acceptance",
+      "ends_at": "lower elliptical horn ring; exclude orange/pink forelock beneath and beside",
+      "annotation_file": "basketball_aim__contour_annotation.png"
+    },
+    {
+      "frame_id": "basketball_release",
+      "source_base_file": "bases/basketball_release.png",
+      "base_sha256": "4fbf8490ce9e3b9697dc3c920ebf6a9666c4d2a7ff9cbd1e6420a3c27d60e0a4",
+      "canvas": [
+        724,
+        724
+      ],
+      "path": "M 442 114 C 425 110 392 149 371 182 L 365 197 C 366 211 381 224 400 230 C 414 235 422 215 428 196 C 440 161 448 130 447 120 C 446 116 444 114 442 114 Z",
+      "confidence": "manual contour traced on native source; approximate 1\u20133 px boundary; review mask output before acceptance",
+      "ends_at": "lower elliptical horn ring; exclude orange/pink forelock beneath and beside",
+      "annotation_file": "basketball_release__contour_annotation.png"
+    },
+    {
+      "frame_id": "tennis_ready",
+      "source_base_file": "bases/tennis_ready.png",
+      "base_sha256": "56041d8c5e36533ce8d1a9e174d45f6378907b84f7181e5e295d3a54c2f2d197",
+      "canvas": [
+        740,
+        724
+      ],
+      "path": "M 389 142 L 381 146 L 376 150 L 368 160 L 361 170 L 354 180 L 348 190 L 342 200 L 335 210 L 330 220 L 328 230 L 332 241 L 344 250 L 358 261 L 371 260 L 384 250 L 388 240 L 390 230 L 394 220 L 396 210 L 398 200 L 400 190 L 402 180 L 403 170 L 403 160 L 400 150 L 397 145 Z",
+      "confidence": "manual contour traced on native source; approximate 1\u20133 px boundary; review mask output before acceptance",
+      "ends_at": "lower elliptical horn ring; exclude orange/pink forelock beneath and beside",
+      "annotation_file": "tennis_ready__contour_annotation.png",
+      "padding_px": 1,
+      "method": "Independent native source dark-edge row trace; applied composite acceptance pending"
+    },
+    {
+      "frame_id": "tennis_backswing",
+      "source_base_file": "bases/tennis_backswing.png",
+      "base_sha256": "c597409f951a4cba4c1050241b254fcca5a4a6e10c19facc8ceed38dba73652a",
+      "canvas": [
+        600,
+        724
+      ],
+      "path": "M 478 142 L 470 145 L 458 155 L 448 165 L 438 175 L 428 185 L 420 195 L 412 205 L 409 214 L 414 226 L 426 239 L 441 246 L 452 250 L 461 245 L 466 235 L 470 225 L 475 215 L 478 205 L 482 195 L 486 185 L 488 175 L 490 165 L 491 155 L 486 145 Z",
+      "confidence": "manual contour traced on native source; approximate 1\u20133 px boundary; review mask output before acceptance",
+      "ends_at": "lower elliptical horn ring; exclude orange/pink forelock beneath and beside",
+      "annotation_file": "tennis_backswing__contour_annotation.png",
+      "padding_px": 1,
+      "method": "Independent native source dark-edge row trace; applied composite acceptance pending"
+    },
+    {
+      "frame_id": "tennis_contact",
+      "source_base_file": "bases/tennis_contact.png",
+      "base_sha256": "47a36be303f092dd0262e75e0022092d729da5356cf3e799f95b8bd933048a66",
+      "canvas": [
+        832,
+        724
+      ],
+      "path": "M 489 156 L 480 160 L 470 170 L 461 180 L 454 190 L 446 200 L 439 210 L 433 220 L 425 230 L 427 240 L 439 253 L 453 264 L 466 270 L 474 267 L 481 260 L 485 250 L 489 240 L 492 230 L 495 220 L 498 210 L 500 200 L 502 190 L 503 180 L 503 170 L 499 160 Z",
+      "confidence": "manual contour traced on native source; approximate 1\u20133 px boundary; review mask output before acceptance",
+      "ends_at": "lower elliptical horn ring; exclude orange/pink forelock beneath and beside",
+      "annotation_file": "tennis_contact__contour_annotation.png",
+      "padding_px": 1,
+      "method": "Independent native source dark-edge row trace; applied composite acceptance pending"
+    },
+    {
+      "frame_id": "volleyball_ready",
+      "source_base_file": "bases/volleyball_ready.png",
+      "base_sha256": "47a621f891ae77ba705317669bb3f1edf1e8e4833ce9444f1cc6734ecdd2505e",
+      "canvas": [
+        627,
+        627
+      ],
+      "path": "M 433 76 L 424 80 L 415 90 L 407 100 L 400 110 L 393 120 L 388 130 L 382 140 L 377 150 L 373 160 L 370 169 L 378 182 L 391 193 L 408 198 L 423 194 L 432 190 L 433 180 L 435 170 L 438 160 L 440 150 L 442 140 L 444 130 L 446 120 L 447 110 L 447 100 L 446 90 L 442 80 Z",
+      "confidence": "manual contour traced on native source; approximate 1\u20133 px boundary; review mask output before acceptance",
+      "ends_at": "lower elliptical horn ring; exclude orange/pink forelock beneath and beside",
+      "annotation_file": "volleyball_ready__contour_annotation.png",
+      "padding_px": 1,
+      "method": "Independent native source dark-edge row trace; applied composite acceptance pending"
+    },
+    {
+      "frame_id": "volleyball_bump",
+      "source_base_file": "bases/volleyball_bump.png",
+      "base_sha256": "fc8ce9d0913166f4068f0155c9d032187e69c89338011065453fb3f93bdf305f",
+      "canvas": [
+        627,
+        627
+      ],
+      "path": "M 425 113 C 409 108 378 150 361 179 L 355 190 C 355 208 372 222 390 228 C 401 233 410 225 418 206 C 429 177 439 138 437 125 C 436 117 432 113 425 113 Z",
+      "confidence": "manual contour traced on native source; approximate 1\u20133 px boundary; review mask output before acceptance",
+      "ends_at": "lower elliptical horn ring; exclude orange/pink forelock beneath and beside",
+      "annotation_file": "volleyball_bump__contour_annotation.png"
+    },
+    {
+      "frame_id": "volleyball_set",
+      "source_base_file": "bases/volleyball_set.png",
+      "base_sha256": "272800dff2b76d06bfdb4df938ae9cb34b3932fa438e22936aad1a972b5beada",
+      "canvas": [
+        1254,
+        1254
+      ],
+      "path": "M 618 252 L 610 255 L 600 265 L 591 280 L 581 300 L 574 320 L 569 340 L 563 360 L 560 380 L 557 400 L 569 411 L 589 420 L 613 426 L 633 424 L 650 410 L 654 400 L 652 380 L 651 360 L 650 340 L 649 320 L 645 300 L 641 280 L 635 265 L 629 255 Z",
+      "confidence": "manual contour traced on native source; approximate 1\u20133 px boundary; review mask output before acceptance",
+      "ends_at": "lower elliptical horn ring; exclude orange/pink forelock beneath and beside",
+      "annotation_file": "volleyball_set__contour_annotation.png",
+      "padding_px": 1,
+      "method": "Independent native source dark-edge row trace; applied composite acceptance pending"
+    },
+    {
+      "frame_id": "volleyball_hit",
+      "source_base_file": "bases/volleyball_hit.png",
+      "base_sha256": "6b2b8150f015cdf86d0abf874583ae065ec27ed7c9375fef31240ab8d197ea72",
+      "canvas": [
+        627,
+        627
+      ],
+      "path": "M 309 25 C 295 23 280 57 274 88 L 268 128 C 274 137 289 144 307 145 C 317 147 329 142 330 126 C 333 98 331 56 322 39 C 319 29 314 25 309 25 Z",
+      "confidence": "manual contour traced on native source; approximate 1\u20133 px boundary; review mask output before acceptance",
+      "ends_at": "lower elliptical horn ring; exclude orange/pink forelock beneath and beside",
+      "annotation_file": "volleyball_hit__contour_annotation.png"
+    },
+    {
+      "frame_id": "skate_crouch",
+      "source_base_file": "bases/skate_crouch.png",
+      "base_sha256": "83ac67e0e506e84ec1f4b944f2093ee5430ff20070528fe2eff7fbe9be0e1232",
+      "canvas": [
+        543,
+        724
+      ],
+      "path": "M 439 184 C 422 180 389 220 363 251 L 365 263 C 363 279 379 296 397 299 C 407 307 419 297 423 280 C 437 251 447 215 447 195 C 446 186 443 184 439 184 Z",
+      "confidence": "manual contour traced on native source; approximate 1\u20133 px boundary; review mask output before acceptance",
+      "ends_at": "lower elliptical horn ring; exclude orange/pink forelock beneath and beside",
+      "annotation_file": "skate_crouch__contour_annotation.png"
+    },
+    {
+      "frame_id": "skate_rise",
+      "source_base_file": "bases/skate_rise.png",
+      "base_sha256": "ea1fe1c2eda5b8dd22917401a64fd65691f185aff2653ba11d5c7419eb7785fa",
+      "canvas": [
+        543,
+        724
+      ],
+      "path": "M 439 116 L 429 120 L 419 130 L 411 140 L 403 150 L 396 160 L 388 170 L 382 180 L 374 190 L 377 200 L 387 212 L 400 222 L 413 227 L 422 221 L 425 210 L 429 200 L 434 190 L 436 180 L 443 170 L 444 160 L 446 150 L 449 140 L 450 130 L 448 120 Z",
+      "confidence": "manual contour traced on native source; approximate 1\u20133 px boundary; review mask output before acceptance",
+      "ends_at": "lower elliptical horn ring; exclude orange/pink forelock beneath and beside",
+      "annotation_file": "skate_rise__contour_annotation.png",
+      "padding_px": 1,
+      "method": "Independent native source dark-edge row trace; applied composite acceptance pending"
+    },
+    {
+      "frame_id": "skate_air_level",
+      "source_base_file": "bases/skate_air_level.png",
+      "base_sha256": "40cbfc35cef779865fb91a32f8a6f20959b6440b3f3e208b34f28d39da24b8b7",
+      "canvas": [
+        543,
+        724
+      ],
+      "path": "M 446 73 C 433 67 411 94 393 114 L 376 140 C 372 151 385 169 399 178 C 408 184 419 182 424 165 C 437 139 449 106 450 86 C 450 77 447 73 446 73 Z",
+      "confidence": "manual contour traced on native source; approximate 1\u20133 px boundary; review mask output before acceptance",
+      "ends_at": "lower elliptical horn ring; exclude orange/pink forelock beneath and beside",
+      "annotation_file": "skate_air_level__contour_annotation.png"
+    },
+    {
+      "frame_id": "skate_land",
+      "source_base_file": "bases/skate_land.png",
+      "base_sha256": "9852c874306298e5224e2055a9f1f04aa9950d5d2ca78a64395a0ea647961454",
+      "canvas": [
+        542,
+        724
+      ],
+      "path": "M 466 177 L 459 179 L 452 185 L 441 195 L 431 205 L 421 215 L 414 225 L 404 235 L 396 245 L 392 253 L 398 267 L 409 281 L 420 288 L 431 286 L 443 275 L 449 265 L 454 255 L 458 245 L 464 235 L 468 225 L 470 215 L 475 205 L 477 195 L 477 185 L 473 180 Z",
+      "confidence": "manual contour traced on native source; approximate 1\u20133 px boundary; review mask output before acceptance",
+      "ends_at": "lower elliptical horn ring; exclude orange/pink forelock beneath and beside",
+      "annotation_file": "skate_land__contour_annotation.png",
+      "padding_px": 1,
+      "method": "Independent native source dark-edge row trace; applied composite acceptance pending"
+    }
+  ]
+}
