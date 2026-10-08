@@ -1,0 +1,98 @@
+{
+  "source": "imagegen matching supplied sports action references",
+  "date": "2026-10-08",
+  "file": "challengers.png",
+  "sha256": "5582ef71ebf8dcf3f80df41f5cd02fa24a32475137a445b0f3dfae8898aa67a5",
+  "canvas": [
+    1536,
+    1024
+  ],
+  "characters": [
+    "Mint Pop",
+    "Disco Comet"
+  ],
+  "cells": "Left tennis contact; right volleyball bump. Top row crop y0..490; bottom row y500..1024. See opponentFrame() for measured ground/contact points.",
+  "notes": "Original supplied sprites remain unchanged. New whole sprites have baked rackets and no clothing overlays. Transparent RGB background is excluded by alpha. Pivots/contacts measured against generated pixels; browser alignment QA required.",
+  "registration": [
+    {
+      "level": 1,
+      "game": "tennis",
+      "source_rect_xywh": [
+        0,
+        0,
+        768,
+        490
+      ],
+      "ground_pivot_cell": [
+        300,
+        474
+      ],
+      "ball_contact_cell": [
+        639,
+        244
+      ],
+      "world_scale": 0.13953488372093023,
+      "mirrored_as_whole": true
+    },
+    {
+      "level": 1,
+      "game": "volleyball",
+      "source_rect_xywh": [
+        768,
+        0,
+        768,
+        490
+      ],
+      "ground_pivot_cell": [
+        385,
+        474
+      ],
+      "ball_contact_cell": [
+        640,
+        327
+      ],
+      "world_scale": 0.18604651162790697,
+      "mirrored_as_whole": true
+    },
+    {
+      "level": 2,
+      "game": "tennis",
+      "source_rect_xywh": [
+        0,
+        500,
+        768,
+        524
+      ],
+      "ground_pivot_cell": [
+        326,
+        485
+      ],
+      "ball_contact_cell": [
+        655,
+        245
+      ],
+      "world_scale": 0.12526096033402923,
+      "mirrored_as_whole": true
+    },
+    {
+      "level": 2,
+      "game": "volleyball",
+      "source_rect_xywh": [
+        768,
+        500,
+        768,
+        524
+      ],
+      "ground_pivot_cell": [
+        422,
+        485
+      ],
+      "ball_contact_cell": [
+        694,
+        317
+      ],
+      "world_scale": 0.16701461377870563,
+      "mirrored_as_whole": true
+    }
+  ]
+}

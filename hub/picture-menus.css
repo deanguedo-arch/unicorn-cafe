@@ -69,3 +69,6 @@ body:has(#game-shell:not([hidden])) #wallet{margin-left:68px}#loading{margin-lef
 /* Sports use the same picture controls and leave the lower-right action clear. */
 #sports-tools{position:fixed;z-index:7;top:max(60px,calc(env(safe-area-inset-top) + 56px));left:max(12px,env(safe-area-inset-left));display:flex;gap:12px;align-items:center;pointer-events:none}
 #sports-tools[hidden]{display:none}#sports-tools button{pointer-events:auto;width:48px;height:44px;padding:7px;border:2px solid #e8cfa8;border-radius:12px;background:#fff1d7;box-shadow:0 2px 0 #75557f,inset 0 0 0 2px #fff8dc}#sports-tools .picture-sprite{width:28px;height:28px}#sports-progress{display:flex;gap:7px;align-items:center;background:#fff1d7;color:#694574;border:2px solid #d9b6c8;border-radius:10px;padding:6px 10px;min-height:44px;font-weight:700}body:has(#rotate:not([hidden])) #sports-tools{visibility:hidden}
+
+#sports-levels{display:flex;gap:8px;pointer-events:auto}#sports-levels[hidden]{display:none}#sports-levels button[aria-pressed=true]{border-color:#ecb54d;box-shadow:0 0 0 2px #ffe494}#sports-levels button:disabled{opacity:.5}#sports-tools{flex-wrap:wrap;max-width:calc(100vw - 24px)}
+#sports-levels button:disabled{filter:grayscale(1)}#sports-levels .picture-sprite{width:32px;height:28px}

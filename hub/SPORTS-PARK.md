@@ -12,8 +12,8 @@ Both build ZIPs were extracted into the same temporary parent before implementat
 - Seam overlays retain their declared (0,512)/(0,1536) origins. Source alpha is multiplied by the exact local vertical opacity knots, with zero opacity outside the narrow seam band.
 - Each action uses its source rectangle, source ground pivot and source-to-logical scale. The actor scale is 0.28; mirroring transforms character and ball anchor together. Basketball is 85 logical pixels, tennis 22.4, volleyball 96.815. Ball images scale uniformly by visible bounds, retaining aspect ratio.
 - Basketball uses one separate ball with the declared back/front layer in each state. The rim foreground uses original hoop RGB and source alpha multiplied by the supplied grayscale mask. Foreground redraw is clipped to the ball bounds; the hoop itself is not painted twice outside that area.
-- Tennis rackets are baked into the supplied poses. Physical hits use the registered contact center, including ball height, within a 48-world-unit catch tolerance. The opponent is smaller at the far end of the projected court.
-- Volleyball's set pose has an embedded ball. The external ball is hidden for that frame and restored at its registered exit position and size. The net retains the supplied uniform scale/translation; low far-side balls draw behind it, near-side and tape-clearing balls in front.
+- Tennis rackets are baked into the supplied poses. Physical hits use the registered contact center, including ball height, within a 48-world-unit automatic return tolerance. The opponent is smaller at the far end of the projected court.
+- Volleyball's supplied set pose has an embedded ball and is retained as reference art; automatic Pong rallies use bump/contact only. The net retains the supplied uniform scale/translation; low far-side balls draw behind it, near-side and tape-clearing balls in front.
 - The supplied canonical bike/skateboard sheets are byte-identical to the established riding sheets. The existing registered renderer uses those same pixels and four-frame clocks, retaining the purchased outfit.
 
 ## Play and persistence
@@ -23,13 +23,15 @@ Sports do not change wallet balance or ownership. The bike and skate areas are f
 | Place/game | Controls and goal |
 | --- | --- |
 | Bike and skate areas | Familiar drag/arrow movement with the selected owned vehicle. Ride through gates and over the shallow bank/roller freely. No entry cost, checklist or completion goal. |
-| Basketball | Walk around the court with familiar controls. Press the ball picture when the moving aim ring crosses the hoop; closer shots have a smaller timing swing. Make three baskets. A missed ball stays on the floor and must be collected. The release pose ends when the ball leaves, so its cutout never remains on the unicorn. |
-| Tennis/Pong | Drag the unicorn along the near baseline or use left/right movement. Stand on the landing circle and press the racket picture to return. A moving far-side opponent tries to intercept; a missed ball awards the other side a point. First to five. |
-| Volleyball | Move up/down to the landing circle, then press the changing bump, set and hit pictures. A moving opponent rallies across the net; misses award opponent points. First to three. The embedded set ball remains the only visible ball until the hit handoff. |
+| Basketball | Move onto the highlighted shooting spot. Hold the ball button to build power and release near the marker while the aim ring lines up. Three baskets require three different spots. Retrieve missed balls. Keyboard activation retains an assisted-power option. |
+| Tennis/Pong | Press once to start the match, then drag or move left/right. Stand in the incoming ball’s path for automatic returns. First to three. |
+| Volleyball | Press once to start the match, then move up/down. Returns are automatic bumps; no repeated set/hit buttons. First to three. |
 
-The sports-ready poses move across the courts with a small step bob, preserving their baked rackets and supplied anatomy. Dedicated sports running loops are absent. Ball games use plain sports characters until fitted sports layers are supplied. Completed or lost matches offer a replay picture. Both sides' scores persist; interruption restarts the current rally without erasing points.
+Each ball game has three independently saved opponent levels: the supplied starter, Mint Pop, then Disco Comet. Winning unlocks the next level. Unlocked picture cards allow replay; locked cards are disabled and gray. Their ball-flight baselines are 1.75, 1.25 and 0.90 seconds, with within-rally variation. AI movement is 65/130/210 world units per second, reaction delays 0.45/0.25/0.12 seconds and interception tolerances 32/43/50. Edge contacts angle returns across the court, allowing skillful placement to beat faster opponents. Point pauses start the next ball automatically; only the beginning of a match requires a serve press.
 
-Floor taps now use collision-checked routes around scenery in the hub, shops and park. Each segment is sampled against the existing collision map. Park activity destinations use the actual station location rather than an indoor doorway offset that could point outside the skate path. Drag and keyboard movement retain collision checks and familiar controls.
+The two new opponent models are complete generated sprites with baked rackets and separate bump poses, stored under `assets/sports/opponents/`. Their exact crops, ground pivots and contact points are defined in opponentFrame(); source pixels and provenance are retained. Original supplied art is unchanged. The original bump/contact poses are also used for the starter opponent so contacts align with actual racket/hands. Near-side sports clothing remains pending.
+
+Floor taps follow collision-checked routes. The middle garden has a wider passable ring, both courts have usable full painted aprons and side entrances, and the volleyball court opens directly from the central north approach. The action button recognizes each whole court apron, so approaching a tiny central station is no longer required. Nets and garden centers remain blocked. The original maps are retained; collision extents follow their visible floor and apron areas, without adding a new map join.
 
 The top-left back picture leaves the current activity; from free walking it returns to the hub. The north floor arrow also exits when approached and stopped on, using the existing arrival-safe dwell latch. Completed rounds show a check and replay picture; lost matches also offer replay. Replay resets only the selected sports activity.
 
@@ -43,7 +45,7 @@ The supplied receding volleyball net has an approximately 22-pixel deviation on 
 
 ## Verification
 
-Fresh Chromium and WebKit checks cover basketball movement, timed scores, physical pickup, release cutout removal, tennis body/contact alignment and opponent interception, volleyball movement/misses and embedded-ball handoff, bounded matches, collision-safe routes to every entrance, actual tap navigation around the middle garden, owned-equipment persistence, supplied checksums, exact hoop foreground coverage, seam crossings, touch controls, pause, exits and storage failure. The corrected artwork trial remains preparation material; it is not imported as clothing or an airborne skate animation.
+Fresh Chromium and WebKit checks cover basketball movement, timed scores, physical pickup, release cutout removal, tennis body/contact alignment and opponent interception, automatic returns, three-point wins/losses, all three beatable difficulty levels and saved unlocks, bounded matches, collision-safe routes to every entrance, actual tap navigation around the middle garden, owned-equipment persistence, supplied checksums, exact hoop foreground coverage, seam crossings, touch controls, pause, exits and storage failure. The corrected artwork trial remains preparation material; it is not imported as clothing or an airborne skate animation.
 
 Run with an isolated source preview on port 8890:
 

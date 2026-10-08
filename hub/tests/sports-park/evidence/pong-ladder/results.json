@@ -1,0 +1,27 @@
+{
+  "checks": [
+    "Wider bush ring and direct court doorways stay walkable",
+    "Volleyball entry avoids the outside lap",
+    "Court buttons work immediately on the entry aprons",
+    "One opening serve, then automatic returns: tennis",
+    "Three points unlock next opponent: tennis",
+    "Every difficulty has faster ball and stronger opponent: tennis",
+    "Challenger can be beaten with edge returns: tennis 1",
+    "Challenger can be beaten with edge returns: tennis 2",
+    "Missing returns lose a bounded match: tennis",
+    "One opening serve, then automatic returns: volleyball",
+    "Three points unlock next opponent: volleyball",
+    "Every difficulty has faster ball and stronger opponent: volleyball",
+    "Challenger can be beaten with edge returns: volleyball 1",
+    "Challenger can be beaten with edge returns: volleyball 2",
+    "Missing returns lose a bounded match: volleyball",
+    "Basketball needs current spot and power, then changes spot",
+    "Wrong spot produces a collectable miss",
+    "Walking to missed basketball retrieves it",
+    "Wallet, equipment and wardrobe remain unchanged",
+    "Ladder unlocks and wins survive reload",
+    "Actual button hold/release launches an intact-avatar shot",
+    "Opponent cards and controls fit small landscape without overlap"
+  ],
+  "errors": []
+}

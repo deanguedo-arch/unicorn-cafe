@@ -3,7 +3,7 @@
 const params=new URLSearchParams(location.search),qa=params.get('qa')==='1',legacy=params.get('legacy')==='1',STORE='unicorn-world-hub-v1';
 const service=new UWProfile.Profile(),frames=new Map(),images={},keys=new Set(),player={x:830,y:620,facing:1};
 let scene='village',scale=1,ox=0,oy=0,dpr=1,last=0,time=0,drag=null,target=null,route=[],focused=null,active=null,loaded=false,moving=false,portrait=false,returning=false,panelOpen=false,lastPersist=0,panelPausePromise=null,panelPauseResolve=null,navGeneration=0;
-const park=new UWSportsPark({player,service,canvas,announce,draw,clear,equipment:()=>{mall.bagTab="equipment";mall.open("backpack");}});
+const park=new UWSportsPark({player,service,canvas,announce,draw,clear,paused:()=>portrait||panelOpen||document.hidden,equipment:()=>{mall.bagTab="equipment";mall.open("backpack");}});
 const villageDoors=[{id:'cafe',x:518,y:495,r:114,spawn:{x:590,y:620},picture:'pizza',hit:{x:430,y:305,w:170,h:225}},{id:'adventure',x:1290,y:512,r:114,spawn:{x:1190,y:655},picture:'room_door',hit:{x:1200,y:235,w:220,h:310}},{id:'mall',x:840,y:430,r:95,picture:'bag',hit:{x:750,y:355,w:180,h:140}},{id:'park',x:1205,y:880,r:75,approachOffset:-45,picture:'wheel'}];
 const scenes={
  park:{w:768,h:512,outdoor:true,spawn:{x:768,y:200}},
@@ -27,7 +27,7 @@ function clear(){park.cancel();keys.clear();target=null;route=[];if(drag){try{ca
 function resize(){const r=canvas.getBoundingClientRect(),spec=scenes[scene];dpr=Math.min(devicePixelRatio||1,2);canvas.width=Math.round(r.width*dpr);canvas.height=Math.round(r.height*dpr);scale=Math.min(r.width/spec.w,r.height/spec.h);ox=(r.width-spec.w*scale)/2;oy=(r.height-spec.h*scale)/2;const before=portrait;portrait=innerHeight>innerWidth;if(active&&portrait!==before)send(frames.get(active),portrait?'suspend':panelOpen?'suspend':'resume');$('rotate').hidden=!portrait;if(portrait!==before)mall.cancelControls();clear();last=0;}
 function point(e){const r=canvas.getBoundingClientRect(),camera=scene==='park'?park.view():{x:0,y:0};return{x:(e.clientX-r.left-ox)/scale+camera.x,y:(e.clientY-r.top-oy)/scale+camera.y};}
 function ride(){if(!scenes[scene].outdoor)return null;if(scene==='track'&&mall.trialVehicle)return mall.trialVehicle;return service.value.owned.includes(service.value.vehicle)?service.value.vehicle:null;}
-function clearLine(a,b){const n=Math.ceil(Math.hypot(b.x-a.x,b.y-a.y)/8);for(let i=0;i<=n;i++)if(!walkable(a.x+(b.x-a.x)*i/Math.max(n,1),a.y+(b.y-a.y)*i/Math.max(n,1)))return false;return true;}
+function clearLine(a,b){const n=Math.ceil(Math.hypot(b.x-a.x,b.y-a.y)/2);for(let i=0;i<=n;i++){const x=a.x+(b.x-a.x)*i/Math.max(n,1),y=a.y+(b.y-a.y)*i/Math.max(n,1);if(!walkable(x,y))return false;if(i>0&&i<n&&(!walkable(x-2,y)||!walkable(x+2,y)||!walkable(x,y-2)||!walkable(x,y+2)))return false;}return true;}
 // Route floor taps around scenery; every segment still obeys the same collision map.
 function planRoute(goal){
  const start={x:player.x,y:player.y},step=24,w=scene==='park'?1536:scenes[scene].w,h=scene==='park'?3072:scenes[scene].h;
