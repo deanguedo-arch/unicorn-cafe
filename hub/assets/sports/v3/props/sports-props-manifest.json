@@ -1,0 +1,283 @@
+{
+  "title": "Unicorn World south park sports props",
+  "generation": "Direct built-in image generation. Bank and roller received image-tool alpha-cleanup edits. Originals retained unchanged.",
+  "coordinate_system": "Pixel origin top-left; bounds right/bottom exclusive. Pivots are starting suggestions, not tested runtime anchors.",
+  "style": "Warm hand-painted cream, pink, plum and gold; elevated three-quarter view.",
+  "integration_notes": [
+    "Each image is an individual untrimmed RGBA PNG; no atlas slicing required.",
+    "Scale from visible content bounds, not full canvas dimensions. Keep alpha padding.",
+    "Basket faces downscreen; tennis net spans left-right.",
+    "Racket may be mirrored for the opponent; balls and racket use center pivots.",
+    "Arch feet are slightly diagonal in perspective; bottom-center pivot is approximate.",
+    "Grounded prop pivots are suggested bottom-center; ramps require collision footprints defined separately.",
+    "No collision, animation, input, scoring or runtime integration is implemented by these assets.",
+    "Inspect edge anti-aliasing at target display size during integration.",
+    "Tiny alpha-1 to alpha-9 artifacts extend beyond visible silhouettes in generated originals; use alpha-at-least-10 bounds for scaling and suggested pivots. PNGs retain original alpha without deterministic editing. Fully transparent pixels may contain background RGB, which correct alpha compositing hides."
+  ],
+  "assets": [
+    {
+      "file": "basketball.png",
+      "dimensions_px": [
+        1312,
+        1199
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "nontransparent_bounds_xyxy": [
+        0,
+        153,
+        1130,
+        1199
+      ],
+      "suggested_pivot_px": [
+        657.0,
+        599.0
+      ],
+      "suggested_pivot_normalized": [
+        0.50076,
+        0.49958
+      ],
+      "source_generated_filename": "exec-388f18cf-a0f5-44f2-b036-b011a845e57f.png",
+      "transparent_pixel_fraction": 0.66715,
+      "visible_bounds_alpha_at_least_10_xyxy": [
+        248,
+        192,
+        1066,
+        1006
+      ]
+    },
+    {
+      "file": "basketball-hoop.png",
+      "dimensions_px": [
+        1224,
+        1285
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "nontransparent_bounds_xyxy": [
+        0,
+        31,
+        1208,
+        1285
+      ],
+      "suggested_pivot_px": [
+        611.5,
+        1222
+      ],
+      "suggested_pivot_normalized": [
+        0.49959,
+        0.95097
+      ],
+      "source_generated_filename": "exec-0e00edc2-a988-4394-9631-73c9b37e8d6d.png",
+      "transparent_pixel_fraction": 0.70745,
+      "visible_bounds_alpha_at_least_10_xyxy": [
+        229,
+        37,
+        994,
+        1222
+      ]
+    },
+    {
+      "file": "tennis-ball.png",
+      "dimensions_px": [
+        1305,
+        1205
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "nontransparent_bounds_xyxy": [
+        57,
+        53,
+        1251,
+        1205
+      ],
+      "suggested_pivot_px": [
+        661.5,
+        596.5
+      ],
+      "suggested_pivot_normalized": [
+        0.5069,
+        0.49502
+      ],
+      "source_generated_filename": "exec-3ca9286d-5f2b-4552-a582-a9f09582a830.png",
+      "transparent_pixel_fraction": 0.67087,
+      "visible_bounds_alpha_at_least_10_xyxy": [
+        255,
+        194,
+        1068,
+        999
+      ]
+    },
+    {
+      "file": "tennis-racket.png",
+      "dimensions_px": [
+        1374,
+        1145
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "nontransparent_bounds_xyxy": [
+        47,
+        21,
+        1336,
+        1129
+      ],
+      "suggested_pivot_px": [
+        740.0,
+        584.0
+      ],
+      "suggested_pivot_normalized": [
+        0.53857,
+        0.51004
+      ],
+      "source_generated_filename": "exec-cd3816db-7bcc-4c0d-a605-c37e3b1a10f2.png",
+      "transparent_pixel_fraction": 0.74665,
+      "visible_bounds_alpha_at_least_10_xyxy": [
+        200,
+        87,
+        1280,
+        1081
+      ]
+    },
+    {
+      "file": "tennis-net.png",
+      "dimensions_px": [
+        2172,
+        724
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "nontransparent_bounds_xyxy": [
+        62,
+        9,
+        2110,
+        690
+      ],
+      "suggested_pivot_px": [
+        1086.5,
+        522
+      ],
+      "suggested_pivot_normalized": [
+        0.50023,
+        0.72099
+      ],
+      "source_generated_filename": "exec-a50892cc-cfc7-4aab-ab6b-448b33291df1.png",
+      "transparent_pixel_fraction": 0.72039,
+      "visible_bounds_alpha_at_least_10_xyxy": [
+        65,
+        139,
+        2108,
+        522
+      ]
+    },
+    {
+      "file": "shallow-bank.png",
+      "dimensions_px": [
+        1536,
+        1024
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "nontransparent_bounds_xyxy": [
+        93,
+        121,
+        1462,
+        998
+      ],
+      "suggested_pivot_px": [
+        783.5,
+        928
+      ],
+      "suggested_pivot_normalized": [
+        0.51009,
+        0.90625
+      ],
+      "source_generated_filename": "exec-7f908208-f6bc-448c-8e10-66ef2120b43c.png",
+      "transparent_pixel_fraction": 0.61168,
+      "visible_bounds_alpha_at_least_10_xyxy": [
+        108,
+        131,
+        1459,
+        928
+      ]
+    },
+    {
+      "file": "rounded-roller.png",
+      "dimensions_px": [
+        1536,
+        1024
+      ],
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "nontransparent_bounds_xyxy": [
+        79,
+        175,
+        1488,
+        858
+      ],
+      "suggested_pivot_px": [
+        784.5,
+        855
+      ],
+      "suggested_pivot_normalized": [
+        0.51074,
+        0.83496
+      ],
+      "source_generated_filename": "exec-b4f3e27b-be5f-4cc0-97ea-c1f68391de94.png",
+      "transparent_pixel_fraction": 0.73749,
+      "visible_bounds_alpha_at_least_10_xyxy": [
+        83,
+        270,
+        1486,
+        855
+      ]
+    },
+    {
+      "file": "checkpoint-arch.png",
+      "dimensions_px": [
+        1402,
+        1122
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "nontransparent_bounds_xyxy": [
+        0,
+        23,
+        1372,
+        1122
+      ],
+      "suggested_pivot_px": [
+        710.0,
+        1015
+      ],
+      "suggested_pivot_normalized": [
+        0.50642,
+        0.90463
+      ],
+      "source_generated_filename": "exec-ea6670aa-4a05-4590-93e6-41c1c6d03753.png",
+      "transparent_pixel_fraction": 0.72542,
+      "visible_bounds_alpha_at_least_10_xyxy": [
+        176,
+        129,
+        1244,
+        1015
+      ]
+    }
+  ]
+}

@@ -48,3 +48,7 @@ Review current screenshots and results in `tests/mall/evidence/navigation/`, inc
 # Fitted wardrobe update
 
 The full 2026-10-06 production wardrobe pack is integrated across the mall and both connected games. See [WARDROBE-INTEGRATION.md](./WARDROBE-INTEGRATION.md) for layer registration, canonical-art preservation, legacy-origin support and integration evidence. The separate five-pose local comparison remains at `trials/fit-v1/`.
+
+## South Sports Park
+
+The neighbourhood now has a south entrance to the supplied three-map Sports Park V3. Bike and skateboard practice, basketball, tennis/Pong and volleyball use the supplied registration, sprites and picture controls. See [SPORTS-PARK.md](./SPORTS-PARK.md) for controls, art limits, save boundaries and running-game evidence.

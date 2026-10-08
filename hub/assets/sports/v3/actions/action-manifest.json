@@ -1,0 +1,345 @@
+{
+  "version": 3,
+  "logical_canvas": [
+    512,
+    512
+  ],
+  "logical_ground_pivot": [
+    230,
+    450
+  ],
+  "coordinate_contract": "Source coordinates use pixel-edge origin top-left; rectangles are half-open. logicalPoint = [230,450] + (sourcePoint - groundPivotSource) * scaleToLogical. Keep masters unchanged; clip source rectangle then apply transform. Mirror entire actor and ball anchors around logical x=230 for left-facing.",
+  "frames": [
+    {
+      "id": "basketball_ready",
+      "source": "basketball-actions.png",
+      "source_rect_xyxy": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "ground_pivot_source": [
+        415,
+        663
+      ],
+      "scale_to_logical": 0.5,
+      "duration_ms": null,
+      "ball": {
+        "kind": "basketball",
+        "center_source": [
+          520,
+          458
+        ],
+        "visible_diameter_source": 170,
+        "layer": "back",
+        "status": "same ball sprite and identical 85 logical pixel diameter for all three states"
+      },
+      "embedded_ball": false,
+      "note": "Ball is separate in all states. Draw behind the character while held, in front after release. Transparent held-ball slots and foreground hooves preserve grip. Exactly one ball."
+    },
+    {
+      "id": "basketball_aim",
+      "source": "basketball-actions.png",
+      "source_rect_xyxy": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "ground_pivot_source": [
+        1128,
+        663
+      ],
+      "scale_to_logical": 0.5,
+      "duration_ms": 180,
+      "ball": {
+        "kind": "basketball",
+        "center_source": [
+          1223,
+          148
+        ],
+        "visible_diameter_source": 170,
+        "layer": "back",
+        "status": "same ball sprite and identical 85 logical pixel diameter for all three states"
+      },
+      "embedded_ball": false,
+      "note": "Ball is separate in all states. Draw behind the character while held, in front after release. Transparent held-ball slots and foreground hooves preserve grip. Exactly one ball."
+    },
+    {
+      "id": "basketball_release",
+      "source": "basketball-actions.png",
+      "source_rect_xyxy": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "ground_pivot_source": [
+        1815,
+        663
+      ],
+      "scale_to_logical": 0.5,
+      "duration_ms": 150,
+      "ball": {
+        "kind": "basketball",
+        "center_source": [
+          2040,
+          265
+        ],
+        "visible_diameter_source": 170,
+        "layer": "front",
+        "status": "same ball sprite and identical 85 logical pixel diameter for all three states"
+      },
+      "embedded_ball": false,
+      "note": "Ball is separate in all states. Draw behind the character while held, in front after release. Transparent held-ball slots and foreground hooves preserve grip. Exactly one ball."
+    },
+    {
+      "id": "tennis_ready",
+      "source": "tennis-actions.png",
+      "source_rect_xyxy": [
+        0,
+        0,
+        740,
+        724
+      ],
+      "ground_pivot_source": [
+        275,
+        628
+      ],
+      "scale_to_logical": 0.56,
+      "duration_ms": null,
+      "ball": null,
+      "embedded_ball": false,
+      "note": "Racket already rendered through gripping hoof; do not add separate racket"
+    },
+    {
+      "id": "tennis_backswing",
+      "source": "tennis-actions.png",
+      "source_rect_xyxy": [
+        740,
+        0,
+        1340,
+        724
+      ],
+      "ground_pivot_source": [
+        1090,
+        624
+      ],
+      "scale_to_logical": 0.56,
+      "duration_ms": 120,
+      "ball": null,
+      "embedded_ball": false,
+      "note": "Racket baked in; ball stays in world"
+    },
+    {
+      "id": "tennis_contact",
+      "source": "tennis-actions.png",
+      "source_rect_xyxy": [
+        1340,
+        0,
+        2172,
+        724
+      ],
+      "ground_pivot_source": [
+        1660,
+        628
+      ],
+      "scale_to_logical": 0.56,
+      "duration_ms": 90,
+      "ball": {
+        "kind": "tennis-ball",
+        "center_source": [
+          2052,
+          373
+        ],
+        "visible_diameter_source": 40,
+        "layer": "front",
+        "status": "authored visual contact, not runtime collision calibration"
+      },
+      "embedded_ball": false,
+      "note": "Ball at string bed centre in front; racket baked in"
+    },
+    {
+      "id": "volleyball_ready",
+      "source": "volleyball-actions.png",
+      "source_rect_xyxy": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "ground_pivot_source": [
+        337,
+        600
+      ],
+      "scale_to_logical": 0.515,
+      "duration_ms": null,
+      "ball": null,
+      "embedded_ball": false,
+      "note": "No ball attachment; world ball independently moves"
+    },
+    {
+      "id": "volleyball_bump",
+      "source": "volleyball-actions.png",
+      "source_rect_xyxy": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "ground_pivot_source": [
+        927,
+        603
+      ],
+      "scale_to_logical": 0.515,
+      "duration_ms": 140,
+      "ball": {
+        "kind": "volleyball",
+        "center_source": [
+          1110,
+          318
+        ],
+        "visible_diameter_source": 187.9902912621359,
+        "layer": "front",
+        "status": "authored visual contact, not runtime collision calibration"
+      },
+      "embedded_ball": false,
+      "note": "Ball bottom meets joined forehooves; front layer"
+    },
+    {
+      "id": "volleyball_set",
+      "source": "volleyball-set-fitted.png",
+      "source_rect_xyxy": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "ground_pivot_source": [
+        670,
+        1185
+      ],
+      "scale_to_logical": 0.289,
+      "duration_ms": 140,
+      "ball": null,
+      "embedded_ball": true,
+      "note": "Replacement fitted set with baked ball; hide world ball during this contact frame. Embedded ball centre [835,245], diameter ~335 source pixels. On exit show world ball at same transformed centre",
+      "ball_handoff_on_exit": {
+        "kind": "volleyball",
+        "center_source": [
+          835,
+          245
+        ],
+        "visible_diameter_source": 335,
+        "transform": "Use coordinate_contract; mirror around logical ground pivot for left-facing",
+        "world_ball_during_frame": "hidden"
+      },
+      "embedded_ball_measurement": {
+        "centre_source": [
+          835,
+          245
+        ],
+        "visible_diameter_source": 335,
+        "logical_diameter": 96.815
+      }
+    },
+    {
+      "id": "volleyball_hit",
+      "source": "volleyball-actions.png",
+      "source_rect_xyxy": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "ground_pivot_source": [
+        974,
+        1195
+      ],
+      "scale_to_logical": 0.515,
+      "duration_ms": 100,
+      "ball": {
+        "kind": "volleyball",
+        "center_source": [
+          1220,
+          713
+        ],
+        "visible_diameter_source": 187.9902912621359,
+        "layer": "front",
+        "status": "authored visual contact, not runtime collision calibration"
+      },
+      "embedded_ball": false,
+      "note": "Ball bottom-left meets extended hoof; world ball may extend beyond actor source crop"
+    }
+  ],
+  "props": {
+    "basketball": {
+      "file": "../props/basketball.png",
+      "size": [
+        1312,
+        1199
+      ],
+      "bounds": [
+        248,
+        192,
+        1066,
+        1006
+      ]
+    },
+    "tennis-ball": {
+      "file": "../props/tennis-ball.png",
+      "size": [
+        1305,
+        1205
+      ],
+      "bounds": [
+        255,
+        194,
+        1068,
+        999
+      ]
+    },
+    "volleyball": {
+      "file": "../props/volleyball.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "bounds": [
+        128,
+        120,
+        1127,
+        1135
+      ]
+    }
+  },
+  "layer_contract": [
+    "Held separate basketball behind actor; world ball hidden only when embedded ball is true (volleyball set)",
+    "Whole actor including foreground gripping hoof pixels and any prerendered racket",
+    "Released basketball and tennis/volleyball contact balls in front unless court crossing logic explicitly places them behind a net/rim foreground layer"
+  ],
+  "timing_status": "Suggested starting timings, not gameplay tested. Ready holds until input; return to ready after action. No locomotion loop or clothing variant included.",
+  "limitations": [
+    "New image-generated redraws resemble canonical identity; not pixel-identical original sprites",
+    "Source dimensions differ from prompt requests; do not claim upscaled detail",
+    "Frame pivots are authored from feet plus alpha bounds, not automatic animation registration",
+    "Volleyball sheet bottom-left is rejected for low hands. Use standalone fitted set only",
+    "Different sports need supplied scale factors; single universal atlas cell size is invalid",
+    "Facing masters are three-quarter right; left mirroring is a proposed contract, not runtime-tested",
+    "No running frames during sports actions; move position while holding ready pose or use original locomotion separately",
+    "Ball anchors and timing are visual authoring values; collisions and handoff must be tested in implementation",
+    "Baked volleyball set-ball outline diameter is visually measured ~335 source px (\u00b12); all separate volleyball balls use 96.815 logical px, so residual uncertainty is below 0.6 logical px. Basketball diameter is deterministic 85 logical px in all states, but held portions are naturally occluded by hooves."
+  ],
+  "ball_size_contract": {
+    "basketball_logical_diameter": 85,
+    "volleyball_logical_diameter": 96.815,
+    "volleyball_baked_measurement_tolerance_source_px": 2,
+    "tennis_logical_diameter": 22.4
+  },
+  "court_crossing_strategy": {
+    "basketball": "Fixed hoop view only. Draw rear hoop/backboard first, then ball, then exact front-rim/net foreground asset while ball is in hoop mouth or behind near rim. Once ball clears bottom of net, draw it in front. Requires hoop foreground mask/layer; never approximate with a generic opaque rectangle. If not provided, do not claim behind-rim occlusion implemented.",
+    "volleyball": "Fixed net plane only. Far-court actors/balls are drawn before net; near-court actors/balls after net. For an above-net crossing, render ball above net visually, change depth order only when ball crosses court plane, not merely screen y. Nets need real alpha openings.",
+    "scope": "These are art-side draw-order requirements only, not implemented collision or runtime code."
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "checks": [
+    "Actual keyboard movement crosses north-middle",
+    "Actual keyboard movement crosses middle-south",
+    "Riding checkpoint triggered by actual movement",
+    "Real drag moves while camera follows",
+    "Returning finger to origin stops despite camera movement",
+    "Hoop foreground uses exact supplied grayscale coverage alpha",
+    "Hoop rim covers the ball without changing pixels outside its bounds",
+    "Seam registration and zero outer fringe",
+    "Real basket drag captures a single pointer",
+    "Rotation cancels captured drag without releasing a shot",
+    "Backpack pauses the sports round and hides its HUD",
+    "Closing backpack resumes same activity",
+    "Storage failure leaves world profile untouched",
+    "Back leaves activity in park",
+    "Arrival in exit zone does not loop out",
+    "Park exit returns to south hub approach"
+  ],
+  "mask": {
+    "max": 0,
+    "outsideChanged": 0,
+    "insideChanged": 126
+  }
+}

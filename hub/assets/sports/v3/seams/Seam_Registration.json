@@ -1,0 +1,68 @@
+{
+  "status": "Generated seam art and registered static compositing verified at original region resolution",
+  "world_size": [
+    1536,
+    3072
+  ],
+  "overlay_source_size": [
+    1536,
+    1024
+  ],
+  "blend_contract": {
+    "local_y_opacity_knots": [
+      [
+        0,
+        0
+      ],
+      [
+        460,
+        0
+      ],
+      [
+        480,
+        1
+      ],
+      [
+        535,
+        1
+      ],
+      [
+        555,
+        0
+      ],
+      [
+        1024,
+        0
+      ]
+    ],
+    "interpolation": "linear",
+    "effective_alpha": "source_png_alpha multiplied by band opacity",
+    "purpose": "Cover region joins without hiding neighboring lamp tops or court entrances"
+  },
+  "placements": [
+    {
+      "id": "north_middle",
+      "svg": "North_Middle_Seam.svg",
+      "png": "North_Middle_Seam_Overlay.png",
+      "world_origin": [
+        0,
+        512
+      ],
+      "world_join_y": 1024
+    },
+    {
+      "id": "middle_south",
+      "svg": "Middle_South_Seam.svg",
+      "png": "Middle_South_Seam_Overlay.png",
+      "world_origin": [
+        0,
+        1536
+      ],
+      "world_join_y": 2048
+    }
+  ],
+  "layer_order": "Three original terrain PNGs first, then these two masked seam overlays, then interactive props and characters",
+  "walkability": "Seam paving continues central north-south path; keep the path walkable at matching width. Existing terrain regions unchanged.",
+  "preview_method": "Original terrain plus source PNGs and declared opacity mask assembled in PDF and rendered144dpi. Static art proof, not runtime screenshot.",
+  "runtime_requirements": "Use SVG mask correctly or implement equivalent source-alpha multiplication. Do not draw raw unmasked overlays: their broad fringe covers nearby lamps. No gameplay code included."
+}

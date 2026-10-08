@@ -1,0 +1,7 @@
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),assert=require('node:assert/strict'),vm=require('node:vm');
+const root=path.resolve(__dirname,'../../assets/sports/v3'),sha=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');let count=0;
+for(const part of [1,2])for(const line of fs.readFileSync(path.join(root,`PART_${part}_SHA256SUMS.txt`),'utf8').trim().split('\n')){const m=line.match(/^([a-f0-9]{64})\s+(.+)$/);assert.ok(m,line);assert.equal(sha(path.join(root,m[2])),m[1],m[2]);count++;}
+for(const file of ['bike-riding-v2.png','skateboard-riding-v2.png'])assert.equal(sha(path.join(root,'characters','original_'+file)),sha(path.resolve(root,'../../wardrobe/source',file)));
+const ctx={window:{}};vm.runInNewContext(fs.readFileSync(path.resolve(root,'../../../shared/sports-data.js'),'utf8'),ctx);const D=ctx.window.UWSportsData;
+for(const [key,file]of Object.entries({world:'World_Asset_Manifest.json',actions:'actions/action-manifest.json',seams:'seams/Seam_Registration.json',props:'props/sports-props-manifest.json',net:'props/volleyball-net-receding-manifest.json',hoop:'props/basketball-source-clip-contract.json'}))assert.equal(JSON.stringify(D[key]),JSON.stringify(JSON.parse(fs.readFileSync(path.join(root,file),'utf8'))),key);
+assert.equal(D.actions.frames.length,10);assert.equal(D.world.world.regions.length,3);console.log(`PASS ${count} supplied checksums; both canonical riding sheets; all runtime manifest contracts exact`);

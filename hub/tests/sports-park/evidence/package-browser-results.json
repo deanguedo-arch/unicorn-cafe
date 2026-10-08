@@ -1,0 +1,34 @@
+{
+  "results": [
+    {
+      "name": "The existing project root opens the connected Unicorn World in landscape",
+      "pass": true
+    },
+    {
+      "name": "Both games connect beneath the GitHub project path: real café earning, adventure movement/win hook, purchase/equip and reload retain coins and clothing",
+      "pass": true
+    },
+    {
+      "name": "Published-layout portrait suspension returns to the same world on a small landscape screen",
+      "pass": true
+    },
+    {
+      "name": "A real cached café installation upgrades to the world, preserves its native coins and unrelated storage/cache, and imports the old balance once",
+      "pass": true
+    },
+    {
+      "name": "No browser exceptions or missing release resources",
+      "pass": true,
+      "details": {
+        "errors": [],
+        "missing": []
+      }
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "url": "http://127.0.0.1:50038/unicorn-cafe/",
+  "oldCafeUpgradeTested": true,
+  "physicalDevice": false,
+  "childReview": false
+}

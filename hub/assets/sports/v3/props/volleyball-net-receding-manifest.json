@@ -1,0 +1,65 @@
+{
+  "file": "volleyball-net-receding.png",
+  "dimensions_px": [
+    1024,
+    1536
+  ],
+  "alpha_extrema": [
+    0,
+    254
+  ],
+  "nontransparent_bounds_xyxy": [
+    33,
+    22,
+    986,
+    1480
+  ],
+  "visible_bounds_alpha_at_least_10_xyxy": [
+    409,
+    27,
+    672,
+    1468
+  ],
+  "source_generated_filename": "exec-2dc4a950-3e4c-4e08-a60e-ab6e0ab487b5.png",
+  "approximate_ground_anchors_px": {
+    "far": [
+      455,
+      347
+    ],
+    "near": [
+      590,
+      1449
+    ]
+  },
+  "court_fit": {
+    "target_far": [
+      768,
+      324
+    ],
+    "target_near": [
+      768,
+      689
+    ],
+    "uniform_scale_to_y_span": 0.3312159709618875,
+    "recommended_translation_for_centered_baseline": [
+      594.9396551724137,
+      209.06805807622504
+    ],
+    "result_far_approx": [
+      745.6,
+      324
+    ],
+    "result_near_approx": [
+      790.4,
+      689
+    ],
+    "status": "Usable receding orientation, but not exact vertical court fit: bases deviate approximately 22px either side of x768 when uniformly scaled to required 365px span. Requires art placement acceptance or later authored alignment; not silently corrected.",
+    "runtime_tested": false
+  },
+  "notes": [
+    "One whole net, no split layers. Retain horizontal net as alternate orientation.",
+    "Ground anchors estimated visually at center of foot-bottom contact, not automatic alpha-bounds corners.",
+    "Generated PNG remains unchanged; transparent background RGB may display glow in tools that ignore alpha.",
+    "Court-side/ball-height sorting needed; not implemented."
+  ]
+}

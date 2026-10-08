@@ -1,0 +1,7 @@
+Built-in direct image generation was used for all eight assets. No CLI image model, runtime code, new character animation, or collision implementation was used.
+
+Prompt family: Create one isolated production-ready Unicorn World 2D sprite in warm handpainted storybook style, cream/pink/plum/gold, rounded forms, soft thick dark-plum outlines, elevated three-quarter view. Transparent alpha, no ground, text, numbers, UI or characters. Requested separate basketball, basketball hoop/backboard/support, tennis ball, reusable racket, full-size horizontal tennis net, shallow beginner bank, low rounded roller, and open rainbow checkpoint arch.
+
+Bank and roller received direct image-tool background extraction: preserve ramp geometry/colors/detail, remove surrounding glow/haze/shadow, make outside silhouette fully transparent with padded edges.
+
+References visually inspected: Twilight Unicorn Village Courtyard and the new south park overview. Final PNG dimensions and alpha checks are recorded in sports-props-manifest.json. Suggested pivots are not runtime-tested.

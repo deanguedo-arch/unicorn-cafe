@@ -1,0 +1,15 @@
+V3 ART REPAIR STATUS
+
+Completed: generated overlays cover both straight map discontinuities at native world width. Narrow opacity masks preserve nearby lamps and keep a continuous central path. Full 1536x3072 static composition visually reviewed.
+
+Completed: basketball size drift removed by sharing one 85px logical ball among ready, aim and release. Ready/aim draw behind image-generated transparent grip slots; release draws in front. Actual ten-state composite reviewed.
+
+Completed: volleyball bump/hit diameter 96.815 logical pixels matches the fitted set's measured ball. Set retains embedded ball and has an explicit external-ball hide/restore contract. Measurement uncertainty is below 0.6 logical pixels.
+
+Preserved: all three original terrain regions; original idle/bike/skate sprites; tennis and volleyball action masters; all original prop images. New basketball action pixels are a reference-based redraw, not pixel-identical editing of the original pose sheet.
+
+Still requires implementation: controls, collision/navigation, trajectories, camera, state transitions, progress UI, hub integration, final phone-scale and mirrored-facing tests. These are not claimed completed by static artwork.
+
+Finite art scope: ten sports states, existing four-frame riding loops, one camera/facing family. No additional outfits, rear views, sports running loops, airborne skateboard tricks or smooth intermediate frames were requested in this bounded pass.
+
+Completed: hoop occlusion uses the SAME original rim/rope pixels through a registered material-coverage mask. Three static ball positions were checked: no doubled strands and no purple support covering the ball. The mask is visually verified for this fixed-view shot corridor, not a guarantee for every possible ball position.

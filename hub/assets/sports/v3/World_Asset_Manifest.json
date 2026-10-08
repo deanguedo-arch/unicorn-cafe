@@ -1,0 +1,249 @@
+{
+  "title": "Unicorn World South Sports Park v3",
+  "status": "Art-side seam and ball-fit repairs with static pixel QA; gameplay not implemented",
+  "world": {
+    "layout_size": [
+      1536,
+      3072
+    ],
+    "regions": [
+      {
+        "id": "north_riding",
+        "file": "maps/North_Riding_Terrain.png",
+        "actual_size": [
+          1536,
+          1024
+        ],
+        "origin": [
+          0,
+          0
+        ]
+      },
+      {
+        "id": "middle_courts",
+        "file": "maps/Middle_Courts_Terrain.png",
+        "actual_size": [
+          1536,
+          1024
+        ],
+        "origin": [
+          0,
+          1024
+        ]
+      },
+      {
+        "id": "south_volleyball",
+        "file": "maps/South_Volleyball_Terrain.png",
+        "actual_size": [
+          1536,
+          1024
+        ],
+        "origin": [
+          0,
+          2048
+        ]
+      }
+    ],
+    "region_seams": [
+      {
+        "world_y": 1024,
+        "path_center_x": 768,
+        "status": "Registered generated overlay with declared narrow alpha blend; inspect static repaired preview. Apply overlay over unchanged source regions."
+      },
+      {
+        "world_y": 2048,
+        "path_center_x": 768,
+        "status": "Registered generated overlay with declared narrow alpha blend; inspect static repaired preview. Apply overlay over unchanged source regions."
+      }
+    ],
+    "travel": "One continuous scrolling world is intended; no teleport or separate level mechanic is proposed.",
+    "camera": {
+      "portrait_proposed_view": [
+        512,
+        768
+      ],
+      "landscape_proposed_view": [
+        768,
+        512
+      ],
+      "actor_world_height_target": 80,
+      "notes": "3x4 portrait view areas or 2x6 landscape view areas across the proposed full world; calibrate against actual hub actor scale, not the overview."
+    },
+    "assembled_review": "review/Full_World_Seams_Repaired.png",
+    "seam_registration": "seams/Seam_Registration.json"
+  },
+  "geometry": {
+    "coordinate_system": "Region-local pixels unless explicitly world. All shapes are proposed art-registration starting points, NOT verified runtime collision geometry.",
+    "navigation": {
+      "region_centerline_x": 768,
+      "minimum_target_clear_corridor_width": 100,
+      "hub_entry_north_x": 990,
+      "notes": "Keep central flower islands and planted borders collidable; route around them. Validate all entrances at actor footprint scale."
+    },
+    "courts": {
+      "basketball": {
+        "region": "middle_courts",
+        "play_surface_polygon": [
+          [
+            174,
+            225
+          ],
+          [
+            586,
+            225
+          ],
+          [
+            623,
+            684
+          ],
+          [
+            114,
+            684
+          ]
+        ],
+        "hoop_base": [
+          359,
+          245
+        ],
+        "shot_start": [
+          359,
+          592
+        ],
+        "notes": "Stationary assisted-shot mode; painted markings are decoration."
+      },
+      "tennis": {
+        "region": "middle_courts",
+        "play_surface_polygon": [
+          [
+            994,
+            242
+          ],
+          [
+            1280,
+            242
+          ],
+          [
+            1382,
+            690
+          ],
+          [
+            965,
+            690
+          ]
+        ],
+        "net_baseline": [
+          [
+            983,
+            445
+          ],
+          [
+            1330,
+            445
+          ]
+        ],
+        "near_actor": [
+          1180,
+          641
+        ],
+        "far_opponent": [
+          1143,
+          291
+        ],
+        "notes": "Use normalized court coordinates projected into quadrilateral. Racket collision center must derive from pose anchor; never use body rectangle."
+      },
+      "volleyball": {
+        "region": "south_volleyball",
+        "play_surface_polygon": [
+          [
+            282,
+            324
+          ],
+          [
+            1252,
+            324
+          ],
+          [
+            1298,
+            689
+          ],
+          [
+            240,
+            689
+          ]
+        ],
+        "net_baseline": [
+          [
+            768,
+            324
+          ],
+          [
+            768,
+            689
+          ]
+        ],
+        "near_post_foot": [
+          768,
+          689
+        ],
+        "far_post_foot": [
+          768,
+          324
+        ],
+        "player_start": [
+          488,
+          532
+        ],
+        "opponent_target": [
+          1085,
+          532
+        ],
+        "notes": "Play travels left-right. A north-south/receding net is required; horizontal net is only an alternate.",
+        "net_fit_note": "Receding net foot centers deviate about22 pixels on either side of ideal x768; see receding-net manifest for uniform scale and translation. No exact baseline fit is claimed."
+      }
+    }
+  },
+  "asset_inventory": {
+    "terrain_pngs": 3,
+    "character_free_layout_overview": 1,
+    "existing_character_files": [
+      "characters/original_u_idle0.webp",
+      "characters/original_bike-riding-v2.png",
+      "characters/original_skateboard-riding-v2.png"
+    ],
+    "existing_props_manifest": "props/sports-props-manifest.json",
+    "volleyball_props_manifest": "props/volleyball-props-manifest.json",
+    "sports_actions": "actions/action-manifest.json",
+    "accepted_action_states": 10,
+    "new_volleyball_props": [
+      "props/volleyball.png",
+      "props/volleyball-net-receding.png"
+    ],
+    "receding_net_registration": "props/volleyball-net-receding-manifest.json",
+    "prop_png_count": 10,
+    "hoop_foreground_mask": "props/basketball-front-coverage-mask.png",
+    "hoop_occlusion_contract": "props/basketball-source-clip-contract.json",
+    "seam_overlays": 2,
+    "seam_mask_wrappers": 2
+  },
+  "bounded_games": {
+    "bike": "3 checkpoint gates, unlimited retries",
+    "skate": "bank plus roller, no jump timing requirement, bypass permitted",
+    "basketball": "ready/aim/release, goal3 baskets, miss resets ball only",
+    "tennis": "ready/backswing/contact, fitted racket, goal5 returns, miss re-serves",
+    "volleyball": "ready/bump/set/hit, assisted ball positioning, goal3 returns, miss re-serves"
+  },
+  "draw_contract": [
+    "Draw original terrain regions then registered masked seam overlays",
+    "Sports action manifest is authoritative for equipment layers, dimensions, pivots and ball contact",
+    "Basketball uses exactly one separate ball in all three states, behind ready/aim gripping hooves and in front on release",
+    "Tennis racket is already fitted into action art; never draw a second racket",
+    "Volleyball set contains a fitted ball; hide external ball during set and restore its matching-size ball at recorded exit anchor",
+    "Follow hoop foreground layer registration and court-plane net sorting contract",
+    "Hoop foreground: same original RGB multiplied by registered coverage mask, redrawn only inside current ball bounds; see exact contract."
+  ],
+  "not_ready": [
+    "Game implementation: controls, physics, collision geometry, camera and saved state",
+    "Runtime verification of sprite transitions, mirrored anchors and masked seam rendering",
+    "Final personal art preference approval for sharper upright action redraws"
+  ]
+}

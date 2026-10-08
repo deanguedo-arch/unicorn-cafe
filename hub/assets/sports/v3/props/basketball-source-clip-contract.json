@@ -1,0 +1,130 @@
+{
+  "title": "Source-identical basketball foreground coverage mask",
+  "status": "Final art-side mask solution; supersedes generated foreground and polygon-only proof.",
+  "source": "basketball-hoop.png",
+  "source_dimensions_px": [
+    1224,
+    1285
+  ],
+  "foreground_clip_polygon_source_px": [
+    [
+      433,
+      577
+    ],
+    [
+      451,
+      603
+    ],
+    [
+      482,
+      622
+    ],
+    [
+      532,
+      636
+    ],
+    [
+      575,
+      642
+    ],
+    [
+      612,
+      644
+    ],
+    [
+      656,
+      641
+    ],
+    [
+      701,
+      631
+    ],
+    [
+      742,
+      614
+    ],
+    [
+      770,
+      592
+    ],
+    [
+      793,
+      570
+    ],
+    [
+      805,
+      849
+    ],
+    [
+      423,
+      849
+    ]
+  ],
+  "clip_bounds_xyxy": [
+    423,
+    570,
+    805,
+    849
+  ],
+  "draw_order": [
+    "Original full hoop texture",
+    "World basketball",
+    "Same original hoop RGB at identical transform, alpha multiplied by supplied foreground coverage mask; restrict redraw to ball visible bounding rectangle so unaffected antialiased edges are not composited twice"
+  ],
+  "registration": "Exact same source pixels and same transform; no doubled geometry, no resampling between rear and foreground texture.",
+  "ball_interaction": "Apply foreground redraw only while world ball intersects hoop/net volume. Normal world ordering once ball clears the bottom.",
+  "proof": {
+    "file": "../qa/basketball-source-mask-occlusion-proof.png",
+    "ball_centers_source_px": [
+      [
+        612,
+        570
+      ],
+      [
+        612,
+        670
+      ],
+      [
+        612,
+        760
+      ]
+    ],
+    "ball_visible_size_px": [
+      200,
+      200
+    ],
+    "panel_crop_xyxy": [
+      380,
+      420,
+      860,
+      900
+    ],
+    "description": "Actual static alpha composite using unchanged full hoop, shared ball and source-sampled foreground coverage mask",
+    "visual_checks": [
+      "No doubled net strands",
+      "No purple support covering ball through net openings",
+      "Front rim and hanging ropes visibly occlude ball at all three test positions"
+    ],
+    "foreground_redraw_bounds": "Per panel [512, ball_center_y-100, 712, ball_center_y+100]"
+  },
+  "limits": [
+    "Material segmentation is approximate, manually inspected in supplied three-stage proof; not claimed perfect for every possible contact position.",
+    "Polygon and mask are 2D occlusion art; runtime ordering, collision and ball movement are not implemented.",
+    "Original master PNG unchanged; mask is a separate non-destructive asset.",
+    "Omit basketball-hoop-front.png, its generated-layer contract and both older proofs from final production delivery."
+  ],
+  "foreground_mask": "basketball-front-coverage-mask.png",
+  "mask_dimensions_px": [
+    1224,
+    1285
+  ],
+  "mask_mode": "8-bit grayscale L; 0 excludes pixel, 255 fully includes pixel",
+  "source_sha256": "f03af685b890a710ae18455f0afc0411cab8b8e20c4934b3576b07ef1521b64a",
+  "derivation": {
+    "region": "Recorded polygon in source coordinates",
+    "warm_material_coverage": "min(clamp((R-B-5)/18,0,1), clamp((G-B+3)/15,0,1)), RGB in 0..255",
+    "small_hole_repair": "Connected components of mask<128 with fewer than 90 pixels set to 255; preserves small dark knots while leaving mesh openings clear",
+    "foreground_alpha": "source_alpha * mask / 255; source RGB unchanged",
+    "registration": "Identity, no offset, no scale relative to original full texture"
+  }
+}

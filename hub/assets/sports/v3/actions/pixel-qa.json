@@ -1,0 +1,162 @@
+{
+  "basketball-actions.png": {
+    "size": [
+      2172,
+      724
+    ],
+    "sha256": "0a9358f1ab02b753e8a6f321ab740460205f4b28942536aaf89378eb7c341725",
+    "transparent_fraction": 0.6937129259383616,
+    "frames": [
+      {
+        "id": "basketball_ready",
+        "alpha10_bounds": [
+          163,
+          118,
+          625,
+          663
+        ],
+        "source_rect_edge_pixels": 0
+      },
+      {
+        "id": "basketball_aim",
+        "alpha10_bounds": [
+          858,
+          113,
+          1313,
+          663
+        ],
+        "source_rect_edge_pixels": 0
+      },
+      {
+        "id": "basketball_release",
+        "alpha10_bounds": [
+          1532,
+          112,
+          2029,
+          663
+        ],
+        "source_rect_edge_pixels": 0
+      }
+    ],
+    "same_as_v2_bytes": false,
+    "pixel_identical_fraction_to_v2": 0.6683912782475098
+  },
+  "tennis-actions.png": {
+    "size": [
+      2172,
+      724
+    ],
+    "sha256": "8efaa56d92604e11be15a0f692b67366718665076a9a629e8bc7aff4fec379e0",
+    "transparent_fraction": 0.6718710255079718,
+    "frames": [
+      {
+        "id": "tennis_ready",
+        "alpha10_bounds": [
+          42,
+          142,
+          681,
+          628
+        ],
+        "source_rect_edge_pixels": 0
+      },
+      {
+        "id": "tennis_backswing",
+        "alpha10_bounds": [
+          829,
+          84,
+          1274,
+          624
+        ],
+        "source_rect_edge_pixels": 0
+      },
+      {
+        "id": "tennis_contact",
+        "alpha10_bounds": [
+          1414,
+          155,
+          2156,
+          628
+        ],
+        "source_rect_edge_pixels": 0
+      }
+    ],
+    "same_as_v2_bytes": true,
+    "pixel_identical_fraction_to_v2": 1.0
+  },
+  "volleyball-actions.png": {
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": "8314493964e85d55dc7223d0592261a13ab58069cd60ef1a267911c0f80c0fc4",
+    "transparent_fraction": 0.6185940238445905,
+    "frames": [
+      {
+        "id": "volleyball_ready",
+        "alpha10_bounds": [
+          90,
+          75,
+          507,
+          600
+        ],
+        "source_rect_edge_pixels": 0
+      },
+      {
+        "id": "volleyball_bump",
+        "alpha10_bounds": [
+          668,
+          111,
+          1167,
+          603
+        ],
+        "source_rect_edge_pixels": 0
+      },
+      {
+        "id": "volleyball_hit",
+        "alpha10_bounds": [
+          679,
+          651,
+          1189,
+          1195
+        ],
+        "source_rect_edge_pixels": 0
+      }
+    ],
+    "same_as_v2_bytes": true,
+    "pixel_identical_fraction_to_v2": 1.0
+  },
+  "volleyball-set-fitted.png": {
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": "83f59b357803d9a616cb0a2e54718da32cf1e216402e630db2db2ac69c92b14c",
+    "transparent_fraction": 0.6765660889936891,
+    "frames": [
+      {
+        "id": "volleyball_set",
+        "alpha10_bounds": [
+          235,
+          84,
+          1004,
+          1185
+        ],
+        "source_rect_edge_pixels": 0
+      }
+    ],
+    "same_as_v2_bytes": true,
+    "pixel_identical_fraction_to_v2": 1.0
+  },
+  "ball_size_assertions": {
+    "basketball": [
+      85.0,
+      85.0,
+      85.0
+    ],
+    "volleyball_contact": [
+      96.815,
+      96.815
+    ],
+    "volleyball_set": 96.815
+  }
+}

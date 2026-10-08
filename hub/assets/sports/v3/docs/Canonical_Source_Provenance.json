@@ -1,0 +1,45 @@
+{
+  "repository_commit": "637425ce2bdbb4805e0859034449e7d8bd523a20",
+  "sources": [
+    {
+      "repository_path": "game/build/assets/u_idle0.webp",
+      "url": "https://raw.githubusercontent.com/deanguedo-arch/unicorn-cafe/637425ce2bdbb4805e0859034449e7d8bd523a20/game/build/assets/u_idle0.webp",
+      "package_file": "sources/original_u_idle0.webp"
+    },
+    {
+      "repository_path": "game/build/assets/u_run2.webp",
+      "url": "https://raw.githubusercontent.com/deanguedo-arch/unicorn-cafe/637425ce2bdbb4805e0859034449e7d8bd523a20/game/build/assets/u_run2.webp",
+      "package_file": "sources/original_u_run2.webp"
+    },
+    {
+      "repository_path": "game/build/assets/u_happy1.webp",
+      "url": "https://raw.githubusercontent.com/deanguedo-arch/unicorn-cafe/637425ce2bdbb4805e0859034449e7d8bd523a20/game/build/assets/u_happy1.webp",
+      "package_file": "sources/original_u_happy1.webp"
+    },
+    {
+      "repository_path": "hub/assets/wardrobe/source/bike-riding-v2.png",
+      "url": "https://raw.githubusercontent.com/deanguedo-arch/unicorn-cafe/637425ce2bdbb4805e0859034449e7d8bd523a20/hub/assets/wardrobe/source/bike-riding-v2.png",
+      "package_file": "sources/original_bike-riding-v2.png"
+    },
+    {
+      "repository_path": "hub/assets/wardrobe/source/skateboard-riding-v2.png",
+      "url": "https://raw.githubusercontent.com/deanguedo-arch/unicorn-cafe/637425ce2bdbb4805e0859034449e7d8bd523a20/hub/assets/wardrobe/source/skateboard-riding-v2.png",
+      "package_file": "sources/original_skateboard-riding-v2.png"
+    },
+    {
+      "repository_path": "hub/assets/wardrobe/tee-v2.png",
+      "url": "https://raw.githubusercontent.com/deanguedo-arch/unicorn-cafe/637425ce2bdbb4805e0859034449e7d8bd523a20/hub/assets/wardrobe/tee-v2.png",
+      "package_file": "sources/original_tee-v2.png"
+    },
+    {
+      "repository_path": "hub/assets/wardrobe/items/beads.png",
+      "url": "https://raw.githubusercontent.com/deanguedo-arch/unicorn-cafe/637425ce2bdbb4805e0859034449e7d8bd523a20/hub/assets/wardrobe/items/beads.png",
+      "package_file": "sources/original_beads.png"
+    },
+    {
+      "repository_path": "hub/assets/wardrobe/items/bow.png",
+      "url": "https://raw.githubusercontent.com/deanguedo-arch/unicorn-cafe/637425ce2bdbb4805e0859034449e7d8bd523a20/hub/assets/wardrobe/items/bow.png",
+      "package_file": "sources/original_bow.png"
+    }
+  ]
+}

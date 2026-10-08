@@ -1,0 +1,57 @@
+{
+  "checks": [
+    "South hub entrance loads park",
+    "All five stations, gates, ramps and both seam crossings reachable",
+    "Gardens, hoop base and both nets collide",
+    "Real drag/release scores a basket",
+    "Basketball miss keeps completed baskets",
+    "Three baskets complete one bounded round",
+    "Tennis misplaced racket re-serves without a return",
+    "Five aligned tennis returns complete",
+    "Volleyball bump hands off to set 0",
+    "Set hides external ball",
+    "Set restores identical-sized ball",
+    "Volleyball bump hands off to set 1",
+    "Set hides external ball",
+    "Set restores identical-sized ball",
+    "Volleyball bump hands off to set 2",
+    "Set hides external ball",
+    "Set restores identical-sized ball",
+    "Three bump-set-hit returns complete",
+    "All ten state pivots and mirrored anchors match manifest",
+    "Bike gates and entrance finish route",
+    "Both skate features finish, without airborne substitution",
+    "Sports do not change wallet, ownership or wardrobe",
+    "All five completed activities survive reload",
+    "Portrait gate suspends sports simulation",
+    "Small landscape controls have 44px targets and no overlap",
+    "No browser errors"
+  ],
+  "geometry": {
+    "reachable": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "blocked": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "count": 18800
+  },
+  "errors": []
+}

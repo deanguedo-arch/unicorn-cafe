@@ -1,0 +1,54 @@
+{
+  "title": "Unicorn World sports props v2 additions",
+  "generation": "Direct built-in image generation; original PNGs preserved unchanged.",
+  "assets": [
+    {
+      "file": "volleyball.png",
+      "dimensions_px": [
+        1254,
+        1254
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "nontransparent_bounds_xyxy": [
+        23,
+        117,
+        1220,
+        1218
+      ],
+      "visible_bounds_alpha_at_least_10_xyxy": [
+        128,
+        120,
+        1127,
+        1135
+      ],
+      "suggested_pivot_px": [
+        627.5,
+        627.5
+      ],
+      "suggested_pivot_normalized": [
+        0.5004,
+        0.5004
+      ],
+      "transparent_pixel_fraction": 0.49324,
+      "source_generated_filename": "exec-ac4e1ba0-6bf8-4324-9490-8d2532c335f7.png"
+    }
+  ],
+  "integration_notes": [
+    "Retain all eight v1 props and their identities. These two assets are additions.",
+    "The volleyball net is one whole assembly; no registered front/back split is supplied or implied.",
+    "Suggested simple draw order: court and ground shadows, far-side actors and low far-side ball, whole net, near-side actors and near-side ball. Draw a ball above the net in front when its height clears top tape.",
+    "World-side and ball-height state must determine ordering; these art assets do not implement it.",
+    "For the 512px actor canvas with approximately 280px visible unicorn height, preliminary visible ball diameters are tennis 20px and volleyball 55px; basketball release ball must match the measured embedded ball in the action sheet (approximately 90px visible diameter at this actor height). Resize from visible silhouette bounds, not full canvas width.",
+    "Contact and release anchors belong to individual actor poses and are provided separately by the action sprite manifest.",
+    "Existing tennis-racket.png was inspected composited over green: mesh holes are genuinely transparent and clean. No replacement needed. Tennis actions prerender fitted racket; standalone racket remains inventory/ready prop.",
+    "Pivots are suggestions and are not runtime-tested. Tiny alpha-1 to alpha-9 artifacts may extend beyond visible silhouettes.",
+    "No code, collisions, physics, scores or gameplay integration supplied.",
+    "Independent tennis action-sheet visual review confirmed continuous hoof-to-handle fit in ready, windup and contact poses. Character string beds are cream-filled; standalone inventory racket has open alpha mesh. Action sheet identity and exact release/contact measurements are maintained by the action-sprite manifest."
+  ],
+  "prompt_summary": "Individual transparent handpainted Unicorn World props, warm cream/pink/plum/gold, soft thick plum outlines. Volleyball with cream/pink/gold alternating curved panels. Volleyball net with two tall plum/gold posts, clear open gap under mesh, horizontal left-right span, elevated three-quarter camera.",
+  "receding_net_manifest": "volleyball-net-receding-manifest.json",
+  "excluded_alternate": "Horizontal volleyball-net.png retained in full Library master only; use receding net for this map."
+}
