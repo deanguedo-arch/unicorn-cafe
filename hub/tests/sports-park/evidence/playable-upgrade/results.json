@@ -1,0 +1,25 @@
+{
+  "checks": [
+    "Routes connect all park courts around gardens",
+    "Free-use pads never lend equipment or start rounds",
+    "Basketball movement changes court position",
+    "Basketball flight clears cutout release sprite",
+    "Timed basketball shot scores",
+    "Missed basketball stays on floor until collected",
+    "Walking to a missed ball retrieves it",
+    "Tennis real pointer maps to unicorn body, not racket offset",
+    "Aligned tennis contact returns ball into moving rally",
+    "Tennis opponent moves to intercept return",
+    "Missed tennis serves award opponent points",
+    "Volleyball requires player movement to landing lane",
+    "Volleyball aligned bump begins three-stage handoff",
+    "Set renders exactly one embedded ball",
+    "Hit sends volleyball toward moving opponent",
+    "Misses end a bounded volleyball match",
+    "Ball games preserve wallet, wardrobe and equipment",
+    "Lost volleyball match and opponent court position survive reload",
+    "Playable rallies can win tennis",
+    "Playable rallies can win volleyball"
+  ],
+  "errors": []
+}
