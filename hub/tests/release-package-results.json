@@ -4,7 +4,7 @@
       "name": "Every packaged file matches its release checksum",
       "pass": true,
       "details": {
-        "files": 746
+        "files": 749
       }
     },
     {
@@ -20,5 +20,5 @@
       "pass": true
     }
   ],
-  "files": 746
+  "files": 749
 }
