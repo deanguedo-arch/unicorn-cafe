@@ -1,0 +1,18 @@
+{
+  "checks": [
+    "Collision-safe routes to every entrance: village",
+    "Collision-safe routes to every entrance: mall",
+    "Collision-safe routes to every entrance: boutique",
+    "Collision-safe routes to every entrance: wheels",
+    "Collision-safe routes to every entrance: arcade",
+    "Collision-safe routes to every entrance: park",
+    "19 painted track edges, garden approaches, court aprons and net-end routes remain accessible",
+    "Both terrain seams have no one-pixel invisible wall",
+    "Planted garden cores, hoop base and thin net footprints stay solid",
+    "Actual floor tap walks around middle garden",
+    "Arrived at court with working action button",
+    "Small landscape controls fit, have 44px targets and do not overlap",
+    "Owned equipped skateboard persists with no forced activity"
+  ],
+  "errors": []
+}
