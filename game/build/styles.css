@@ -294,3 +294,7 @@ button{transition:transform .11s ease,filter .11s ease,box-shadow .11s ease}butt
 body,body *{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
 img{-webkit-user-drag:none;user-drag:none}
 input:not([type=range]):not([type=checkbox]):not([type=radio]),textarea,[contenteditable=true],[contenteditable=true] *{-webkit-user-select:text;user-select:text;-webkit-touch-callout:default}
+
+.helper-target{position:absolute;z-index:4;background:transparent;border:0;box-shadow:none;padding:0;pointer-events:auto;touch-action:none;}
+.helper-target:focus-visible{outline:3px solid #fff1ad;}
+.helper-target:disabled{opacity:1;}

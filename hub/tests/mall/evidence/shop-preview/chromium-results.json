@@ -1,5 +1,7 @@
 {
   "checks": [
+    "In-world rack taps show a large matching preview, no duplicate checks, and free unaffordable trials",
+    "Rack put-back restores owned outfit and small landscape preview fits on screen",
     "Opening rack highlights the actual mirrored item",
     "Rapid owned and unaffordable trials update mirror pixels without writes or duplicate ticks",
     "Unaffordable item can still be tried on",

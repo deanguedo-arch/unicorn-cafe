@@ -1,0 +1,20 @@
+Unicorn World four-change local review — October 11, 2026
+
+Local preview: http://localhost:8896/hub/
+Restart from this review checkout: python3 hub_preview.py --port 8896 --isolated
+This is a separate local origin. It does not read the user's historical café or adventure origins. Publishing is not authorized.
+
+Baseline: 6d4a39dc7c2deff97425b44faeec3a55c74c9f2d, copied from /Users/deanguedo/Documents/GitHub/unicorn-cafe. All tracked baseline bytes and its pre-existing untracked files were left intact. The package snapshots differed only in trailing newlines. The review Git repository has no remote.
+
+Sources used: the current local tracked project and PROJECT-RULES.md for authoritative mechanics, bridge/save identities and completed wardrobe/sports work; the Library handoff libfile_dcf397e486d08191bce5873e37617085 version 0 for requirements, all 59 planned acceptance cases and art; supplied art/reference pixels and actual runtime screenshots for placement. README.txt, implementation.txt, acceptance-tests.txt, handoff-prompt.txt, source-index.json and art-registration.json were read completely. Library and uncodixfy skills were applied. Five supplied backgrounds remain byte-for-byte unchanged, with provenance alongside them.
+
+Changes:
+- Tap the existing pink/blue baby helpers during service. Each costs one world coin per half-day. The charge and durable entitlement commit together in the existing profile/receipt transaction. Native optional helper state retains independent position, claim, action progress and dish inventory. Helpers walk at 90 world units/second, take orders over 3 seconds, pick dishes over 1.5 seconds and wash over 6 seconds. They do not cook, serve, earn extra rewards or mop. Manual jobs revalidate worker claims. Lunch/day completion expires the contract; afternoon rehire is explicit.
+- Finished lunch enters a saved break. Only an acknowledged intentional café departure followed by an actual café entry starts the afternoon. Generic resume, orientation, visibility and backpack messages do not. Old completed-lunch saves preserve their established afternoon. Existing save keys, schema number, IndexedDB version/stores and sidecar identities remain intact.
+- Standalone café uses native café coins, rolls back an unsuccessful saved hire, and provides a picture play button to continue from lunch. Connected play spends only the world wallet.
+- The west painted path reaches a separate house exterior, main room, upstairs and downstairs. The adventure doorway keeps its original identity. Portals follow the supplied art; gardens, furniture and railings stay solid. Invalid positions use safe room spawns; missing room art returns safely to village and entrance retries. Vehicles are visually parked inside without losing ownership.
+- The boutique displays eligible existing item sprites directly on empty fixtures. Six large targets per connected section preserve phone touch sizes. Temporary previews use the actual actor and original fitted layers. Wear/Buy/Put back, cancellation, scene exit and backpack rollback use the existing ownership/equip rules. Earned items appear only after existing unlocks. Catalogue IDs/prices and backpack/outfit-card/photo behavior are preserved.
+
+Validation uses disposable browser profiles and synthetic save fixtures. No live saves were touched. Evidence distinguishes automated cases from physical-device/child acceptance; simulation cannot establish child acceptance. See the task evidence folder for machine-readable case mapping, browser screenshots, transaction recovery, wardrobe and packaging reports. Old general tests were updated only where lunch behavior or the boutique interaction was intentionally changed; stale whole-file catalogue comparisons were narrowed to the stable wardrobe item catalogue because eight puzzle additions already existed in the baseline.
+
+Remaining review: real phone touch/audio/orientation behavior, child picture-only comprehension, helper pacing, art registration at doorway/stairs and boutique item/decision placement. No publication, push, deployment or access/security change occurred.

@@ -6,6 +6,8 @@ const check=(name,details)=>{results.push({name,pass:true,details});console.log(
  const sums=fs.readFileSync(path.join(root,'SHA256SUMS.txt'),'utf8').trim().split('\n');
  for(const line of sums){const h=line.slice(0,64),p=line.slice(66);assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(root,p))).digest('hex'),h,p);}
  check('Every packaged file matches its release checksum',{files:sums.length});
+ for(const name of ['home-exterior','home-main','home-upstairs','home-downstairs','boutique-empty'])assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'hub/assets/four-changes/'+name+'.png'))).digest('hex'),crypto.createHash('sha256').update(fs.readFileSync(path.resolve(__dirname,'../assets/four-changes/'+name+'.png'))).digest('hex'));
+ check('All five supplied backgrounds are packaged byte-for-byte');
  const entry=fs.readFileSync(path.join(root,'index.html'),'utf8'),manifest=JSON.parse(fs.readFileSync(path.join(root,'manifest.webmanifest'),'utf8'));
  assert.ok(entry.includes("new URL('./hub/'+location.search,location.href)"));assert.equal(manifest.name,'Unicorn World');assert.equal(manifest.orientation,'landscape');assert.equal(manifest.id,'./index.html');
  for(const icon of manifest.icons)assert.ok(fs.existsSync(path.join(root,icon.src)));
