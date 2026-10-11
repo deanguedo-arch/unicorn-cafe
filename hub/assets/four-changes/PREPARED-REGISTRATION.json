@@ -1,0 +1,206 @@
+{
+  "coordinate_system": "Normalized x/y against full image; y grows downward. Visual estimates only, validate actor foot position and collision in runtime.",
+  "canvas": [
+    1536,
+    1024
+  ],
+  "art_status": "Each PNG visually inspected; no baked characters/UI/text. Clear walking areas and stated entrances present. Not runtime tested.",
+  "scenes": [
+    {
+      "id": "home-exterior",
+      "file": "art/home-exterior.png",
+      "spawn": [
+        0.72,
+        0.71
+      ],
+      "portals": [
+        {
+          "to": "home-main",
+          "foot": [
+            0.54,
+            0.52
+          ],
+          "approach": [
+            0.54,
+            0.6
+          ]
+        },
+        {
+          "to": "village",
+          "foot": [
+            0.975,
+            0.565
+          ],
+          "approach": [
+            0.88,
+            0.64
+          ]
+        }
+      ],
+      "notes": "Painted path also continues to left/bottom as scenery. Do not accidentally create unintended exits. Match village west threshold to current path geometry."
+    },
+    {
+      "id": "home-main",
+      "file": "art/home-main.png",
+      "spawn": [
+        0.3,
+        0.66
+      ],
+      "portals": [
+        {
+          "to": "home-exterior",
+          "foot": [
+            0.09,
+            0.59
+          ],
+          "approach": [
+            0.23,
+            0.65
+          ]
+        },
+        {
+          "to": "home-upstairs",
+          "foot": [
+            0.235,
+            0.405
+          ],
+          "approach": [
+            0.31,
+            0.48
+          ]
+        },
+        {
+          "to": "home-downstairs",
+          "foot": [
+            0.91,
+            0.63
+          ],
+          "approach": [
+            0.84,
+            0.7
+          ]
+        }
+      ],
+      "notes": "Couch/seating occupies upper center. Downstairs entry is visible on right; do not place portal on the upper rail. Keep left door and stair routes separate."
+    },
+    {
+      "id": "home-upstairs",
+      "file": "art/home-upstairs.png",
+      "spawn": [
+        0.32,
+        0.66
+      ],
+      "portals": [
+        {
+          "to": "home-main",
+          "foot": [
+            0.16,
+            0.7
+          ],
+          "approach": [
+            0.28,
+            0.72
+          ]
+        }
+      ],
+      "notes": "Descending stairs lower-left. Keep bed and stairwell outside walkable floor."
+    },
+    {
+      "id": "home-downstairs",
+      "file": "art/home-downstairs.png",
+      "spawn": [
+        0.35,
+        0.78
+      ],
+      "portals": [
+        {
+          "to": "home-main",
+          "foot": [
+            0.135,
+            0.755
+          ],
+          "approach": [
+            0.29,
+            0.79
+          ]
+        }
+      ],
+      "notes": "Ascending stairs left. Leave rug approach reachable, shelves decorative."
+    },
+    {
+      "id": "boutique",
+      "file": "art/boutique-empty.png",
+      "spawn": [
+        0.51,
+        0.72
+      ],
+      "portals": [
+        {
+          "to": "mall",
+          "foot": [
+            0.075,
+            0.45
+          ],
+          "approach": [
+            0.17,
+            0.55
+          ]
+        }
+      ],
+      "display_regions": [
+        {
+          "kind": "hanging garments",
+          "rect": [
+            0.2,
+            0.21,
+            0.13,
+            0.13
+          ]
+        },
+        {
+          "kind": "shelf items",
+          "rect": [
+            0.39,
+            0.17,
+            0.18,
+            0.06
+          ]
+        },
+        {
+          "kind": "shelf items",
+          "rect": [
+            0.39,
+            0.26,
+            0.18,
+            0.05
+          ]
+        },
+        {
+          "kind": "shelf items",
+          "rect": [
+            0.63,
+            0.18,
+            0.15,
+            0.05
+          ]
+        },
+        {
+          "kind": "shelf items",
+          "rect": [
+            0.63,
+            0.27,
+            0.15,
+            0.06
+          ]
+        }
+      ],
+      "notes": "Rect is x,y,width,height. Shelf sprite baselines must follow painted perspective. Mirror at right. Use connected sections if item count exceeds comfortable touch layout. No decorative fake stock."
+    }
+  ],
+  "reused_sprites": [
+    "baby_pink_* and baby_blue_* for companions",
+    "Existing item icons and registered garment layers from current catalogue/production wardrobe/sports wardrobe",
+    "Existing navigation floor cues, coin, buy, return, hand and action icons"
+  ],
+  "new_sprite_policy": "No new character or clothing sprites needed. Door and stair art is baked into new backgrounds; use existing navigation overlays separately. Do not regenerate canonical actors."
+}

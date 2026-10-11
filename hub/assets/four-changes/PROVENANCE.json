@@ -1,0 +1,14 @@
+{
+  "sourceLibrary": "libfile_dcf397e486d08191bce5873e37617085",
+  "version": 0,
+  "archiveSHA256": "4046e7f7aa4d3f618ee27f100282dfb7ac7a8a52a6fc67ecbe09a6402041c630",
+  "files": {
+    "home-exterior.png": "2354e4ea77c781beb9c9e1d271d13396274c4e1e6d00ace58499d4d3e0cb0769",
+    "boutique-empty.png": "f2025c58f04d139f53f41629619ef8ea000c62f73c61ec726b3bf362b9cf2d75",
+    "home-downstairs.png": "288ee7a87593b75c860253e228f790d00eba14fc48b085710672c8dac3efe1a4",
+    "home-upstairs.png": "54e705eeb9a5ef08f2fc862b97a996fa351b41f8d11a0583316af50bff472f8f",
+    "home-main.png": "5b84b5ce7d72116d789ddba3dc5fca909deb0013e4f3aeec22f522dc3c55b9b4"
+  },
+  "registration": "PREPARED-REGISTRATION.json",
+  "notes": "Supplied pixels retained exactly; final runtime registration is in world.js."
+}

@@ -1,0 +1,28 @@
+{
+  "method": "Built-in image generation",
+  "status": "Generated and visually inspected preparation assets; not integrated or playtested",
+  "reference_roles": "village-current.png for home exterior; boutique-current.png for room and boutique style",
+  "shared_prompt": "Create one full-frame landscape 1536x1024 game background, not a collage. Match rich polished storybook game illustration, gently elevated oblique view, soft painted shading, crisp plum outlines, warm glowing lights and pink/lavender/peach palette. No text, letters, UI, buttons, markers, labels, player characters, unicorns or baked overlays. Keep routes visible and walkable.",
+  "scenes": [
+    {
+      "id": "home-exterior",
+      "prompt": "New western home-base map adjacent to the supplied village. A single cozy personal cottage in upper half, plum scalloped roof, pink and cream walls, welcoming open door at x50% y49%, no character inside. Broad continuous peach cobblestone walking path across lower half exiting right at y70% to connect to main village. Garden and flowers only at outer borders. No cafe, no other buildings. Keep doorway approach clear."
+    },
+    {
+      "id": "home-main",
+      "prompt": "Main living room inside the cottage. Warm cream walls, plum outlines, pink-lavender furnishings and gold lamplight. Cozy sofa at back center, small fireplace at back left. Clearly visible stairs going UP at upper left x20% y43%, clearly visible stairs going DOWN via safe open stairwell with railing at upper right x80% y43%. Main exterior exit doorway on left wall at x9% y66%. Broad empty peach timber lower floor with connected unobstructed walking routes to all three thresholds."
+    },
+    {
+      "id": "home-upstairs",
+      "prompt": "Upstairs bedroom inside the same cottage. Warm cream walls, plum outlines, pink lavender furnishings, gold lamplight. Cozy bed along upper-right wall, wardrobe at upper left, window centered above. Single clearly visible staircase descending back to main room at left side x12% y55% with safe railing. Broad empty peach timber floor in lower half. All furnishing outside traversal area."
+    },
+    {
+      "id": "home-downstairs",
+      "prompt": "Bright welcoming downstairs playroom inside the same cottage, never dark or scary. Warm cream walls, plum outlines, pastel pink and lavender furnishings, gold lamplight. Toy storage shelves along upper wall, small reading nook upper right. Single clearly visible staircase ascending back to main room at left x12% y55%. Broad empty peach timber floor in lower half. No characters, no creatures, no loose toys blocking walkways."
+    },
+    {
+      "id": "boutique-empty",
+      "prompt": "Redesign the reference boutique as a game-ready empty display room. Preserve warm peach floor, cream/pink arches, plum and gold trim, oval mirror and beautiful painterly style. Remove ALL clothing, hats, jewellery, bags, folded garments and mannequins. Provide three clearly separated empty fixture bays along back wall: empty hanging rail left x20%, empty tiered shelves center x49%, empty tiered shelves right x77%. Leave shelves broad and uncluttered for separately rendered tappable game item sprites. Mirror beside far-right bay, simple small return doorway lower-left wall. Broad clear lower 55% floor. No decorative clothing anywhere: every future displayed item will be a real game sprite."
+    }
+  ]
+}

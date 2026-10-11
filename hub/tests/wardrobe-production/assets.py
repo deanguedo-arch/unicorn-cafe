@@ -1,7 +1,7 @@
 """Verify imported art and independently compose Pillow pixel oracles for runtime QA."""
 from pathlib import Path
 from PIL import Image
-import hashlib, json, sys
+import hashlib, json, sys, subprocess
 
 ROOT = Path(__file__).resolve().parents[3]
 ART = ROOT / 'hub/assets/wardrobe/production'
@@ -25,7 +25,10 @@ for b in m['original_bases']:
     assert hashlib.sha256((ART/b['base_file']).read_bytes()).hexdigest() == b['base_sha256']
 for frozen in json.loads((ART/'metadata/approved_trial_freeze.json').read_text())['files']:
     assert hashlib.sha256((ART/frozen['file']).read_bytes()).hexdigest() == frozen['sha256']
-assert (ROOT/'hub/shared/catalogue.js').read_text().strip() == (ART/'metadata/canonical_catalogue_reference.js').read_text().strip()
+# Puzzle-library additions are unrelated; the stable wardrobe catalogue must match exactly.
+current = json.loads(subprocess.check_output(['node','-e',"console.log(JSON.stringify(require(process.argv[1]).items))",str(ROOT/'hub/shared/catalogue.js')]))
+canonical = json.loads(subprocess.check_output(['node','-e',"console.log(JSON.stringify(require(process.argv[1]).items))",str(ART/'metadata/canonical_catalogue_reference.js')]))
+assert current == canonical
 records = {(r['item_id'], r['frame_id']): r for r in m['records']}
 assert len(records) == 437
 cases = [{'label': r['item_id'], 'frame': r['frame_id'], 'outfit': {r['slot']: r['item_id']}} for r in m['records']]

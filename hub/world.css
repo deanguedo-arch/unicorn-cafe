@@ -18,3 +18,18 @@
 body,body *{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
 img{-webkit-user-drag:none;user-drag:none}
 input:not([type=range]):not([type=checkbox]):not([type=radio]),textarea,[contenteditable=true],[contenteditable=true] *{-webkit-user-select:text;user-select:text;-webkit-touch-callout:default}
+
+#boutique-displays{position:absolute;inset:0;pointer-events:none;}
+.display-item{position:absolute;pointer-events:auto;background:transparent;border:0;padding:0;box-shadow:none;touch-action:pan-x pan-y;}
+.display-item img{width:100%;height:100%;object-fit:contain;pointer-events:none;}
+.display-item:focus-visible{outline:3px solid #fff0ba;}
+.display-item[aria-pressed=true]{outline:2px solid #fff0ba;}
+.display-sections{position:absolute;left:50%;bottom:16px;display:flex;align-items:center;gap:10px;transform:translateX(-50%);pointer-events:auto;}
+.display-sections button{width:48px;height:48px;}
+.display-sections img{width:36px;height:36px;}
+#boutique-decision{position:absolute;right:98px;bottom:76px;display:flex;gap:8px;align-items:center;padding:6px;background:#ffefd4;border:2px solid #765079;border-radius:10px;z-index:5;}
+#boutique-decision[hidden],#boutique-displays[hidden]{display:none;}
+#boutique-decision button{width:48px;height:48px;}
+#boutique-decision img{width:38px;height:38px;}
+
+.display-sections button{background:#f8eddb;border:2px solid #ae8bbb;border-radius:8px;padding:5px;}

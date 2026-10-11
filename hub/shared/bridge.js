@@ -22,7 +22,7 @@ class Link{
  }
  flush(){if(!this.profile||!this.storageOK)return;for(const event of this.state.outbox){const now=Date.now();if(now-(this.sent.get(event.id)||0)<1000)continue;this.sent.set(event.id,now);if(event.request)this.send({command:'request',id:event.id,action:event.request,args:event.args});else this.send({command:'earn',event});}}
  request(action,args={},id=uuid()){
-  if(!['buy','equip'].includes(action))return Promise.reject(Error('invalid'));
+  if(!['buy','equip','hire'].includes(action))return Promise.reject(Error('invalid'));
   if(!this.state.outbox.some(e=>e.id===id))this.state.outbox.push({id,request:action,args});
   if(!this.persist()){this.state.outbox=this.state.outbox.filter(e=>e.id!==id);return Promise.resolve({id,ok:false,error:'storage'});}
   const result=new Promise(resolve=>this.requests.set(id,resolve));this.flush();return result;

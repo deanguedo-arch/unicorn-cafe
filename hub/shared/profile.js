@@ -22,6 +22,8 @@ function apply(p,action,a={}){
    grant(p,'legacy-princess');const n=Math.max(0,Math.floor(Number(e.secrets)||0));
    if(n>=1){grant(p,'legacy-hero');grant(p,'legacy-mask');}if(n>=2)grant(p,'legacy-chef');if(n>=3)grant(p,'legacy-space');
   }else fail('invalid');p.coins+=amount;return{amount};}
+ case'hire':{const {scope,worker}=a;if(typeof scope!=='string'||scope.length>200||!/^cafe-hire:[a-zA-Z0-9-]+:[a-zA-Z0-9-]+:[0-9]+:(morning|afternoon)$/.test(scope)||!['pink','blue'].includes(worker))fail('invalid');
+  p.cafeHires=p.cafeHires||{};const key=scope+':'+worker;if(p.cafeHires[key])return{key,alreadyHired:true};if(p.coins<1)fail('coins');p.coins--;p.cafeHires[key]={scope,worker};return{key,alreadyHired:false};}
  case'buy':{
   const i=C.byId[a.item];if(!i||i.price===null)fail('invalid');const alreadyOwned=owned(p,i.id);if(!alreadyOwned){if(p.coins<i.price)fail('coins');p.coins-=i.price;grant(p,i.id);}
   if(a.equip){if(i.ride)p.vehicle=i.id;else p.outfit[i.slot]=i.id;}if(p.wishlist===i.id)p.wishlist=null;return{item:i.id,alreadyOwned};}
