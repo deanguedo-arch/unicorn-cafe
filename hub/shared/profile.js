@@ -29,7 +29,7 @@ function apply(p,action,a={}){
   const i=C.byId[a.item];if(a.item===null){if(!C.slots.includes(a.slot))fail('invalid');p.outfit[a.slot]=null;return;}
   if(!i||!owned(p,i.id))fail('owned');if(i.ride)p.vehicle=i.id;else p.outfit[i.slot]=i.id;return;}
  case'outfit':{const o=C.cleanOutfit(a.outfit,p.owned);for(const id of Object.values(a.outfit||{}))if(id&&!owned(p,id))fail('owned');p.outfit=o;return;}
- case'save-outfit':{if(!Number.isInteger(a.slot)||a.slot<0||a.slot>2)fail('invalid');p.outfits[a.slot]=copy(p.outfit);return;}
+ case'save-outfit':{if(!Number.isInteger(a.slot)||a.slot<0||a.slot>2)fail('invalid');if(a.outfit){for(const id of Object.values(a.outfit))if(id&&!owned(p,id))fail('owned');p.outfit=C.cleanOutfit(a.outfit,p.owned);}p.outfits[a.slot]=copy(p.outfit);return;}
  case'wear-outfit':{const o=p.outfits[a.slot];if(!o)fail('missing');p.outfit=C.cleanOutfit(o,p.owned);return;}
  case'wishlist':{if(a.item!==null&&(!C.byId[a.item]||C.byId[a.item].price===null))fail('invalid');p.wishlist=a.item;return;}
  case'park':p.vehicle=null;return;

@@ -1,0 +1,18 @@
+{
+  "checks": [
+    "Opening rack highlights the actual mirrored item",
+    "Rapid owned and unaffordable trials update mirror pixels without writes or duplicate ticks",
+    "Unaffordable item can still be tried on",
+    "Changing categories preserves trials and selected picture matches preview",
+    "Explicit wear equips the owned piece without erasing other trials or wearing unowned pieces",
+    "Explicit take-off removes the owned piece and clears selection without discarding other trials",
+    "Purchase charges once, equips and keeps a single worn marker",
+    "Delayed wear reconciles the new panel session without stale selection",
+    "Outfit and favourite card save atomically even when the shop closes during the write",
+    "Backpack remains a one-tap owned clothing switch",
+    "Backpack removal, ownership and correct balance survive reload",
+    "Free rack previews remain usable when storage writes are unavailable",
+    "Mirror remains visible on a small landscape phone"
+  ],
+  "errors": []
+}
