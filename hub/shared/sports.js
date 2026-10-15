@@ -1,7 +1,8 @@
 /* Sports Park V3: supplied art, isolated progression, continuous three-region terrain. */
-(()=>{'use strict';const D=UWSportsData,A=UWArt,root=new URL('../assets/sports/v3/',document.currentScript.src),clamp=A.clamp,STORE='unicorn-world-sports-v3',S=.28;
+(()=>{'use strict';const D=UWSportsData,A=UWArt,root=new URL('../assets/sports/v3/',document.currentScript.src),clamp=A.clamp,STORE='unicorn-world-sports-v3',ACTIVITY_STORE='unicorn-world-sports-activity-v1',S=.28;
 const stations=[{id:'bike',x:600,y:650,picture:'wheel'},{id:'skate',x:1040,y:740,picture:'wheel'},{id:'basketball',x:359,y:1616,picture:'ball'},{id:'tennis',x:1180,y:1665,picture:'ball'},{id:'volleyball',x:488,y:2580,picture:'ball'}];
 const LEVELS=[{speed:1.75,ai:65,reaction:.45,tolerance:32},{speed:1.25,ai:130,reaction:.25,tolerance:43},{speed:.9,ai:210,reaction:.12,tolerance:50}],SPOTS=[{x:359,y:1460},{x:230,y:1570},{x:500,y:1570}];
+const PRACTICE={speed:2.8,ai:50,reaction:.6,tolerance:42},uid=()=>globalThis.crypto?.randomUUID?.()||Date.now().toString(36)+'-'+Math.random().toString(36).slice(2);
 const gates=[{x:280,y:220},{x:140,y:500},{x:570,y:665}],ramps=[{id:'shallow-bank',x:1190,y:370},{id:'rounded-roller',x:1180,y:610}];
 const poly=(x,y,pts)=>{let hit=false;for(let i=0,j=pts.length-1;i<pts.length;j=i++){const [a,b]=pts[i],[c,d]=pts[j];if((b>y)!==(d>y)&&x<(c-a)*(y-b)/(d-b)+a)hit=!hit;}return hit;};
 const ellipse=(x,y,cx,cy,rx,ry)=>((x-cx)/rx)**2+((y-cy)/ry)**2<1;
@@ -10,10 +11,27 @@ class Park{
  constructor(w){this.w=w;this.im={};this.ready=false;this.loading=null;this.mode=null;this.pose=null;this.age=0;this.ball=null;this.pointer=null;this.queued=false;this.aim=0;this.progress={bike:[],skate:[],basketball:0,tennis:0,volleyball:0,completed:[]};this.camera={x:0,y:0};this.volleyStage=0;this.time=0;this.opponentScores={tennis:0,volleyball:0};this.opponent={x:1143,y:1315,moving:false};this.rallyIndex=0;this.matchOver=false;this.ladder={tennis:{level:0,unlocked:0,wins:[]},volleyball:{level:0,unlocked:0,wins:[]}};this.charging=false;this.charge=0;
  try{const p=JSON.parse(localStorage.getItem(STORE));if(p?.version===1){for(const k of ['bike','skate'])this.progress[k]=Array.isArray(p.progress?.[k])?[...new Set(p.progress[k].filter(n=>Number.isInteger(n)&&n>=0&&n<(k==='bike'?3:2)))]:[];for(const k of ['basketball','tennis','volleyball'])this.progress[k]=clamp(Number(p.progress?.[k])||0,0,3);this.progress.completed=(p.progress?.completed||[]).filter(k=>stations.some(s=>s.id===k));this.mode=stations.some(s=>s.id===p.mode)&&!['bike','skate'].includes(p.mode)?p.mode:null;for(const k of ['tennis','volleyball'])this.opponentScores[k]=clamp(Number(p.opponentScores?.[k])||0,0,3);}}catch(_){}
  try{const p=JSON.parse(localStorage.getItem(STORE));for(const id of ['tennis','volleyball']){const l=p?.ladder?.[id];if(l)this.ladder[id]={level:clamp(Math.floor(l.level)||0,0,2),unlocked:clamp(Math.floor(l.unlocked)||0,0,2),wins:(l.wins||[]).filter(n=>[0,1,2].includes(n))};if(!l&&this.progress.completed.includes(id)){this.ladder[id].unlocked=1;this.ladder[id].wins=[0];}this.ladder[id].level=Math.min(this.ladder[id].level,this.ladder[id].unlocked);}}catch(_){}
- this.installUI();if(this.mode){this.opponent={x:this.mode==='tennis'?1143:1085,y:this.mode==='tennis'?1315:2580,moving:false};this.matchOver=(this.opponentScores[this.mode]||0)>=(3);this.resetRally();if(this.ball)this.ball.phase='waiting';}
+ this.practice=false;this.sessions={};this.outbox=[];this.flushAge=0;this.loadActivities();
+ this.installUI();if(this.mode){this.ensureSession();this.restoreSession();this.opponent={x:this.mode==='tennis'?1143:1085,y:this.mode==='tennis'?1315:2580,moving:false};this.matchOver=this.otherScore()>=3;this.resetRally();if(this.ball)this.ball.phase='waiting';}
+ window.addEventListener('online',()=>this.flushFacts());window.addEventListener('focus',()=>this.flushFacts());setTimeout(()=>this.flushFacts(),0);
  }
+ // Sessions and factual-event receipts are separate from the original sports save.
+ // Save facts before visible results so a reload retries the same event and run.
+ loadActivities(){try{const d=JSON.parse(localStorage.getItem(ACTIVITY_STORE));if(d?.version!==1)return;this.outbox=Array.isArray(d.outbox)?d.outbox.filter(e=>e&&typeof e.id==='string'&&['sport-shot','sport-finished','sport-best'].includes(e.kind)):[];for(const [key,s]of Object.entries(d.sessions||{})){if(!/^(basketball|tennis|volleyball):(match|practice)$/.test(key)||!s||typeof s.id!=='string')continue;this.sessions[key]={...s,score:clamp(Number(s.score)||0,0,3),other:clamp(Number(s.other)||0,0,3),attempts:Math.max(0,Math.floor(s.attempts)||0),rally:Math.max(0,Math.floor(s.rally)||0),bestRally:Math.max(0,Math.floor(s.bestRally)||0)};}this.practice=!!d.active?.practice&&d.active.mode===this.mode&&!!this.ladder[this.mode];}catch(_){}}
+ sessionKey(){return this.mode+':'+(this.practice?'practice':'match');}
+ session(){return this.sessions[this.sessionKey()];}
+ ensureSession(fresh=false){if(!this.mode)return null;const key=this.sessionKey();if(fresh||!this.sessions[key])this.sessions[key]={id:'sports:'+uid(),context:this.w.activityContext?.()||null,score:fresh||this.practice?0:this.progress[this.mode]||0,other:fresh||this.practice?0:this.opponentScores[this.mode]||0,attempts:0,rally:0,bestRally:0,level:this.ladder[this.mode]?.level||0,finished:false};return this.sessions[key];}
+ persistActivities(){try{localStorage.setItem(ACTIVITY_STORE,JSON.stringify({version:1,active:{mode:this.mode,practice:this.practice},sessions:this.sessions,outbox:this.outbox}));this.activitySaveWarning=false;return true;}catch(_){if(!this.activitySaveWarning)this.w.announce('We could not save this sports turn. Free walking is still available; try the ball again.');this.activitySaveWarning=true;return false;}}
+ restoreSession(){const s=this.session();if(!s)return;if(!this.practice){this.progress[this.mode]=s.score;this.opponentScores[this.mode]=s.other;if(s.score>=3){if(!this.progress.completed.includes(this.mode))this.progress.completed.push(this.mode);const l=this.ladder[this.mode];if(l){if(!l.wins.includes(s.level))l.wins.push(s.level);l.unlocked=Math.max(l.unlocked,Math.min(2,s.level+1));}}else this.progress.completed=this.progress.completed.filter(id=>id!==this.mode);}}
+ score(){return this.practice?this.session()?.score||0:this.progress[this.mode]||0;}
+ otherScore(){return this.practice?this.session()?.other||0:this.opponentScores[this.mode]||0;}
+ finished(){return this.score()>=3||this.otherScore()>=3;}
+ difficulty(){return this.practice?PRACTICE:LEVELS[this.ladder[this.mode]?.level||0];}
+ fact(kind,details,suffix){const s=this.ensureSession(),id=s.id+':'+suffix;if(!this.outbox.some(e=>e.id===id)){const context=this.w.activityContext?this.w.activityContext():s.context;this.outbox.push({id,kind,details,context:context?{book:context.book,run:context.run}:null});}return id;}
+ flushFacts(){if(this.flushing)return this.flushing;if(!this.w.activity)return Promise.resolve();this.flushing=(async()=>{try{while(this.outbox.length){const e=this.outbox[0];const result=await this.w.activity(e.kind,e.details,e.id,e.context);if(result===false||result?.queued===false)break;this.outbox.shift();if(!this.persistActivities()){this.outbox.unshift(e);break;}}}catch(_){/* Keep the original event and adventure context for the next retry. */}})().finally(()=>this.flushing=null);return this.flushing;}
+
  save(){try{localStorage.setItem(STORE,JSON.stringify({version:1,mode:this.mode,progress:this.progress,opponentScores:this.opponentScores,ladder:this.ladder}));}catch(_){this.w.announce('Sports progress could not save. Your world purchases are unchanged.');}}
- installUI(){this.hud=document.createElement('div');this.hud.id='sports-tools';this.hud.hidden=true;this.hud.innerHTML='<div id="sports-levels"></div><div id="sports-progress" role="status"></div><button id="sports-retry" aria-label="Play this activity again">'+A.icon('play')+'</button>';document.body.append(this.hud);document.getElementById('sports-retry').onclick=()=>{if(this.mode)this.begin(this.mode,true);};this.hud.querySelector('#sports-levels').onclick=e=>{const b=e.target.closest('button[data-level]');if(b&&!b.disabled){this.ladder[this.mode].level=Number(b.dataset.level);this.begin(this.mode,true);}};const enter=document.getElementById('enter');enter.addEventListener('pointerdown',e=>{if(this.mode==='basketball'&&!enter.disabled&&!this.flight&&this.ball?.phase!=='loose'&&!this.w.paused?.()){e.preventDefault();this.suppressClick=false;this.powerShot=true;this.charging=true;this.charge=0;this.chargeId=e.pointerId;enter.setPointerCapture(e.pointerId);}});enter.addEventListener('pointerup',e=>{if(this.charging&&e.pointerId===this.chargeId){this.charging=false;this.action();this.suppressClick=true;setTimeout(()=>this.suppressClick=false,500);}});enter.addEventListener('click',e=>{if(this.suppressClick){e.stopImmediatePropagation();e.preventDefault();this.suppressClick=false;}},true);enter.addEventListener('pointercancel',()=>{this.powerShot=false;this.charging=false;this.charge=0;this.suppressClick=true;setTimeout(()=>this.suppressClick=false,500);});}
+ installUI(){this.hud=document.createElement('div');this.hud.id='sports-tools';this.hud.hidden=true;this.hud.innerHTML='<div id="sports-levels"></div><div id="sports-progress" role="status"></div><button id="sports-retry" aria-label="Play this activity again">'+A.icon('play')+'</button>';document.body.append(this.hud);document.getElementById('sports-retry').onclick=()=>{if(this.mode&&!this.w.paused?.())this.begin(this.mode,true,this.practice);};this.hud.querySelector('#sports-levels').onclick=e=>{if(this.w.paused?.())return;const b=e.target.closest('button');if(!b||b.disabled)return;if(b.dataset.practice!==undefined)this.begin(this.mode,true,true);else if(b.dataset.level!==undefined){this.ladder[this.mode].level=Number(b.dataset.level);this.begin(this.mode,true,false);}};const enter=document.getElementById('enter');enter.addEventListener('pointerdown',e=>{if(this.mode==='basketball'&&!enter.disabled&&!this.flight&&this.ball?.phase!=='loose'&&!this.w.paused?.()){e.preventDefault();this.suppressClick=false;this.powerShot=true;this.charging=true;this.charge=0;this.chargeId=e.pointerId;enter.setPointerCapture(e.pointerId);}});enter.addEventListener('pointerup',e=>{if(this.charging&&e.pointerId===this.chargeId){this.charging=false;this.action();this.suppressClick=true;setTimeout(()=>this.suppressClick=false,500);}});enter.addEventListener('click',e=>{if(this.suppressClick){e.stopImmediatePropagation();e.preventDefault();this.suppressClick=false;}},true);enter.addEventListener('pointercancel',()=>{this.powerShot=false;this.charging=false;this.charge=0;this.suppressClick=true;setTimeout(()=>this.suppressClick=false,500);});}
  async load(){if(this.ready)return;if(this.loading)return this.loading;this.loading=(async()=>{const paths=[...D.world.world.regions.map(r=>r.file),...D.seams.placements.map(s=>'seams/'+s.png),...new Set(D.actions.frames.map(f=>'actions/'+f.source)),...D.props.assets.map(p=>'props/'+p.file),'props/volleyball.png','props/volleyball-net-receding.png','props/basketball-front-coverage-mask.png'];await Promise.all(paths.map(async file=>{const im=new Image();im.src=new URL(file,root);await im.decode();this.im[file]=im;}));const opponents=new Image();opponents.src=new URL('../opponents/challengers.png',root);await opponents.decode();this.opponents=opponents;await A.fullSportsFits.load();this.seams=D.seams.placements.map(s=>{const im=this.im['seams/'+s.png],cv=document.createElement('canvas');cv.width=im.width;cv.height=im.height;const c=cv.getContext('2d');c.drawImage(im,0,0);c.globalCompositeOperation='destination-in';const g=c.createLinearGradient(0,0,0,cv.height);for(const [y,a]of D.seams.blend_contract.local_y_opacity_knots)g.addColorStop(y/cv.height,`rgba(0,0,0,${a})`);c.fillStyle=g;c.fillRect(0,0,cv.width,cv.height);return{canvas:cv,x:s.world_origin[0],y:s.world_origin[1]};});const source=this.im['props/basketball-hoop.png'],mask=this.im['props/basketball-front-coverage-mask.png'],cv=document.createElement('canvas');cv.width=source.width;cv.height=source.height;const c=cv.getContext('2d');c.drawImage(source,0,0);const src=c.getImageData(0,0,cv.width,cv.height);c.clearRect(0,0,cv.width,cv.height);c.drawImage(mask,0,0);const m=c.getImageData(0,0,cv.width,cv.height);for(let i=3;i<src.data.length;i+=4)src.data[i]=Math.round(src.data[i]*m.data[i-3]/255);c.putImageData(src,0,0);this.hoopFront=cv;this.makeIcons();this.ready=true;})().finally(()=>this.loading=null);return this.loading;}
  makeIcons(){this.icons={};for(const id of ['basketball','tennis','volleyball']){const key=id==='tennis'?'tennis-ball':id,p=D.actions.props[key],cv=document.createElement('canvas');cv.width=100;cv.height=100;const b=p.bounds;const ctx=cv.getContext('2d');ctx.drawImage(this.im['props/'+key+'.png'],b[0],b[1],b[2]-b[0],b[3]-b[1],4,4,92,92);this.icons[id]=cv.toDataURL();}for(const f of D.actions.frames){const cv=document.createElement('canvas');cv.width=100;cv.height=100;const [l,t,r,b]=f.source_rect_xyxy,s=Math.min(94/(r-l),94/(b-t)),ctx=cv.getContext('2d');ctx.drawImage(this.im['actions/'+f.source],l,t,r-l,b-t,50-(r-l)*s/2,50-(b-t)*s/2,(r-l)*s,(b-t)*s);this.icons[f.id]=cv.toDataURL();}this.opponentIcons={tennis:[],volleyball:[]};for(const id of ['tennis','volleyball'])for(let row=0;row<2;row++){const cv=document.createElement('canvas');cv.width=cv.height=100;const c=cv.getContext('2d');c.drawImage(this.opponents,id==='tennis'?0:768,row?500:0,768,row?524:490,0,16,100,68);this.opponentIcons[id].push(cv.toDataURL());}}
  // Navigation uses generous paved areas and small ground-level obstacle footprints.
@@ -44,21 +62,21 @@ class Park{
 
  stations(){return stations.map(s=>({...s,r:90}));}
  iconFor(id){return this.icons[id]||(['bike','skate'].includes(id)?A.imagePiece(UWCatalog.byId[id==='skate'?'skateboard':'bike']):A.iconURL('door'));}
- actionURL(){if(this.progress.completed.includes(this.mode)||this.matchOver)return A.iconURL('play');if(this.mode!=='basketball')return this.ball?.phase==='waiting'?this.iconFor(this.mode):A.iconURL('hand');if(this.mode==='tennis')return this.icons.tennis_contact;return this.mode==='volleyball'?this.icons[this.volleyStage===0?'volleyball_bump':this.volleyStage===1?'volleyball_set':'volleyball_hit']:this.iconFor(this.mode);}
+ actionURL(){if(this.finished())return A.iconURL('play');if(this.mode!=='basketball')return this.ball?.phase==='waiting'?this.iconFor(this.mode):A.iconURL('hand');if(this.mode==='tennis')return this.icons.tennis_contact;return this.mode==='volleyball'?this.icons[this.volleyStage===0?'volleyball_bump':this.volleyStage===1?'volleyball_set':'volleyball_hit']:this.iconFor(this.mode);}
  focus(player){if(this.mode)return{id:this.mode,x:player.x,y:player.y,action:true};if(player.y<140&&Math.abs(player.x-990)<110)return{id:'park-exit',exit:true,to:'village',x:990,y:45,picture:'home'};const x=player.x,y=player.y,court=x<650&&y>1240&&y<1760?'basketball':x>925&&y>1230&&y<1760?'tennis':x>240&&x<1310&&y>2320&&y<2790?'volleyball':null;return (court?stations.find(s=>s.id===court):stations.find(s=>Math.hypot(x-s.x,y-s.y)<130))||null;}
- begin(id,replay=false){
+ begin(id,replay=false,practice=false){
   if(['bike','skate'].includes(id)){this.stop();this.w.equipment?.();return;}
   if(!stations.some(s=>s.id===id))return;
-  this.mode=id;this.cancel();this.queued=false;this.aim=0;this.time=0;this.charging=false;this.charge=0;this.rallyIndex=0;this.matchOver=false;this.opponent={x:id==='tennis'?1143:1085,y:id==='tennis'?1315:2580,moving:false};
+  this.mode=id;this.practice=practice&&!!this.ladder[id];this.ensureSession(replay);this.restoreSession();this.cancel();this.queued=false;this.aim=0;this.time=0;this.charging=false;this.charge=0;this.rallyIndex=0;this.matchOver=false;this.opponent={x:id==='tennis'?1143:1085,y:id==='tennis'?1315:2580,moving:false};
   document.getElementById('guide').classList.remove('show');
-  if(replay){this.progress[id]=0;this.opponentScores[id]=0;this.progress.completed=this.progress.completed.filter(k=>k!==id);}
-  this.matchOver=(this.opponentScores[id]||0)>=(3);const place=stations.find(s=>s.id===id);Object.assign(this.w.player,{x:place.x,y:place.y,facing:1});this.resetRally();if(['tennis','volleyball'].includes(id)&&!this.matchOver&&!this.progress.completed.includes(id)){this.ball.phase='waiting';}this.save();
-  this.w.announce({basketball:'Move onto the glowing shooting spot. Hold the ball picture and release as the power bar reaches its marker and the aim ring crosses the hoop. Each basket changes the shooting spot. Collect missed balls.',tennis:'Press the ball to serve, then move onto the landing circle. Returns are automatic. First to three unlocks the next opponent.',volleyball:'Press the ball to serve, then move to the landing circle. Automatic bumps keep the rally going. First to three unlocks the next opponent.'}[id]);
+  if(replay&&!this.practice){this.progress[id]=0;this.opponentScores[id]=0;this.progress.completed=this.progress.completed.filter(k=>k!==id);}
+  this.matchOver=this.otherScore()>=3;const place=stations.find(s=>s.id===id);Object.assign(this.w.player,{x:place.x,y:place.y,facing:1});this.resetRally();if(['tennis','volleyball'].includes(id)&&!this.finished()){this.ball.phase='waiting';}this.persistActivities();this.save();this.updateUI();
+  this.w.announce(this.practice?'Slow practice. Press the ball once to serve, then move to the landing circle. The game ends at three points; choose any opponent picture to play a match.':{basketball:'Move onto the glowing shooting spot. Hold the ball picture and release as the power bar reaches its marker and the aim ring crosses the hoop. Each basket changes the shooting spot. Collect missed balls.',tennis:'Press the ball to serve, then move onto the landing circle. Returns are automatic. First to three unlocks the next opponent.',volleyball:'Press the ball to serve, then move to the landing circle. Automatic bumps keep the rally going. First to three unlocks the next opponent.'}[id]);
  }
- stop(){const old=this.mode;this.mode=null;this.pose=null;this.ball=null;this.pointer=null;this.queued=false;this.hud.hidden=true;this.save();if(old==='tennis')this.w.player.y=1720;}
- resetRally(){this.age=0;this.queued=false;this.flight=null;this.volleyStage=0;this.ball=null;this.pose=this.mode==='basketball'?'basketball_ready':null;if(this.mode==='tennis'||this.mode==='volleyball')this.serve();}
+ stop(){const old=this.mode;this.mode=null;this.practice=false;this.pose=null;this.ball=null;this.pointer=null;this.queued=false;this.hud.hidden=true;this.persistActivities();this.save();if(old==='tennis')this.w.player.y=1720;}
+ resetRally(){if(this.session())this.session().rally=0;this.age=0;this.queued=false;this.flight=null;this.volleyStage=0;this.ball=null;this.pose=this.mode==='basketball'?'basketball_ready':null;if(this.mode==='tennis'||this.mode==='volleyball')this.serve();}
  cancel(){this.powerShot=false;if(this.charging){this.suppressClick=true;try{document.getElementById('enter').releasePointerCapture(this.chargeId);}catch(_){}}this.charging=false;this.charge=0;const id=this.pointer?.id;this.pointer=null;if(id!==undefined)try{this.w.canvas.releasePointerCapture(id);}catch(_){}}
- leaveWorld(){this.hud.hidden=true;this.cancel();this.save();}
+ leaveWorld(){this.hud.hidden=true;this.cancel();this.persistActivities();this.flushFacts();this.save();}
  frame(id=this.pose){return D.actions.frames.find(f=>f.id===id);}
  anchor(id=this.pose,x=this.w.player.x,y=this.w.player.y,facing=this.w.player.facing,exit=false,scale=S){const f=this.frame(id),a=exit?f.ball_handoff_on_exit:f.ball;if(!a)return null;const [px,py]=f.ground_pivot_source,[bx,by]=a.center_source;return{x:x+(bx-px)*f.scale_to_logical*scale*facing,y:y+(by-py)*f.scale_to_logical*scale,diameter:a.visible_diameter_source*f.scale_to_logical*scale,logicalDiameter:a.visible_diameter_source*f.scale_to_logical,kind:a.kind};}
  actor(c,id,x,y,facing=1,scale=S,outfit=null){const f=this.frame(id);if(A.fullSportsFits.actor(c,f,this.im['actions/'+f.source],x,y,facing,scale,outfit))return;const [l,t,r,b]=f.source_rect_xyxy,[px,py]=f.ground_pivot_source;c.save();c.translate(x,y);c.scale(facing*scale,scale);c.drawImage(this.im['actions/'+f.source],l,t,r-l,b-t,(l-px)*f.scale_to_logical,(t-py)*f.scale_to_logical,(r-l)*f.scale_to_logical,(b-t)*f.scale_to_logical);c.restore();}
@@ -69,23 +87,23 @@ class Park{
  occludeHoop(c,b){if(!b)return;const h=this.hoop(),cy=b.y-(b.z||0),r=b.diameter/2,zone=D.hoop.clip_bounds_xyxy;if(b.x+r<h.x+zone[0]*h.scale||b.x-r>h.x+zone[2]*h.scale||cy+r<h.y+zone[1]*h.scale||cy-r>h.y+zone[3]*h.scale)return;c.save();c.beginPath();c.rect(b.x-r,cy-r,b.diameter,b.diameter);c.clip();c.drawImage(this.hoopFront,h.x,h.y,this.hoopFront.width*h.scale,this.hoopFront.height*h.scale);c.restore();}
  serve(){
   this.age=0;this.queued=false;this.volleyStage=0;this.pose=null;this.rallyIndex++;
-  if(this.progress.completed.includes(this.mode)||this.matchOver){this.ball=null;return;}
+  if(this.finished()){this.ball=null;return;}
   const cycle=(this.rallyIndex*0.381966)%1;
   if(this.mode==='tennis'){
    this.incomingTarget=this.projectCourt('tennis',.15+cycle*.7,.85);
    const start=this.opponentAnchor('tennis');
    const contact=this.anchor('tennis_contact',0,1665,1);
-   this.ball={kind:'tennis-ball',diameter:22.4*S,x:start.x,y:start.y,z:0,phase:'in',age:0,start,target:{x:this.incomingTarget.x,y:contact.y},duration:LEVELS[this.ladder.tennis.level].speed*(1-.07*Math.min(4,this.rallyIndex%5))};
+   this.ball={kind:'tennis-ball',diameter:22.4*S,x:start.x,y:start.y,z:0,phase:'in',age:0,start,target:{x:this.incomingTarget.x,y:contact.y},duration:this.difficulty().speed*(1-.07*Math.min(4,this.rallyIndex%5))};
   }else if(this.mode==='volleyball'){
    this.incomingTarget={x:488,y:2445+cycle*245};
    const start=this.opponentAnchor('volleyball');
    const contact=this.anchor('volleyball_bump',488,this.incomingTarget.y,1);
-   this.ball={kind:'volleyball',diameter:96.815*S,x:start.x,y:start.y,z:0,phase:'in',age:0,start,target:contact,duration:LEVELS[this.ladder.volleyball.level].speed*(1-.07*Math.min(4,this.rallyIndex%5))};
+   this.ball={kind:'volleyball',diameter:96.815*S,x:start.x,y:start.y,z:0,phase:'in',age:0,start,target:contact,duration:this.difficulty().speed*(1-.07*Math.min(4,this.rallyIndex%5))};
   }
  }
  projectCourt(id,u,v){const q=D.world.geometry.courts[id],p=q.play_surface_polygon,top={x:p[0][0]+(p[1][0]-p[0][0])*u,y:p[0][1]+(p[1][1]-p[0][1])*u},bottom={x:p[3][0]+(p[2][0]-p[3][0])*u,y:p[3][1]+(p[2][1]-p[3][1])*u};return{x:top.x+(bottom.x-top.x)*v,y:1024+top.y+(bottom.y-top.y)*v};}
  action(){
-  if(this.suppressClick)return;if(!this.mode)return;if(this.progress.completed.includes(this.mode)||this.matchOver){this.begin(this.mode,true);return;}
+  if(this.suppressClick)return;if(!this.mode)return;if(this.finished()){this.begin(this.mode,true,this.practice);return;}
   if(this.mode==='basketball'){
    if(this.flight||this.ball?.phase==='loose'||this.pose==='basketball_release')return;
    const spot=SPOTS[this.progress.basketball%3],near=Math.hypot(this.w.player.x-spot.x,this.w.player.y-spot.y)<65;this.shotOffset=(this.aimCursor||0)+(this.powerShot||this.charge>0?(this.charge-.65)*75:0)+(near?0:45);this.charge=0;this.powerShot=false;this.pose='basketball_aim';this.age=0;this.queued=true;
@@ -114,38 +132,49 @@ class Park{
   return true;
  }
  up(e,p,cancel=false){if(this.pointer?.id!==e.pointerId)return false;if(!cancel)this.pointerMove(e,p);this.pointer=null;try{this.w.canvas.releasePointerCapture(e.pointerId);}catch(_){}return true;}
+ recordShot(){const s=this.ensureSession(),before=s.attempts,pending=this.outbox.length;s.attempts++;this.fact('sport-shot',{sport:'basketball',score:this.score(),attempt:s.attempts,practice:false},'shot:'+s.attempts);if(!this.persistActivities()){s.attempts=before;this.outbox.length=pending;return false;}this.flushFacts();return true;}
+ recordReturn(){const s=this.ensureSession();s.rally++;if(s.rally>s.bestRally){s.bestRally=s.rally;this.fact('sport-best',{sport:this.mode,score:this.score(),rally:s.bestRally,practice:this.practice},'rally:'+s.bestRally);if(this.persistActivities())this.flushFacts();}}
  credit(id){this.point(true,id);}
  point(playerWon,id=this.mode){
-  const goal=3;if(playerWon)this.progress[id]=Math.min(goal,this.progress[id]+1);else this.opponentScores[id]=Math.min(goal,(this.opponentScores[id]||0)+1);
-  if(this.progress[id]===goal){if(!this.progress.completed.includes(id))this.progress.completed.push(id);this.w.announce('You won! Press the play picture for a new game.');}
-  else if((this.opponentScores[id]||0)===goal){this.matchOver=true;this.w.announce('Opponent won this game. Press play to try again.');}
+  if(id!==this.mode||this.finished())return false;
+  const s=this.ensureSession(),before={...s},pending=this.outbox.length;
+  s.score=Math.min(3,this.score()+(playerWon?1:0));s.other=Math.min(3,this.otherScore()+(playerWon?0:1));s.rally=0;s.finished=s.score===3||s.other===3;
+  this.fact('sport-best',{sport:id,score:s.score,rally:s.bestRally,practice:this.practice},'point:'+s.score+':'+s.other);
+  if(s.finished&&id!=='basketball')this.fact('sport-finished',{sport:id,score:s.score,opponentScore:s.other,rally:s.bestRally,practice:this.practice},'finished');
+  if(!this.persistActivities()){Object.assign(s,before);this.outbox.length=pending;return false;}
+  if(!this.practice){this.progress[id]=s.score;this.opponentScores[id]=s.other;if(s.score===3&&!this.progress.completed.includes(id))this.progress.completed.push(id);}
+  this.matchOver=s.other===3;
+  if(s.score===3)this.w.announce(this.practice?'Practice finished! Press play for another slow game.':'You won! Press the play picture for a new game.');
+  else if(this.matchOver)this.w.announce(this.practice?'Practice finished! Every return helps. Press play to practise again.':'Opponent won this game. Press play to try again.');
   else this.w.announce(playerWon?'Your point!':'Opponent point. Try the next ball.');
-  if(playerWon&&this.progress[id]===3&&this.ladder[id]){const l=this.ladder[id];if(!l.wins.includes(l.level))l.wins.push(l.level);l.unlocked=Math.max(l.unlocked,Math.min(2,l.level+1));}this.save();if(id!=='basketball'){this.pose=null;this.ball={phase:'pause',age:0};}
+  if(!this.practice&&playerWon&&s.score===3&&this.ladder[id]){const l=this.ladder[id];if(!l.wins.includes(l.level))l.wins.push(l.level);l.unlocked=Math.max(l.unlocked,Math.min(2,l.level+1));}
+  this.save();this.flushFacts();if(id!=='basketball'){this.pose=null;this.ball={phase:'pause',age:0};}return true;
  }
- opponentFrame(id){const row=this.ladder[id].level-1,col=id==='tennis'?0:768;if(row<0)return null;return{rect:[col,row===0?0:500,768,row===0?490:524],pivot:[id==='tennis'?(row===0?300:326):(row===0?385:422),row===0?474:485],contact:[id==='tennis'?(row===0?639:655):(row===0?640:694),row===0?(id==='tennis'?244:327):(id==='tennis'?245:317)],scale:(id==='tennis'?60:80)/(row===0?430:479)};}
+ opponentFrame(id){const row=(this.practice?0:this.ladder[id].level)-1,col=id==='tennis'?0:768;if(row<0)return null;return{rect:[col,row===0?0:500,768,row===0?490:524],pivot:[id==='tennis'?(row===0?300:326):(row===0?385:422),row===0?474:485],contact:[id==='tennis'?(row===0?639:655):(row===0?640:694),row===0?(id==='tennis'?244:327):(id==='tennis'?245:317)],scale:(id==='tennis'?60:80)/(row===0?430:479)};}
  opponentOffset(id){const f=this.opponentFrame(id);if(!f)return this.anchor(id==='tennis'?'tennis_contact':'volleyball_bump',0,0,-1,false,id==='tennis'?.21:S);return{x:-(f.contact[0]-f.pivot[0])*f.scale,y:(f.contact[1]-f.pivot[1])*f.scale};}
  opponentAnchor(id){const a=this.opponentOffset(id);return {...a,x:this.opponent.x+a.x,y:this.opponent.y+a.y};}
  drawOpponent(c,id,time){const f=this.opponentFrame(id),o=this.opponent;if(!f){this.actor(c,id==='tennis'?'tennis_contact':'volleyball_bump',o.x,o.y,-1,id==='tennis'?.21:S);return;}const [x,y,w,h]=f.rect;c.save();c.translate(o.x,o.y-(o.moving?Math.abs(Math.sin(time*10))*2:0));c.scale(-f.scale,f.scale);c.drawImage(this.opponents,x,y,w,h,-f.pivot[0],-f.pivot[1],w,h);c.restore();}
- opponentMove(target,dt,axis){const speed=LEVELS[this.ladder[this.mode]?.level||0].ai;const o=this.opponent,before=o[axis];o[axis]+=clamp(target-o[axis],-speed*dt,speed*dt);o.moving=Math.abs(before-o[axis])>.1;}
+ opponentMove(target,dt,axis){const speed=this.difficulty().ai;const o=this.opponent,before=o[axis];o[axis]+=clamp(target-o[axis],-speed*dt,speed*dt);o.moving=Math.abs(before-o[axis])>.1;}
  strokeReturn(id){
+  this.recordReturn();
   const b=this.ball,a=this.anchor(id==='tennis'?'tennis_contact':'volleyball_bump');this.pose=id==='tennis'?'tennis_contact':'volleyball_bump';this.age=0;
   const impact=(id==='tennis'?b.x-a.x:b.y-a.y);const target=id==='tennis'?this.projectCourt('tennis',clamp((this.w.player.x-985)/320+impact/150,.02,.98),.07):{x:this.opponentAnchor('volleyball').x,y:clamp(this.w.player.y+impact*3+85*Math.sin(this.time),2430,2700)+this.opponentOffset('volleyball').y};
   if(id==='tennis')target.y=this.opponentAnchor('tennis').y;
-  Object.assign(b,a,{phase:'out',age:0,start:a,target,duration:LEVELS[this.ladder[id].level].speed*.85,hidden:false});
+  Object.assign(b,a,{phase:'out',age:0,start:a,target,duration:this.difficulty().speed*.85,hidden:false});
  }
  tick(dt,moving){
-  if(!this.ready)return;this.age+=dt;this.time+=dt;this.moving=moving;const p=this.w.player,b=this.ball;
+  if(!this.ready)return;this.flushAge+=dt;if(this.flushAge>=2){this.flushAge=0;this.flushFacts();}this.age+=dt;this.time+=dt;this.moving=moving;const p=this.w.player,b=this.ball;
   if(this.mode==='basketball'){
    const distance=Math.hypot(p.x-359,p.y-1269);if(this.charging)this.charge=Math.min(1,this.charge+dt*.7);this.aimCursor=Math.sin(this.time*2.3)*(10+distance*.12);
    if(this.pose==='basketball_aim'&&this.age>=.18){this.pose='basketball_release';this.age=0;this.queued=false;}
-   else if(this.pose==='basketball_release'&&this.age>=.15){const a=this.anchor(),h=this.hoop();this.flight={start:a,target:{x:h.mouth.x+this.shotOffset,y:h.mouth.y},t:0,hit:Math.abs(this.shotOffset)<15};this.pose=null;this.age=0;}
+   else if(this.pose==='basketball_release'&&this.age>=.15){if(!this.recordShot())return;const a=this.anchor(),h=this.hoop();this.flight={start:a,target:{x:h.mouth.x+this.shotOffset,y:h.mouth.y},t:0,hit:Math.abs(this.shotOffset)<15};this.pose=null;this.age=0;}
    if(this.flight){const f=this.flight;f.t+=dt;const t=clamp(f.t/1.15,0,1);this.ball={kind:'basketball',diameter:85*S,x:f.start.x+(f.target.x-f.start.x)*t,y:f.start.y+(f.target.y-f.start.y)*t-170*Math.sin(Math.PI*t)};
     if(f.t>1.15)this.ball.y=f.target.y+(f.t-1.15)*190;
-    if(f.t>1.7){if(f.hit){this.credit('basketball');this.ball=null;this.pose='basketball_ready';}else{this.ball={kind:'basketball',diameter:85*S,x:clamp(f.target.x,200,550),y:1490+90*Math.sin(this.time),phase:'loose',z:0};this.w.announce('Move to the ball to pick it up.');}this.flight=null;}
+    if(f.t>1.7){if(f.hit){if(!this.point(true,'basketball'))return;this.ball=null;this.pose='basketball_ready';}else{this.ball={kind:'basketball',diameter:85*S,x:clamp(f.target.x,200,550),y:1490+90*Math.sin(this.time),phase:'loose',z:0};this.w.announce('Move to the ball to pick it up.');}this.flight=null;}
    }else if(b?.phase==='loose'&&Math.hypot(p.x-b.x,p.y-b.y)<52){this.ball=null;this.pose='basketball_ready';this.w.announce('Ball collected. Move closer and time your shot.');}
   }
   if(['tennis','volleyball'].includes(this.mode)&&b){
-   b.age+=dt;if(b.phase==='pause'){if(b.age>1.0&&!this.matchOver&&!this.progress.completed.includes(this.mode))this.serve();}
+   b.age+=dt;if(b.phase==='pause'){if(b.age>1.0&&!this.finished())this.serve();}
    else if(b.phase==='in'){
     const t=clamp(b.age/b.duration,0,1);b.x=b.start.x+(b.target.x-b.start.x)*t;b.y=b.start.y+(b.target.y-b.start.y)*t;b.z=(this.mode==='tennis'?25:105)*Math.sin(Math.PI*t);
     const axis=this.mode==='tennis'?'x':'y';this.opponentMove(this.mode==='tennis'?1143+70*Math.sin(this.time*.8):2580+55*Math.sin(this.time*.8),dt,axis);
@@ -157,17 +186,19 @@ class Park{
     const t=clamp(b.age/b.duration,0,1);b.x=b.start.x+(b.target.x-b.start.x)*t;b.y=b.start.y+(b.target.y-b.start.y)*t;b.z=(this.mode==='tennis'?35:160)*Math.sin(Math.PI*t);
     if(this.age>(this.mode==='tennis'?.09:.1))this.pose=null;
     const axis=this.mode==='tennis'?'x':'y',needed=this.mode==='tennis'?b.target.x-this.opponentOffset('tennis').x:b.target.y-this.opponentOffset('volleyball').y;
-    if(b.age>LEVELS[this.ladder[this.mode].level].reaction)this.opponentMove(needed,dt,axis);
+    if(b.age>this.difficulty().reaction)this.opponentMove(needed,dt,axis);
     if(t>=1){const a=this.opponentAnchor(this.mode);
-     if(Math.hypot(b.target.x-a.x,b.target.y-a.y)<LEVELS[this.ladder[this.mode].level].tolerance)this.serve();else this.point(true);
+     if(Math.hypot(b.target.x-a.x,b.target.y-a.y)<this.difficulty().tolerance)this.serve();else this.point(true);
     }
    }
   }
   this.updateUI();
  }
  updateUI(){
-  this.hud.hidden=!this.mode;if(!this.mode)return;const n=this.progress[this.mode]||0,goal=3,other=this.opponentScores[this.mode]||0,finished=this.progress.completed.includes(this.mode)||this.matchOver,signature=[this.mode,n,other,finished,this.ladder[this.mode]?.level,this.ladder[this.mode]?.unlocked].join(':');if(this.uiSignature===signature)return;this.uiSignature=signature;
-  const levels=document.getElementById('sports-levels');levels.hidden=!this.ladder[this.mode];levels.innerHTML=this.ladder[this.mode]?[0,1,2].map(i=>'<button data-level="'+i+'" aria-label="Opponent '+(i+1)+'" aria-pressed="'+(i===this.ladder[this.mode].level)+'" '+(i>this.ladder[this.mode].unlocked?'disabled':'')+'>'+'<img class="picture-sprite" src="'+(i?this.opponentIcons?.[this.mode]?.[i-1]:this.icons[this.mode+'_ready'])+'" alt="">'+'</button>').join(''):'';document.getElementById('sports-progress').innerHTML='<img class="picture-sprite" src="'+this.icons[this.mode]+'" alt=""><span>'+n+(this.mode==='basketball'?' / '+goal:' : '+other)+'</span>'+(finished?A.icon('check'):'');document.getElementById('sports-retry').hidden=!finished;
+  this.hud.hidden=!this.mode;if(!this.mode)return;const n=this.score(),goal=3,other=this.otherScore(),finished=this.finished(),signature=[this.mode,n,other,finished,this.practice,this.ladder[this.mode]?.level,this.ladder[this.mode]?.unlocked].join(':');if(this.uiSignature===signature)return;this.uiSignature=signature;
+  const levels=document.getElementById('sports-levels');levels.hidden=!this.ladder[this.mode];
+  levels.innerHTML=this.ladder[this.mode]?'<button data-practice aria-label="Slow practice" aria-pressed="'+this.practice+'" class="sports-practice"><img class="picture-sprite" src="'+this.icons[this.mode+'_ready']+'" alt=""><span>Slow</span></button>'+[0,1,2].map(i=>'<button data-level="'+i+'" aria-label="Opponent '+(i+1)+(i===0?' — friendly':'')+'" aria-pressed="'+(!this.practice&&i===this.ladder[this.mode].level)+'" '+(i>this.ladder[this.mode].unlocked?'disabled':'')+'><img class="picture-sprite" src="'+(i?this.opponentIcons?.[this.mode]?.[i-1]:this.icons[this.mode+'_ready'])+'" alt=""></button>').join(''):'';
+  document.getElementById('sports-progress').innerHTML='<img class="picture-sprite" src="'+this.icons[this.mode]+'" alt=""><span>'+n+(this.mode==='basketball'?' / '+goal:' : '+other)+'</span>'+(finished?A.icon('check'):'');document.getElementById('sports-retry').hidden=!finished;
  }
  view(){const p=this.w.player;let x=p.x-384,y=p.y-270;if(this.mode==='basketball'){x=0;y=1125;}if(this.mode==='tennis'){x=768;y=1200;}if(this.mode==='volleyball'){x=380;y=2275;}this.camera={x:clamp(x,0,768),y:clamp(y,0,2560)};return this.camera;}
  draw(c,time,moving,outfit){if(!this.ready)return;const camera=this.view();c.save();c.translate(-camera.x,-camera.y);for(const r of D.world.world.regions)if(r.origin[1]<camera.y+512&&r.origin[1]+1024>camera.y)c.drawImage(this.im[r.file],...r.origin);for(const s of this.seams)if(s.y<camera.y+512&&s.y+1024>camera.y)c.drawImage(s.canvas,s.x,s.y);

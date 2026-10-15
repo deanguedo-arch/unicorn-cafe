@@ -298,3 +298,17 @@ input:not([type=range]):not([type=checkbox]):not([type=radio]),textarea,[content
 .helper-target{position:absolute;z-index:4;background:transparent;border:0;box-shadow:none;padding:0;pointer-events:auto;touch-action:none;}
 .helper-target:focus-visible{outline:3px solid #fff1ad;}
 .helper-target:disabled{opacity:1;}
+
+/* Picture orders are also the action: meet the guest, then go cook their meal. */
+.order-picture-action{position:relative;display:flex;align-items:center;gap:5px;padding:0;min-height:52px;background:transparent;pointer-events:auto;border-radius:17px}
+.order-picture-action:active{transform:translateY(2px)}
+.favourite-picture{position:absolute;left:24px;top:1px;width:22px;height:22px;pointer-events:none}
+.favourite-picture svg{width:100%;height:100%}
+.order-person{position:relative}
+.order-person .favourite-picture{left:calc(50% + 12px)}
+.picture-hint{position:absolute;z-index:35;left:12px;bottom:12px;width:48px;height:48px;padding:7px;background:#fff8e6;border:3px solid #d6ac72;border-radius:17px;box-shadow:0 3px 0 #78547c;touch-action:manipulation}
+.picture-hint svg{width:100%;height:100%}
+.picture-hint[data-scene="cook"],.picture-hint[data-scene="recipes"]{left:auto;right:70px;top:7px;bottom:auto}
+.hint-hand{position:absolute;z-index:36;width:48px;height:54px;pointer-events:none;filter:drop-shadow(0 2px 2px #61496f88)}
+.hint-hand svg{width:100%;height:100%}
+@media(orientation:landscape) and (max-height:350px){.picture-hint{bottom:6px;left:6px;width:44px;height:44px}.order-picture-action{gap:3px}}

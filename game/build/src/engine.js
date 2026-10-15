@@ -28,6 +28,8 @@ const RECIPES={
 };
 const MENU=Object.keys(RECIPES);
 const SEQUENCE=['pizza','icecream','burger','cupcake','soup','coffee','chicken','pancakes','smoothie'];
+const FAVOURITES={pink:{dish:'cupcake',variant:'strawberry'},blue:{dish:'icecream',variant:'vanilla'}};
+function favouriteGuest(c){const f=FAVOURITES[c?.type];return !!f&&c.dish===f.dish&&c.variant===f.variant;}
 const TABLES=[
  {id:'heart',name:'Heart table',symbol:'heart',colour:'#e95d92',seat:{x:765,y:598},meet:{x:820,y:634},food:{x:640,y:500}},
  {id:'star',name:'Star table',symbol:'star',colour:'#4f79e2',seat:{x:1345,y:618},meet:{x:1400,y:654},food:{x:1220,y:520}},
@@ -80,13 +82,18 @@ function safePoint(pt){
 const DEFAULT_DECOR={flooring:'lavender',wallpaper:'twilight',tableType:'round',tablecloth:'honey',decoration:'flowers',chairs:'plum'};
 function walkable(x,y,r=18){if(x<BOUNDS.left||x>BOUNDS.right||y<BOUNDS.top||y>BOUNDS.bottom)return false;return !OBSTACLES.some(o=>x>o[0]-r&&x<o[0]+o[2]+r&&y>o[1]-r&&y<o[1]+o[3]+r);}
 function lineFree(a,b){const n=Math.ceil(Math.hypot(b.x-a.x,b.y-a.y)/10);for(let i=0;i<=n;i++)if(!walkable(a.x+(b.x-a.x)*i/(n||1),a.y+(b.y-a.y)*i/(n||1)))return false;return true;}
+// Helper recovery can start a fraction of a pixel from a table corner. Sampled
+// visibility can miss that sliver; intersect the complete expanded footprint.
+function clearSegment(a,b){if(!walkable(a.x,a.y)||!walkable(b.x,b.y))return false;return !OBSTACLES.some(o=>{
+ let low=0,high=1;for(const [axis,min,max] of [['x',o[0]-18,o[0]+o[2]+18],['y',o[1]-18,o[1]+o[3]+18]]){const delta=b[axis]-a[axis];if(Math.abs(delta)<1e-10){if(a[axis]<=min||a[axis]>=max)return false;}else{const u=(min-a[axis])/delta,v=(max-a[axis])/delta;low=Math.max(low,Math.min(u,v));high=Math.min(high,Math.max(u,v));if(low>=high-1e-10)return false;}}return low<high-1e-10;
+});}
 const CELL=28,NX=60,NY=26;
 const gridPoint=i=>({x:BOUNDS.left+CELL*(i%NX),y:BOUNDS.top+CELL*Math.floor(i/NX)});
 const GRID=Array.from({length:NX*NY},(_,i)=>{const p=gridPoint(i);return walkable(p.x,p.y);});
-function closestCell(p){let best=-1,dist=Infinity;GRID.forEach((v,i)=>{if(v){const q=gridPoint(i),d=(q.x-p.x)**2+(q.y-p.y)**2;if(d<dist){dist=d;best=i;}}});return best;}
-function pathfind(start,end){
- if(lineFree(start,end))return [{x:end.x,y:end.y}];
- const a=closestCell(start),b=closestCell(end);if(a<0||b<0)return [];
+function closestCell(p,visible=false){let best=-1,dist=Infinity;GRID.forEach((v,i)=>{if(v){const q=gridPoint(i),d=(q.x-p.x)**2+(q.y-p.y)**2;if(d<dist&&(!visible||clearSegment(p,q))){dist=d;best=i;}}});return best;}
+function pathfind(start,end,visibleEndpoints=false){
+ const clear=visibleEndpoints?clearSegment:lineFree;if(clear(start,end))return [{x:end.x,y:end.y}];
+ const a=closestCell(start,visibleEndpoints),b=closestCell(end,visibleEndpoints);if(a<0||b<0)return [];
  const prev=new Int32Array(NX*NY).fill(-2),queue=[a];prev[a]=-1;
  for(let qi=0;qi<queue.length&&prev[b]===-2;qi++){
   const cur=queue[qi],x=cur%NX,y=Math.floor(cur/NX);
@@ -100,7 +107,7 @@ function pathfind(start,end){
  if(prev[b]===-2)return [];
  let nodes=[];for(let i=b;i!==-1;i=prev[i])nodes.push(gridPoint(i));nodes.reverse();if(walkable(end.x,end.y))nodes.push({x:end.x,y:end.y});
  const result=[];let current=start;
- while(nodes.length){let furthest=0;for(let i=nodes.length-1;i>=0;i--)if(lineFree(current,nodes[i])){furthest=i;break;}current=nodes[furthest];result.push(current);nodes=nodes.slice(furthest+1);}
+ while(nodes.length){let furthest=0;for(let i=nodes.length-1;i>=0;i--)if(clear(current,nodes[i])){furthest=i;break;}current=nodes[furthest];result.push(current);nodes=nodes.slice(furthest+1);}
  return result;
 }
 function blankTables(){return TABLES.map(()=>({status:'clean',dirty:null}));}
@@ -218,7 +225,7 @@ function cleanSave(raw){
  return s;
 }
 class Engine{
- constructor(saved=null){this.s=cleanSave(saved)||fresh();}
+ constructor(saved=null){this.s=cleanSave(saved)||fresh();this.helperMotion=new WeakMap();}
  get prep(){return this.s.phase==='lunch'?this.s.lunch.prep:this.s.prep;}
  startLunchRecipe(){const l=this.s.lunch;if(this.s.phase!=='lunch'||!l.meal||l.packed<3||l.cooked)return false;if(!l.prep)l.prep={orderId:0,dish:l.meal,step:0,p:0,variant:null,deco:null,done:false,placements:[]};return true;}
  finishLunchRecipe(){const l=this.s.lunch;if(this.s.phase!=='lunch'||!l.prep?.done||!validVariant(l.meal,l.prep.variant))return false;l.variant=l.prep.variant;l.cooked=true;l.prep=null;return true;}
@@ -226,7 +233,7 @@ class Engine{
  atTable(index){return this.s.customers.find(c=>c.table===index)||null;}
  nextOrder(){return this.s.customers.find(c=>c.phase==='ordered')||null;}
  freeTable(){return TABLES.findIndex((_,i)=>!this.atTable(i)&&this.s.tables[i].status==='clean');}
- spawn(limit=5){const s=this.s;if(!['morning','afternoon'].includes(s.phase)||(!s.lunch.done&&s.issued>=LUNCH_AT)||s.completed||s.issued>=DAY_TARGET||s.customers.length>=limit)return null;const table=this.freeTable();if(table<0)return null;const idx=(s.issued+(s.day-1)*3)%SEQUENCE.length,dish=SEQUENCE[idx],r=RECIPES[dish],variant=r.variants[(s.issued+s.day-1)%r.variants.length].id;const types=['pink','human','blue','worker','manager'];const c={id:s.nextId++,table,dish,variant,type:types[(s.issued+s.day-1)%types.length],phase:'arriving',x:ENTRY.x,y:ENTRY.y,eat:0};s.issued++;s.customers.push(c);return c;}
+ spawn(limit=5){const s=this.s;if(!['morning','afternoon'].includes(s.phase)||(!s.lunch.done&&s.issued>=LUNCH_AT)||s.completed||s.issued>=DAY_TARGET||s.customers.length>=limit)return null;const table=this.freeTable();if(table<0)return null;const idx=(s.issued+(s.day-1)*3)%SEQUENCE.length,dish=SEQUENCE[idx],r=RECIPES[dish],variant=r.variants[(s.issued+s.day-1)%r.variants.length].id;const types=['pink','human','blue','worker','manager'],favourite=Object.keys(FAVOURITES).find(id=>FAVOURITES[id].dish===dish&&FAVOURITES[id].variant===variant);const c={id:s.nextId++,table,dish,variant,type:favourite||types[(s.issued+s.day-1)%types.length],phase:'arriving',x:ENTRY.x,y:ENTRY.y,eat:0};s.issued++;s.customers.push(c);return c;}
  arrive(id){const c=this.customer(id);if(!c||c.phase!=='arriving')return false;c.phase='waiting';c.x=TABLES[c.table].seat.x;c.y=TABLES[c.table].seat.y;return true;}
  takeOrder(id){const c=this.customer(id);if(!c||!['waiting','ordered'].includes(c.phase))return false;c.phase='ordered';this.s.active=id;return true;}
  selectOrder(id){const c=this.customer(id);if(c?.phase!=='ordered')return false;this.s.active=id;return true;}
@@ -264,19 +271,35 @@ class Engine{
  leaveCafe(){if(this.s.phase==='break'){this.s.lunch.departed=true;return true;}return false;}
  enterCafe(){const s=this.s;if(s.phase!=='break'||!s.lunch.departed||s.lunch.afternoonStarted)return false;s.lunch.afternoonStarted=true;s.phase='afternoon';s.pace.next=3;s.pace.mood='normal';s.pace.remaining=20;return true;}
  halfDay(){return this.s.lunch.afternoonStarted?'afternoon':'morning';}
- grantHelper(id,scope){const h=this.s.helpers.find(h=>h.id===id);if(!h||!['morning','afternoon'].includes(this.s.phase))return false;h.hired=true;h.scope=scope;return true;}
+ helperActivity(h){let activity=this.helperMotion.get(h);if(!activity){activity={route:null,happy:0,moving:false};this.helperMotion.set(h,activity);}return activity;}
+ grantHelper(id,scope){const h=this.s.helpers.find(h=>h.id===id);if(!h||!['morning','afternoon'].includes(this.s.phase))return false;if(!h.hired)this.helperActivity(h).happy=1.2;h.hired=true;h.scope=scope;return true;}
  hireLocal(id){const h=this.s.helpers.find(h=>h.id===id);if(!h||!['morning','afternoon'].includes(this.s.phase))return false;if(h.hired)return true;if(this.s.coins<1)return false;this.s.coins--;return this.grantHelper(id,'local:'+this.s.day+':'+this.halfDay());}
- revokeHelper(id){const h=this.s.helpers.find(h=>h.id===id);if(!h)return;if(h.dish)this.s.tables[h.dish.table]={status:'dirty',dirty:{...h.dish,orderId:0}};h.hired=false;h.scope=null;h.task=null;h.progress=0;h.dish=null;}
+ revokeHelper(id){const h=this.s.helpers.find(h=>h.id===id);if(!h)return;if(h.dish)this.s.tables[h.dish.table]={status:'dirty',dirty:{...h.dish,orderId:0}};h.hired=false;h.scope=null;h.task=null;h.progress=0;h.dish=null;this.helperMotion.delete(h);}
  expireHelpers(){for(const h of this.s.helpers)this.revokeHelper(h.id);}
  helpersTick(dt){if(!Number.isFinite(dt)||dt<=0||!['morning','afternoon'].includes(this.s.phase))return;dt=Math.min(dt,.25);
- const move=(h,to)=>{const path=pathfind(h,safePoint(to));let distance=90*dt;while(path.length&&distance>0){const q=path[0],d=Math.hypot(q.x-h.x,q.y-h.y);if(d<1){path.shift();continue;}const part=Math.min(distance,d),dx=q.x-h.x;h.x+=(q.x-h.x)/d*part;h.y+=(q.y-h.y)/d*part;if(Math.abs(dx)>1)h.facing=dx<0?-1:1;distance-=part;if(part>=d)path.shift();}return Math.hypot(h.x-to.x,h.y-to.y)<7;};
- for(const h of this.s.helpers){if(!h.hired)continue;
-  if(h.dish){h.task={kind:'wash',table:h.dish.table};if(move(h,SINK)){h.progress+=dt;if(h.progress>=6){this.s.tables[h.dish.table]={status:'clean',dirty:null};h.dish=null;h.task=null;h.progress=0;this.updateDay();}}continue;}
+ // Routes belong to a job, not a frame. Replanning at grid corners every frame
+ // alternated between the corner behind a helper and the next aisle at 60 Hz.
+ // Motion/celebration state stays outside the native save and rebuilds on resume.
+ const move=(h,to)=>{const a=this.helperActivity(h),dest=safePoint(to),key=h.task.kind+':'+h.task.table+':'+(h.task.id||'');
+  if(!walkable(h.x,h.y)){Object.assign(h,safePoint(h));a.route=null;}
+  let route=a.route;
+  // A resumed helper can be close to a table corner: its nearest grid cell
+  // may be on the far side. Require reachable grid endpoints when rebuilding.
+  if(!route||route.key!==key||route.x!==dest.x||route.y!==dest.y||Math.hypot(h.x-route.lastX,h.y-route.lastY)>.1){route={key,...dest,path:pathfind(h,dest,true),stalled:0,lastX:h.x,lastY:h.y};a.route=route;}
+  const before={x:h.x,y:h.y};let distance=90*dt;
+  while(route.path.length&&distance>0){const q=route.path[0],d=Math.hypot(q.x-h.x,q.y-h.y);if(d<.001){route.path.shift();continue;}const part=Math.min(distance,d),dx=q.x-h.x,next={x:h.x+dx/d*part,y:h.y+(q.y-h.y)/d*part};if(!clearSegment(h,next))break;h.x=next.x;h.y=next.y;if(Math.abs(dx)>1)h.facing=dx<0?-1:1;distance-=part;if(part>=d)route.path.shift();}
+  const arrived=Math.hypot(h.x-dest.x,h.y-dest.y)<7;a.moving=Math.hypot(h.x-before.x,h.y-before.y)>.01;route.lastX=h.x;route.lastY=h.y;route.stalled=arrived||a.moving?0:route.stalled+dt;
+  // A blocked/empty route is retried after a genuine stall; never drop its dish
+  // or complete a job remotely. External repositioning also invalidates a route.
+  if(route.stalled>=1){a.route=null;}return arrived;
+ };
+ for(const h of this.s.helpers){const activity=this.helperActivity(h);activity.happy=Math.max(0,activity.happy-dt);activity.moving=false;if(!h.hired)continue;
+  if(h.dish){h.task={kind:'wash',table:h.dish.table};if(move(h,SINK)){h.progress+=dt;if(h.progress>=6){this.s.tables[h.dish.table]={status:'clean',dirty:null};h.dish=null;h.task=null;h.progress=0;activity.route=null;activity.happy=1.2;this.updateDay();}}continue;}
   if(h.task){const j=h.task,valid=j.kind==='dish'?this.s.tables[j.table]?.status==='dirty':this.customer(j.id)?.phase==='waiting';if(!valid){h.task=null;h.progress=0;}}
   if(!h.task){const claimed=(kind,id)=>this.s.helpers.some(q=>q!==h&&q.task?.kind===kind&&(kind==='dish'?q.task.table:q.task.id)===id);
    const table=this.s.tables.findIndex((t,i)=>t.status==='dirty'&&t.dirty&&!claimed('dish',i));const c=this.s.customers.filter(c=>c.phase==='waiting'&&!claimed('order',c.id)).sort((a,b)=>a.id-b.id)[0];h.task=table>=0?{kind:'dish',table}:c?{kind:'order',table:c.table,id:c.id}:null;h.progress=0;}
-  if(!h.task)continue;const j=h.task;if(!move(h,safePoint(TABLES[j.table].meet)))continue;h.progress+=dt;
-  if(j.kind==='order'&&h.progress>=3){const c=this.customer(j.id);if(c?.phase==='waiting')c.phase='ordered';h.task=null;h.progress=0;}
+  if(!h.task){activity.route=null;continue;}const j=h.task;if(!move(h,TABLES[j.table].meet))continue;h.progress+=dt;
+  if(j.kind==='order'&&h.progress>=3){const c=this.customer(j.id);if(c?.phase==='waiting')c.phase='ordered';h.task=null;h.progress=0;activity.route=null;activity.happy=1.2;}
   else if(j.kind==='dish'&&h.progress>=1.5){const t=this.s.tables[j.table];if(t.status==='dirty'&&t.dirty){h.dish={...t.dirty,table:j.table};this.s.tables[j.table]={status:'carried',dirty:null};}h.task=null;h.progress=0;}
  }
 }
@@ -301,5 +324,5 @@ class Engine{
  reset(){this.s=fresh(this.s.settings);}
  snapshot(){return clone(this.s);}
 }
-return {HELPER_IDS,LUNCH_AT,LUNCH_MENU,CLEAN_TASKS,PREVIOUS_SAVE_KEYS,serviceClear,surfacesClean,safePoint,VERSION,SCHEMA,SAVE_KEY,LEGACY_SAVE_KEY,DAY_TARGET,RECIPES,MENU,SEQUENCE,TABLES,STATIONS,KITCHEN,SINK,ENTRY,CASHIER,DJ,OBSTACLES,BOUNDS,CUSTOMIZATION,DEFAULT_DECOR,Engine,fresh,cleanSave,migrateV1,validVariant,validDish,validDecor,pathfind,walkable,lineFree,clamp,clone,isDayClear};
+return {HELPER_IDS,FAVOURITES,favouriteGuest,LUNCH_AT,LUNCH_MENU,CLEAN_TASKS,PREVIOUS_SAVE_KEYS,serviceClear,surfacesClean,safePoint,VERSION,SCHEMA,SAVE_KEY,LEGACY_SAVE_KEY,DAY_TARGET,RECIPES,MENU,SEQUENCE,TABLES,STATIONS,KITCHEN,SINK,ENTRY,CASHIER,DJ,OBSTACLES,BOUNDS,CUSTOMIZATION,DEFAULT_DECOR,Engine,fresh,cleanSave,migrateV1,validVariant,validDish,validDecor,pathfind,walkable,lineFree,clamp,clone,isDayClear};
 });

@@ -1,0 +1,24 @@
+{
+  "generator": "built-in image_gen",
+  "source": "/Users/deanguedo/.codex/generated_images/01a10d6c-522f-7633-aa66-aa09084e1004/exec-e3d14361-efb1-4021-ad92-928ea6b757d4.png",
+  "reference": "hub/assets/four-changes/home-upstairs.png",
+  "sha256": "f0565920ef2681acadad0ff4efa452727cb59552b22bc8155c0552c0a70920bd",
+  "layout": {
+    "columns": 3,
+    "rows": 3,
+    "width": 1536,
+    "height": 1024,
+    "items": [
+      "rug",
+      "cushion-pink",
+      "cushion-blue",
+      "teddy",
+      "train",
+      "plant",
+      "picnic-basket",
+      "star-lamp",
+      "rainbow-beanbag"
+    ]
+  },
+  "prompt": "Production transparent 3x3 sprite atlas matching the supplied Unicorn World upstairs bedroom: row1 lavender gold-edged rug, pink heart cushion, sky-blue star cushion; row2 teddy bear, pink turquoise toy train, flowering plant; row3 picnic basket, star reading lamp, rainbow beanbag. Elevated three-quarter perspective, bold readable silhouettes, generous transparent margins; no text, cell borders, characters or scenery. Original room unchanged."
+}

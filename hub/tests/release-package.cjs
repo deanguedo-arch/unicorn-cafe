@@ -11,7 +11,7 @@ const check=(name,details)=>{results.push({name,pass:true,details});console.log(
  const entry=fs.readFileSync(path.join(root,'index.html'),'utf8'),manifest=JSON.parse(fs.readFileSync(path.join(root,'manifest.webmanifest'),'utf8'));
  assert.ok(entry.includes("new URL('./hub/'+location.search,location.href)"));assert.equal(manifest.name,'Unicorn World');assert.equal(manifest.orientation,'landscape');assert.equal(manifest.id,'./index.html');
  for(const icon of manifest.icons)assert.ok(fs.existsSync(path.join(root,icon.src)));
- for(const p of ['hub/index.html','game/build/index.html','adventure/index.html','hub/shared/profile.js','hub/shared/bridge.js','hub/shared/art.js','hub/shared/portals.js'])assert.ok(fs.existsSync(path.join(root,p)));
+ for(const p of ['hub/index.html','game/build/index.html','adventure/index.html','hub/shared/profile.js','hub/shared/bridge.js','hub/shared/art.js','hub/shared/portals.js','hub/shared/playbook.js','hub/shared/activity-queue.js','hub/playbook-ui.js','hub/playbook.css','hub/assets/playbook/decor-atlas.png','hub/assets/playbook/PROVENANCE.json'])assert.ok(fs.existsSync(path.join(root,p)));
  assert.ok(!fs.existsSync(path.join(root,'hub/tests')));assert.ok(!fs.existsSync(path.join(root,'adventure/original-packages')));
  check('The root launches Unicorn World, retains both games and landscape installation, and excludes QA/source ZIPs');
  for(const file of ['game/build/src/game.js','adventure/index.html']){

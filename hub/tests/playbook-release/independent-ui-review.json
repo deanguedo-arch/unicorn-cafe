@@ -1,0 +1,516 @@
+[
+  {
+    "browser": "chromium",
+    "check": "Scrapbook controls clear and tappable at 568",
+    "boxes": [
+      {
+        "label": "Picture adventures",
+        "x": 328,
+        "y": 62,
+        "w": 48,
+        "h": 44,
+        "bottom": 106,
+        "right": 376,
+        "hittable": true
+      },
+      {
+        "label": "Scrapbook",
+        "x": 384,
+        "y": 62,
+        "w": 48,
+        "h": 44,
+        "bottom": 106,
+        "right": 432,
+        "hittable": true
+      },
+      {
+        "label": "Decorate your bedroom",
+        "x": 440,
+        "y": 62,
+        "w": 48,
+        "h": 44,
+        "bottom": 106,
+        "right": 488,
+        "hittable": true
+      },
+      {
+        "label": "Close activity",
+        "x": 504,
+        "y": 62,
+        "w": 44,
+        "h": 44,
+        "bottom": 106,
+        "right": 548,
+        "hittable": true
+      },
+      {
+        "label": "Memory position 1, photo",
+        "x": 30,
+        "y": 126,
+        "w": 125.71875,
+        "h": 57,
+        "bottom": 183,
+        "right": 155.71875,
+        "hittable": true
+      },
+      {
+        "label": "Memory position 2, empty",
+        "x": 163.71875,
+        "y": 126,
+        "w": 125.734375,
+        "h": 57,
+        "bottom": 183,
+        "right": 289.453125,
+        "hittable": true
+      },
+      {
+        "label": "Memory position 3, empty",
+        "x": 30,
+        "y": 191,
+        "w": 125.71875,
+        "h": 57,
+        "bottom": 248,
+        "right": 155.71875,
+        "hittable": true
+      },
+      {
+        "label": "Memory position 4, empty",
+        "x": 163.71875,
+        "y": 191,
+        "w": 125.734375,
+        "h": 57,
+        "bottom": 248,
+        "right": 289.453125,
+        "hittable": true
+      },
+      {
+        "label": "Previous scrapbook page",
+        "x": 82.765625,
+        "y": 252,
+        "w": 48,
+        "h": 44,
+        "bottom": 296,
+        "right": 130.765625,
+        "hittable": true
+      },
+      {
+        "label": "Next scrapbook page",
+        "x": 188.6875,
+        "y": 252,
+        "w": 48,
+        "h": 44,
+        "bottom": 296,
+        "right": 236.6875,
+        "hittable": true
+      }
+    ]
+  },
+  {
+    "browser": "chromium",
+    "check": "playbook controls at 568",
+    "status": "pass"
+  },
+  {
+    "browser": "chromium",
+    "check": "decorate controls at 568",
+    "status": "pass"
+  },
+  {
+    "browser": "chromium",
+    "check": "picnic controls at 568",
+    "status": "pass"
+  },
+  {
+    "browser": "chromium",
+    "check": "Scrapbook controls clear and tappable at 852",
+    "boxes": [
+      {
+        "label": "Picture adventures",
+        "x": 608,
+        "y": 66,
+        "w": 48,
+        "h": 44,
+        "bottom": 110,
+        "right": 656,
+        "hittable": true
+      },
+      {
+        "label": "Scrapbook",
+        "x": 664,
+        "y": 66,
+        "w": 48,
+        "h": 44,
+        "bottom": 110,
+        "right": 712,
+        "hittable": true
+      },
+      {
+        "label": "Decorate your bedroom",
+        "x": 720,
+        "y": 66,
+        "w": 48,
+        "h": 44,
+        "bottom": 110,
+        "right": 768,
+        "hittable": true
+      },
+      {
+        "label": "Close activity",
+        "x": 784,
+        "y": 66,
+        "w": 44,
+        "h": 44,
+        "bottom": 110,
+        "right": 828,
+        "hittable": true
+      },
+      {
+        "label": "Memory position 1, photo",
+        "x": 32,
+        "y": 132,
+        "w": 202.078125,
+        "h": 89.5,
+        "bottom": 221.5,
+        "right": 234.078125,
+        "hittable": true
+      },
+      {
+        "label": "Memory position 2, empty",
+        "x": 242.078125,
+        "y": 132,
+        "w": 202.09375,
+        "h": 89.5,
+        "bottom": 221.5,
+        "right": 444.171875,
+        "hittable": true
+      },
+      {
+        "label": "Memory position 3, empty",
+        "x": 32,
+        "y": 229.5,
+        "w": 202.078125,
+        "h": 89.5,
+        "bottom": 319,
+        "right": 234.078125,
+        "hittable": true
+      },
+      {
+        "label": "Memory position 4, empty",
+        "x": 242.078125,
+        "y": 229.5,
+        "w": 202.09375,
+        "h": 89.5,
+        "bottom": 319,
+        "right": 444.171875,
+        "hittable": true
+      },
+      {
+        "label": "Previous scrapbook page",
+        "x": 161.125,
+        "y": 323,
+        "w": 48,
+        "h": 44,
+        "bottom": 367,
+        "right": 209.125,
+        "hittable": true
+      },
+      {
+        "label": "Next scrapbook page",
+        "x": 267.046875,
+        "y": 323,
+        "w": 48,
+        "h": 44,
+        "bottom": 367,
+        "right": 315.046875,
+        "hittable": true
+      }
+    ]
+  },
+  {
+    "browser": "chromium",
+    "check": "playbook controls at 852",
+    "status": "pass"
+  },
+  {
+    "browser": "chromium",
+    "check": "decorate controls at 852",
+    "status": "pass"
+  },
+  {
+    "browser": "chromium",
+    "check": "picnic controls at 852",
+    "status": "pass"
+  },
+  {
+    "browser": "chromium",
+    "check": "Native vertical touch drag",
+    "pages": [
+      null,
+      null,
+      "photo:2dd49d7f-fcd1-4789-9468-5f064c61a13f",
+      null
+    ]
+  },
+  {
+    "browser": "chromium",
+    "check": "Outfit step opens backpack",
+    "status": "pass"
+  },
+  {
+    "browser": "chromium",
+    "check": "No runtime errors",
+    "status": "pass"
+  },
+  {
+    "browser": "webkit",
+    "check": "Scrapbook controls clear and tappable at 568",
+    "boxes": [
+      {
+        "label": "Picture adventures",
+        "x": 328,
+        "y": 62,
+        "w": 48,
+        "h": 44,
+        "bottom": 106,
+        "right": 376,
+        "hittable": true
+      },
+      {
+        "label": "Scrapbook",
+        "x": 384,
+        "y": 62,
+        "w": 48,
+        "h": 44,
+        "bottom": 106,
+        "right": 432,
+        "hittable": true
+      },
+      {
+        "label": "Decorate your bedroom",
+        "x": 440,
+        "y": 62,
+        "w": 48,
+        "h": 44,
+        "bottom": 106,
+        "right": 488,
+        "hittable": true
+      },
+      {
+        "label": "Close activity",
+        "x": 504,
+        "y": 62,
+        "w": 44,
+        "h": 44,
+        "bottom": 106,
+        "right": 548,
+        "hittable": true
+      },
+      {
+        "label": "Memory position 1, photo",
+        "x": 30,
+        "y": 126,
+        "w": 125.71875,
+        "h": 57,
+        "bottom": 183,
+        "right": 155.71875,
+        "hittable": true
+      },
+      {
+        "label": "Memory position 2, empty",
+        "x": 163.71875,
+        "y": 126,
+        "w": 125.734375,
+        "h": 57,
+        "bottom": 183,
+        "right": 289.453125,
+        "hittable": true
+      },
+      {
+        "label": "Memory position 3, empty",
+        "x": 30,
+        "y": 191,
+        "w": 125.71875,
+        "h": 57,
+        "bottom": 248,
+        "right": 155.71875,
+        "hittable": true
+      },
+      {
+        "label": "Memory position 4, empty",
+        "x": 163.71875,
+        "y": 191,
+        "w": 125.734375,
+        "h": 57,
+        "bottom": 248,
+        "right": 289.453125,
+        "hittable": true
+      },
+      {
+        "label": "Previous scrapbook page",
+        "x": 82.765625,
+        "y": 252,
+        "w": 48,
+        "h": 44,
+        "bottom": 296,
+        "right": 130.765625,
+        "hittable": true
+      },
+      {
+        "label": "Next scrapbook page",
+        "x": 188.6875,
+        "y": 252,
+        "w": 48,
+        "h": 44,
+        "bottom": 296,
+        "right": 236.6875,
+        "hittable": true
+      }
+    ]
+  },
+  {
+    "browser": "webkit",
+    "check": "playbook controls at 568",
+    "status": "pass"
+  },
+  {
+    "browser": "webkit",
+    "check": "decorate controls at 568",
+    "status": "pass"
+  },
+  {
+    "browser": "webkit",
+    "check": "picnic controls at 568",
+    "status": "pass"
+  },
+  {
+    "browser": "webkit",
+    "check": "Scrapbook controls clear and tappable at 852",
+    "boxes": [
+      {
+        "label": "Picture adventures",
+        "x": 608,
+        "y": 66,
+        "w": 48,
+        "h": 44,
+        "bottom": 110,
+        "right": 656,
+        "hittable": true
+      },
+      {
+        "label": "Scrapbook",
+        "x": 664,
+        "y": 66,
+        "w": 48,
+        "h": 44,
+        "bottom": 110,
+        "right": 712,
+        "hittable": true
+      },
+      {
+        "label": "Decorate your bedroom",
+        "x": 720,
+        "y": 66,
+        "w": 48,
+        "h": 44,
+        "bottom": 110,
+        "right": 768,
+        "hittable": true
+      },
+      {
+        "label": "Close activity",
+        "x": 784,
+        "y": 66,
+        "w": 44,
+        "h": 44,
+        "bottom": 110,
+        "right": 828,
+        "hittable": true
+      },
+      {
+        "label": "Memory position 1, photo",
+        "x": 32,
+        "y": 132,
+        "w": 202.078125,
+        "h": 89.5,
+        "bottom": 221.5,
+        "right": 234.078125,
+        "hittable": true
+      },
+      {
+        "label": "Memory position 2, empty",
+        "x": 242.078125,
+        "y": 132,
+        "w": 202.09375,
+        "h": 89.5,
+        "bottom": 221.5,
+        "right": 444.171875,
+        "hittable": true
+      },
+      {
+        "label": "Memory position 3, empty",
+        "x": 32,
+        "y": 229.5,
+        "w": 202.078125,
+        "h": 89.5,
+        "bottom": 319,
+        "right": 234.078125,
+        "hittable": true
+      },
+      {
+        "label": "Memory position 4, empty",
+        "x": 242.078125,
+        "y": 229.5,
+        "w": 202.09375,
+        "h": 89.5,
+        "bottom": 319,
+        "right": 444.171875,
+        "hittable": true
+      },
+      {
+        "label": "Previous scrapbook page",
+        "x": 161.125,
+        "y": 323,
+        "w": 48,
+        "h": 44,
+        "bottom": 367,
+        "right": 209.125,
+        "hittable": true
+      },
+      {
+        "label": "Next scrapbook page",
+        "x": 267.046875,
+        "y": 323,
+        "w": 48,
+        "h": 44,
+        "bottom": 367,
+        "right": 315.046875,
+        "hittable": true
+      }
+    ]
+  },
+  {
+    "browser": "webkit",
+    "check": "playbook controls at 852",
+    "status": "pass"
+  },
+  {
+    "browser": "webkit",
+    "check": "decorate controls at 852",
+    "status": "pass"
+  },
+  {
+    "browser": "webkit",
+    "check": "picnic controls at 852",
+    "status": "pass"
+  },
+  {
+    "browser": "webkit",
+    "check": "Outfit step opens backpack",
+    "status": "pass"
+  },
+  {
+    "browser": "webkit",
+    "check": "No runtime errors",
+    "status": "pass"
+  }
+]

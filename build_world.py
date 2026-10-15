@@ -41,7 +41,7 @@ def main():
         shutil.copytree(ROOT / 'game' / 'build' / 'icons', stage / 'icons')
         shutil.copytree(ROOT / 'game' / 'build', stage / 'game' / 'build', ignore=shutil.ignore_patterns('SHA256SUMS.txt', '__pycache__', '*.pyc'))
         (stage / 'hub').mkdir()
-        for name in ['index.html', 'world.css', 'picture-menus.css', 'world.js', 'mall.js', 'puzzles.js']:
+        for name in ['index.html', 'world.css', 'picture-menus.css', 'world.js', 'mall.js', 'puzzles.js', 'playbook-ui.js', 'playbook.css']:
             shutil.copy2(ROOT / 'hub' / name, stage / 'hub' / name)
         for name in ['shared', 'assets']:
             shutil.copytree(ROOT / 'hub' / name, stage / 'hub' / name)

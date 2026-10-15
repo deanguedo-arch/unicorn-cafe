@@ -13,16 +13,19 @@ class Link{
   };addEventListener('message',this.handler);this.timer=setInterval(()=>this.flush(),1500);
   this.send({command:'connect'});addEventListener('pagehide',()=>this.saveNative(this.snapshot()));
  }
+ context(){const book=this.profile?.playbook?.active,run=this.profile?.playbook?.books?.[book];return run&&!run.complete?{book,run:run.run}:null;}
  send(data){parent.postMessage({type:'UNICORN_PROFILE',...data},origin);}
  persist(){try{localStorage.setItem(this.store,JSON.stringify(this.state));this.storageOK=true;return true;}catch(_){this.storageOK=false;return false;}}
  saveNative(snapshot){try{this.state.pendingNative=snapshot;if(!this.persist())return false;localStorage.setItem(this.key,JSON.stringify(snapshot));delete this.state.pendingNative;return this.persist();}catch(_){this.storageOK=false;return false;}}
  queue(e,snapshot=this.snapshot()){
+  if(!Object.prototype.hasOwnProperty.call(e,'context'))e={...e,context:this.context()};
   if(!this.state.outbox.some(x=>x.id===e.id))this.state.outbox.push(e);
   if(this.saveNative(snapshot))this.flush();
  }
  flush(){if(!this.profile||!this.storageOK)return;for(const event of this.state.outbox){const now=Date.now();if(now-(this.sent.get(event.id)||0)<1000)continue;this.sent.set(event.id,now);if(event.request)this.send({command:'request',id:event.id,action:event.request,args:event.args});else this.send({command:'earn',event});}}
  request(action,args={},id=uuid()){
   if(!['buy','equip','hire'].includes(action))return Promise.reject(Error('invalid'));
+  args={...args,context:this.context()};
   if(!this.state.outbox.some(e=>e.id===id))this.state.outbox.push({id,request:action,args});
   if(!this.persist()){this.state.outbox=this.state.outbox.filter(e=>e.id!==id);return Promise.resolve({id,ok:false,error:'storage'});}
   const result=new Promise(resolve=>this.requests.set(id,resolve));this.flush();return result;

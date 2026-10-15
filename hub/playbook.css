@@ -1,0 +1,46 @@
+/* Pictures, generous touch spaces and the existing cream-and-plum game palette. */
+.decor-sprite{display:inline-block;aspect-ratio:3/2;width:100%;background-image:url('./assets/playbook/decor-atlas.png');background-size:300% 300%;background-repeat:no-repeat;pointer-events:none}
+#panel.book-panel{background:#f8ebd5;overflow:hidden}
+#panel.book-panel #panel-body{display:flex;flex-direction:column;min-height:0;overflow:auto;padding:8px;gap:8px}
+.book-tabs{display:flex;gap:10px;flex:none;align-items:center}
+.book-tabs button{width:52px;height:44px;padding:5px}
+.book-tabs .picture-sprite{width:100%;height:100%;object-fit:contain}
+.book-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;min-height:0;flex:1}
+.adventure-card{border:3px solid #b78ab8;border-radius:18px;background:#fff7e6;display:flex;flex-direction:column;justify-content:space-between;padding:8px;min-width:0}
+.adventure-title{display:flex;align-items:center;gap:4px;font-size:clamp(13px,2vw,20px);color:#63466f}
+.adventure-title .decor-sprite{width:38%;flex-shrink:0;max-height:86px}
+.adventure-steps{display:flex;gap:6px;justify-content:center}
+.adventure-steps button{position:relative;width:31%;aspect-ratio:1;padding:8px;border:2px solid #c3a2c4;border-radius:13px;background:#f7ebd6;min-width:44px;min-height:44px}
+.adventure-steps .picture-sprite{width:100%;height:100%;object-fit:contain}
+.adventure-steps .step-next{border:4px solid #f6c447;background:#fff2c1}
+.step-number{position:absolute;left:2px;bottom:0;font-size:13px;font-weight:bold;color:#67466e;background:#fff5d5;border-radius:50%;width:18px;height:18px}
+.step-star{position:absolute;right:-5px;top:-8px;width:24px;height:24px}
+.step-done{background:#ddefd5!important}
+.adventure-start{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:5px;font-weight:bold;color:#65466f}
+.adventure-start button{height:44px;width:54px}.adventure-start>.picture-sprite{width:30px;height:30px}
+.scrapbook-layout{display:grid;grid-template-columns:minmax(230px,1.2fr) minmax(180px,1fr);gap:14px;min-height:0;flex:1}
+.memory-page{display:flex;flex-direction:column;min-height:0;background:#fff7e8;border:3px solid #d4af7b;border-radius:12px;padding:8px;box-shadow:inset 6px 0 #e8cc9e}
+.memory-slots{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:8px;min-height:0;flex:1}
+.memory-slot{position:relative;min-height:50px;padding:4px;border:2px dashed #bb99b7;border-radius:9px;overflow:hidden;background:#f1e3cf}
+.memory-slot>img{width:100%;height:100%;object-fit:contain;max-height:140px}.memory-slot>.decor-sprite{height:100%;width:auto;max-width:100%}
+.empty-memory{opacity:.3}.empty-memory .picture-sprite{max-height:45px;width:45px}
+.memory-paging{display:flex;justify-content:center;align-items:center;gap:14px;padding-top:6px}.memory-paging button{height:40px;width:48px}
+.memory-tray{display:flex;flex-direction:column;overflow:auto;min-height:0;gap:10px}.memory-collection,.memory-photos{display:flex;flex-wrap:wrap;gap:8px}.memory-collection button,.memory-photos button{position:relative;width:90px;height:76px;flex:none;padding:4px;background:#fff7e6;border:2px solid #bd92bb;border-radius:12px}.memory-collection img,.memory-photos img{width:100%;height:100%;object-fit:contain}.memory-photos .picture-sprite{position:absolute;width:22px;height:22px;right:2px;bottom:2px}
+.memory-tools,.decor-tools{display:flex;gap:10px;margin-top:auto}.memory-tools button,.decor-tools button{width:52px;height:44px}.memory-collection [aria-pressed=true],.decor-tray [aria-pressed=true]{border:4px solid #edbd43;background:#fff1bf}
+.best-numbers{position:absolute;bottom:1px;right:3px;color:#62426b;font-weight:bold;background:#fff2d7;padding:1px 4px;border-radius:6px}
+.decor-layout{display:flex;gap:10px;min-height:0;flex:1}.decor-board{flex:1;min-width:0;overflow:hidden;border-radius:15px;border:3px solid #b794b6;background:#705283;touch-action:none}#decor-canvas{width:100%;height:100%;display:block;touch-action:none}.decor-tray{width:150px;flex:none;display:flex;flex-wrap:wrap;align-content:start;overflow:auto;gap:6px}.decor-tray>button{width:68px;height:58px;border:2px solid #ba93b4;border-radius:12px;background:#fff5df;padding:2px;touch-action:none}.decor-tools{width:100%;margin-top:5px;justify-content:center}
+.book-drag{position:fixed;z-index:1000;pointer-events:none;transform:translate(-50%,-70%);width:130px;height:90px;filter:drop-shadow(0 5px 4px #513e6560)}.book-drag img{width:100%;height:100%;object-fit:contain}
+.picnic-scene{display:flex;flex-direction:column;align-items:center;justify-content:center;flex:1;min-height:0;background:#e4eccd;border:5px solid #d9b87e;border-radius:22px}.picnic-friends{display:flex;align-items:end;justify-content:center;min-height:0}.picnic-friends canvas{max-height:160px;width:auto}.picnic-friends .decor-sprite{width:170px}.picnic-snacks{display:flex;gap:24px;padding:8px}.picnic-snacks button{width:75px;height:60px;background:#fff5dc;border:3px solid #bc91b6;border-radius:15px}.picnic-snacks .picture-sprite{width:100%;height:100%;object-fit:contain}.snack-shared{opacity:.22;transform:scale(.85)}
+#sports-levels .sports-practice{width:66px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2px 5px;gap:0}#sports-levels .sports-practice .picture-sprite{width:28px;height:24px}#sports-levels .sports-practice span{font:700 11px/1 sans-serif;color:#694574}
+#next-hint{position:fixed;z-index:8;left:max(14px,env(safe-area-inset-left));bottom:16px;display:flex;align-items:center;gap:8px;background:#fff1d4;border:3px solid #b48bb7;border-radius:17px;padding:7px}#next-hint[hidden]{display:none}#next-hint button{width:52px;height:48px;padding:4px}#next-hint .picture-sprite{width:100%;height:100%;object-fit:contain}#next-hint .hint-hand{width:38px;height:38px;animation:hint-tap 1.2s ease-in-out infinite}@keyframes hint-tap{50%{transform:translate(8px,-4px)}}
+@media(max-height:450px){#panel.book-panel #panel-body{padding:5px 9px;gap:5px}.book-tabs button{height:40px;width:50px}.adventure-card{padding:5px 8px}.adventure-title .decor-sprite{max-width:70px}.adventure-steps button{max-width:64px;max-height:64px}.adventure-start{margin-top:3px}.memory-slot>img{max-height:85px}.decor-tray{width:150px}.picnic-friends canvas{max-height:120px}.picnic-friends .decor-sprite{width:140px}}
+#picnic-friend{width:110px;height:125px;object-fit:contain;transition:transform .2s}.snack-shared:focus{outline:0}
+#panel.book-panel #panel-body{color:#67466e}#panel-body .adventure-steps .picture-sprite{width:100%;height:100%}#panel-body .picnic-snacks .picture-sprite{width:100%;height:100%}
+.decor-tray{width:196px;gap:6px}.decor-tray>button{width:60px;height:56px}.decor-tools{margin-top:0}.memory-tray,.photo-grid{touch-action:pan-y}
+@media(max-height:360px){#panel.decor-panel #panel-head{height:46px;min-height:46px}.decor-tray>button{height:44px}.decor-tray{gap:4px}.decor-tools button{height:44px}.decor-tools{gap:8px}}
+/* Keep page arrows in their own row even on the shortest landscape phone. */
+.book-tabs{position:absolute;right:62px;top:-51px;z-index:1;margin:0}.book-tabs button{height:40px;width:48px}
+.memory-slots{min-height:96px;grid-template-rows:repeat(2,minmax(44px,1fr))}.memory-slot{min-height:44px}.memory-paging{flex:none;height:48px;padding-top:4px}.memory-paging button{height:44px;min-height:44px}
+#panel-head .book-tabs{position:static;margin-left:auto;flex:none;gap:8px}#panel-head:has(.book-tabs) #panel-close{margin-left:4px}#panel-head .book-tabs button{width:48px;height:44px;padding:6px}
+/* Occupied cards own the drag; the surrounding collection still scrolls. */
+.memory-slot,.memory-collection [data-entry]{touch-action:none}
