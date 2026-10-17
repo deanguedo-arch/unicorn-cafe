@@ -1,0 +1,37 @@
+{
+  "generator": "built-in image_gen",
+  "source": "exec-bb21fd4e-9636-4984-b489-1adfb9c99cf2.png",
+  "references": [
+    "hub/assets/four-changes/home-upstairs.png",
+    "hub/assets/wardrobe/production/base/u_idle0.png"
+  ],
+  "sha256": "ade1bfd99458f88d02185c2370191796a264587a8aa91723e5e3bf1b88bb9560",
+  "parts": {
+    "sleep": [
+      0,
+      0,
+      850,
+      512
+    ],
+    "water": [
+      865,
+      0,
+      671,
+      530
+    ],
+    "track": [
+      0,
+      530,
+      870,
+      494
+    ],
+    "sun": [
+      875,
+      530,
+      661,
+      494
+    ]
+  },
+  "prompt": "Transparent production atlas matching the supplied bedroom and canonical white rainbow-maned unicorn: asleep with both eyes closed under pink gold-edged quilt on pillow; pink turquoise watering can and droplets; oval wooden toy track; smiling golden sunrise. Four isolated sprites, no text or scenery.",
+  "animation": "Sleep breathing and train orbit use runtime motion. Jumping and cuddles retain existing fitted happy poses and outfit layers. Sleeping uses a dedicated tucked-in sprite; the equipped outfit is restored visually on waking without changing profile."
+}

@@ -58,3 +58,13 @@
 #panel.decor-panel .decor-layout{position:absolute;inset:0;display:block}
 #panel.decor-panel .decor-board{width:100%;height:100%;background:#503a63}
 #panel.decor-panel .decor-tray{position:absolute;right:12px;top:68px;bottom:8px;background:#f8ebd5;padding:5px;box-sizing:border-box}
+/* Picture-led bedroom play; arranging stays a separate mode. */
+#bedroom-canvas{display:block;width:100%;height:100%;touch-action:none}
+#bedroom-actions{position:absolute;bottom:max(8px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);display:flex;gap:7px;padding:5px;background:#f8ebd5;border:2px solid #ae8bb4;border-radius:12px;max-width:calc(100% - 24px);overflow-x:auto}
+#bedroom-actions button{width:52px;height:50px;flex:none;padding:3px}
+#bedroom-actions .picture-sprite,#bedroom-actions .decor-sprite{width:100%;height:100%;object-fit:contain}
+.bedroom-sprite{display:block;width:100%;height:100%;background-image:url('./assets/playbook/bedroom-play.png');background-repeat:no-repeat;background-size:232.4% 207.3%}
+.bedroom-sun{background-position:100% 100%}
+#panel.bedroom-panel #panel-head{pointer-events:none}#panel.bedroom-panel #panel-close{pointer-events:auto}
+@media(max-width:620px){#bedroom-actions{gap:4px}#bedroom-actions button{width:46px;height:46px}}
+#bedroom-jump-picture{width:100%;height:100%;display:block}
