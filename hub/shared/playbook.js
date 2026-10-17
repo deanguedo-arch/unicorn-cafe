@@ -32,7 +32,7 @@ function activity(p,e){normalize(p);if(['sport-shot','sport-finished','sport-bes
  if(b.id==='dress'){if(e.kind==='outfit')mark('outfit');if(e.kind==='photo'&&e.photo){mark('photo');if(!s.photoIds.includes(e.photo))s.photoIds.push(e.photo);}if(e.kind==='display'&&s.photoIds.includes(e.photo))mark('display');}
  if(b.id==='park'){if(e.kind==='park-visit')mark('visit');if(e.kind==='sport-shot'&&e.sport==='basketball'){s.shots=Math.min(3,s.shots+1);changed=true;if(s.shots>=3)mark('play');}if(e.kind==='sport-finished'&&['tennis','volleyball'].includes(e.sport))mark('play');if(e.kind==='home-return')mark('home');}
  if(b.steps.every(x=>s.steps[x.id])){s.complete=true;s.completions++;s.completedAt=Date.now();if(!p.decor.owned.includes(b.gift))p.decor.owned.push(b.gift);const id='adventure:'+b.id;if(!p.scrapbook.entries[id])p.scrapbook.entries[id]={id,type:'adventure',book:b.id,gift:b.gift,at:s.completedAt};return{advanced:true,complete:true,book:b.id,gift:b.gift};}return{advanced:changed,complete:false};}
-// Free floor coordinates. Only the room edges and stair landing are reserved.
-function placement(x,y){if(!Number.isFinite(x)||!Number.isFinite(y)||x<.25||x>.94||y<.53||y>.94)return null;if(x<.36&&y<.84)return null;return{x:Number(x.toFixed(6)),y:Number(y.toFixed(6))};}
+// Full-room normalized coordinates. Furnishings never add walking collisions.
+function placement(x,y){if(!Number.isFinite(x)||!Number.isFinite(y)||x<0||x>1||y<0||y>1)return null;return{x:Number(x.toFixed(6)),y:Number(y.toFixed(6))};}
 const api={books,byId,decorations,decorationById,normalize,context,progress,select,activity,best,placement,snap:placement,anchors:[]};root.UWPlaybook=api;if(typeof module!=='undefined')module.exports=api;
 })(typeof window!=='undefined'?window:globalThis);
