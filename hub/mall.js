@@ -173,7 +173,11 @@ class Mall{
  paintCatcher(c,state,preview=false){
  const ratio=c.canvas.height/500;c.drawImage(this.w.images.arcade,0,0,900,c.canvas.height);
  for(let i=0;i<20;i++){const y=(state.elapsed-i*1.3)/4*385;if(y>=-25&&y<410&&!state.caught.includes(i))A.picture(c,'star',this.starX(i),(y+23)*ratio,48,48);}
- const x=70+state.basket*760;A.picture(c,'catching-basket',x,460*ratio,128,86);A.unicorn(c,52,493*ratio,74,this.p().outfit,preview?'u_idle0':'u_happy1');
+ // Reserve separate space for the spectator, above the basket's full travel band.
+ // The basket keeps its original position and catching geometry at every width.
+ const basketY=460*ratio,spectatorY=basketY-98,spectatorH=Math.min(74,spectatorY-8);
+ if(spectatorH>=24)A.unicorn(c,52,spectatorY,spectatorH,this.p().outfit,preview?'u_idle0':'u_happy1');
+ const x=70+state.basket*760;A.picture(c,'catching-basket',x,basketY,128,86);
  }
  pinPositions(){const pins=[];for(let row=3;row>=0;row--)for(let j=0;j<=row;j++)pins.push({x:450+(j-row/2)*34,y:161-row*15});return pins;}
  paintBowling(c,state,ball){

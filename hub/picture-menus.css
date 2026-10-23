@@ -72,3 +72,14 @@ body:has(#game-shell:not([hidden])) #wallet{margin-left:68px}#loading{margin-lef
 
 #sports-levels{display:flex;gap:8px;pointer-events:auto}#sports-levels[hidden]{display:none}#sports-levels button[aria-pressed=true]{border-color:#ecb54d;box-shadow:0 0 0 2px #ffe494}#sports-levels button:disabled{opacity:.5}#sports-tools{flex-wrap:wrap;max-width:calc(100vw - 24px)}
 #sports-levels button:disabled{filter:grayscale(1)}#sports-levels .picture-sprite{width:32px;height:28px}
+
+/* Style review: one shared interaction surface and focus treatment. */
+:root{--uw-cream:#fff8e7;--uw-paper:#f8ebd5;--uw-plum:#694574;--uw-pink:#ead7ef;--uw-gold:#f4d581;--uw-line:#b493ba;--uw-shadow:#765277}
+#world-tools button,#return,.display-sections button,#boutique-decision button{border-color:var(--uw-line);background:var(--uw-cream);border-radius:14px;color:var(--uw-plum);box-shadow:0 3px 0 var(--uw-shadow)}
+#panel:not(.decor-panel){border-color:var(--uw-line);border-radius:18px}
+#panel-head,.panel-tabs,.shop-actions,.wishlist-row{background:var(--uw-paper);color:var(--uw-plum);border-color:var(--uw-line)}
+#panel button:not(.step-next):not(.step-done){border-color:var(--uw-line);background:var(--uw-cream);color:var(--uw-plum);border-radius:16px;box-shadow:0 3px 0 var(--uw-shadow)}
+#panel button[aria-pressed=true]{border-color:var(--uw-plum);background:var(--uw-gold);outline-color:var(--uw-cream)}
+#panel button:focus-visible,#world-tools button:focus-visible,#return:focus-visible{outline:3px solid var(--uw-plum);outline-offset:2px}
+#picture-toast{max-width:calc(100vw - 24px);border-color:var(--uw-line);background:var(--uw-cream);color:var(--uw-plum);border-radius:14px}
+#panel-head{min-width:0}#panel-head .book-tabs{flex-shrink:1;min-width:0}#panel-close{flex-shrink:0}

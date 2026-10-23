@@ -12,7 +12,19 @@ function hit(door,p){const z=door.exit?door:approach(door),r=door.hit;
 }
 function glow(c,z){c.save();const g=c.createRadialGradient(z.x,z.y,12,z.x,z.y,z.rx);g.addColorStop(0,'#fff4bf48');g.addColorStop(1,'#fff4bf00');c.fillStyle=g;c.beginPath();c.ellipse(z.x,z.y,z.rx,z.ry,0,0,Math.PI*2);c.fill();c.strokeStyle='#fff0caa0';c.lineWidth=3;c.stroke();c.restore();}
 function cue(c,key,z,w,h){const im=images[key];if(!im)return;c.save();c.translate(z.x,z.y);if(z.flipArrow)c.scale(-1,1);c.drawImage(im,-w/2,-h/2,w,h);c.restore();}
-function entrance(c,door,focus=false){const z=approach(door);if(focus)glow(c,z);cue(c,'floor-footprints',z,125,62);}
+function entrance(c,door,focus=false){
+ const z=approach(door),a=root.UWArt,aliases={wheel:'bike',head:'sunhat',body:'tee',accessory:'scarf'},key=door.picture;
+ const im=a?.images['icon:'+key]||a?.images['item:'+aliases[key]]||a?.images[key];
+ // Use the existing activity artwork, not ambiguous cloven hoofprints. The
+ // generous approach and hit regions remain unchanged; this is presentation only.
+ if(focus)glow(c,z);c.save();c.translate(z.x,z.y);const r=focus?48:41;
+ c.fillStyle='#49325824';c.beginPath();c.ellipse(0,r*.65,r*1.1,r*.3,0,0,Math.PI*2);c.fill();
+ c.globalAlpha=focus?1:.91;c.fillStyle=focus?'#fff8df':'#f7ead8';c.strokeStyle=focus?'#c89d59':'#9c77a7';c.lineWidth=focus?4:3;
+ c.beginPath();c.arc(0,0,r,0,Math.PI*2);c.fill();c.stroke();
+ if(im){const size=r*1.5,k=Math.min(size/im.width,size/im.height);c.drawImage(im,-im.width*k/2,-im.height*k/2,im.width*k,im.height*k);}
+ else if(a)a.picture(c,'play',0,0,r*1.4,r*1.4);
+ c.restore();
+}
 function exit(c,z,focus=false){if(focus)glow(c,z);cue(c,'floor-exit-arrow',z,z.cueWidth||165,z.cueHeight||62);}
 // Arriving/reloading on an exit never leaves immediately. Leave the marked area to arm
 // it again. Pauses reset dwell, and each crossing can request only one return.

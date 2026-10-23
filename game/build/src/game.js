@@ -427,7 +427,12 @@ function drawWorld(){ctx.setTransform(dpr,0,0,dpr,0,0);ctx.fillStyle='#baaccb';c
  ctx.restore();updateHelperTargets();hits=[];if(mode==='world'||(mode==='dialog'&&modalReturn==='world'))drawOrderMarkers();if(pointer&&pointer.moved>9&&mode==='world'){ctx.save();ctx.globalAlpha=.6;A.ellipse(ctx,pointer.x,pointer.y,39,39,'#fff8ee22','#fff7df',2);A.ellipse(ctx,pointer.x+R.clamp(pointer.dx,-35,35),pointer.y+R.clamp(pointer.dy,-35,35),15,15,'#fff6e3a8',null);ctx.restore();}}
 function drawOrderMarkers(){
  const placed=[],active=orderCustomer(),stage=dom.stage.getBoundingClientRect();
- const occupied=[dom.orderPin,document.querySelector('.topbar'),dom.primary].filter(e=>e&&!e.hidden&&e.getClientRects().length).map(e=>{const r=e.getBoundingClientRect();return {x:r.left-stage.left,y:r.top-stage.top,w:r.width,h:r.height};});
+ const occupied=[dom.orderPin,document.querySelector('.topbar'),dom.primary,document.querySelector('#picture-hint'),document.querySelector('.hint-hand')].filter(e=>e&&!e.hidden&&e.getClientRects().length).map(e=>{const r=e.getBoundingClientRect();return {x:r.left-stage.left,y:r.top-stage.top,w:r.width,h:r.height};});
+ // Keep badges off visible actors, carried objects and helpers' job pictures.
+ const reserveActor=(actor,h,w)=>{const q=worldToScreen(actor.x,actor.y);occupied.push({x:q.x-w*view.scale/2,y:q.y-h*view.scale,w:w*view.scale,h:(h+12)*view.scale});};
+ reserveActor(engine.s.player,150,engine.s.tray||engine.s.dirtyTray?220:160);
+ for(const h of engine.s.helpers)reserveActor(h,h.hired?170:120,h.dish?180:135);
+ for(const g of engine.s.customers)if(['arriving','paying','leaving'].includes(g.phase))reserveActor(g,150,160);
  // A floor marker may move around UI, but never onto a chair or table.
  for(const t of R.TABLES){for(const [dx,dy,w,h] of [[-85,-55,170,132],[-187,-23,124,128],[63,-23,124,128]]){const q=worldToScreen(t.food.x+dx,t.food.y+dy);occupied.push({x:q.x,y:q.y,w:w*view.scale,h:h*view.scale});}}
  for(const guest of engine.s.customers){

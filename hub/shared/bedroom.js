@@ -30,14 +30,15 @@ class Bedroom {
  if((this.mode==='jump'&&this.age>=3.3)||(this.mode==='teddy'&&this.age>=4)||(this.mode==='water'&&this.age>=4.5)||(this.mode==='train'&&this.age>=10)){this.mode='idle';this.age=0;this.actor={x:850,y:735};this.buttons();}}
  sprite(c,id,x,y,w){if(!this.ready)return;const r=parts[id];c.drawImage(this.sheet,...r,x-w/2,y-w*r[3]/r[2],w,w*r[3]/r[2]);}
  draw(){const cv=this.cv;if(!cv?.isConnected)return;const {r,left,top,s}=this.play.rect(cv),d=Math.min(devicePixelRatio||1,2);if(cv.width!==Math.round(r.width*d)||cv.height!==Math.round(r.height*d)){cv.width=Math.round(r.width*d);cv.height=Math.round(r.height*d);}const c=cv.getContext('2d');c.setTransform(d,0,0,d,0,0);c.fillStyle='#503a63';c.fillRect(0,0,r.width,r.height);c.save();c.translate(left,top);c.scale(s,s);c.beginPath();c.rect(0,0,1536,1024);c.clip();const backdrop=this.play.room.naturalWidth?this.play.room:this.m.w.images['home-upstairs'];if(backdrop?.complete&&backdrop.naturalWidth)c.drawImage(backdrop,0,0,1536,1024);
- const omit=this.mode==='train'?['train']:this.mode==='teddy'?['teddy']:[];this.play.drawRoomObjects(c,omit);
- if(this.mode==='sleep'){const breath=Math.sin(this.age*1.5)*1.6;this.sprite(c,'sleep',1245,350+breath,310);c.fillStyle='rgba(35,27,83,.35)';c.fillRect(0,0,1536,1024);c.restore();return;}
- if(this.mode==='train'){this.sprite(c,'track',750,850,590);const a=this.age*Math.PI*.6;const x=750+245*Math.cos(a),y=655+105*Math.sin(a);c.save();c.translate(x,y);if(Math.sin(a)<0)c.scale(-1,1);this.play.drawSprite(c,'train',0,0,145);c.restore();}
+ const omit=this.mode==='train'?['train']:this.mode==='teddy'?['teddy']:[];const layers=[];
+ if(this.mode==='sleep'){this.play.drawRoomObjects(c,omit);const breath=Math.sin(this.age*1.5)*1.6;this.sprite(c,'sleep',1245,350+breath,310);c.fillStyle='rgba(35,27,83,.35)';c.fillRect(0,0,1536,1024);c.restore();return;}
+ if(this.mode==='train'){layers.push({y:-Infinity,draw:()=>this.sprite(c,'track',750,850,590)});const a=this.age*Math.PI*.6;const x=750+245*Math.cos(a),y=655+105*Math.sin(a);layers.push({y,draw:()=>{c.save();c.translate(x,y);if(Math.sin(a)<0)c.scale(-1,1);this.play.drawSprite(c,'train',0,0,145);c.restore();}});}
  let x=this.actor.x,y=this.actor.y,frame=this.target?'u_run'+Math.floor(this.age*10)%6:'u_idle'+Math.floor(this.age*2)%2;
  if(this.mode==='jump'){const phase=(this.age%1.1)/1.1;y-=Math.sin(phase*Math.PI)*100;frame='u_happy'+Math.floor(this.age*6)%3;}
  if(this.mode==='teddy'){x+=Math.sin(this.age*3)*5;frame='u_happy'+Math.floor(this.age*3)%3;}
- A.unicorn(c,x,y,155,this.m.p().outfit,frame,false,null);
- if(this.mode==='teddy')this.play.drawSprite(c,'teddy',x+22,y-10,105);
+ layers.push({y:this.actor.y,draw:()=>{A.unicorn(c,x,y,155,this.m.p().outfit,frame,false,null);
+ if(this.mode==='teddy')this.play.drawSprite(c,'teddy',x+22,y-10,105);}});
+ this.play.drawRoomObjects(c,omit,layers);
  if(this.mode==='water'){const plant=this.location('plant',{x:650,y:735});if(!this.m.p().decor.placements.plant)this.play.drawSprite(c,'plant',plant.x,plant.y,180);this.sprite(c,'water',plant.x-40,plant.y+15+Math.sin(this.age*4)*5,140);if(this.age>2){c.save();c.globalAlpha=Math.sin((this.age-2)*Math.PI/2)*.8;A.picture(c,'flower',plant.x,plant.y-145,45,45);c.restore();}}
  c.restore();}
 }

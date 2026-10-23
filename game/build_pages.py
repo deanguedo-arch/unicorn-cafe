@@ -20,7 +20,12 @@ self.addEventListener('fetch',event=>{
  event.respondWith(caches.open(CACHE).then(async cache=>{
   const key=req.mode==='navigate'?'./index.html':req;
   const hit=await cache.match(key,{ignoreSearch:req.mode==='navigate'});
-  if(hit)return hit;
+  if(hit){
+   // A hosting redirect may be cached for index.html. Navigation responses must
+   // carry the same content and headers without a cached redirect chain.
+   if(req.mode==='navigate'&&hit.redirected)return new Response(hit.body,{status:hit.status,statusText:hit.statusText,headers:hit.headers});
+   return hit;
+  }
   return fetch(req);
  }));
 });
