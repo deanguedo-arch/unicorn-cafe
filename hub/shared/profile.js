@@ -1,8 +1,9 @@
 /* One transactional world profile. IndexedDB receipts make retries harmless. */
-(function(root){'use strict';const C=root.UWCatalog||require('./catalogue.js'),B=root.UWPlaybook||require('./playbook.js');
+(function(root){'use strict';const C=root.UWCatalog||require('./catalogue.js'),B=root.UWPlaybook||require('./playbook.js'),K=root.UWClubhouseState||require('./clubhouse-state.js');
+const normalize=p=>K.normalize(B.normalize(p));
 const copy=o=>JSON.parse(JSON.stringify(o)),uuid=()=>globalThis.crypto?.randomUUID?.()||Date.now().toString(36)+'-'+Math.random().toString(36).slice(2);
 class WorldError extends Error{constructor(code){super(code);this.code=code;}}
-function fresh(){return B.normalize({version:1,id:uuid(),revision:0,coins:0,owned:[...C.starters],outfit:{head:'bow',body:'tee',accessory:'beads'},outfits:[null,null,null],wishlist:null,vehicle:null,stamps:0,prize:C.prizes[0],sessions:{},photos:[],settings:{muted:false,reduced:false}});}
+function fresh(){return normalize({version:1,id:uuid(),revision:0,coins:0,owned:[...C.starters],outfit:{head:'bow',body:'tee',accessory:'beads'},outfits:[null,null,null],wishlist:null,vehicle:null,stamps:0,prize:C.prizes[0],sessions:{},photos:[],settings:{muted:false,reduced:false}});}
 const fail=c=>{throw new WorldError(c);};
 function owned(p,id){return p.owned.includes(id);}
 function grant(p,id){if(C.byId[id]&&!owned(p,id))p.owned.push(id);}
@@ -11,8 +12,9 @@ function validateSession(s,state){if(!state||typeof state!=='object')fail('inval
  if(s.game==='jigsaw'){const placed=state.placed;if(!Array.isArray(placed)||placed.some(n=>!Number.isInteger(n)||n<0||n>=s.pieces))fail('invalid');return{placed:[...new Set(placed)],guide:!!state.guide};}
  if(s.game==='catcher'){return{elapsed:Math.max(0,Math.min(30,Number(state.elapsed)||0)),basket:Math.max(0,Math.min(1,Number(state.basket)||.5)),caught:[...new Set((state.caught||[]).filter(n=>Number.isInteger(n)&&n>=0&&n<20))]};}
  if(s.game==='bowling'){return{throws:Math.max(0,Math.min(3,Math.floor(Number(state.throws)||0))),score:Math.max(0,Math.min(30,Math.floor(Number(state.score)||0))),aim:Math.max(-1,Math.min(1,Number(state.aim)||0))};}fail('invalid');}
-function apply(p,action,a={}){
- B.normalize(p);const captured=Object.prototype.hasOwnProperty.call(a,'context')?a.context:B.context(p),outfitActivity=()=>{if(Object.values(p.outfit).some(Boolean))B.activity(p,{kind:'outfit',context:captured});};
+function apply(p,action,a={},loadedMedia=null){
+ normalize(p);const captured=Object.prototype.hasOwnProperty.call(a,'context')?a.context:B.context(p),outfitActivity=()=>{if(Object.values(p.outfit).some(Boolean))B.activity(p,{kind:'outfit',context:captured});};
+ if(action.startsWith('clubhouse-'))return K.apply(p,action,a,loadedMedia);
  switch(action){
  case'earn':{
   const e=a.event;if(!e||!e.id||typeof e.id!=='string'||e.id.length>240)fail('invalid');let amount=0;
@@ -74,7 +76,7 @@ class Profile{
  constructor(name='unicorn-world-profile-v1'){this.name=name;this.db=null;this.value=fresh();this.listeners=new Set();this.available=false;this.channel=typeof BroadcastChannel!=='undefined'?new BroadcastChannel(name):null;this.channel?.addEventListener('message',()=>this.refresh());}
  async open(){this.db=await new Promise((resolve,reject)=>{const r=indexedDB.open(this.name,2);r.onupgradeneeded=()=>{for(const name of ['state','receipts','media'])if(!r.result.objectStoreNames.contains(name))r.result.createObjectStore(name);};r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error);r.onblocked=()=>reject(new WorldError('storage'));});this.db.onversionchange=()=>{this.available=false;this.db?.close();};this.available=true;return this.run('init',{},'init');}
  onChange(fn){this.listeners.add(fn);return()=>this.listeners.delete(fn);}
- publish(p){B.normalize(p);if(p.revision<this.value.revision)return;this.value=p;for(const fn of this.listeners)fn(copy(p));}
+ publish(p){normalize(p);if(p.revision<this.value.revision)return;this.value=p;for(const fn of this.listeners)fn(copy(p));}
  async refresh(){if(!this.db)return;const p=await new Promise((resolve,reject)=>{const r=this.db.transaction('state').objectStore('state').get('profile');r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error);});if(p)this.publish(p);}
  async run(action,args={},id=uuid()){
   if(!this.db)throw new WorldError('storage');
@@ -82,16 +84,17 @@ class Profile{
   if(action==='record-activity'&&args.event?.id)id='activity:'+args.event.id;
   const result=await new Promise((resolve,reject)=>{
    const tx=this.db.transaction(['state','receipts','media'],'readwrite'),state=tx.objectStore('state'),receipts=tx.objectStore('receipts');let result=null,error=null;
-   const req=state.get('profile');req.onsuccess=()=>{const p=req.result||fresh(),before=JSON.stringify(p);B.normalize(p);const normalized=JSON.stringify(p)!==before,seen=receipts.get(id);
+   const req=state.get('profile');req.onsuccess=()=>{const p=req.result||fresh(),before=JSON.stringify(p);normalize(p);const normalized=JSON.stringify(p)!==before,seen=receipts.get(id);
     seen.onsuccess=()=>{try{
      if(seen.result){if(normalized){p.revision++;state.put(p,'profile');}result={ok:true,duplicate:true,profile:p,value:seen.result.value};return;}
-     const value=action==='init'?null:apply(p,action,args);if(action==='pin-scrapbook-photo'){const photo=p.photos.find(x=>x.id===args.photo);if(photo)tx.objectStore('media').put(photo.image,value.entry.media);}p.revision++;state.put(p,'profile');receipts.put({at:Date.now(),action,value},id);result={ok:true,profile:p,value};
+     const commit=(loadedMedia=null)=>{const value=action==='init'?null:apply(p,action,args,loadedMedia);for(const item of K.mediaWrites(action,args,value,loadedMedia))tx.objectStore('media').put(item.value,item.key);if(action==='pin-scrapbook-photo'){const photo=p.photos.find(x=>x.id===args.photo);if(photo)tx.objectStore('media').put(photo.image,value.entry.media);}p.revision++;state.put(p,'profile');receipts.put({at:Date.now(),action,value},id);result={ok:true,profile:p,value};};
+     const mediaKey=K.mediaKey(action,args);if(mediaKey){const media=tx.objectStore('media').get(mediaKey);media.onsuccess=()=>{try{if(!media.result)fail('missing');commit(media.result);}catch(e){error=e;tx.abort();}};}else commit();
     }catch(e){error=e;tx.abort();}};};
    tx.oncomplete=()=>resolve(result);tx.onabort=()=>reject(error||tx.error||new WorldError('storage'));tx.onerror=()=>{};
   });this.publish(result.profile);this.channel?.postMessage({revision:result.profile.revision});return result;
  }
  async getMedia(id){if(!this.db)throw new WorldError('storage');return new Promise((resolve,reject)=>{const r=this.db.transaction('media').objectStore('media').get(id);r.onsuccess=()=>resolve(r.result||null);r.onerror=()=>reject(r.error);});}
- public(){const{photos,sessions,scrapbook,...p}=this.value;const result=copy(p);for(const book of Object.values(result.playbook.books))delete book.photoIds;return result;}
+ public(){const{photos,sessions,scrapbook,clubhouse,...p}=this.value;const result=copy(p);result.clubhouse=K.publicView(this.value);for(const book of Object.values(result.playbook.books))delete book.photoIds;return result;}
  close(){this.channel?.close();this.db?.close();}
 }
 root.UWProfile={Profile,fresh,apply,WorldError,uuid};if(typeof module!=='undefined')module.exports=root.UWProfile;

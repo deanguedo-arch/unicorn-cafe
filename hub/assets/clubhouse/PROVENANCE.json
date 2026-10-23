@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "created": "2026-10-23",
+  "implementation": "../../shared/clubhouse-art.js",
+  "method": "Original code-native Canvas 2D props and fixed inline SVG controls. No new raster imagery, external fonts, remote image URLs, or character redraws.",
+  "style_reference": {
+    "file": "../four-changes/home-downstairs.png",
+    "sha256": "288ee7a87593b75c860253e228f790d00eba14fc48b085710672c8dac3efe1a4",
+    "observed": "Warm cream and gold architectural trim, pink and plum soft furnishings, shaded rounded edges, hearts and small stars. The original basement image was visually inspected and is not changed."
+  },
+  "reused_sources": [
+    {
+      "file": "../playbook/decor-atlas.png",
+      "sha256": "f0565920ef2681acadad0ff4efa452727cb59552b22bc8155c0552c0a70920bd",
+      "use": "Pink heart and blue star cushion cells, indices 1 and 2 of the existing 3-by-3 atlas. Direct drawImage with source-relative cell coordinates; no source modification."
+    },
+    {
+      "file": "../../../game/build/assets/u_idle0.webp",
+      "sha256": "dc75e909c6f7661102fc00b8c9603f645d940a75629a31c3c78096b841f43ccf",
+      "use": "Original canonical unicorn as a stick puppet; original source bounds [33,44,126,141]. Pixels, face and colours are not changed."
+    }
+  ],
+  "props": ["art", "fort", "ball", "puppets", "frame", "carry", "paper"],
+  "coordinate_contract": "Bottom centre, 320-unit design width. Caller supplies world-space x/y and width; heights are proportional. The bounds export is visual placement guidance, not collision geometry. Selected props add a floor halo extending slightly outside the ordinary bounds.",
+  "picture_contract": "{version:1,ops:[stamp|brush]}. Paper is cream; stamp positions and brush points are normalized. Size and width are fractions of the smaller paper dimension. Drawing is read-only and clipped to paper.",
+  "runtime_scope": "No profile changes, persistence, gameplay rules, timers, input listeners, sounds or DOM writes. One explicit load() preloads the two existing local source images using the module script URL, not page location. Failed optional image loads are reported and not retried.",
+  "review_status": "References visually inspected and implementation source-reviewed. Browser rendering, gameplay, performance and automated tests were not run by the artwork author. Runtime and visual checks are delegated separately."
+}

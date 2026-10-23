@@ -1,0 +1,45 @@
+// Static contracts for the existing storage/native save namespaces. Run before/after clubhouse work.
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const crypto = require('node:crypto');
+const read = p => fs.readFileSync(path.join(__dirname, '../../../', p), 'utf8');
+const basePath = p => path.join(__dirname, '../../../../release-base', p);
+const hash = b => crypto.createHash('sha256').update(b).digest('hex');
+const profile = read('hub/shared/profile.js');
+const engine = read('game/build/src/engine.js');
+const cafe = read('game/build/src/game.js');
+const bridge = read('hub/shared/bridge.js');
+const clubhouse = read('hub/shared/clubhouse.js');
+const clubhouseCss = read('hub/clubhouse.css');
+const cafeHtml = read('game/build/index.html');
+const world = read('hub/world.js');
+assert.match(profile, /constructor\(name='unicorn-world-profile-v1'\)/, 'world database name stays stable');
+assert.match(profile, /indexedDB\.open\(this\.name,2\)/, 'world database remains version 2');
+for (const store of ['state', 'receipts', 'media']) {
+  assert.match(profile, new RegExp("'" + store + "'"), `existing ${store} object store remains`);
+}
+assert.match(engine, /const SCHEMA=3;/, 'native café payload schema stays version 3');
+assert.match(engine, /const SAVE_KEY='sneaky-unicorn-restaurant-v1-4';/, 'native café save key stays stable');
+assert.match(cafe, /localStorage\.setItem\(R\.SAVE_KEY,JSON\.stringify\(engine\.snapshot\(\)\)\)/, 'standalone/native save path remains available');
+assert.match(bridge, /this\.store='unicorn-world-'\+game\+'-bridge-v1'/, 'per-game bridge sidecar namespace remains stable');
+assert.match(bridge, /this\.game!=='cafe'\|\|args\.slot!=='cafe'/, 'child bridge restricts display action to café and its own wall');
+assert.match(world, /e\.source===f\.node\.contentWindow&&e\.origin===f\.origin/, 'parent accepts messages only from the paired frame and origin');
+assert.match(world, /action==='clubhouse-display'&&\(id!=='cafe'\|\|args\?\.slot!=='cafe'\)/, 'parent restricts display request to café iframe origin and cafe slot');
+assert.match(profile, /const\{photos,sessions,scrapbook,clubhouse,\.\.\.p\}=this\.value;.*result\.clubhouse=K\.publicView\(this\.value\)/, 'public view projects clubhouse state rather than returning the private profile object');
+assert.match(clubhouse, /paused\(\)\{return document\.hidden\|\|innerHeight>innerWidth;/, 'clubhouse pauses while hidden or portrait');
+assert.match(clubhouse, /orientationchange/, 'orientation changes cancel live play controls');
+assert.match(clubhouse, /if\(a\.edit===a\.ack&&!a\.pending\)return true;/, 'opening or closing blank art does not create an empty draft receipt');
+assert.match(clubhouse, /if\(cancel&&p\.type==='art'&&p\.tool==='brush'\)this\.commitStroke\(p\)/, 'suspending a live brush gesture commits its marks');
+assert.match(clubhouse, /const next=\{version:1,ops:\[\.\.\.a\.picture\.ops,op\]\}/, 'brush/stamp updates retain earlier marks rather than replacing the picture');
+assert.match(clubhouse, /data-uwc=\"gallery\"/, 'saved-picture gallery is wired as a reachable control');
+assert.match(clubhouse, /this\.service\.run\('clubhouse-carry'/, 'selecting an older picture carries its existing media rather than overwriting it');
+assert.match(clubhouse, /this\.service\.run\('clubhouse-keep-copy'/, 'conflicted recovery uses the additive keep-copy action');
+assert.match(clubhouseCss, /button\{min-width:48px;min-height:48px;/, 'all new clubhouse buttons meet 48px minimum hit-target dimensions');
+assert.doesNotMatch(cafeHtml, /hub\/shared|clubhouse/i, 'standalone café does not import hub or clubhouse shared scripts');
+assert.match(engine, /const DAY_TARGET=10;/, 'native cafe day target remains unchanged');
+assert.match(engine, /const LUNCH_AT=5;/, 'native cafe lunch point remains unchanged');
+assert.match(engine, /const LUNCH_MENU=\['pizza','pancakes','soup','smoothie'\]/, 'native cafe lunch choices remain unchanged');
+assert.equal(hash(fs.readFileSync(path.join(__dirname, '../../../game/build/assets/u_idle0.webp'))), hash(fs.readFileSync(basePath('game/build/assets/u_idle0.webp'))), 'canonical café unicorn sprite remains byte-identical to released baseline');
+assert.equal(hash(fs.readFileSync(path.join(__dirname, '../../../adventure/generated-art/pastel_baby_unicorn_sprite_sheet.png'))), hash(fs.readFileSync(basePath('adventure/generated-art/pastel_baby_unicorn_sprite_sheet.png'))), 'canonical adventure sprite sheet remains byte-identical to released baseline');
+console.log('PASS storage/native-save, café-only verified bridge, public projection, 48px controls, orientation pause, and canonical sprite contracts');

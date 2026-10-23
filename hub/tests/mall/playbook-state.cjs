@@ -12,7 +12,7 @@ check('Child rewards and equip requests retain context captured before delayed d
  const server=http.createServer((req,res)=>{res.writeHead(200,{'content-type':'text/html'});res.end('<!doctype html><title>Isolated state checks</title>');});await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
  const pw=require(process.env.PLAYWRIGHT_MODULE||'/Users/deanguedo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
  try{for(const engine of ['chromium','webkit']){const browser=await pw[engine].launch({headless:true,...(engine==='chromium'?{executablePath:process.env.CHROMIUM_PATH||'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'}:{})});
-  try{const page=await browser.newPage();await page.goto('http://127.0.0.1:'+server.address().port);for(const name of ['catalogue','playbook','profile','activity-queue'])await page.addScriptTag({path:path.resolve(__dirname,'../../shared/'+name+'.js')});
+  try{const page=await browser.newPage();await page.goto('http://127.0.0.1:'+server.address().port);for(const name of ['catalogue','playbook','clubhouse-state','profile','activity-queue'])await page.addScriptTag({path:path.resolve(__dirname,'../../shared/'+name+'.js')});
    const results=await page.evaluate(async()=>{
     const results=[],ok=(name,condition)=>{if(!condition)throw Error(name);results.push(name);},equal=(a,b)=>JSON.stringify(a)===JSON.stringify(b),B=UWPlaybook,dbName='playbook-state-checks',image='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Y9Zl1sAAAAASUVORK5CYII=';
     const old=UWProfile.fresh();old.coins=17;old.owned.push('sunhat');for(const k of ['playbook','decor','scrapbook','bests','practiceBests'])delete old[k];

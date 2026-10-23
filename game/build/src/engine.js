@@ -111,7 +111,7 @@ function pathfind(start,end,visibleEndpoints=false){
  return result;
 }
 function blankTables(){return TABLES.map(()=>({status:'clean',dirty:null}));}
-function fresh(settings={},decor={}){return {...freshDayState(),schema:SCHEMA,version:VERSION,day:1,served:0,total:0,coins:0,issued:0,nextId:1,customers:[],active:null,tray:null,dirtyTray:null,prep:null,stickers:[],completed:false,player:{x:445,y:911,facing:1},tables:blankTables(),decor:{...DEFAULT_DECOR,...decor},settings:{muted:!!settings.muted,reduced:!!settings.reduced,musicTrack:clampInt(settings.musicTrack,2)}};}
+function fresh(settings={},decor={}){return {...freshDayState(),firstServiceCycle:0,schema:SCHEMA,version:VERSION,day:1,served:0,total:0,coins:0,issued:0,nextId:1,customers:[],active:null,tray:null,dirtyTray:null,prep:null,stickers:[],completed:false,player:{x:445,y:911,facing:1},tables:blankTables(),decor:{...DEFAULT_DECOR,...decor},settings:{muted:!!settings.muted,reduced:!!settings.reduced,musicTrack:clampInt(settings.musicTrack,2)}};}
 function validDish(d){return typeof d==='string'&&MENU.includes(d);}
 function validVariant(d,v){return validDish(d)&&RECIPES[d].variants.some(x=>x.id===v);}
 function validDecor(obj){obj=obj&&typeof obj==='object'?{...obj}:{};if(!obj.tablecloth&&obj.tabletop)obj.tablecloth=obj.tabletop;const out={...DEFAULT_DECOR};for(const k of Object.keys(CUSTOMIZATION))if(obj&&CUSTOMIZATION[k].includes(obj[k]))out[k]=obj[k];return out;}
@@ -176,11 +176,17 @@ function cleanCoreSave(raw){
   s.issued=clamp(Math.max(s.served,s.issued),0,DAY_TARGET);s.nextId=Math.max(s.nextId,...s.customers.map(c=>c.id+1),1);s.completed=!!raw.completed&&isDayClear(s);return s;
  }catch(_){return null;}
 }
+// Optional first-run marker: 0=new, 1=served, 2=cleared, 3=washed.
+// Only newly created saves receive it. Earlier native saves retain their pace.
+function firstServicePending(s){return Number.isInteger(s.firstServiceCycle)&&s.firstServiceCycle>=0&&s.firstServiceCycle<3&&s.day===1&&s.total<=1&&s.served<=1;}
 function serviceClear(s){return !s.helpers?.some(h=>h.dish)&&!s.customers.length&&!s.tray&&!s.prep&&!s.dirtyTray&&s.tables.every(t=>t.status==='clean');}
 function surfacesClean(s){return CLEAN_TASKS.filter(t=>t.kind!=='floor').every(t=>s.cleaning?.find(q=>q.id===t.id)?.p>=t.need);}
 function isDayClear(s){return s.served>=DAY_TARGET&&s.issued>=DAY_TARGET&&serviceClear(s)&&s.lunch?.done&&CLEAN_TASKS.every(t=>s.cleaning?.find(q=>q.id===t.id)?.p>=t.need);}
 function cleanSave(raw){
  const s=cleanCoreSave(raw);if(!s)return null;
+ // Do not retroactively opt in any older save, including an unserved one.
+ if(raw.schema===SCHEMA&&Number.isInteger(raw.firstServiceCycle)&&raw.firstServiceCycle>=0&&raw.firstServiceCycle<=3)s.firstServiceCycle=raw.firstServiceCycle;
+ else delete s.firstServiceCycle;
  const old=raw.schema!==SCHEMA;
  if(s.tray&&s.dirtyTray)s.dirtyTray=null;
  s.helpers=freshHelpers().map(h=>{const q=raw.helpers?.find(q=>q?.id===h.id);if(!q)return h;
@@ -216,6 +222,15 @@ function cleanSave(raw){
   // A finished earlier release stays finished; do not demand a bonus meal.
   s.served=DAY_TARGET;s.issued=DAY_TARGET;s.lunch.done=true;s.lunch.meal='pizza';s.lunch.bites=3;s.lunch.sips=2;s.cleaning=CLEAN_TASKS.map(t=>({id:t.id,p:t.need}));
  }
+ if(Object.hasOwn(s,'firstServiceCycle')){
+  if(s.day>1||s.total>1||s.served>1)s.firstServiceCycle=3;
+  else if(s.served===1){
+   s.firstServiceCycle=Math.max(1,s.firstServiceCycle);
+   if(s.dirtyTray||s.helpers.some(h=>h.dish))s.firstServiceCycle=Math.max(2,s.firstServiceCycle);
+   // Recover a damaged marker after its dish has already been returned.
+   if(!s.customers.some(c=>['arriving','waiting','ordered','eating'].includes(c.phase))&&!s.dirtyTray&&!s.helpers.some(h=>h.dish)&&s.tables.every(t=>t.status==='clean'))s.firstServiceCycle=3;
+  }
+ }
  s.completed=isDayClear(s);
  if(s.completed)s.phase='complete';
  else if(s.served>=DAY_TARGET&&s.lunch.done)s.phase=serviceClear(s)?'cleaning':'closing';
@@ -249,13 +264,13 @@ class Engine{
  cancelPrep(){this.s.prep=null;}
  packMeal(){const p=this.s.prep;if(!p?.done||!validVariant(p.dish,p.variant)||this.s.tray||this.s.dirtyTray)return false;this.s.tray={orderId:p.orderId,dish:p.dish,variant:p.variant,deco:validDeco(p.dish,p.deco)};this.s.prep=null;return true;}
  remake(){const tray=this.s.tray;if(!tray)return false;this.s.active=tray.orderId;this.s.tray=null;this.s.prep=null;return true;}
- serve(table){const t=this.s.tray,c=this.atTable(table);if(!t)return {ok:false,reason:'empty'};if(!c||c.phase!=='ordered'||c.id!==t.orderId)return {ok:false,reason:'table',target:this.customer(t.orderId)?.table};if(c.dish!==t.dish)return {ok:false,reason:'dish'};if(c.variant!==t.variant)return {ok:false,reason:'variant'};c.phase='eating';c.eat=0;c.deco=t.deco||null;this.s.tray=null;this.s.served++;this.s.total++;if(!this.s.stickers.includes(c.dish))this.s.stickers.push(c.dish);this.s.active=this.nextOrder()?.id||null;return {ok:true,dish:c.dish,table};}
+ serve(table){const t=this.s.tray,c=this.atTable(table);if(!t)return {ok:false,reason:'empty'};if(!c||c.phase!=='ordered'||c.id!==t.orderId)return {ok:false,reason:'table',target:this.customer(t.orderId)?.table};if(c.dish!==t.dish)return {ok:false,reason:'dish'};if(c.variant!==t.variant)return {ok:false,reason:'variant'};c.phase='eating';c.eat=0;c.deco=t.deco||null;this.s.tray=null;this.s.served++;this.s.total++;if(firstServicePending(this.s))this.s.firstServiceCycle=Math.max(1,this.s.firstServiceCycle);if(!this.s.stickers.includes(c.dish))this.s.stickers.push(c.dish);this.s.active=this.nextOrder()?.id||null;return {ok:true,dish:c.dish,table};}
  finishEating(id){const c=this.customer(id);if(c?.phase!=='eating')return false;c.phase='finished';c.eat=0;this.s.tables[c.table]={status:'dirty',dirty:{dish:c.dish,variant:c.variant,deco:c.deco||null,orderId:c.id}};return true;}
  startLeaving(id){const c=this.customer(id);if(c?.phase!=='finished')return false;c.phase='paying';c.eat=0;return true;}
  pay(id){const c=this.customer(id);if(c?.phase!=='paying'||c.paid||Math.hypot(c.x-CASHIER.x,c.y-CASHIER.y)>35)return false;c.paid=true;c.phase='leaving';this.s.coins++;return true;}
  remove(id){const c=this.customer(id);if(c?.phase!=='leaving')return false;this.s.customers=this.s.customers.filter(x=>x.id!==id);this.updateCompleted();return true;}
- pickDirty(table){const t=this.s.tables[table];if(!t||t.status!=='dirty'||!t.dirty||this.s.tray||this.s.dirtyTray||this.s.prep)return false;const d=t.dirty;this.s.dirtyTray={table,dish:d.dish,variant:d.variant,deco:d.deco||null,wash:0};this.s.tables[table]={status:'carried',dirty:null};return true;}
- washAct(){const d=this.s.dirtyTray;if(!d)return {ok:false,done:false};d.wash=clamp(d.wash+1,0,5);if(d.wash>=5){const table=d.table;this.s.dirtyTray=null;this.s.tables[table]={status:'clean',dirty:null};this.updateCompleted();return {ok:true,done:true,table};}return {ok:true,done:false,wash:d.wash};}
+ pickDirty(table){const t=this.s.tables[table];if(!t||t.status!=='dirty'||!t.dirty||this.s.tray||this.s.dirtyTray||this.s.prep)return false;const d=t.dirty;this.s.dirtyTray={table,dish:d.dish,variant:d.variant,deco:d.deco||null,wash:0};this.s.tables[table]={status:'carried',dirty:null};if(firstServicePending(this.s)&&this.s.served===1)this.s.firstServiceCycle=2;return true;}
+ washAct(){const d=this.s.dirtyTray;if(!d)return {ok:false,done:false};d.wash=clamp(d.wash+1,0,5);if(d.wash>=5){const table=d.table;this.s.dirtyTray=null;this.s.tables[table]={status:'clean',dirty:null};if(firstServicePending(this.s)&&this.s.served===1)this.s.firstServiceCycle=3;this.updateCompleted();return {ok:true,done:true,table};}return {ok:true,done:false,wash:d.wash};}
  updateCompleted(){this.updateDay();return this.s.completed;}
  updateDay(){const s=this.s;if(s.completed){this.expireHelpers();return s.phase;}
   if(s.lunch.done&&!s.lunch.afternoonStarted){s.phase='break';this.expireHelpers();return s.phase;}
@@ -294,13 +309,13 @@ class Engine{
   if(route.stalled>=1){a.route=null;}return arrived;
  };
  for(const h of this.s.helpers){const activity=this.helperActivity(h);activity.happy=Math.max(0,activity.happy-dt);activity.moving=false;if(!h.hired)continue;
-  if(h.dish){h.task={kind:'wash',table:h.dish.table};if(move(h,SINK)){h.progress+=dt;if(h.progress>=6){this.s.tables[h.dish.table]={status:'clean',dirty:null};h.dish=null;h.task=null;h.progress=0;activity.route=null;activity.happy=1.2;this.updateDay();}}continue;}
+  if(h.dish){h.task={kind:'wash',table:h.dish.table};if(move(h,SINK)){h.progress+=dt;if(h.progress>=6){this.s.tables[h.dish.table]={status:'clean',dirty:null};if(firstServicePending(this.s)&&this.s.served===1)this.s.firstServiceCycle=3;h.dish=null;h.task=null;h.progress=0;activity.route=null;activity.happy=1.2;this.updateDay();}}continue;}
   if(h.task){const j=h.task,valid=j.kind==='dish'?this.s.tables[j.table]?.status==='dirty':this.customer(j.id)?.phase==='waiting';if(!valid){h.task=null;h.progress=0;}}
   if(!h.task){const claimed=(kind,id)=>this.s.helpers.some(q=>q!==h&&q.task?.kind===kind&&(kind==='dish'?q.task.table:q.task.id)===id);
    const table=this.s.tables.findIndex((t,i)=>t.status==='dirty'&&t.dirty&&!claimed('dish',i));const c=this.s.customers.filter(c=>c.phase==='waiting'&&!claimed('order',c.id)).sort((a,b)=>a.id-b.id)[0];h.task=table>=0?{kind:'dish',table}:c?{kind:'order',table:c.table,id:c.id}:null;h.progress=0;}
   if(!h.task){activity.route=null;continue;}const j=h.task;if(!move(h,TABLES[j.table].meet))continue;h.progress+=dt;
   if(j.kind==='order'&&h.progress>=3){const c=this.customer(j.id);if(c?.phase==='waiting')c.phase='ordered';h.task=null;h.progress=0;activity.route=null;activity.happy=1.2;}
-  else if(j.kind==='dish'&&h.progress>=1.5){const t=this.s.tables[j.table];if(t.status==='dirty'&&t.dirty){h.dish={...t.dirty,table:j.table};this.s.tables[j.table]={status:'carried',dirty:null};}h.task=null;h.progress=0;}
+  else if(j.kind==='dish'&&h.progress>=1.5){const t=this.s.tables[j.table];if(t.status==='dirty'&&t.dirty){h.dish={...t.dirty,table:j.table};this.s.tables[j.table]={status:'carried',dirty:null};if(firstServicePending(this.s)&&this.s.served===1)this.s.firstServiceCycle=2;}h.task=null;h.progress=0;}
  }
 }
 
@@ -310,7 +325,10 @@ class Engine{
  paceRandom(){const p=this.s.pace;p.seed=(Math.imul(p.seed,1664525)+1013904223)>>>0;return p.seed/4294967296;}
  paceTick(dt){const s=this.s,p=s.pace;if(!Number.isFinite(dt)||dt<=0||!['morning','afternoon'].includes(s.phase))return null;dt=Math.min(dt,.25);p.elapsed+=dt;p.next-=dt;p.remaining-=dt;
   if(p.remaining<=0){if(p.mood==='cozy'){p.mood='normal';p.remaining=18+this.paceRandom()*9;}else if(p.mood==='normal'){p.mood='busy';p.burst=3;p.remaining=18;}else{p.mood='cozy';p.remaining=22+this.paceRandom()*12;}}
-  const cap=s.served<1?1:s.served<3?3:5;
+  // A fresh child's second arrival waits for the complete first dish cycle,
+  // even if the first customer has already paid and left.
+  if(firstServicePending(s)&&s.issued>0){p.next=Math.max(1.2,p.next);return null;}
+  const cap=firstServicePending(s)||s.served<1?1:s.served<3?3:5;
   if(p.next>0)return null;
   const guest=this.spawn(cap);if(!guest){p.next=1.2;return null;}
   p.next=p.mood==='busy'?3+this.paceRandom()*2:p.mood==='normal'?7+this.paceRandom()*4:12+this.paceRandom()*5;
@@ -320,9 +338,9 @@ class Engine{
  guestSpeed(c){return 174*(.84+((c.id*17+this.s.day*13)%41)/100)*(this.s.pace.mood==='busy'?1.07:1);}
 
  setDecor(stage,value){if(!CUSTOMIZATION[stage]?.includes(value))return false;this.s.decor[stage]=value;return true;}
- newDay(){const old=this.s,n=fresh(old.settings,old.decor);n.day=old.day+1;n.total=old.total;n.coins=old.coins;n.stickers=[...old.stickers];n.nextId=old.nextId;n.pace.seed=(old.pace.seed+137*n.day)>>>0;this.s=n;return n;}
+ newDay(){const old=this.s,n=fresh(old.settings,old.decor);n.day=old.day+1;n.total=old.total;n.coins=old.coins;n.stickers=[...old.stickers];n.nextId=old.nextId;if(Object.hasOwn(old,'firstServiceCycle'))n.firstServiceCycle=3;else delete n.firstServiceCycle;n.pace.seed=(old.pace.seed+137*n.day)>>>0;this.s=n;return n;}
  reset(){this.s=fresh(this.s.settings);}
  snapshot(){return clone(this.s);}
 }
-return {HELPER_IDS,FAVOURITES,favouriteGuest,LUNCH_AT,LUNCH_MENU,CLEAN_TASKS,PREVIOUS_SAVE_KEYS,serviceClear,surfacesClean,safePoint,VERSION,SCHEMA,SAVE_KEY,LEGACY_SAVE_KEY,DAY_TARGET,RECIPES,MENU,SEQUENCE,TABLES,STATIONS,KITCHEN,SINK,ENTRY,CASHIER,DJ,OBSTACLES,BOUNDS,CUSTOMIZATION,DEFAULT_DECOR,Engine,fresh,cleanSave,migrateV1,validVariant,validDish,validDecor,pathfind,walkable,lineFree,clamp,clone,isDayClear};
+return {HELPER_IDS,firstServicePending,FAVOURITES,favouriteGuest,LUNCH_AT,LUNCH_MENU,CLEAN_TASKS,PREVIOUS_SAVE_KEYS,serviceClear,surfacesClean,safePoint,VERSION,SCHEMA,SAVE_KEY,LEGACY_SAVE_KEY,DAY_TARGET,RECIPES,MENU,SEQUENCE,TABLES,STATIONS,KITCHEN,SINK,ENTRY,CASHIER,DJ,OBSTACLES,BOUNDS,CUSTOMIZATION,DEFAULT_DECOR,Engine,fresh,cleanSave,migrateV1,validVariant,validDish,validDecor,pathfind,walkable,lineFree,clamp,clone,isDayClear};
 });

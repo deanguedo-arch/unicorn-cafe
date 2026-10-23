@@ -37,18 +37,21 @@ const AUTO_DWELL=.28,AUTO_EXIT_PAD=34;
 const dayScreen=document.createElement('section');dayScreen.id='day-screen';dayScreen.className='day-screen';dayScreen.hidden=true;dom.stage.insertBefore(dayScreen,dom.modal);
 const hintButton=document.createElement('button'),hintHand=document.createElement('div');
 hintButton.id='picture-hint';hintButton.className='picture-hint';hintButton.hidden=true;hintButton.setAttribute('aria-label','Show me what to tap');hintHand.className='hint-hand';hintHand.hidden=true;hintHand.setAttribute('aria-hidden','true');dom.stage.append(hintButton,hintHand);
-let pictureHint=null;
+let pictureHint=null,lastHintTarget=null;const automaticHints=new Set();
 function dismissPictureHint(){idle=0;pictureHint=null;hintButton.hidden=true;hintHand.hidden=true;}
 function hintTarget(){
- if(mode==='world'){const info=primaryInfo();return info.type==='wait'?null:{element:dom.primary,gesture:'tap',key:JSON.stringify([mode,info.type,info.id,info.table,info.task]),info};}
+ if(mode==='world'){const info=primaryInfo();return info.type==='wait'?null:{element:dom.primary,gesture:'tap',key:JSON.stringify([mode,info.type,info.id,info.table,info.task,!!engine.s.tray,!!engine.s.dirtyTray,engine.customer(info.id)?.phase]),info};}
  if(mode==='recipes'){const el=dom.kitchen.querySelector('.dish-card.requested');return el?{element:el,gesture:'tap',key:'recipes:'+engine.s.active}:null;}
+ if(mode==='wash'){const el=washDone?dom.kitchen.querySelector('[data-action="wash-return"]'):washCanvas;return el?{element:el,gesture:washDone?'tap':'rub',key:'wash:'+washSnapshot?.table+':'+washDone}:null;}
+ if(mode==='scrub'){const el=cleanDone?dayScreen.querySelector('[data-action="day-return"]'):dayCanvas;return el?{element:el,gesture:cleanDone?'tap':'rub',key:'scrub:'+cleanTask?.id+':'+cleanDone}:null;}
  if(mode!=='cook'||!engine.prep)return null;const p=engine.prep,step=R.RECIPES[p.dish].steps[p.step],choice=engine.customer(p.orderId)?.variant;
  const element=p.done?dom.kitchen.querySelector('[data-action="carry"]'):step.action==='choice'?dom.kitchen.querySelector(`[data-variant="${choice||R.RECIPES[p.dish].variants[0].id}"]`):step.action==='decorate'?dom.kitchen.querySelector('[data-decoration]'):cookCanvas;
  return element?{element,gesture:p.done||['choice','decorate'].includes(step.action)?'tap':step.action,key:'cook:'+p.orderId+':'+p.step+':'+p.done}:null;
 }
 function startPictureHint(){const target=hintTarget();if(!target)return;pictureHint={...target,remaining:3.4};idle=0;hintButton.hidden=true;hintHand.innerHTML=A.icon('hand');updatePictureHint(0);if(mode==='world')drawWorld();}
 function updatePictureHint(dt){
- const target=hintTarget(),busy=pointer||cookPointer!==null||keys.size||path.length;
+ const target=hintTarget(),busy=pointer||cookPointer!==null||dayPointer!==null||keys.size||path.length;
+ if(target?.key!==lastHintTarget){lastHintTarget=target?.key||null;idle=0;}
  if(!target||busy){dismissPictureHint();return;}
  if(pictureHint){if(pictureHint.key!==target.key){dismissPictureHint();return;}pictureHint.remaining-=dt;if(pictureHint.remaining<=0){dismissPictureHint();return;}
   const box=target.element.getBoundingClientRect(),stage=dom.stage.getBoundingClientRect(),time=3.4-pictureHint.remaining,motion=engine.s.settings.reduced?0:1,phase=time*4;
@@ -58,7 +61,11 @@ function updatePictureHint(dt){
   else y+=Math.sin(phase)*6*motion;
   hintHand.style.left=R.clamp(x-stage.left-17,0,width-48)+'px';hintHand.style.top=R.clamp(y-stage.top-9,0,height-54)+'px';hintHand.dataset.gesture=pictureHint.gesture;hintHand.hidden=false;return;
  }
- idle+=dt;hintButton.dataset.scene=mode;hintButton.hidden=idle<8;if(!hintButton.hidden&&!hintButton.firstChild)hintButton.innerHTML=A.icon('hand');
+ idle+=dt;hintButton.dataset.scene=mode;
+ // One silent demonstration per task/step, not a repeating interruption.
+ // It only draws a hand and route: recipe progress still requires real input.
+ if(idle>=8&&!automaticHints.has(target.key)){automaticHints.add(target.key);if(automaticHints.size>256)automaticHints.delete(automaticHints.values().next().value);startPictureHint();return;}
+ hintButton.hidden=idle<8;if(!hintButton.hidden&&!hintButton.firstChild)hintButton.innerHTML=A.icon('hand');
 }
 hintButton.addEventListener('click',startPictureHint);
 // Dismissing a hint never consumes the child's pointer, including iOS taps.
@@ -122,6 +129,99 @@ async function hireHelper(id){if(!['morning','afternoon'].includes(engine.s.phas
  else{const before=engine.snapshot();if(!engine.hireLocal(id)){toast('One coin needed.');return;}if(!save()){engine=new R.Engine(before);toast('Could not save. Tap to retry.');}else feedback('ready');}
  }finally{helperRequests.delete(id);updateHUD(true);drawWorld();}}
 function updateHelperTargets(){for(const h of engine.s.helpers){let b=helperTargets.get(h.id);if(!b){b=document.createElement('button');b.className='helper-target';b.onclick=()=>hireHelper(h.id);b.dataset.helper=h.id;dom.ui.append(b);helperTargets.set(h.id,b);}const p=worldToScreen(h.x,h.y),size=109*view.scale;b.style.left=(p.x-size*.6)+'px';b.style.top=(p.y-size)+'px';b.style.width=(size*1.2)+'px';b.style.height=size+'px';b.hidden=mode!=='world'||!['morning','afternoon'].includes(engine.s.phase)||p.x<0||p.x>width||p.y<0||p.y-size>height;b.disabled=h.hired||helperRequests.has(h.id);b.setAttribute('aria-label',h.hired?h.id+' helper '+(h.task?.kind==='order'?'taking an order at the '+R.TABLES[h.task.table].name:h.task?.kind==='dish'?'clearing the '+R.TABLES[h.task.table].name:h.task?.kind==='wash'?'washing a dish':'ready to help'):helperRequests.has(h.id)?'Saving '+h.id+' hire':'Hire '+h.id+' helper for one '+(worldLink?'world':'café')+' coin');}}
+// Connected artwork is a display-only sidecar, never a meal or dirty-dish tray.
+// This wall strip is between the left lamp and kitchen, outside DJ/table hits.
+const cafeGallery={x:450,y:170,w:112,h:112};
+const cafeGalleryTarget=document.createElement('button');
+cafeGalleryTarget.id='cafe-gallery';cafeGalleryTarget.className='cafe-gallery-target';cafeGalleryTarget.hidden=true;cafeGalleryTarget.type='button';dom.ui.append(cafeGalleryTarget);
+const cafeGalleryCue=document.createElement('button'),cafeGalleryCueCanvas=document.createElement('canvas');
+cafeGalleryCue.id='cafe-gallery-cue';cafeGalleryCue.className='cafe-gallery-cue';cafeGalleryCue.type='button';cafeGalleryCue.hidden=true;cafeGalleryCue.setAttribute('aria-label','Go to the café gallery with your drawing. Hanging it takes a separate tap.');
+cafeGalleryCueCanvas.width=108;cafeGalleryCueCanvas.height=108;cafeGalleryCueCanvas.setAttribute('aria-hidden','true');cafeGalleryCue.append(cafeGalleryCueCanvas);dom.ui.append(cafeGalleryCue);
+const cafeGalleryViewSpot={x:505,y:345};let cafeGalleryCueArt=null;
+let cafeClubhouse=null,cafeDisplayRequest=null,cafeSuccessUntil=0;
+const cafeGuestReactions=new Map();
+function cafeArtAvailable(){return !!(worldReady&&worldLink&&cafeClubhouse&&window.UWClubhouseArt?.drawPicture);}
+function cafeDisplayed(){return cafeClubhouse?.displayed?.cafe||null;}
+function cafeGalleryHit(p){const q=cafeGallery;return cafeArtAvailable()&&p.x>=q.x&&p.x<=q.x+q.w&&p.y>=q.y&&p.y<=q.y+q.h;}
+function syncCafeClubhouse(value){
+ cafeClubhouse=value?.version===1?{version:1,carried:value.carried||null,displayed:{cafe:value.displayed?.cafe||null},friends:{pink:value.friends?.pink===true,blue:value.friends?.blue===true}}:null;
+ // Reattach to the durable outbox after a reload; never mint a second intent.
+ const pending=worldLink?.state.outbox.find(q=>q.request==='clubhouse-display'&&q.args?.slot==='cafe');
+ if(pending&&!cafeDisplayRequest)watchCafeDisplay(pending.id,pending.args);
+ updateCafeGuestReactions();updateCafeGalleryTarget();
+}
+function watchCafeDisplay(id,args){
+ const request={id,artwork:args.artwork,expectedArtwork:args.expectedArtwork??null};cafeDisplayRequest=request;updateCafeGalleryTarget();
+ worldLink.request('clubhouse-display',{artwork:request.artwork,slot:'cafe',expectedArtwork:request.expectedArtwork},id).then(receipt=>{
+  if(cafeDisplayRequest!==request)return;cafeDisplayRequest=null;
+  if(receipt.ok){cafeSuccessUntil=clock+1.8;worldLink.send({command:'connect'});if(mode==='world'&&!hubPaused){feedback('ready');announce('Your drawing is hanging in the café. Any previous drawing is still saved in your collection.');}}
+  else if(mode==='world'&&!hubPaused)toast(receipt.error==='storage'?'Your drawing could not be saved. It is still safe to carry.':receipt.error==='conflict'?'The gallery changed. Look at the frame, then tap again if you want to replace it.':'Your drawing stayed safe. Try the frame again when you are ready.');
+  updateCafeGuestReactions();updateCafeGalleryTarget();if(loaded)drawWorld();
+ }).catch(()=>{if(cafeDisplayRequest!==request)return;
+  // An unresolved outbox entry remains pending, including across suspension.
+  if(!worldLink.state.outbox.some(q=>q.id===id))cafeDisplayRequest=null;
+  if(mode==='world'&&!hubPaused)announce('The gallery is waiting for its save confirmation.');updateCafeGalleryTarget();
+ });
+}
+function hangCafePicture(){
+ if(mode!=='world'||hubPaused||!cafeArtAvailable()||cafeDisplayRequest)return;
+ const carried=cafeClubhouse.carried,current=cafeDisplayed();
+ if(!carried){announce(current?'Your drawing is on the café wall. Bring another from the clubhouse to change it.':'Bring a drawing from the clubhouse to hang here.');return;}
+ if(current?.id===carried.id){announce('This drawing is already on the café wall.');return;}
+ stopControls();const id='cafe-gallery:'+ (globalThis.crypto?.randomUUID?.()||Date.now().toString(36)+'-'+Math.random().toString(36).slice(2));
+ watchCafeDisplay(id,{artwork:carried.id,expectedArtwork:current?.id||null});
+}
+cafeGalleryTarget.addEventListener('click',hangCafePicture);
+cafeGalleryCue.addEventListener('click',()=>{
+ if(mode!=='world'||hubPaused||!cafeArtAvailable()||!cafeClubhouse.carried||cafeDisplayRequest)return;
+ // This reachable floor point clears the DJ (x <= 433) and kitchen (x >= 567)
+ // collision margins. The camera can see the wall here; no station is activated.
+ stopControls();path=R.pathfind(engine.s.player,R.safePoint(cafeGalleryViewSpot));goal=null;
+});
+function updateCafeGalleryTarget(){
+ const q=cafeGallery,p=worldToScreen(q.x,q.y),w=q.w*view.scale,h=q.h*view.scale;
+ cafeGalleryTarget.hidden=mode!=='world'||hubPaused||!cafeArtAvailable()||p.x<0||p.y<0||p.x+w>width||p.y+h>height;
+ cafeGalleryTarget.style.left=p.x+'px';cafeGalleryTarget.style.top=p.y+'px';cafeGalleryTarget.style.width=w+'px';cafeGalleryTarget.style.height=h+'px';cafeGalleryTarget.disabled=!!cafeDisplayRequest;
+ cafeGalleryTarget.setAttribute('aria-busy',String(!!cafeDisplayRequest));
+ cafeGalleryTarget.setAttribute('aria-label',cafeDisplayRequest?'Saving your drawing to the café gallery':cafeClubhouse?.carried&&cafeClubhouse.carried.id!==cafeDisplayed()?.id?'Hang your carried drawing in the café gallery. Previous drawings stay in your collection.':cafeDisplayed()?'Café gallery, displaying your drawing':'Café gallery. Bring a drawing from the clubhouse.');
+ const art=cafeClubhouse?.carried,offscreen=p.x<0||p.y<0||p.x+w>width||p.y+h>height;
+ cafeGalleryCue.hidden=mode!=='world'||hubPaused||!cafeArtAvailable()||!art||art.id===cafeDisplayed()?.id||!!cafeDisplayRequest||!offscreen;
+ if(!cafeGalleryCue.hidden&&cafeGalleryCueArt!==art){cafeGalleryCueArt=art;const c=cafeGalleryCueCanvas.getContext('2d');c.clearRect(0,0,108,108);A.rect(c,9,14,90,72,10,'#e8bd7e','#654565',4);A.rect(c,15,20,78,60,5,'#fff9ed',null);UWClubhouseArt.drawPicture(c,art.picture,18,26,72,48);A.line(c,[[51,94],[77,94]],'#654565',5);A.poly(c,[[74,85],[86,94],[74,103]],'#654565',null);}
+}
+function drawCafeGallery(){
+ if(!cafeArtAvailable())return;const q=cafeGallery,art=cafeDisplayed(),ready=cafeClubhouse.carried&&cafeClubhouse.carried.id!==art?.id;
+ A.line(ctx,[[q.x+26,q.y],[q.x+q.w/2,q.y-14],[q.x+q.w-26,q.y]],'#795470',3);
+ A.rect(ctx,q.x,q.y,q.w,q.h,9,'#e8bd7e','#654565',4);
+ A.rect(ctx,q.x+7,q.y+7,q.w-14,q.h-14,4,'#fff9ed','#fff0cd',3);
+ if(art){const w=q.w-24,h=w*2/3;UWClubhouseArt.drawPicture(ctx,art.picture,q.x+12,q.y+(q.h-h)/2,w,h);}
+ else{A.heart(ctx,q.x+q.w/2,q.y+q.h*.58,21,'#e4bed3');A.line(ctx,[[q.x+q.w-29,q.y+22],[q.x+q.w-29,q.y+38]],'#8c6e9e',4);A.line(ctx,[[q.x+q.w-37,q.y+30],[q.x+q.w-21,q.y+30]],'#8c6e9e',4);}
+ if(ready&&!cafeDisplayRequest){A.ellipse(ctx,q.x+q.w-15,q.y+q.h-15,11,11,'#bde4d3','#654565',3);A.line(ctx,[[q.x+q.w-20,q.y+q.h-15],[q.x+q.w-10,q.y+q.h-15]],'#654565',3);A.line(ctx,[[q.x+q.w-15,q.y+q.h-20],[q.x+q.w-15,q.y+q.h-10]],'#654565',3);}
+ if(cafeDisplayRequest){for(let i=0;i<3;i++)A.ellipse(ctx,q.x+q.w/2+(i-1)*11,q.y+q.h-7,3,3,'#654565');}
+ if(clock<cafeSuccessUntil)A.star(ctx,q.x+q.w-6,q.y+8,13,'#fff1ad');
+}
+function drawCafeCarry(p,bounce){
+ const art=cafeClubhouse?.carried;if(!cafeArtAvailable()||!art)return;
+ // A small picture satchel on the opposite side from native meal carrying.
+ const x=p.x-p.facing*75-18,y=p.y-58-bounce;A.line(ctx,[[x+7,y],[x+18,y-9],[x+29,y]],'#795470',2);
+ A.rect(ctx,x,y,36,33,4,'#fff9ed','#795470',3);UWClubhouseArt.drawPicture(ctx,art.picture,x+4,y+(33-28*2/3)/2,28,28*2/3);
+}
+function updateCafeGuestReactions(){
+ const current=new Set(engine.s.customers.map(c=>c.id));for(const id of cafeGuestReactions.keys())if(!current.has(id))cafeGuestReactions.delete(id);
+ if(!cafeClubhouse)return;const art=cafeDisplayed();
+ for(const c of engine.s.customers){if(!['pink','blue'].includes(c.type)||!['waiting','ordered','eating','finished'].includes(c.phase))continue;
+  let reaction=cafeGuestReactions.get(c.id);if(!reaction){reaction={greetUntil:clock,known:false,admired:null};cafeGuestReactions.set(c.id,reaction);}
+  // Any unicorn guest may enjoy the real gallery; a familiar greeting is earned separately.
+  if(cafeClubhouse.friends[c.type]&&!reaction.known){reaction.known=true;reaction.greetUntil=clock+2.6;}
+  if(art&&!cafeDisplayRequest&&reaction.admired!==art.id){reaction.admired=art.id;reaction.picture=art.picture;reaction.admireFrom=Math.max(clock,reaction.greetUntil);reaction.admireUntil=reaction.admireFrom+3.8;}
+ }
+}
+function drawCafeGuestReaction(c,height){
+ const r=cafeGuestReactions.get(c.id);if(!r)return;
+ if(clock<r.greetUntil){A.heart(ctx,c.x+46,c.y-height-9,11,c.type==='pink'?'#eb95bf':'#9ccfea');A.heart(ctx,c.x+62,c.y-height+7,7,'#fff0b7');}
+ else if(clock>=r.admireFrom&&clock<r.admireUntil&&window.UWClubhouseArt){
+  const x=c.x-30,y=c.y-height-62;A.ellipse(ctx,x+44,y+57,5,4,'#fff9ed','#8c6e9e',2);A.rect(ctx,x,y,62,49,12,'#fff9ed','#8c6e9e',3);UWClubhouseArt.drawPicture(ctx,r.picture,x+8,y+8,45,30);A.heart(ctx,x+57,y+40,9,'#ef9dbb');
+ }
+}
 function feedback(kind='tap'){sound.play(kind);try{if(navigator.vibrate&&!engine.s.settings.reduced)navigator.vibrate(kind==='serve'?22:kind==='wash'?16:8);}catch(_){} }
 function announce(text){$('announcer').textContent=text;}
 function toast(text,seconds=2.2){$('toast').textContent=text;$('toast').classList.add('show');toastUntil=clock+seconds;announce(text);}
@@ -228,8 +328,8 @@ function updateAutoInteraction(dt,playerStopped){
 }
 function drawAutoInteractionHint(){
  const c=autoCandidate();if(!c||c.dist>c.radius*1.85||autoZoneInside)return;
- const pulse=.5+.5*Math.sin(clock*5),near=c.dist<=c.radius;
- ctx.save();ctx.globalAlpha=near?.72:.28+.18*pulse;ctx.lineWidth=near?7:5;ctx.strokeStyle=near?'#fff7c7':'#f8e7ff';ctx.setLineDash(near?[]:[5,14]);ctx.beginPath();ctx.ellipse(c.x,c.y,c.radius*.58,c.radius*.25,0,0,Math.PI*2);ctx.stroke();ctx.setLineDash([]);A.star(ctx,c.x,c.y-c.radius*.34,near?11:8,near?'#ffe58b':'#f2c8ee',clock*.35);ctx.restore();
+ const pulse=engine.s.settings.reduced?1:.5+.5*Math.sin(clock*5),near=c.dist<=c.radius;
+ ctx.save();ctx.globalAlpha=near?.72:.28+.18*pulse;ctx.lineWidth=near?7:5;ctx.strokeStyle=near?'#fff7c7':'#f8e7ff';ctx.setLineDash(near?[]:[5,14]);ctx.beginPath();ctx.ellipse(c.x,c.y,c.radius*.58,c.radius*.25,0,0,Math.PI*2);ctx.stroke();ctx.setLineDash([]);A.star(ctx,c.x,c.y-c.radius*.34,near?11:8,near?'#ffe58b':'#f2c8ee',engine.s.settings.reduced?0:clock*.35);ctx.restore();
 }
 function route(kind,arg=null){if(mode!=='world')return;let dest=null,id=null,table=null;if(kind==='mop')dest=R.SINK;else if(kind==='kitchen'){id=arg;dest=R.KITCHEN;if(id&&engine.customer(id)?.phase==='ordered')engine.selectOrder(id);}else if(kind==='clean'){const t=R.CLEAN_TASKS.find(t=>t.id===arg);id=arg;dest=t;}else if(kind==='sink')dest=R.SINK;else if(kind==='table'){id=arg;const c=engine.customer(id);if(c){table=c.table;dest=R.TABLES[table].meet;}}else if(kind==='dirty'){table=arg;dest=R.TABLES[table]?.meet;}if(!dest)return;dest=R.safePoint(dest);path=R.pathfind(engine.s.player,dest);goal={kind,id,table,x:dest.x,y:dest.y};idle=0;updateHUD(true);}
 function onTable(index){if(mode!=='world')return;selectedCleanup=index;const c=engine.atTable(index);if(engine.s.tray){path=R.pathfind(engine.s.player,R.TABLES[index].meet);goal={kind:'table',id:c?.id||null,table:index,x:R.TABLES[index].meet.x,y:R.TABLES[index].meet.y};return;}if(engine.s.tables[index].status==='dirty'){route('dirty',index);return;}if(!c)return;if(c.phase==='ordered'){engine.selectOrder(c.id);save();route('kitchen',c.id);}else if(c.phase==='waiting'||c.phase==='arriving')route('table',c.id);else{feedback('hello');burst(c.x,c.y-80,8,R.TABLES[index].colour);}}
@@ -343,7 +443,7 @@ dom.world.addEventListener('pointerdown',e=>{if(mode!=='world'||e.button>0||poin
 dom.world.addEventListener('pointermove',e=>{if(!pointer||pointer.id!==e.pointerId)return;const p=canvasPosition(e);pointer.dx=p.x-pointer.x;pointer.dy=p.y-pointer.y;pointer.moved=Math.max(pointer.moved,Math.hypot(pointer.dx,pointer.dy));idle=0;});
 function endPointer(e,cancel=false){if(!pointer||pointer.id!==e.pointerId)return;const tap=pointer.moved<9,p=canvasPosition(e);pointer=null;try{if(dom.world.hasPointerCapture(e.pointerId))dom.world.releasePointerCapture(e.pointerId);}catch(_){}if(tap&&!cancel&&mode==='world')worldTap(p.x,p.y);}
 dom.world.addEventListener('pointerup',e=>endPointer(e));dom.world.addEventListener('pointercancel',e=>endPointer(e,true));dom.world.addEventListener('lostpointercapture',e=>{if(pointer?.id===e.pointerId)pointer=null;});dom.world.addEventListener('contextmenu',e=>e.preventDefault());
-function worldTap(x,y){const djPoint=screenToWorld(x,y);const helper=engine.s.helpers.find(h=>Math.abs(h.x-djPoint.x)<65&&djPoint.y<h.y+15&&djPoint.y>h.y-125);if(helper){hireHelper(helper.id);return;}if(worldReady&&worldExitLatch&&UWPortals.hit(worldExitArea,djPoint)){path=R.pathfind(engine.s.player,worldExitArea);goal=null;return;}if(Math.abs(djPoint.x-R.DJ.x)<185&&djPoint.y>235&&djPoint.y<580){changeMusic();return;}if(engine.s.phase==='cleaning'){const pt=screenToWorld(x,y),ts=engine.cleanTargets();let t=ts.find(t=>Math.hypot(t.artX-pt.x,t.artY-pt.y)<140||Math.hypot(t.x-pt.x,t.y-pt.y)<135);if(t){if(t.kind==='floor'){path=R.pathfind(engine.s.player,R.safePoint(t));goal=null;}else route('clean',t.id);return;}if(R.walkable(pt.x,pt.y)){path=R.pathfind(engine.s.player,pt);goal=null;}return;}for(let i=hits.length-1;i>=0;i--){const h=hits[i];if(x>=h.x&&x<=h.x+h.w&&y>=h.y&&y<=h.y+h.h){onTable(h.table);return;}}const p=screenToWorld(x,y);if(Math.hypot(p.x-R.SINK.x,p.y-R.SINK.y)<120&&engine.s.dirtyTray){route('sink');return;}if(p.x>R.STATIONS.kitchen.x-R.STATIONS.kitchen.w/2&&p.x<R.STATIONS.kitchen.x+R.STATIONS.kitchen.w/2&&p.y>R.STATIONS.kitchen.y-R.STATIONS.kitchen.h&&p.y<R.STATIONS.kitchen.y&&!engine.s.dirtyTray){route('kitchen',engine.s.active);return;}for(let i=0;i<R.TABLES.length;i++){const t=R.TABLES[i];if(Math.hypot(p.x-t.food.x,p.y-t.food.y)<155||Math.hypot(p.x-t.seat.x,p.y-t.seat.y)<120||Math.hypot(p.x-t.meet.x,p.y-t.meet.y)<150){onTable(i);return;}}if(R.walkable(p.x,p.y)){path=R.pathfind(engine.s.player,p);goal=null;}}
+function worldTap(x,y){const djPoint=screenToWorld(x,y);if(cafeGalleryHit(djPoint)){hangCafePicture();return;}const helper=engine.s.helpers.find(h=>Math.abs(h.x-djPoint.x)<65&&djPoint.y<h.y+15&&djPoint.y>h.y-125);if(helper){hireHelper(helper.id);return;}if(worldReady&&worldExitLatch&&UWPortals.hit(worldExitArea,djPoint)){path=R.pathfind(engine.s.player,worldExitArea);goal=null;return;}if(Math.abs(djPoint.x-R.DJ.x)<185&&djPoint.y>235&&djPoint.y<580){changeMusic();return;}if(engine.s.phase==='cleaning'){const pt=screenToWorld(x,y),ts=engine.cleanTargets();let t=ts.find(t=>Math.hypot(t.artX-pt.x,t.artY-pt.y)<140||Math.hypot(t.x-pt.x,t.y-pt.y)<135);if(t){if(t.kind==='floor'){path=R.pathfind(engine.s.player,R.safePoint(t));goal=null;}else route('clean',t.id);return;}if(R.walkable(pt.x,pt.y)){path=R.pathfind(engine.s.player,pt);goal=null;}return;}for(let i=hits.length-1;i>=0;i--){const h=hits[i];if(x>=h.x&&x<=h.x+h.w&&y>=h.y&&y<=h.y+h.h){onTable(h.table);return;}}const p=screenToWorld(x,y);if(Math.hypot(p.x-R.SINK.x,p.y-R.SINK.y)<120&&engine.s.dirtyTray){route('sink');return;}if(p.x>R.STATIONS.kitchen.x-R.STATIONS.kitchen.w/2&&p.x<R.STATIONS.kitchen.x+R.STATIONS.kitchen.w/2&&p.y>R.STATIONS.kitchen.y-R.STATIONS.kitchen.h&&p.y<R.STATIONS.kitchen.y&&!engine.s.dirtyTray){route('kitchen',engine.s.active);return;}for(let i=0;i<R.TABLES.length;i++){const t=R.TABLES[i];if(Math.hypot(p.x-t.food.x,p.y-t.food.y)<155||Math.hypot(p.x-t.seat.x,p.y-t.seat.y)<120||Math.hypot(p.x-t.meet.x,p.y-t.meet.y)<150){onTable(i);return;}}if(R.walkable(p.x,p.y)){path=R.pathfind(engine.s.player,p);goal=null;}}
 window.addEventListener('keydown',e=>{if([' ','Enter'].includes(e.key)&&document.activeElement?.tagName==='BUTTON')return;if(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight',' ','Escape'].includes(e.key))e.preventDefault();if(e.key==='Tab'&&mode==='dialog'){const buttons=[...dom.modal.querySelectorAll('button')];if(buttons.length){const i=buttons.indexOf(document.activeElement),n=e.shiftKey?(i<=0?buttons.length-1:i-1):(i+1)%buttons.length;e.preventDefault();buttons[n].focus();}return;}if(e.key==='Escape'){if(mode==='dialog')closeDialog();else if(mode==='scrub')returnToWorld();else if(mode==='lunch')menuDialog();else if(['cook','recipes','wash'].includes(mode))leaveKitchen();else if(loaded)menuDialog();return;}if(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','w','a','s','d','W','A','S','D'].includes(e.key)&&mode==='world'){keys.add(e.key.toLowerCase());path=[];goal=null;idle=0;}if(!e.repeat&&[' ','e','E'].includes(e.key)){sound.unlock();if(mode==='world')mainAction();else if(mode==='cook'){const p=engine.prep;if(p?.done)carryMeal();else{const st=p&&R.RECIPES[p.dish].steps[p.step];if(st&&!['choice','decorate'].includes(st.action))doPrep();}}else if(mode==='wash')doWash();else if(mode==='scrub')cleanAction();else if(mode==='lunch')lunchAction();}});
 window.addEventListener('keyup',e=>keys.delete(e.key.toLowerCase()));window.addEventListener('blur',()=>{pointer=null;keys.clear();cookPointer=null;dayPointer=null;});window.addEventListener('pagehide',()=>{save();sound.pause();});window.addEventListener('pageshow',()=>{if(sound.context)sound.unlock();});document.addEventListener('visibilitychange',()=>{save();pointer=null;keys.clear();cookPointer=null;dayPointer=null;lastTime=0;if(document.hidden)sound.pause();else if(sound.context)sound.unlock();});
 function moveAlong(object,points,speed,dt){let remaining=speed*dt,moved=false;while(points.length&&remaining>0){const q=points[0],dx=q.x-object.x,dy=q.y-object.y,d=Math.hypot(dx,dy);if(d<1){points.shift();continue;}moved=true;const part=Math.min(d,remaining);object.x+=dx/d*part;object.y+=dy/d*part;if(Math.abs(dx)>1)object.facing=dx<0?-1:1;remaining-=part;if(d<=part+.01)points.shift();}return moved;}
@@ -358,7 +458,7 @@ function tickRestaurant(dt){const s=engine.s;if(s.phase==='break')return;saveClo
   }else if(c.phase==='eating'){c.eat+=dt;if(c.eat>4.3+(c.id%3)*.8){engine.finishEating(c.id);feedback('hello');burst(c.x,c.y-88,14,R.TABLES[c.table].colour);save();updateHUD(true);}}
   else if(c.phase==='finished'){c.eat+=dt;if(c.eat>1.6&&!s.customers.some(q=>q.phase==='paying')){engine.startLeaving(c.id);save();updateHUD(true);}}
  }
- engine.updateDay();if(saveClock>2.5){saveClock=0;save();}
+ updateCafeGuestReactions();engine.updateDay();if(saveClock>2.5){saveClock=0;save();}
 }
 function updateWorld(dt){const s=engine.s;tickRestaurant(dt);
  if(s.phase==='lunch'){openLunch();return;}if(s.completed&&!completeShown){showComplete();return;}
@@ -399,13 +499,15 @@ function drawActor(key,x,y,h,flip=false,bounce=0,tilt=0){const im=A.images[key];
 function drawSeatedGuest(c){const t=R.TABLES[c.table],baby=c.type==='pink'||c.type==='blue',h=baby?155:168;
  const happy=c.phase==='eating'||c.phase==='finished',breathe=engine.s.settings.reduced?0:Math.sin(clock*2+c.id)*1.1;
  A.sprite(ctx,'guest_seated_'+c.type,t.seat.x,t.seat.y-(baby?23:0)-breathe,h*1.2,h,true);
+ if(c.phase==='waiting'){const wave=engine.s.settings.reduced?0:Math.sin(clock*5+c.id)*5,skin=baby?'#fff4f3':'#f8d3b6',hoof=baby?(c.type==='pink'?'#ed8bbb':'#8bc9e9'):skin;A.line(ctx,[[t.seat.x-18,t.seat.y-55],[t.seat.x-37,t.seat.y-77+wave]],skin,9);A.ellipse(ctx,t.seat.x-39,t.seat.y-81+wave,7,6,hoof,'#765079',2);if(!engine.s.settings.reduced){A.line(ctx,[[t.seat.x-52,t.seat.y-91],[t.seat.x-56,t.seat.y-98]],'#fff0b7',3);A.line(ctx,[[t.seat.x-40,t.seat.y-99],[t.seat.x-40,t.seat.y-107]],'#fff0b7',3);}}
+ drawCafeGuestReaction(c,h+(baby?23:0));
  if(happy&&!engine.s.settings.reduced){const handX=t.seat.x-28,handY=t.seat.y-78;A.ellipse(ctx,handX,handY+Math.sin(clock*4+c.id)*2,4,3,baby?'#fff5ef':'#f8d3b6','#765079',1);}
 }
-function drawWorld(){ctx.setTransform(dpr,0,0,dpr,0,0);ctx.fillStyle='#baaccb';ctx.fillRect(0,0,width,height);const p=engine.s.player;const preview=mode==='customize'||mode==='loading';const sc=Math.max(width/1800,height/1100,width<600?.52:.46);view.scale=sc;const vw=width/sc,vh=height/sc,targetX=R.clamp((preview?712:p.x)-vw*.5,0,Math.max(0,1800-vw)),targetY=R.clamp((preview?600:p.y-65)-vh*.5,0,Math.max(0,1100-vh));view.x=targetX;view.y=targetY;ctx.save();ctx.scale(sc,sc);ctx.translate(-view.x,-view.y);A.drawRoomShell(ctx,engine.s.decor);A.drawStationLayer(ctx,clock);if(worldReady&&worldExitLatch&&!preview)UWPortals.exit(ctx,worldExitArea,UWPortals.contains(worldExitArea,p));if(preview)for(const t of R.TABLES)A.drawTableFurniture(ctx,t.food.x,t.food.y,engine.s.decor,t.symbol,t.colour,clock);if(!preview){if(R.surfacesClean(engine.s))drawCleanTargets();
+function drawWorld(){ctx.setTransform(dpr,0,0,dpr,0,0);ctx.fillStyle='#baaccb';ctx.fillRect(0,0,width,height);const p=engine.s.player;const preview=mode==='customize'||mode==='loading';const sc=Math.max(width/1800,height/1100,width<600?.52:.46);view.scale=sc;const vw=width/sc,vh=height/sc,targetX=R.clamp((preview?712:p.x)-vw*.5,0,Math.max(0,1800-vw)),targetY=R.clamp((preview?600:p.y-65)-vh*.5,0,Math.max(0,1100-vh));view.x=targetX;view.y=targetY;ctx.save();ctx.scale(sc,sc);ctx.translate(-view.x,-view.y);A.drawRoomShell(ctx,engine.s.decor);A.drawStationLayer(ctx,engine.s.settings.reduced?0:clock);if(!preview)drawCafeGallery();if(worldReady&&worldExitLatch&&!preview)UWPortals.exit(ctx,worldExitArea,UWPortals.contains(worldExitArea,p));if(preview)for(const t of R.TABLES)A.drawTableFurniture(ctx,t.food.x,t.food.y,engine.s.decor,t.symbol,t.colour,clock);if(!preview){if(R.surfacesClean(engine.s))drawCleanTargets();
   if(path.length){ctx.save();ctx.strokeStyle='#fff6cfb8';ctx.lineWidth=8;ctx.setLineDash([2,24]);ctx.lineCap='round';ctx.beginPath();ctx.moveTo(p.x,p.y);for(const q of path)ctx.lineTo(q.x,q.y);ctx.stroke();ctx.restore();}
-  for(let i=0;i<R.TABLES.length;i++){const t=R.TABLES[i],state=engine.s.tables[i];if(state.status==='dirty'){ctx.save();ctx.globalAlpha=.65+.15*Math.sin(clock*3);A.ellipse(ctx,t.meet.x,t.meet.y,48,22,'#ffffff12','#d7f4f0',5);ctx.restore();}}
-  if(engine.nextOrder()&&!engine.s.tray&&!engine.s.dirtyTray){ctx.save();ctx.globalAlpha=.5+.16*Math.sin(clock*3);ctx.strokeStyle='#fff0b4';ctx.lineWidth=6;ctx.beginPath();ctx.ellipse(R.KITCHEN.x,R.KITCHEN.y,71,29,0,0,Math.PI*2);ctx.stroke();ctx.restore();A.star(ctx,997,315,12,'#fff2bb',clock*.25);}
-  if(engine.s.dirtyTray){ctx.save();ctx.globalAlpha=.6+.13*Math.sin(clock*3);ctx.strokeStyle='#d8f4f6';ctx.lineWidth=6;ctx.beginPath();ctx.ellipse(R.SINK.x,R.SINK.y,62,28,0,0,Math.PI*2);ctx.stroke();ctx.restore();}
+  for(let i=0;i<R.TABLES.length;i++){const t=R.TABLES[i],state=engine.s.tables[i];if(state.status==='dirty'){ctx.save();ctx.globalAlpha=engine.s.settings.reduced?.75:.65+.15*Math.sin(clock*3);A.ellipse(ctx,t.meet.x,t.meet.y,48,22,'#ffffff12','#d7f4f0',5);ctx.restore();}}
+  if(engine.nextOrder()&&!engine.s.tray&&!engine.s.dirtyTray){ctx.save();ctx.globalAlpha=engine.s.settings.reduced?.66:.5+.16*Math.sin(clock*3);const station=R.STATIONS.kitchen;A.rect(ctx,station.x-station.w/2-5,station.y-station.h-5,station.w+10,station.h+10,24,null,'#fff0b4',5);ctx.strokeStyle='#fff0b4';ctx.lineWidth=6;ctx.beginPath();ctx.ellipse(R.KITCHEN.x,R.KITCHEN.y,71,29,0,0,Math.PI*2);ctx.stroke();ctx.restore();A.star(ctx,997,315,12,'#fff2bb',engine.s.settings.reduced?0:clock*.25);}
+  if(engine.s.dirtyTray){ctx.save();ctx.globalAlpha=engine.s.settings.reduced?.73:.6+.13*Math.sin(clock*3);const station=R.STATIONS.sink;A.rect(ctx,station.x-station.w/2-5,station.y-station.h-5,station.w+10,station.h+10,24,null,'#d8f4f6',5);ctx.strokeStyle='#d8f4f6';ctx.lineWidth=6;ctx.beginPath();ctx.ellipse(R.SINK.x,R.SINK.y,62,28,0,0,Math.PI*2);ctx.stroke();ctx.restore();}
   drawAutoInteractionHint();drawNavigationDemo();
   // Table -> foreground chairs -> seated guest. Walking actors share depth ordering with furniture.
   const actors=engine.s.customers.filter(c=>['arriving','paying','leaving'].includes(c.phase)).map(c=>({type:'guest',y:c.y,c}));
@@ -419,18 +521,18 @@ function drawWorld(){ctx.setTransform(dpr,0,0,dpr,0,0);ctx.fillStyle='#baaccb';c
     if(c?.phase==='eating'){drawMeal(ctx,c.dish,c.variant,t.food.x-20,t.food.y-10,76*(1-c.eat/18),66*(1-c.eat/18),null,c.deco);A.heart(ctx,c.x+38,c.y-120-(clock%1)*12,10,t.colour);}
   }else if(act.type==='helper'){drawHelper(act.h);
   }else if(act.type==='guest'){const c=act.c,baby=c.type==='pink'||c.type==='blue',bounce=engine.s.settings.reduced?0:Math.abs(Math.sin(clock*9+c.id))*6;const moving=c.phase!=='paying'||!!npcPaths.get(c.id)?.points.length;drawActor(guestKey(c,moving),c.x,c.y,baby?109:130,(npcFacing.get(c.id)||1)<0,moving?bounce:0);if(c.phase==='paying'&&!moving){const head=engine.s.customers.filter(q=>q.phase==='paying').sort((a,b)=>a.id-b.id)[0],progress=!engine.s.settings.reduced&&head?.id===c.id?Math.min(1,c.eat/1.1):0,coinX=c.x-progress*55,coinY=c.y-115-progress*90;A.ellipse(ctx,coinX,coinY,12,12,'#ffdc78');A.star(ctx,coinX,coinY,7,'#bc8136');}}
-   else{const celebrate=clock<joyUntil,key=celebrate?'u_happy'+Math.floor(clock*6)%3:playerMoving?'u_run'+Math.floor(playerAnim)%6:'u_idle'+(Math.floor(clock*.7)%5===0?1:0),bounce=engine.s.settings.reduced?0:playerMoving?Math.abs(Math.sin(playerAnim*Math.PI))*4:Math.sin(clock*2)*1.5;drawActor(key,p.x,p.y,134,p.facing<0,bounce);if(engine.s.phase==='cleaning'&&engine.s.mopEquipped){drawMop(ctx,p.x+p.facing*37,p.y+8,p.facing,!engine.s.settings.reduced&&clock<mopSwingUntil?Math.sin((mopSwingUntil-clock)*16)*.4:.13);}if(engine.s.tray){const t=engine.s.tray,x=p.x+p.facing*47,y=p.y-38-bounce;A.ellipse(ctx,x,y-1,43,10,'#d9c1df','#fff4e5',3);drawMeal(ctx,t.dish,t.variant,x,y,91,77,null,t.deco);}else if(engine.s.dirtyTray){const x=p.x+p.facing*45,y=p.y-31-bounce;A.drawDirtyDish(ctx,x,y,.78);}}
+   else{const celebrate=clock<joyUntil,key=celebrate?'u_happy'+Math.floor(clock*6)%3:playerMoving?'u_run'+Math.floor(playerAnim)%6:'u_idle'+(Math.floor(clock*.7)%5===0?1:0),bounce=engine.s.settings.reduced?0:playerMoving?Math.abs(Math.sin(playerAnim*Math.PI))*4:Math.sin(clock*2)*1.5;drawActor(key,p.x,p.y,134,p.facing<0,bounce);drawCafeCarry(p,bounce);if(engine.s.phase==='cleaning'&&engine.s.mopEquipped){drawMop(ctx,p.x+p.facing*37,p.y+8,p.facing,!engine.s.settings.reduced&&clock<mopSwingUntil?Math.sin((mopSwingUntil-clock)*16)*.4:.13);}if(engine.s.tray){const t=engine.s.tray,x=p.x+p.facing*47,y=p.y-38-bounce;A.ellipse(ctx,x,y-1,43,10,'#d9c1df','#fff4e5',3);drawMeal(ctx,t.dish,t.variant,x,y,91,77,null,t.deco);const table=R.TABLES[engine.customer(t.orderId)?.table];if(table)A.badge(ctx,table.symbol,x,y+10,12,table.colour);}else if(engine.s.dirtyTray){const x=p.x+p.facing*45,y=p.y-31-bounce;A.drawDirtyDish(ctx,x,y,.78);}}
   }
   if(!R.surfacesClean(engine.s))drawCleanTargets();else for(const t of engine.cleanTargets()){A.ellipse(ctx,t.x,t.y,57,25,'#fff2c522','#fff3bc',5);A.star(ctx,t.x,t.y-38,12,'#fff1ad',clock*.2);}
   for(const q of particles){ctx.save();ctx.globalAlpha=R.clamp(q.life/.8,0,1);A.star(ctx,q.x,q.y,q.size,q.colour,clock*.4);ctx.restore();}
  }
- ctx.restore();updateHelperTargets();hits=[];if(mode==='world'||(mode==='dialog'&&modalReturn==='world'))drawOrderMarkers();if(pointer&&pointer.moved>9&&mode==='world'){ctx.save();ctx.globalAlpha=.6;A.ellipse(ctx,pointer.x,pointer.y,39,39,'#fff8ee22','#fff7df',2);A.ellipse(ctx,pointer.x+R.clamp(pointer.dx,-35,35),pointer.y+R.clamp(pointer.dy,-35,35),15,15,'#fff6e3a8',null);ctx.restore();}}
+ ctx.restore();updateHelperTargets();updateCafeGalleryTarget();hits=[];if(mode==='world'||(mode==='dialog'&&modalReturn==='world'))drawOrderMarkers();if(pointer&&pointer.moved>9&&mode==='world'){ctx.save();ctx.globalAlpha=.6;A.ellipse(ctx,pointer.x,pointer.y,39,39,'#fff8ee22','#fff7df',2);A.ellipse(ctx,pointer.x+R.clamp(pointer.dx,-35,35),pointer.y+R.clamp(pointer.dy,-35,35),15,15,'#fff6e3a8',null);ctx.restore();}}
 function drawOrderMarkers(){
  const placed=[],active=orderCustomer(),stage=dom.stage.getBoundingClientRect();
- const occupied=[dom.orderPin,document.querySelector('.topbar'),dom.primary,document.querySelector('#picture-hint'),document.querySelector('.hint-hand')].filter(e=>e&&!e.hidden&&e.getClientRects().length).map(e=>{const r=e.getBoundingClientRect();return {x:r.left-stage.left,y:r.top-stage.top,w:r.width,h:r.height};});
+ const occupied=[dom.orderPin,document.querySelector('.topbar'),dom.primary,document.querySelector('#picture-hint'),document.querySelector('.hint-hand'),cafeGalleryTarget,cafeGalleryCue].filter(e=>e&&!e.hidden&&e.getClientRects().length).map(e=>{const r=e.getBoundingClientRect();return {x:r.left-stage.left,y:r.top-stage.top,w:r.width,h:r.height};});
  // Keep badges off visible actors, carried objects and helpers' job pictures.
  const reserveActor=(actor,h,w)=>{const q=worldToScreen(actor.x,actor.y);occupied.push({x:q.x-w*view.scale/2,y:q.y-h*view.scale,w:w*view.scale,h:(h+12)*view.scale});};
- reserveActor(engine.s.player,150,engine.s.tray||engine.s.dirtyTray?220:160);
+ reserveActor(engine.s.player,150,engine.s.tray||engine.s.dirtyTray||cafeClubhouse?.carried?220:160);
  for(const h of engine.s.helpers)reserveActor(h,h.hired?170:120,h.dish?180:135);
  for(const g of engine.s.customers)if(['arriving','paying','leaving'].includes(g.phase))reserveActor(g,150,160);
  // A floor marker may move around UI, but never onto a chair or table.
@@ -465,7 +567,7 @@ function animationFrame(ms){requestAnimationFrame(animationFrame);const dt=lastT
  for(const q of particles){q.x+=q.vx*dt;q.y+=q.vy*dt;q.vy+=55*dt;q.life-=dt;}particles=particles.filter(q=>q.life>0);if(toastUntil&&clock>toastUntil){$('toast').classList.remove('show');toastUntil=0;}if(loaded){if(['world','customize','loading'].includes(mode)||(mode==='dialog'&&modalReturn==='world'))drawWorld();if(mode==='customize')drawDesignerPreview();drawCooking();drawWashing();drawDayScene();}}
 async function offline(){if(window.RR_STANDALONE||!('serviceWorker'in navigator)||!['http:','https:'].includes(location.protocol))return;try{const ownWorker=new URL('./sw.js',location.href).href,hadController=navigator.serviceWorker.controller?.scriptURL===ownWorker;let refreshing=false;navigator.serviceWorker.addEventListener('controllerchange',()=>{if(hadController&&!refreshing){refreshing=true;save();location.reload();}});const registration=await navigator.serviceWorker.register('./sw.js',{scope:'./',updateViaCache:'none'});registration.update().catch(()=>{});await navigator.serviceWorker.ready;offlineReady=true;}catch(_){offlineReady=false;}}
 async function boot(){const current=++bootCount;mode='loading';dom.customizer.hidden=false;dom.customizer.innerHTML='<div class="custom-final"><div class="parent-copy">Setting the tables…</div></div>';$('menu').innerHTML=A.icon('settings');syncPrefs();resize();try{await A.load();if(current!==bootCount)return;loaded=true;if(migrated)save();showCustomizer(0);offline();}catch(err){dom.customizer.innerHTML=`<div class="custom-final"><div class="parent-copy">Artwork did not finish loading. Keep the assets folder beside index.html.</div><button class="open-button" data-action="load-retry" aria-label="Retry loading">${A.icon('retry')}</button></div>`;}}
-if(window.RR_QA===true||new URLSearchParams(location.search).get('qa')==='1')window.__RR_TEST__={get bridge(){return worldLink;},get worldExit(){return worldExitLatch?{...worldExitArea,state:worldExitLatch.snapshot()}:null;},get engine(){return engine;},get mode(){return mode;},get view(){return {...view};},get storageOK(){return storageOK;},get pictureHint(){return {idle,visible:!hintButton.hidden,playing:!!pictureHint,gesture:pictureHint?.gesture};},updatePictureHint,startPictureHint,dismissPictureHint,get offlineReady(){return offlineReady;},get migrated(){return migrated;},snapshot:()=>engine.snapshot(),hireHelper,helperScope,syncHelperEntitlements,save,resize,worldToScreen,showCustomizer,openRestaurant,route,updateHUD,openRecipeMenu,openCooking,openWash,drawWorld,metrics:()=>({width,height,dpr,mode,hitboxes:hits.map(x=>({...x})),audioUnlocked:sound.unlocked,worldMuted,musicTrack:engine.s.settings.musicTrack,musicNotes:sound.musicNotes,audioState:sound.context?.state,pathLength:path.length,goal:goal?{...goal}:null,auto:{key:autoZoneKey,inside:autoZoneInside,dwell:autoDwell,last:autoLastTrigger}}),changeMusic,openLunch,openClean,cleanAction,lunchAction,tickRestaurant,returnToWorld,showComplete,autoCandidate:()=>autoCandidate(),updateAuto:(dt=.3,stopped=true)=>updateAutoInteraction(dt,stopped),setPlayer(x,y){engine.s.player.x=x;engine.s.player.y=y;path=[];goal=null;pointer=null;keys.clear();autoZoneKey=null;autoZoneInside=false;autoDwell=0;},loadFixture(raw){dom.modal.innerHTML='';engine=new R.Engine(raw);npcPaths.clear();path=[];goal=null;particles=[];hudSignature='';kitchenSignature='';selectedCleanup=null;autoZoneKey=null;autoZoneInside=false;autoDwell=0;autoLastTrigger='';completeShown=false;dayScreen.hidden=true;save();returnToWorld();}};
+if(window.RR_QA===true||new URLSearchParams(location.search).get('qa')==='1')window.__RR_TEST__={get bridge(){return worldLink;},get worldExit(){return worldExitLatch?{...worldExitArea,state:worldExitLatch.snapshot()}:null;},get engine(){return engine;},get mode(){return mode;},get view(){return {...view};},get storageOK(){return storageOK;},get cafeGallery(){return {rect:{...cafeGallery},available:cafeArtAvailable(),pending:cafeDisplayRequest?{...cafeDisplayRequest}:null,displayed:cafeDisplayed()?.id||null,carried:cafeClubhouse?.carried?.id||null,targetHidden:cafeGalleryTarget.hidden,cueHidden:cafeGalleryCue.hidden,viewSpot:{...cafeGalleryViewSpot}};},hangCafePicture,get pictureHint(){return {idle,visible:!hintButton.hidden,playing:!!pictureHint,gesture:pictureHint?.gesture,automaticCount:automaticHints.size};},updatePictureHint,startPictureHint,dismissPictureHint,get offlineReady(){return offlineReady;},get migrated(){return migrated;},snapshot:()=>engine.snapshot(),hireHelper,helperScope,syncHelperEntitlements,save,resize,worldToScreen,showCustomizer,openRestaurant,route,updateHUD,openRecipeMenu,openCooking,openWash,drawWorld,metrics:()=>({width,height,dpr,mode,hitboxes:hits.map(x=>({...x})),audioUnlocked:sound.unlocked,worldMuted,musicTrack:engine.s.settings.musicTrack,musicNotes:sound.musicNotes,audioState:sound.context?.state,pathLength:path.length,goal:goal?{...goal}:null,auto:{key:autoZoneKey,inside:autoZoneInside,dwell:autoDwell,last:autoLastTrigger}}),changeMusic,openLunch,openClean,cleanAction,lunchAction,tickRestaurant,returnToWorld,showComplete,autoCandidate:()=>autoCandidate(),updateAuto:(dt=.3,stopped=true)=>updateAutoInteraction(dt,stopped),setPlayer(x,y){engine.s.player.x=x;engine.s.player.y=y;path=[];goal=null;pointer=null;keys.clear();autoZoneKey=null;autoZoneInside=false;autoDwell=0;},loadFixture(raw){dom.modal.innerHTML='';engine=new R.Engine(raw);cafeGuestReactions.clear();automaticHints.clear();lastHintTarget=null;npcPaths.clear();path=[];goal=null;particles=[];hudSignature='';kitchenSignature='';selectedCleanup=null;autoZoneKey=null;autoZoneInside=false;autoDwell=0;autoLastTrigger='';completeShown=false;dayScreen.hidden=true;save();returnToWorld();}};
 // v1.4: day scenes share the same characters, table art, picture controls and audio.
 function nextCleanTask(){const ts=engine.cleanTargets(),p=engine.s.player;ts.sort((a,b)=>Math.hypot(a.x-p.x,a.y-p.y)-Math.hypot(b.x-p.x,b.y-p.y));return ts[0]||null;}
 function taskPicture(t){if(t.kind==='table')return tableMarkHTML(t.table);if(t.kind==='floor')return imageHTML('mop');if(t.kind==='window')return imageHTML('room_window');return imageHTML(t.kind==='sink'?'painted_sink':'painted_kitchen');}
@@ -582,8 +684,8 @@ if(new URLSearchParams(location.search).get('hub')==='1'&&window.parent!==window
  if(e.data.command==='resume'){hubPaused=!worldReady;stopControls();lastTime=0;resize();ack('resume');}
  });
  const script=file=>new Promise((resolve,reject)=>{const n=document.createElement('script');n.src=new URL('hub/shared/'+file+'.js',worldBase).href;n.onload=resolve;n.onerror=reject;document.head.append(n);});
- (async()=>{await script('catalogue');await script('sprites');await script('art');await UWArt.loadWardrobe();await script('portals');await UWPortals.load();worldExitLatch=UWPortals.latch();resetWorldExit();await script('bridge');
- worldLink=new UWBridge.Link({game:'cafe',key:R.SAVE_KEY,snapshot:()=>engine.snapshot(),restore:raw=>{engine=new R.Engine(raw);},onProfile:p=>{const was=worldMuted;worldMuted=!!p.settings.muted;worldOutfit=p.outfit;syncHelperEntitlements();if(worldMuted||was)sound.mute();if(loaded)drawWorld();},onReady:()=>{worldReady=true;}});
+ (async()=>{await script('catalogue');await script('sprites');await script('art');await UWArt.loadWardrobe();await script('clubhouse-art').catch(()=>{});await script('portals');await UWPortals.load();worldExitLatch=UWPortals.latch();resetWorldExit();await script('bridge');
+ worldLink=new UWBridge.Link({game:'cafe',key:R.SAVE_KEY,snapshot:()=>engine.snapshot(),restore:raw=>{engine=new R.Engine(raw);},onProfile:p=>{const was=worldMuted;worldMuted=!!p.settings.muted;worldOutfit=p.outfit;syncCafeClubhouse(p.clubhouse);syncHelperEntitlements();if(worldMuted||was)sound.mute();if(loaded)drawWorld();},onReady:()=>{worldReady=true;}});
  worldLink.cafeConnect(engine.s.coins);
  const announceReady=setInterval(()=>{if(loaded&&worldReady){clearInterval(announceReady);ack('ready');}},100);
  })().catch(()=>{worldReady=true;const retry=setInterval(()=>{if(loaded){clearInterval(retry);ack('ready');}},100);});}
