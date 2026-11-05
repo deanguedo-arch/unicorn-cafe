@@ -19,8 +19,16 @@ function apply(p,action,a={},loadedMedia=null){
  case'earn':{
   const e=a.event;if(!e||!e.id||typeof e.id!=='string'||e.id.length>240)fail('invalid');let amount=0;
   if(a.game==='cafe'&&e.kind==='import')amount=Math.max(0,Math.min(10000000,Math.floor(Number(e.coins)||0)));
-  else if(a.game==='cafe'&&e.kind==='payment')amount=1;
-  else if(a.game==='adventure'&&e.kind==='win')amount=3;
+  else if(a.game==='cafe'&&e.kind==='payment'){if(e.amount===undefined)amount=1;else if(Number.isInteger(e.amount)&&e.amount>=1&&e.amount<=3)amount=e.amount;else fail('invalid');}
+  else if(a.game==='cafe'&&e.kind==='home-design-unlock'){
+   const allow=["home-design-v1:building-block-set","home-design-v1:dollhouse","home-design-v1:stacking-rings","home-design-v1:reading-cushion","home-design-v1:book-basket","home-design-v1:star-floor-lamp","home-design-v1:round-flowerpot","home-design-v1:seedling-tray","home-design-v1:mini-potted-tree","home-design-v1:patchwork-rug","home-design-v1:cloud-beanbag","home-design-v1:quilted-pouf"];if(!allow.includes(e.designId)||!B.decorationById[e.designId]||!e.id.startsWith('cafe-design:'))fail('invalid');
+   const alreadyOwned=p.decor.owned.includes(e.designId);if(!alreadyOwned)p.decor.owned.push(e.designId);
+   return{amount:0,target:'home',designId:e.designId,alreadyOwned};
+  }
+  else if(a.game==='adventure'&&e.kind==='win'){
+   if(e.ingredients!==undefined&&(!Array.isArray(e.ingredients)||e.ingredients.length>2||e.ingredients.some(x=>!['apple','cherry'].includes(x))))fail('invalid');
+   amount=3;if(e.ingredients?.length){if(!Array.isArray(p.cafeIngredients))p.cafeIngredients=[];for(const ingredient of e.ingredients)if(!p.cafeIngredients.includes(ingredient))p.cafeIngredients.push(ingredient);}
+  }
   else if(a.game==='adventure'&&e.kind==='costumes'){
    grant(p,'legacy-princess');const n=Math.max(0,Math.floor(Number(e.secrets)||0));
    if(n>=1){grant(p,'legacy-hero');grant(p,'legacy-mask');}if(n>=2)grant(p,'legacy-chef');if(n>=3)grant(p,'legacy-space');

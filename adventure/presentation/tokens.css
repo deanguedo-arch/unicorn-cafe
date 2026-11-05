@@ -1,0 +1,24 @@
+/* Canonical complete-redo tokens from contracts/PRESENTATION-REDO.md */
+:root{
+  --uw-ivory:#F7EBD5;
+  --uw-plum:#49344F;
+  --uw-lavender:#B39BCC;
+  --uw-gold:#D5A94C;
+  --uw-wood:#D7B184;
+  --uw-grass:#78956B;
+  --uw-outline:#5B435D;
+  --uw-ink:var(--uw-plum);
+  --uw-ink-soft:#725B7D;
+  --uw-surface:var(--uw-ivory);
+  --uw-surface-alt:#EFE2D0;
+  --uw-lavender-pale:#E9DFF0;
+  --uw-gold-pale:#F2E1B9;
+  --uw-disabled:#CFC6CB;
+  --uw-focus:#6C4C83;
+  --uw-shadow:#49344F35;
+  --uw-radius-control:16px;
+  --uw-radius-card:20px;
+  --uw-target-min:44px;
+  --uw-icon-main:var(--uw-plum);
+  --uw-icon-accent:var(--uw-gold);
+}

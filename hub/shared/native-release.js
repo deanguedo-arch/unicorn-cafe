@@ -1,0 +1,10 @@
+/* Release identity for native iframes. Never reads or changes player storage. */
+(function(root){'use strict';
+function expected(game){return root.UWNativeBuilds?.[game]||null;}
+function accept(game,build){const want=expected(game);return !want||build===want;}
+function version(url,game){const out=new URL(url);const build=expected(game);if(build)out.searchParams.set('build',build);return out;}
+function status(worker){if(!worker||typeof MessageChannel==='undefined')return Promise.resolve(null);return new Promise(resolve=>{const channel=new MessageChannel(),timer=setTimeout(()=>{channel.port1.close();resolve(null);},2000);channel.port1.onmessage=e=>{clearTimeout(timer);channel.port1.close();resolve(e.data);};worker.postMessage({type:'APP_STATUS'},[channel.port2]);});}
+async function prepare(url,game){const entry=new URL(url);if(entry.origin===root.location?.origin&&entry.pathname.endsWith('/play/'+game+'.html'))return;const build=expected(game);if(!build||!root.navigator?.serviceWorker)return;const scope=new URL('./',url).href,existing=await navigator.serviceWorker.getRegistration(scope);const info=await status(existing?.active);if(info?.build===build&&info.cached)return;const worker=new URL('./sw.js',url);worker.searchParams.set('build',build);const reg=await navigator.serviceWorker.register(worker.href,{scope,updateViaCache:'none'});await reg.update();const pending=reg.installing||reg.waiting;if(pending&&pending.state!=='activated')await new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(Error('Current game update is still loading.')),30000);pending.addEventListener('statechange',()=>{if(pending.state==='activated'){clearTimeout(timer);resolve();}else if(pending.state==='redundant'){clearTimeout(timer);reject(Error('Current game update could not install.'));}});});const ready=await status(reg.active);if(ready?.build!==build||!ready.cached)throw Error('The current game version has not finished updating.');}
+
+root.UWNativeRelease={expected,accept,version,prepare};if(typeof module!=='undefined')module.exports=root.UWNativeRelease;
+})(typeof window==='undefined'?globalThis:window);

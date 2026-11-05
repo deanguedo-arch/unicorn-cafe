@@ -1,0 +1,13 @@
+/* Source-only authored geometry contract. No storage, auto snapping, or live activation. */
+(function(root){'use strict';
+const inside=(p,r)=>p[0]>=r[0]&&p[0]<=r[0]+r[2]&&p[1]>=r[1]&&p[1]<=r[1]+r[3];
+const overlap=(a,b)=>a[0]<b[0]+b[2]&&a[0]+a[2]>b[0]&&a[1]<b[1]+b[3]&&a[1]+a[3]>b[1];
+function walkable(m,p,radius=17){for(const [dx,dy]of[[1,0],[-1,0],[0,1],[0,-1],[.707,.707],[.707,-.707],[-.707,.707],[-.707,-.707]])if(!m.floors.some(r=>inside([p[0]+dx*radius,p[1]+dy*radius],r)))return false;return !m.objects.some(o=>{const r=o.collision,dx=p[0]-Math.max(r[0],Math.min(p[0],r[0]+r[2])),dy=p[1]-Math.max(r[1],Math.min(p[1],r[1]+r[3]));return dx*dx+dy*dy<radius*radius;});}
+function errors(m){const e=[],ids=new Set();for(const o of m.objects){if(ids.has(o.id))e.push('Duplicate object '+o.id);ids.add(o.id);if(o.footBaseline!==o.visual[1]+o.visual[3])e.push('Invalid foot baseline '+o.id);for(const r of m.zones.filter(z=>z.kind==='route'||z.kind==='protected'))if(overlap(o.visual,r.rect))e.push('Visual obstructs '+r.id+': '+o.id);}
+for(const p of[m.spawn,m.goal.approach,...m.portals.map(p=>p.approach),...m.lootSockets.map(s=>s.reachablePlayerAnchor)])if(!walkable(m,p))e.push('Unwalkable interaction '+p);
+for(const s of m.lootSockets){if(!ids.has(s.fixture))e.push('Unknown support '+s.id);if(Math.hypot(s.supportRenderAnchor[0]-s.reachablePlayerAnchor[0],s.supportRenderAnchor[1]-s.reachablePlayerAnchor[1])>s.interactionReach)e.push('Unreachable socket '+s.id);}
+for(const portal of m.portals){for(const o of m.objects)if(overlap(portal.visual,o.visual))e.push('Portal over fixture '+portal.id);if(overlap(portal.visual,m.goal.visual))e.push('Portal over goal');}
+for(const route of m.patrolRoutes){for(let i=0;i<route.points.length;i++){const a=route.points[i],b=route.points[(i+1)%route.points.length],n=Math.ceil(Math.hypot(a[0]-b[0],a[1]-b[1])/8);for(let j=0;j<=n;j++)if(!walkable(m,[a[0]+(b[0]-a[0])*j/n,a[1]+(b[1]-a[1])*j/n],22)){e.push('Patrol obstructed '+route.id);break;}}}return e;}
+function compile(m){const problems=errors(m);if(problems.length)throw Error(problems.join('; '));return Object.freeze({geometry:m.geometry,id:m.id,w:m.world[0],h:m.world[1],floors:m.floors,obstacles:m.objects.map(o=>({id:o.id,r:o.collision,sort:o.footBaseline,renderBounds:o.visual,kit:o.kit})),spawn:{x:m.spawn[0],y:m.spawn[1]},home:{x:m.goal.point[0],y:m.goal.point[1],r:m.goal.interactionReach},lootSockets:m.lootSockets,patrolRoutes:m.patrolRoutes,portals:m.portals,previewOnly:true});}
+root.UnicornSemanticMap=Object.freeze({errors,walkable,compile});
+})(typeof window!=='undefined'?window:globalThis);

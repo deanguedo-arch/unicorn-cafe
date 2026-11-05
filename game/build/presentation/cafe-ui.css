@@ -1,0 +1,25 @@
+/* Café layer; load after styles.css. Selection state is scoped to known control groups. */
+@import url('./tokens.css');
+body{color:var(--uw-ink)}.topbar,.kitchen-header{background:var(--uw-lavender-pale)!important;color:var(--uw-ink)!important;border-color:var(--uw-outline)!important}.topbar button,.dock button,.context-action,.picture-tool,.single-action,.dialog-button,.open-button,.designer-tab,.custom-nav button,.day-choice,.lunch-choices button,.menu-grid button,.dish-card,.choice,.custom-choice,.custom-dot{border:2px solid var(--uw-outline)!important;border-radius:var(--uw-radius-control)!important;color:var(--uw-ink)!important;background:var(--uw-surface)!important;box-shadow:0 3px 0 var(--uw-wood)!important;min-height:var(--uw-target-min)}.context-action,.single-action,.primary-action,.dialog-button.primary,.ready-actions button:first-child{background:linear-gradient(#E5C878,var(--uw-gold))!important;border-color:var(--uw-outline)!important;color:var(--uw-plum)!important;font-weight:850!important}.dialog,.settings-dialog,.overlay .panel,.day-ticket,.order-table,.cook-order,.customizer,.designer-shell,.day-screen,.lunch-screen,.kitchen-screen{background:var(--uw-surface)!important;color:var(--uw-ink)!important;border-color:var(--uw-outline)!important;border-radius:24px!important;box-shadow:0 10px 30px var(--uw-shadow)!important}.overlay{background:#49344F99!important}.dialog-button:focus-visible,.settings-dialog button:focus-visible,.dock button:focus-visible,.topbar button:focus-visible{outline:3px solid var(--uw-focus)!important;outline-offset:2px!important}.designer-tabs,.custom-nav,.day-controls,.day-progress,.cook-tools,.wash-tools,.ready-actions{background:var(--uw-lavender-pale)!important;border-color:var(--uw-outline)!important;color:var(--uw-ink)!important}.designer-shell .designer-tab[aria-selected=true],.designer-shell .custom-choice[aria-pressed=true],.day-screen .day-choice[aria-pressed=true],.lunch-screen .choice[aria-pressed=true],.kitchen-screen .dish-card[aria-pressed=true],.kitchen-screen .menu-grid button[aria-pressed=true],.settings-dialog [aria-pressed=true]{border-color:var(--uw-plum)!important;background:var(--uw-lavender-pale)!important;box-shadow:inset 0 0 0 2px var(--uw-surface)!important}.order-person,.order-dish-name,.brand-copy,.kitchen-title-pic{color:var(--uw-ink)!important}.toast{background:var(--uw-surface)!important;color:var(--uw-ink)!important;border:2px solid var(--uw-outline)!important;border-radius:18px!important}
+svg.uw-icon{display:inline-block;width:32px;height:32px;color:var(--uw-plum);vertical-align:middle;flex:0 0 auto}.primary-action svg.uw-icon,.context-action svg.uw-icon{color:var(--uw-plum)}.topbar .uw-icon{color:var(--uw-plum)}
+#menu>svg.uw-icon{width:30px;height:30px}.context-action>svg.uw-icon,.single-action>svg.uw-icon,.day-big>svg.uw-icon{width:58%;height:58%}.kitchen-header button>svg.uw-icon,.dialog-buttons button>svg.uw-icon,.small-round>svg.uw-icon{width:30px;height:30px}.designer-tab>svg.uw-icon{width:28px;height:28px}
+
+/* Spending is a separate explicit choice, never the first tap on a helper. */
+.helper-hire-preview{display:flex;align-items:center;justify-content:center;gap:28px;margin:12px auto;}
+.helper-hire-preview .helper-portrait{width:112px;height:124px;object-fit:contain;}
+.helper-hire-cost{display:flex;align-items:center;gap:10px;font-size:36px;color:var(--uw-ink,#514453);}
+.helper-hire-cost svg{width:52px;height:52px;}
+.helper-hire-copy{text-align:center;font-size:18px;}
+/* Party orders: food pictures keep their natural proportions inside each fixed chip. */
+.party-items{display:flex;gap:4px;align-items:center;justify-content:center;flex-wrap:wrap;min-width:0;max-width:100%}
+.party-items>span{flex:0 0 auto;box-sizing:border-box}
+.party-food{width:100%;height:100%;object-fit:contain;display:block}
+.party-items svg{max-width:100%;max-height:100%}
+
+/* Shared native-pixel internal Back. Host Exit remains host-owned. */
+button.cafe-back-control,button:has(>svg.uw-back-icon){box-sizing:border-box!important;min-width:48px!important;min-height:48px!important;flex-shrink:0!important;border:2px solid #352C46!important;border-radius:4px!important;background:#FFF2D4!important;box-shadow:0 2px 0 #76543D!important;padding:6px!important;display:inline-grid;place-items:center;}
+button.cafe-back-control>svg.uw-back-icon,button>svg.uw-back-icon{width:32px!important;height:32px!important;min-width:32px;min-height:32px;stroke:none!important;fill:none;filter:none!important;shape-rendering:crispEdges;pointer-events:none;}
+button.cafe-back-control:focus-visible,button:has(>svg.uw-back-icon):focus-visible{outline:3px solid #52789D!important;outline-offset:3px!important;}
+.kitchen-header:has(.uw-back-icon),.day-heading:has(.uw-back-icon){min-height:56px!important;height:56px!important;grid-template-columns:48px minmax(0,1fr) 48px!important;padding:4px 8px!important;box-sizing:border-box;}
+.cook-layout .kitchen-header:has(.uw-back-icon){padding:4px 0!important;}
+@media(prefers-reduced-motion:reduce){button.cafe-back-control{transition:none!important;}}

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <style>symbol path,symbol circle,symbol rect{stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;fill:none}symbol path[fill="currentColor"],symbol circle[fill="currentColor"],symbol rect[fill="currentColor"]{fill:currentColor}</style>
+  <symbol id="uw-nav" viewBox="0 0 48 48"><path d="M9 24 24 9l15 15M14 21v18h20V21M21 39V27h7v12"/></symbol>
+  <symbol id="uw-back" viewBox="0 0 48 48"><g transform="scale(3)" shape-rendering="crispEdges"><path style="stroke:none;fill:#352C46" d="M2 7H4V5H6V3H8V6H14V10H8V13H6V11H4V9H2Z"/><path style="stroke:none;fill:#FFF2D4" d="M4 7H6V5H7V7H13V9H7V11H6V9H4Z"/><path style="stroke:none;fill:#D9AF52" d="M7 8H13V9H7Z"/></g></symbol>
+  <symbol id="uw-close" viewBox="0 0 48 48"><path d="m13 13 22 22M35 13 13 35"/></symbol>
+  <symbol id="uw-play" viewBox="0 0 48 48"><path d="M16 9v30l24-15z" fill="currentColor"/></symbol>
+  <symbol id="uw-pause" viewBox="0 0 48 48"><path d="M15 11h7v26h-7zM27 11h7v26h-7z" fill="currentColor"/></symbol>
+  <symbol id="uw-retry" viewBox="0 0 48 48"><path d="M11 20a15 15 0 1 1-1 10M10 10v11h11"/></symbol>
+  <symbol id="uw-settings" viewBox="0 0 48 48"><path d="M20 7h8l1 5 4 2 4-2 5 7-3 4v4l3 4-5 7-5-2-4 2-1 5h-8l-1-5-4-2-4 2-5-7 3-4v-4l-3-4 5-7 5 2 4-2z"/><circle cx="24" cy="24" r="7"/></symbol>
+  <symbol id="uw-sound" viewBox="0 0 48 48"><path d="M8 19h8l11-9v28l-11-9H8zM33 18a9 9 0 0 1 0 12M37 13a16 16 0 0 1 0 22"/></symbol>
+  <symbol id="uw-bag" viewBox="0 0 48 48"><path d="M9 18h30l3 24H6zM16 19v-5a8 8 0 0 1 16 0v5"/></symbol>
+  <symbol id="uw-coin" viewBox="0 0 48 48"><circle cx="24" cy="24" r="18"/><circle cx="24" cy="24" r="12"/><path d="M27 16c-1-2-8-2-8 2 0 5 10 2 10 8 0 5-7 7-11 3M24 13v22"/></symbol>
+  <symbol id="uw-check" viewBox="0 0 48 48"><path d="m9 25 10 10 21-23"/></symbol>
+  <symbol id="uw-home" viewBox="0 0 48 48"><path d="m6 23 18-16 18 16M11 21v20h26V21M20 41V28h8v13"/></symbol>
+  <symbol id="uw-help" viewBox="0 0 48 48"><circle cx="24" cy="24" r="18"/><path d="M18 18a6 6 0 1 1 10 5c-3 2-4 3-4 7M24 35v1"/></symbol>
+  <symbol id="uw-photo" viewBox="0 0 48 48"><path d="M7 16h8l4-6h11l4 6h7v25H7z"/><circle cx="24" cy="27" r="8"/><circle cx="36" cy="21" r="1" fill="currentColor"/></symbol>
+  <symbol id="uw-puzzle" viewBox="0 0 48 48"><path d="M7 7h13c-3 7 8 9 8 2 0-1 0-1-1-2h14v14c-7-3-9 8-2 8 1 0 1 0 2-1v13H27c3-7-8-9-8-2 0 1 0 1 1 2H7V27c7 3 9-8 2-8-1 0-1 0-2 1z"/></symbol>
+  <symbol id="uw-paint" viewBox="0 0 48 48"><path d="M24 7a17 17 0 0 0 0 34h4c4 0 5-5 2-7-2-2-1-5 2-5h4c11 0 10-22-12-22z"/><circle cx="15" cy="20" r="2" fill="currentColor"/><circle cx="23" cy="14" r="2" fill="currentColor"/><circle cx="33" cy="18" r="2" fill="currentColor"/></symbol>
+  <symbol id="uw-wardrobe" viewBox="0 0 48 48"><path d="m15 10 9 5 9-5 9 6-5 8-5-3v18H12V21l-5 3-5-8z" transform="translate(4 0) scale(.84 1)"/><path d="M24 15v25"/></symbol>
+  <symbol id="uw-left" viewBox="0 0 48 48"><path d="m29 9-15 15 15 15M15 24h25"/></symbol>
+  <symbol id="uw-right" viewBox="0 0 48 48"><path d="m19 9 15 15-15 15M33 24H8"/></symbol>
+  <symbol id="uw-star" viewBox="0 0 48 48"><path d="m24 5 6 12 13 2-9 9 2 14-12-7-12 7 2-14-9-9 13-2z" fill="currentColor"/></symbol>
+  <symbol id="uw-hand" viewBox="0 0 48 48"><path d="M16 25V12a4 4 0 0 1 8 0v10-14a4 4 0 0 1 8 0v14-10a4 4 0 0 1 8 0v14-6a4 4 0 0 1 8 0v12c0 8-5 13-13 13h-5c-6 0-9-2-12-6l-7-9a4 4 0 0 1 6-5z" transform="translate(-4 -2) scale(.92 .94)"/></symbol>
+  <symbol id="uw-rotate" viewBox="0 0 48 48"><path d="M7 18A17 17 0 0 1 37 12l4 4M41 7v9H32M41 30A17 17 0 0 1 11 36l-4-4M7 41v-9h9"/></symbol>
+  <symbol id="uw-grid" viewBox="0 0 48 48"><rect x="7" y="7" width="14" height="14" rx="3"/><rect x="27" y="7" width="14" height="14" rx="3"/><rect x="7" y="27" width="14" height="14" rx="3"/><rect x="27" y="27" width="14" height="14" rx="3"/></symbol>
+  <symbol id="uw-grid4" viewBox="0 0 48 48"><path d="M7 7h34v34H7zM24 7v34M7 24h34"/></symbol>
+  <symbol id="uw-grid9" viewBox="0 0 48 48"><path d="M6 6h36v36H6zM18 6v36M30 6v36M6 18h36M6 30h36"/></symbol>
+  <symbol id="uw-grid16" viewBox="0 0 48 48"><path d="M6 6h36v36H6zM15 6v36M24 6v36M33 6v36M6 15h36M6 24h36M6 33h36"/></symbol>
+  <symbol id="uw-mirror" viewBox="0 0 48 48"><path d="M24 6c-9 0-15 8-15 19s6 17 15 17 15-6 15-17S33 6 24 6zM24 42v4m-8 0h16"/><path d="M17 17q3-5 7-5"/></symbol>
+  <symbol id="uw-mute" viewBox="0 0 48 48"><path d="M7 18h8l12-9v30l-12-9H7zM34 18l10 12m0-12L34 30"/></symbol>
+  <symbol id="uw-door" viewBox="0 0 48 48"><path d="M8 42V8h28v34M8 42h34M17 42V13l15-3v32M26 27h.1"/></symbol>
+  <symbol id="uw-headwear" viewBox="0 0 48 48"><path d="M7 31h34l-4-7a13 13 0 0 0-26 0zM7 31v7h34v-7M22 16l2-5 2 5"/></symbol>
+  <symbol id="uw-shirt" viewBox="0 0 48 48"><path d="m15 8 9 5 9-5 11 7-5 11-6-3v17H15V23l-6 3-5-11zM18 10q6 9 12 0"/></symbol>
+  <symbol id="uw-accessory" viewBox="0 0 48 48"><path d="M12 8q0 16 12 21 12-5 12-21M24 29v6"/><path d="m24 34 7 6-7 5-7-5z" fill="currentColor"/></symbol>
+</svg>

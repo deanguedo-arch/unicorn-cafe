@@ -3,9 +3,11 @@
 const books=[
  {id:'picnic',name:'Picnic outing',gift:'picnic-basket',steps:[{id:'serve',name:'Serve a café customer',icon:'pizza'},{id:'outfit',name:'Choose your outfit',icon:'shirt'},{id:'picnic',name:'Share a park picnic',icon:'basket'}]},
  {id:'dress',name:'Dress-up party',gift:'star-lamp',steps:[{id:'outfit',name:'Wear your outfit',icon:'shirt'},{id:'photo',name:'Take an outfit photo',icon:'camera'},{id:'display',name:'Display that photo at home',icon:'photo'}]},
- {id:'park',name:'Park day',gift:'rainbow-beanbag',steps:[{id:'visit',name:'Visit the park',icon:'ball'},{id:'play',name:'Take three shots or finish a match',icon:'ball'},{id:'home',name:'Return home',icon:'home'}]}
+ {id:'park',name:'Games day',gift:'rainbow-beanbag',steps:[{id:'visit',name:'Choose a court game',icon:'ball'},{id:'play',name:'Finish a tennis or volleyball match',icon:'ball'},{id:'home',name:'Return home',icon:'home'}]}
 ];
 const decorations=[['rug','Rainbow rug'],['cushion-pink','Pink cushion'],['cushion-blue','Blue cushion'],['teddy','Teddy bear'],['train','Toy train'],['plant','Flower plant'],['picnic-basket','Picnic basket'],['star-lamp','Star reading lamp'],['rainbow-beanbag','Rainbow beanbag']].map(([id,name],i)=>({id,name,free:i<6,image:'./assets/playbook/decor-atlas.png',atlasIndex:i}));
+const homeDesignNames=[['building-block-set','Building blocks'],['dollhouse','Dollhouse'],['stacking-rings','Stacking rings'],['reading-cushion','Reading cushion'],['book-basket','Book basket'],['star-floor-lamp','Star floor lamp'],['round-flowerpot','Round flowerpot'],['seedling-tray','Seedling tray'],['mini-potted-tree','Mini potted tree'],['patchwork-rug','Patchwork rug'],['cloud-beanbag','Cloud beanbag'],['quilted-pouf','Quilted pouf']];
+for(const [key,name]of homeDesignNames)decorations.push({id:'home-design-v1:'+key,name,free:false,source:'home-design-v1',sprite:'home-design-v1:'+key,lockedUntilOwned:true});
 const byId=Object.fromEntries(books.map(b=>[b.id,b])),decorationById=Object.fromEntries(decorations.map(d=>[d.id,d]));
 const uuid=()=>globalThis.crypto?.randomUUID?.()||Date.now().toString(36)+'-'+Math.random().toString(36).slice(2);
 function normalize(p){

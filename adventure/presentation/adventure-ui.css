@@ -1,0 +1,68 @@
+/* Native Sneaky Unicorn UI. Import after inline/source CSS; this doesn't touch canvas UI. */
+@import url('./tokens.css');
+#overlay{background:#49344F9E!important}#overlay .menu,#overlay .panel,#picture-dialog .picture-panel{background:var(--uw-surface)!important;color:var(--uw-ink)!important;border:3px solid var(--uw-outline)!important;border-radius:24px!important;box-shadow:0 12px 35px var(--uw-shadow)!important}#brand,#subline,#kicker,.parent-copy{color:var(--uw-ink)!important}#modePicker button,#levelCards button,#resultButtons button,#settings-pictures button,#help-pictures button,#ui-resume,#ui-places,#ui-help,#help-back,#reload,.picture-round,#finishLevel,.action,.dialog-button{min-height:var(--uw-target-min);min-width:var(--uw-target-min);border:2px solid var(--uw-outline)!important;border-radius:var(--uw-radius-control)!important;background:var(--uw-surface)!important;color:var(--uw-ink)!important;box-shadow:0 3px 0 var(--uw-wood)!important}#modePicker button[aria-pressed=true],#levelCards .levelCard[aria-pressed=true],#levelCards .levelCard.active{border-color:var(--uw-plum)!important;background:var(--uw-lavender-pale)!important}#resultButtons button:first-child,#settings-pictures #ui-resume,#finishLevel{background:linear-gradient(#E5C878,var(--uw-gold))!important;border-color:var(--uw-outline)!important;color:var(--uw-plum)!important;font-weight:850!important}#levelCards .levelCard,#resultItems .costumeCard,#resultItems .stickerCell,.unlockPill{border-color:var(--uw-outline)!important;border-radius:18px!important;background:var(--uw-surface)!important;color:var(--uw-ink)!important}.levelCard .map,.menu-art,.theme-picture{border-radius:14px}.progress-track{background:var(--uw-lavender-pale)!important}.progress-track>span{background:var(--uw-gold)!important}#hud,#dock,#actions{color:var(--uw-ink)}#hud #lives,#hud #mission,#hud #goalCount,#hud #bagGoal{background:var(--uw-surface)!important;color:var(--uw-ink)!important;border:2px solid var(--uw-outline)!important;border-radius:18px!important}#overlay button:focus-visible,#picture-dialog button:focus-visible,#gameMenu:focus-visible{outline:3px solid var(--uw-focus)!important;outline-offset:2px!important}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+svg.uw-icon{display:inline-block;width:32px;height:32px;color:var(--uw-plum);vertical-align:middle;flex:0 0 auto}#settings-pictures svg.uw-icon{color:var(--uw-plum)}#resultButtons button:first-child svg.uw-icon,#finishLevel svg.uw-icon{color:var(--uw-plum)}
+/* The mission wrapper spans the viewport; only its picture groups need a surface. */
+#hud #mission{background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important}
+#gameMenu svg.uw-icon{width:30px;height:30px}#finishLevel>svg.uw-icon,#resultButtons .bigButton>svg.uw-icon{width:48px;height:48px}#modePicker button svg.uw-icon{width:40px;height:40px}#levelCards .playMark svg.uw-icon{width:26px;height:26px}#settings-pictures .settings-grid button svg.uw-icon{width:42px;height:42px}#help-back svg.uw-icon{width:32px;height:32px}
+
+/* Recovery needs visible adult-readable meaning as well as child-sized picture actions. */
+#overlay.outing-recovery #brand,#overlay.outing-recovery #subline,#overlay.outing-recovery #resultButtons .sr-only{position:static!important;width:auto!important;height:auto!important;padding:0!important;margin:10px 0!important;overflow:visible!important;clip:auto!important;clip-path:none!important;white-space:normal!important;display:block!important;text-shadow:none!important;letter-spacing:normal!important}
+#overlay.outing-recovery #brand{font-size:24px!important;line-height:1.2!important}
+#overlay.outing-recovery #subline{font-size:16px!important;line-height:1.4!important;max-width:640px}
+#overlay.outing-recovery #resultButtons{display:flex;flex-wrap:wrap;justify-content:center;gap:16px}
+#overlay.outing-recovery #resultButtons button{height:auto!important;min-height:104px;max-width:280px;padding:12px!important;display:flex;flex-direction:column;align-items:center;gap:8px}
+#overlay.outing-recovery #resultButtons .sr-only{font-size:16px!important;line-height:1.25!important;font-weight:700}
+
+/* Consistent native return glyph; preserve settings/result action semantics. */
+#help-back{box-sizing:border-box!important;width:48px!important;height:48px!important;min-width:48px!important;min-height:48px!important;flex-shrink:0!important;padding:6px!important;border:2px solid #352C46!important;border-radius:4px!important;background:#FFF2D4!important;box-shadow:0 2px 0 #A5754D!important;display:flex;align-items:center;justify-content:center}
+#help-back>svg.uw-back-icon{width:32px!important;height:32px!important;flex:none;display:block}
+#help-back:focus-visible{outline:3px solid var(--uw-focus)!important;outline-offset:2px!important}
+#help-pictures{padding-bottom:max(8px,env(safe-area-inset-bottom))}
+
+/* Bounded picture-result cards, independent of the full-width place selector. */
+#overlay.result,#overlay.outing-recovery{padding:max(16px,env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) max(20px,env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left));overflow:auto;touch-action:pan-y}
+#overlay.result .panel{width:min(480px,100%);max-width:480px;max-height:calc(100dvh - 40px);padding:24px;display:flex;flex-direction:column;align-items:center;gap:12px;overflow:auto;touch-action:pan-y;border-radius:4px!important;box-shadow:0 4px 0 var(--uw-wood)!important}
+#overlay.result #winHero{width:144px;height:136px;max-width:100%;margin:0;object-fit:contain;image-rendering:pixelated;flex:none}
+#overlay.result #resultStars{height:40px;min-height:40px;gap:8px;margin:0;flex:none}
+#overlay.result #resultStars img{width:40px;height:40px;object-fit:contain;image-rendering:pixelated}
+#overlay.result #resultItems{width:100%;max-width:340px;max-height:112px;min-height:0;margin:0;display:flex;flex-wrap:wrap;gap:8px;justify-content:center;align-items:center;overflow:auto;touch-action:pan-y;flex:none}
+#overlay.result #resultItems:empty{display:none}
+#overlay.result #resultItems img{width:48px;height:48px;padding:4px;object-fit:contain;image-rendering:pixelated;background:var(--uw-gold-pale);border:2px solid var(--uw-wood);border-radius:4px;flex:none}
+#overlay.result #resultButtons{width:100%;gap:12px;flex-wrap:wrap;margin:4px 0 0;padding:0 2px 4px;flex:none}
+#overlay.result #resultButtons .bigButton{width:88px;min-width:72px;height:80px;min-height:72px;padding:12px;border-radius:4px!important;box-shadow:0 3px 0 var(--uw-wood)!important;background:var(--uw-surface-alt)!important}
+#overlay.result #resultButtons .bigButton:first-child{background:var(--uw-gold)!important}
+#overlay.result #resultButtons .bigButton>svg{width:44px;height:44px}
+#overlay.result #resultButtons .bigButton>img{width:52px;height:44px;object-fit:cover;image-rendering:pixelated;border-radius:2px}
+#overlay.result #resultButtons .bigButton>img+svg{width:24px;height:24px;right:3px;bottom:3px}
+#overlay.result #resultButtons button:focus-visible{outline-offset:3px!important}
+/* Recovery remains an adult-readable confirmation, never a wordless result card. */
+#overlay.outing-recovery .panel{width:min(640px,100%);max-width:640px;max-height:calc(100dvh - 40px);padding:20px;overflow:auto;touch-action:pan-y;border-radius:4px!important;box-shadow:0 4px 0 var(--uw-wood)!important}
+#overlay.outing-recovery #resultButtons{padding:4px 4px 6px}
+@media(orientation:landscape) and (max-height:540px){
+ #overlay.result .panel{width:min(560px,100%);max-width:560px;max-height:calc(100dvh - 40px);padding:18px;display:grid;grid-template-columns:140px minmax(0,1fr);gap:10px 18px;align-items:center;justify-items:center}
+ #overlay.result #winHero{grid-column:1;grid-row:1 / span 3;width:140px;height:140px}
+ #overlay.result #resultStars{grid-column:2;grid-row:1;height:32px;min-height:32px}
+ #overlay.result #resultStars img{width:32px;height:32px}
+ #overlay.result #resultItems{grid-column:2;grid-row:2;max-height:104px;gap:6px}
+ #overlay.result #resultItems img{width:44px;height:44px}
+ #overlay.result #resultButtons{grid-column:2;grid-row:3;margin:0;gap:10px}
+ #overlay.result #resultButtons .bigButton{width:76px;min-width:64px;height:72px;min-height:64px;padding:10px}
+ #overlay.result-pause #winHero{grid-row:1 / span 2}
+ #overlay.result-pause #resultItems{grid-row:1}
+ #overlay.result-pause #resultButtons{grid-row:2}
+}
+@media(orientation:landscape) and (max-height:350px){
+ #overlay.result .panel{padding:12px;grid-template-columns:112px minmax(0,1fr);gap:8px 12px}
+ #overlay.result #winHero{width:112px;height:112px}
+ #overlay.result #resultStars{height:28px;min-height:28px}#overlay.result #resultStars img{width:28px;height:28px}
+ #overlay.result #resultItems{max-height:48px;gap:4px}#overlay.result #resultItems img{width:40px;height:40px}
+ #overlay.result #resultButtons{gap:8px}#overlay.result #resultButtons .bigButton{width:68px;min-width:60px;height:64px;min-height:60px;padding:8px}
+ #overlay.result #resultButtons .bigButton>svg{width:40px;height:40px}
+ #overlay.outing-recovery .panel{padding:12px}
+}
+@media(max-width:480px){#overlay.result .panel{padding:16px}#overlay.result #resultButtons{gap:8px}#overlay.result #resultButtons .bigButton{width:72px;min-width:60px}}
+#ride{opacity:1;font:800 20px/1 system-ui,sans-serif;color:var(--uw-plum)!important;background:var(--uw-surface)!important}
+#ride:focus-visible{outline:3px solid var(--uw-focus);outline-offset:2px}
+
+#ride svg{position:relative;z-index:2;width:62%;height:62%;pointer-events:none}

@@ -45,10 +45,23 @@ def main():
             shutil.copy2(ROOT / 'hub' / name, stage / 'hub' / name)
         for name in ['shared', 'assets']:
             shutil.copytree(ROOT / 'hub' / name, stage / 'hub' / name)
+        # Package the new town separately while it is being validated.  The
+        # established hub entry remains the default until the upgrade passes.
+        for name in ['index-v6.html', 'save-compat.js', 'town-audit.css',
+                     'legacy-cafe-assets.js', 'legacy-cafe-adapter.js',
+                     'cafe-save-extensions.js']:
+            shutil.copy2(ROOT / 'hub' / name, stage / 'hub' / name)
+        for name in ['v5-stage', 'v6-stage']:
+            shutil.copytree(ROOT / 'hub' / name, stage / 'hub' / name,
+                            ignore=shutil.ignore_patterns('*.test.js', '*fixture*', '*audit*'))
+        shutil.copytree(ROOT / 'cafe-town-v6', stage / 'cafe-town-v6')
+        shutil.copy2(ROOT / 'adventure-town-v6.html', stage / 'adventure-town-v6.html')
         (stage / 'adventure').mkdir()
         for name in ['index.html', 'sw.js', 'manifest.webmanifest']:
             shutil.copy2(ROOT / 'adventure' / name, stage / 'adventure' / name)
         shutil.copytree(ROOT / 'adventure' / 'icons', stage / 'adventure' / 'icons')
+        for name in ['world-art', 'presentation']:
+            shutil.copytree(ROOT / 'adventure' / name, stage / 'adventure' / name)
         (stage / '.nojekyll').write_text('')
         files = sorted(p for p in stage.rglob('*') if p.is_file())
         revision = hashlib.sha256(b''.join(str(p.relative_to(stage)).encode()+p.read_bytes() for p in files)).hexdigest()[:16]

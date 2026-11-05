@@ -1,0 +1,13 @@
+/* Review-only arcade layout: keep choices together and large enough to read. */
+#panel-body .prize-grid {
+  grid-template-columns: repeat(6, minmax(75px, 140px));
+  justify-content: center;
+  align-content: center;
+}
+#panel-body .round-result { gap: 24px; }
+#panel-body .round-result .picture-button { min-width: 64px; min-height: 64px; }
+#panel-body .round-result .primary-action { margin-left: 0; }
+@media (max-width: 700px) {
+  #panel-body .prize-grid { grid-template-columns: repeat(3, minmax(75px, 140px)); }
+  #panel-body .round-result { gap: 12px; }
+}

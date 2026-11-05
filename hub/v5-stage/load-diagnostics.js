@@ -1,0 +1,6 @@
+/* Isolated QA build: bounded in-page load evidence; no save data. */
+(()=>{'use strict';let lines=[];const out=document.createElement('pre');out.id='v5-load-diagnostics';out.hidden=true;document.body.append(out);function record(s){lines.push(new Date().toISOString()+' '+s);if(lines.length>120)lines.shift();out.textContent=lines.join('\n');}
+document.addEventListener('v5-sports-status',e=>record('sports '+JSON.stringify(e.detail)));
+window.addEventListener('message',e=>{if(e.origin!==location.origin)return;const frame=[...document.querySelectorAll('iframe')].find(f=>f.contentWindow===e.source);if(!frame)return;const d=e.data;if(d?.type==='V5_LOAD_DIAG')record(JSON.stringify(d));else if(d?.type==='UNICORN_WORLD_ACK')record('ACK '+String(d.command)+' '+String(d.build||''));});
+new MutationObserver(records=>{for(const r of records){const n=r.target;if(n.tagName==='IFRAME'&&r.attributeName==='src')record('iframe src '+n.getAttribute('src'));for(const a of r.addedNodes||[])if(a.tagName==='IFRAME'){record('iframe added');a.addEventListener('load',()=>record('iframe load event'));}}}).observe(document.getElementById('frames'),{childList:true,subtree:true,attributes:true,attributeFilter:['src']});
+})();

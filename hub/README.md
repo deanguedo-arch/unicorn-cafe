@@ -1,5 +1,11 @@
 # Unicorn World and Mall
 
+## Current town
+
+The main entry now opens the scrolling town, with picture-led entrances to the café, home, Adventure, shopping, photo booth and sports. The existing world profile and native café and Adventure save keys remain in use. Older village positions are retained for recovery while the player starts at a safe point on the new map. The connected café and Adventure use the town wrappers; their independent original entries remain available.
+
+The sections below describe the earlier neighbourhood and its original QA evidence; they are not a fresh phone or child-acceptance test of the current town.
+
 The main GitHub Pages entry is [Unicorn World](https://deanguedo-arch.github.io/unicorn-cafe/). The same repository retains independent café and adventure launches beneath `game/build/` and `adventure/`. Dean explicitly authorized this replacement release after the local visual review.
 
 Run `python3 hub_preview.py` from the repository root, or double-click `Play-World.command`. Open [Unicorn World](http://localhost:8790/hub/?legacy=1). Stop the preview with Control-C. Nothing is published by this launcher.

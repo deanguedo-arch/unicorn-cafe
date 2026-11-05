@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head><script src="../hub/v6-stage/cafe-frame-diagnostics-v6.js?v=cafe-recovery-1"></script><base href="../game/build/"><script>window.UW_HOSTED_ENTRY=true;window.RR_STANDALONE=true;</script><script>window.UW_NATIVE_BUILD="42ba0eed02fa9bff";</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#6f5790">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Rainbow Restaurant">
+<meta name="description" content="Sneaky Unicorn Rainbow Restaurant: picture orders, hands-on cooking, table service and dish washing. Local-only child-friendly play.">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./icons/icon-192.png">
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+<link rel="stylesheet" href="./styles.css?v=f6c8143444b7e048">
+<title>Sneaky Unicorn · Rainbow Restaurant</title>
+<link rel="stylesheet" href="./presentation/cafe-ui.css?v=7a0ad553b88dd48c"></head>
+<body><script src="./presentation/icons.js?v=61d19ec0e5cb9293"></script><script src="./presentation/native-controls.js?v=c4b731fca6013445"></script>
+<section id="rotate-screen" class="rotate-screen" role="status" aria-live="polite" hidden>
+ <svg viewBox="0 0 120 100" aria-hidden="true"><rect x="15" y="27" width="90" height="48" rx="8" fill="none" stroke="currentColor" stroke-width="5"/><circle cx="95" cy="51" r="3" fill="currentColor"/><path d="M35 15Q60 -2 85 15M77 5l9 11-14 3" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+ <h1>Turn your phone sideways</h1>
+ <p>Rainbow Restaurant plays in landscape.</p>
+ <p class="rotate-help">If the screen won’t turn, switch off your phone’s rotation lock.</p>
+</section>
+<div id="app" class="app">
+ <header class="topbar">
+  <div class="brand" aria-label="Rainbow Restaurant"><strong>Rainbow Restaurant</strong></div>
+  <div id="day-progress" class="day-progress" aria-label="Meals served today"></div>
+  <button id="menu" class="small-round" aria-label="Parent and settings menu"></button>
+ </header>
+ <main id="stage" class="stage">
+  <canvas id="world" aria-label="Top-down restaurant. Drag anywhere to move. Tap picture orders, tables, kitchen or sink." tabindex="0"></canvas>
+  <div id="world-ui" class="world-ui" hidden>
+   <div id="order-pin" class="order-pin" hidden></div>
+   <div id="movement-guide" class="movement-guide"></div>
+   <button id="primary" class="context-action" aria-label="Context action"></button>
+  </div>
+  <section id="customizer" class="customizer" hidden></section>
+  <section id="kitchen-screen" class="kitchen-screen" hidden></section>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="modal-root"></div>
+ </main>
+ <div id="announcer" class="sr-only" role="status" aria-live="polite"></div>
+</div>
+<noscript>This game needs JavaScript turned on. It has no accounts, ads, purchases or tracking.</noscript>
+<script src="./src/assets.js?v=5d38cf966da4a426"></script>
+<script src="../../cafe-town-v6/assets-v6.js"></script>
+<script src="./src/pixel-art-core.js?v=e8e1aa778a711371"></script>
+<script src="./src/food-catalogue.js?v=a4276d6e905a23fd"></script>
+<script src="./src/service-growth.js?v=9ccfcc6cc8b018dc"></script>
+<script src="./src/growth-runtime.js?v=b9a4e49221c1d743"></script>
+<script src="./src/engine.js?v=a21deef65c461ad7"></script>
+<script src="./src/pixel-cafe-art.js?v=2c109797be792e22"></script>
+<script src="./src/cafe-design-catalogue.js?v=44bad1a9397bfadd"></script>
+<script src="./src/cafe-design-adapter.js?v=a1905c40acb290ca"></script>
+<script src="./src/home-design-v1.js?v=a858f74a40950e1c"></script>
+<script src="./src/home-growth-catalogue.js?v=1bd2e8036d1b2907"></script>
+<script src="./src/native-cues.js?v=9da73403fee60602"></script>
+<script src="../../cafe-town-v6/asset-deadline-v6.js?v=1"></script><script src="../../cafe-town-v6/art-v6.js?v=1"></script>
+<script src="./src/reward-ui.js?v=8b530224df265681"></script>
+<script src="./src/guest-reactions.js?v=05cdd72a9d8fcca3"></script>
+<script src="./src/reaction-runtime.js?v=18d0d6c7be5efdf3"></script>
+<script src="./src/guest-reaction-art.js?v=5b6d5e224ba0a3e1"></script>
+<script src="../../hub/legacy-cafe-assets.js"></script><script src="../../cafe-town-v6/legacy-cafe-art-v6.js?v=1"></script><script src="../../hub/legacy-cafe-adapter.js"></script><script src="../../hub/cafe-save-extensions.js"></script><script src="../../cafe-town-v6/game-v6.js?v=cafe-recovery-2"></script>
+</body>
+</html>

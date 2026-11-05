@@ -2,6 +2,8 @@
 
 The main game is **Unicorn World**, connecting the café, adventure, mall, wardrobe, vehicles and arcade. GitHub Pages builds the connected game automatically on every push to **main** and opens it at [the existing game link](https://deanguedo-arch.github.io/unicorn-cafe/).
 
+The current town is a scrolling neighbourhood with direct entrances to the existing activities. The connected café and adventure retain their native save keys, while the world keeps its existing profile and relocates old village positions safely onto the new map. Character and fitted-wardrobe source artwork remains unchanged.
+
 ## Play and edit
 
 Double-click **Play-World.command**, or run `python3 hub_preview.py`, and open [the local world](http://localhost:8790/hub/?legacy=1). The local legacy preview retains the established native café/adventure save origins. See [hub/README.md](hub/README.md) for phone preview and save details.
@@ -22,4 +24,4 @@ The replacement root worker retires only the old café cache at this project's r
 
 `game/art-source/` preserves artwork originals and extraction scripts. `game/ASSET-PROVENANCE.json`, `game/SOURCE-INDEX.md`, and `game/tests/` preserve source provenance and QA evidence. Existing QA reports describe earlier verification; they are not certification of later edits.
 
-Legacy root source, duplicate builds, and release ZIPs were preserved in a verified archive outside this checkout at `/Users/deanguedo/Documents/Codex/archives/unicorn-cafe-2026-10-04/preserved-project-material.zip`. Previous committed releases also remain in Git history.
+Legacy root source, duplicate builds, and release ZIPs were preserved in a verified archive outside this checkout. Previous committed releases also remain in Git history.
