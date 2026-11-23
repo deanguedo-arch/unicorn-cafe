@@ -32,6 +32,9 @@ function apply(p,action,a={},loadedMedia=null){
   else if(a.game==='adventure'&&e.kind==='costumes'){
    grant(p,'legacy-princess');const n=Math.max(0,Math.floor(Number(e.secrets)||0));
    if(n>=1){grant(p,'legacy-hero');grant(p,'legacy-mask');}if(n>=2)grant(p,'legacy-chef');if(n>=3)grant(p,'legacy-space');
+  }else if(a.game==='world'&&e.kind==='star'){
+   if(!e.id.startsWith('town-star:'))fail('invalid');
+   amount=1;
   }else fail('invalid');p.coins+=amount;if(a.game==='cafe'&&e.kind==='payment')B.activity(p,{...e,kind:'cafe-payment'});return{amount};}
  case'hire':{const {scope,worker}=a;if(typeof scope!=='string'||scope.length>200||!/^cafe-hire:[a-zA-Z0-9-]+:[a-zA-Z0-9-]+:[0-9]+:(morning|afternoon)$/.test(scope)||!['pink','blue'].includes(worker))fail('invalid');
   p.cafeHires=p.cafeHires||{};const key=scope+':'+worker;if(p.cafeHires[key])return{key,alreadyHired:true};if(p.coins<1)fail('coins');p.coins--;p.cafeHires[key]={scope,worker};return{key,alreadyHired:false};}

@@ -43,7 +43,7 @@ function nativeImage(c,key,x,y,w,h){
 }
 const nativeDataCache=new Map();
 function nativeData(key){if(nativeDataCache.has(key))return nativeDataCache.get(key);const v=document.createElement('canvas');v.width=128;v.height=128;const result=nativeImage(v.getContext('2d'),key,0,0,128,128)?v.toDataURL():null;if(nativeDataCache.size>=128)nativeDataCache.delete(nativeDataCache.keys().next().value);nativeDataCache.set(key,result);return result;}
-function materialData(d,wall=false){const v=document.createElement('canvas');v.width=900;v.height=wall?160:380;const z=v.getContext('2d'),room=document.createElement('canvas');room.width=1800;room.height=1100;drawRoomShell(room.getContext('2d'),d);z.imageSmoothingEnabled=false;z.drawImage(room,36,wall?26:326,1728,wall?278:740,0,0,v.width,v.height);return v;}
+function materialData(d,wall=false){const v=document.createElement('canvas');v.width=240;v.height=190;const z=v.getContext('2d');cafeMaterial(z,d,0,0,240,190,wall);return v;}
 const originalFoodKeys=['prep_board','painted_tools_controls','pizza_dough','pizza_sauce','pizza_cheese','pizza_tomato','pizza_mushroom','coffee_beans','coffee_empty','coffee_black','coffee_milk','coffee_cocoa','cupcake_flour','cupcake_batter','cupcake_plain','cupcake_strawberry','cupcake_cocoa','ice_cone','ice_vanilla','ice_strawberry','ice_sprinkles','burger_bottom','burger_patty','burger_cheese','burger_lettuce','burger_top','soup_empty','soup_broth','soup_carrot','soup_peas','chicken_raw','chicken_glaze','chicken_roast','chicken_wedge','pancake_batter','pancake_raw','pancake_brown','pancake_syrup','smoothie_blender','smoothie_milk','smoothie_strawberry','smoothie_mango','fruit_strawberry','fruit_berries','fruit_banana','fruit_mango','veg_peas','veg_corn'];
 const originalFoodSet=new Set(originalFoodKeys),originalPixelCache=new Map();
 function originalPixel(key){const im=images[key];if(!im?.complete||!im.naturalWidth)return null;if(originalPixelCache.has(key))return originalPixelCache.get(key);const scale=Math.min(64/im.naturalWidth,56/im.naturalHeight),v=document.createElement('canvas');v.width=Math.max(1,Math.round(im.naturalWidth*scale));v.height=Math.max(1,Math.round(im.naturalHeight*scale));const z=v.getContext('2d');z.imageSmoothingEnabled=false;z.drawImage(im,0,0,v.width,v.height);originalPixelCache.set(key,v);return v;}
@@ -167,12 +167,15 @@ function foodData(dish,variant){
  return cache[key];
 }
 function badge(c,name,x,y,r,col){
- c.save();ellipse(c,x,y,r,r,col,'#fffdf2',5);ellipse(c,x,y,r-4,r-4,col,'#4f3864',2);
- if(name==='heart')heart(c,x,y+4,r*.65,'#fffdf2');
- else if(name==='star')star(c,x,y,r*.63,'#fffdf2');
- else if(name==='moon'){c.save();c.translate(x,y);path(c,()=>{c.moveTo(r*.35,-r*.62);c.bezierCurveTo(-r*.75,-r*.45,-r*.75,r*.52,r*.3,r*.66);c.bezierCurveTo(-r*.22,r*.32,-r*.18,-r*.25,r*.35,-r*.62);},'#fffdf2',null);c.restore();}
- else if(name==='diamond')poly(c,[[x,y-r*.7],[x+r*.62,y],[x,y+r*.7],[x-r*.62,y]],'#fffdf2',null);
- else{for(let i=0;i<5;i++){const a=i*Math.PI*2/5;ellipse(c,x+Math.cos(a)*r*.32,y+Math.sin(a)*r*.32,r*.28,r*.28,'#fffdf2');}ellipse(c,x,y,r*.19,r*.19,'#efd286');}
+ c.save();
+ ellipse(c,x,y+5,r*1.02,r*.88,'#4b295e33');
+ ellipse(c,x,y,r+2,r+2,'#ffe9a8','#6a3b7d',3.5);
+ ellipse(c,x,y,r-2.5,r-2.5,col,'#fff8df',2.5);
+ if(name==='heart')heart(c,x,y+4,r*.66,'#fffef5');
+ else if(name==='star')star(c,x,y,r*.65,'#fffef5');
+ else if(name==='moon'){c.save();c.translate(x,y);path(c,()=>{c.moveTo(r*.35,-r*.62);c.bezierCurveTo(-r*.75,-r*.45,-r*.75,r*.52,r*.3,r*.66);c.bezierCurveTo(-r*.22,r*.32,-r*.18,-r*.25,r*.35,-r*.62);},'#fffef5',null);c.restore();}
+ else if(name==='diamond')poly(c,[[x,y-r*.7],[x+r*.62,y],[x,y+r*.7],[x-r*.62,y]],'#fffef5',null);
+ else{for(let i=0;i<5;i++){const a=i*Math.PI*2/5;ellipse(c,x+Math.cos(a)*r*.32,y+Math.sin(a)*r*.32,r*.28,r*.28,'#fffef5');}ellipse(c,x,y,r*.19,r*.19,'#ffd966');}
  c.restore();
 }
 // v1.3.0 Part 1 rendering foundation: architecture is cached separately from
@@ -194,33 +197,31 @@ function cafePrepDetails(c){
  c.restore();
 }
 const shellCache={};
-const CAFE_FLOORS={lavender:['#d7c8d8','#c4afca'],mint:['#ced9cd','#b8c9b8'],peach:['#ead1bb','#d8b99e'],moonstone:['#d1d8dc','#b8c4cc'],confetti:['#e4d5bf','#d2bfa9']};
-const CAFE_WALLS={twilight:['#d8c9e5','#b39bcc'],rainbow:['#f7ebd5','#d2bedb'],garden:['#edf0dc','#b8c7a1'],sunrise:['#f9e9cd','#e2ba91'],starlight:['#d6d6e8','#a1a9c9']};
+const CAFE_FLOORS={lavender:['#edd8e9','#dfc2dd'],mint:['#dff0dc','#c5e0c2'],peach:['#fadcb9','#ecc191'],moonstone:['#dcecf3','#c0dce8'],confetti:['#faecd6','#ecd4b4']};
+const CAFE_WALLS={twilight:['#f3e3f9','#d9b9eb'],rainbow:['#fff4dc','#f5cceb'],garden:['#eef7e2','#c6dfa8'],sunrise:['#ffefd4','#f8cca0'],starlight:['#e4ebfa','#c3cef0']};
 function cafeMaterial(c,d,x,y,w,h,wall=false){
- const pal=(wall?CAFE_WALLS[d.wallpaper]:CAFE_FLOORS[d.flooring])||(wall?CAFE_WALLS.twilight:CAFE_FLOORS.lavender);
+ const pal=(wall?CAFE_WALLS[d.wallpaper]:CAFE_FLOORS[d.flooring])||(wall?CAFE_WALLS.twilight:CAFE_FLOORS.peach);
  c.save();c.beginPath();c.rect(x,y,w,h);c.clip();c.fillStyle=pal[0];c.fillRect(x,y,w,h);
  if(wall){
-  c.fillStyle=pal[1];c.fillRect(x,y+h*.66,w,h*.34);
-  // Theme identity remains visible in the material swatch and the full room.
-  for(let xx=x+40;xx<x+w;xx+=112)for(let yy=y+35;yy<y+h*.6;yy+=76){
-   c.save();c.globalAlpha=.20;
-   if(d.wallpaper==='rainbow'){for(let i=0;i<3;i++){c.beginPath();c.arc(xx,yy,15-i*4,Math.PI,0);c.strokeStyle=['#bf7294','#d5a94c','#78956b'][i];c.lineWidth=3;c.stroke();}}
-   else if(d.wallpaper==='garden'){line(c,[[xx-7,yy+9],[xx+6,yy-8]],'#78956b',2);ellipse(c,xx-4,yy,6,3,'#78956b');ellipse(c,xx+5,yy-6,5,3,'#78956b');}
-   else if(d.wallpaper==='sunrise'){ellipse(c,xx,yy,7,7,'#d5a94c');for(let k=0;k<8;k++){const a=k*Math.PI/4;line(c,[[xx+Math.cos(a)*11,yy+Math.sin(a)*11],[xx+Math.cos(a)*15,yy+Math.sin(a)*15]],'#d5a94c',2);}}
-   else if(d.wallpaper==='starlight')star(c,xx,yy,8,'#5b435d');
-   else{ellipse(c,xx,yy,8,9,'#5b435d');ellipse(c,xx+4,yy-3,7,8,pal[0]);}
+  const wg=c.createLinearGradient(0,y,0,y+h);wg.addColorStop(0,pal[0]);wg.addColorStop(1,pal[1]);c.fillStyle=wg;c.fillRect(x,y,w,h);
+  for(let xx=x+42;xx<x+w;xx+=110)for(let yy=y+34;yy<y+h*.62;yy+=74){
+   c.save();c.globalAlpha=.26;
+   if(d.wallpaper==='rainbow'){for(let i=0;i<3;i++){c.beginPath();c.arc(xx,yy,16-i*4,Math.PI,0);c.strokeStyle=['#ef82b0','#f3be53','#71c792'][i];c.lineWidth=3.5;c.stroke();}}
+   else if(d.wallpaper==='garden'){line(c,[[xx-7,yy+9],[xx+6,yy-8]],'#64b578',2.5);ellipse(c,xx-4,yy,6,3.5,'#64b578');ellipse(c,xx+5,yy-6,5.5,3.5,'#64b578');ellipse(c,xx+1,yy-9,4,4,'#ff9ec7');}
+   else if(d.wallpaper==='sunrise'){ellipse(c,xx,yy,7,7,'#f3b845');for(let k=0;k<8;k++){const a=k*Math.PI/4;line(c,[[xx+Math.cos(a)*11,yy+Math.sin(a)*11],[xx+Math.cos(a)*16,yy+Math.sin(a)*16]],'#f3b845',2.5);}}
+   else if(d.wallpaper==='starlight')star(c,xx,yy,9,'#8072b8');
+   else{ellipse(c,xx,yy,8,9,'#9e73b8');ellipse(c,xx+4,yy-3,7,8,pal[0]);star(c,xx+15,yy-6,4,'#f3be53');}
    c.restore();
   }
-
-  for(let xx=x;xx<x+w;xx+=92){line(c,[[xx,y+h*.69],[xx,y+h]],'#49344f20',2);line(c,[[xx+4,y+h*.69],[xx+4,y+h]],'#ffffff50',2);}
-  rect(c,x,y+h*.65,w,8,0,'#d7b184',null);line(c,[[x,y+h*.65],[x+w,y+h*.65]],'#fff3db',2);
+  c.fillStyle=pal[1];c.fillRect(x,y+h*.66,w,h*.34);
+  for(let xx=x;xx<x+w;xx+=92){line(c,[[xx,y+h*.69],[xx,y+h]],'#6a437c24',2);line(c,[[xx+4,y+h*.69],[xx+4,y+h]],'#ffffff68',2);}
+  rect(c,x,y+h*.64,w,10,0,'#f2c574','#7a4b7d',2);line(c,[[x,y+h*.65],[x+w,y+h*.65]],'#fff8e2',2.5);
  }else{
-  // Continuous staggered plank material, not repeated bitmap patches.
-  const row=65;for(let yy=y;yy<y+h;yy+=row){let i=Math.floor((yy-y)/row);c.fillStyle=i%2?pal[1]+'35':'#fff7e619';c.fillRect(x,yy,w,row);
-   line(c,[[x,yy],[x+w,yy]],'#49344f26',2);line(c,[[x,yy+3],[x+w,yy+3]],'#fff8e735',1);
-   for(let xx=x-280+(i%2)*140;xx<x+w;xx+=280){line(c,[[xx,yy],[xx,yy+row]],'#49344f23',2);line(c,[[xx+24,yy+17],[xx+123,yy+17]],'#49344f09',2);}
+  const row=64;for(let yy=y;yy<y+h;yy+=row){let i=Math.floor((yy-y)/row);c.fillStyle=i%2?pal[1]+'45':'#fffaf028';c.fillRect(x,yy,w,row);
+   line(c,[[x,yy],[x+w,yy]],'#8c5b5a28',2);line(c,[[x,yy+3],[x+w,yy+3]],'#fffbf248',1.5);
+   for(let xx=x-280+(i%2)*140;xx<x+w;xx+=280){line(c,[[xx,yy],[xx,yy+row]],'#8c5b5a25',2);line(c,[[xx+28,yy+20],[xx+148,yy+20]],'#9c6b5812',2);}
   }
-  if(d.flooring==='confetti')for(let xx=x+31;xx<x+w;xx+=91)for(let yy=y+21;yy<y+h;yy+=83){c.fillStyle=['#b39bcc50','#78956b50','#d5a94c50'][Math.floor(xx+yy)%3];c.fillRect(xx,yy,5,3);}
+  if(d.flooring==='confetti')for(let xx=x+31;xx<x+w;xx+=86)for(let yy=y+21;yy<y+h;yy+=78){const col=['#ff8fc4','#ffd45c','#7fd8f2','#9ae3a4','#c8a2f0'][Math.floor(xx+yy)%5];ellipse(c,xx,yy,5,3.5,col);}
  }
  c.restore();
 }
@@ -231,28 +232,105 @@ function cafeWallAssembly(c,d,x,y,w,h){
  const types=['window','plain','kitchen','kitchen','plain','window'],pw=w/6;
  for(let i=0;i<6;i++){const r=CAFE_STRUCTURE[types[i]];c.drawImage(atlas,...r,x+i*pw,y,pw+.5,h);}
  for(let i=1;i<6;i++){line(c,[[x+i*pw,y+5],[x+i*pw,y+h-3]],'#77566e',5);line(c,[[x+i*pw-2,y+7],[x+i*pw-2,y+h-5]],'#d9b78f',1);}
- // A translucent material glaze preserves the selected theme without covering
-// the shaded atlas with an unrelated opaque panel or changing physical anchors.
  const pal=CAFE_WALLS[d.wallpaper]||CAFE_WALLS.twilight;
  c.globalAlpha=.19;c.fillStyle=pal[1];c.fillRect(x,y,w,h);c.globalAlpha=1;
- // Wallpaper motifs live only on clear wall bays, away from windows and shelves.
  for(const bay of [1,4]){c.save();c.translate(x+bay*pw,y);c.beginPath();c.rect(pw*.06,h*.15,pw*.88,h*.49);c.clip();
   const pattern=document.createElement('canvas');pattern.width=Math.ceil(pw);pattern.height=Math.ceil(h);const z=pattern.getContext('2d');cafeMaterial(z,d,0,0,pw,h,true);
   c.globalAlpha=.16;c.drawImage(pattern,0,0);c.restore();}
  c.restore();
 }
 function drawReturnPortal(c,p){P.draw(c,'portal',p.x-110,p.y-44,2);}
+function drawStorybookWindow(z,cx,topY,w,h){
+ z.save();
+ // Soft warm sunbeam pouring onto the wall & floor below
+ const beam=z.createLinearGradient(cx,topY+h,cx+35,topY+h+380);
+ beam.addColorStop(0,'rgba(255,244,196,0.34)');beam.addColorStop(1,'rgba(255,244,196,0)');
+ z.fillStyle=beam;z.beginPath();z.moveTo(cx-w*.46,topY+h+6);z.lineTo(cx+w*.46,topY+h+6);z.lineTo(cx+w*.92,topY+h+390);z.lineTo(cx-w*.65,topY+h+390);z.closePath();z.fill();
+ // Arched cream-and-gold frame
+ const x=cx-w/2,y=topY,archR=w/2;
+ path(z,()=>{z.moveTo(x-12,y+h+10);z.lineTo(x-12,y+archR);z.arc(cx,y+archR,archR+12,Math.PI,0);z.lineTo(x+w+12,y+h+10);z.closePath();},'#fff5de','#6b3e7c',5);
+ // Sunny storybook sky + garden hills inside
+ z.save();z.beginPath();z.moveTo(x,y+h);z.lineTo(x,y+archR);z.arc(cx,y+archR,archR,Math.PI,0);z.lineTo(x+w,y+h);z.closePath();z.clip();
+ const sky=z.createLinearGradient(0,y,0,y+h);sky.addColorStop(0,'#9be4ff');sky.addColorStop(.55,'#d9f6ff');sky.addColorStop(1,'#fff3c7');
+ z.fillStyle=sky;z.fillRect(x,y,w,h);
+ // Fluffy cloud & garden bushes
+ ellipse(z,cx-28,y+44,34,16,'#ffffffd9');ellipse(z,cx+26,y+36,28,14,'#ffffffcc');
+ ellipse(z,cx-38,y+h-6,58,34,'#6bcf88');ellipse(z,cx+40,y+h-4,62,38,'#54ba74');ellipse(z,cx,y+h+8,66,30,'#7ee098');
+ for(const [bx,by] of [[cx-44,y+h-22],[cx+24,y+h-26],[cx+54,y+h-16],[cx-10,y+h-14]]){ellipse(z,bx,by,7,7,'#fff9e2');ellipse(z,bx,by,3,3,'#ffd059');}
+ // Window mullions
+ line(z,[[cx,y],[cx,y+h]],'#f7e6c4',7);line(z,[[x,y+h*.56],[x+w,y+h*.56]],'#f7e6c4',7);
+ line(z,[[cx,y],[cx,y+h]],'#7b4b86',2);line(z,[[x,y+h*.56],[x+w,y+h*.56]],'#7b4b86',2);
+ // Rosy scalloped tie-back curtains
+ path(z,()=>{z.moveTo(x-4,y);z.lineTo(x+w*.34,y);z.quadraticCurveTo(x+w*.24,y+h*.48,x+w*.08,y+h*.64);z.quadraticCurveTo(x+w*.22,y+h*.82,x+w*.16,y+h+4);z.lineTo(x-4,y+h+4);z.closePath();},'#f58ab8','#783f79',3);
+ path(z,()=>{z.moveTo(x+w+4,y);z.lineTo(x+w*.66,y);z.quadraticCurveTo(x+w*.76,y+h*.48,x+w*.92,y+h*.64);z.quadraticCurveTo(x+w*.78,y+h*.82,x+w*.84,y+h+4);z.lineTo(x+w+4,y+h+4);z.closePath();},'#f58ab8','#783f79',3);
+ z.restore();
+ // Golden curtain tie-backs + sill
+ ellipse(z,x+12,y+h*.63,10,6,'#ffd564','#76427a',2.5);ellipse(z,x+w-12,y+h*.63,10,6,'#ffd564','#76427a',2.5);
+ rect(z,x-20,y+h+4,w+40,18,8,'#ffefc9','#6a3d7a',4);line(z,[[x-12,y+h+9],[x+w+12,y+h+9]],'#ffffff',3);
+ // Leafy white-blossom garland over the arch
+ for(let i=0;i<=8;i++){const a=Math.PI+(i/8)*Math.PI,gx=cx+Math.cos(a)*(archR+12),gy=y+archR+Math.sin(a)*(archR+10);ellipse(z,gx,gy,14,10,'#46b36c','#356b49',2.5);if(i%2===0){ellipse(z,gx,gy-2,7,7,'#fffdf5');ellipse(z,gx,gy-2,3,3,'#ffcf54');}}
+ z.restore();
+}
+function drawFairyLantern(z,x,y){
+ z.save();
+ const glow=z.createRadialGradient(x,y+24,6,x,y+24,78);glow.addColorStop(0,'rgba(255,232,140,0.46)');glow.addColorStop(1,'rgba(255,232,140,0)');
+ z.fillStyle=glow;z.beginPath();z.arc(x,y+24,78,0,Math.PI*2);z.fill();
+ line(z,[[x,24],[x,y+4]],'#d89c3b',4);
+ ellipse(z,x,y+22,18,22,'#ffe484','#6b3e7c',3.5);
+ ellipse(z,x-4,y+18,7,11,'#fffce8');
+ rect(z,x-14,y+2,28,7,3,'#e8a842','#6b3e7c',2.5);
+ rect(z,x-11,y+41,22,6,3,'#e8a842','#6b3e7c',2.5);
+ z.restore();
+}
 function drawRoomShell(c,d){
- const key='pixel:'+d.flooring+':'+d.wallpaper+':'+(images.refresh_details_window?'window2':'window1');if(!shellCache[key]){const layer=document.createElement('canvas');layer.width=900;layer.height=550;const z=layer.getContext('2d');
- const floors={lavender:['#d7bed6','#ae8faf'],mint:['#b9ce8d','#83a56b'],peach:['#e9c18d','#d3a26b'],moonstone:['#c6dde1','#83b3cb'],confetti:['#fff2d4','#d8c8aa']},walls={twilight:'#d7bed6',rainbow:'#fff2d4',garden:'#b9ce8d',sunrise:'#e9c18d',starlight:'#c6dde1'},f=floors[d.flooring]||floors.peach;
- z.fillStyle='#352c46';z.fillRect(0,0,900,550);z.save();z.beginPath();z.rect(18,160,864,376);z.clip();z.fillStyle=f[0];z.fillRect(18,160,864,376);for(let y=160;y<536;y+=32){z.fillStyle=f[1];z.fillRect(18,y,864,2);for(let x=18+(y%64?45:0);x<882;x+=90){z.fillRect(x,y,2,32);z.fillRect(x+18,y+14,14,1);}}
- z.restore();window.UWCafeDesignRewards?.drawSurfaceMaterial(z,d,18,160,864,376,false);z.fillStyle=walls[d.wallpaper]||walls.twilight;z.fillRect(18,13,864,147);z.fillStyle='#76543d';z.fillRect(14,155,872,8);z.fillRect(14,13,4,523);z.fillRect(882,13,4,523);z.fillRect(14,533,872,8);z.fillStyle='#e9c18d';z.fillRect(18,153,864,3);
- window.UWCafeDesignRewards?.drawSurfaceMaterial(z,d,18,13,864,147,true);
- z.save();z.globalAlpha=.28;z.fillStyle='#fff9eb';for(let x=30;x<880;x+=48){z.fillRect(x,20,2,125);for(let y=32;y<145;y+=40){z.fillRect(x-3,y,8,2);z.fillRect(x,y-3,2,8);}}z.restore();
- for(const x of [82,365,680]){if(images.refresh_details_window){const im=images.refresh_details_window,k=Math.min(116/im.width,91/im.height),w=im.width*k,h=im.height*k;z.imageSmoothingEnabled=false;z.drawImage(im,x+(116-w)/2,125-h,w,h);continue;}z.fillStyle='#352c46';z.fillRect(x,34,116,91);z.fillStyle='#a5754d';z.fillRect(x+2,36,112,87);z.fillStyle='#c6dde1';z.fillRect(x+6,40,104,77);z.fillStyle='#83b3cb';z.fillRect(x+8,80,100,35);z.fillStyle='#e9c18d';z.fillRect(x+56,40,4,77);z.fillRect(x+6,75,104,4);z.fillStyle='#76543d';z.fillRect(x-4,120,124,5);window.UWCafeDesignRewards?.drawWindowSurround?.(z,d,x,34,116,91);}
- // The portal is deliberately inset into the floor, not an upright floating doorway.
- const portal=window.RR.LAYOUT.portal;P.draw(z,'portal',portal.x/2-55,portal.y/2-22,1);shellCache[key]=layer;}
- c.save();c.imageSmoothingEnabled=false;c.drawImage(shellCache[key],0,0,1800,1100);c.restore();
+ const key='storybook-v2:'+d.flooring+':'+d.wallpaper;
+ if(!shellCache[key]){
+  const layer=document.createElement('canvas');layer.width=1800;layer.height=1100;const z=layer.getContext('2d');
+  // Outer storybook plum border frame
+  z.fillStyle='#5c3672';z.fillRect(0,0,1800,1100);
+  // 1. Warm sunlit floor (y=320..1072)
+  cafeMaterial(z,d,36,320,1728,752,false);
+  // Subtle warm radial sunlit glow in center of dining hall
+  const sunPool=z.createRadialGradient(900,580,120,900,660,860);
+  sunPool.addColorStop(0,'rgba(255,248,220,0.24)');sunPool.addColorStop(.65,'rgba(255,232,195,0.06)');sunPool.addColorStop(1,'rgba(92,54,114,0.16)');
+  z.fillStyle=sunPool;z.fillRect(36,320,1728,752);
+  // Warm drop shadow along top wall baseboard
+  const wallShadow=z.createLinearGradient(0,320,0,374);wallShadow.addColorStop(0,'rgba(84,46,104,0.24)');wallShadow.addColorStop(1,'rgba(84,46,104,0)');
+  z.fillStyle=wallShadow;z.fillRect(36,320,1728,54);
+  // 2. Storybook wainscoted back wall (y=26..320)
+  cafeMaterial(z,d,36,26,1728,294,true);
+  // Charming pastel ceramic tile backsplash behind the kitchen range & sink (x=540..1360)
+  z.save();rect(z,540,128,820,186,14,'#fff8eb','#d7a76c',4);z.beginPath();z.roundRect(544,132,812,178,10);z.clip();
+  for(let ty=132;ty<312;ty+=36)for(let tx=544;tx<1358;tx+=36){
+   z.fillStyle=((Math.floor(tx/36)+Math.floor(ty/36))%2)?'#ffe9f3':'#fff7df';z.fillRect(tx,ty,35,35);
+   z.strokeStyle='#e6c3d5';z.lineWidth=1.5;z.strokeRect(tx,ty,36,36);
+  }
+  z.restore();
+  // Golden crown molding & baseboard trim
+  rect(z,28,22,1744,18,6,'#f8cf76','#683c7a',4);line(z,[[36,28],[1764,28]],'#fffbe6',3);
+  rect(z,28,308,1744,18,5,'#f0be67','#683c7a',4);line(z,[[36,314],[1764,314]],'#fff7db',3);
+  // Side and bottom gilded storybook room trim
+  rect(z,24,22,16,1054,4,'#d99f54','#613672',4);
+  rect(z,1760,22,16,1054,4,'#d99f54','#613672',4);
+  rect(z,24,1062,1752,18,5,'#d99f54','#613672',4);
+  // 3. Sunny Storybook Arched Café Windows (aligned with existing window bays + cozy center)
+  drawStorybookWindow(z,295,62,190,185);
+  drawStorybookWindow(z,1505,62,190,185);
+  // Glowing fairy pendant lanterns framing the kitchen backsplash clear of top HUD pills
+  drawFairyLantern(z,610,62);
+  drawFairyLantern(z,1215,62);
+  // 4. Cozy scalloped pink-and-gold welcome mat at the doorway portal
+  const portal=window.RR.LAYOUT.portal;
+  z.save();
+  ellipse(z,portal.x,portal.y+10,132,56,'#f69cc5','#75417d',4);
+  ellipse(z,portal.x,portal.y+8,116,44,'#ffb8d9','#ffe59c',3.5);
+  for(let i=0;i<14;i++){const a=i*Math.PI*2/14;ellipse(z,portal.x+Math.cos(a)*126,portal.y+10+Math.sin(a)*50,12,8,'#f69cc5','#75417d',2.5);}
+  ellipse(z,portal.x,portal.y+8,112,42,'#ffc7e2');
+  z.restore();
+  P.draw(z,'portal',portal.x-110,portal.y-44,2);
+  shellCache[key]=layer;
+ }
+ c.save();c.drawImage(shellCache[key],0,0,1800,1100);c.restore();
 }
 // Local origin is the centre of the preparation stage, shared by every recipe.
 function drawPrepBoard(c){originalPart(c,'prep_board',-170,-143,340,286);}

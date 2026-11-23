@@ -280,12 +280,15 @@ function foodData(dish,variant){
  return cache[key];
 }
 function badge(c,name,x,y,r,col){
- c.save();ellipse(c,x,y,r,r,col,'#fffdf2',5);ellipse(c,x,y,r-4,r-4,col,'#4f3864',2);
- if(name==='heart')heart(c,x,y+4,r*.65,'#fffdf2');
- else if(name==='star')star(c,x,y,r*.63,'#fffdf2');
- else if(name==='moon'){c.save();c.translate(x,y);path(c,()=>{c.moveTo(r*.35,-r*.62);c.bezierCurveTo(-r*.75,-r*.45,-r*.75,r*.52,r*.3,r*.66);c.bezierCurveTo(-r*.22,r*.32,-r*.18,-r*.25,r*.35,-r*.62);},'#fffdf2',null);c.restore();}
- else if(name==='diamond')poly(c,[[x,y-r*.7],[x+r*.62,y],[x,y+r*.7],[x-r*.62,y]],'#fffdf2',null);
- else{for(let i=0;i<5;i++){const a=i*Math.PI*2/5;ellipse(c,x+Math.cos(a)*r*.32,y+Math.sin(a)*r*.32,r*.28,r*.28,'#fffdf2');}ellipse(c,x,y,r*.19,r*.19,'#efd286');}
+ c.save();
+ ellipse(c,x,y+5,r*1.02,r*.88,'#4b295e33');
+ ellipse(c,x,y,r+2,r+2,'#ffe9a8','#6a3b7d',3.5);
+ ellipse(c,x,y,r-2.5,r-2.5,col,'#fff8df',2.5);
+ if(name==='heart')heart(c,x,y+4,r*.66,'#fffef5');
+ else if(name==='star')star(c,x,y,r*.65,'#fffef5');
+ else if(name==='moon'){c.save();c.translate(x,y);path(c,()=>{c.moveTo(r*.35,-r*.62);c.bezierCurveTo(-r*.75,-r*.45,-r*.75,r*.52,r*.3,r*.66);c.bezierCurveTo(-r*.22,r*.32,-r*.18,-r*.25,r*.35,-r*.62);},'#fffef5',null);c.restore();}
+ else if(name==='diamond')poly(c,[[x,y-r*.7],[x+r*.62,y],[x,y+r*.7],[x-r*.62,y]],'#fffef5',null);
+ else{for(let i=0;i<5;i++){const a=i*Math.PI*2/5;ellipse(c,x+Math.cos(a)*r*.32,y+Math.sin(a)*r*.32,r*.28,r*.28,'#fffef5');}ellipse(c,x,y,r*.19,r*.19,'#ffd966');}
  c.restore();
 }
 // v1.3.0 Part 1 rendering foundation: architecture is cached separately from
