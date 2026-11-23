@@ -69,7 +69,7 @@ if(name){furnish(c,art,name,x+w/2,foot,w+3);if(k==='table'&&s.place!=='restauran
 if(['cart','flowers','counter','checkout','produce','toys','shelf'].includes(k)){stockBank(c,s,o,art,k);return true;}
 return false;}
 
-function drawObstacle(c,s,o,art){const[x,y,w,h]=o.r,t=theme(s),k=kind(o),foot=y+h;c.save();c.imageSmoothingEnabled=false;
+function drawObstacle(c,s,o,art){const[x,y,w,h]=o.r,t=theme(s),k=kind(o),foot=y+h;c.save();c.imageSmoothingEnabled=true;
 if(o.facing&&art.world_chairs){const rr=o.facing==='east'?[1326,129,381,594]:[747,129,381,594];c.drawImage(art.world_chairs,...rr,x,foot-w*rr[3]/rr[2],w,w*rr[3]/rr[2]);c.restore();return;}
 if(k==='tv-front'){bank(c,art,[x,y,w,h]);box(c,x+8,y-54,w-16,58,'#48384d');box(c,x+12,y-50,w-24,47,'#9cbfbe');box(c,x+16,y-46,w-32,35,'#b5d4cc');box(c,x+w*.45,y+3,w*.1,10,'#74616d');c.restore();return;}
 if(['tv','fridge','bed','narrow-kitchen','cabinet','pumpkin','stairs'].includes(k)){const id=k==='narrow-kitchen'?'narrow_kitchen':k==='cabinet'?'bedside':k,rr=id==='stairs'?[140,130,760,1260]:FIXTURE_RECTS[id],im=id==='stairs'?art.world_stairs:art.world_fixtures;if(im&&rr){const ratio=rr[3]/rr[2],dw=Math.max(w,h/ratio),dh=dw*ratio;c.drawImage(im,...rr,Math.round(x+w/2-dw/2),Math.round(foot-dh),Math.round(dw),Math.round(dh));c.restore();return;}}

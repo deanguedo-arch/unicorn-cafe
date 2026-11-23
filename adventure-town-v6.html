@@ -1087,7 +1087,7 @@ function prop(id,x,y,width,alpha=1){
  else{const r=ATLAS[id];if(r){const h=width*r.h/r.w;frame(id,x-width/2,y-h,width,h);}}
  c.restore();
 }
-function lootArt(id,x,y,size,alpha=1){if(id==='u_happy0'){pixelActorLayer(()=>actor(id,x,y,size,1,0,1,1,alpha),x,y);return;}if(art[id]){const im=art[id],k=Math.min(size/im.width,size/im.height),w=im.width*k,h=im.height*k;c.save();c.globalAlpha*=alpha;c.drawImage(im,x-w/2,y-h,w,h);c.restore();return;}if(window.UWAdventureRefresh?.loot(c,id,x,y,size,alpha))return;if(isHouseAuthored()&&art[id]){c.save();c.globalAlpha*=alpha;houseRenderer().loot(c,art[id],x,y,size);c.restore();return;}if(isMarketAuthored()&&marketData().market.itemCategories[id]&&art[id]){marketRenderer().loot(c,art[id],x,y,size,alpha);return;}UnicornPixelLoot.draw(c,id,x,y,size,alpha);}
+function lootArt(id,x,y,size,alpha=1){if(id==='u_happy0'){pixelActorLayer(()=>actor(id,x,y,size,1,0,1,1,alpha),x,y);return;}if(art[id]){const im=art[id],k=Math.min(size/im.width,size/im.height),w=im.width*k,h=im.height*k;c.save();c.imageSmoothingEnabled=true;c.globalAlpha*=alpha;c.drawImage(im,x-w/2,y-h,w,h);c.restore();return;}if(window.UWAdventureRefresh?.loot(c,id,x,y,size,alpha))return;if(isHouseAuthored()&&art[id]){c.save();c.imageSmoothingEnabled=true;c.globalAlpha*=alpha;houseRenderer().loot(c,art[id],x,y,size);c.restore();return;}if(isMarketAuthored()&&marketData().market.itemCategories[id]&&art[id]){marketRenderer().loot(c,art[id],x,y,size,alpha);return;}UnicornPixelLoot.draw(c,id,x,y,size,alpha);}
 
 function actor(id,x,y,size,facing=1,angle=0,sx=1,sy=1,alpha=1){
  c.save();c.translate(x,y);c.rotate(angle);c.scale(facing*sx,sy);c.globalAlpha=alpha;
@@ -1223,7 +1223,7 @@ function drawCostume(q,angle,sx,sy,frame,stage='front'){
 }
 
 let actorPixelSurface=null;
-function pixelActorLayer(run,x,y){if(!actorPixelSurface){actorPixelSurface=document.createElement('canvas');actorPixelSurface.width=256;actorPixelSurface.height=256;}const target=c,pc=actorPixelSurface.getContext('2d'),px=Math.round(x/2)*2,py=Math.round(y/2)*2;pc.setTransform(1,0,0,1,0,0);pc.clearRect(0,0,256,256);pc.imageSmoothingEnabled=false;pc.setTransform(.5,0,0,.5,128-px/2,224-py/2);c=pc;try{run();}finally{c=target;}target.save();target.imageSmoothingEnabled=false;target.drawImage(actorPixelSurface,px-256,py-448,512,512);target.restore();}
+function pixelActorLayer(run,x,y){c.save();c.imageSmoothingEnabled=true;try{run();}finally{c.restore();}}
 function drawPlayer(){
  const moving=Math.hypot(P.vx,P.vy)>12;let id=moving?'u_run'+Math.floor(P.anim)%6:'u_idle0',q={x:P.x,y:P.y,z:0},angle=0,sx=1,sy=1;if(!moving&&P.idle>2&&Math.floor(G.clock*1.1)%5===0)id='u_idle1';if(moving){q.y-=Math.abs(Math.sin(P.anim*Math.PI))*3;angle=Math.sin(P.anim*2)*.018;}else q.y-=saved.reduced?0:Math.sin(G.clock*2.5)*1.5;if(P.blocked>0&&moving){sx-=.05;angle*=.4;}if(G.mode==='win')id='u_happy'+Math.floor(G.winTime*5)%3;shadow(q.x,q.y,30,.25);drawCostume(q,saved.reduced?0:angle,sx,sy,id,'back');actor(id,q.x,q.y,147,P.facing,saved.reduced?0:angle,sx,sy);drawCostume(q,saved.reduced?0:angle,sx,sy,id);
  if(scene.police){c.save();c.translate(q.x,q.y-132);c.fillStyle='#254a88';c.strokeStyle='#f1d47a';c.lineWidth=3;c.beginPath();c.ellipse(0,0,29,11,0,Math.PI,TAU);c.lineTo(24,4);c.quadraticCurveTo(0,12,-24,4);c.closePath();c.fill();c.stroke();star(0,-6,8,'#ffe27b');c.restore();}

@@ -11,4 +11,6 @@ current.drawTableFurniture=(c,x,y,d,symbol,col,t,marker,seatGuest)=>supportedTab
 current.customData=(stage,id,d)=>{const n={...d,[stage]:id};if(stage==='flooring'||stage==='wallpaper')return modern.customData(stage,id,d);return supportedRoom(n)&&supportedTable(n)?original.customData(stage,id,d):modern.customData(stage,id,d);};
 current.drawSinkWorld=(c,t)=>original.drawSinkWorld(c,t);
 current.drawWash=(c,p,t)=>original.drawWash(c,p,t);
+if(original.drawFood)current.drawFood=(c,dish,variant,prep,t)=>original.drawFood(c,dish,variant,prep,t);
+if(original.drawPrepBoard)current.drawPrepBoard=(c)=>original.drawPrepBoard(c);
 })();

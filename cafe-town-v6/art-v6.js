@@ -15,7 +15,7 @@ function grad(c,y1,y2,top,bottom){const g=c.createLinearGradient(0,y1,0,y2);g.ad
 function heart(c,x,y,size,fill='#ef8cad'){c.save();c.translate(x,y);c.scale(size/28,size/28);path(c,()=>{c.moveTo(0,9);c.bezierCurveTo(-35,-12,-14,-34,0,-18);c.bezierCurveTo(14,-34,35,-12,0,9);},fill,null);c.restore();}
 function star(c,x,y,r,col='#ffe283',rotation=0){const pts=[];for(let i=0;i<10;i++){const a=rotation-Math.PI/2+i*Math.PI/5;pts.push([x+Math.cos(a)*(i%2?r*.47:r),y+Math.sin(a)*(i%2?r*.47:r)]);}poly(c,pts,col,null);}
 function shine(c,x,y,rx=25,ry=7){ellipse(c,x,y,rx,ry,'#ffffff88');}
-function sprite(c,key,x,y,w,h,flip=false){const im=images[key];if(!im){requireAsset(key);return;}c.save();c.imageSmoothingEnabled=false;c.translate(x,y);if(flip)c.scale(-1,1);const s=Math.min(w/im.width,h/im.height);c.drawImage(im,-im.width*s/2,-im.height*s,im.width*s,im.height*s);c.restore();}
+function sprite(c,key,x,y,w,h,flip=false){const im=images[key];if(!im){requireAsset(key);return;}c.save();c.imageSmoothingEnabled=true;c.translate(x,y);if(flip)c.scale(-1,1);const s=Math.min(w/im.width,h/im.height);c.drawImage(im,-im.width*s/2,-im.height*s,im.width*s,im.height*s);c.restore();}
 function plate(c){ellipse(c,160,239,125,27,'#68527922');ellipse(c,160,227,131,31,'#ece1f4',ink,4);ellipse(c,160,221,117,26,'#fffef8','#cbb7d8',3);}
 function sprinkles(c,n=18,y=89){const cols=['#f1b44f','#ef7cbd','#6ecdd4','#9576df','#b5d96e'];for(let i=0;i<n;i++){const x=94+(i*37)%127,yy=y+(i*19)%47;c.save();c.translate(x,yy);c.rotate(i*.9);rect(c,-3,-5,5,10,2,cols[i%5],null);c.restore();}}
 function steam(c,x,y,t,col='#fffdf4'){c.save();c.globalAlpha=.7;for(let i=0;i<3;i++){const xx=x+(i-1)*26;path(c,()=>{c.moveTo(xx,y);c.bezierCurveTo(xx-14,y-13,xx+14,y-27,xx+Math.sin(t*2+i)*7,y-43);},null,col,5);}c.restore();}
@@ -46,8 +46,8 @@ function nativeData(key){if(nativeDataCache.has(key))return nativeDataCache.get(
 function materialData(d,wall=false){const v=document.createElement('canvas');v.width=240;v.height=190;const z=v.getContext('2d');if(typeof renderCafeMaterialSwatch==='function')renderCafeMaterialSwatch(z,d,0,0,240,190,wall);else cafeMaterial(z,d,0,0,240,190,wall);return v;}
 const originalFoodKeys=['prep_board','painted_tools_controls','pizza_dough','pizza_sauce','pizza_cheese','pizza_tomato','pizza_mushroom','coffee_beans','coffee_empty','coffee_black','coffee_milk','coffee_cocoa','cupcake_flour','cupcake_batter','cupcake_plain','cupcake_strawberry','cupcake_cocoa','ice_cone','ice_vanilla','ice_strawberry','ice_sprinkles','burger_bottom','burger_patty','burger_cheese','burger_lettuce','burger_top','soup_empty','soup_broth','soup_carrot','soup_peas','chicken_raw','chicken_glaze','chicken_roast','chicken_wedge','pancake_batter','pancake_raw','pancake_brown','pancake_syrup','smoothie_blender','smoothie_milk','smoothie_strawberry','smoothie_mango','fruit_strawberry','fruit_berries','fruit_banana','fruit_mango','veg_peas','veg_corn'];
 const originalFoodSet=new Set(originalFoodKeys),originalPixelCache=new Map();
-function originalPixel(key){const im=images[key];if(!im?.complete||!im.naturalWidth)return null;if(originalPixelCache.has(key))return originalPixelCache.get(key);const scale=Math.min(64/im.naturalWidth,56/im.naturalHeight),v=document.createElement('canvas');v.width=Math.max(1,Math.round(im.naturalWidth*scale));v.height=Math.max(1,Math.round(im.naturalHeight*scale));const z=v.getContext('2d');z.imageSmoothingEnabled=false;z.drawImage(im,0,0,v.width,v.height);originalPixelCache.set(key,v);return v;}
-function originalPart(c,key,x,y,w,h){const im=originalPixel(key);if(!im)return false;const k=Math.min(w/im.width,h/im.height),dw=im.width*k,dh=im.height*k;c.save();c.imageSmoothingEnabled=false;c.drawImage(im,Math.round(x+(w-dw)/2),Math.round(y+(h-dh)/2),Math.round(dw),Math.round(dh));c.restore();return true;}
+function originalPixel(key){const im=images[key];if(!im?.complete||!im.naturalWidth)return null;return im;}
+function originalPart(c,key,x,y,w,h){const im=originalPixel(key);if(!im)return false;const k=Math.min(w/im.width,h/im.height),dw=im.width*k,dh=im.height*k;c.save();c.imageSmoothingEnabled=true;c.drawImage(im,Math.round(x+(w-dw)/2),Math.round(y+(h-dh)/2),Math.round(dw),Math.round(dh));c.restore();return true;}
 function drawFood(c,dish,variant,prep=null,t=0){if(variant&&!RR.validVariant(dish,variant))throw Error('Unknown food variant');const steps=RR.RECIPES[dish].steps.length,step=prep?Math.min(steps,Math.max(0,prep.step||0)):steps,done=n=>step>n||step===n&&(prep?.p||0)>0,chosen=variant||RR.RECIPES[dish].variants[0].id;c.save();c.imageSmoothingEnabled=false;
  const full=key=>originalPart(c,key,20,10,280,250),small=(key,x,y,w=48,h=45)=>originalPart(c,key,x,y,w,h);
  const growth=()=>{const F=window.UWCafeFoodCatalogueV1;if(F?.variants.some(v=>v.family===dish&&v.variant===chosen)){const n=document.createElement('canvas');n.width=32;n.height=32;F.draw(n.getContext('2d'),F.choice(dish,chosen),0,0,1);c.drawImage(n,235,25,48,48);}};
@@ -359,15 +359,17 @@ function drawRoomShell(c,d){
   z.strokeStyle='#f2be62';z.lineWidth=10;z.strokeRect(24,18,1752,1060);
   z.strokeStyle='#5d3070';z.lineWidth=4;z.strokeRect(19,13,1762,1070);
   z.restore();
-  // Cozy scalloped pink-and-gold storybook welcome rug at the doorway portal
+  // Cozy scalloped pink-and-gold storybook welcome rug + golden star emblem at the doorway portal
   const portal=window.RR.LAYOUT.portal;
   z.save();
   ellipse(z,portal.x,portal.y+12,138,58,'rgba(92,42,96,0.22)');
   for(let i=0;i<16;i++){const a=i*Math.PI*2/16;ellipse(z,portal.x+Math.cos(a)*126,portal.y+8+Math.sin(a)*50,15,10,'#f28ab8','#783c6c',3);}
   ellipse(z,portal.x,portal.y+8,124,48,'#ffa8cf','#783c6c',3.5);
   ellipse(z,portal.x,portal.y+8,108,38,'#ffc2df','#ffe69b',3);
+  ellipse(z,portal.x,portal.y+8,66,24,'rgba(255,246,204,0.72)','#f0be62',2.5);
+  star(z,portal.x,portal.y+8,18,'#ffcf48');
+  star(z,portal.x,portal.y+8,10,'#fff9d6');
   z.restore();
-  P.draw(z,'portal',portal.x-110,portal.y-44,2);
   shellCache[key]=layer;
  }
  c.save();c.drawImage(shellCache[key],0,0,1800,1100);c.restore();
@@ -375,9 +377,9 @@ function drawRoomShell(c,d){
 // Local origin is the centre of the preparation stage, shared by every recipe.
 function drawPrepBoard(c){originalPart(c,'prep_board',-170,-143,340,286);}
 function drawStationLayer(c,t=0){
- const station=window.RR.STATIONS;c.save();c.imageSmoothingEnabled=false;
+ const station=window.RR.STATIONS;c.save();c.imageSmoothingEnabled=true;
  function fixture(id,s){const q=P.fixture(id),key={kitchen:'refresh_kitchen_range',sink:'refresh_kitchen_sink',cashier_counter:'refresh_kitchen_cashier_counter',dj_console:'refresh_props_dj_console'}[id];if(key&&images[key]){const w=id==='kitchen'?400:id==='sink'?200:q.width*2,h=id==='kitchen'?220:q.height*3;sprite(c,key,s.x,s.y,w,h);}else P.draw(c,q,s.x-q.width,s.y-q.height*2,2);}
- function actor(key,rect,s,offsetX=0,raise=0){const im=images[key];if(!im)return;const h=55,w=Math.round(h*rect[2]/rect[3]),bottom=s.y-100-raise,ck='actor-native:'+key;if(!cache[ck]){const v=document.createElement('canvas');v.width=w;v.height=h;const vctx=v.getContext('2d');vctx.imageSmoothingEnabled=false;vctx.drawImage(im,...rect,0,0,w,h);cache[ck]=v;}c.drawImage(cache[ck],Math.round(s.x+offsetX-w),Math.round(bottom-h*2),w*2,h*2);}
+ function actor(key,rect,s,offsetX=0,raise=0){const im=images[key];if(!im)return;const h=110,w=Math.round(h*rect[2]/rect[3]),bottom=s.y-100-raise;c.drawImage(im,...rect,Math.round(s.x+offsetX-w/2),Math.round(bottom-h),w,h);}
  fixture('kitchen',station.kitchen);fixture('sink',station.sink);if(images.refresh_kitchen_pastry_counter)sprite(c,'refresh_kitchen_pastry_counter',1480,310,180,180);
  actor('cafe_dj_actor',[302,30,926,944],station.dj);fixture('dj_console',station.dj);
  actor('cafe_cashier_actor',[285,61,801,1056],station.cashier,65,25);fixture('cashier_counter',station.cashier);c.restore();
@@ -409,8 +411,8 @@ function pixelTable(d){const key='native-table:'+d.tableType+':'+clothOf(d);if(c
  const col=({honey:10,cream:5,berry:13,sky:22,gingham:3,rainbow:19})[clothOf(d)]??10;
  function surface(y,colour){if(d.tableType==='heart')p.poly([[76,y+2],[61,y-9],[40,y-8],[25,y+2],[28,y+17],[76,y+37],[124,y+17],[127,y+2],[111,y-8],[91,y-9]],colour);else if(d.tableType==='clover'){for(const [x,yy]of [[54,y],[99,y],[54,y+23],[99,y+23]])p.ellipse(x,yy,29,15,colour);p.rect(52,y,48,24,colour);}else if(d.tableType==='cloud'){p.ellipse(76,y+13,66,20,colour);p.ellipse(44,y+3,27,15,colour);p.ellipse(76,y-1,29,17,colour);p.ellipse(106,y+5,27,15,colour);}else p.ellipse(76,y+12,d.tableType==='oval'?74:59,23,colour);}
  surface(18,0);surface(15,8);surface(13,16);surface(10,col);p.line(51,16,99,16,col===5?7:11);for(const x of [28,40,112,124]){p.dot(x,34,17);p.dot(x,36,10);}return cache[key]=p.finish(key);}
-function refreshedChair(choice){const baseKey={rose:'refresh_chair_rose',mint:'refresh_chair_teal',plum:'refresh_chair_lavender',gold:'refresh_chair_lavender',sky:'refresh_chair_lavender',rainbow:'refresh_chair_lavender'}[choice],im=images[baseKey];if(!im)return null;if(['rose','mint','plum'].includes(choice))return im;const key='chair-colour:'+choice;if(cache[key])return cache[key];const cv=document.createElement('canvas');cv.width=im.naturalWidth||im.width;cv.height=im.naturalHeight||im.height;const z=cv.getContext('2d');z.imageSmoothingEnabled=false;z.drawImage(im,0,0);const data=z.getImageData(0,0,cv.width,cv.height),a=data.data,targets={gold:[222,164,69],sky:[103,173,210]},rainbow=[[230,125,158],[226,180,91],[125,192,163],[116,168,215],[174,134,198]];for(let y=0;y<cv.height;y++)for(let x=0;x<cv.width;x++){const i=(y*cv.width+x)*4,r=a[i],g=a[i+1],b=a[i+2];if(a[i+3]<32||r<70||b<r*1.06||b<g*1.15)continue;const target=targets[choice]||rainbow[Math.min(4,Math.floor(y/cv.height*5))],light=(r+g+b)/390;for(let k=0;k<3;k++)a[i+k]=Math.min(255,Math.round(target[k]*light));}z.putImageData(data,0,0);return cache[key]=cv;}
-function drawChairImage(c,choice,x,y,w,h){const im=refreshedChair(choice);if(!im)return false;const k=Math.min(w/im.width,h/im.height),dw=im.width*k,dh=im.height*k;c.save();c.imageSmoothingEnabled=false;c.drawImage(im,Math.round(x-dw/2),Math.round(y-dh),Math.round(dw),Math.round(dh));c.restore();return true;}
+function refreshedChair(choice){const baseKey={rose:'refresh_chair_rose',mint:'refresh_chair_teal',plum:'refresh_chair_lavender',gold:'refresh_chair_lavender',sky:'refresh_chair_lavender',rainbow:'refresh_chair_lavender'}[choice],im=images[baseKey];if(!im)return null;if(['rose','mint','plum'].includes(choice))return im;const key='chair-colour:'+choice;if(cache[key])return cache[key];const cv=document.createElement('canvas');cv.width=im.naturalWidth||im.width;cv.height=im.naturalHeight||im.height;const z=cv.getContext('2d');z.imageSmoothingEnabled=true;z.drawImage(im,0,0);const data=z.getImageData(0,0,cv.width,cv.height),a=data.data,targets={gold:[222,164,69],sky:[103,173,210]},rainbow=[[230,125,158],[226,180,91],[125,192,163],[116,168,215],[174,134,198]];for(let y=0;y<cv.height;y++)for(let x=0;x<cv.width;x++){const i=(y*cv.width+x)*4,r=a[i],g=a[i+1],b=a[i+2];if(a[i+3]<32||r<70||b<r*1.06||b<g*1.15)continue;const target=targets[choice]||rainbow[Math.min(4,Math.floor(y/cv.height*5))],light=(r+g+b)/390;for(let k=0;k<3;k++)a[i+k]=Math.min(255,Math.round(target[k]*light));}z.putImageData(data,0,0);return cache[key]=cv;}
+function drawChairImage(c,choice,x,y,w,h){const im=refreshedChair(choice);if(!im)return false;const k=Math.min(w/im.width,h/im.height),dw=im.width*k,dh=im.height*k;c.save();c.imageSmoothingEnabled=true;c.drawImage(im,Math.round(x-dw/2),Math.round(y-dh),Math.round(dw),Math.round(dh));c.restore();return true;}
 function drawTableFurniture(c,x,y,d,symbol,col,t=0,marker=true,seatGuest=null){
  const layout=window.RR.LAYOUT.dining,D=window.UWCafeDesignRewards;c.save();const newTable=D?.drawTable(c,x,y,d),tableKey={honey:'refresh_table_honey',berry:'refresh_table_rose',sky:'refresh_table_teal'}[clothOf(d)];if(!newTable&&d.tableType==='round'&&tableKey&&images[tableKey])sprite(c,tableKey,x,y+90,210,220);else if(!newTable)P.draw(c,pixelTable(d),x-153,y-34,2);
  // Keep all saved options visible as palette/trim choices; geometry and seat IDs unchanged.
@@ -420,9 +422,20 @@ function drawTableFurniture(c,x,y,d,symbol,col,t=0,marker=true,seatGuest=null){
  if(seatGuest)seatGuest();if(marker)badge(c,symbol,x,y+layout.markerY,27,col);c.restore();
 }
 function drawSinkWorld(c,t=0){const s=window.RR.STATIONS.sink;if(images.refresh_kitchen_sink)sprite(c,'refresh_kitchen_sink',s.x,s.y,160,222);else P.draw(c,'sink',s.x-80,s.y-148,2);}
-function customData(stage,id,decor){if(id.startsWith('cafe-design-v1:'))return window.UWCafeDesignRewards.previewData(id,decor);const d={...decor,[stage]:id},v=document.createElement('canvas');v.width=240;v.height=190;const c=v.getContext('2d');c.imageSmoothingEnabled=false;if(stage==='flooring'||stage==='wallpaper')c.drawImage(materialData(d,stage==='wallpaper'),0,0,240,190);else if(stage==='chairs'){if(!drawChairImage(c,id,120,168,110,140)){P.draw(c,'chair',72,30,2);c.fillStyle=({plum:'#80617e',mint:'#83a56b',rainbow:'#d9af52',rose:'#dd83a7',gold:'#d9af52',sky:'#83b3cb'})[id];c.fillRect(86,82,68,10);}}else{c.save();c.translate(120,62);c.scale(.7,.7);drawTableFurniture(c,0,0,d,'heart','#dd83a7',0,false);c.restore();}return v.toDataURL();}
+function customData(stage,id,decor){if(id.startsWith('cafe-design-v1:'))return window.UWCafeDesignRewards.previewData(id,decor);const d={...decor,[stage]:id},v=document.createElement('canvas');v.width=240;v.height=190;const c=v.getContext('2d');c.imageSmoothingEnabled=true;if(stage==='flooring'||stage==='wallpaper')c.drawImage(materialData(d,stage==='wallpaper'),0,0,240,190);else if(stage==='chairs'){if(!drawChairImage(c,id,120,168,110,140)){P.draw(c,'chair',72,30,2);c.fillStyle=({plum:'#80617e',mint:'#83a56b',rainbow:'#d9af52',rose:'#dd83a7',gold:'#d9af52',sky:'#83b3cb'})[id];c.fillRect(86,82,68,10);}}else{c.save();c.translate(120,62);c.scale(.7,.7);drawTableFurniture(c,0,0,d,'heart','#dd83a7',0,false);c.restore();}return v.toDataURL();}
 
-function drawDirtyDish(c,x,y,scale=1,count=1){for(let i=Math.min(3,count)-1;i>=0;i--)P.draw(c,'dirty_plate',x-60*scale,y-18*scale+i*5,3*scale);}
+function drawDirtyDish(c,x,y,scale=1,count=1){
+ c.save();
+ for(let i=Math.min(3,count)-1;i>=0;i--){
+  const py=y-i*9*scale;
+  ellipse(c,x,py+4*scale,30*scale,12*scale,'rgba(82,40,98,0.20)');
+  ellipse(c,x,py,30*scale,12*scale,'#f2e5f8','#6a3c7c',2.5*scale);
+  ellipse(c,x,py-1*scale,22*scale,8*scale,'#fffbf2','#d8bde6',1.5*scale);
+  ellipse(c,x-6*scale,py-2*scale,5*scale,2.5*scale,'#e89bb8');
+  ellipse(c,x+7*scale,py+1*scale,4*scale,2*scale,'#f2c56e');
+ }
+ c.restore();
+}
 function drawWash(c,progress,t=0){const step=Math.max(0,Math.min(5,Math.round(progress*5)));P.draw(c,'sink',0,0,4);P.draw(c,'wash_plate_'+step,120,75,2);for(let i=0;i<5-step;i++)P.draw(c,'wash_bubble',100+i*24,112+(i%2)*8,2);for(let i=0;i<5;i++){c.fillStyle=i<step?'#80a973':'#c6dde1';c.fillRect(113+i*20,158,14,10);c.fillStyle='#fff9eb';c.fillRect(115+i*20,160,4,2);}}
 
 // Native presentation demand loader. Manifest/content IDs remain unchanged.
