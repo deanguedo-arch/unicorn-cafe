@@ -67,27 +67,39 @@ svg.uw-icon{display:inline-block;width:32px;height:32px;color:var(--uw-plum);ver
 
 #ride svg{position:relative;z-index:2;width:62%;height:62%;pointer-events:none}
 
-/* Unified Unicorn World Storybook Adventure Theme */
-html,body{background:radial-gradient(circle at 50% 35%,#734690 0%,#47265c 100%)!important;font-family:ui-rounded,'SF Pro Rounded','Nunito','Trebuchet MS',system-ui,sans-serif!important}
-#world{background:#4b2b63!important}
-#overlay.menu{background:radial-gradient(circle at 50% 28%,rgba(146,92,181,.72) 0%,rgba(67,35,91,.88) 100%)!important}
-#levelCards .levelCard{border:4px solid #f2be62!important;border-radius:24px!important;background:linear-gradient(180deg,#fffaf0 0%,#f7e1d4 100%)!important;box-shadow:0 7px 0 #5b306e,0 12px 24px rgba(42,16,60,.4),0 0 0 2.5px #5b306e!important;transition:transform .14s cubic-bezier(.22,1.4,.36,1),box-shadow .14s ease!important}
-#levelCards .levelCard:hover{transform:translateY(-4px) scale(1.02)!important;box-shadow:0 10px 0 #5b306e,0 0 22px rgba(255,222,128,.55),0 0 0 3px #ffe899!important}
+/* Unified Unicorn World Storybook Adventure Theme (matches Hub & Café) */
+html,body{background:radial-gradient(circle at 50% 30%,#7c4c99 0%,#4b2663 100%)!important;font-family:ui-rounded,'SF Pro Rounded','Nunito','Trebuchet MS',system-ui,sans-serif!important}
+#world{background:radial-gradient(circle at 50% 35%,#683b88 0%,#3c1d52 100%)!important}
+#overlay.menu{background:radial-gradient(circle at 50% 25%,rgba(128,78,160,.94) 0%,rgba(65,33,88,.97) 100%)!important}
+#levelCards{gap:12px!important}
+#levelCards .levelCard{border:4px solid #f0be62!important;border-radius:24px!important;background:linear-gradient(180deg,#fffbf0 0%,#fce8d8 100%)!important;box-shadow:0 8px 0 #5b306e,0 14px 28px rgba(34,13,52,.48),0 0 0 2.5px #5b306e!important;transition:transform .14s cubic-bezier(.22,1.4,.36,1),box-shadow .14s ease!important;overflow:hidden!important}
+#levelCards .levelCard:hover{transform:translateY(-4px) scale(1.02)!important;box-shadow:0 11px 0 #5b306e,0 0 24px rgba(255,222,128,.6),0 0 0 3px #ffe899!important}
 #levelCards .levelCard:active{transform:translateY(3px) scale(.97)!important}
-#levelCards .levelCard .map{filter:saturate(1.08) brightness(1.02)!important}
-#levelCards .levelCard .theme-figure{display:grid;place-items:center;padding:10px;border-radius:50%;background:radial-gradient(circle at 38% 30%,rgba(255,252,240,.92) 0%,rgba(255,235,204,.82) 72%,rgba(246,197,228,.75) 100%);border:3px solid #fff7d9;box-shadow:0 6px 14px rgba(68,32,88,.38),0 0 0 2px #8a549e;aspect-ratio:1/1}
-#levelCards .levelCard .theme-figure img,#levelCards .levelCard .theme-figure svg{width:84%;height:84%;object-fit:contain;filter:drop-shadow(0 3px 3px rgba(68,32,88,.32))}
-#levelCards .levelCard .bestStars{background:linear-gradient(180deg,#fffdf6 0%,#ffefc9 100%)!important;border:2.5px solid #e6ab42!important;border-radius:999px!important;box-shadow:0 3px 0 #6a3c7d!important;padding:4px 8px!important}
-#levelCards .levelCard .cardFoot{background:linear-gradient(180deg,#fff6df 0%,#f5d8ea 100%)!important;border-top:3px solid #e4b6c9!important;justify-content:center!important}
-#levelCards .levelCard .playMark{background:linear-gradient(180deg,#ffe98a 0%,#ffbe3b 100%)!important;border:3px solid #fff8da!important;border-radius:50%!important;box-shadow:0 3px 0 #8a4b25,0 0 0 2px #6b3b7d!important;color:#532f66!important}
-#gameMenu,.picture-round{border:3px solid #f3c46b!important;border-radius:18px!important;background:linear-gradient(180deg,#fffdf6 0%,#ffefd4 100%)!important;box-shadow:0 4px 0 #6c3e82,0 0 0 2px #6c3e82,inset 0 2px 0 #fff!important;padding:6px!important}
-#gameMenu img{width:100%;height:100%;object-fit:contain}
-.picture-progress{background:linear-gradient(180deg,#fffdf5 0%,#ffefd4 100%)!important;border:3px solid #f0be62!important;border-radius:999px!important;box-shadow:0 4px 0 #6c3e82,0 0 0 2px #6c3e82!important;padding:5px 14px 5px 8px!important}
+#levelCards .levelCard .map{filter:saturate(1.05) brightness(1.02)!important;object-position:50% 38%!important}
+/* Compact gilded storybook crest badge tucked cleanly above the footer so painted scenes shine */
+#levelCards .levelCard .theme-picture{inset:auto 0 58px!important;display:grid!important;place-items:center!important;pointer-events:none!important}
+#levelCards .levelCard .theme-figure{width:64px!important;height:64px!important;padding:8px!important;border-radius:50%!important;background:radial-gradient(circle at 35% 25%,#fffdf5 0%,#ffefc8 72%,#f7d49c 100%)!important;border:3px solid #fff7d6!important;box-shadow:0 4px 0 #6a3c7d,0 0 0 2px #6a3c7d,0 6px 14px rgba(48,20,66,.45)!important;display:grid!important;place-items:center!important}
+#levelCards .levelCard .theme-figure img,#levelCards .levelCard .theme-figure svg{position:static!important;width:100%!important;height:100%!important;object-fit:contain!important;filter:drop-shadow(0 2px 2px rgba(68,32,88,.3))!important}
+#levelCards .levelCard .bestStars{background:linear-gradient(180deg,#fffdf6 0%,#ffefc9 100%)!important;border:2.5px solid #f0be62!important;border-radius:999px!important;box-shadow:0 3px 0 #6a3c7d,0 0 0 1.5px #6a3c7d!important;padding:4px 8px!important}
+#levelCards .levelCard .cardFoot{background:linear-gradient(180deg,#ffefc8 0%,#ffdca4 100%)!important;border-top:3px solid #e6b467!important;justify-content:center!important}
+#levelCards .levelCard .playMark{background:radial-gradient(circle at 32% 24%,#fff8d4 0%,#ffd363 45%,#f09b2f 100%)!important;border:3px solid #fff8da!important;border-radius:50%!important;box-shadow:0 3px 0 #8a4b25,0 0 0 2px #5d3070!important;color:#532f66!important}
+/* Uniform circular gilded HUD controls matching Hub & Café */
+#gameMenu,.picture-round,#ride{width:46px!important;height:46px!important;min-width:46px!important;min-height:46px!important;border:3px solid #f3c46b!important;border-radius:50%!important;background:linear-gradient(180deg,#fffdf6 0%,#ffefd4 100%)!important;box-shadow:0 4px 0 #6a3c7d,0 0 0 2px #6a3c7d,inset 0 2px 0 #fff!important;padding:7px!important}
+#gameMenu img{width:100%!important;height:100%!important;object-fit:contain!important}
+.picture-progress{height:46px!important;background:linear-gradient(180deg,#fffdf5 0%,#ffefd4 100%)!important;border:3px solid #f0be62!important;border-radius:999px!important;box-shadow:0 4px 0 #6a3c7d,0 0 0 2px #6a3c7d!important;padding:5px 14px 5px 8px!important}
 .progress-track{background:#ead7f2!important;border:2px solid #9666ab!important;border-radius:999px!important;overflow:hidden}
 .progress-track>i,.progress-track>span{background:linear-gradient(90deg,#ffd45c,#ff9cc9)!important;border-radius:999px!important}
-#blast.action{border:4px solid #fff7d6!important;border-radius:50%!important;background:radial-gradient(circle at 32% 24%,#fff8d4 0%,#ffd363 45%,#ec8fb9 100%)!important;box-shadow:0 6px 0 #69397c,0 0 0 3px #6b3b7d,0 10px 24px rgba(255,209,102,.52),inset 0 4px 6px rgba(255,255,255,.78)!important;opacity:.95!important}
-#picture-dialog .picture-panel,#overlay.result .panel{background:linear-gradient(180deg,#fffaf0 0%,#fae7d6 100%)!important;border:4px solid #f0be62!important;border-radius:26px!important;box-shadow:0 10px 0 rgba(76,40,97,.55),0 0 0 3px #683b7c!important}
-#settings-pictures .settings-grid button,#overlay.result #resultButtons .bigButton{border:3px solid #d9a7ce!important;border-radius:20px!important;background:linear-gradient(180deg,#fffdf8 0%,#ffefd9 100%)!important;box-shadow:0 4px 0 #7b4e8e,inset 0 2px 0 #fff!important}
-#settings-pictures #ui-resume,#overlay.result #resultButtons .bigButton:first-child{border-color:#fff6cf!important;background:linear-gradient(180deg,#ffe98a 0%,#ffbe3b 100%)!important;box-shadow:0 4px 0 #94511f,0 0 0 2px #6e3d82,inset 0 2px 0 #fff!important}
-#help-back{border:3px solid #f3c46b!important;border-radius:16px!important;background:linear-gradient(180deg,#fffdf6 0%,#ffefd4 100%)!important;box-shadow:0 4px 0 #6c3e82,0 0 0 2px #6c3e82!important}
+#movement-picture{background:linear-gradient(180deg,#fffdf5 0%,#ffefd4 100%)!important;border:3px solid #f0be62!important;border-radius:18px!important;box-shadow:0 4px 0 #6a3c7d,0 0 0 2px #6a3c7d!important}
+#blast.action{border:4px solid #fff7d6!important;border-radius:50%!important;background:radial-gradient(circle at 32% 24%,#fff8d4 0%,#ffd363 45%,#ec8fb9 100%)!important;box-shadow:0 6px 0 #5d3070,0 0 0 3px #5d3070,0 10px 24px rgba(255,209,102,.52),inset 0 4px 6px rgba(255,255,255,.78)!important;opacity:.95!important}
+/* Unified rounded Storybook modals (overrides legacy 4px pixel borders & pixelated rendering) */
+#picture-dialog .picture-panel,#overlay.result .panel,#overlay.outing-recovery .panel{background:linear-gradient(180deg,#fffbf0 0%,#fce8d8 100%)!important;border:4px solid #f0be62!important;border-radius:26px!important;box-shadow:0 10px 0 #5b306e,0 18px 40px rgba(34,13,52,.55),0 0 0 3px #5b306e!important}
+#overlay.result #winHero,#overlay.result #resultStars img,#overlay.result #resultItems img,#overlay.result #resultButtons .bigButton>img{image-rendering:auto!important}
+#overlay.result #resultItems img{background:linear-gradient(180deg,#fffdf8 0%,#ffefd9 100%)!important;border:2.5px solid #e0b1d2!important;border-radius:14px!important}
+#settings-pictures .settings-grid button,#overlay.result #resultButtons .bigButton{border:3px solid #e0b1d2!important;border-radius:20px!important;background:linear-gradient(180deg,#fffdf8 0%,#ffefd9 100%)!important;box-shadow:0 4px 0 #6c3e82,inset 0 2px 0 #fff!important}
+#settings-pictures .menu-art{width:62px!important;height:62px!important;display:grid!important;place-items:center!important}
+#settings-pictures .places-art img{width:60px!important;height:60px!important;object-fit:cover!important;border-radius:12px!important;border:2.5px solid #f0be62!important}
+#settings-pictures #ui-resume,#overlay.result #resultButtons .bigButton:first-child{border-color:#fff6cf!important;background:radial-gradient(circle at 32% 24%,#fff8d4 0%,#ffd363 45%,#f09b2f 100%)!important;box-shadow:0 4px 0 #8a4b25,0 0 0 2px #5d3070,inset 0 2px 0 #fff!important}
+#help-back{border:3px solid #f3c46b!important;border-radius:50%!important;background:linear-gradient(180deg,#fffdf6 0%,#ffefd4 100%)!important;box-shadow:0 4px 0 #6a3c7d,0 0 0 2px #6a3c7d!important}
+.gesture-card{background:linear-gradient(180deg,#fdf0df 0%,#f2daf3 100%)!important;border:3px solid #e4b6d4!important;border-radius:18px!important}
+
 

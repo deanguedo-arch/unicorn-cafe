@@ -43,7 +43,7 @@ function nativeImage(c,key,x,y,w,h){
 }
 const nativeDataCache=new Map();
 function nativeData(key){if(nativeDataCache.has(key))return nativeDataCache.get(key);const v=document.createElement('canvas');v.width=128;v.height=128;const result=nativeImage(v.getContext('2d'),key,0,0,128,128)?v.toDataURL():null;if(nativeDataCache.size>=128)nativeDataCache.delete(nativeDataCache.keys().next().value);nativeDataCache.set(key,result);return result;}
-function materialData(d,wall=false){const v=document.createElement('canvas');v.width=240;v.height=190;const z=v.getContext('2d');cafeMaterial(z,d,0,0,240,190,wall);return v;}
+function materialData(d,wall=false){const v=document.createElement('canvas');v.width=240;v.height=190;const z=v.getContext('2d');if(typeof renderCafeMaterialSwatch==='function')renderCafeMaterialSwatch(z,d,0,0,240,190,wall);else cafeMaterial(z,d,0,0,240,190,wall);return v;}
 const originalFoodKeys=['prep_board','painted_tools_controls','pizza_dough','pizza_sauce','pizza_cheese','pizza_tomato','pizza_mushroom','coffee_beans','coffee_empty','coffee_black','coffee_milk','coffee_cocoa','cupcake_flour','cupcake_batter','cupcake_plain','cupcake_strawberry','cupcake_cocoa','ice_cone','ice_vanilla','ice_strawberry','ice_sprinkles','burger_bottom','burger_patty','burger_cheese','burger_lettuce','burger_top','soup_empty','soup_broth','soup_carrot','soup_peas','chicken_raw','chicken_glaze','chicken_roast','chicken_wedge','pancake_batter','pancake_raw','pancake_brown','pancake_syrup','smoothie_blender','smoothie_milk','smoothie_strawberry','smoothie_mango','fruit_strawberry','fruit_berries','fruit_banana','fruit_mango','veg_peas','veg_corn'];
 const originalFoodSet=new Set(originalFoodKeys),originalPixelCache=new Map();
 function originalPixel(key){const im=images[key];if(!im?.complete||!im.naturalWidth)return null;if(originalPixelCache.has(key))return originalPixelCache.get(key);const scale=Math.min(64/im.naturalWidth,56/im.naturalHeight),v=document.createElement('canvas');v.width=Math.max(1,Math.round(im.naturalWidth*scale));v.height=Math.max(1,Math.round(im.naturalHeight*scale));const z=v.getContext('2d');z.imageSmoothingEnabled=false;z.drawImage(im,0,0,v.width,v.height);originalPixelCache.set(key,v);return v;}
@@ -282,50 +282,90 @@ function drawFairyLantern(z,x,y){
  rect(z,x-11,y+41,22,6,3,'#e8a842','#6b3e7c',2.5);
  z.restore();
 }
+const cafeRoomImg=(()=>{const im=new Image();im.onload=()=>{for(const k of Object.keys(shellCache))delete shellCache[k];window.dispatchEvent(new CustomEvent('rr-assets',{detail:{type:'ready',key:'storybook_cafe_room',error:null}}));try{document.querySelectorAll('.custom-choice[data-custom-stage="flooring"],.custom-choice[data-custom-stage="wallpaper"]').forEach(btn=>{const st=btn.dataset.customStage,val=btn.dataset.customValue,img=btn.querySelector('img');if(img&&st&&val)img.src=customData(st,val,{flooring:val,wallpaper:val});});}catch(e){}};im.src='../../cafe-town-v6/storybook-cafe-room.webp';return im;})();
+const FLOOR_TINTS={
+ peach:null,
+ lavender:{mul:'rgba(186,134,218,0.44)',screen:'rgba(235,205,252,0.22)'},
+ mint:{mul:'rgba(128,214,168,0.44)',screen:'rgba(214,248,228,0.20)'},
+ moonstone:{mul:'rgba(126,192,232,0.44)',screen:'rgba(216,240,255,0.22)'},
+ confetti:{mul:'rgba(255,214,158,0.16)',screen:'rgba(255,244,216,0.12)',confetti:true}
+};
+const WALL_TINTS={
+ twilight:null,
+ rainbow:{mul:'rgba(255,194,224,0.22)',screen:'rgba(255,242,204,0.18)',rainbow:true},
+ garden:{mul:'rgba(154,220,164,0.34)',screen:'rgba(230,252,226,0.14)'},
+ sunrise:{mul:'rgba(255,196,134,0.32)',screen:'rgba(255,242,202,0.16)'},
+ starlight:{mul:'rgba(146,162,236,0.38)',screen:'rgba(220,228,255,0.14)',stars:true}
+};
+function applyCafeThemeWash(z,tint,x,y,w,h){
+ if(!tint)return;
+ z.save();z.beginPath();z.rect(x,y,w,h);z.clip();
+ if(tint.mul){z.globalCompositeOperation='multiply';z.fillStyle=tint.mul;z.fillRect(x,y,w,h);}
+ if(tint.screen){z.globalCompositeOperation='screen';z.fillStyle=tint.screen;z.fillRect(x,y,w,h);}
+ z.globalCompositeOperation='source-over';
+ if(tint.confetti){
+  const cols=['#ff82bc','#ffd85e','#79d7f5','#8ce09b','#c89cf5'];
+  for(let yy=y+34;yy<y+h-24;yy+=92)for(let xx=x+44+((Math.floor(yy/92)%2)*46);xx<x+w-30;xx+=104){
+   z.save();z.globalAlpha=.72;z.translate(xx,yy);z.rotate((xx+yy)*.02);
+   const col=cols[Math.abs(Math.floor(xx*3+yy))%5];
+   if((xx+yy)%2===0)star(z,0,0,7,col);else ellipse(z,0,0,7,4,col);
+   z.restore();
+  }
+ }
+ if(tint.rainbow){
+  const rg=z.createLinearGradient(x,y,x+w,y);
+  rg.addColorStop(0,'rgba(255,154,196,0.20)');rg.addColorStop(.25,'rgba(255,220,124,0.20)');rg.addColorStop(.5,'rgba(154,230,176,0.20)');rg.addColorStop(.75,'rgba(148,214,252,0.20)');rg.addColorStop(1,'rgba(202,162,248,0.20)');
+  z.fillStyle=rg;z.fillRect(x,y,w,h);
+ }
+ if(tint.stars){
+  z.fillStyle='#fff6c4';z.globalAlpha=.75;
+  for(let i=0;i<18;i++){star(z,x+48+((i*107)%Math.max(80,w-96)),y+24+((i*47)%Math.max(40,h-48)),6+(i%3)*2,'#fff6c4');}
+ }
+ z.restore();
+}
+function renderCafeMaterialSwatch(z,d,x,y,w,h,wall){
+ z.save();
+ if(cafeRoomImg.complete&&cafeRoomImg.naturalWidth){
+  z.imageSmoothingEnabled=true;
+  if(wall){z.drawImage(cafeRoomImg,520,24,760,295,x,y,w,h);applyCafeThemeWash(z,WALL_TINTS[d.wallpaper],x,y,w,h);}
+  else{z.drawImage(cafeRoomImg,560,460,680,460,x,y,w,h);applyCafeThemeWash(z,FLOOR_TINTS[d.flooring],x,y,w,h);}
+ }else{
+  cafeMaterial(z,d,x,y,w,h,wall);
+ }
+ z.restore();
+}
 function drawRoomShell(c,d){
- const key='storybook-v2:'+d.flooring+':'+d.wallpaper;
+ const ready=cafeRoomImg.complete&&cafeRoomImg.naturalWidth>0;
+ const key=(ready?'painted-v7:':'fallback-v7:')+d.flooring+':'+d.wallpaper;
  if(!shellCache[key]){
   const layer=document.createElement('canvas');layer.width=1800;layer.height=1100;const z=layer.getContext('2d');
-  // Outer storybook plum border frame
-  z.fillStyle='#5c3672';z.fillRect(0,0,1800,1100);
-  // 1. Warm sunlit floor (y=320..1072)
-  cafeMaterial(z,d,36,320,1728,752,false);
-  // Subtle warm radial sunlit glow in center of dining hall
-  const sunPool=z.createRadialGradient(900,580,120,900,660,860);
-  sunPool.addColorStop(0,'rgba(255,248,220,0.24)');sunPool.addColorStop(.65,'rgba(255,232,195,0.06)');sunPool.addColorStop(1,'rgba(92,54,114,0.16)');
-  z.fillStyle=sunPool;z.fillRect(36,320,1728,752);
-  // Warm drop shadow along top wall baseboard
-  const wallShadow=z.createLinearGradient(0,320,0,374);wallShadow.addColorStop(0,'rgba(84,46,104,0.24)');wallShadow.addColorStop(1,'rgba(84,46,104,0)');
-  z.fillStyle=wallShadow;z.fillRect(36,320,1728,54);
-  // 2. Storybook wainscoted back wall (y=26..320)
-  cafeMaterial(z,d,36,26,1728,294,true);
-  // Charming pastel ceramic tile backsplash behind the kitchen range & sink (x=540..1360)
-  z.save();rect(z,540,128,820,186,14,'#fff8eb','#d7a76c',4);z.beginPath();z.roundRect(544,132,812,178,10);z.clip();
-  for(let ty=132;ty<312;ty+=36)for(let tx=544;tx<1358;tx+=36){
-   z.fillStyle=((Math.floor(tx/36)+Math.floor(ty/36))%2)?'#ffe9f3':'#fff7df';z.fillRect(tx,ty,35,35);
-   z.strokeStyle='#e6c3d5';z.lineWidth=1.5;z.strokeRect(tx,ty,36,36);
+  // Outer royal-plum storybook frame
+  z.fillStyle='#562f6b';z.fillRect(0,0,1800,1100);
+  if(ready){
+   z.save();
+   z.imageSmoothingEnabled=true;
+   z.drawImage(cafeRoomImg,24,18,1752,1060);
+   applyCafeThemeWash(z,WALL_TINTS[d.wallpaper],24,18,1752,324);
+   applyCafeThemeWash(z,FLOOR_TINTS[d.flooring],24,342,1752,736);
+   z.restore();
+  }else{
+   cafeMaterial(z,d,28,324,1744,750,false);
+   cafeMaterial(z,d,28,22,1744,302,true);
+   drawStorybookWindow(z,295,62,190,185);
+   drawStorybookWindow(z,1505,62,190,185);
   }
+  // Gilded storybook room border frame matching Hub & Mall
+  z.save();
+  z.strokeStyle='#f2be62';z.lineWidth=10;z.strokeRect(24,18,1752,1060);
+  z.strokeStyle='#5d3070';z.lineWidth=4;z.strokeRect(19,13,1762,1070);
   z.restore();
-  // Golden crown molding & baseboard trim
-  rect(z,28,22,1744,18,6,'#f8cf76','#683c7a',4);line(z,[[36,28],[1764,28]],'#fffbe6',3);
-  rect(z,28,308,1744,18,5,'#f0be67','#683c7a',4);line(z,[[36,314],[1764,314]],'#fff7db',3);
-  // Side and bottom gilded storybook room trim
-  rect(z,24,22,16,1054,4,'#d99f54','#613672',4);
-  rect(z,1760,22,16,1054,4,'#d99f54','#613672',4);
-  rect(z,24,1062,1752,18,5,'#d99f54','#613672',4);
-  // 3. Sunny Storybook Arched Café Windows (aligned with existing window bays + cozy center)
-  drawStorybookWindow(z,295,62,190,185);
-  drawStorybookWindow(z,1505,62,190,185);
-  // Glowing fairy pendant lanterns framing the kitchen backsplash clear of top HUD pills
-  drawFairyLantern(z,610,62);
-  drawFairyLantern(z,1215,62);
-  // 4. Cozy scalloped pink-and-gold welcome mat at the doorway portal
+  // Cozy scalloped pink-and-gold storybook welcome rug at the doorway portal
   const portal=window.RR.LAYOUT.portal;
   z.save();
-  ellipse(z,portal.x,portal.y+10,132,56,'#f69cc5','#75417d',4);
-  ellipse(z,portal.x,portal.y+8,116,44,'#ffb8d9','#ffe59c',3.5);
-  for(let i=0;i<14;i++){const a=i*Math.PI*2/14;ellipse(z,portal.x+Math.cos(a)*126,portal.y+10+Math.sin(a)*50,12,8,'#f69cc5','#75417d',2.5);}
-  ellipse(z,portal.x,portal.y+8,112,42,'#ffc7e2');
+  ellipse(z,portal.x,portal.y+12,138,58,'rgba(92,42,96,0.22)');
+  for(let i=0;i<16;i++){const a=i*Math.PI*2/16;ellipse(z,portal.x+Math.cos(a)*126,portal.y+8+Math.sin(a)*50,15,10,'#f28ab8','#783c6c',3);}
+  ellipse(z,portal.x,portal.y+8,124,48,'#ffa8cf','#783c6c',3.5);
+  ellipse(z,portal.x,portal.y+8,108,38,'#ffc2df','#ffe69b',3);
   z.restore();
   P.draw(z,'portal',portal.x-110,portal.y-44,2);
   shellCache[key]=layer;
